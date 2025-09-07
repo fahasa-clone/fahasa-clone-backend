@@ -1,5 +1,7 @@
 package vn.clone.fahasa_backend.controller;
 
+import java.util.List;
+
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpStatus;
@@ -10,13 +12,11 @@ import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.service.CategoryService;
 
-import java.util.List;
-
 @RestController
 public class CategoryController {
     private final CategoryService categoryService;
 
-    public CategoryController(@Qualifier("categoryServiceImpl1") CategoryService categoryService) {
+    public CategoryController(@Qualifier("categoryServiceImpl") CategoryService categoryService) {
         this.categoryService = categoryService;
     }
 

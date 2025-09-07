@@ -1,17 +1,18 @@
 package vn.clone.fahasa_backend.repository.specification;
 
-import java.util.Stack;
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import org.springframework.data.jpa.domain.Specification;
 
-public class UserSpecificationsBuilder {
+public class SpecificationsBuilder {
 
     public static <T> Specification<T> createSpecification(String input) {
         Specification<T> mainSpec = Specification.unrestricted();
 
-        String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
+        String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>not in|\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
 
         // Create a Pattern object
         Pattern r = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
@@ -19,7 +20,7 @@ public class UserSpecificationsBuilder {
         // Now create matcher object.
         Matcher m = r.matcher(input);
 
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> stack = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
         boolean isDisjunctionSubPredicate = false;
         boolean isInSubExpression = false;
@@ -53,7 +54,7 @@ public class UserSpecificationsBuilder {
                       .append(" ")
                       .append(value);
                 } else {
-                    Specification<T> spec = null;
+                    Specification<T> spec = new SearchSpecification<>(name, operator, value);
                     if (isDisjunction) {
                         mainSpec = mainSpec.or(spec);
                     } else {
