@@ -12,18 +12,17 @@ public class SpecificationsBuilder {
     public static <T> Specification<T> createSpecification(String input) {
         Specification<T> mainSpec = Specification.unrestricted();
 
-        String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>not in|\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
-
-        // Create a Pattern object
+        // Regex variables
+        String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<notOperator>not)?(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>not in|\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
         Pattern r = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
-
-        // Now create matcher object.
         Matcher m = r.matcher(input);
 
+        // Sub-expression handler variables
         Deque<Character> stack = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
         boolean isDisjunctionSubPredicate = false;
         boolean isInSubExpression = false;
+
         while (m.find()) {
             System.out.println(m.group(0));
             System.out.println(m.group("content"));
@@ -54,6 +53,7 @@ public class SpecificationsBuilder {
                       .append(" ")
                       .append(value);
                 } else {
+                    // Create a new specification
                     Specification<T> spec = new SearchSpecification<>(name, operator, value);
                     if (isDisjunction) {
                         mainSpec = mainSpec.or(spec);
@@ -82,17 +82,27 @@ public class SpecificationsBuilder {
                 stack.pop();
             }
             if (stack.isEmpty()) {
+                // Remove outer parentheses
                 sb.deleteCharAt(0)
                   .deleteCharAt(sb.length() - 1);
                 System.out.println("Sub-expression: " + sb);
                 System.out.println("isDisjunctionSubPredicate: " + isDisjunctionSubPredicate);
+
+                // Run this method recursively
+                Specification<T> spec = createSpecification(sb.toString());
+                if (isDisjunctionSubPredicate) {
+                    mainSpec = mainSpec.or(spec);
+                } else {
+                    mainSpec = mainSpec.and(spec);
+                }
+
+                // Reset sub-expression values
                 isDisjunctionSubPredicate = false;
                 isInSubExpression = false;
                 sb.setLength(0);
-
-                createSpecification(sb.toString());
             }
         }
+
         return mainSpec;
     }
 }
