@@ -20,7 +20,8 @@ public class SpecificationsBuilder {
         // Sub-expression handler variables
         Deque<Character> stack = new ArrayDeque<>();
         StringBuilder sb = new StringBuilder();
-        boolean isDisjunctionSubPredicate = false;
+        boolean isDisjunctionSubExpression = false;
+        boolean isSubNegation = false;
         boolean isInSubExpression = false;
 
         while (m.find()) {
@@ -29,32 +30,43 @@ public class SpecificationsBuilder {
 
             String match = m.group(0);
             String content = m.group("content");
-            String openParenthesesString = m.group("openParentheses");
-            String closedParenthesesString = m.group("closedParentheses");
+            String openParentheses = m.group("openParentheses");
+            String closedParentheses = m.group("closedParentheses");
             String logicalOperator = m.group("logicalOperator");
             String name = m.group("name");
             String operator = m.group("operator");
             String value = m.group("value");
+
             boolean isDisjunction = false;
+            boolean isNegation = m.group("notOperator") != null;
 
             if (logicalOperator != null) {
                 isDisjunction = logicalOperator.equals("or");
             }
-            if ((openParenthesesString.isEmpty() && closedParenthesesString.isEmpty())
-                || (!openParenthesesString.isEmpty() && !closedParenthesesString.isEmpty()
-                    && openParenthesesString.length() == closedParenthesesString.length())) {
+            if ((openParentheses.isEmpty() && closedParentheses.isEmpty())
+                || (!openParentheses.isEmpty() && !closedParentheses.isEmpty()
+                    && openParentheses.length() == closedParentheses.length())) {
                 if (isInSubExpression) {
                     sb.append(" ")
                       .append(logicalOperator)
-                      .append(" ")
-                      .append(name)
+                      .append(" ");
+                    if (isNegation) {
+                        sb.append("not(");
+                    }
+                    sb.append(name)
                       .append(" ")
                       .append(operator)
                       .append(" ")
                       .append(value);
+                    if (isNegation) {
+                        sb.append(")");
+                    }
                 } else {
                     // Create a new specification
                     Specification<T> spec = new SearchSpecification<>(name, operator, value);
+                    if (isNegation) {
+                        spec = Specification.not(spec);
+                    }
                     if (isDisjunction) {
                         mainSpec = mainSpec.or(spec);
                     } else {
@@ -63,41 +75,50 @@ public class SpecificationsBuilder {
                 }
                 continue;
             }
-            if (!openParenthesesString.isEmpty()) {
-                String[] openParentheses = openParenthesesString.split("");
-                for (String openParenthesis : openParentheses) {
+            if (!openParentheses.isEmpty()) {
+                for (char openParenthesis : openParentheses.toCharArray()) {
                     if (stack.isEmpty()) {
-                        isDisjunctionSubPredicate = isDisjunction;
+                        isDisjunctionSubExpression = isDisjunction;
+                        isSubNegation = isNegation;
                         isInSubExpression = true;
                         sb.append(content);
                     } else {
                         sb.append(match);
                     }
-                    stack.push(openParenthesis.charAt(0));
+                    stack.push(openParenthesis);
                 }
                 continue;
             }
             sb.append(match);
-            for (int i = 0; i < closedParenthesesString.length(); i++) {
+            for (char ignored : closedParentheses.toCharArray()) {
                 stack.pop();
             }
             if (stack.isEmpty()) {
                 // Remove outer parentheses
-                sb.deleteCharAt(0)
-                  .deleteCharAt(sb.length() - 1);
+                sb.deleteCharAt(sb.length() - 1);
+                if (isSubNegation) {
+                    sb.delete(0, 4);
+                } else {
+                    sb.deleteCharAt(0);
+                }
                 System.out.println("Sub-expression: " + sb);
-                System.out.println("isDisjunctionSubPredicate: " + isDisjunctionSubPredicate);
+                System.out.println("isDisjunctionSubExpression: " + isDisjunctionSubExpression);
+                System.out.println("isSubNegation: " + isSubNegation);
 
                 // Run this method recursively
                 Specification<T> spec = createSpecification(sb.toString());
-                if (isDisjunctionSubPredicate) {
+                if (isSubNegation) {
+                    spec = Specification.not(spec);
+                }
+                if (isDisjunctionSubExpression) {
                     mainSpec = mainSpec.or(spec);
                 } else {
                     mainSpec = mainSpec.and(spec);
                 }
 
                 // Reset sub-expression values
-                isDisjunctionSubPredicate = false;
+                isDisjunctionSubExpression = false;
+                isSubNegation = false;
                 isInSubExpression = false;
                 sb.setLength(0);
             }
