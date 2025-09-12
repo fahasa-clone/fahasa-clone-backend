@@ -20,7 +20,7 @@ public class BookController {
 
     @GetMapping
     public ResponseEntity<Page<Book>> getAllBooks(Pageable pageable,
-                                                  @RequestParam("filter") String filter) {
+                                                  @RequestParam(value = "filter", defaultValue = "") String filter) {
         return ResponseEntity.ok(bookService.fetchAllBooks(pageable, filter));
     }
 

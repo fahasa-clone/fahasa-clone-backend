@@ -76,15 +76,15 @@ public class SpecificationsBuilder {
                 continue;
             }
             if (!openParentheses.isEmpty()) {
+                if (stack.isEmpty()) {
+                    isDisjunctionSubExpression = isDisjunction;
+                    isSubNegation = isNegation;
+                    isInSubExpression = true;
+                    sb.append(content);
+                } else {
+                    sb.append(match);
+                }
                 for (char openParenthesis : openParentheses.toCharArray()) {
-                    if (stack.isEmpty()) {
-                        isDisjunctionSubExpression = isDisjunction;
-                        isSubNegation = isNegation;
-                        isInSubExpression = true;
-                        sb.append(content);
-                    } else {
-                        sb.append(match);
-                    }
                     stack.push(openParenthesis);
                 }
                 continue;

@@ -6,7 +6,9 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.regex.Matcher;
@@ -49,14 +51,11 @@ public class SearchSpecification<T> implements Specification<T> {
         this.value = value;
     }
 
-    // @SuppressWarnings("unchecked")
-    private static Object convert(Class<?> type, String value) {
-        if (type.isEnum()) {
-            return Enum.valueOf((Class<? extends Enum>) type, value);
-        }
-        return convertToComparableType((Class<? extends Comparable>) type, value);
+    private static <E extends Enum<E>> E getEnumConstant(Class<E> enumClass, String value) {
+        return Enum.valueOf(enumClass, value);
     }
 
+    @SuppressWarnings("unchecked")
     private static <C extends Comparable<? super C>> C convertToComparableType(Class<C> type, String value) {
         Function<String, C> converter = (Function<String, C>) SearchSpecification.CONVERTERS.get(type);
         if (converter == null) {
@@ -65,18 +64,45 @@ public class SearchSpecification<T> implements Specification<T> {
         return converter.apply(value);
     }
 
+    @SuppressWarnings("unchecked")
+    private Object convert(Class<?> type, boolean isListReturnedType) {
+        if (!isListReturnedType) {
+            if (type.isEnum()) {
+                return getEnumConstant((Class<? extends Enum>) type, this.value);
+            }
+            return convertToComparableType((Class<? extends Comparable>) type, this.value);
+        }
+        Pattern pattern = Pattern.compile("\\[(?<content>.+)]");
+        Matcher matcher = pattern.matcher(this.value);
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException("Wrong format, format is [value1, value2,...]");
+        }
+        String[] values = matcher.group("content")
+                                 .split(", ");
+        List<Object> result = new ArrayList<>();
+        for (String value : values) {
+            if (type.isEnum()) {
+                result.add(getEnumConstant((Class<? extends Enum>) type, value));
+            } else {
+                result.add(convertToComparableType((Class<? extends Comparable>) type, value));
+            }
+        }
+        return result;
+    }
+
     @Override
-    // @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
         Path<?> path = root.get(this.name[0]);
         for (int i = 1; i < this.name.length; i++) {
             path = path.get(this.name[i]);
         }
-        Class<?> type = path.getJavaType();
 
+        Class<?> type = path.getJavaType();
         Object parsedValue = switch (this.operator) {
-            case ">", "<", ">:", "<:", "~" -> convertToComparableType((Class<? extends Comparable>) type, this.value);
-            default -> convert(type, this.value);
+            case "is" -> null;
+            case "in", "not in" -> convert(type, true);
+            default -> convert(type, false);
         };
 
         return switch (this.operator) {
@@ -84,8 +110,8 @@ public class SearchSpecification<T> implements Specification<T> {
             case "!" -> criteriaBuilder.notEqual(path, parsedValue);
             case ">" -> criteriaBuilder.greaterThan((Path<? extends Comparable>) path, (Comparable) parsedValue);
             case "<" -> criteriaBuilder.lessThan((Path<? extends Comparable>) path, (Comparable) parsedValue);
-            case ">:" ->
-                    criteriaBuilder.greaterThanOrEqualTo((Path<? extends Comparable>) path, (Comparable) parsedValue);
+            case ">:" -> criteriaBuilder.greaterThanOrEqualTo((Path<? extends Comparable>) path,
+                                                              (Comparable) parsedValue);
             case "<:" -> criteriaBuilder.lessThanOrEqualTo((Path<? extends Comparable>) path, (Comparable) parsedValue);
             case "~" -> criteriaBuilder.like((Expression<String>) path, "%" + parsedValue + "%");
             case "is" -> switch (this.value) {
@@ -95,6 +121,8 @@ public class SearchSpecification<T> implements Specification<T> {
                 case "not empty" -> criteriaBuilder.isNotEmpty((Path<? extends Collection>) path);
                 default -> throw new IllegalStateException("Unexpected value: " + this.operator + this.value);
             };
+            case "in" -> path.in((Collection<?>) parsedValue);
+            case "not in" -> criteriaBuilder.not(path.in((Collection<?>) parsedValue));
             default -> throw new IllegalStateException("Unexpected value: " + this.operator);
         };
     }
