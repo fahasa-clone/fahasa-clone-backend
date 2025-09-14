@@ -1,11 +1,11 @@
 package vn.clone.fahasa_backend.domain;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.JdbcType;
-import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.SqlTypes;
 
 import vn.clone.fahasa_backend.configuration.LowercasePostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
@@ -34,9 +34,9 @@ public class BookDetail extends AbstractEntity {
     private int pageCount;
 
     @Column(name = "layout")
-    @Enumerated(EnumType.STRING)
+    // @Enumerated(EnumType.STRING)
     @JdbcType(LowercasePostgreSQLEnumJdbcType.class)
-    @JdbcTypeCode(SqlTypes.NAMED_ENUM)
+    // @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     private BookLayout layout;
 
     @Column(name = "description")

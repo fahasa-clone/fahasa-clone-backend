@@ -2,10 +2,8 @@ package vn.clone.fahasa_backend.repository.specification;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -19,25 +17,24 @@ import org.springframework.data.jpa.domain.Specification;
 
 public class SearchSpecification<T> implements Specification<T> {
     private static final Map<Class<?>, Function<String, ? extends Comparable<?>>> CONVERTERS = Map.ofEntries(
+            Map.entry(Boolean.class, Boolean::parseBoolean),
             Map.entry(Integer.class, Integer::parseInt),
             Map.entry(Long.class, Long::parseLong),
             Map.entry(Double.class, Double::parseDouble),
             Map.entry(Float.class, Float::parseFloat),
             Map.entry(Short.class, Short::parseShort),
             Map.entry(Byte.class, Byte::parseByte),
-            Map.entry(String.class, input -> {
-                Pattern pattern = Pattern.compile("^(?<quote>[\"'])(?<content>.*)\\k<quote>$");
-                Matcher matcher = pattern.matcher(input);
-                if (!matcher.matches()) {
-                    throw new IllegalArgumentException("String text must be wrapped in single quote!");
-                }
-                return matcher.group("content");
-            }),
+            Map.entry(String.class, input -> extractStringInQuote(input, "String text")),
             Map.entry(BigDecimal.class, BigDecimal::new),
             Map.entry(BigInteger.class, BigInteger::new),
-            Map.entry(Instant.class, Instant::parse),
+            Map.entry(Instant.class, input -> {
+                LocalDate date = convertToLocalDate(input);
+                return date.atStartOfDay(ZoneId.systemDefault())
+                           // .atStartOfDay(ZoneId.of("Asia/Ho_Chi_Minh"))
+                           .toInstant();
+            }),
+            Map.entry(LocalDate.class, SearchSpecification::convertToLocalDate),
             Map.entry(ZonedDateTime.class, ZonedDateTime::parse),
-            Map.entry(LocalDate.class, LocalDate::parse),
             Map.entry(LocalDateTime.class, LocalDateTime::parse)
     );
 
@@ -49,6 +46,20 @@ public class SearchSpecification<T> implements Specification<T> {
         this.name = name.split("\\.");
         this.operator = operator;
         this.value = value;
+    }
+
+    private static String extractStringInQuote(String input, String valueType) {
+        Pattern pattern = Pattern.compile("^(?<quote>[\"'])(?<content>.*)\\k<quote>$");
+        Matcher matcher = pattern.matcher(input);
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException(String.format("%s must be wrapped in single quote!", valueType));
+        }
+        return matcher.group("content");
+    }
+
+    private static LocalDate convertToLocalDate(String input) {
+        String value = extractStringInQuote(input, "Date");
+        return LocalDate.parse(value, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 
     private static <E extends Enum<E>> E getEnumConstant(Class<E> enumClass, String value) {
