@@ -1,8 +1,5 @@
 package vn.clone.fahasa_backend.domain;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -26,14 +23,4 @@ public class Category extends AbstractEntity {
     @JoinColumn(name = "parent_id")
     @JsonIgnore
     private Category parent;
-
-    @Transient
-    private List<Category> children;
-
-    public void addChild(Category category) {
-        if (children == null) {
-            children = new ArrayList<>();
-        }
-        children.add(category);
-    }
 }
