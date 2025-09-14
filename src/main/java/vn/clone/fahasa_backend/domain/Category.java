@@ -19,7 +19,7 @@ public class Category extends AbstractEntity {
     @NotBlank(message = "name field is required")
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne
     @JoinColumn(name = "parent_id")
     @JsonIgnore
     private Category parent;

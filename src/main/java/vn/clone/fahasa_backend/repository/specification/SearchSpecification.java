@@ -1,54 +1,139 @@
 package vn.clone.fahasa_backend.repository.specification;
 
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
-import org.springframework.lang.NonNull;
-
 
 public class SearchSpecification<T> implements Specification<T> {
-    private String name;
-    private String operator;
-    private Object value;
+    private static final Map<Class<?>, Function<String, ? extends Comparable<?>>> CONVERTERS = Map.ofEntries(
+            Map.entry(Boolean.class, Boolean::parseBoolean),
+            Map.entry(Integer.class, Integer::parseInt),
+            Map.entry(Long.class, Long::parseLong),
+            Map.entry(Double.class, Double::parseDouble),
+            Map.entry(Float.class, Float::parseFloat),
+            Map.entry(Short.class, Short::parseShort),
+            Map.entry(Byte.class, Byte::parseByte),
+            Map.entry(String.class, input -> extractStringInQuote(input, "String text")),
+            Map.entry(BigDecimal.class, BigDecimal::new),
+            Map.entry(BigInteger.class, BigInteger::new),
+            Map.entry(Instant.class, input -> {
+                LocalDate date = convertToLocalDate(input);
+                return date.atStartOfDay(ZoneId.systemDefault())
+                           // .atStartOfDay(ZoneId.of("Asia/Ho_Chi_Minh"))
+                           .toInstant();
+            }),
+            Map.entry(LocalDate.class, SearchSpecification::convertToLocalDate),
+            Map.entry(ZonedDateTime.class, ZonedDateTime::parse),
+            Map.entry(LocalDateTime.class, LocalDateTime::parse)
+    );
 
-    public SearchSpecification(String name, String operator, Object value) {
-        this.name = name;
+    private final String[] name;
+    private final String operator;
+    private final String value;
+
+    public SearchSpecification(String name, String operator, String value) {
+        this.name = name.split("\\.");
         this.operator = operator;
         this.value = value;
     }
 
-    public Predicate toPredicateTest(@NonNull Root<T> root, @NonNull CriteriaQuery<?> query,
-                                     @NonNull CriteriaBuilder builder) {
-        // return switch (criteria.getOperation()) {
-        //     case EQUALITY -> builder.equal(root.get(criteria.getKey()), Gender.valueOf(criteria.getValue().toString()));
-        //     case NEGATION -> builder.notEqual(root.get(criteria.getKey()), criteria.getValue());
-        //     case GREATER_THAN -> builder.greaterThan(root.get(criteria.getKey()), criteria.getValue().toString());
-        //     case LESS_THAN -> builder.lessThan(root.get(criteria.getKey()), criteria.getValue().toString());
-        //     case LIKE -> builder.like(root.get(criteria.getKey()), "%" + criteria.getValue().toString() + "%");
-        //     case STARTS_WITH -> builder.like(root.get(criteria.getKey()), criteria.getValue() + "%");
-        //     case ENDS_WITH -> builder.like(root.get(criteria.getKey()), "%" + criteria.getValue());
-        //     case CONTAINS -> builder.like(root.get(criteria.getKey()), "%" + criteria.getValue() + "%");
-        // };
+    private static String extractStringInQuote(String input, String valueType) {
+        Pattern pattern = Pattern.compile("^(?<quote>[\"'])(?<content>.*)\\k<quote>$");
+        Matcher matcher = pattern.matcher(input);
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException(String.format("%s must be wrapped in single quote!", valueType));
+        }
+        return matcher.group("content");
+    }
 
-        return null;
+    private static LocalDate convertToLocalDate(String input) {
+        String value = extractStringInQuote(input, "Date");
+        return LocalDate.parse(value, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    }
+
+    private static <E extends Enum<E>> E getEnumConstant(Class<E> enumClass, String value) {
+        return Enum.valueOf(enumClass, value);
+    }
+
+    @SuppressWarnings("unchecked")
+    private static <C extends Comparable<? super C>> C convertToComparableType(Class<C> type, String value) {
+        Function<String, C> converter = (Function<String, C>) SearchSpecification.CONVERTERS.get(type);
+        if (converter == null) {
+            throw new IllegalArgumentException("Unsupported type: " + type);
+        }
+        return converter.apply(value);
+    }
+
+    @SuppressWarnings("unchecked")
+    private Object convert(Class<?> type, boolean isListReturnedType) {
+        if (!isListReturnedType) {
+            if (type.isEnum()) {
+                return getEnumConstant((Class<? extends Enum>) type, this.value);
+            }
+            return convertToComparableType((Class<? extends Comparable>) type, this.value);
+        }
+        Pattern pattern = Pattern.compile("\\[(?<content>.+)]");
+        Matcher matcher = pattern.matcher(this.value);
+        if (!matcher.matches()) {
+            throw new IllegalArgumentException("Wrong format, format is [value1, value2,...]");
+        }
+        String[] values = matcher.group("content")
+                                 .split(", ");
+        List<Object> result = new ArrayList<>();
+        for (String value : values) {
+            if (type.isEnum()) {
+                result.add(getEnumConstant((Class<? extends Enum>) type, value));
+            } else {
+                result.add(convertToComparableType((Class<? extends Comparable>) type, value));
+            }
+        }
+        return result;
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
-        Path<?> path = root.get(this.name);
+        Path<?> path = root.get(this.name[0]);
+        for (int i = 1; i < this.name.length; i++) {
+            path = path.get(this.name[i]);
+        }
+
+        Class<?> type = path.getJavaType();
+        Object parsedValue = switch (this.operator) {
+            case "is" -> null;
+            case "in", "not in" -> convert(type, true);
+            default -> convert(type, false);
+        };
 
         return switch (this.operator) {
-            case ":" -> criteriaBuilder.equal(root.get(this.name), this.value);
-            case ">" -> {
-                if (path.getJavaType().equals(Integer.class)) {
-                    yield criteriaBuilder.greaterThan(root.get(this.name), (Integer) this.value);
-                } else if (path.getJavaType().equals(Double.class)) {
-                    yield criteriaBuilder.greaterThan(root.get(this.name), (Double) this.value);
-                }
-                yield criteriaBuilder.greaterThan(root.get(this.name), (Double) this.value);
-            }
-            case "<:" -> criteriaBuilder.lessThanOrEqualTo(root.get(this.name), (Integer) this.value);
-            case ">:" -> criteriaBuilder.greaterThanOrEqualTo(root.get(this.name), (Integer) this.value);
-            case "~" -> criteriaBuilder.like((Path<String>) path, "%" + this.value + "%");
+            case ":" -> criteriaBuilder.equal(path, parsedValue);
+            case "!" -> criteriaBuilder.notEqual(path, parsedValue);
+            case ">" -> criteriaBuilder.greaterThan((Path<? extends Comparable>) path, (Comparable) parsedValue);
+            case "<" -> criteriaBuilder.lessThan((Path<? extends Comparable>) path, (Comparable) parsedValue);
+            case ">:" -> criteriaBuilder.greaterThanOrEqualTo((Path<? extends Comparable>) path,
+                                                              (Comparable) parsedValue);
+            case "<:" -> criteriaBuilder.lessThanOrEqualTo((Path<? extends Comparable>) path, (Comparable) parsedValue);
+            case "~" -> criteriaBuilder.like((Expression<String>) path, "%" + parsedValue + "%");
+            case "is" -> switch (this.value) {
+                case "null" -> path.isNull();
+                case "not null" -> path.isNotNull();
+                case "empty" -> criteriaBuilder.isEmpty((Path<? extends Collection>) path);
+                case "not empty" -> criteriaBuilder.isNotEmpty((Path<? extends Collection>) path);
+                default -> throw new IllegalStateException("Unexpected value: " + this.operator + this.value);
+            };
+            case "in" -> path.in((Collection<?>) parsedValue);
+            case "not in" -> criteriaBuilder.not(path.in((Collection<?>) parsedValue));
             default -> throw new IllegalStateException("Unexpected value: " + this.operator);
         };
     }
