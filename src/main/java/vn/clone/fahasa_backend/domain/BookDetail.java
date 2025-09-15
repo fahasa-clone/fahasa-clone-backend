@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.JdbcType;
 
-import vn.clone.fahasa_backend.configuration.LowercasePostgreSQLEnumJdbcType;
+import vn.clone.fahasa_backend.configuration.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
 
 @Entity
@@ -35,14 +35,10 @@ public class BookDetail extends AbstractEntity {
 
     @Column(name = "layout")
     // @Enumerated(EnumType.STRING)
-    @JdbcType(LowercasePostgreSQLEnumJdbcType.class)
+    @JdbcType(CustomPostgreSQLEnumJdbcType.class)
     // @JdbcTypeCode(SqlTypes.NAMED_ENUM)
     private BookLayout layout;
 
     @Column(name = "description")
     private String description;
-
-    // Relationship mappings
-    // @OneToOne(mappedBy = "bookDetail", fetch = FetchType.LAZY)
-    // private Book book;
 }
