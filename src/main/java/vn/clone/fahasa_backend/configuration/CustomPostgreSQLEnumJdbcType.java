@@ -1,17 +1,16 @@
 package vn.clone.fahasa_backend.configuration;
 
-import java.sql.CallableStatement;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Types;
+import java.sql.*;
 
 import org.hibernate.dialect.PostgreSQLEnumJdbcType;
 import org.hibernate.type.descriptor.ValueBinder;
+import org.hibernate.type.descriptor.ValueExtractor;
 import org.hibernate.type.descriptor.WrapperOptions;
 import org.hibernate.type.descriptor.java.JavaType;
 import org.hibernate.type.descriptor.jdbc.BasicBinder;
+import org.hibernate.type.descriptor.jdbc.BasicExtractor;
 
-public class LowercasePostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
+public class CustomPostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
     @Override
     public <X> ValueBinder<X> getBinder(JavaType<X> javaType) {
         return new BasicBinder<>(javaType, this) {
@@ -35,6 +34,30 @@ public class LowercasePostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
             protected void doBind(CallableStatement st, X value, String name, WrapperOptions options)
                     throws SQLException {
                 st.setObject(name, ((Enum<?>) value).name().toLowerCase(), Types.OTHER);
+            }
+        };
+
+    }
+
+    @Override
+    public <X> ValueExtractor<X> getExtractor(JavaType<X> javaType) {
+        return new BasicExtractor<>(javaType, this) {
+            @Override
+            protected X doExtract(ResultSet rs, int paramIndex, WrapperOptions options) throws SQLException {
+                String result = (String) rs.getObject(paramIndex);
+                return getJavaType().wrap(result.toUpperCase(), options);
+            }
+
+            @Override
+            protected X doExtract(CallableStatement statement, int index, WrapperOptions options) throws SQLException {
+                String result = (String) statement.getObject(index);
+                return getJavaType().wrap(result.toUpperCase(), options);
+            }
+
+            @Override
+            protected X doExtract(CallableStatement statement, String name, WrapperOptions options) throws SQLException {
+                String result = (String) statement.getObject(name);
+                return getJavaType().wrap(result.toUpperCase(), options);
             }
         };
 

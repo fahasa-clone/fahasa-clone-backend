@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.service;
+package vn.clone.fahasa_backend.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,6 +10,7 @@ import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
+import vn.clone.fahasa_backend.service.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {

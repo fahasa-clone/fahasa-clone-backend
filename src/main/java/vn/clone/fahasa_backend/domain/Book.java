@@ -40,7 +40,7 @@ public class Book extends AbstractEntity {
 
     // Relationship mappings
     @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
+    // @MapsId
     @JoinColumn(name = "id")
     private BookDetail bookDetail;
 
