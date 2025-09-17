@@ -1,0 +1,24 @@
+delete from reviews;
+delete from order_details;
+delete from order_states;
+delete from cart_items;
+delete from shipping_addresses;
+delete from wards;
+delete from districts;
+delete from provinces;
+delete from orders;
+delete from accounts;
+delete from categories_specifications;
+delete from public.book_authors;
+delete from public.book_details;
+delete from public.book_images;
+delete from public.books_specifications;
+delete from public.authors;
+delete from public.specifications;
+delete from public.publishers;
+delete from public.books;
+delete from public.category_details
+delete from public.categories;
+
+delete type gender;
+delete type book_layout;
