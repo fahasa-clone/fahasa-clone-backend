@@ -18,7 +18,7 @@ public class BookDTO {
     private Float averageRating;
     private Integer ratingCount;
     private Integer stock;
-    private boolean deleteStatus;
+    private boolean deleted;
 
     // Relationship mappings
     BookDetailDTO bookDetail;

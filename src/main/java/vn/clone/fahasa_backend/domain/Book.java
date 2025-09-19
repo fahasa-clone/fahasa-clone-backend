@@ -6,7 +6,6 @@ import java.util.List;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.experimental.Accessors;
 
 @Entity
 @Table(name = "books")
@@ -35,8 +34,7 @@ public class Book extends AbstractEntity {
     private int stock;
 
     @Column(name = "delete_status")
-    @Accessors(fluent = true)
-    private boolean deleteStatus;
+    private boolean deleted;
 
     @Column(name = "deleted_at")
     private Instant deletedAt;

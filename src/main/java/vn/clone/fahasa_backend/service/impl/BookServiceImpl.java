@@ -36,7 +36,7 @@ public class BookServiceImpl implements BookService {
                                                               .averageRating(book.getAverageRating())
                                                               .ratingCount(book.getRatingCount())
                                                               .stock(book.getStock())
-                                                              .deleteStatus(book.deleteStatus())
+                                                              .deleted(book.isDeleted())
                                                               .bookDetail(BookDTO.BookDetailDTO.builder()
                                                                                                .publicationYear(bookDetail.getPublicationYear())
                                                                                                .weight(bookDetail.getWeight())
