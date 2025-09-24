@@ -19,6 +19,8 @@ public class Category extends AbstractEntity {
     @NotBlank(message = "name field is required")
     private String name;
 
+    private String description;
+
     @ManyToOne
     @JoinColumn(name = "parent_id")
     @JsonIgnore

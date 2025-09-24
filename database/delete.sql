@@ -17,8 +17,4 @@ delete from public.authors;
 delete from public.specifications;
 delete from public.publishers;
 delete from public.books;
-delete from public.category_details
 delete from public.categories;
-
-delete type gender;
-delete type book_layout;

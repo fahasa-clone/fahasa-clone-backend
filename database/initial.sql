@@ -1,8 +1,5 @@
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (1, now(), now(), 'Thiếu nhi', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (1, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (1, now(), now(), 'Thiếu nhi', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Thiếu Nhi 
   </span>
@@ -181,11 +178,8 @@ values (1, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (2, now(), now(), 'Truyện Thiếu Nhi', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (2, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (2, now(), now(), 'Truyện Thiếu Nhi', 1, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Truyện Thiếu Nhi
   </span>
@@ -450,20 +444,17 @@ values (2, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (3, now(), now(), 'Truyện Tranh Thiếu Nhi', 2);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (3, now(), now(), 'Truyện Tranh Thiếu Nhi', 2, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (4, now(), now(), 'Truyện Đọc Thiếu Nhi', 2);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (4, now(), now(), 'Truyện Đọc Thiếu Nhi', 2, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (5, now(), now(), 'Truyện Tranh Ehon Nhật Bản', 2);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (5, now(), now(), 'Truyện Tranh Ehon Nhật Bản', 2, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (6, now(), now(), 'Kiến Thức - Kỹ Năng Sống Cho Trẻ', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (6, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (6, now(), now(), 'Kiến Thức - Kỹ Năng Sống Cho Trẻ', 1, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Sách Kiến Thức - Kỹ Năng Sống Cho Trẻ
   </span>
@@ -807,23 +798,20 @@ values (6, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (7, now(), now(), 'Sách Tranh Kỹ Năng Sống Cho Trẻ', 6);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (7, now(), now(), 'Sách Tranh Kỹ Năng Sống Cho Trẻ', 6, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (8, now(), now(), 'Vừa Học Vừa Chơi Với Trẻ', 6);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (8, now(), now(), 'Vừa Học Vừa Chơi Với Trẻ', 6, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (9, now(), now(), 'Sách Tranh Kiến Thức Sống Cho Trẻ', 6);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (9, now(), now(), 'Sách Tranh Kiến Thức Sống Cho Trẻ', 6, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (10, now(), now(), 'Hỏi Đáp - Câu Đố - Trò Chơi', 6);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (10, now(), now(), 'Hỏi Đáp - Câu Đố - Trò Chơi', 6, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (11, now(), now(), 'Kiến thức bách khoa', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (11, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (11, now(), now(), 'Kiến thức bách khoa', 1, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Kiến Thức Bách Khoa
   </span>
@@ -1168,20 +1156,17 @@ values (11, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (12, now(), now(), 'Kiến Thức Khoa Học - Tự Nhiên', 11);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (12, now(), now(), 'Kiến Thức Khoa Học - Tự Nhiên', 11, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (13, now(), now(), 'Bách Khoa Tri Thức - Câu Hỏi Vì Sao', 11);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (13, now(), now(), 'Bách Khoa Tri Thức - Câu Hỏi Vì Sao', 11, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (14, now(), now(), 'Câu Chuyện Danh Nhân Nổi Tiếng Thế Giới', 11);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (14, now(), now(), 'Câu Chuyện Danh Nhân Nổi Tiếng Thế Giới', 11, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (15, now(), now(), 'Tô màu, luyện chữ', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (15, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (15, now(), now(), 'Tô màu, luyện chữ', 1, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tô Màu, Luyện Chữ
   </span>
@@ -1485,11 +1470,8 @@ values (15, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (16, now(), now(), 'Từ Điển Thiếu Nhi', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (16, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (16, now(), now(), 'Từ Điển Thiếu Nhi', 1, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Từ Điển Thiếu Nhi
   </span>
@@ -1802,11 +1784,8 @@ values (16, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (17, now(), now(), 'Flashcard - Thẻ Học Thông Minh', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (17, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (17, now(), now(), 'Flashcard - Thẻ Học Thông Minh', 1, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Flashcard - Thẻ Học Thông Minh
   </span>
@@ -2237,11 +2216,8 @@ values (17, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (18, now(), now(), 'Sách Nói', 1);
-
-insert into category_details (id, created_at, updated_at, description)
-values (18, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (18, now(), now(), 'Sách Nói', 1, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Nói
   </span>
@@ -2621,14 +2597,11 @@ values (18, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (19, now(), now(), 'Tạp Chí Thiếu Nhi', 1);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (19, now(), now(), 'Tạp Chí Thiếu Nhi', 1, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (20, now(), now(), 'Giáo khoa - Tham khảo', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (20, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (20, now(), now(), 'Giáo khoa - Tham khảo', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Giáo Khoa - Tham Khảo
   </span>
@@ -2772,11 +2745,8 @@ values (20, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (21, now(), now(), 'Sách Tham Khảo', 20);
-
-insert into category_details (id, created_at, updated_at, description)
-values (21, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (21, now(), now(), 'Sách Tham Khảo', 20, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tham Khảo
   </span>
@@ -3068,80 +3038,77 @@ values (21, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (22, now(), now(), 'Tham Khảo Lớp 1', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (22, now(), now(), 'Tham Khảo Lớp 1', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (23, now(), now(), 'Tham Khảo Lớp 3', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (23, now(), now(), 'Tham Khảo Lớp 3', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (24, now(), now(), 'Tham Khảo Lớp 2', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (24, now(), now(), 'Tham Khảo Lớp 2', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (25, now(), now(), 'Tham Khảo Lớp 9', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (25, now(), now(), 'Tham Khảo Lớp 9', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (26, now(), now(), 'Luyện Thi Vào Lớp 10', 25);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (26, now(), now(), 'Luyện Thi Vào Lớp 10', 25, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (27, now(), now(), 'Tham Khảo Lớp 5', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (27, now(), now(), 'Tham Khảo Lớp 5', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (28, now(), now(), 'Luyện Thi Vào Lớp 6', 27);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (28, now(), now(), 'Luyện Thi Vào Lớp 6', 27, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (29, now(), now(), 'Tham Khảo Lớp 4', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (29, now(), now(), 'Tham Khảo Lớp 4', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (30, now(), now(), 'Tham Khảo Lớp 12', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (30, now(), now(), 'Tham Khảo Lớp 12', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (31, now(), now(), 'Luyện Thi THPT Quốc Gia', 30);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (31, now(), now(), 'Luyện Thi THPT Quốc Gia', 30, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (32, now(), now(), 'Ngữ Văn', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (32, now(), now(), 'Ngữ Văn', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (33, now(), now(), 'Tiếng Anh', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (33, now(), now(), 'Tiếng Anh', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (34, now(), now(), 'Toán', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (34, now(), now(), 'Toán', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (35, now(), now(), 'Hóa Học', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (35, now(), now(), 'Hóa Học', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (36, now(), now(), 'Vật Lý', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (36, now(), now(), 'Vật Lý', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (37, now(), now(), 'Lịch Sử', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (37, now(), now(), 'Lịch Sử', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (38, now(), now(), 'Sinh Học', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (38, now(), now(), 'Sinh Học', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (39, now(), now(), 'Địa Lý', 31);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (39, now(), now(), 'Địa Lý', 31, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (40, now(), now(), 'Tham Khảo Lớp 6', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (40, now(), now(), 'Tham Khảo Lớp 6', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (41, now(), now(), 'Tham Khảo Lớp 8', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (41, now(), now(), 'Tham Khảo Lớp 8', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (42, now(), now(), 'Tham Khảo Lớp 7', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (42, now(), now(), 'Tham Khảo Lớp 7', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (43, now(), now(), 'Tham Khảo Lớp 10', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (43, now(), now(), 'Tham Khảo Lớp 10', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (44, now(), now(), 'Tham Khảo Lớp 11', 21);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (44, now(), now(), 'Tham Khảo Lớp 11', 21, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (45, now(), now(), 'Sách Giáo Khoa', 20);
-
-insert into category_details (id, created_at, updated_at, description)
-values (45, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (45, now(), now(), 'Sách Giáo Khoa', 20, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Sách Giáo Khoa
   </strong>
@@ -3319,11 +3286,8 @@ values (45, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (46, now(), now(), 'Giáo Khoa Lớp 3', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (46, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (46, now(), now(), 'Giáo Khoa Lớp 3', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 3
   </strong>
@@ -3435,47 +3399,44 @@ values (46, now(), now(), '<h2 data-start="0" data-end="43">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (47, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 46);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (47, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 46, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (48, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (48, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (49, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (49, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (50, now(), now(), 'Bộ Cánh Diều - Lớp 3', 46);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (50, now(), now(), 'Bộ Cánh Diều - Lớp 3', 46, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (51, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 3', 50);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (51, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 3', 50, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (52, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 3', 50);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (52, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 3', 50, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (53, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 3', 46);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (53, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 3', 46, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (54, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 3', 53);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (54, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 3', 53, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (55, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 3', 53);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (55, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 3', 53, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (56, now(), now(), 'Khác', 46);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (56, now(), now(), 'Khác', 46, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (57, now(), now(), 'Sách Bài Tập - Lớp 3', 56);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (57, now(), now(), 'Sách Bài Tập - Lớp 3', 56, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (58, now(), now(), 'Sách Bài Học - Lớp 3', 56);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (58, now(), now(), 'Sách Bài Học - Lớp 3', 56, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (59, now(), now(), 'Giáo Khoa Lớp 4', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (59, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (59, now(), now(), 'Giáo Khoa Lớp 4', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 4
   </strong>
@@ -3593,44 +3554,41 @@ values (59, now(), now(), '<h2 data-start="0" data-end="43">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (60, now(), now(), 'Bộ Kết Nối - Lớp 4', 59);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (60, now(), now(), 'Bộ Kết Nối - Lớp 4', 59, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (61, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 4', 60);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (61, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 4', 60, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (62, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 4', 60);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (62, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 4', 60, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (63, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 4', 59);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (63, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 4', 59, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (64, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 4', 63);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (64, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 4', 63, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (65, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 4', 63);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (65, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 4', 63, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (66, now(), now(), 'Sách Bài Học Lớp 4', 59);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (66, now(), now(), 'Sách Bài Học Lớp 4', 59, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (67, now(), now(), 'Sách Bài Tập Lớp 4', 59);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (67, now(), now(), 'Sách Bài Tập Lớp 4', 59, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (68, now(), now(), 'Bộ Cánh Diều - Lớp 4', 59);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (68, now(), now(), 'Bộ Cánh Diều - Lớp 4', 59, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (69, now(), now(), 'Sách Bài Tap - Bộ Cánh Diều - Lớp 4', 68);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (69, now(), now(), 'Sách Bài Tap - Bộ Cánh Diều - Lớp 4', 68, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (70, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 4', 68);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (70, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 4', 68, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (71, now(), now(), 'Giáo Khoa Lớp 12', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (71, now(), now(), '<h2 data-start="0" data-end="44">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (71, now(), now(), 'Giáo Khoa Lớp 12', 45, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 12
   </strong>
@@ -3758,44 +3716,41 @@ values (71, now(), now(), '<h2 data-start="0" data-end="44">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (72, now(), now(), 'Bộ Kết Nối - Lớp 12', 71);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (72, now(), now(), 'Bộ Kết Nối - Lớp 12', 71, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (73, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 12', 72);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (73, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 12', 72, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (74, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 12', 72);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (74, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 12', 72, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (75, now(), now(), 'Bộ Cánh Diều - Lớp 12', 71);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (75, now(), now(), 'Bộ Cánh Diều - Lớp 12', 71, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (76, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 12', 75);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (76, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 12', 75, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (77, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 12', 75);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (77, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 12', 75, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (78, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 12', 71);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (78, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 12', 71, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (79, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 12', 78);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (79, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 12', 78, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (80, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 12', 78);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (80, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 12', 78, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (81, now(), now(), 'Sách Bài Tập Lớp 12', 71);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (81, now(), now(), 'Sách Bài Tập Lớp 12', 71, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (82, now(), now(), 'Sách Bài Học Lớp 12', 71);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (82, now(), now(), 'Sách Bài Học Lớp 12', 71, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (83, now(), now(), 'Giáo Khoa Lớp 11', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (83, now(), now(), '<h2 data-start="0" data-end="44">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (83, now(), now(), 'Giáo Khoa Lớp 11', 45, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 11
   </strong>
@@ -3905,41 +3860,38 @@ values (83, now(), now(), '<h2 data-start="0" data-end="44">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (84, now(), now(), 'Bộ Kết Nối - Lớp 11', 83);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (84, now(), now(), 'Bộ Kết Nối - Lớp 11', 83, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (85, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 11', 84);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (85, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 11', 84, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (86, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 11', 84);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (86, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 11', 84, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (87, now(), now(), 'Bộ Cánh Diều - Lớp 11', 83);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (87, now(), now(), 'Bộ Cánh Diều - Lớp 11', 83, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (88, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 11', 87);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (88, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 11', 87, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (89, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 11', 87);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (89, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 11', 87, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (90, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 11', 83);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (90, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 11', 83, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (91, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 11', 90);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (91, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 11', 90, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (92, now(), now(), 'Sách Bài Học Lớp 11', 83);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (92, now(), now(), 'Sách Bài Học Lớp 11', 83, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (93, now(), now(), 'Sách Bài Tập Lớp 11', 83);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (93, now(), now(), 'Sách Bài Tập Lớp 11', 83, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (94, now(), now(), 'Giáo Khoa Lớp 7', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (94, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (94, now(), now(), 'Giáo Khoa Lớp 7', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 7
   </strong>
@@ -4063,47 +4015,44 @@ values (94, now(), now(), '<h2 data-start="0" data-end="43">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (95, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 7', 94);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (95, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 7', 94, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (96, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 7', 95);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (96, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 7', 95, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (97, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 7', 95);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (97, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 7', 95, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (98, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 94);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (98, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 94, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (99, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (99, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (100, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (100, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (101, now(), now(), 'Khác', 94);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (101, now(), now(), 'Khác', 94, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (102, now(), now(), 'Sách Bài Học - Lớp 7', 101);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (102, now(), now(), 'Sách Bài Học - Lớp 7', 101, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (103, now(), now(), 'Sách Bài Tập - Lớp 7', 101);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (103, now(), now(), 'Sách Bài Tập - Lớp 7', 101, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (104, now(), now(), 'Bộ Cánh Diều - Lớp 7', 94);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (104, now(), now(), 'Bộ Cánh Diều - Lớp 7', 94, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (105, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 7', 104);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (105, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 7', 104, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (106, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 7', 104);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (106, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 7', 104, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (107, now(), now(), 'Giáo Khoa Lớp 9', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (107, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (107, now(), now(), 'Giáo Khoa Lớp 9', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 9
   </strong>
@@ -4213,44 +4162,41 @@ values (107, now(), now(), '<h2 data-start="0" data-end="43">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (108, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 9', 107);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (108, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 9', 107, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (109, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 9', 108);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (109, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 9', 108, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (110, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 9', 108);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (110, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 9', 108, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (111, now(), now(), 'Bộ Kết Nối - Lớp 9', 107);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (111, now(), now(), 'Bộ Kết Nối - Lớp 9', 107, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (112, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 9', 111);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (112, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 9', 111, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (113, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 9', 111);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (113, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 9', 111, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (114, now(), now(), 'Bộ Cánh Diều - Lớp 9', 107);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (114, now(), now(), 'Bộ Cánh Diều - Lớp 9', 107, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (115, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 9', 114);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (115, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 9', 114, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (116, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 9', 114);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (116, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 9', 114, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (117, now(), now(), 'Sách Bài Học Lớp 9', 107);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (117, now(), now(), 'Sách Bài Học Lớp 9', 107, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (118, now(), now(), 'Sách Bài Tập Lớp 9', 107);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (118, now(), now(), 'Sách Bài Tập Lớp 9', 107, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (119, now(), now(), 'Giáo Khoa Lớp 2', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (119, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (119, now(), now(), 'Giáo Khoa Lớp 2', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 2
   </strong>
@@ -4362,47 +4308,44 @@ values (119, now(), now(), '<h2 data-start="0" data-end="43">
 </article>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (120, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 2', 119);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (120, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 2', 119, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (121, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 2', 120);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (121, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 2', 120, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (122, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 2', 120);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (122, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 2', 120, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (123, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 119);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (123, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 119, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (124, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (124, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (125, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (125, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (126, now(), now(), 'Bộ Cánh Diều - Lớp 2', 119);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (126, now(), now(), 'Bộ Cánh Diều - Lớp 2', 119, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (127, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 2', 126);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (127, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 2', 126, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (128, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 2', 126);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (128, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 2', 126, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (129, now(), now(), 'Khác', 119);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (129, now(), now(), 'Khác', 119, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (130, now(), now(), 'Sách Bài Học - Lớp 2', 129);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (130, now(), now(), 'Sách Bài Học - Lớp 2', 129, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (131, now(), now(), 'Sách Bài Tập - Lớp 2', 129);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (131, now(), now(), 'Sách Bài Tập - Lớp 2', 129, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (132, now(), now(), 'Giáo Khoa Lớp 5', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (132, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (132, now(), now(), 'Giáo Khoa Lớp 5', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 5
   </strong>
@@ -4507,44 +4450,41 @@ values (132, now(), now(), '<h2 data-start="0" data-end="43">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (133, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 5', 132);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (133, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 5', 132, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (134, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 5', 133);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (134, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 5', 133, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (135, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 5', 133);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (135, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 5', 133, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (136, now(), now(), 'Bộ Kết Nối - Lớp 5', 132);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (136, now(), now(), 'Bộ Kết Nối - Lớp 5', 132, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (137, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 5', 136);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (137, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 5', 136, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (138, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 5', 136);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (138, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 5', 136, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (139, now(), now(), 'Bộ Cánh Diều - Lớp 5', 132);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (139, now(), now(), 'Bộ Cánh Diều - Lớp 5', 132, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (140, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 5', 139);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (140, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 5', 139, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (141, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 5', 139);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (141, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 5', 139, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (142, now(), now(), 'Sách Bài Tập Lớp 5', 132);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (142, now(), now(), 'Sách Bài Tập Lớp 5', 132, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (143, now(), now(), 'Sách Bài Học Lớp 5', 132);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (143, now(), now(), 'Sách Bài Học Lớp 5', 132, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (144, now(), now(), 'Giáo Khoa Lớp 6', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (144, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (144, now(), now(), 'Giáo Khoa Lớp 6', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 6
   </strong>
@@ -4657,47 +4597,44 @@ values (144, now(), now(), '<h2 data-start="0" data-end="43">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (145, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 144);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (145, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 144, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (146, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (146, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (147, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (147, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (148, now(), now(), 'Bộ Cánh Diều - Lớp 6', 144);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (148, now(), now(), 'Bộ Cánh Diều - Lớp 6', 144, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (149, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 6', 148);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (149, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 6', 148, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (150, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 6', 148);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (150, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 6', 148, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (151, now(), now(), 'Khác', 144);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (151, now(), now(), 'Khác', 144, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (152, now(), now(), 'Sách Bài Học - Lớp 6', 151);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (152, now(), now(), 'Sách Bài Học - Lớp 6', 151, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (153, now(), now(), 'Sách Bài Tập - Lớp 6', 151);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (153, now(), now(), 'Sách Bài Tập - Lớp 6', 151, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (154, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 6', 144);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (154, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 6', 144, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (155, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 6', 154);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (155, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 6', 154, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (156, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 6', 154);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (156, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 6', 154, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (157, now(), now(), 'Giáo Khoa Lớp 8', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (157, now(), now(), '<h2 data-start="0" data-end="43">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (157, now(), now(), 'Giáo Khoa Lớp 8', 45, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 8
   </strong>
@@ -4806,44 +4743,41 @@ values (157, now(), now(), '<h2 data-start="0" data-end="43">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (158, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 8', 157);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (158, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 8', 157, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (159, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 8', 158);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (159, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 8', 158, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (160, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 8', 158);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (160, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 8', 158, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (161, now(), now(), 'Bộ Kết Nối - Lớp 8', 157);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (161, now(), now(), 'Bộ Kết Nối - Lớp 8', 157, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (162, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 8', 161);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (162, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 8', 161, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (163, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 8', 161);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (163, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 8', 161, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (164, now(), now(), 'Bộ Cánh Diều - Lớp 8', 157);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (164, now(), now(), 'Bộ Cánh Diều - Lớp 8', 157, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (165, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 8', 164);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (165, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 8', 164, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (166, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 8', 164);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (166, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 8', 164, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (167, now(), now(), 'Sách Bài Học Lớp 8', 157);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (167, now(), now(), 'Sách Bài Học Lớp 8', 157, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (168, now(), now(), 'Sách Bài Tập Lớp 8', 157);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (168, now(), now(), 'Sách Bài Tập Lớp 8', 157, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (169, now(), now(), 'Giáo Khoa Lớp 1', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (169, now(), now(), '<h2 data-start="0" data-end="74">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (169, now(), now(), 'Giáo Khoa Lớp 1', 45, '<h2 data-start="0" data-end="74">
   <span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">
     <strong data-start="0" data-end="43" data-is-last-node="" data-is-only-node="">
       Thông tin danh mục Sách Giáo Khoa Lớp 1
@@ -4986,47 +4920,44 @@ values (169, now(), now(), '<h2 data-start="0" data-end="74">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (170, now(), now(), 'Khác', 169);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (170, now(), now(), 'Khác', 169, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (171, now(), now(), 'Sách Bài Học - Lớp 1', 170);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (171, now(), now(), 'Sách Bài Học - Lớp 1', 170, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (172, now(), now(), 'Sách Bài Tập - Lớp 1', 170);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (172, now(), now(), 'Sách Bài Tập - Lớp 1', 170, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (173, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 1', 169);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (173, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 1', 169, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (174, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 1', 173);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (174, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 1', 173, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (175, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 1', 173);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (175, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 1', 173, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (176, now(), now(), 'Bộ Cánh Diều - Lớp 1', 169);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (176, now(), now(), 'Bộ Cánh Diều - Lớp 1', 169, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (177, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 1', 176);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (177, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 1', 176, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (178, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 1', 176);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (178, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 1', 176, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (179, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 169);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (179, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 169, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (180, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 179);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (180, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 179, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (181, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống', 179);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (181, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống', 179, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (182, now(), now(), 'Giáo Khoa Lớp 10', 45);
-
-insert into category_details (id, created_at, updated_at, description)
-values (182, now(), now(), '<h2 data-start="0" data-end="44">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (182, now(), now(), 'Giáo Khoa Lớp 10', 45, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 10
   </strong>
@@ -5136,47 +5067,44 @@ values (182, now(), now(), '<h2 data-start="0" data-end="44">
 </div>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (183, now(), now(), 'Bộ Cánh Diều - Lớp 10', 182);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (183, now(), now(), 'Bộ Cánh Diều - Lớp 10', 182, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (184, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 10', 183);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (184, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 10', 183, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (185, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 10', 183);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (185, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 10', 183, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (186, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 182);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (186, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 182, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (187, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (187, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (188, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (188, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (189, now(), now(), 'Khác', 182);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (189, now(), now(), 'Khác', 182, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (190, now(), now(), 'Sách Bài Học - Lớp 10', 189);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (190, now(), now(), 'Sách Bài Học - Lớp 10', 189, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (191, now(), now(), 'Sách Bài Tập - Lớp 10', 189);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (191, now(), now(), 'Sách Bài Tập - Lớp 10', 189, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (192, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 10', 182);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (192, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 10', 182, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (193, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 10', 192);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (193, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 10', 192, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (194, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 10', 192);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (194, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 10', 192, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (195, now(), now(), 'Mẫu Giáo', 20);
-
-insert into category_details (id, created_at, updated_at, description)
-values (195, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (195, now(), now(), 'Mẫu Giáo', 20, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Mẫu Giáo
   </span>
@@ -5573,11 +5501,8 @@ values (195, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (196, now(), now(), 'Sách giáo viên', 20);
-
-insert into category_details (id, created_at, updated_at, description)
-values (196, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (196, now(), now(), 'Sách giáo viên', 20, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Giáo Viên
   </span>
@@ -5976,11 +5901,8 @@ values (196, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (197, now(), now(), 'Đại học', 20);
-
-insert into category_details (id, created_at, updated_at, description)
-values (197, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (197, now(), now(), 'Đại học', 20, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Đại Học
   </span>
@@ -6208,11 +6130,8 @@ values (197, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (198, now(), now(), 'Văn học', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (198, now(), now(), '<h1>
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (198, now(), now(), 'Văn học', null, '<h1>
   <span>
     <span>
       Thông tin danh mục Sách Văn Học
@@ -6493,11 +6412,8 @@ values (198, now(), now(), '<h1>
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (199, now(), now(), 'Tiểu thuyết', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (199, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (199, now(), now(), 'Tiểu thuyết', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Tiểu Thuyết 
   </span>
@@ -6873,11 +6789,8 @@ values (199, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (200, now(), now(), 'Truyện ngắn - Tản Văn', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (200, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (200, now(), now(), 'Truyện ngắn - Tản Văn', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Truyện Ngắn – Tản Văn
   </span>
@@ -7152,11 +7065,8 @@ values (200, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (201, now(), now(), 'Light Novel', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (201, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (201, now(), now(), 'Light Novel', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Light Novel
   </span>
@@ -7283,11 +7193,8 @@ values (201, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (202, now(), now(), 'Truyện Trinh Thám - Kiếm Hiệp', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (202, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (202, now(), now(), 'Truyện Trinh Thám - Kiếm Hiệp', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Truyện Trinh Thám - Kiếm Hiệp
   </span>
@@ -7660,11 +7567,8 @@ values (202, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (203, now(), now(), 'Tác Phẩm Kinh Điển', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (203, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (203, now(), now(), 'Tác Phẩm Kinh Điển', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Tác Phẩm Kinh Điển
   </span>
@@ -7991,11 +7895,8 @@ values (203, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (204, now(), now(), 'Huyền Bí - Giả Tưởng - Kinh Dị', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (204, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (204, now(), now(), 'Huyền Bí - Giả Tưởng - Kinh Dị', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Huyền Bí - Giả Tưởng - Kinh Dị 
   </span>
@@ -8326,11 +8227,8 @@ values (204, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (205, now(), now(), 'Thơ ca, tục ngữ, ca dao, thành ngữ', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (205, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (205, now(), now(), 'Thơ ca, tục ngữ, ca dao, thành ngữ', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Thơ ca, Tục ngữ, Ca dâo, Thành ngữ 
   </span>
@@ -8948,11 +8846,8 @@ values (205, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (206, now(), now(), 'Phóng Sự - Ký Sự - Phê Bình Văn Học', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (206, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (206, now(), now(), 'Phóng Sự - Ký Sự - Phê Bình Văn Học', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Phóng sự - Ký sự - Phê bình văn học 
   </span>
@@ -9428,11 +9323,8 @@ values (206, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (207, now(), now(), 'Ngôn Tình', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (207, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (207, now(), now(), 'Ngôn Tình', 198, '<h1 dir="ltr">
   <span>
     Truyện Ngôn Tình – Thế giới của những câu chuyện tình yêu ngọt ngào
   </span>
@@ -9688,11 +9580,8 @@ values (207, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (208, now(), now(), 'Sách Tô Màu Dành Cho Người Lớn', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (208, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (208, now(), now(), 'Sách Tô Màu Dành Cho Người Lớn', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tô Màu Dành Cho Người Lớn
   </span>
@@ -10076,11 +9965,8 @@ values (208, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (209, now(), now(), 'Du Ký', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (209, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (209, now(), now(), 'Du Ký', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Du Ký
   </span>
@@ -10571,11 +10457,8 @@ values (209, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (210, now(), now(), 'Tác giả - Tác Phẩm', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (210, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (210, now(), now(), 'Tác giả - Tác Phẩm', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Tác Giả - Tác Phẩm
   </span>
@@ -11032,11 +10915,8 @@ values (210, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (211, now(), now(), 'Hài Hước - Truyện Cười', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (211, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (211, now(), now(), 'Hài Hước - Truyện Cười', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Truyện Hài Hước - Truyện Cười
   </span>
@@ -11488,11 +11368,8 @@ values (211, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (212, now(), now(), 'Sách Ảnh', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (212, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (212, now(), now(), 'Sách Ảnh', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Ảnh
   </span>
@@ -11985,11 +11862,8 @@ values (212, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (213, now(), now(), 'Thể loại khác', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (213, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (213, now(), now(), 'Thể loại khác', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Thể Loại Khác 
   </span>
@@ -12418,11 +12292,8 @@ values (213, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (214, now(), now(), '12 Cung Hoàng Đạo', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (214, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (214, now(), now(), '12 Cung Hoàng Đạo', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục 12 Cung Hoàng Đạo 
   </span>
@@ -12885,11 +12756,8 @@ values (214, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (215, now(), now(), 'Tuổi Teen', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (215, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (215, now(), now(), 'Tuổi Teen', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Tuổi Teen
   </span>
@@ -13234,11 +13102,8 @@ values (215, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (216, now(), now(), 'Truyện Tranh', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (216, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (216, now(), now(), 'Truyện Tranh', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Truyện Tranh
   </span>
@@ -13606,11 +13471,8 @@ values (216, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (217, now(), now(), 'Combo Văn Học', 198);
-
-insert into category_details (id, created_at, updated_at, description)
-values (217, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (217, now(), now(), 'Combo Văn Học', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Combo Văn Học
   </span>
@@ -13917,11 +13779,8 @@ values (217, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (218, now(), now(), 'Manga - Comic', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (218, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (218, now(), now(), 'Manga - Comic', null, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Manga - Comic
   </span>
@@ -14205,11 +14064,8 @@ values (218, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (219, now(), now(), 'Manga', 218);
-
-insert into category_details (id, created_at, updated_at, description)
-values (219, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (219, now(), now(), 'Manga', 218, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Manga 
   </span>
@@ -14519,44 +14375,41 @@ values (219, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (220, now(), now(), 'Manga Khác', 219);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (220, now(), now(), 'Manga Khác', 219, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (221, now(), now(), 'Series Manga', 219);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (221, now(), now(), 'Series Manga', 219, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (222, now(), now(), 'Doraemon', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (222, now(), now(), 'Doraemon', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (223, now(), now(), 'Conan', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (223, now(), now(), 'Conan', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (224, now(), now(), 'Shin - Cậu Bé Bút Chì', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (224, now(), now(), 'Shin - Cậu Bé Bút Chì', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (225, now(), now(), 'One Piece', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (225, now(), now(), 'One Piece', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (226, now(), now(), 'Dragon Ball', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (226, now(), now(), 'Dragon Ball', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (227, now(), now(), 'Naruto', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (227, now(), now(), 'Naruto', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (228, now(), now(), 'Nhóc Miko', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (228, now(), now(), 'Nhóc Miko', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (229, now(), now(), 'Pokemon', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (229, now(), now(), 'Pokemon', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (230, now(), now(), 'Kindaichi', 221);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (230, now(), now(), 'Kindaichi', 221, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (231, now(), now(), 'Comic - Truyện Tranh', 218);
-
-insert into category_details (id, created_at, updated_at, description)
-values (231, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (231, now(), now(), 'Comic - Truyện Tranh', 218, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Comic - Truyện tranh 
   </span>
@@ -15109,20 +14962,17 @@ values (231, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (232, now(), now(), 'Truyện Tranh Việt Nam', 231);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (232, now(), now(), 'Truyện Tranh Việt Nam', 231, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (233, now(), now(), 'Truyện Tranh Nước Ngoài', 231);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (233, now(), now(), 'Truyện Tranh Nước Ngoài', 231, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (234, now(), now(), 'Comic', 231);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (234, now(), now(), 'Comic', 231, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (235, now(), now(), 'Tâm lý - Kỹ năng sống', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (235, now(), now(), '<h1 data-pm-slice="1 1 []">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (235, now(), now(), 'Tâm lý - Kỹ năng sống', null, '<h1 data-pm-slice="1 1 []">
   Thông tin danh mục Sách Tâm Lý - Kỹ Năng Sống
 </h1>
 <p data-pm-slice="1 1 []">
@@ -15212,11 +15062,8 @@ values (235, now(), now(), '<h1 data-pm-slice="1 1 []">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (236, now(), now(), 'Kỹ năng sống', 235);
-
-insert into category_details (id, created_at, updated_at, description)
-values (236, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (236, now(), now(), 'Kỹ năng sống', 235, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Kỹ Năng Sống 
   </span>
@@ -15555,11 +15402,8 @@ values (236, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (237, now(), now(), 'Tâm lý', 235);
-
-insert into category_details (id, created_at, updated_at, description)
-values (237, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (237, now(), now(), 'Tâm lý', 235, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tâm Lý
   </span>
@@ -15843,11 +15687,8 @@ values (237, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (238, now(), now(), 'Sách cho tuổi mới lớn', 235);
-
-insert into category_details (id, created_at, updated_at, description)
-values (238, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (238, now(), now(), 'Sách cho tuổi mới lớn', 235, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Cho Tuổi Mới Lớn
   </span>
@@ -16102,11 +15943,8 @@ values (238, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (239, now(), now(), 'Chicken Soup - Hạt Giống Tâm Hồn', 235);
-
-insert into category_details (id, created_at, updated_at, description)
-values (239, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (239, now(), now(), 'Chicken Soup - Hạt Giống Tâm Hồn', 235, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Chicken Soup - Hạt Giống Tâm Hồn 
   </span>
@@ -16335,11 +16173,8 @@ values (239, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (240, now(), now(), 'Rèn luyện nhân cách', 235);
-
-insert into category_details (id, created_at, updated_at, description)
-values (240, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (240, now(), now(), 'Rèn luyện nhân cách', 235, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Rèn Luyện Nhân Cách 
   </span>
@@ -16563,11 +16398,8 @@ values (240, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (241, now(), now(), 'Sách học ngoại ngữ', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (241, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (241, now(), now(), 'Sách học ngoại ngữ', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Học Ngoại Ngữ
   </span>
@@ -16731,11 +16563,8 @@ values (241, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (242, now(), now(), 'Tiếng Anh', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (242, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (242, now(), now(), 'Tiếng Anh', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tiếng Anh 
   </span>
@@ -17306,41 +17135,38 @@ values (242, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (243, now(), now(), 'Ngữ Pháp', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (243, now(), now(), 'Ngữ Pháp', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (244, now(), now(), 'Tiếng Anh Thiếu Nhi', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (244, now(), now(), 'Tiếng Anh Thiếu Nhi', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (245, now(), now(), 'Luyện Thi IELTS', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (245, now(), now(), 'Luyện Thi IELTS', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (246, now(), now(), 'Đàm Thoại - Giao Tiếp', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (246, now(), now(), 'Đàm Thoại - Giao Tiếp', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (247, now(), now(), 'Luyện Thi TOEIC', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (247, now(), now(), 'Luyện Thi TOEIC', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (248, now(), now(), 'Từ Vựng', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (248, now(), now(), 'Từ Vựng', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (249, now(), now(), 'Luyện Thi TOEFL', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (249, now(), now(), 'Luyện Thi TOEFL', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (250, now(), now(), 'Luyện Thi Chứng Chỉ A,B,C', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (250, now(), now(), 'Luyện Thi Chứng Chỉ A,B,C', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (251, now(), now(), 'Flashcard - Thẻ Học Tiếng Anh', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (251, now(), now(), 'Flashcard - Thẻ Học Tiếng Anh', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (252, now(), now(), 'Luyện Nghe', 242);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (252, now(), now(), 'Luyện Nghe', 242, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (253, now(), now(), 'Tiếng Hoa', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (253, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (253, now(), now(), 'Tiếng Hoa', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Tiếng Hoa
   </span>
@@ -17699,11 +17525,8 @@ values (253, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (254, now(), now(), 'Tiếng Nhật', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (254, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (254, now(), now(), 'Tiếng Nhật', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tiếng Nhật 
   </span>
@@ -18052,11 +17875,8 @@ values (254, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (255, now(), now(), 'Tiếng Hàn', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (255, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (255, now(), now(), 'Tiếng Hàn', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Tiếng Hàn
   </span>
@@ -18657,11 +18477,8 @@ values (255, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (256, now(), now(), 'Tiếng Việt cho người nước ngoài', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (256, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (256, now(), now(), 'Tiếng Việt cho người nước ngoài', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách tiếng Việt cho người nước ngoài
   </span>
@@ -18966,11 +18783,8 @@ values (256, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (257, now(), now(), 'Ngoại ngữ khác', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (257, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (257, now(), now(), 'Ngoại ngữ khác', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Ngoại Ngữ Khác
   </span>
@@ -19330,11 +19144,8 @@ values (257, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (258, now(), now(), 'Tiếng Đức', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (258, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (258, now(), now(), 'Tiếng Đức', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách tiếng Đức
   </span>
@@ -19670,11 +19481,8 @@ values (258, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (259, now(), now(), 'Tiếng Pháp', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (259, now(), now(), '<h2 data-start="151" data-end="212">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (259, now(), now(), 'Tiếng Pháp', 241, '<h2 data-start="151" data-end="212">
   Thông tin chi tiết về danh mục sách tiếng Pháp tại Fahasa
 </h2>
 <p data-start="214" data-end="884">
@@ -19874,11 +19682,8 @@ values (259, now(), now(), '<h2 data-start="151" data-end="212">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (260, now(), now(), 'Flashcard', 241);
-
-insert into category_details (id, created_at, updated_at, description)
-values (260, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (260, now(), now(), 'Flashcard', 241, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Flashcard
   </span>
@@ -20147,11 +19952,8 @@ values (260, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (261, now(), now(), 'Kinh Tế', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (261, now(), now(), '<h1>
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (261, now(), now(), 'Kinh Tế', null, '<h1>
   Thông tin danh mục Sách Kinh Tế
 </h1>
 <p>
@@ -20256,11 +20058,8 @@ values (261, now(), now(), '<h1>
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (262, now(), now(), 'Nhân vật - Bài Học Kinh doanh', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (262, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (262, now(), now(), 'Nhân vật - Bài Học Kinh doanh', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nhân Vật - Bài Học Kinh Doanh
   </span>
@@ -20536,11 +20335,8 @@ values (262, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (263, now(), now(), 'Quản Trị - Lãnh Đạo', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (263, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (263, now(), now(), 'Quản Trị - Lãnh Đạo', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Quản trị - Lãnh đạo
   </span>
@@ -20816,11 +20612,8 @@ values (263, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (264, now(), now(), 'Marketing - Bán Hàng', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (264, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (264, now(), now(), 'Marketing - Bán Hàng', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Marketing - Bán hàng
   </span>
@@ -21125,11 +20918,8 @@ values (264, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (265, now(), now(), 'Khởi Nghiệp - Làm Giàu', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (265, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (265, now(), now(), 'Khởi Nghiệp - Làm Giàu', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Khởi Nghiệp - Làm Giàu
   </span>
@@ -21423,11 +21213,8 @@ values (265, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (266, now(), now(), 'Phân Tích Kinh Tế', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (266, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (266, now(), now(), 'Phân Tích Kinh Tế', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Phân Tích Kinh Tế
   </span>
@@ -21727,11 +21514,8 @@ values (266, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (267, now(), now(), 'Chứng Khoán - Bất Động Sản - Đầu Tư', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (267, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (267, now(), now(), 'Chứng Khoán - Bất Động Sản - Đầu Tư', 261, '<h2 dir="ltr">
   <span>
     Thông tin chi tiết về danh mục sách Chứng Khoán - Bất Động Sản - Đầu Tư của Fahasa
   </span>
@@ -22044,11 +21828,8 @@ values (267, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (268, now(), now(), 'Tài Chính - Ngân Hàng', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (268, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (268, now(), now(), 'Tài Chính - Ngân Hàng', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Tài chính - Ngân hàng của Fahasa
   </span>
@@ -22302,11 +22083,8 @@ values (268, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (269, now(), now(), 'Nhân Sự - Việc Làm', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (269, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (269, now(), now(), 'Nhân Sự - Việc Làm', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nhân sự - Việc làm
   </span>
@@ -22531,11 +22309,8 @@ values (269, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (270, now(), now(), 'Kế Toán - Kiểm Toán - Thuế', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (270, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (270, now(), now(), 'Kế Toán - Kiểm Toán - Thuế', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Kế toán - Kiểm toán - Thuế
   </span>
@@ -22896,11 +22671,8 @@ values (270, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (271, now(), now(), 'Ngoại Thương', 261);
-
-insert into category_details (id, created_at, updated_at, description)
-values (271, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (271, now(), now(), 'Ngoại Thương', 261, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Ngoại thương
   </span>
@@ -23476,11 +23248,8 @@ values (271, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (272, now(), now(), 'Lịch Sử - Địa Lý - Tôn Giáo', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (272, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (272, now(), now(), 'Lịch Sử - Địa Lý - Tôn Giáo', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Lịch Sử - Địa Lý - Tôn Giáo  
   </span>
@@ -23705,11 +23474,8 @@ values (272, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (273, now(), now(), 'Lịch Sử', 272);
-
-insert into category_details (id, created_at, updated_at, description)
-values (273, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (273, now(), now(), 'Lịch Sử', 272, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Lịch sử
   </span>
@@ -24115,11 +23881,8 @@ values (273, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (274, now(), now(), 'Tôn Giáo', 272);
-
-insert into category_details (id, created_at, updated_at, description)
-values (274, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (274, now(), now(), 'Tôn Giáo', 272, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Tôn giáo
   </span>
@@ -24537,11 +24300,8 @@ values (274, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (275, now(), now(), 'Địa Lý', 272);
-
-insert into category_details (id, created_at, updated_at, description)
-values (275, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (275, now(), now(), 'Địa Lý', 272, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Địa lý
   </span>
@@ -24978,11 +24738,8 @@ values (275, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (276, now(), now(), 'Khoa học kỹ thuật', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (276, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (276, now(), now(), 'Khoa học kỹ thuật', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Khoa Học Kỹ Thuật 
   </span>
@@ -25173,11 +24930,8 @@ values (276, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (277, now(), now(), 'Y học', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (277, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (277, now(), now(), 'Y học', 276, '<h2 dir="ltr">
   <span>
     Thông tin chi tiết về danh mục sách Y học của Fahasa
   </span>
@@ -25482,11 +25236,8 @@ values (277, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (278, now(), now(), 'Khoa học khác', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (278, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (278, now(), now(), 'Khoa học khác', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Khoa học khác
   </span>
@@ -25757,11 +25508,8 @@ values (278, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (279, now(), now(), 'Tin học', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (279, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (279, now(), now(), 'Tin học', 276, '<h2 dir="ltr">
   <span>
     Thông tin chi tiết về danh mục sách Tin học tại Fahasa
   </span>
@@ -26191,11 +25939,8 @@ values (279, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (280, now(), now(), 'Giáo Dục', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (280, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (280, now(), now(), 'Giáo Dục', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Giáo dục
   </span>
@@ -26661,11 +26406,8 @@ values (280, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (281, now(), now(), 'Nông, lâm, ngư nghiệp', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (281, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (281, now(), now(), 'Nông, lâm, ngư nghiệp', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nông, Lâm, Ngư nghiệp
   </span>
@@ -27035,11 +26777,8 @@ values (281, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (282, now(), now(), 'Khoa học vũ trụ', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (282, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (282, now(), now(), 'Khoa học vũ trụ', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Khoa học Vũ trụ
   </span>
@@ -27432,11 +27171,8 @@ values (282, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (283, now(), now(), 'Toán Học', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (283, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (283, now(), now(), 'Toán Học', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Toán học
   </span>
@@ -27870,11 +27606,8 @@ values (283, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (284, now(), now(), 'Thiết Kế - Kiến Trúc - Xây dựng', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (284, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (284, now(), now(), 'Thiết Kế - Kiến Trúc - Xây dựng', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Thiết kế - Kiến trúc - Xây dựng
   </span>
@@ -28244,11 +27977,8 @@ values (284, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (285, now(), now(), 'Môi trường, khoáng sản, hóa chất', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (285, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (285, now(), now(), 'Môi trường, khoáng sản, hóa chất', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Môi trường, Khoáng sản, Hóa chất
   </span>
@@ -28611,11 +28341,8 @@ values (285, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (286, now(), now(), 'Cơ khí', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (286, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (286, now(), now(), 'Cơ khí', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Cơ khí
   </span>
@@ -28951,11 +28678,8 @@ values (286, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (287, now(), now(), 'Điện, điện tử', 276);
-
-insert into category_details (id, created_at, updated_at, description)
-values (287, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (287, now(), now(), 'Điện, điện tử', 276, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Điện, Điện tử
   </span>
@@ -29306,11 +29030,8 @@ values (287, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (288, now(), now(), 'Chính Trị - Pháp Lý - Triết Học', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (288, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (288, now(), now(), 'Chính Trị - Pháp Lý - Triết Học', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Chính Trị - Pháp Lý - Triết Học
   </span>
@@ -29429,11 +29150,8 @@ values (288, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (289, now(), now(), 'Triết Học- Lý Luận Chính Trị', 288);
-
-insert into category_details (id, created_at, updated_at, description)
-values (289, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (289, now(), now(), 'Triết Học- Lý Luận Chính Trị', 288, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Triết học - Lý luận chính trị
   </span>
@@ -29712,11 +29430,8 @@ values (289, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (290, now(), now(), 'Luật - Văn Bản Dưới Luật', 288);
-
-insert into category_details (id, created_at, updated_at, description)
-values (290, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (290, now(), now(), 'Luật - Văn Bản Dưới Luật', 288, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Luật - Văn bản dưới luật
   </span>
@@ -30003,11 +29718,8 @@ values (290, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (291, now(), now(), 'Nhân Vật và Sự kiện', 288);
-
-insert into category_details (id, created_at, updated_at, description)
-values (291, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (291, now(), now(), 'Nhân Vật và Sự kiện', 288, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nhân vật và Sự kiện 
   </span>
@@ -30357,11 +30069,8 @@ values (291, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (292, now(), now(), 'Đội - Đoàn - Đảng', 288);
-
-insert into category_details (id, created_at, updated_at, description)
-values (292, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (292, now(), now(), 'Đội - Đoàn - Đảng', 288, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Đội - Đoàn - Đảng
   </span>
@@ -30812,11 +30521,8 @@ values (292, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (293, now(), now(), 'Văn Kiện', 288);
-
-insert into category_details (id, created_at, updated_at, description)
-values (293, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (293, now(), now(), 'Văn Kiện', 288, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Văn Kiện
   </span>
@@ -31587,11 +31293,8 @@ values (293, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (294, now(), now(), 'Nuôi Dạy Con', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (294, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (294, now(), now(), 'Nuôi Dạy Con', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Nuôi Dạy Con
   </span>
@@ -31732,11 +31435,8 @@ values (294, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (295, now(), now(), 'Cẩm Nang Làm Cha Mẹ', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (295, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (295, now(), now(), 'Cẩm Nang Làm Cha Mẹ', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Cẩm nang làm cha mẹ
   </span>
@@ -32017,11 +31717,8 @@ values (295, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (296, now(), now(), 'Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (296, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (296, now(), now(), 'Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Phát triển kỹ năng - trí tuệ cho trẻ 
   </span>
@@ -32220,11 +31917,8 @@ values (296, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (297, now(), now(), 'Phương Pháp Giáo Dục Trẻ Các Nước', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (297, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (297, now(), now(), 'Phương Pháp Giáo Dục Trẻ Các Nước', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Phương pháp Giáo dục trẻ các 
   </span>
@@ -32415,11 +32109,8 @@ values (297, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (298, now(), now(), 'Dinh Dưỡng - Sức Khỏe Cho Trẻ', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (298, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (298, now(), now(), 'Dinh Dưỡng - Sức Khỏe Cho Trẻ', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Dinh dưỡng - Sức khỏe cho trẻ
   </span>
@@ -32701,11 +32392,8 @@ values (298, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (299, now(), now(), 'Giáo Dục Trẻ Tuổi Teen', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (299, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (299, now(), now(), 'Giáo Dục Trẻ Tuổi Teen', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Giáo dục trẻ tuổi teen
   </span>
@@ -32992,11 +32680,8 @@ values (299, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (300, now(), now(), 'Dành Cho Mẹ Bầu', 294);
-
-insert into category_details (id, created_at, updated_at, description)
-values (300, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (300, now(), now(), 'Dành Cho Mẹ Bầu', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Dành cho mẹ bầu
   </span>
@@ -33281,11 +32966,8 @@ values (300, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (301, now(), now(), 'Tiểu Sử Hồi Ký', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (301, now(), now(), '<h2>
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (301, now(), now(), 'Tiểu Sử Hồi Ký', null, '<h2>
   <span style="font-size: x-large;">
     Thông tin danh mục Sách Tiểu Sử Hồi Ký
   </span>
@@ -33466,11 +33148,8 @@ values (301, now(), now(), '<h2>
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (302, now(), now(), 'Câu Chuyện Cuộc Đời', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (302, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (302, now(), now(), 'Câu Chuyện Cuộc Đời', 301, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Câu chuyện cuộc đời
   </span>
@@ -33957,11 +33636,8 @@ values (302, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (303, now(), now(), 'Lịch Sử', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (303, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (303, now(), now(), 'Lịch Sử', 301, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Lịch sử
   </span>
@@ -34370,11 +34046,8 @@ values (303, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (304, now(), now(), 'Nghệ Thuật - Giải Trí', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (304, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (304, now(), now(), 'Nghệ Thuật - Giải Trí', 301, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nghệ thuật - Giải trí
   </span>
@@ -34750,11 +34423,8 @@ values (304, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (305, now(), now(), 'Chính Trị', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (305, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (305, now(), now(), 'Chính Trị', 301, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Chính trị
   </span>
@@ -35248,11 +34918,8 @@ values (305, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (306, now(), now(), 'Kinh Tế', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (306, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (306, now(), now(), 'Kinh Tế', 301, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách kinh tế tại Fahasa
   </span>
@@ -35773,11 +35440,8 @@ values (306, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (307, now(), now(), 'Thể Thao', 301);
-
-insert into category_details (id, created_at, updated_at, description)
-values (307, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (307, now(), now(), 'Thể Thao', 301, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Thể Thao
   </strong>
@@ -36113,11 +35777,8 @@ values (307, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (308, now(), now(), 'Đam mỹ', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (308, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (308, now(), now(), 'Đam mỹ', null, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Đam Mỹ
   </strong>
@@ -36340,11 +36001,8 @@ values (308, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (309, now(), now(), 'Văn Hóa - Nghệ Thuật - Du Lịch', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (309, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (309, now(), now(), 'Văn Hóa - Nghệ Thuật - Du Lịch', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Văn Hóa - Nghệ Thuật - Du Lịch
   </span>
@@ -36635,11 +36293,8 @@ values (309, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (310, now(), now(), 'Nữ Công Gia Chánh', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (310, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (310, now(), now(), 'Nữ Công Gia Chánh', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Nữ Công Gia Chánh
   </span>
@@ -36826,26 +36481,23 @@ values (310, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (311, now(), now(), 'Nấu Ăn', 310);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (311, now(), now(), 'Nấu Ăn', 310, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (312, now(), now(), 'Khéo Tay', 310);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (312, now(), now(), 'Khéo Tay', 310, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (313, now(), now(), 'Làm Đẹp', 310);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (313, now(), now(), 'Làm Đẹp', 310, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (314, now(), now(), 'Món Ăn Bài Thuốc', 310);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (314, now(), now(), 'Món Ăn Bài Thuốc', 310, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (315, now(), now(), 'Mẹo vặt - Cẩm nang', 310);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (315, now(), now(), 'Mẹo vặt - Cẩm nang', 310, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (316, now(), now(), 'Phong Thủy - Kinh Dịch', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (316, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (316, now(), now(), 'Phong Thủy - Kinh Dịch', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Phong Thủy - Kinh Dịch
   </span>
@@ -37060,11 +36712,8 @@ values (316, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (317, now(), now(), 'Từ điển', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (317, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (317, now(), now(), 'Từ điển', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Từ Điển
   </span>
@@ -37592,11 +37241,8 @@ values (317, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (318, now(), now(), 'Từ điển tiếng Anh', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (318, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (318, now(), now(), 'Từ điển tiếng Anh', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Anh
   </strong>
@@ -37858,11 +37504,8 @@ values (318, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (319, now(), now(), 'Từ điển tiếng Việt', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (319, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (319, now(), now(), 'Từ điển tiếng Việt', 317, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Tiếng Việt
@@ -38217,11 +37860,8 @@ values (319, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (320, now(), now(), 'Từ điển tiếng Nhật', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (320, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (320, now(), now(), 'Từ điển tiếng Nhật', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Nhật 
   </strong>
@@ -38467,11 +38107,8 @@ values (320, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (321, now(), now(), 'Từ điển tiếng Hàn', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (321, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (321, now(), now(), 'Từ điển tiếng Hàn', 317, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Tiếng Hàn
@@ -38714,11 +38351,8 @@ values (321, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (322, now(), now(), 'Từ điển Hán - Việt', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (322, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (322, now(), now(), 'Từ điển Hán - Việt', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Hán - Việt 
   </strong>
@@ -38999,11 +38633,8 @@ values (322, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (323, now(), now(), 'Từ điển chuyên ngành', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (323, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (323, now(), now(), 'Từ điển chuyên ngành', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Chuyên Ngành 
   </strong>
@@ -39279,11 +38910,8 @@ values (323, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (324, now(), now(), 'Từ Điển Khác', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (324, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (324, now(), now(), 'Từ Điển Khác', 317, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Khác
@@ -39672,11 +39300,8 @@ values (324, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (325, now(), now(), 'Từ điển tiếng Pháp', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (325, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (325, now(), now(), 'Từ điển tiếng Pháp', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Pháp 
   </strong>
@@ -39933,11 +39558,8 @@ values (325, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (326, now(), now(), 'Từ điển tiếng Đức', 317);
-
-insert into category_details (id, created_at, updated_at, description)
-values (326, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (326, now(), now(), 'Từ điển tiếng Đức', 317, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Đức 
   </strong>
@@ -40249,11 +39871,8 @@ values (326, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (327, now(), now(), 'Âm Nhạc - Mỹ Thuật - Thời Trang', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (327, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (327, now(), now(), 'Âm Nhạc - Mỹ Thuật - Thời Trang', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Âm Nhạc – Mỹ Thuật – Thời Trang
   </span>
@@ -40707,11 +40326,8 @@ values (327, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (328, now(), now(), 'Âm Nhạc', 327);
-
-insert into category_details (id, created_at, updated_at, description)
-values (328, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (328, now(), now(), 'Âm Nhạc', 327, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Âm Nhạc
   </strong>
@@ -40957,11 +40573,8 @@ values (328, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (329, now(), now(), 'Mỹ Thuật', 327);
-
-insert into category_details (id, created_at, updated_at, description)
-values (329, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (329, now(), now(), 'Mỹ Thuật', 327, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Mỹ Thuật 
   </strong>
@@ -41260,11 +40873,8 @@ values (329, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (330, now(), now(), 'Thời Trang', 327);
-
-insert into category_details (id, created_at, updated_at, description)
-values (330, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (330, now(), now(), 'Thời Trang', 327, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Thời Trang
   </strong>
@@ -41510,11 +41120,8 @@ values (330, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (331, now(), now(), 'Thể Dục Thể thao - Giải Trí', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (331, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (331, now(), now(), 'Thể Dục Thể thao - Giải Trí', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Thể Dục Thể Thao – Giải Trí 
   </span>
@@ -41954,11 +41561,8 @@ values (331, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (332, now(), now(), 'Báo - Tạp Chí', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (332, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (332, now(), now(), 'Báo - Tạp Chí', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Báo - Tạp Chí
   </span>
@@ -42229,11 +41833,8 @@ values (332, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (333, now(), now(), 'Giáo trình', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (333, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (333, now(), now(), 'Giáo trình', null, '<h1 dir="ltr">
   <span>
     Thông 
   </span>
@@ -42536,11 +42137,8 @@ values (333, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (334, now(), now(), 'Giáo trình ĐH, CĐ, THCN', 333);
-
-insert into category_details (id, created_at, updated_at, description)
-values (334, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (334, now(), now(), 'Giáo trình ĐH, CĐ, THCN', 333, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách giáo trình ĐH, CĐ, THCN
   </strong>
@@ -42935,14 +42533,11 @@ values (334, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (335, now(), now(), 'Thể loại khác', 333);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (335, now(), now(), 'Thể loại khác', 333, null);
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (336, now(), now(), 'Dạy nghề', 333);
-
-insert into category_details (id, created_at, updated_at, description)
-values (336, now(), now(), '<h2 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (336, now(), now(), 'Dạy nghề', 333, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Dạy Nghề 
   </strong>
@@ -43160,11 +42755,8 @@ values (336, now(), now(), '<h2 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (337, now(), now(), 'Làm Vườn - Thú Nuôi', null);
-
-insert into category_details (id, created_at, updated_at, description)
-values (337, now(), now(), '<h1 dir="ltr">
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (337, now(), now(), 'Làm Vườn - Thú Nuôi', null, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Làm Vườn - Thú Nuôi
   </span>
@@ -43440,8 +43032,9 @@ values (337, now(), now(), '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id)
-values (338, now(), now(), 'Mystery Box', null);
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (338, now(), now(), 'Mystery Box', null, null);
+
 
 insert into authors (id, created_at, updated_at, name)
 values (1, now(), now(), 'B R O Group');
