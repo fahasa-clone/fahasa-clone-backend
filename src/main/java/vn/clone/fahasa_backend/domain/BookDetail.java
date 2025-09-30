@@ -16,22 +16,22 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Setter
 public class BookDetail extends AbstractEntity {
     @Column(name = "publication_year")
-    private int publicationYear;
+    private Integer publicationYear;
 
     @Column(name = "weight")
-    private int weight;
+    private Integer weight;
 
     @Column(name = "book_height")
-    private float bookHeight;
+    private Float bookHeight;
 
     @Column(name = "book_width")
-    private float bookWidth;
+    private Float bookWidth;
 
     @Column(name = "book_thickness")
-    private float bookThickness;
+    private Float bookThickness;
 
     @Column(name = "page_count")
-    private int pageCount;
+    private Integer pageCount;
 
     @Column(name = "layout")
     // @Enumerated(EnumType.STRING)

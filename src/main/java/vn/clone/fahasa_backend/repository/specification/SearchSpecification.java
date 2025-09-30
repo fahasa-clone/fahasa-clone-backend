@@ -2,8 +2,10 @@ package vn.clone.fahasa_backend.repository.specification;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
-import java.time.*;
-import java.time.format.DateTimeFormatter;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -27,15 +29,10 @@ public class SearchSpecification<T> implements Specification<T> {
             Map.entry(String.class, input -> extractStringInQuote(input, "String text")),
             Map.entry(BigDecimal.class, BigDecimal::new),
             Map.entry(BigInteger.class, BigInteger::new),
-            Map.entry(Instant.class, input -> {
-                LocalDate date = convertToLocalDate(input);
-                return date.atStartOfDay(ZoneId.systemDefault())
-                           // .atStartOfDay(ZoneId.of("Asia/Ho_Chi_Minh"))
-                           .toInstant();
-            }),
-            Map.entry(LocalDate.class, SearchSpecification::convertToLocalDate),
-            Map.entry(ZonedDateTime.class, ZonedDateTime::parse),
-            Map.entry(LocalDateTime.class, LocalDateTime::parse)
+            Map.entry(Instant.class, input -> parseTime(input, "Instant", Instant::parse)),
+            Map.entry(LocalDate.class, input -> parseTime(input, "LocalDate", (Function<String, LocalDate>) LocalDate::parse)),
+            Map.entry(ZonedDateTime.class, input -> parseTime(input, "ZonedDateTime", (Function<String, ZonedDateTime>) ZonedDateTime::parse)),
+            Map.entry(LocalDateTime.class, input -> parseTime(input, "LocalDateTime", (Function<String, LocalDateTime>) LocalDateTime::parse))
     );
 
     private final String[] name;
@@ -52,14 +49,13 @@ public class SearchSpecification<T> implements Specification<T> {
         Pattern pattern = Pattern.compile("^(?<quote>[\"'])(?<content>.*)\\k<quote>$");
         Matcher matcher = pattern.matcher(input);
         if (!matcher.matches()) {
-            throw new IllegalArgumentException(String.format("%s must be wrapped in single quote!", valueType));
+            throw new IllegalArgumentException(String.format("%s must be wrapped in single quotes!", valueType));
         }
         return matcher.group("content");
     }
 
-    private static LocalDate convertToLocalDate(String input) {
-        String value = extractStringInQuote(input, "Date");
-        return LocalDate.parse(value, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+    private static <T extends Comparable<? super T>> T parseTime(String input, String valueType, Function<String, T> parser) {
+        return parser.apply(extractStringInQuote(input, valueType));
     }
 
     private static <E extends Enum<E>> E getEnumConstant(Class<E> enumClass, String value) {

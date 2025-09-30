@@ -1,6 +1,7 @@
 package vn.clone.fahasa_backend.domain;
 
 import java.time.Instant;
+import java.util.List;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -33,7 +34,7 @@ public class Book extends AbstractEntity {
     private int stock;
 
     @Column(name = "delete_status")
-    private boolean deleteStatus;
+    private boolean deleted;
 
     @Column(name = "deleted_at")
     private Instant deletedAt;
@@ -47,4 +48,8 @@ public class Book extends AbstractEntity {
     @ManyToOne
     @JoinColumn(name = "category_id")
     private Category category;
+
+    @OneToMany
+    @JoinColumn(name = "book_id")
+    private List<BookImage> bookImages;
 }
