@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" th:lang="${#locale.language}" lang="en">
+<head>
+    <title th:text="'Fahasa activation account'"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<p th:text="@{|Dear ${user.firstName} ${user.getLastName()}|}">Dear</p>
+<p>Your Fahasa clone account has been created, please click on the URL below to activate it:</p>
+<p>
+    <a th:with="url=@{|${baseUrl}/auth/activate?key=${user.activationKey}&email=${user.getEmail()}|}"
+       th:href="${url}" th:text="${url}">Activation
+        link</a>
+</p>
+<p>
+    <span>Regards, </span>
+    <br/>
+    <em>Fahasa clone.</em>
+</p>
+</body>
+</html>
