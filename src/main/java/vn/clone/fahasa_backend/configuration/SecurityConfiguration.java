@@ -11,6 +11,7 @@ import jakarta.servlet.DispatcherType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -19,7 +20,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
@@ -28,6 +28,9 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.oauth2.server.resource.web.access.BearerTokenAccessDeniedHandler;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import vn.clone.fahasa_backend.util.SecurityUtils;
 
@@ -36,6 +39,21 @@ import vn.clone.fahasa_backend.util.SecurityUtils;
 public class SecurityConfiguration {
     @Value("${jwt.base64-secret}")
     private String jwtKey;
+
+    // CORS configuration
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("http://localhost:4173", "http://localhost:5173"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "x-no-retry"));
+        configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L); // How long the response from a pre-flight request can be cached by clients
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration); // Apply this configuration to all paths
+        return source;
+    }
 
     private SecretKey getSecretKey() {
         byte[] keyBytes = Base64.from(jwtKey).decode();
@@ -80,16 +98,17 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint) throws Exception {
-        String[] whiteList = {
-                "/auth/login", "/auth/register", "/auth/refresh"
-        };
+        String[] whiteList = {"/auth/login", "/auth/register", "/auth/refresh"};
 
         http.csrf(AbstractHttpConfigurer::disable)
-            .cors(Customizer.withDefaults())
-            .authorizeHttpRequests(authz ->
-                                           authz.dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
-                                                .requestMatchers(whiteList).permitAll()
-                                                .anyRequest().authenticated())
+            .authorizeHttpRequests(authz -> authz.dispatcherTypeMatchers(DispatcherType.ERROR)
+                                                 .permitAll()
+                                                 .requestMatchers(whiteList)
+                                                 .permitAll()
+                                                 .requestMatchers(HttpMethod.GET, "/categories/**", "/books/**")
+                                                 .permitAll()
+                                                 .anyRequest()
+                                                 .authenticated())
             .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults())
                                                   .authenticationEntryPoint(authenticationEntryPoint))
             .exceptionHandling(
