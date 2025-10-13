@@ -1,9 +1,11 @@
 package vn.clone.fahasa_backend.configuration;
 
+import java.util.Arrays;
+import java.util.List;
+
 import jakarta.servlet.DispatcherType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractAuthenticationFilterConfigurer;
@@ -14,12 +16,30 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 @Configuration
 @EnableMethodSecurity
 public class SecurityConfiguration {
     //    @Value("${hoidanit.jwt.base64-secret}")
     private String jwtKey;
+
+    // CORS configuration
+    @Bean
+    public CorsConfigurationSource corsConfigurationSource() {
+        CorsConfiguration configuration = new CorsConfiguration();
+        configuration.setAllowedOrigins(List.of("http://localhost:4173", "http://localhost:5173"));
+        configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
+        configuration.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type", "Accept", "x-no-retry"));
+        configuration.setAllowCredentials(true);
+        configuration.setMaxAge(3600L); // How long the response from a pre-flight request can be cached by clients
+
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", configuration); // Apply this configuration to all paths
+        return source;
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -63,7 +83,6 @@ public class SecurityConfiguration {
                               "/favicon.ico", "/api/v1/email/**",
                               "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html"};
         http.csrf(AbstractHttpConfigurer::disable)
-            .cors(Customizer.withDefaults())
             .authorizeHttpRequests(authz ->
                                            authz.dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                                                 .anyRequest().permitAll())
