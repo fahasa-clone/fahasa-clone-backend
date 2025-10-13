@@ -7,13 +7,12 @@ import javax.crypto.spec.SecretKeySpec;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
-import java.util.Arrays;
-import java.util.List;
-
 import jakarta.servlet.DispatcherType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractAuthenticationFilterConfigurer;
@@ -21,7 +20,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
@@ -100,15 +98,17 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint) throws Exception {
-        String[] whiteList = {
-                "/auth/login", "/auth/register", "/auth/refresh"
-        };
+        String[] whiteList = {"/auth/login", "/auth/register", "/auth/refresh"};
 
         http.csrf(AbstractHttpConfigurer::disable)
-            .authorizeHttpRequests(authz ->
-                                           authz.dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
-                                                .requestMatchers(whiteList).permitAll()
-                                                .anyRequest().authenticated())
+            .authorizeHttpRequests(authz -> authz.dispatcherTypeMatchers(DispatcherType.ERROR)
+                                                 .permitAll()
+                                                 .requestMatchers(whiteList)
+                                                 .permitAll()
+                                                 .requestMatchers(HttpMethod.GET, "/categories/**", "/books/**")
+                                                 .permitAll()
+                                                 .anyRequest()
+                                                 .authenticated())
             .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults())
                                                   .authenticationEntryPoint(authenticationEntryPoint))
             .exceptionHandling(
