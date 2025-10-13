@@ -14,6 +14,18 @@ spring:
       pageable:
         one-indexed-parameters: true
 
+  # config mail
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: tocanhvan079@gmail.com
+    password: aopjqfbbmbmgsxfo
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
 
 # Logging
 logging:
@@ -29,3 +41,9 @@ logging:
         orm:
           jdbc:
             bind: trace
+
+#config jwt
+jwt:
+  base64-secret: aNIcxUXh5vyUE2/kl3rUcwiSRT9kYm0gyZefk1Xsx3iYTEcZZvjc76RIUKxCt6enG1O+fY408f7Af6q5/waEqg==
+  access-token-validity-in-seconds: 86400
+  refresh-token-validity-in-second: 86400

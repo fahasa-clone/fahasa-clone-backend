@@ -125,8 +125,9 @@ CREATE TABLE "accounts"
     "phone"       varchar(10),
     "gender"      gender,
     "birthday"    date,
-    "is_verified" boolean,
-    "token"       varchar(256),
+    "is_activated" boolean,
+	"activation_key" varchar(256),
+    "token"       text,
     "is_oauth2"   boolean
 );
 
