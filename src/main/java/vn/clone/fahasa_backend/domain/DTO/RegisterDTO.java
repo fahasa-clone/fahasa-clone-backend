@@ -28,9 +28,9 @@ public class RegisterDTO {
     @NotBlank(message = "phone is required!")
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be 10 digits long and contain only numbers.")
     private String phone;
-    @NotBlank(message = "gender is required!")
+    // @NotBlank(message = "gender is required!")
     @JdbcType(CustomPostgreSQLEnumJdbcType.class)
     private Gender gender;
-    @NotBlank(message = "birthday is required!")
+    // @NotBlank(message = "birthday is required!")
     private Date birthday;
 }

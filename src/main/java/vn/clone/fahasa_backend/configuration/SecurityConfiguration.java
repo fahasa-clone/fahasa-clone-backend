@@ -1,7 +1,6 @@
 package vn.clone.fahasa_backend.configuration;
 
-import java.util.Arrays;
-import java.util.List;
+
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
@@ -19,7 +18,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
@@ -81,7 +79,7 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint) throws Exception {
         String[] whiteList = {
-                "/auth/login", "/auth/register", "/auth/refresh"
+                "/auth/login", "/auth/register", "/auth/refresh", "/auth/activate", "/auth/logout"
         };
 
         http.csrf(AbstractHttpConfigurer::disable)

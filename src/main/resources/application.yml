@@ -45,5 +45,5 @@ logging:
 #config jwt
 jwt:
   base64-secret: aNIcxUXh5vyUE2/kl3rUcwiSRT9kYm0gyZefk1Xsx3iYTEcZZvjc76RIUKxCt6enG1O+fY408f7Af6q5/waEqg==
-  access-token-validity-in-seconds: 86400
+  access-token-validity-in-seconds: 600
   refresh-token-validity-in-second: 86400

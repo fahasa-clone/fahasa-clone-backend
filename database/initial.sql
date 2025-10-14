@@ -1,5 +1,80 @@
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (1, now(), now(), 'Thiếu nhi', null, '<h1 dir="ltr">
+values (1, now(), now(), 'Sách tiếng việt', null, '<h1 dir="ltr"><span>Thông tin danh mục Sách Tiếng Việt&nbsp;</span></h1>
+<p dir="ltr"><span>Sách là cửa sổ dẫn lối chúng ta đến những chân trời kiến thức, nuôi dưỡng tâm hồn và bổ sung những giá trị quý báu cho cuộc sống. Trong thời đại số hóa và đầy biến động như hiện nay, việc đọc sách vẫn giữ vai trò quan trọng, giúp con người tìm kiếm sự bình yên, trau dồi kiến thức và phát triển tự duy. Hiểu rõ điều đó, Fahasa mang đến danh mục </span><span>Sách Tiếng Việt</span><span> phong phú, quy tụ náo đầy đủ các thể loại sách hay nhất phục vụ độc giả Việt Nam.</span></p>
+<h2 dir="ltr"><span>Sách Tiếng Việt - Kho tàng tri thức phong phú tại Fahasa</span></h2>
+<p dir="ltr"><span>Dù bạn là học sinh, sinh viên, người đi làm hay đơn giản chỉ là một người yêu sách, Fahasa đều mang đến những lựa chọn phong phú đầy hứa hẹn. Đây là nơi bạn có thể tìm thấy những cuốn sách giúp định hướng sự nghiệp, nâng cao kỹ năng hay đơn giản là những trang sách mang lại niềm vui và cảm hứng cho cuộc sống.</span></p>
+<h2 dir="ltr"><span>Đa dạng các thể loại Sách Tiếng Việt</span></h2>
+<h3 dir="ltr"><span>1. Sách thiếu nhi</span></h3>
+<p dir="ltr"><span>Sách dành cho thiếu nhi không chỉ giúp các em phát triển tư duy mà còn nuôi dưỡng tâm hồn qua những câu chuyện giàu tính nhân văn. Các đầu sách trong thể loại này bao gồm truyện cổ tích, sách tranh, truyện ngụ ngôn, sách phát triển kỹ năng và tư duy sáng tạo, giúp trẻ tiếp cận thế giới một cách sinh động và hấp dẫn.</span></p>
+<h3 dir="ltr"><span>2. Sách Giáo Khoa - Tham Khảo</span></h3>
+<p dir="ltr"><span>Đây là nguồn tài liệu thiết yếu cho học sinh, sinh viên và giáo viên, bao gồm sách giáo khoa theo chương trình của Bộ Giáo dục và Đào tạo, sách tham khảo hỗ trợ ôn luyện kiến thức, sách luyện thi các cấp. Các tài liệu này giúp học sinh củng cố nền tảng vững chắc và đạt kết quả học tập tốt hơn.</span></p>
+<h3 dir="ltr"><span>3. Sách Văn Học</span></h3>
+<p dir="ltr"><span>Sách văn học mang đến những tác phẩm kinh điển và đương đại, từ văn học Việt Nam đến văn học nước ngoài. Các thể loại bao gồm tiểu thuyết, truyện ngắn, thơ ca, bút ký, mang đến những giá trị nghệ thuật và triết lý nhân sinh sâu sắc.</span></p>
+<h3 dir="ltr"><span>4. Manga - Comic</span></h3>
+<p dir="ltr"><span>Dành cho những ai yêu thích truyện tranh, manga - comic tại Fahasa mang đến hàng loạt bộ truyện hấp dẫn từ Nhật Bản, Hàn Quốc, Mỹ và Việt Nam. Những bộ truyện nổi tiếng như One Piece, Conan, Attack on Titan hay các truyện tranh Việt Nam giúp người đọc giải trí, thư giãn sau những giờ học tập và làm việc căng thẳng.</span></p>
+<h3 dir="ltr"><span>5. Sách Tâm Lý - Kỹ Năng Sống</span></h3>
+<p dir="ltr"><span>Đây là dòng sách giúp bạn phát triển bản thân, rèn luyện kỹ năng mềm như giao tiếp, quản lý thời gian, tư duy phản biện và làm chủ cuộc sống. Những tác phẩm nổi bật bao gồm "Đắc Nhân Tâm", "7 Thói Quen Của Người Thành Đạt", "Nghệ Thuật Giao Tiếp Để Thành Công".</span></p>
+<h3 dir="ltr"><span>6. Sách Học Ngoại Ngữ</span></h3>
+<p dir="ltr"><span>Học ngoại ngữ ngày càng trở nên quan trọng, và Fahasa mang đến đa dạng sách học tiếng Anh, Trung, Nhật, Hàn, Pháp... từ cơ bản đến nâng cao. Các sách bao gồm giáo trình, từ điển, sách luyện thi TOEIC, IELTS, giúp người học dễ dàng tiếp thu ngôn ngữ mới.</span></p>
+<h3 dir="ltr"><span>7. Sách Kinh Tế</span></h3>
+<p dir="ltr"><span>Những ai quan tâm đến kinh tế, tài chính, đầu tư có thể tìm thấy nhiều đầu sách chất lượng như "Cha Giàu Cha Nghèo", "Nhà Đầu Tư Thông Minh", "Tư Duy Nhanh Và Chậm", giúp người đọc hiểu sâu hơn về thị trường, quản lý tài chính cá nhân và đầu tư hiệu quả.</span></p>
+<h3 dir="ltr"><span>8. Sách Lịch Sử - Địa Lý - Tôn Giáo</span></h3>
+<p dir="ltr"><span>Dành cho những ai yêu thích khám phá quá khứ, văn hóa và các nền tôn giáo trên thế giới. Những cuốn sách lịch sử như "Việt Nam Sử Lược", sách nghiên cứu về địa lý và tín ngưỡng giúp người đọc mở rộng kiến thức và góc nhìn đa chiều.</span></p>
+<h3 dir="ltr"><span>9. Sách Khoa Học - Kỹ Thuật</span></h3>
+<p dir="ltr"><span>Các sách khoa học mang đến kiến thức về vũ trụ, công nghệ, vật lý, sinh học, kỹ thuật. Đây là nguồn tư liệu quý giá dành cho học sinh, sinh viên và những người đam mê khoa học.</span></p>
+<h3 dir="ltr"><span>10. Sách Nuôi Dạy Con</span></h3>
+<p dir="ltr"><span>Đối với các bậc phụ huynh, sách nuôi dạy con là trợ thủ đắc lực trong việc giáo dục con cái. Các tác phẩm như "Nuôi Con Không Phải Là Cuộc Chiến", "Thai Giáo - Dạy Con Từ Trong Bụng Mẹ" mang đến những phương pháp giáo dục tiên tiến, khoa học.</span></p>
+<h3 dir="ltr"><span>11. Sách Chính Trị - Pháp Luật - Triết Học</span></h3>
+<p dir="ltr"><span>Thể loại này bao gồm các cuốn sách về triết học, chính trị, pháp luật như "Cộng Hòa", "Bàn Về Khế Ước Xã Hội", giúp người đọc hiểu sâu về hệ thống chính trị, tư tưởng và xã hội.</span></p>
+<h3 dir="ltr"><span>12. Sách Tiểu Sử - Hồi Ký</span></h3>
+<p dir="ltr"><span>Tiểu sử, hồi ký giúp chúng ta hiểu hơn về cuộc đời và sự nghiệp của những nhân vật vĩ đại như Steve Jobs, Elon Musk, Hồ Chí Minh. Đây là nguồn cảm hứng cho những ai muốn tìm hiểu về thành công và những bài học cuộc sống.</span></p>
+<h3 dir="ltr"><span>13. Truyện Đam Mỹ</span></h3>
+<p dir="ltr"><span>Dành cho những ai yêu thích truyện tình cảm đam mỹ với nhiều tác phẩm nổi bật như "Ma Đạo Tổ Sư", "Trấn Hồn", mang đến những câu chuyện đầy cảm xúc và sâu sắc.</span></p>
+<h3 dir="ltr"><span>14. Sách Nữ Công Gia Chánh</span></h3>
+<p dir="ltr"><span>Sách nữ công gia chánh mang đến những bí quyết nấu ăn, làm bánh, may vá, giúp bạn nâng cao kỹ năng trong công việc gia đình.</span></p>
+<h3 dir="ltr"><span>15. Sách Văn Hóa - Nghệ Thuật - Du Lịch</span></h3>
+<p dir="ltr"><span>Thể loại này giúp bạn khám phá văn hóa, nghệ thuật, phong tục tập quán của nhiều vùng miền, quốc gia.</span></p>
+<h3 dir="ltr"><span>16. Sách Phong Thủy - Kinh Dịch</span></h3>
+<p dir="ltr"><span>Những ai quan tâm đến phong thủy, tử vi có thể tìm thấy nhiều cuốn sách giá trị giúp cải thiện cuộc sống theo quan niệm phương Đông.</span></p>
+<h3 dir="ltr"><span>17. Từ Điển</span></h3>
+<p dir="ltr"><span>Từ điển là công cụ hỗ trợ đắc lực cho việc học tập và nghiên cứu, bao gồm từ điển Anh-Việt, Hán-Việt, Nhật-Việt...</span></p>
+<h3 dir="ltr"><span>18. Âm Nhạc - Mỹ Thuật - Thời Trang</span></h3>
+<p dir="ltr"><span>Các cuốn sách về âm nhạc, hội họa, thời trang giúp bạn nâng cao hiểu biết về nghệ thuật, làm đẹp.</span></p>
+<h3 dir="ltr"><span>19. Sách Thể Dục Thể Thao - Giải Trí</span></h3>
+<p dir="ltr"><span>Bao gồm sách hướng dẫn tập luyện thể thao, yoga, võ thuật, giúp bạn nâng cao sức khỏe.</span></p>
+<h3 dir="ltr"><span>20. Báo - Tạp Chí</span></h3>
+<p dir="ltr"><span>Danh mục này bao gồm nhiều tạp chí về thời trang, kinh tế, công nghệ, giúp cập nhật xu hướng mới nhất.</span></p>
+<h3 dir="ltr"><span>21. Giáo Trình</span></h3>
+<p dir="ltr"><span>Các giáo trình đại học, cao đẳng dành cho sinh viên nhiều ngành học khác nhau.</span></p>
+<h3 dir="ltr"><span>22. Sách Làm Vườn - Thú Nuôi</span></h3>
+<p dir="ltr"><span>Dành cho những ai yêu thích trồng cây, nuôi thú cưng, cung cấp hướng dẫn chi tiết về kỹ thuật chăm sóc.</span></p>
+<h3 dir="ltr"><span>23. Sách Mystery Box</span></h3>
+<p dir="ltr"><span>Dành cho những ai yêu thích bất ngờ, mystery box mang đến những bộ sách thú vị mà bạn chưa biết trước nội dung.</span></p>
+<h2 dir="ltr"><span>Lợi ích khi mua Sách Tiếng Việt chính hãng tại Fahasa</span></h2>
+<ul>
+<li dir="ltr">
+<p dir="ltr"><span>Sách chính hãng, chất lượng đảm bảo:</span><span> Tất cả sách kinh tế tại Fahasa đều là sách chính hãng, được in ấn chất lượng cao, đảm bảo nội dung chính xác và rõ ràng.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span>Đa dạng hình thức thanh toán:</span><span> Hỗ trợ nhiều phương thức thanh toán an toàn và tiện lợi, từ thanh toán trực tuyến đến thanh toán khi nhận hàng.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span>Giao hàng nhanh chóng trên toàn quốc:</span><span> Dịch vụ giao hàng chuyên nghiệp, đảm bảo sách đến tay bạn trong thời gian sớm nhất và trong tình trạng tốt nhất.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span>Chính sách đổi trả linh hoạt:</span><span> Hỗ trợ đổi trả sách trong trường hợp có lỗi từ nhà xuất bản hoặc do vận chuyển, đảm bảo quyền lợi của khách hàng.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span>Ưu đãi và khuyến mãi hấp dẫn:</span><span> Thường xuyên có các chương trình khuyến mãi, giảm giá đặc biệt cho sách kinh tế, giúp bạn tiết kiệm chi phí.</span></p>
+</li>
+<li dir="ltr">
+<p dir="ltr"><span>Đội ngũ chăm sóc khách hàng tận tâm:</span><span> Luôn sẵn sàng hỗ trợ và giải đáp mọi thắc mắc của bạn về sản phẩm và dịch vụ.</span></p>
+</li>
+</ul>
+<p dir="ltr"><span>Với danh mục sách kinh tế phong phú, chính hãng và chất lượng cao, Fahasa tự hào là điểm đến tin cậy cho những ai muốn nâng cao kiến thức và thành công trong lĩnh vực kinh tế. Dù bạn là ai, Fahasa luôn có những cuốn sách phù hợp với nhu cầu và mục tiêu của bạn. Hãy đến với Fahasa để khám phá kho tàng tri thức kinh tế và trang bị cho mình hành trang vững chắc trên con đường thành công. Khám phá ngay danh mục sách kinh tế chính hãng tại Fahasa.com!</span></p>');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (2, now(), now(), 'Thiếu nhi', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Thiếu Nhi 
   </span>
@@ -179,7 +254,7 @@ values (1, now(), now(), 'Thiếu nhi', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (2, now(), now(), 'Truyện Thiếu Nhi', 1, '<h2 dir="ltr">
+values (3, now(), now(), 'Truyện Thiếu Nhi', 2, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Truyện Thiếu Nhi
   </span>
@@ -445,16 +520,16 @@ values (2, now(), now(), 'Truyện Thiếu Nhi', 1, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (3, now(), now(), 'Truyện Tranh Thiếu Nhi', 2, null);
+values (4, now(), now(), 'Truyện Đọc Thiếu Nhi', 3, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (4, now(), now(), 'Truyện Đọc Thiếu Nhi', 2, null);
+values (5, now(), now(), 'Truyện Tranh Thiếu Nhi', 3, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (5, now(), now(), 'Truyện Tranh Ehon Nhật Bản', 2, null);
+values (6, now(), now(), 'Truyện Tranh Ehon Nhật Bản', 3, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (6, now(), now(), 'Kiến Thức - Kỹ Năng Sống Cho Trẻ', 1, '<h2 dir="ltr">
+values (7, now(), now(), 'Kiến Thức - Kỹ Năng Sống Cho Trẻ', 2, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Sách Kiến Thức - Kỹ Năng Sống Cho Trẻ
   </span>
@@ -799,19 +874,19 @@ values (6, now(), now(), 'Kiến Thức - Kỹ Năng Sống Cho Trẻ', 1, '<h2 
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (7, now(), now(), 'Sách Tranh Kỹ Năng Sống Cho Trẻ', 6, null);
+values (8, now(), now(), 'Sách Tranh Kỹ Năng Sống Cho Trẻ', 7, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (8, now(), now(), 'Vừa Học Vừa Chơi Với Trẻ', 6, null);
+values (9, now(), now(), 'Vừa Học Vừa Chơi Với Trẻ', 7, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (9, now(), now(), 'Sách Tranh Kiến Thức Sống Cho Trẻ', 6, null);
+values (10, now(), now(), 'Sách Tranh Kiến Thức Sống Cho Trẻ', 7, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (10, now(), now(), 'Hỏi Đáp - Câu Đố - Trò Chơi', 6, null);
+values (11, now(), now(), 'Hỏi Đáp - Câu Đố - Trò Chơi', 7, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (11, now(), now(), 'Kiến thức bách khoa', 1, '<h2 dir="ltr">
+values (12, now(), now(), 'Kiến thức bách khoa', 2, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Kiến Thức Bách Khoa
   </span>
@@ -1157,16 +1232,16 @@ values (11, now(), now(), 'Kiến thức bách khoa', 1, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (12, now(), now(), 'Kiến Thức Khoa Học - Tự Nhiên', 11, null);
+values (13, now(), now(), 'Kiến Thức Khoa Học - Tự Nhiên', 12, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (13, now(), now(), 'Bách Khoa Tri Thức - Câu Hỏi Vì Sao', 11, null);
+values (14, now(), now(), 'Bách Khoa Tri Thức - Câu Hỏi Vì Sao', 12, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (14, now(), now(), 'Câu Chuyện Danh Nhân Nổi Tiếng Thế Giới', 11, null);
+values (15, now(), now(), 'Câu Chuyện Danh Nhân Nổi Tiếng Thế Giới', 12, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (15, now(), now(), 'Tô màu, luyện chữ', 1, '<h2 dir="ltr">
+values (16, now(), now(), 'Tô màu, luyện chữ', 2, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tô Màu, Luyện Chữ
   </span>
@@ -1471,7 +1546,7 @@ values (15, now(), now(), 'Tô màu, luyện chữ', 1, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (16, now(), now(), 'Từ Điển Thiếu Nhi', 1, '<h2 dir="ltr">
+values (17, now(), now(), 'Từ Điển Thiếu Nhi', 2, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Từ Điển Thiếu Nhi
   </span>
@@ -1785,7 +1860,7 @@ values (16, now(), now(), 'Từ Điển Thiếu Nhi', 1, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (17, now(), now(), 'Flashcard - Thẻ Học Thông Minh', 1, '<h2 dir="ltr">
+values (18, now(), now(), 'Flashcard - Thẻ Học Thông Minh', 2, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Flashcard - Thẻ Học Thông Minh
   </span>
@@ -2217,7 +2292,7 @@ values (17, now(), now(), 'Flashcard - Thẻ Học Thông Minh', 1, '<h2 dir="lt
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (18, now(), now(), 'Sách Nói', 1, '<h2 dir="ltr">
+values (19, now(), now(), 'Sách Nói', 2, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Nói
   </span>
@@ -2598,10 +2673,10 @@ values (18, now(), now(), 'Sách Nói', 1, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (19, now(), now(), 'Tạp Chí Thiếu Nhi', 1, null);
+values (20, now(), now(), 'Tạp Chí Thiếu Nhi', 2, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (20, now(), now(), 'Giáo khoa - Tham khảo', null, '<h1 dir="ltr">
+values (21, now(), now(), 'Giáo khoa - Tham khảo', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Giáo Khoa - Tham Khảo
   </span>
@@ -2746,7 +2821,7 @@ values (20, now(), now(), 'Giáo khoa - Tham khảo', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (21, now(), now(), 'Sách Tham Khảo', 20, '<h2 dir="ltr">
+values (22, now(), now(), 'Sách Tham Khảo', 21, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Tham Khảo
   </span>
@@ -3039,76 +3114,76 @@ values (21, now(), now(), 'Sách Tham Khảo', 20, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (22, now(), now(), 'Tham Khảo Lớp 1', 21, null);
+values (23, now(), now(), 'Tham Khảo Lớp 1', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (23, now(), now(), 'Tham Khảo Lớp 3', 21, null);
+values (24, now(), now(), 'Tham Khảo Lớp 3', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (24, now(), now(), 'Tham Khảo Lớp 2', 21, null);
+values (25, now(), now(), 'Tham Khảo Lớp 2', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (25, now(), now(), 'Tham Khảo Lớp 9', 21, null);
+values (26, now(), now(), 'Tham Khảo Lớp 4', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (26, now(), now(), 'Luyện Thi Vào Lớp 10', 25, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (27, now(), now(), 'Tham Khảo Lớp 5', 21, null);
+values (27, now(), now(), 'Tham Khảo Lớp 5', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
 values (28, now(), now(), 'Luyện Thi Vào Lớp 6', 27, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (29, now(), now(), 'Tham Khảo Lớp 4', 21, null);
+values (29, now(), now(), 'Tham Khảo Lớp 9', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (30, now(), now(), 'Tham Khảo Lớp 12', 21, null);
+values (30, now(), now(), 'Luyện Thi Vào Lớp 10', 29, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (31, now(), now(), 'Luyện Thi THPT Quốc Gia', 30, null);
+values (31, now(), now(), 'Tham Khảo Lớp 6', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (32, now(), now(), 'Ngữ Văn', 31, null);
+values (32, now(), now(), 'Tham Khảo Lớp 12', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (33, now(), now(), 'Tiếng Anh', 31, null);
+values (33, now(), now(), 'Luyện Thi THPT Quốc Gia', 32, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (34, now(), now(), 'Toán', 31, null);
+values (34, now(), now(), 'Ngữ Văn', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (35, now(), now(), 'Hóa Học', 31, null);
+values (35, now(), now(), 'Tiếng Anh', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (36, now(), now(), 'Vật Lý', 31, null);
+values (36, now(), now(), 'Toán', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (37, now(), now(), 'Lịch Sử', 31, null);
+values (37, now(), now(), 'Vật Lý', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (38, now(), now(), 'Sinh Học', 31, null);
+values (38, now(), now(), 'Hóa Học', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (39, now(), now(), 'Địa Lý', 31, null);
+values (39, now(), now(), 'Sinh Học', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (40, now(), now(), 'Tham Khảo Lớp 6', 21, null);
+values (40, now(), now(), 'Lịch Sử', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (41, now(), now(), 'Tham Khảo Lớp 8', 21, null);
+values (41, now(), now(), 'Địa Lý', 33, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (42, now(), now(), 'Tham Khảo Lớp 7', 21, null);
+values (42, now(), now(), 'Tham Khảo Lớp 8', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (43, now(), now(), 'Tham Khảo Lớp 10', 21, null);
+values (43, now(), now(), 'Tham Khảo Lớp 7', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (44, now(), now(), 'Tham Khảo Lớp 11', 21, null);
+values (44, now(), now(), 'Tham Khảo Lớp 10', 22, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (45, now(), now(), 'Sách Giáo Khoa', 20, '<h2 dir="ltr">
+values (45, now(), now(), 'Tham Khảo Lớp 11', 22, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (46, now(), now(), 'Sách Giáo Khoa', 21, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Sách Giáo Khoa
   </strong>
@@ -3287,7 +3362,7 @@ values (45, now(), now(), 'Sách Giáo Khoa', 20, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (46, now(), now(), 'Giáo Khoa Lớp 3', 45, '<h2 data-start="0" data-end="43">
+values (47, now(), now(), 'Giáo Khoa Lớp 3', 46, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 3
   </strong>
@@ -3400,43 +3475,43 @@ values (46, now(), now(), 'Giáo Khoa Lớp 3', 45, '<h2 data-start="0" data-end
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (47, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 46, null);
+values (48, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (48, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47, null);
+values (49, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 48, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (49, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 47, null);
+values (50, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 3', 48, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (50, now(), now(), 'Bộ Cánh Diều - Lớp 3', 46, null);
+values (51, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 3', 47, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (51, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 3', 50, null);
+values (52, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 3', 51, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (52, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 3', 50, null);
+values (53, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 3', 51, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (53, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 3', 46, null);
+values (54, now(), now(), 'Khác', 47, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (54, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 3', 53, null);
+values (55, now(), now(), 'Sách Bài Tập - Lớp 3', 54, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (55, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 3', 53, null);
+values (56, now(), now(), 'Sách Bài Học - Lớp 3', 54, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (56, now(), now(), 'Khác', 46, null);
+values (57, now(), now(), 'Bộ Cánh Diều - Lớp 3', 47, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (57, now(), now(), 'Sách Bài Tập - Lớp 3', 56, null);
+values (58, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 3', 57, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (58, now(), now(), 'Sách Bài Học - Lớp 3', 56, null);
+values (59, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 3', 57, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (59, now(), now(), 'Giáo Khoa Lớp 4', 45, '<h2 data-start="0" data-end="43">
+values (60, now(), now(), 'Giáo Khoa Lớp 4', 46, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 4
   </strong>
@@ -3555,40 +3630,40 @@ values (59, now(), now(), 'Giáo Khoa Lớp 4', 45, '<h2 data-start="0" data-end
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (60, now(), now(), 'Bộ Kết Nối - Lớp 4', 59, null);
+values (61, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 4', 60, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (61, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 4', 60, null);
+values (62, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 4', 61, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (62, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 4', 60, null);
+values (63, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 4', 61, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (63, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 4', 59, null);
+values (64, now(), now(), 'Bộ Kết Nối - Lớp 4', 60, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (64, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 4', 63, null);
+values (65, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 4', 64, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (65, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 4', 63, null);
+values (66, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 4', 64, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (66, now(), now(), 'Sách Bài Học Lớp 4', 59, null);
+values (67, now(), now(), 'Sách Bài Tập Lớp 4', 60, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (67, now(), now(), 'Sách Bài Tập Lớp 4', 59, null);
+values (68, now(), now(), 'Sách Bài Học Lớp 4', 60, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (68, now(), now(), 'Bộ Cánh Diều - Lớp 4', 59, null);
+values (69, now(), now(), 'Bộ Cánh Diều - Lớp 4', 60, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (69, now(), now(), 'Sách Bài Tap - Bộ Cánh Diều - Lớp 4', 68, null);
+values (70, now(), now(), 'Sách Bài Tap - Bộ Cánh Diều - Lớp 4', 69, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (70, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 4', 68, null);
+values (71, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 4', 69, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (71, now(), now(), 'Giáo Khoa Lớp 12', 45, '<h2 data-start="0" data-end="44">
+values (72, now(), now(), 'Giáo Khoa Lớp 12', 46, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 12
   </strong>
@@ -3717,40 +3792,333 @@ values (71, now(), now(), 'Giáo Khoa Lớp 12', 45, '<h2 data-start="0" data-en
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (72, now(), now(), 'Bộ Kết Nối - Lớp 12', 71, null);
+values (73, now(), now(), 'Bộ Kết Nối - Lớp 12', 72, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (73, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 12', 72, null);
+values (74, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 12', 73, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (74, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 12', 72, null);
+values (75, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 12', 73, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (75, now(), now(), 'Bộ Cánh Diều - Lớp 12', 71, null);
+values (76, now(), now(), 'Bộ Cánh Diều - Lớp 12', 72, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (76, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 12', 75, null);
+values (77, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 12', 76, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (77, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 12', 75, null);
+values (78, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 12', 76, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (78, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 12', 71, null);
+values (79, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 12', 72, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (79, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 12', 78, null);
+values (80, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 12', 79, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (80, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 12', 78, null);
+values (81, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 12', 79, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (81, now(), now(), 'Sách Bài Tập Lớp 12', 71, null);
+values (82, now(), now(), 'Sách Bài Học Lớp 12', 72, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (82, now(), now(), 'Sách Bài Học Lớp 12', 71, null);
+values (83, now(), now(), 'Sách Bài Tập Lớp 12', 72, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (83, now(), now(), 'Giáo Khoa Lớp 11', 45, '<h2 data-start="0" data-end="44">
+values (84, now(), now(), 'Giáo Khoa Lớp 2', 46, '<h2 data-start="0" data-end="43">
+  <strong data-start="0" data-end="43">
+    Thông tin danh mục Sách Giáo Khoa Lớp 2
+  </strong>
+</h2>
+<p data-start="50" data-end="65">
+  <span style="font-size: 12px;">
+    Bước sang lớp 2, các em học sinh đã có nền tảng cơ bản về kỹ năng học tập, giao tiếp và sinh hoạt trong môi trường học đường. Đây là thời điểm các em tiếp tục củng cố kiến thức căn bản, đồng thời bắt đầu làm quen với những nội dung học tập nâng cao hơn, đòi hỏi sự tập trung và khả năng tư duy logic rõ ràng hơn. Do đó, việc chuẩn bị đầy đủ và đúng SGK theo chương trình học chính thống là yếu tố quan trọng giúp học sinh học tập hiệu quả.
+  </span>
+</p>
+<p data-start="519" data-end="922">
+  Với vai trò là nhà phân phối sách hàng đầu Việt Nam, Fahasa mang đến hệ thống danh mục sách giáo khoa lớp 2 phong phú và đầy đủ, bao gồm các bộ SGK theo chương trình chuẩn của Bộ Giáo dục và Đào tạo: Bộ SGK Cánh Diều, bộ SGK Kết Nối Tri Thức Với Cuộc Sống, và bộ SGK Chân Trời Sáng Tạo. Tất cả SGK đều được đảm bảo chất lượng, có bản quyền rõ ràng và được phân phối chính thức từ các nhà xuất bản lớn.
+</p>
+<h2 data-start="929" data-end="984">
+  <strong data-start="933" data-end="984">
+    Vì sao nên mua Sách Giáo Khoa Lớp 2 tại Fahasa?
+  </strong>
+</h2>
+<h3 data-start="986" data-end="1025">
+  <strong data-start="991" data-end="1025">
+    1. Cam kết 100% sách có bản quyền
+  </strong>
+</h3>
+<p data-start="1027" data-end="1387">
+  Fahasa cam kết chỉ phân phối các đầu sách giáo khoa lớp 2 được xuất bản và phát hành bởi các nhà xuất bản uy tín: NXB Giáo dục Việt Nam và VEPIC, đảm bảo 100% sách có bản quyền. Việc mua sách có bản quyền không chỉ đảm bảo học sinh được tiếp cận với nội dung học tập chính xác, cập nhật, mà còn góp phần xây dựng ý thức tôn trọng quyền sở hữu trí tuệ.
+</p>
+<h3 data-start="1389" data-end="1461">
+  <strong data-start="1394" data-end="1461">
+    <strong style="font-size: 1em;" data-start="1817" data-end="1844">
+      2. 05 tầng ưu đãi giảm giá
+    </strong>
+  </strong>
+</h3>
+<p data-start="1846" data-end="2244">
+  Fahasa không ngừng triển khai các chương trình khuyến mãi, giúp người tiêu dùng tối ưu hóa ngân sách mua sắm. Từ ưu đãi trực tiếp trên giá sản phẩm, mã giảm giá theo giá trị đơn hàng, ưu đãi thành viên, combo tiết kiệm cho đến các chương trình ưu đãi theo mùa – tất cả đều được thiết kế nhằm mang lại lợi ích tối đa cho người mua. Mỗi lần mua sắm tại Fahasa là một lần săn deal tiết kiệm và thú vị.
+</p>
+<h3 data-start="2246" data-end="2308">
+  <strong data-start="2251" data-end="2308">
+    3. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
+  </strong>
+</h3>
+<p data-start="2310" data-end="2724">
+  Không chỉ chú trọng đến chất lượng sản phẩm, Fahasa còn đầu tư mạnh vào quy trình đóng gói và vận chuyển. Mỗi đơn hàng sách giáo khoa được bọc kỹ, đặt trong hộp cứng hoặc túi chống sốc phù hợp, đảm bảo không bị gấp mép, cong góc hay rách bìa trong quá trình vận chuyển. Với đội ngũ giao hàng chuyên nghiệp và mạng lưới phủ khắp từ Nam ra Bắc, Fahasa cam kết giao hàng nhanh, đúng và an toàn đến tận tay khách hàng.
+</p>
+<h3 data-start="2726" data-end="2759">
+  <strong data-start="2731" data-end="2759">
+    4. Đổi trả miễn phí 30 ngày
+  </strong>
+</h3>
+<p data-start="2761" data-end="3095">
+  Hiểu rằng trải nghiệm mua sắm trực tuyến đôi khi có thể gặp trục trặc, Fahasa cung cấp chính sách đổi trả miễn phí trong vòng 30 ngày kể từ ngày nhận hàng. Nếu sản phẩm nhận được bị lỗi kỹ thuật, sai nội dung hoặc không đúng mô tả, khách hàng hoàn toàn có thể đổi mới hoặc trả hàng dễ dàng, không cần lo lắng về rủi ro khi mua online.
+</p>
+<h2 data-start="3102" data-end="3171">
+  <strong data-start="3106" data-end="3171">
+    Các bộ Sách Giáo Khoa Lớp 2 tại Fahasa
+  </strong>
+</h2>
+<p data-start="3173" data-end="3316">
+  Danh mục Sách Giáo Khoa Lớp 2 tại Fahasa hiện tại chia thành 3 bộ SGK chính tương ứng với các chương trình giáo dục hiện hành, cụ thể như sau:
+</p>
+<h3 data-start="3318" data-end="3350">
+  <strong data-start="3323" data-end="3350">
+    1. Bộ SGK Cánh Diều – Lớp 2
+  </strong>
+</h3>
+<p dir="auto">
+  Bộ SGK Cánh Diều lớp 2, do Nhà xuất bản Đại học Sư phạm Hà Nội, Nhà xuất bản Đại học Sư phạm TP.HCM và Công ty CP Đầu tư Xuất bản – Thiết bị Giáo dục Việt Nam (VEPIC) biên soạn, gồm 9 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Đạo đức, Tự nhiên và Xã hội, Âm nhạc, Mĩ thuật, Giáo dục thể chất, Hoạt động trải nghiệm và Tiếng Anh. Được phê duyệt theo Chương trình Giáo dục Phổ thông 2018, bộ sách mang triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, tập trung phát triển phẩm chất và năng lực học sinh.
+</p>
+<h3 data-start="4052" data-end="4105">
+  <strong data-start="4057" data-end="4105">
+    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 2
+  </strong>
+</h3>
+<p dir="auto">
+  Bộ SGK Kết Nối Tri Thức Với Cuộc Sống lớp 2, do Nhà xuất bản Giáo dục Việt Nam phát hành, gồm 8 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Tự nhiên và Xã hội, Đạo đức, Âm nhạc, Mĩ thuật, Hoạt động trải nghiệm và Tiếng Anh. Được biên soạn theo Chương trình Giáo dục Phổ thông 2018, bộ sách tập trung kết nối kiến thức học thuật với thực tiễn, giúp học sinh phát triển năng lực tư duy, kỹ năng sống và phẩm chất đạo đức. Nội dung được thiết kế theo chủ đề gần gũi như gia đình, cộng đồng, thiên nhiên, với hình ảnh minh họa sinh động, bài tập đa dạng và các hoạt động trải nghiệm khuyến khích sự sáng tạo, tự học. Mỗi môn học được xây dựng từ cơ bản đến nâng cao, phù hợp với tâm lý và khả năng của học sinh lớp 2.
+</p>
+<h3 data-start="4840" data-end="4881">
+  <strong data-start="4845" data-end="4881">
+    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 2
+  </strong>
+</h3>
+<p dir="auto">
+  Bộ SGK Chân Trời Sáng Tạo lớp 2, do Nhà xuất bản Giáo dục Việt Nam phát hành, gồm 9 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Tự nhiên và Xã hội, Đạo đức, Âm nhạc, Mĩ thuật, Giáo dục thể chất, Hoạt động trải nghiệm và Tiếng Anh. Được biên soạn theo Chương trình Giáo dục Phổ thông 2018, bộ sách hướng đến phát triển năng lực và phẩm chất học sinh, chuyển từ truyền thụ kiến thức sang khuyến khích hoạt động trải nghiệm, sáng tạo. Nội dung được thiết kế theo chủ đề gần gũi như gia đình, trường học, thiên nhiên, với hình ảnh sinh động, bài tập đa dạng từ dễ đến khó, tích hợp các giá trị đạo đức, kỹ năng sống và bảo vệ môi trường.
+</p>
+<article class="text-token-text-primary w-full" dir="auto" data-testid="conversation-turn-2" data-scroll-anchor="true">
+  <div class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)">
+    <div class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden">
+      <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
+        <div class="relative flex-col gap-1 md:gap-3">
+          <div class="flex max-w-full flex-col grow">
+            <div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="assistant" data-message-id="3645e990-9c5a-4377-a959-8c195ca64890" data-message-model-slug="gpt-4o">
+              <div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
+                <div class="markdown prose dark:prose-invert w-full break-words light">
+                  <p data-start="0" data-end="332" data-is-last-node="" data-is-only-node="">
+                    Việc chọn mua đúng bộ sách giáo khoa lớp 2 không chỉ giúp học sinh học tập thuận lợi mà còn tạo nền tảng vững chắc cho các cấp học tiếp theo. Với danh mục phong phú, chất lượng đảm bảo và dịch vụ tận tâm, Fahasa là địa chỉ tin cậy đồng hành cùng phụ huynh trong hành trình chuẩn bị hành trang tri thức cho con em mình.
+                  </p>
+                  <p data-start="0" data-end="332" data-is-last-node="" data-is-only-node="">
+                    <strong>
+                      Truy cập web/app Fahasa.com để mua ngay trọn bộ SGK và sách bài tập Lớp 2 với giá tốt cùng nhiều ưu đãi hấp dẫn!
+                    </strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (85, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 2', 84, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (86, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 2', 85, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (87, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 2', 85, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (88, now(), now(), 'Bộ Cánh Diều - Lớp 2', 84, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (89, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 2', 88, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (90, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 2', 88, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (91, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 84, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (92, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 91, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (93, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 91, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (94, now(), now(), 'Khác', 84, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (95, now(), now(), 'Sách Bài Tập - Lớp 2', 94, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (96, now(), now(), 'Sách Bài Học - Lớp 2', 94, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (97, now(), now(), 'Giáo Khoa Lớp 9', 46, '<h2 data-start="0" data-end="43">
+  <strong data-start="0" data-end="43">
+    Thông tin danh mục Sách Giáo Khoa Lớp 9
+  </strong>
+</h2>
+<p data-start="50" data-end="65">
+  <span style="font-size: 12px;">
+    Lớp 9 là năm học cuối cùng của bậc Trung học Cơ sở, mang tính chất bản lề và có vai trò quyết định trong hành trình học tập của học sinh. Đây là giai đoạn các em chuẩn bị bước vào kỳ thi tuyển sinh lớp 10 - một trong những kỳ thi quan trọng nhất trong đời học sinh. Vì vậy, việc được trang bị đầy đủ 
+  </span>
+  sách giáo khoa lớp 9
+  <span style="font-size: 12px;">
+     theo đúng chương trình học là điều vô cùng cần thiết để đảm bảo kiến thức nền tảng, đồng thời hỗ trợ quá trình ôn luyện hiệu quả.
+  </span>
+</p>
+<p data-start="523" data-end="1026">
+  Với sự triển khai đồng bộ Chương trình Giáo dục phổ thông mới (CTGDPT 2018), các trường học hiện nay sử dụng ba bộ SGK lớp 9 chính: Cánh Diều, Kết Nối Tri Thức Với Cuộc Sống, và Chân Trời Sáng Tạo. Tùy theo từng địa phương và nhà trường, mỗi học sinh sẽ học theo một bộ sách khác nhau. Vì vậy, việc lựa chọn đúng bộ SGK phù hợp không chỉ giúp học sinh tiếp cận đúng nội dung giảng dạy mà còn hạn chế tối đa rủi ro học sai sách. 
+</p>
+<p data-start="1028" data-end="1416">
+  Trên nền tảng mua sắm trực tuyến Fahasa.com, danh mục SGK Lớp 9 được phân chia rõ ràng theo từng bộ sách, giúp phụ huynh và học sinh dễ dàng tìm kiếm, lựa chọn đúng sản phẩm cần thiết. Không chỉ có SGK cơ bản, Fahasa còn cung cấp các tài liệu bổ trợ, bài tập nâng cao, sách tham khảo... tạo nên một hệ sinh thái giáo dục toàn diện cho học sinh lớp 9.
+</p>
+<h2 data-start="1423" data-end="1478">
+  <strong data-start="1427" data-end="1478">
+    Vì sao nên mua Sách Giáo Khoa Lớp 9 tại Fahasa?
+  </strong>
+</h2>
+<h3 data-start="1480" data-end="1519">
+  <strong data-start="1485" data-end="1519">
+    1. Cam kết 100% sách có bản quyền
+  </strong>
+</h3>
+<p data-start="1521" data-end="1903">
+  Fahasa cam kết cung cấp toàn bộ SGK lớp 9 có bản quyền chính thống, phát hành bởi các nhà xuất bản uy tín. Việc sử dụng sách bản quyền không chỉ đảm bảo chất lượng nội dung học tập mà còn góp phần nâng cao nhận thức về quyền sở hữu trí tuệ, tránh những sai sót nghiêm trọng do sách in lậu, sai nội dung.
+</p>
+<h3 data-start="1905" data-end="1973">
+  <strong data-start="1910" data-end="1973">
+    2. Hàng ngàn đầu sách phong phú 
+  </strong>
+</h3>
+<p data-start="1975" data-end="2276">
+  Danh mục lớp 9 trên Fahasa không chỉ bao gồm các đầu SGK chính khóa mà còn có đầy đủ sách bài tập, sách nâng cao, đề luyện thi học kỳ, tài liệu tham khảo cho từng môn học… Tất cả đều được cập nhật thường xuyên theo chương trình mới, phù hợp với mọi nhu cầu học tập từ cơ bản đến chuyên sâu.
+</p>
+<h3 data-start="2278" data-end="2310">
+  <strong data-start="2283" data-end="2310">
+    3. 05 tầng ưu đãi giảm giá
+  </strong>
+</h3>
+<p data-start="2312" data-end="2615">
+  Fahasa thường xuyên triển khai nhiều đợt khuyến mãi hấp dẫn như giảm giá theo combo, mã giảm giá, quà tặng kèm, chương trình tích điểm đổi quà… giúp phụ huynh tiết kiệm chi phí mua SGK cho con em. Đây là lợi thế đặc biệt hữu ích, nhất là khi cần mua sách cho nhiều môn hoặc nhiều học sinh cùng lúc.
+</p>
+<h3 data-start="2617" data-end="2679">
+  <strong data-start="2622" data-end="2679">
+    4. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
+  </strong>
+</h3>
+<p data-start="2681" data-end="2991">
+  Mỗi đơn hàng sách tại Fahasa đều được đóng gói cẩn thận, bao bọc chống va đập, chống thấm nước để đảm bảo sách đến tay khách hàng trong tình trạng tốt nhất. Dù bạn ở thành phố lớn hay vùng nông thôn, sách luôn được giao nhanh chóng và an toàn – đúng tinh thần “mỗi cuốn sách là một món quà dành riêng cho bạn”.
+</p>
+<h3 data-start="2993" data-end="3026">
+  <strong data-start="2998" data-end="3026">
+    5. Đổi trả miễn phí 30 ngày
+  </strong>
+</h3>
+<p data-start="3028" data-end="3284">
+  Nếu chẳng may mua nhầm bộ sách, thiếu đầu sách, sách in lỗi,… Fahasa hỗ trợ đổi trả miễn phí trong vòng 30 ngày. Điều này mang lại sự an tâm tối đa cho người mua, đặc biệt khi phụ huynh cần chuẩn bị sách sớm nhưng chưa nắm rõ thông tin nhà trường cung cấp.
+</p>
+<h2 data-start="3291" data-end="3360">
+  <strong data-start="3295" data-end="3360">
+    Tổng quan danh mục Sách Giáo Khoa Lớp 9 tại Fahasa
+  </strong>
+</h2>
+<h3 data-start="3501" data-end="3533">
+  <strong data-start="3506" data-end="3533">
+    1. Bộ SGK Cánh Diều – Lớp 9
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Cánh Diều lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018 dành cho học sinh lớp 9 sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, sách gắn lý thuyết với thực tiễn, cập nhật thành tựu khoa học hiện đại, phát triển năng lực và phẩm chất học sinh như sáng tạo, tự học, trách nhiệm. 
+  </p>
+</div>
+<h3 data-start="4346" data-end="4399">
+  <strong>
+    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 9
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Kết Nối Tri Thức Với Cuộc Sống lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 9, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng kết nối kiến thức học thuật với thực tiễn, sách tích hợp nội dung liên môn, giáo dục kỹ năng sống, giá trị đạo đức, ý thức công dân và bảo vệ môi trường. Nội dung bài học rõ ràng, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tư duy sáng tạo, tự học và tham gia các hoạt động thực hành. 
+  </p>
+</div>
+<h3 data-start="5159" data-end="5200">
+  <strong>
+    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 9
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Chân Trời Sáng Tạo lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 9, sử dụng trong năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng phát triển năng lực và phẩm chất học sinh (tư duy, sáng tạo, trách nhiệm, nhân ái), sách sử dụng ngôn ngữ gần gũi, tích hợp nội dung liên môn, kỹ năng sống và giáo dục bảo vệ môi trường. Nội dung bài học linh hoạt, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tự học, tham gia hoạt động thực hành và sáng tạo. 
+  </p>
+  <p dir="auto">
+    Việc sở hữu đầy đủ và đúng bộ SGK chuẩn theo chương trình mới sẽ giúp học sinh củng cố kiến thức, tăng khả năng tự học và ôn luyện hiệu quả. Với danh mục rõ ràng, sách chính hãng, nhiều ưu đãi và dịch vụ chăm sóc khách hàng tận tâm, Fahasa chính là lựa chọn tin cậy đồng hành cùng học sinh lớp 9 mùa tựu trường.
+  </p>
+  <p dir="auto">
+    <strong>
+      Truy cập web/app Fahasa.com để mua trọn bộ SGK và sách bài tập Lớp 9 với giá tốt cùng nhiều ưu đãi hấp dẫn chuẩn bị sẵn sàng chào đón năm học mới!
+    </strong>
+  </p>
+</div>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (98, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 9', 97, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (99, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 9', 98, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (100, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 9', 98, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (101, now(), now(), 'Bộ Kết Nối - Lớp 9', 97, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (102, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 9', 101, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (103, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 9', 101, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (104, now(), now(), 'Bộ Cánh Diều - Lớp 9', 97, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (105, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 9', 104, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (106, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 9', 104, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (107, now(), now(), 'Sách Bài Học Lớp 9', 97, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (108, now(), now(), 'Sách Bài Tập Lớp 9', 97, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (109, now(), now(), 'Giáo Khoa Lớp 11', 46, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 11
   </strong>
@@ -3861,37 +4229,37 @@ values (83, now(), now(), 'Giáo Khoa Lớp 11', 45, '<h2 data-start="0" data-en
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (84, now(), now(), 'Bộ Kết Nối - Lớp 11', 83, null);
+values (110, now(), now(), 'Bộ Kết Nối - Lớp 11', 109, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (85, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 11', 84, null);
+values (111, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 11', 110, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (86, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 11', 84, null);
+values (112, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 11', 110, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (87, now(), now(), 'Bộ Cánh Diều - Lớp 11', 83, null);
+values (113, now(), now(), 'Bộ Cánh Diều - Lớp 11', 109, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (88, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 11', 87, null);
+values (114, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 11', 113, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (89, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 11', 87, null);
+values (115, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 11', 113, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (90, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 11', 83, null);
+values (116, now(), now(), 'Sách Bài Học Lớp 11', 109, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (91, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 11', 90, null);
+values (117, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 11', 109, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (92, now(), now(), 'Sách Bài Học Lớp 11', 83, null);
+values (118, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 11', 117, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (93, now(), now(), 'Sách Bài Tập Lớp 11', 83, null);
+values (119, now(), now(), 'Sách Bài Tập Lớp 11', 109, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (94, now(), now(), 'Giáo Khoa Lớp 7', 45, '<h2 data-start="0" data-end="43">
+values (120, now(), now(), 'Giáo Khoa Lớp 7', 46, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 7
   </strong>
@@ -4016,336 +4384,43 @@ values (94, now(), now(), 'Giáo Khoa Lớp 7', 45, '<h2 data-start="0" data-end
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (95, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 7', 94, null);
+values (121, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 7', 120, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (96, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 7', 95, null);
+values (122, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 7', 121, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (97, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 7', 95, null);
+values (123, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 7', 121, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (98, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 94, null);
+values (124, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 120, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (99, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98, null);
+values (125, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 124, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (100, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 98, null);
+values (126, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 7', 124, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (101, now(), now(), 'Khác', 94, null);
+values (127, now(), now(), 'Khác', 120, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (102, now(), now(), 'Sách Bài Học - Lớp 7', 101, null);
+values (128, now(), now(), 'Sách Bài Học - Lớp 7', 127, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (103, now(), now(), 'Sách Bài Tập - Lớp 7', 101, null);
+values (129, now(), now(), 'Sách Bài Tập - Lớp 7', 127, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (104, now(), now(), 'Bộ Cánh Diều - Lớp 7', 94, null);
+values (130, now(), now(), 'Bộ Cánh Diều - Lớp 7', 120, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (105, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 7', 104, null);
+values (131, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 7', 130, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (106, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 7', 104, null);
+values (132, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 7', 130, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (107, now(), now(), 'Giáo Khoa Lớp 9', 45, '<h2 data-start="0" data-end="43">
-  <strong data-start="0" data-end="43">
-    Thông tin danh mục Sách Giáo Khoa Lớp 9
-  </strong>
-</h2>
-<p data-start="50" data-end="65">
-  <span style="font-size: 12px;">
-    Lớp 9 là năm học cuối cùng của bậc Trung học Cơ sở, mang tính chất bản lề và có vai trò quyết định trong hành trình học tập của học sinh. Đây là giai đoạn các em chuẩn bị bước vào kỳ thi tuyển sinh lớp 10 - một trong những kỳ thi quan trọng nhất trong đời học sinh. Vì vậy, việc được trang bị đầy đủ 
-  </span>
-  sách giáo khoa lớp 9
-  <span style="font-size: 12px;">
-     theo đúng chương trình học là điều vô cùng cần thiết để đảm bảo kiến thức nền tảng, đồng thời hỗ trợ quá trình ôn luyện hiệu quả.
-  </span>
-</p>
-<p data-start="523" data-end="1026">
-  Với sự triển khai đồng bộ Chương trình Giáo dục phổ thông mới (CTGDPT 2018), các trường học hiện nay sử dụng ba bộ SGK lớp 9 chính: Cánh Diều, Kết Nối Tri Thức Với Cuộc Sống, và Chân Trời Sáng Tạo. Tùy theo từng địa phương và nhà trường, mỗi học sinh sẽ học theo một bộ sách khác nhau. Vì vậy, việc lựa chọn đúng bộ SGK phù hợp không chỉ giúp học sinh tiếp cận đúng nội dung giảng dạy mà còn hạn chế tối đa rủi ro học sai sách. 
-</p>
-<p data-start="1028" data-end="1416">
-  Trên nền tảng mua sắm trực tuyến Fahasa.com, danh mục SGK Lớp 9 được phân chia rõ ràng theo từng bộ sách, giúp phụ huynh và học sinh dễ dàng tìm kiếm, lựa chọn đúng sản phẩm cần thiết. Không chỉ có SGK cơ bản, Fahasa còn cung cấp các tài liệu bổ trợ, bài tập nâng cao, sách tham khảo... tạo nên một hệ sinh thái giáo dục toàn diện cho học sinh lớp 9.
-</p>
-<h2 data-start="1423" data-end="1478">
-  <strong data-start="1427" data-end="1478">
-    Vì sao nên mua Sách Giáo Khoa Lớp 9 tại Fahasa?
-  </strong>
-</h2>
-<h3 data-start="1480" data-end="1519">
-  <strong data-start="1485" data-end="1519">
-    1. Cam kết 100% sách có bản quyền
-  </strong>
-</h3>
-<p data-start="1521" data-end="1903">
-  Fahasa cam kết cung cấp toàn bộ SGK lớp 9 có bản quyền chính thống, phát hành bởi các nhà xuất bản uy tín. Việc sử dụng sách bản quyền không chỉ đảm bảo chất lượng nội dung học tập mà còn góp phần nâng cao nhận thức về quyền sở hữu trí tuệ, tránh những sai sót nghiêm trọng do sách in lậu, sai nội dung.
-</p>
-<h3 data-start="1905" data-end="1973">
-  <strong data-start="1910" data-end="1973">
-    2. Hàng ngàn đầu sách phong phú 
-  </strong>
-</h3>
-<p data-start="1975" data-end="2276">
-  Danh mục lớp 9 trên Fahasa không chỉ bao gồm các đầu SGK chính khóa mà còn có đầy đủ sách bài tập, sách nâng cao, đề luyện thi học kỳ, tài liệu tham khảo cho từng môn học… Tất cả đều được cập nhật thường xuyên theo chương trình mới, phù hợp với mọi nhu cầu học tập từ cơ bản đến chuyên sâu.
-</p>
-<h3 data-start="2278" data-end="2310">
-  <strong data-start="2283" data-end="2310">
-    3. 05 tầng ưu đãi giảm giá
-  </strong>
-</h3>
-<p data-start="2312" data-end="2615">
-  Fahasa thường xuyên triển khai nhiều đợt khuyến mãi hấp dẫn như giảm giá theo combo, mã giảm giá, quà tặng kèm, chương trình tích điểm đổi quà… giúp phụ huynh tiết kiệm chi phí mua SGK cho con em. Đây là lợi thế đặc biệt hữu ích, nhất là khi cần mua sách cho nhiều môn hoặc nhiều học sinh cùng lúc.
-</p>
-<h3 data-start="2617" data-end="2679">
-  <strong data-start="2622" data-end="2679">
-    4. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
-  </strong>
-</h3>
-<p data-start="2681" data-end="2991">
-  Mỗi đơn hàng sách tại Fahasa đều được đóng gói cẩn thận, bao bọc chống va đập, chống thấm nước để đảm bảo sách đến tay khách hàng trong tình trạng tốt nhất. Dù bạn ở thành phố lớn hay vùng nông thôn, sách luôn được giao nhanh chóng và an toàn – đúng tinh thần “mỗi cuốn sách là một món quà dành riêng cho bạn”.
-</p>
-<h3 data-start="2993" data-end="3026">
-  <strong data-start="2998" data-end="3026">
-    5. Đổi trả miễn phí 30 ngày
-  </strong>
-</h3>
-<p data-start="3028" data-end="3284">
-  Nếu chẳng may mua nhầm bộ sách, thiếu đầu sách, sách in lỗi,… Fahasa hỗ trợ đổi trả miễn phí trong vòng 30 ngày. Điều này mang lại sự an tâm tối đa cho người mua, đặc biệt khi phụ huynh cần chuẩn bị sách sớm nhưng chưa nắm rõ thông tin nhà trường cung cấp.
-</p>
-<h2 data-start="3291" data-end="3360">
-  <strong data-start="3295" data-end="3360">
-    Tổng quan danh mục Sách Giáo Khoa Lớp 9 tại Fahasa
-  </strong>
-</h2>
-<h3 data-start="3501" data-end="3533">
-  <strong data-start="3506" data-end="3533">
-    1. Bộ SGK Cánh Diều – Lớp 9
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Cánh Diều lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018 dành cho học sinh lớp 9 sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, sách gắn lý thuyết với thực tiễn, cập nhật thành tựu khoa học hiện đại, phát triển năng lực và phẩm chất học sinh như sáng tạo, tự học, trách nhiệm. 
-  </p>
-</div>
-<h3 data-start="4346" data-end="4399">
-  <strong>
-    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 9
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Kết Nối Tri Thức Với Cuộc Sống lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 9, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng kết nối kiến thức học thuật với thực tiễn, sách tích hợp nội dung liên môn, giáo dục kỹ năng sống, giá trị đạo đức, ý thức công dân và bảo vệ môi trường. Nội dung bài học rõ ràng, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tư duy sáng tạo, tự học và tham gia các hoạt động thực hành. 
-  </p>
-</div>
-<h3 data-start="5159" data-end="5200">
-  <strong>
-    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 9
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Chân Trời Sáng Tạo lớp 9 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 9, sử dụng trong năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng phát triển năng lực và phẩm chất học sinh (tư duy, sáng tạo, trách nhiệm, nhân ái), sách sử dụng ngôn ngữ gần gũi, tích hợp nội dung liên môn, kỹ năng sống và giáo dục bảo vệ môi trường. Nội dung bài học linh hoạt, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tự học, tham gia hoạt động thực hành và sáng tạo. 
-  </p>
-  <p dir="auto">
-    Việc sở hữu đầy đủ và đúng bộ SGK chuẩn theo chương trình mới sẽ giúp học sinh củng cố kiến thức, tăng khả năng tự học và ôn luyện hiệu quả. Với danh mục rõ ràng, sách chính hãng, nhiều ưu đãi và dịch vụ chăm sóc khách hàng tận tâm, Fahasa chính là lựa chọn tin cậy đồng hành cùng học sinh lớp 9 mùa tựu trường.
-  </p>
-  <p dir="auto">
-    <strong>
-      Truy cập web/app Fahasa.com để mua trọn bộ SGK và sách bài tập Lớp 9 với giá tốt cùng nhiều ưu đãi hấp dẫn chuẩn bị sẵn sàng chào đón năm học mới!
-    </strong>
-  </p>
-</div>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (108, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 9', 107, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (109, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 9', 108, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (110, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 9', 108, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (111, now(), now(), 'Bộ Kết Nối - Lớp 9', 107, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (112, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 9', 111, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (113, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 9', 111, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (114, now(), now(), 'Bộ Cánh Diều - Lớp 9', 107, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (115, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 9', 114, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (116, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 9', 114, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (117, now(), now(), 'Sách Bài Học Lớp 9', 107, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (118, now(), now(), 'Sách Bài Tập Lớp 9', 107, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (119, now(), now(), 'Giáo Khoa Lớp 2', 45, '<h2 data-start="0" data-end="43">
-  <strong data-start="0" data-end="43">
-    Thông tin danh mục Sách Giáo Khoa Lớp 2
-  </strong>
-</h2>
-<p data-start="50" data-end="65">
-  <span style="font-size: 12px;">
-    Bước sang lớp 2, các em học sinh đã có nền tảng cơ bản về kỹ năng học tập, giao tiếp và sinh hoạt trong môi trường học đường. Đây là thời điểm các em tiếp tục củng cố kiến thức căn bản, đồng thời bắt đầu làm quen với những nội dung học tập nâng cao hơn, đòi hỏi sự tập trung và khả năng tư duy logic rõ ràng hơn. Do đó, việc chuẩn bị đầy đủ và đúng SGK theo chương trình học chính thống là yếu tố quan trọng giúp học sinh học tập hiệu quả.
-  </span>
-</p>
-<p data-start="519" data-end="922">
-  Với vai trò là nhà phân phối sách hàng đầu Việt Nam, Fahasa mang đến hệ thống danh mục sách giáo khoa lớp 2 phong phú và đầy đủ, bao gồm các bộ SGK theo chương trình chuẩn của Bộ Giáo dục và Đào tạo: Bộ SGK Cánh Diều, bộ SGK Kết Nối Tri Thức Với Cuộc Sống, và bộ SGK Chân Trời Sáng Tạo. Tất cả SGK đều được đảm bảo chất lượng, có bản quyền rõ ràng và được phân phối chính thức từ các nhà xuất bản lớn.
-</p>
-<h2 data-start="929" data-end="984">
-  <strong data-start="933" data-end="984">
-    Vì sao nên mua Sách Giáo Khoa Lớp 2 tại Fahasa?
-  </strong>
-</h2>
-<h3 data-start="986" data-end="1025">
-  <strong data-start="991" data-end="1025">
-    1. Cam kết 100% sách có bản quyền
-  </strong>
-</h3>
-<p data-start="1027" data-end="1387">
-  Fahasa cam kết chỉ phân phối các đầu sách giáo khoa lớp 2 được xuất bản và phát hành bởi các nhà xuất bản uy tín: NXB Giáo dục Việt Nam và VEPIC, đảm bảo 100% sách có bản quyền. Việc mua sách có bản quyền không chỉ đảm bảo học sinh được tiếp cận với nội dung học tập chính xác, cập nhật, mà còn góp phần xây dựng ý thức tôn trọng quyền sở hữu trí tuệ.
-</p>
-<h3 data-start="1389" data-end="1461">
-  <strong data-start="1394" data-end="1461">
-    <strong style="font-size: 1em;" data-start="1817" data-end="1844">
-      2. 05 tầng ưu đãi giảm giá
-    </strong>
-  </strong>
-</h3>
-<p data-start="1846" data-end="2244">
-  Fahasa không ngừng triển khai các chương trình khuyến mãi, giúp người tiêu dùng tối ưu hóa ngân sách mua sắm. Từ ưu đãi trực tiếp trên giá sản phẩm, mã giảm giá theo giá trị đơn hàng, ưu đãi thành viên, combo tiết kiệm cho đến các chương trình ưu đãi theo mùa – tất cả đều được thiết kế nhằm mang lại lợi ích tối đa cho người mua. Mỗi lần mua sắm tại Fahasa là một lần săn deal tiết kiệm và thú vị.
-</p>
-<h3 data-start="2246" data-end="2308">
-  <strong data-start="2251" data-end="2308">
-    3. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
-  </strong>
-</h3>
-<p data-start="2310" data-end="2724">
-  Không chỉ chú trọng đến chất lượng sản phẩm, Fahasa còn đầu tư mạnh vào quy trình đóng gói và vận chuyển. Mỗi đơn hàng sách giáo khoa được bọc kỹ, đặt trong hộp cứng hoặc túi chống sốc phù hợp, đảm bảo không bị gấp mép, cong góc hay rách bìa trong quá trình vận chuyển. Với đội ngũ giao hàng chuyên nghiệp và mạng lưới phủ khắp từ Nam ra Bắc, Fahasa cam kết giao hàng nhanh, đúng và an toàn đến tận tay khách hàng.
-</p>
-<h3 data-start="2726" data-end="2759">
-  <strong data-start="2731" data-end="2759">
-    4. Đổi trả miễn phí 30 ngày
-  </strong>
-</h3>
-<p data-start="2761" data-end="3095">
-  Hiểu rằng trải nghiệm mua sắm trực tuyến đôi khi có thể gặp trục trặc, Fahasa cung cấp chính sách đổi trả miễn phí trong vòng 30 ngày kể từ ngày nhận hàng. Nếu sản phẩm nhận được bị lỗi kỹ thuật, sai nội dung hoặc không đúng mô tả, khách hàng hoàn toàn có thể đổi mới hoặc trả hàng dễ dàng, không cần lo lắng về rủi ro khi mua online.
-</p>
-<h2 data-start="3102" data-end="3171">
-  <strong data-start="3106" data-end="3171">
-    Các bộ Sách Giáo Khoa Lớp 2 tại Fahasa
-  </strong>
-</h2>
-<p data-start="3173" data-end="3316">
-  Danh mục Sách Giáo Khoa Lớp 2 tại Fahasa hiện tại chia thành 3 bộ SGK chính tương ứng với các chương trình giáo dục hiện hành, cụ thể như sau:
-</p>
-<h3 data-start="3318" data-end="3350">
-  <strong data-start="3323" data-end="3350">
-    1. Bộ SGK Cánh Diều – Lớp 2
-  </strong>
-</h3>
-<p dir="auto">
-  Bộ SGK Cánh Diều lớp 2, do Nhà xuất bản Đại học Sư phạm Hà Nội, Nhà xuất bản Đại học Sư phạm TP.HCM và Công ty CP Đầu tư Xuất bản – Thiết bị Giáo dục Việt Nam (VEPIC) biên soạn, gồm 9 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Đạo đức, Tự nhiên và Xã hội, Âm nhạc, Mĩ thuật, Giáo dục thể chất, Hoạt động trải nghiệm và Tiếng Anh. Được phê duyệt theo Chương trình Giáo dục Phổ thông 2018, bộ sách mang triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, tập trung phát triển phẩm chất và năng lực học sinh.
-</p>
-<h3 data-start="4052" data-end="4105">
-  <strong data-start="4057" data-end="4105">
-    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 2
-  </strong>
-</h3>
-<p dir="auto">
-  Bộ SGK Kết Nối Tri Thức Với Cuộc Sống lớp 2, do Nhà xuất bản Giáo dục Việt Nam phát hành, gồm 8 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Tự nhiên và Xã hội, Đạo đức, Âm nhạc, Mĩ thuật, Hoạt động trải nghiệm và Tiếng Anh. Được biên soạn theo Chương trình Giáo dục Phổ thông 2018, bộ sách tập trung kết nối kiến thức học thuật với thực tiễn, giúp học sinh phát triển năng lực tư duy, kỹ năng sống và phẩm chất đạo đức. Nội dung được thiết kế theo chủ đề gần gũi như gia đình, cộng đồng, thiên nhiên, với hình ảnh minh họa sinh động, bài tập đa dạng và các hoạt động trải nghiệm khuyến khích sự sáng tạo, tự học. Mỗi môn học được xây dựng từ cơ bản đến nâng cao, phù hợp với tâm lý và khả năng của học sinh lớp 2.
-</p>
-<h3 data-start="4840" data-end="4881">
-  <strong data-start="4845" data-end="4881">
-    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 2
-  </strong>
-</h3>
-<p dir="auto">
-  Bộ SGK Chân Trời Sáng Tạo lớp 2, do Nhà xuất bản Giáo dục Việt Nam phát hành, gồm 9 môn học với 10 quyển: Tiếng Việt (2 tập), Toán (2 tập), Tự nhiên và Xã hội, Đạo đức, Âm nhạc, Mĩ thuật, Giáo dục thể chất, Hoạt động trải nghiệm và Tiếng Anh. Được biên soạn theo Chương trình Giáo dục Phổ thông 2018, bộ sách hướng đến phát triển năng lực và phẩm chất học sinh, chuyển từ truyền thụ kiến thức sang khuyến khích hoạt động trải nghiệm, sáng tạo. Nội dung được thiết kế theo chủ đề gần gũi như gia đình, trường học, thiên nhiên, với hình ảnh sinh động, bài tập đa dạng từ dễ đến khó, tích hợp các giá trị đạo đức, kỹ năng sống và bảo vệ môi trường.
-</p>
-<article class="text-token-text-primary w-full" dir="auto" data-testid="conversation-turn-2" data-scroll-anchor="true">
-  <div class="text-base my-auto mx-auto py-5 [--thread-content-margin:--spacing(4)] @[37rem]:[--thread-content-margin:--spacing(6)] @[72rem]:[--thread-content-margin:--spacing(16)] px-(--thread-content-margin)">
-    <div class="[--thread-content-max-width:32rem] @[34rem]:[--thread-content-max-width:40rem] @[64rem]:[--thread-content-max-width:48rem] mx-auto flex max-w-(--thread-content-max-width) flex-1 text-base gap-4 md:gap-5 lg:gap-6 group/turn-messages focus-visible:outline-hidden">
-      <div class="group/conversation-turn relative flex w-full min-w-0 flex-col agent-turn">
-        <div class="relative flex-col gap-1 md:gap-3">
-          <div class="flex max-w-full flex-col grow">
-            <div class="min-h-8 text-message relative flex w-full flex-col items-end gap-2 text-start break-words whitespace-normal [.text-message+&amp;]:mt-5" dir="auto" data-message-author-role="assistant" data-message-id="3645e990-9c5a-4377-a959-8c195ca64890" data-message-model-slug="gpt-4o">
-              <div class="flex w-full flex-col gap-1 empty:hidden first:pt-[3px]">
-                <div class="markdown prose dark:prose-invert w-full break-words light">
-                  <p data-start="0" data-end="332" data-is-last-node="" data-is-only-node="">
-                    Việc chọn mua đúng bộ sách giáo khoa lớp 2 không chỉ giúp học sinh học tập thuận lợi mà còn tạo nền tảng vững chắc cho các cấp học tiếp theo. Với danh mục phong phú, chất lượng đảm bảo và dịch vụ tận tâm, Fahasa là địa chỉ tin cậy đồng hành cùng phụ huynh trong hành trình chuẩn bị hành trang tri thức cho con em mình.
-                  </p>
-                  <p data-start="0" data-end="332" data-is-last-node="" data-is-only-node="">
-                    <strong>
-                      Truy cập web/app Fahasa.com để mua ngay trọn bộ SGK và sách bài tập Lớp 2 với giá tốt cùng nhiều ưu đãi hấp dẫn!
-                    </strong>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (120, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 2', 119, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (121, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 2', 120, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (122, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 2', 120, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (123, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 119, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (124, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (125, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 2', 123, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (126, now(), now(), 'Bộ Cánh Diều - Lớp 2', 119, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (127, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 2', 126, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (128, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 2', 126, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (129, now(), now(), 'Khác', 119, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (130, now(), now(), 'Sách Bài Học - Lớp 2', 129, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (131, now(), now(), 'Sách Bài Tập - Lớp 2', 129, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (132, now(), now(), 'Giáo Khoa Lớp 5', 45, '<h2 data-start="0" data-end="43">
+values (133, now(), now(), 'Giáo Khoa Lớp 5', 46, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 5
   </strong>
@@ -4451,40 +4526,183 @@ values (132, now(), now(), 'Giáo Khoa Lớp 5', 45, '<h2 data-start="0" data-en
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (133, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 5', 132, null);
+values (134, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 5', 133, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (134, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 5', 133, null);
+values (135, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 5', 134, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (135, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 5', 133, null);
+values (136, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 5', 134, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (136, now(), now(), 'Bộ Kết Nối - Lớp 5', 132, null);
+values (137, now(), now(), 'Bộ Kết Nối - Lớp 5', 133, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (137, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 5', 136, null);
+values (138, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 5', 137, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (138, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 5', 136, null);
+values (139, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 5', 137, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (139, now(), now(), 'Bộ Cánh Diều - Lớp 5', 132, null);
+values (140, now(), now(), 'Bộ Cánh Diều - Lớp 5', 133, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (140, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 5', 139, null);
+values (141, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 5', 140, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (141, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 5', 139, null);
+values (142, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 5', 140, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (142, now(), now(), 'Sách Bài Tập Lớp 5', 132, null);
+values (143, now(), now(), 'Sách Bài Tập Lớp 5', 133, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (143, now(), now(), 'Sách Bài Học Lớp 5', 132, null);
+values (144, now(), now(), 'Sách Bài Học Lớp 5', 133, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (144, now(), now(), 'Giáo Khoa Lớp 6', 45, '<h2 data-start="0" data-end="43">
+values (145, now(), now(), 'Giáo Khoa Lớp 8', 46, '<h2 data-start="0" data-end="43">
+  <strong data-start="0" data-end="43">
+    Thông tin danh mục Sách Giáo Khoa Lớp 8
+  </strong>
+</h2>
+<p data-start="50" data-end="65">
+  <span style="font-size: 12px;">
+    Lớp 8 là một trong những năm học bản lề quan trọng bậc Trung học Cơ sở, khi học sinh bắt đầu được tiếp cận những kiến thức chuyên sâu hơn, mang tính phân hóa rõ nét ở nhiều môn học. Đây cũng là giai đoạn mà việc học không chỉ để vượt qua kỳ thi cuối kỳ, mà còn hướng đến sự chuẩn bị vững chắc cho kỳ thi tuyển sinh lớp 10 sau này. Do đó, việc lựa chọn đúng và đủ bộ 
+  </span>
+  Sách Giáo Khoa Lớp 8
+  <span style="font-size: 12px;">
+     theo chương trình chuẩn không chỉ là yêu cầu bắt buộc, mà còn là cách tốt nhất để học sinh học tập hiệu quả và phát triển năng lực toàn diện.
+  </span>
+</p>
+<p data-start="601" data-end="1156">
+  Trong bối cảnh chương trình Giáo dục phổ thông 2018 đang dần được triển khai toàn diện trên toàn quốc, các nhà trường đã áp dụng các bộ SGK mới như Cánh Diều, Kết Nối Tri Thức Với Cuộc Sống, và Chân Trời Sáng Tạo cho khối lớp 8. Việc chọn đúng bộ sách giáo khoa theo nhà trường sử dụng là vô cùng quan trọng, để tránh sai sót trong quá trình học. Và Fahasa.com hiện là một trong những nền tảng mua sắm trực tuyến đáng tin cậy nhất, nơi cung cấp đầy đủ các đầu SGK lớp 8 từ ba bộ sách chuẩn chương trình mới được Bộ Giáo dục &amp; Đào tạo phê duyệt.
+</p>
+<h2 data-start="1163" data-end="1218">
+  <strong data-start="1167" data-end="1218">
+    Vì sao nên mua Sách Giáo Khoa Lớp 8 tại Fahasa?
+  </strong>
+</h2>
+<h3 data-start="1220" data-end="1259">
+  <strong data-start="1225" data-end="1259">
+    1. Cam kết 100% sách có bản quyền
+  </strong>
+</h3>
+<p data-start="1261" data-end="1669">
+  Toàn bộ SGK lớp 8 được bán tại Fahasa đều có bản quyền chính thức, được cung cấp trực tiếp từ các nhà xuất bản uy tín. Việc đảm bảo sách bản quyền giúp phụ huynh và học sinh yên tâm về nội dung, tránh nhầm lẫn giữa các bản in lậu có sai sót. 
+</p>
+<h3 data-start="1671" data-end="1739">
+  <strong data-start="1676" data-end="1739">
+    2. Hàng ngàn đầu sách phong phú 
+  </strong>
+</h3>
+<p data-start="1741" data-end="2106">
+  Không chỉ có SGK cơ bản, danh mục lớp 8 tại Fahasa còn bao gồm: sách bài tập, sách nâng cao, sách tham khảo theo từng bộ sách, sách hướng dẫn học tập, sách luyện đề thi học kỳ… Điều này giúp học sinh có nhiều lựa chọn tài liệu phù hợp với năng lực và mục tiêu học tập riêng, đồng thời hỗ trợ phụ huynh trong việc đồng hành cùng con em trong suốt năm học.
+</p>
+<h3 data-start="2108" data-end="2140">
+  <strong data-start="2113" data-end="2140">
+    3. 05 tầng ưu đãi giảm giá
+  </strong>
+</h3>
+<p data-start="2142" data-end="2544">
+  Fahasa áp dụng đa dạng các hình thức khuyến mãi: từ giảm giá theo combo, mã giảm trực tiếp, ưu đãi mùa tựu trường đến chương trình tích lũy điểm thưởng và quà tặng đi kèm. Nhờ đó, mỗi lần mua sách không chỉ đơn thuần là giao dịch, mà còn là cơ hội tiết kiệm thông minh cho gia đình. Càng mua nhiều, ưu đãi càng lớn – cực kỳ phù hợp với những phụ huynh cần mua sách cho nhiều con em trong cùng gia đình.
+</p>
+<h3 data-start="2546" data-end="2608">
+  <strong data-start="2551" data-end="2608">
+    4. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
+  </strong>
+</h3>
+<p data-start="2610" data-end="2927">
+  Một trong những điểm cộng lớn của Fahasa chính là chất lượng đóng gói chuyên nghiệp. Sách được bao bọc cẩn thận, chống va đập, kháng ẩm, đảm bảo khi đến tay người nhận vẫn còn nguyên vẹn, sạch đẹp như mới in. Đây là yếu tố đặc biệt quan trọng với sách giáo khoa – loại sách sẽ đồng hành cùng học sinh suốt cả năm học.
+</p>
+<h3 data-start="2929" data-end="2962">
+  <strong data-start="2934" data-end="2962">
+    5. Đổi trả miễn phí 30 ngày
+  </strong>
+</h3>
+<p data-start="2964" data-end="3249">
+  Fahasa áp dụng chính sách đổi trả trong 30 ngày nếu có nhầm lẫn, thiếu sách, lỗi in ấn hoặc lý do chính đáng khác. Điều này mang lại sự an tâm tuyệt đối cho người mua hàng, đặc biệt trong trường hợp phụ huynh mua sách sớm từ đầu mùa hè và chỉ phát hiện sai sót khi năm học bắt đầu.
+</p>
+<h2 data-start="3256" data-end="3325">
+  <strong data-start="3260" data-end="3325">
+    Tổng quan danh mục Sách Giáo Khoa Lớp 8 tại Fahasa
+  </strong>
+</h2>
+<h3 data-start="3327" data-end="3578">
+  <strong data-start="3590" data-end="3617">
+    1. Bộ SGK Cánh Diều – Lớp 8
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Cánh Diều lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018 dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, sách gắn lý thuyết với thực tiễn, cập nhật thành tựu khoa học hiện đại, phát triển năng lực và phẩm chất học sinh như sáng tạo, tự học, trách nhiệm. Nội dung được thiết kế hình ảnh minh họa sinh động, tích hợp kiến thức liên môn, kỹ năng sống, phù hợp với học sinh trên cả nước.
+  </p>
+</div>
+<h3 data-start="4451" data-end="4504">
+  <strong data-start="4456" data-end="4504">
+    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 8
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Kết Nối Tri Thức Với Cuộc Sống lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng kết nối kiến thức học thuật với thực tiễn, sách tích hợp nội dung liên môn, giáo dục kỹ năng sống, giá trị đạo đức, ý thức công dân và bảo vệ môi trường. Nội dung bài học rõ ràng, từ cơ bản đến nâng cao, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tư duy sáng tạo, tự học và tham gia các hoạt động thực hành
+  </p>
+</div>
+<h3 data-start="5287" data-end="5328">
+  <strong data-start="5292" data-end="5328">
+    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 8
+  </strong>
+</h3>
+<div>
+  <p dir="auto">
+    SGK Chân Trời Sáng Tạo lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng phát triển năng lực và phẩm chất học sinh (tư duy, sáng tạo, trách nhiệm, nhân ái), sách sử dụng ngôn ngữ gần gũi, đặc biệt phù hợp với học sinh phía Nam, tích hợp nội dung liên môn, kỹ năng sống và giáo dục bảo vệ môi trường. Nội dung bài học linh hoạt, từ dễ đến khó, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tự học, tham gia hoạt động thực hành và sáng tạo. 
+  </p>
+</div>
+<section/>
+<section/>
+<p>
+  Việc chọn đúng bộ SGK chuẩn chương trình mới không chỉ giúp bám sát nội dung giảng dạy mà còn tạo nền tảng vững chắc cho kỳ thi chuyển cấp. Với hệ thống sách đầy đủ, chính hãng và dịch vụ mua sắm chuyên nghiệp, Fahasa chính là người bạn đồng hành đáng tin cậy của phụ huynh và học sinh trong mùa tựu trường. 
+</p>
+<p data-start="5330" data-end="5505">
+  <strong>
+    Truy cập web/app Fahasa.com để mua ngay trọn bộ SGK và sách bài tập Lớp 8 với giá tốt cùng nhiều ưu đãi hấp dẫn chuẩn bị thật tốt cho năm học mới!
+  </strong>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (146, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 8', 145, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (147, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 8', 146, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (148, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 8', 146, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (149, now(), now(), 'Bộ Kết Nối - Lớp 8', 145, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (150, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 8', 149, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (151, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 8', 149, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (152, now(), now(), 'Bộ Cánh Diều - Lớp 8', 145, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (153, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 8', 152, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (154, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 8', 152, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (155, now(), now(), 'Sách Bài Tập Lớp 8', 145, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (156, now(), now(), 'Sách Bài Học Lớp 8', 145, null);
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (157, now(), now(), 'Giáo Khoa Lớp 6', 46, '<h2 data-start="0" data-end="43">
   <strong data-start="0" data-end="43">
     Thông tin danh mục Sách Giáo Khoa Lớp 6
   </strong>
@@ -4598,186 +4816,43 @@ values (144, now(), now(), 'Giáo Khoa Lớp 6', 45, '<h2 data-start="0" data-en
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (145, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 144, null);
+values (158, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 157, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (146, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145, null);
+values (159, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 158, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (147, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 145, null);
+values (160, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 6', 158, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (148, now(), now(), 'Bộ Cánh Diều - Lớp 6', 144, null);
+values (161, now(), now(), 'Bộ Cánh Diều - Lớp 6', 157, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (149, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 6', 148, null);
+values (162, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 6', 161, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (150, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 6', 148, null);
+values (163, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 6', 161, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (151, now(), now(), 'Khác', 144, null);
+values (164, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 6', 157, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (152, now(), now(), 'Sách Bài Học - Lớp 6', 151, null);
+values (165, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 6', 164, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (153, now(), now(), 'Sách Bài Tập - Lớp 6', 151, null);
+values (166, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 6', 164, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (154, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 6', 144, null);
+values (167, now(), now(), 'Khác', 157, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (155, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 6', 154, null);
+values (168, now(), now(), 'Sách Bài Học - Lớp 6', 167, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (156, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 6', 154, null);
+values (169, now(), now(), 'Sách Bài Tập - Lớp 6', 167, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (157, now(), now(), 'Giáo Khoa Lớp 8', 45, '<h2 data-start="0" data-end="43">
-  <strong data-start="0" data-end="43">
-    Thông tin danh mục Sách Giáo Khoa Lớp 8
-  </strong>
-</h2>
-<p data-start="50" data-end="65">
-  <span style="font-size: 12px;">
-    Lớp 8 là một trong những năm học bản lề quan trọng bậc Trung học Cơ sở, khi học sinh bắt đầu được tiếp cận những kiến thức chuyên sâu hơn, mang tính phân hóa rõ nét ở nhiều môn học. Đây cũng là giai đoạn mà việc học không chỉ để vượt qua kỳ thi cuối kỳ, mà còn hướng đến sự chuẩn bị vững chắc cho kỳ thi tuyển sinh lớp 10 sau này. Do đó, việc lựa chọn đúng và đủ bộ 
-  </span>
-  Sách Giáo Khoa Lớp 8
-  <span style="font-size: 12px;">
-     theo chương trình chuẩn không chỉ là yêu cầu bắt buộc, mà còn là cách tốt nhất để học sinh học tập hiệu quả và phát triển năng lực toàn diện.
-  </span>
-</p>
-<p data-start="601" data-end="1156">
-  Trong bối cảnh chương trình Giáo dục phổ thông 2018 đang dần được triển khai toàn diện trên toàn quốc, các nhà trường đã áp dụng các bộ SGK mới như Cánh Diều, Kết Nối Tri Thức Với Cuộc Sống, và Chân Trời Sáng Tạo cho khối lớp 8. Việc chọn đúng bộ sách giáo khoa theo nhà trường sử dụng là vô cùng quan trọng, để tránh sai sót trong quá trình học. Và Fahasa.com hiện là một trong những nền tảng mua sắm trực tuyến đáng tin cậy nhất, nơi cung cấp đầy đủ các đầu SGK lớp 8 từ ba bộ sách chuẩn chương trình mới được Bộ Giáo dục &amp; Đào tạo phê duyệt.
-</p>
-<h2 data-start="1163" data-end="1218">
-  <strong data-start="1167" data-end="1218">
-    Vì sao nên mua Sách Giáo Khoa Lớp 8 tại Fahasa?
-  </strong>
-</h2>
-<h3 data-start="1220" data-end="1259">
-  <strong data-start="1225" data-end="1259">
-    1. Cam kết 100% sách có bản quyền
-  </strong>
-</h3>
-<p data-start="1261" data-end="1669">
-  Toàn bộ SGK lớp 8 được bán tại Fahasa đều có bản quyền chính thức, được cung cấp trực tiếp từ các nhà xuất bản uy tín. Việc đảm bảo sách bản quyền giúp phụ huynh và học sinh yên tâm về nội dung, tránh nhầm lẫn giữa các bản in lậu có sai sót. 
-</p>
-<h3 data-start="1671" data-end="1739">
-  <strong data-start="1676" data-end="1739">
-    2. Hàng ngàn đầu sách phong phú 
-  </strong>
-</h3>
-<p data-start="1741" data-end="2106">
-  Không chỉ có SGK cơ bản, danh mục lớp 8 tại Fahasa còn bao gồm: sách bài tập, sách nâng cao, sách tham khảo theo từng bộ sách, sách hướng dẫn học tập, sách luyện đề thi học kỳ… Điều này giúp học sinh có nhiều lựa chọn tài liệu phù hợp với năng lực và mục tiêu học tập riêng, đồng thời hỗ trợ phụ huynh trong việc đồng hành cùng con em trong suốt năm học.
-</p>
-<h3 data-start="2108" data-end="2140">
-  <strong data-start="2113" data-end="2140">
-    3. 05 tầng ưu đãi giảm giá
-  </strong>
-</h3>
-<p data-start="2142" data-end="2544">
-  Fahasa áp dụng đa dạng các hình thức khuyến mãi: từ giảm giá theo combo, mã giảm trực tiếp, ưu đãi mùa tựu trường đến chương trình tích lũy điểm thưởng và quà tặng đi kèm. Nhờ đó, mỗi lần mua sách không chỉ đơn thuần là giao dịch, mà còn là cơ hội tiết kiệm thông minh cho gia đình. Càng mua nhiều, ưu đãi càng lớn – cực kỳ phù hợp với những phụ huynh cần mua sách cho nhiều con em trong cùng gia đình.
-</p>
-<h3 data-start="2546" data-end="2608">
-  <strong data-start="2551" data-end="2608">
-    4. Chất lượng đóng gói siêu chỉn chu, vận chuyển an toàn
-  </strong>
-</h3>
-<p data-start="2610" data-end="2927">
-  Một trong những điểm cộng lớn của Fahasa chính là chất lượng đóng gói chuyên nghiệp. Sách được bao bọc cẩn thận, chống va đập, kháng ẩm, đảm bảo khi đến tay người nhận vẫn còn nguyên vẹn, sạch đẹp như mới in. Đây là yếu tố đặc biệt quan trọng với sách giáo khoa – loại sách sẽ đồng hành cùng học sinh suốt cả năm học.
-</p>
-<h3 data-start="2929" data-end="2962">
-  <strong data-start="2934" data-end="2962">
-    5. Đổi trả miễn phí 30 ngày
-  </strong>
-</h3>
-<p data-start="2964" data-end="3249">
-  Fahasa áp dụng chính sách đổi trả trong 30 ngày nếu có nhầm lẫn, thiếu sách, lỗi in ấn hoặc lý do chính đáng khác. Điều này mang lại sự an tâm tuyệt đối cho người mua hàng, đặc biệt trong trường hợp phụ huynh mua sách sớm từ đầu mùa hè và chỉ phát hiện sai sót khi năm học bắt đầu.
-</p>
-<h2 data-start="3256" data-end="3325">
-  <strong data-start="3260" data-end="3325">
-    Tổng quan danh mục Sách Giáo Khoa Lớp 8 tại Fahasa
-  </strong>
-</h2>
-<h3 data-start="3327" data-end="3578">
-  <strong data-start="3590" data-end="3617">
-    1. Bộ SGK Cánh Diều – Lớp 8
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Cánh Diều lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018 dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với triết lý “Mang cuộc sống vào bài học – Đưa bài học vào cuộc sống”, sách gắn lý thuyết với thực tiễn, cập nhật thành tựu khoa học hiện đại, phát triển năng lực và phẩm chất học sinh như sáng tạo, tự học, trách nhiệm. Nội dung được thiết kế hình ảnh minh họa sinh động, tích hợp kiến thức liên môn, kỹ năng sống, phù hợp với học sinh trên cả nước.
-  </p>
-</div>
-<h3 data-start="4451" data-end="4504">
-  <strong data-start="4456" data-end="4504">
-    2. Bộ SGK Kết Nối Tri Thức Với Cuộc Sống – Lớp 8
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Kết Nối Tri Thức Với Cuộc Sống lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng kết nối kiến thức học thuật với thực tiễn, sách tích hợp nội dung liên môn, giáo dục kỹ năng sống, giá trị đạo đức, ý thức công dân và bảo vệ môi trường. Nội dung bài học rõ ràng, từ cơ bản đến nâng cao, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tư duy sáng tạo, tự học và tham gia các hoạt động thực hành
-  </p>
-</div>
-<h3 data-start="5287" data-end="5328">
-  <strong data-start="5292" data-end="5328">
-    3. Bộ SGK Chân Trời Sáng Tạo – Lớp 8
-  </strong>
-</h3>
-<div>
-  <p dir="auto">
-    SGK Chân Trời Sáng Tạo lớp 8 là bộ sách giáo khoa được biên soạn theo Chương trình Giáo dục Phổ thông 2018, do Nhà xuất bản Giáo dục Việt Nam phát hành, dành cho học sinh lớp 8, sử dụng từ năm học 2024-2025. Bộ sách gồm 12 môn học: Ngữ văn, Toán, Khoa học tự nhiên, Lịch sử và Địa lý, Giáo dục công dân, Công nghệ, Tin học, Giáo dục thể chất, Âm nhạc, Mỹ thuật, Hoạt động trải nghiệm hướng nghiệp, và Tiếng Anh. Với định hướng phát triển năng lực và phẩm chất học sinh (tư duy, sáng tạo, trách nhiệm, nhân ái), sách sử dụng ngôn ngữ gần gũi, đặc biệt phù hợp với học sinh phía Nam, tích hợp nội dung liên môn, kỹ năng sống và giáo dục bảo vệ môi trường. Nội dung bài học linh hoạt, từ dễ đến khó, kết hợp hình ảnh minh họa sinh động, khuyến khích học sinh tự học, tham gia hoạt động thực hành và sáng tạo. 
-  </p>
-</div>
-<section/>
-<section/>
-<p>
-  Việc chọn đúng bộ SGK chuẩn chương trình mới không chỉ giúp bám sát nội dung giảng dạy mà còn tạo nền tảng vững chắc cho kỳ thi chuyển cấp. Với hệ thống sách đầy đủ, chính hãng và dịch vụ mua sắm chuyên nghiệp, Fahasa chính là người bạn đồng hành đáng tin cậy của phụ huynh và học sinh trong mùa tựu trường. 
-</p>
-<p data-start="5330" data-end="5505">
-  <strong>
-    Truy cập web/app Fahasa.com để mua ngay trọn bộ SGK và sách bài tập Lớp 8 với giá tốt cùng nhiều ưu đãi hấp dẫn chuẩn bị thật tốt cho năm học mới!
-  </strong>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (158, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 8', 157, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (159, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 8', 158, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (160, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 8', 158, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (161, now(), now(), 'Bộ Kết Nối - Lớp 8', 157, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (162, now(), now(), 'Sách Bài Tập - Bộ Kết Nối - Lớp 8', 161, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (163, now(), now(), 'Sách Bài Học - Bộ Kết Nối - Lớp 8', 161, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (164, now(), now(), 'Bộ Cánh Diều - Lớp 8', 157, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (165, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 8', 164, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (166, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 8', 164, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (167, now(), now(), 'Sách Bài Học Lớp 8', 157, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (168, now(), now(), 'Sách Bài Tập Lớp 8', 157, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (169, now(), now(), 'Giáo Khoa Lớp 1', 45, '<h2 data-start="0" data-end="74">
+values (170, now(), now(), 'Giáo Khoa Lớp 1', 46, '<h2 data-start="0" data-end="74">
   <span class="relative -mx-px my-[-0.2rem] rounded px-px py-[0.2rem] transition-colors duration-100 ease-in-out">
     <strong data-start="0" data-end="43" data-is-last-node="" data-is-only-node="">
       Thông tin danh mục Sách Giáo Khoa Lớp 1
@@ -4921,43 +4996,43 @@ values (169, now(), now(), 'Giáo Khoa Lớp 1', 45, '<h2 data-start="0" data-en
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (170, now(), now(), 'Khác', 169, null);
+values (171, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 1', 170, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (171, now(), now(), 'Sách Bài Học - Lớp 1', 170, null);
+values (172, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 1', 171, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (172, now(), now(), 'Sách Bài Tập - Lớp 1', 170, null);
+values (173, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 1', 171, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (173, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 1', 169, null);
+values (174, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 170, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (174, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 1', 173, null);
+values (175, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 174, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (175, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 1', 173, null);
+values (176, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống', 174, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (176, now(), now(), 'Bộ Cánh Diều - Lớp 1', 169, null);
+values (177, now(), now(), 'Khác', 170, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (177, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 1', 176, null);
+values (178, now(), now(), 'Sách Bài Học - Lớp 1', 177, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (178, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 1', 176, null);
+values (179, now(), now(), 'Sách Bài Tập - Lớp 1', 177, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (179, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 169, null);
+values (180, now(), now(), 'Bộ Cánh Diều - Lớp 1', 170, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (180, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 1', 179, null);
+values (181, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 1', 180, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (181, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống', 179, null);
+values (182, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 1', 180, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (182, now(), now(), 'Giáo Khoa Lớp 10', 45, '<h2 data-start="0" data-end="44">
+values (183, now(), now(), 'Giáo Khoa Lớp 10', 46, '<h2 data-start="0" data-end="44">
   <strong data-start="0" data-end="44">
     Thông tin danh mục Sách Giáo Khoa Lớp 10
   </strong>
@@ -5068,34 +5143,31 @@ values (182, now(), now(), 'Giáo Khoa Lớp 10', 45, '<h2 data-start="0" data-e
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (183, now(), now(), 'Bộ Cánh Diều - Lớp 10', 182, null);
+values (184, now(), now(), 'Khác', 183, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (184, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 10', 183, null);
+values (185, now(), now(), 'Sách Bài Học - Lớp 10', 184, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (185, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 10', 183, null);
+values (186, now(), now(), 'Sách Bài Tập - Lớp 10', 184, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (186, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 182, null);
+values (187, now(), now(), 'Bộ Cánh Diều - Lớp 10', 183, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (187, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186, null);
+values (188, now(), now(), 'Sách Bài Học - Bộ Cánh Diều - Lớp 10', 187, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (188, now(), now(), 'Sách Bài Tập - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 186, null);
+values (189, now(), now(), 'Sách Bài Tập - Bộ Cánh Diều - Lớp 10', 187, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (189, now(), now(), 'Khác', 182, null);
+values (190, now(), now(), 'Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 183, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (190, now(), now(), 'Sách Bài Học - Lớp 10', 189, null);
+values (191, now(), now(), 'Sách Bài Học - Bộ Kết Nối Tri Thức Với Cuộc Sống - Lớp 10', 190, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (191, now(), now(), 'Sách Bài Tập - Lớp 10', 189, null);
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (192, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 10', 182, null);
+values (192, now(), now(), 'Bộ Chân Trời Sáng Tạo - Lớp 10', 183, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
 values (193, now(), now(), 'Sách Bài Tập - Bộ Chân Trời Sáng Tạo - Lớp 10', 192, null);
@@ -5104,7 +5176,7 @@ insert into categories (id, created_at, updated_at, name, parent_id, description
 values (194, now(), now(), 'Sách Bài Học - Bộ Chân Trời Sáng Tạo - Lớp 10', 192, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (195, now(), now(), 'Mẫu Giáo', 20, '<h2 dir="ltr">
+values (195, now(), now(), 'Mẫu Giáo', 21, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Mẫu Giáo
   </span>
@@ -5502,7 +5574,7 @@ values (195, now(), now(), 'Mẫu Giáo', 20, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (196, now(), now(), 'Sách giáo viên', 20, '<h2 dir="ltr">
+values (196, now(), now(), 'Sách giáo viên', 21, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Giáo Viên
   </span>
@@ -5902,7 +5974,7 @@ values (196, now(), now(), 'Sách giáo viên', 20, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (197, now(), now(), 'Đại học', 20, '<h2 dir="ltr">
+values (197, now(), now(), 'Đại học', 21, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Đại Học
   </span>
@@ -6131,7 +6203,7 @@ values (197, now(), now(), 'Đại học', 20, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (198, now(), now(), 'Văn học', null, '<h1>
+values (198, now(), now(), 'Văn học', 1, '<h1>
   <span>
     <span>
       Thông tin danh mục Sách Văn Học
@@ -8847,7 +8919,264 @@ values (205, now(), now(), 'Thơ ca, tục ngữ, ca dao, thành ngữ', 198, '<
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (206, now(), now(), 'Phóng Sự - Ký Sự - Phê Bình Văn Học', 198, '<h2 dir="ltr">
+values (206, now(), now(), 'Ngôn Tình', 198, '<h1 dir="ltr">
+  <span>
+    Truyện Ngôn Tình – Thế giới của những câu chuyện tình yêu ngọt ngào
+  </span>
+</h1>
+<p dir="ltr">
+  <span>
+    Truyện ngôn tình là một trong những thể loại văn học được đông đảo bạn đọc yêu thích, đặc biệt là giới trẻ. Những câu chuyện tình yêu lãng mạn, những cung bậc cảm xúc từ ngọt ngào đến đau thương luôn có một sức hút đặc biệt, khiến người đọc không thể rời mắt. Hiện nay, Fahasa là một trong những địa chỉ uy tín cung cấp đa dạng các đầu sách truyện ngôn tình, đáp ứng nhu cầu của nhiều đối tượng độc giả.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Kho tàng truyện ngôn tình phong phú tại Fahasa
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Fahasa mang đến một kho tàng truyện ngôn tình phong phú, từ những tác phẩm kinh điển cho đến các truyện hot mới ra mắt. Độc giả có thể dễ dàng tìm thấy những câu chuyện tình yêu phù hợp với sở thích của mình. Một số thể loại phổ biến bao gồm:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện ngôn tình hiện đại
+      </span>
+      <span>
+        : Những câu chuyện tình yêu diễn ra trong bối cảnh hiện đại, phản ánh cuộc sống thực tế với các mối quan hệ đa dạng, từ tình yêu công sở, tổng tài bá đạo đến thanh xuân vườn trường.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện ngôn tình cổ đại
+      </span>
+      <span>
+        : Những câu chuyện lấy bối cảnh thời phong kiến, kết hợp giữa tình yêu, quyền lực và âm mưu cung đấu đầy kịch tính.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện ngôn tình huyền huyễn
+      </span>
+      <span>
+        : Các tác phẩm kết hợp yếu tố kỳ ảo, thần thoại, tạo nên một thế giới hấp dẫn với những nhân vật có sức mạnh siêu nhiên.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện ngôn tình xuyên không
+      </span>
+      <span>
+        : Những câu chuyện mà nhân vật chính bất ngờ bị đưa đến một thời đại hoặc thế giới khác, từ đó mở ra những mối tình thú vị và đầy bất ngờ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện ngôn tình ngược tâm
+      </span>
+      <span>
+        : Những câu chuyện khiến người đọc thổn thức với tình tiết đau lòng, nhiều hiểu lầm và bi kịch, nhưng cũng đọng lại những giá trị sâu sắc về tình yêu.
+      </span>
+    </p>
+  </li>
+</ul>
+<h2 dir="ltr">
+  <span>
+    Những tác phẩm ngôn tình nổi bật tại Fahasa
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Dưới đây là một số tác phẩm ngôn tình được nhiều độc giả yêu thích và có sẵn tại Fahasa:
+  </span>
+</p>
+<ol>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Yêu Em Từ Cái Nhìn Đầu Tiên
+      </span>
+      <span>
+         (Cố Mạn): Một câu chuyện tình yêu nhẹ nhàng, ngọt ngào giữa cô gái chuyên ngành IT và chàng game thủ tài giỏi. Tác phẩm này đã được chuyển thể thành phim và rất được khán giả yêu thích.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Bên Nhau Trọn Đời
+      </span>
+      <span>
+         (Cố Mạn): Một trong những tác phẩm kinh điển của dòng truyện ngôn tình hiện đại, kể về mối tình khắc cốt ghi tâm giữa luật sư Hà Dĩ Thâm và cô nàng Triệu Mặc Sênh.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hương Mật Tựa Khói Sương
+      </span>
+      <span>
+         (Điện Tuyến): Một câu chuyện tình yêu huyền huyễn giữa thần tiên với nhiều tình tiết cảm động, được chuyển thể thành phim truyền hình nổi tiếng.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tam Sinh Tam Thế: Thập Lý Đào Hoa
+      </span>
+      <span>
+         (Đường Thất Công Tử): Một tác phẩm nổi tiếng về tình yêu vượt thời gian giữa Bạch Thiển và Dạ Hoa, thu hút hàng triệu độc giả.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Gió Mang Ký Ức Thổi Thành Những Cánh Hoa
+      </span>
+      <span>
+         (Diệp Lạc Vô Tâm): Một câu chuyện cảm động về tình yêu đầu đời và những mất mát, trưởng thành trong cuộc sống.
+      </span>
+    </p>
+  </li>
+</ol>
+<h2 dir="ltr">
+  <span>
+    Vì sao nên mua truyện ngôn tình tại Fahasa?
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Fahasa không chỉ cung cấp số lượng lớn đầu sách ngôn tình mà còn có nhiều ưu điểm nổi bật khiến độc giả yêu thích:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách chính hãng, chất lượng cao
+      </span>
+      <span>
+        : Fahasa cam kết cung cấp sách từ các nhà xuất bản uy tín, đảm bảo chất lượng giấy tốt, bìa đẹp, không lo hàng giả.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giá cả hợp lý, nhiều ưu đãi
+      </span>
+      <span>
+        : Fahasa thường xuyên có các chương trình khuyến mãi, giảm giá hấp dẫn giúp người đọc tiết kiệm chi phí.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hệ thống nhà sách rộng khắp
+      </span>
+      <span>
+        : Với hàng chục chi nhánh trên toàn quốc, Fahasa giúp độc giả dễ dàng mua sách trực tiếp tại cửa hàng.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Mua hàng trực tuyến tiện lợi
+      </span>
+      <span>
+        : Nếu không thể đến nhà sách, bạn có thể đặt hàng trên website Fahasa.com, với dịch vụ giao hàng nhanh chóng và tiện lợi.
+      </span>
+    </p>
+  </li>
+</ul>
+<h2 dir="ltr">
+  <span>
+    Gợi ý thêm một số thể loại sách hấp dẫn khác tại Fahasa
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Ngoài truyện ngôn tình, Fahasa còn cung cấp nhiều thể loại sách khác phù hợp với mọi lứa tuổi và sở thích:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Truyện tranh - Manga
+      </span>
+      <span>
+        : Dành cho những ai yêu thích các bộ truyện tranh nổi tiếng như Conan, Naruto, One Piece...
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tiểu thuyết văn học kinh điển
+      </span>
+      <span>
+        : Bao gồm các tác phẩm văn học nổi tiếng của thế giới và Việt Nam.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách kỹ năng sống, phát triển bản thân
+      </span>
+      <span>
+        : Giúp bạn hoàn thiện bản thân, nâng cao kiến thức và kỹ năng sống.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách thiếu nhi, giáo dục
+      </span>
+      <span>
+        : Dành cho các bé với nhiều nội dung bổ ích và hấp dẫn.
+      </span>
+    </p>
+  </li>
+</ul>
+<h2 dir="ltr">
+  <span>
+    Kết luận
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Truyện ngôn tình tại Fahasa mang đến cho độc giả một thế giới tình yêu đầy màu sắc, từ nhẹ nhàng, sâu lắng đến gay cấn, kịch tính. Với sự đa dạng về thể loại, chất lượng sách đảm bảo và nhiều chương trình ưu đãi hấp dẫn, Fahasa là địa chỉ lý tưởng để bạn tìm kiếm những câu chuyện tình yêu mà mình yêu thích. Nếu bạn là một người yêu thích truyện ngôn tình, đừng quên ghé Fahasa để khám phá kho tàng sách phong phú nhé!
+  </span>
+</p>
+<p>
+  <span id="docs-internal-guid-30f1b416-7fff-f0b1-c91e-e10e5e784a27">
+    <br/>
+    <br/>
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (207, now(), now(), 'Phóng Sự - Ký Sự - Phê Bình Văn Học', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Phóng sự - Ký sự - Phê bình văn học 
   </span>
@@ -9319,263 +9648,6 @@ values (206, now(), now(), 'Phóng Sự - Ký Sự - Phê Bình Văn Học', 198
   </span>
   <span>
     , làm giàu thêm vốn sống và nâng cao khả năng cảm thụ văn chương của mỗi người đọc.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (207, now(), now(), 'Ngôn Tình', 198, '<h1 dir="ltr">
-  <span>
-    Truyện Ngôn Tình – Thế giới của những câu chuyện tình yêu ngọt ngào
-  </span>
-</h1>
-<p dir="ltr">
-  <span>
-    Truyện ngôn tình là một trong những thể loại văn học được đông đảo bạn đọc yêu thích, đặc biệt là giới trẻ. Những câu chuyện tình yêu lãng mạn, những cung bậc cảm xúc từ ngọt ngào đến đau thương luôn có một sức hút đặc biệt, khiến người đọc không thể rời mắt. Hiện nay, Fahasa là một trong những địa chỉ uy tín cung cấp đa dạng các đầu sách truyện ngôn tình, đáp ứng nhu cầu của nhiều đối tượng độc giả.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Kho tàng truyện ngôn tình phong phú tại Fahasa
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Fahasa mang đến một kho tàng truyện ngôn tình phong phú, từ những tác phẩm kinh điển cho đến các truyện hot mới ra mắt. Độc giả có thể dễ dàng tìm thấy những câu chuyện tình yêu phù hợp với sở thích của mình. Một số thể loại phổ biến bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện ngôn tình hiện đại
-      </span>
-      <span>
-        : Những câu chuyện tình yêu diễn ra trong bối cảnh hiện đại, phản ánh cuộc sống thực tế với các mối quan hệ đa dạng, từ tình yêu công sở, tổng tài bá đạo đến thanh xuân vườn trường.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện ngôn tình cổ đại
-      </span>
-      <span>
-        : Những câu chuyện lấy bối cảnh thời phong kiến, kết hợp giữa tình yêu, quyền lực và âm mưu cung đấu đầy kịch tính.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện ngôn tình huyền huyễn
-      </span>
-      <span>
-        : Các tác phẩm kết hợp yếu tố kỳ ảo, thần thoại, tạo nên một thế giới hấp dẫn với những nhân vật có sức mạnh siêu nhiên.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện ngôn tình xuyên không
-      </span>
-      <span>
-        : Những câu chuyện mà nhân vật chính bất ngờ bị đưa đến một thời đại hoặc thế giới khác, từ đó mở ra những mối tình thú vị và đầy bất ngờ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện ngôn tình ngược tâm
-      </span>
-      <span>
-        : Những câu chuyện khiến người đọc thổn thức với tình tiết đau lòng, nhiều hiểu lầm và bi kịch, nhưng cũng đọng lại những giá trị sâu sắc về tình yêu.
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Những tác phẩm ngôn tình nổi bật tại Fahasa
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Dưới đây là một số tác phẩm ngôn tình được nhiều độc giả yêu thích và có sẵn tại Fahasa:
-  </span>
-</p>
-<ol>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Yêu Em Từ Cái Nhìn Đầu Tiên
-      </span>
-      <span>
-         (Cố Mạn): Một câu chuyện tình yêu nhẹ nhàng, ngọt ngào giữa cô gái chuyên ngành IT và chàng game thủ tài giỏi. Tác phẩm này đã được chuyển thể thành phim và rất được khán giả yêu thích.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Bên Nhau Trọn Đời
-      </span>
-      <span>
-         (Cố Mạn): Một trong những tác phẩm kinh điển của dòng truyện ngôn tình hiện đại, kể về mối tình khắc cốt ghi tâm giữa luật sư Hà Dĩ Thâm và cô nàng Triệu Mặc Sênh.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hương Mật Tựa Khói Sương
-      </span>
-      <span>
-         (Điện Tuyến): Một câu chuyện tình yêu huyền huyễn giữa thần tiên với nhiều tình tiết cảm động, được chuyển thể thành phim truyền hình nổi tiếng.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tam Sinh Tam Thế: Thập Lý Đào Hoa
-      </span>
-      <span>
-         (Đường Thất Công Tử): Một tác phẩm nổi tiếng về tình yêu vượt thời gian giữa Bạch Thiển và Dạ Hoa, thu hút hàng triệu độc giả.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Gió Mang Ký Ức Thổi Thành Những Cánh Hoa
-      </span>
-      <span>
-         (Diệp Lạc Vô Tâm): Một câu chuyện cảm động về tình yêu đầu đời và những mất mát, trưởng thành trong cuộc sống.
-      </span>
-    </p>
-  </li>
-</ol>
-<h2 dir="ltr">
-  <span>
-    Vì sao nên mua truyện ngôn tình tại Fahasa?
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Fahasa không chỉ cung cấp số lượng lớn đầu sách ngôn tình mà còn có nhiều ưu điểm nổi bật khiến độc giả yêu thích:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách chính hãng, chất lượng cao
-      </span>
-      <span>
-        : Fahasa cam kết cung cấp sách từ các nhà xuất bản uy tín, đảm bảo chất lượng giấy tốt, bìa đẹp, không lo hàng giả.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giá cả hợp lý, nhiều ưu đãi
-      </span>
-      <span>
-        : Fahasa thường xuyên có các chương trình khuyến mãi, giảm giá hấp dẫn giúp người đọc tiết kiệm chi phí.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hệ thống nhà sách rộng khắp
-      </span>
-      <span>
-        : Với hàng chục chi nhánh trên toàn quốc, Fahasa giúp độc giả dễ dàng mua sách trực tiếp tại cửa hàng.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Mua hàng trực tuyến tiện lợi
-      </span>
-      <span>
-        : Nếu không thể đến nhà sách, bạn có thể đặt hàng trên website Fahasa.com, với dịch vụ giao hàng nhanh chóng và tiện lợi.
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Gợi ý thêm một số thể loại sách hấp dẫn khác tại Fahasa
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Ngoài truyện ngôn tình, Fahasa còn cung cấp nhiều thể loại sách khác phù hợp với mọi lứa tuổi và sở thích:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Truyện tranh - Manga
-      </span>
-      <span>
-        : Dành cho những ai yêu thích các bộ truyện tranh nổi tiếng như Conan, Naruto, One Piece...
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tiểu thuyết văn học kinh điển
-      </span>
-      <span>
-        : Bao gồm các tác phẩm văn học nổi tiếng của thế giới và Việt Nam.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách kỹ năng sống, phát triển bản thân
-      </span>
-      <span>
-        : Giúp bạn hoàn thiện bản thân, nâng cao kiến thức và kỹ năng sống.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách thiếu nhi, giáo dục
-      </span>
-      <span>
-        : Dành cho các bé với nhiều nội dung bổ ích và hấp dẫn.
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Kết luận
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Truyện ngôn tình tại Fahasa mang đến cho độc giả một thế giới tình yêu đầy màu sắc, từ nhẹ nhàng, sâu lắng đến gay cấn, kịch tính. Với sự đa dạng về thể loại, chất lượng sách đảm bảo và nhiều chương trình ưu đãi hấp dẫn, Fahasa là địa chỉ lý tưởng để bạn tìm kiếm những câu chuyện tình yêu mà mình yêu thích. Nếu bạn là một người yêu thích truyện ngôn tình, đừng quên ghé Fahasa để khám phá kho tàng sách phong phú nhé!
-  </span>
-</p>
-<p>
-  <span id="docs-internal-guid-30f1b416-7fff-f0b1-c91e-e10e5e784a27">
-    <br/>
-    <br/>
   </span>
 </p>
 ');
@@ -10916,460 +10988,7 @@ values (210, now(), now(), 'Tác giả - Tác Phẩm', 198, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (211, now(), now(), 'Hài Hước - Truyện Cười', 198, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục Truyện Hài Hước - Truyện Cười
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Trong thế giới sách phong phú và đa dạng tại Fahasa, 
-  </span>
-  <span>
-    danh mục Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-     luôn là một điểm sáng đặc biệt, mang đến những phút giây thư giãn, tiếng cười sảng khoái và những câu chuyện vui nhộn, giàu tính giải trí. Giữa nhịp sống hiện đại đầy áp lực, nhu cầu tìm kiếm những cuốn sách vừa nhẹ nhàng, vừa giúp giải tỏa căng thẳng càng trở nên cần thiết. Chính vì vậy, Fahasa đã xây dựng và không ngừng mở rộng danh mục 
-  </span>
-  <span>
-    Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-    , quy tụ những tác phẩm đặc sắc từ trong nước đến quốc tế, đáp ứng nhu cầu giải trí lành mạnh và nuôi dưỡng tinh thần lạc quan cho mọi lứa tuổi.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Tổng quan về danh mục Truyện Hài Hước - Truyện Cười tại Fahasa
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục 
-  </span>
-  <span>
-    Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-     của Fahasa không chỉ đơn thuần là nơi tập hợp các cuốn sách hài hước, mà còn là 
-  </span>
-  <span>
-    thế giới đa màu sắc
-  </span>
-  <span>
-     của sự sáng tạo, nơi mỗi trang sách đều chứa đựng những 
-  </span>
-  <span>
-    tình huống dí dỏm, những nhân vật độc đáo và những mảng miếng hài hước đa dạng
-  </span>
-  <span>
-    .
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Kho tàng này không giới hạn trong phạm vi truyện cười dân gian truyền thống, mà còn mở rộng ra các thể loại 
-  </span>
-  <span>
-    truyện tranh hài, tiểu thuyết hài hước hiện đại, truyện cười tản mạn, hài hước châm biếm xã hội
-  </span>
-  <span>
-     và cả những 
-  </span>
-  <span>
-    tác phẩm trào phúng sâu sắc
-  </span>
-  <span>
-    . Sự đa dạng này giúp danh mục 
-  </span>
-  <span>
-    phù hợp với mọi độ tuổi
-  </span>
-  <span>
-    , từ thiếu nhi, thanh thiếu niên đến người trưởng thành.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Phân loại nội dung phong phú của danh mục Truyện Hài Hước - Truyện Cười tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Truyện cười dân gian - Di sản văn hóa hài hước Việt Nam
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Một phần không thể thiếu trong danh mục này chính là các 
-  </span>
-  <span>
-    tuyển tập truyện cười dân gian Việt Nam
-  </span>
-  <span>
-    , nơi lưu giữ những câu chuyện ngắn gọn nhưng thâm thúy, phản ánh 
-  </span>
-  <span>
-    trí tuệ dân gian
-  </span>
-  <span>
-    , cách ứng xử thông minh của người xưa. Những nhân vật như 
-  </span>
-  <span>
-    Trạng Quỳnh, Ba Giai - Tú Xuất
-  </span>
-  <span>
-     hay các mẩu chuyện tiếu lâm của các vùng miền đều có mặt tại Fahasa, mang đến cho độc giả những trận cười sảng khoái nhưng vẫn lắng đọng tầng ý nghĩa sâu sắc.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Truyện hài hước hiện đại - Góc nhìn mới về cuộc sống
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh truyện dân gian, Fahasa cũng cập nhật rất nhiều 
-  </span>
-  <span>
-    tác phẩm hài hước hiện đại
-  </span>
-  <span>
-    , đặc biệt là từ những cây bút trẻ với phong cách viết mới mẻ, trẻ trung. Những câu chuyện hài hước về cuộc sống văn phòng, 
-  </span>
-  <span>
-    chuyện tình yêu dở khóc dở cười
-  </span>
-  <span>
-    , 
-  </span>
-  <span>
-    những tình huống oái oăm trong đời sống hàng ngày
-  </span>
-  <span>
-     đều được khai thác một cách sinh động, gần gũi.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Những tác phẩm tiêu biểu trong dòng này có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sát thủ Online
-      </span>
-      <span>
-         – Tập hợp những mẩu chuyện hài hước xoay quanh thế giới ảo.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chuyện nhỏ Sài Gòn
-      </span>
-      <span>
-         – Những câu chuyện đời thường nhưng không kém phần hài hước qua góc nhìn của các tác giả trẻ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Mình sinh ra đâu phải để buồn
-      </span>
-      <span>
-         – Kết hợp giữa hài hước và những bài học nhẹ nhàng về cuộc sống.
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    3. Truyện tranh hài hước - Nguồn giải trí bất tận cho mọi lứa tuổi
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục 
-  </span>
-  <span>
-    truyện tranh hài hước
-  </span>
-  <span>
-     tại Fahasa cũng rất phong phú, với nhiều đầu sách nổi bật như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhóc Maruko
-      </span>
-      <span>
-         – Những mẩu chuyện đời thường của cô bé Maruko và gia đình.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thám tử lừng danh Conan phiên bản hài hước
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Đảo Hải Tặc (One Piece)
-      </span>
-      <span>
-         – Không chỉ phiêu lưu kịch tính, series này còn nổi bật với rất nhiều phân cảnh hài hước khó quên.
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    4. Tuyển tập truyện cười tổng hợp
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Fahasa cũng không thiếu những cuốn 
-  </span>
-  <span>
-    tuyển tập truyện cười tổng hợp
-  </span>
-  <span>
-     – nơi sưu tầm những câu chuyện vui, những mẩu chuyện ngắn gọn nhưng gây cười cực mạnh. Đây là lựa chọn hoàn hảo cho những ai thích 
-  </span>
-  <span>
-    mỗi ngày đọc một chút
-  </span>
-  <span>
-    , vừa thư giãn vừa giải tỏa stress sau những giờ làm việc căng thẳng.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Ưu điểm nổi bật khi chọn mua Truyện Hài Hước - Truyện Cười tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Kho tàng phong phú từ cổ điển đến hiện đại
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Fahasa sở hữu 
-  </span>
-  <span>
-    kho sách đa dạng
-  </span>
-  <span>
-    , từ 
-  </span>
-  <span>
-    truyện dân gian Việt Nam
-  </span>
-  <span>
-     đến các 
-  </span>
-  <span>
-    tuyển tập truyện hài hiện đại
-  </span>
-  <span>
-    , từ 
-  </span>
-  <span>
-    truyện tranh vui nhộn
-  </span>
-  <span>
-     đến 
-  </span>
-  <span>
-    các tác phẩm văn học trào phúng sắc bén
-  </span>
-  <span>
-    , mang lại sự lựa chọn phù hợp cho mọi gu đọc.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Cập nhật liên tục những tác phẩm mới
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không chỉ dừng lại ở những đầu sách quen thuộc, Fahasa liên tục cập nhật các 
-  </span>
-  <span>
-    tựa sách hài hước mới nhất
-  </span>
-  <span>
-     từ các nhà xuất bản uy tín trong nước và quốc tế, giúp độc giả dễ dàng tiếp cận những 
-  </span>
-  <span>
-    xu hướng hài hước mới
-  </span>
-  <span>
-    , phản ánh 
-  </span>
-  <span>
-    góc nhìn hài hước của thời đại
-  </span>
-  <span>
-    .
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Chương trình ưu đãi hấp dẫn
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục 
-  </span>
-  <span>
-    Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-     thường xuyên có các chương trình khuyến mãi, 
-  </span>
-  <span>
-    combo sách giảm giá
-  </span>
-  <span>
-     hay 
-  </span>
-  <span>
-    ưu đãi theo chủ đề
-  </span>
-  <span>
-    , giúp người đọc vừa tiết kiệm chi phí vừa sở hữu được những đầu sách yêu thích.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Truyện hài hước – Liều thuốc tinh thần không thể thiếu
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Trong cuộc sống hiện đại đầy áp lực, những trang sách hài hước trở thành 
-  </span>
-  <span>
-    liều thuốc tinh thần vô giá
-  </span>
-  <span>
-    , giúp độc giả:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giải tỏa căng thẳng sau giờ làm việc, học tập.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nuôi dưỡng tinh thần lạc quan, yêu đời.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giúp gắn kết gia đình, bạn bè thông qua những tràng cười sảng khoái.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Chính vì vậy, danh mục 
-  </span>
-  <span>
-    Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-     của Fahasa không chỉ đơn thuần là một kệ sách, mà còn là 
-  </span>
-  <span>
-    góc thư giãn tinh thần
-  </span>
-  <span>
-    , nơi nuôi dưỡng nụ cười và sự tích cực cho mọi nhà.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Gợi ý một số combo nổi bật trong danh mục Truyện Hài Hước - Truyện Cười
-  </span>
-</h2>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Combo Truyện Cười Dân Gian Việt Nam – Những mẩu chuyện xưa chưa bao giờ cũ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Combo Truyện Hài Văn Phòng – Góc khuất cười ra nước mắt chốn công sở.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Combo Truyện Tranh Hài Nhật Bản – Cười thả ga cùng Doraemon, Maruko, Shin Cậu Bé Bút Chì.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Combo Truyện Hài Hiện Đại – Khi cuộc sống xoay vần theo cách không ai ngờ tới.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Danh mục 
-  </span>
-  <span>
-    Truyện Hài Hước - Truyện Cười
-  </span>
-  <span>
-     tại Fahasa là nơi hội tụ những cuốn sách mang năng lượng tích cực, vừa giúp thư giãn, vừa làm giàu thêm vốn sống, vốn hiểu biết về văn hóa dân gian và đời sống hiện đại. Đây là lựa chọn lý tưởng cho bất cứ ai muốn tìm kiếm 
-  </span>
-  <span>
-    niềm vui từ trang sách
-  </span>
-  <span>
-    , để mỗi ngày trôi qua đều đong đầy tiếng cười và những khoảnh khắc đáng nhớ.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (212, now(), now(), 'Sách Ảnh', 198, '<h2 dir="ltr">
+values (211, now(), now(), 'Sách Ảnh', 198, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Sách Ảnh
   </span>
@@ -11858,6 +11477,459 @@ values (212, now(), now(), 'Sách Ảnh', 198, '<h2 dir="ltr">
   </span>
   <span>
     .
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (212, now(), now(), 'Hài Hước - Truyện Cười', 198, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục Truyện Hài Hước - Truyện Cười
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Trong thế giới sách phong phú và đa dạng tại Fahasa, 
+  </span>
+  <span>
+    danh mục Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+     luôn là một điểm sáng đặc biệt, mang đến những phút giây thư giãn, tiếng cười sảng khoái và những câu chuyện vui nhộn, giàu tính giải trí. Giữa nhịp sống hiện đại đầy áp lực, nhu cầu tìm kiếm những cuốn sách vừa nhẹ nhàng, vừa giúp giải tỏa căng thẳng càng trở nên cần thiết. Chính vì vậy, Fahasa đã xây dựng và không ngừng mở rộng danh mục 
+  </span>
+  <span>
+    Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+    , quy tụ những tác phẩm đặc sắc từ trong nước đến quốc tế, đáp ứng nhu cầu giải trí lành mạnh và nuôi dưỡng tinh thần lạc quan cho mọi lứa tuổi.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Tổng quan về danh mục Truyện Hài Hước - Truyện Cười tại Fahasa
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục 
+  </span>
+  <span>
+    Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+     của Fahasa không chỉ đơn thuần là nơi tập hợp các cuốn sách hài hước, mà còn là 
+  </span>
+  <span>
+    thế giới đa màu sắc
+  </span>
+  <span>
+     của sự sáng tạo, nơi mỗi trang sách đều chứa đựng những 
+  </span>
+  <span>
+    tình huống dí dỏm, những nhân vật độc đáo và những mảng miếng hài hước đa dạng
+  </span>
+  <span>
+    .
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Kho tàng này không giới hạn trong phạm vi truyện cười dân gian truyền thống, mà còn mở rộng ra các thể loại 
+  </span>
+  <span>
+    truyện tranh hài, tiểu thuyết hài hước hiện đại, truyện cười tản mạn, hài hước châm biếm xã hội
+  </span>
+  <span>
+     và cả những 
+  </span>
+  <span>
+    tác phẩm trào phúng sâu sắc
+  </span>
+  <span>
+    . Sự đa dạng này giúp danh mục 
+  </span>
+  <span>
+    phù hợp với mọi độ tuổi
+  </span>
+  <span>
+    , từ thiếu nhi, thanh thiếu niên đến người trưởng thành.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Phân loại nội dung phong phú của danh mục Truyện Hài Hước - Truyện Cười tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Truyện cười dân gian - Di sản văn hóa hài hước Việt Nam
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Một phần không thể thiếu trong danh mục này chính là các 
+  </span>
+  <span>
+    tuyển tập truyện cười dân gian Việt Nam
+  </span>
+  <span>
+    , nơi lưu giữ những câu chuyện ngắn gọn nhưng thâm thúy, phản ánh 
+  </span>
+  <span>
+    trí tuệ dân gian
+  </span>
+  <span>
+    , cách ứng xử thông minh của người xưa. Những nhân vật như 
+  </span>
+  <span>
+    Trạng Quỳnh, Ba Giai - Tú Xuất
+  </span>
+  <span>
+     hay các mẩu chuyện tiếu lâm của các vùng miền đều có mặt tại Fahasa, mang đến cho độc giả những trận cười sảng khoái nhưng vẫn lắng đọng tầng ý nghĩa sâu sắc.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Truyện hài hước hiện đại - Góc nhìn mới về cuộc sống
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh truyện dân gian, Fahasa cũng cập nhật rất nhiều 
+  </span>
+  <span>
+    tác phẩm hài hước hiện đại
+  </span>
+  <span>
+    , đặc biệt là từ những cây bút trẻ với phong cách viết mới mẻ, trẻ trung. Những câu chuyện hài hước về cuộc sống văn phòng, 
+  </span>
+  <span>
+    chuyện tình yêu dở khóc dở cười
+  </span>
+  <span>
+    , 
+  </span>
+  <span>
+    những tình huống oái oăm trong đời sống hàng ngày
+  </span>
+  <span>
+     đều được khai thác một cách sinh động, gần gũi.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Những tác phẩm tiêu biểu trong dòng này có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sát thủ Online
+      </span>
+      <span>
+         – Tập hợp những mẩu chuyện hài hước xoay quanh thế giới ảo.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Chuyện nhỏ Sài Gòn
+      </span>
+      <span>
+         – Những câu chuyện đời thường nhưng không kém phần hài hước qua góc nhìn của các tác giả trẻ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Mình sinh ra đâu phải để buồn
+      </span>
+      <span>
+         – Kết hợp giữa hài hước và những bài học nhẹ nhàng về cuộc sống.
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    3. Truyện tranh hài hước - Nguồn giải trí bất tận cho mọi lứa tuổi
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục 
+  </span>
+  <span>
+    truyện tranh hài hước
+  </span>
+  <span>
+     tại Fahasa cũng rất phong phú, với nhiều đầu sách nổi bật như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhóc Maruko
+      </span>
+      <span>
+         – Những mẩu chuyện đời thường của cô bé Maruko và gia đình.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Thám tử lừng danh Conan phiên bản hài hước
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Đảo Hải Tặc (One Piece)
+      </span>
+      <span>
+         – Không chỉ phiêu lưu kịch tính, series này còn nổi bật với rất nhiều phân cảnh hài hước khó quên.
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    4. Tuyển tập truyện cười tổng hợp
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Fahasa cũng không thiếu những cuốn 
+  </span>
+  <span>
+    tuyển tập truyện cười tổng hợp
+  </span>
+  <span>
+     – nơi sưu tầm những câu chuyện vui, những mẩu chuyện ngắn gọn nhưng gây cười cực mạnh. Đây là lựa chọn hoàn hảo cho những ai thích 
+  </span>
+  <span>
+    mỗi ngày đọc một chút
+  </span>
+  <span>
+    , vừa thư giãn vừa giải tỏa stress sau những giờ làm việc căng thẳng.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Ưu điểm nổi bật khi chọn mua Truyện Hài Hước - Truyện Cười tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Kho tàng phong phú từ cổ điển đến hiện đại
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Fahasa sở hữu 
+  </span>
+  <span>
+    kho sách đa dạng
+  </span>
+  <span>
+    , từ 
+  </span>
+  <span>
+    truyện dân gian Việt Nam
+  </span>
+  <span>
+     đến các 
+  </span>
+  <span>
+    tuyển tập truyện hài hiện đại
+  </span>
+  <span>
+    , từ 
+  </span>
+  <span>
+    truyện tranh vui nhộn
+  </span>
+  <span>
+     đến 
+  </span>
+  <span>
+    các tác phẩm văn học trào phúng sắc bén
+  </span>
+  <span>
+    , mang lại sự lựa chọn phù hợp cho mọi gu đọc.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Cập nhật liên tục những tác phẩm mới
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không chỉ dừng lại ở những đầu sách quen thuộc, Fahasa liên tục cập nhật các 
+  </span>
+  <span>
+    tựa sách hài hước mới nhất
+  </span>
+  <span>
+     từ các nhà xuất bản uy tín trong nước và quốc tế, giúp độc giả dễ dàng tiếp cận những 
+  </span>
+  <span>
+    xu hướng hài hước mới
+  </span>
+  <span>
+    , phản ánh 
+  </span>
+  <span>
+    góc nhìn hài hước của thời đại
+  </span>
+  <span>
+    .
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Chương trình ưu đãi hấp dẫn
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục 
+  </span>
+  <span>
+    Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+     thường xuyên có các chương trình khuyến mãi, 
+  </span>
+  <span>
+    combo sách giảm giá
+  </span>
+  <span>
+     hay 
+  </span>
+  <span>
+    ưu đãi theo chủ đề
+  </span>
+  <span>
+    , giúp người đọc vừa tiết kiệm chi phí vừa sở hữu được những đầu sách yêu thích.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Truyện hài hước – Liều thuốc tinh thần không thể thiếu
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Trong cuộc sống hiện đại đầy áp lực, những trang sách hài hước trở thành 
+  </span>
+  <span>
+    liều thuốc tinh thần vô giá
+  </span>
+  <span>
+    , giúp độc giả:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giải tỏa căng thẳng sau giờ làm việc, học tập.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nuôi dưỡng tinh thần lạc quan, yêu đời.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giúp gắn kết gia đình, bạn bè thông qua những tràng cười sảng khoái.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Chính vì vậy, danh mục 
+  </span>
+  <span>
+    Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+     của Fahasa không chỉ đơn thuần là một kệ sách, mà còn là 
+  </span>
+  <span>
+    góc thư giãn tinh thần
+  </span>
+  <span>
+    , nơi nuôi dưỡng nụ cười và sự tích cực cho mọi nhà.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Gợi ý một số combo nổi bật trong danh mục Truyện Hài Hước - Truyện Cười
+  </span>
+</h2>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Combo Truyện Cười Dân Gian Việt Nam – Những mẩu chuyện xưa chưa bao giờ cũ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Combo Truyện Hài Văn Phòng – Góc khuất cười ra nước mắt chốn công sở.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Combo Truyện Tranh Hài Nhật Bản – Cười thả ga cùng Doraemon, Maruko, Shin Cậu Bé Bút Chì.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Combo Truyện Hài Hiện Đại – Khi cuộc sống xoay vần theo cách không ai ngờ tới.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Danh mục 
+  </span>
+  <span>
+    Truyện Hài Hước - Truyện Cười
+  </span>
+  <span>
+     tại Fahasa là nơi hội tụ những cuốn sách mang năng lượng tích cực, vừa giúp thư giãn, vừa làm giàu thêm vốn sống, vốn hiểu biết về văn hóa dân gian và đời sống hiện đại. Đây là lựa chọn lý tưởng cho bất cứ ai muốn tìm kiếm 
+  </span>
+  <span>
+    niềm vui từ trang sách
+  </span>
+  <span>
+    , để mỗi ngày trôi qua đều đong đầy tiếng cười và những khoảnh khắc đáng nhớ.
   </span>
 </p>
 ');
@@ -13780,7 +13852,7 @@ values (217, now(), now(), 'Combo Văn Học', 198, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (218, now(), now(), 'Manga - Comic', null, '<h2 dir="ltr">
+values (218, now(), now(), 'Manga - Comic', 1, '<h2 dir="ltr">
   <span style="font-size: x-large;">
     Thông tin danh mục Manga - Comic
   </span>
@@ -14972,7 +15044,7 @@ insert into categories (id, created_at, updated_at, name, parent_id, description
 values (234, now(), now(), 'Comic', 231, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (235, now(), now(), 'Tâm lý - Kỹ năng sống', null, '<h1 data-pm-slice="1 1 []">
+values (235, now(), now(), 'Tâm lý - Kỹ năng sống', 1, '<h1 data-pm-slice="1 1 []">
   Thông tin danh mục Sách Tâm Lý - Kỹ Năng Sống
 </h1>
 <p data-pm-slice="1 1 []">
@@ -16399,7 +16471,7 @@ values (240, now(), now(), 'Rèn luyện nhân cách', 235, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (241, now(), now(), 'Sách học ngoại ngữ', null, '<h1 dir="ltr">
+values (241, now(), now(), 'Sách học ngoại ngữ', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Học Ngoại Ngữ
   </span>
@@ -17145,10 +17217,10 @@ insert into categories (id, created_at, updated_at, name, parent_id, description
 values (245, now(), now(), 'Luyện Thi IELTS', 242, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (246, now(), now(), 'Đàm Thoại - Giao Tiếp', 242, null);
+values (246, now(), now(), 'Luyện Thi TOEIC', 242, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (247, now(), now(), 'Luyện Thi TOEIC', 242, null);
+values (247, now(), now(), 'Đàm Thoại - Giao Tiếp', 242, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
 values (248, now(), now(), 'Từ Vựng', 242, null);
@@ -19953,7 +20025,7 @@ values (260, now(), now(), 'Flashcard', 241, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (261, now(), now(), 'Kinh Tế', null, '<h1>
+values (261, now(), now(), 'Kinh Tế', 1, '<h1>
   Thông tin danh mục Sách Kinh Tế
 </h1>
 <p>
@@ -22672,584 +22744,7 @@ values (270, now(), now(), 'Kế Toán - Kiểm Toán - Thuế', 261, '<h2 dir="
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (271, now(), now(), 'Ngoại Thương', 261, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Ngoại thương
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Trong bối cảnh hội nhập kinh tế quốc tế ngày càng sâu rộng, hoạt động ngoại thương trở thành trụ cột quan trọng đối với sự phát triển của nền kinh tế Việt Nam. Không chỉ các doanh nghiệp lớn mà cả những doanh nghiệp vừa và nhỏ đều có nhu cầu mở rộng giao thương quốc tế, tận dụng các cơ hội từ các hiệp định thương mại tự do (FTA) để vươn ra thị trường toàn cầu. Chính vì thế, việc trang bị kiến thức chuyên sâu về ngoại thương trở thành yêu cầu cấp thiết không chỉ đối với sinh viên ngành kinh tế, thương mại quốc tế mà còn đối với các nhà quản lý, chủ doanh nghiệp và những người làm việc trực tiếp trong lĩnh vực xuất nhập khẩu.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Hiểu rõ nhu cầu thực tế này, Fahasa đã xây dựng một danh mục sách chuyên biệt mang tên Ngoại thương, nơi tập hợp đa dạng các đầu sách chuyên sâu về thương mại quốc tế, logistics, nghiệp vụ xuất nhập khẩu, thanh toán quốc tế, đàm phán thương mại, quy tắc thương mại toàn cầu, v.v. Danh mục sách Ngoại thương tại Fahasa được cập nhật liên tục, không chỉ bao quát kiến thức lý thuyết nền tảng mà còn chú trọng vào những kỹ năng thực tiễn, bám sát thực trạng và yêu cầu mới nhất của thị trường.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Những chủ đề chính trong danh mục sách Ngoại thương tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Sách về tổng quan thương mại quốc tế
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Đây là nhóm sách cung cấp cái nhìn toàn cảnh về thương mại quốc tế, từ lịch sử hình thành, phát triển đến các xu hướng mới nhất trong kỷ nguyên số. Nội dung của nhóm sách này thường bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Khái niệm, đặc điểm và vai trò của thương mại quốc tế trong nền kinh tế toàn cầu
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các mô hình và lý thuyết thương mại quốc tế kinh điển như lợi thế so sánh, lý thuyết Heckscher-Ohlin, lý thuyết chu kỳ sản phẩm
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tác động của toàn cầu hóa, hội nhập kinh tế khu vực và các tổ chức thương mại quốc tế như WTO, ASEAN, CPTPP... đối với hoạt động ngoại thương của Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Một số đầu sách tiêu biểu trong danh mục này tại Fahasa bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo Trình Thương Mại Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tổng Quan Về Hoạt Động Xuất Nhập Khẩu Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thương Mại Toàn Cầu Trong Kỷ Nguyên Số
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    2. Sách về nghiệp vụ xuất nhập khẩu
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Nghiệp vụ xuất nhập khẩu là mảng nội dung chiếm tỷ lệ lớn trong danh mục sách Ngoại thương của Fahasa. Những cuốn sách thuộc nhóm này trang bị đầy đủ kiến thức và kỹ năng thực hành cho các vị trí như nhân viên chứng từ (document staff), nhân viên hiện trường (operation staff), nhân viên sales xuất khẩu (export sales), v.v. Nội dung bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quy trình xuất khẩu hàng hóa từ A-Z
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thủ tục hải quan và hệ thống văn bản pháp lý về xuất nhập khẩu tại Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cách soạn thảo và kiểm tra hợp đồng ngoại thương, bộ chứng từ thanh toán quốc tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Kinh nghiệm xử lý tình huống phát sinh trong hoạt động xuất nhập khẩu thực tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Một số đầu sách nổi bật:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo Trình Nghiệp Vụ Ngoại Thương
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thực Hành Nghiệp Vụ Xuất Nhập Khẩu
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Bộ Chứng Từ Xuất Nhập Khẩu Và Thanh Toán Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    3. Sách về logistics và chuỗi cung ứng toàn cầu
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Hoạt động ngoại thương không thể tách rời logistics và quản lý chuỗi cung ứng. Do đó, Fahasa cũng dành riêng một phần trong danh mục sách Ngoại thương cho các đầu sách về logistics quốc tế. Nội dung bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các phương thức vận tải quốc tế: đường biển, đường hàng không, đường bộ, đường sắt
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Incoterms và vai trò trong thương mại quốc tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quản lý chuỗi cung ứng toàn cầu và các chiến lược tối ưu chi phí logistics
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Công nghệ ứng dụng trong logistics và quản lý chuỗi cung ứng 4.0
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Một số đầu sách nổi bật:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo Trình Logistics Và Vận Tải Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Incoterms 2020 - Giải Thích Và Ứng Dụng Thực Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tối Ưu Hóa Chuỗi Cung Ứng Toàn Cầu
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    4. Sách về thanh toán quốc tế và tài trợ thương mại
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Trong thương mại quốc tế, rủi ro thanh toán luôn là vấn đề được doanh nghiệp đặc biệt quan tâm. Fahasa mang đến nhiều đầu sách chuyên sâu về:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các phương thức thanh toán quốc tế phổ biến: L/C, T/T, D/P, D/A...
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quy trình mở, kiểm tra và thực hiện thanh toán theo L/C
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tín dụng chứng từ và vai trò của ngân hàng trong thương mại quốc tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quản trị rủi ro trong thanh toán quốc tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những đầu sách tiêu biểu:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thanh Toán Quốc Tế Trong Kinh Doanh Ngoại Thương
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tín Dụng Chứng Từ Và Thanh Toán Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quản Trị Rủi Ro Trong Thanh Toán Xuyên Biên Giới
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    5. Sách về đàm phán và ký kết hợp đồng ngoại thương
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Ngoài kỹ năng chuyên môn, kỹ năng đàm phán và thương thảo hợp đồng trong môi trường quốc tế cũng rất quan trọng. Danh mục sách Ngoại thương của Fahasa bao gồm nhiều đầu sách về:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Kỹ năng đàm phán với đối tác nước ngoài
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nghệ thuật xây dựng mối quan hệ trong kinh doanh quốc tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Soạn thảo và kiểm tra hợp đồng ngoại thương
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Xử lý tranh chấp hợp đồng ngoại thương
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Một số đầu sách tiêu biểu:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nghệ Thuật Đàm Phán Trong Kinh Doanh Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hợp Đồng Ngoại Thương Và Những Điều Cần Lưu Ý
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giải Quyết Tranh Chấp Thương Mại Quốc Tế
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Ưu điểm khi mua sách Ngoại thương tại Fahasa
-  </span>
-</h2>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Kho sách phong phú, bao quát toàn bộ nghiệp vụ và kỹ năng cần thiết trong ngành ngoại thương
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cập nhật liên tục các đầu sách mới, bám sát thay đổi của pháp luật và thị trường
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách chính hãng, được chọn lọc từ các nhà xuất bản uy tín
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giá cả hợp lý, nhiều chương trình khuyến mãi, giảm giá quanh năm
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hỗ trợ giao hàng toàn quốc nhanh chóng, tiện lợi
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Đối tượng nên tham khảo danh mục sách Ngoại thương tại Fahasa
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách này đặc biệt phù hợp với các nhóm đối tượng sau:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sinh viên chuyên ngành Kinh tế đối ngoại, Thương mại quốc tế, Logistics
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhân viên, chuyên viên làm việc trong các công ty xuất nhập khẩu, hãng tàu, công ty logistics
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chủ doanh nghiệp vừa và nhỏ có nhu cầu mở rộng thị trường ra nước ngoài
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Những ai quan tâm, tìm hiểu về ngoại thương để kinh doanh cá nhân hoặc học thêm kiến thức
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Với sự đa dạng về đầu sách, cập nhật kịp thời các kiến thức mới nhất về thương mại quốc tế và ngoại thương, Fahasa đang khẳng định vai trò là nhà cung cấp sách chuyên ngành uy tín, đáng tin cậy dành cho cộng đồng sinh viên, nhân viên, doanh nghiệp hoạt động trong lĩnh vực ngoại thương. Đây chính là địa chỉ lý tưởng để độc giả tìm kiếm, cập nhật kiến thức và nâng cao kỹ năng nghề nghiệp trong thời kỳ hội nhập toàn cầu.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (272, now(), now(), 'Lịch Sử - Địa Lý - Tôn Giáo', null, '<h1 dir="ltr">
+values (271, now(), now(), 'Lịch Sử - Địa Lý - Tôn Giáo', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Lịch Sử - Địa Lý - Tôn Giáo  
   </span>
@@ -23475,7 +22970,7 @@ values (272, now(), now(), 'Lịch Sử - Địa Lý - Tôn Giáo', null, '<h1 d
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (273, now(), now(), 'Lịch Sử', 272, '<h2 dir="ltr">
+values (272, now(), now(), 'Lịch Sử', 271, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Lịch sử
   </span>
@@ -23882,7 +23377,7 @@ values (273, now(), now(), 'Lịch Sử', 272, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (274, now(), now(), 'Tôn Giáo', 272, '<h2 dir="ltr">
+values (273, now(), now(), 'Tôn Giáo', 271, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Tôn giáo
   </span>
@@ -24301,7 +23796,7 @@ values (274, now(), now(), 'Tôn Giáo', 272, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (275, now(), now(), 'Địa Lý', 272, '<h2 dir="ltr">
+values (274, now(), now(), 'Địa Lý', 271, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Địa lý
   </span>
@@ -24739,7 +24234,7 @@ values (275, now(), now(), 'Địa Lý', 272, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (276, now(), now(), 'Khoa học kỹ thuật', null, '<h1 dir="ltr">
+values (275, now(), now(), 'Khoa học kỹ thuật', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Khoa Học Kỹ Thuật 
   </span>
@@ -24931,7 +24426,7 @@ values (276, now(), now(), 'Khoa học kỹ thuật', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (277, now(), now(), 'Y học', 276, '<h2 dir="ltr">
+values (276, now(), now(), 'Y học', 275, '<h2 dir="ltr">
   <span>
     Thông tin chi tiết về danh mục sách Y học của Fahasa
   </span>
@@ -25237,7 +24732,7 @@ values (277, now(), now(), 'Y học', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (278, now(), now(), 'Khoa học khác', 276, '<h2 dir="ltr">
+values (277, now(), now(), 'Khoa học khác', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Khoa học khác
   </span>
@@ -25509,7 +25004,7 @@ values (278, now(), now(), 'Khoa học khác', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (279, now(), now(), 'Tin học', 276, '<h2 dir="ltr">
+values (278, now(), now(), 'Tin học', 275, '<h2 dir="ltr">
   <span>
     Thông tin chi tiết về danh mục sách Tin học tại Fahasa
   </span>
@@ -25940,7 +25435,7 @@ values (279, now(), now(), 'Tin học', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (280, now(), now(), 'Giáo Dục', 276, '<h2 dir="ltr">
+values (279, now(), now(), 'Giáo Dục', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Giáo dục
   </span>
@@ -26407,7 +25902,7 @@ values (280, now(), now(), 'Giáo Dục', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (281, now(), now(), 'Nông, lâm, ngư nghiệp', 276, '<h2 dir="ltr">
+values (280, now(), now(), 'Nông, lâm, ngư nghiệp', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nông, Lâm, Ngư nghiệp
   </span>
@@ -26778,7 +26273,7 @@ values (281, now(), now(), 'Nông, lâm, ngư nghiệp', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (282, now(), now(), 'Khoa học vũ trụ', 276, '<h2 dir="ltr">
+values (281, now(), now(), 'Khoa học vũ trụ', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Khoa học Vũ trụ
   </span>
@@ -27172,7 +26667,7 @@ values (282, now(), now(), 'Khoa học vũ trụ', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (283, now(), now(), 'Toán Học', 276, '<h2 dir="ltr">
+values (282, now(), now(), 'Toán Học', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Toán học
   </span>
@@ -27607,7 +27102,7 @@ values (283, now(), now(), 'Toán Học', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (284, now(), now(), 'Thiết Kế - Kiến Trúc - Xây dựng', 276, '<h2 dir="ltr">
+values (283, now(), now(), 'Thiết Kế - Kiến Trúc - Xây dựng', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Thiết kế - Kiến trúc - Xây dựng
   </span>
@@ -27978,7 +27473,7 @@ values (284, now(), now(), 'Thiết Kế - Kiến Trúc - Xây dựng', 276, '<h
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (285, now(), now(), 'Môi trường, khoáng sản, hóa chất', 276, '<h2 dir="ltr">
+values (284, now(), now(), 'Môi trường, khoáng sản, hóa chất', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Môi trường, Khoáng sản, Hóa chất
   </span>
@@ -28342,7 +27837,7 @@ values (285, now(), now(), 'Môi trường, khoáng sản, hóa chất', 276, '<
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (286, now(), now(), 'Cơ khí', 276, '<h2 dir="ltr">
+values (285, now(), now(), 'Cơ khí', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Cơ khí
   </span>
@@ -28679,7 +28174,7 @@ values (286, now(), now(), 'Cơ khí', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (287, now(), now(), 'Điện, điện tử', 276, '<h2 dir="ltr">
+values (286, now(), now(), 'Điện, điện tử', 275, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Điện, Điện tử
   </span>
@@ -29031,7 +28526,1680 @@ values (287, now(), now(), 'Điện, điện tử', 276, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (288, now(), now(), 'Chính Trị - Pháp Lý - Triết Học', null, '<h1 dir="ltr">
+values (287, now(), now(), 'Nuôi Dạy Con', 1, '<h1 dir="ltr">
+  <span>
+    Thông tin danh mục Sách Nuôi Dạy Con
+  </span>
+</h1>
+<p dir="ltr">
+  <span>
+    Nuôi dạy con là một hành trình đầy thử thách nhưng cũng tràn đầy niềm vui và ý nghĩa. Việc trang bị kiến thức về giáo dục, tâm lý, dinh dưỡng và sức khỏe cho trẻ là điều vô cùng quan trọng đối với các bậc cha mẹ. Hiểu được nhu cầu này, Fahasa mang đến danh mục sách nuôi dạy con phong phú và đa dạng, giúp phụ huynh có thể tìm thấy những thông tin hữu ích để đồng hành cùng con trên chặng đường phát triển.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Danh mục sách nuôi dạy con tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    Sách cẩm nang làm cha mẹ
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Làm cha mẹ là một trải nghiệm tuyệt vời nhưng cũng đầy thách thức. Những cuốn sách thuộc danh mục này sẽ giúp cha mẹ có cái nhìn toàn diện về cách nuôi dạy con từ những năm tháng đầu đời cho đến khi trưởng thành. Các chủ đề phổ biến bao gồm phương pháp giáo dục, cách xử lý tình huống khó khăn, xây dựng mối quan hệ giữa cha mẹ và con cái, cũng như những lời khuyên thực tế từ các chuyên gia.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách phát triển kỹ năng - trí tuệ cho trẻ
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Mỗi đứa trẻ đều có tiềm năng vô hạn, và nhiệm vụ của cha mẹ là giúp con phát huy tối đa khả năng của mình. Fahasa cung cấp nhiều sách về phát triển kỹ năng sống, tư duy sáng tạo, trí tuệ cảm xúc và khả năng giao tiếp cho trẻ. Những cuốn sách này không chỉ cung cấp lý thuyết mà còn đưa ra các bài tập thực hành giúp trẻ học hỏi một cách hiệu quả.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách phương pháp giáo dục trẻ các nước
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Mỗi quốc gia có những phương pháp giáo dục riêng biệt, mang lại những giá trị và lợi ích khác nhau cho trẻ. Tại Fahasa, bạn có thể tìm thấy những cuốn sách về phương pháp giáo dục nổi tiếng như Montessori, Glenn Doman, Shichida hay phương pháp giáo dục của người Do Thái, Phần Lan và Nhật Bản. Những cuốn sách này sẽ giúp cha mẹ tham khảo và áp dụng những cách dạy con phù hợp với gia đình mình.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách dinh dưỡng - sức khỏe cho trẻ
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Dinh dưỡng và sức khỏe đóng vai trò quan trọng trong sự phát triển toàn diện của trẻ. Fahasa mang đến nhiều đầu sách về chế độ ăn uống khoa học, thực đơn lành mạnh, chăm sóc sức khỏe, phòng tránh bệnh tật và những lưu ý quan trọng trong từng giai đoạn phát triển của trẻ. Những cuốn sách này sẽ là người bạn đồng hành đáng tin cậy của các bậc phụ huynh trong việc đảm bảo con mình luôn khỏe mạnh và phát triển tốt nhất.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách giáo dục trẻ tuổi teen
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tuổi teen là giai đoạn trẻ bắt đầu tự lập và phát triển bản sắc cá nhân. Đây cũng là thời điểm các bậc cha mẹ cần có sự thấu hiểu và đồng hành đúng cách. Fahasa mang đến nhiều cuốn sách giúp cha mẹ hiểu rõ tâm lý tuổi teen, hỗ trợ con trong học tập, định hướng nghề nghiệp, phát triển nhân cách và xây dựng mối quan hệ gia đình tốt đẹp.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách dành cho mẹ bầu
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Hành trình làm mẹ bắt đầu từ khi mang thai, và việc chuẩn bị kiến thức từ sớm là vô cùng quan trọng. Fahasa cung cấp nhiều sách hướng dẫn dành cho mẹ bầu, bao gồm chăm sóc thai kỳ, chế độ dinh dưỡng, bài tập thể dục phù hợp, sinh con tự nhiên, cũng như cách chuẩn bị tâm lý để chào đón thiên thần nhỏ. Những cuốn sách này sẽ giúp các mẹ có một thai kỳ khỏe mạnh và suôn sẻ.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Vì sao nên mua sách nuôi dạy con tại Fahasa?
+  </span>
+</h2>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <strong>
+        Kho sách đa dạng
+      </strong>
+      <span>
+        <strong>
+          :
+        </strong>
+         Fahasa mang đến hàng trăm đầu sách với nội dung phong phú, phù hợp với mọi giai đoạn phát triển của trẻ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <strong>
+        Chất lượng đảm bảo
+      </strong>
+      <span>
+        <strong>
+          :
+        </strong>
+         Các sách đều được xuất bản bởi những nhà xuất bản uy tín, đảm bảo độ chính xác và giá trị thông tin cao.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <strong>
+        Tiện lợi mua sắm
+      </strong>
+      <span>
+        <strong>
+          :
+        </strong>
+         Khách hàng có thể dễ dàng tìm kiếm, đặt hàng trực tuyến và nhận sách ngay tại nhà.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <strong>
+        Giá cả hợp lý
+      </strong>
+      <span>
+        <strong>
+          :
+        </strong>
+         Fahasa luôn có mức giá cạnh tranh cùng nhiều chương trình khuyến mãi hấp dẫn.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Nuôi dạy con không chỉ là trách nhiệm mà còn là niềm vui và hạnh phúc của mỗi bậc cha mẹ. Việc trang bị kiến thức đúng đắn sẽ giúp phụ huynh đồng hành cùng con một cách hiệu quả, giúp trẻ phát triển toàn diện cả về trí tuệ lẫn nhân cách. Với danh mục sách nuôi dạy con phong phú tại Fahasa, bạn sẽ dễ dàng tìm thấy những cuốn sách phù hợp nhất để hỗ trợ hành trình làm cha mẹ của mình. Hãy khám phá ngay hôm nay để trang bị cho mình những kiến thức bổ ích và cùng con trưởng thành một cách tốt nhất!
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (288, now(), now(), 'Cẩm Nang Làm Cha Mẹ', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục Cẩm nang làm cha mẹ
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Làm cha mẹ là hành trình tuyệt vời nhưng cũng đầy thử thách, nơi mỗi ngày trôi qua đều mang đến những niềm vui, bất ngờ xen lẫn những băn khoăn, lo lắng. Từ lúc con cất tiếng khóc chào đời đến những bước đi đầu tiên, từ giai đoạn khủng hoảng tuổi lên ba đến tuổi dậy thì đầy biến động – tất cả đều đòi hỏi cha mẹ không ngừng học hỏi để đồng hành và thấu hiểu con cái. Chính vì vậy, những cuốn cẩm nang làm cha mẹ trở thành người bạn đồng hành không thể thiếu trên hành trình nuôi dạy con trưởng thành.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Nhằm đáp ứng nhu cầu tìm kiếm tài liệu hữu ích và chất lượng cho các bậc phụ huynh Việt Nam, Fahasa đã xây dựng riêng một danh mục sách mang tên Cẩm nang làm cha mẹ. Đây là nơi tập hợp hàng trăm đầu sách phong phú, đa dạng chủ đề, được tuyển chọn từ các tác giả uy tín, chuyên gia tâm lý, giáo dục, bác sĩ nhi khoa hàng đầu trong và ngoài nước.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Đa dạng chủ đề – Bao quát mọi khía cạnh nuôi dạy con
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Sách hướng dẫn nuôi dạy con theo từng độ tuổi
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Mỗi giai đoạn phát triển của trẻ đều có những đặc điểm tâm sinh lý, hành vi riêng biệt. Vì vậy, Fahasa đặc biệt chú trọng cung cấp những cuốn sách hướng dẫn nuôi dạy con theo từng độ tuổi cụ thể, giúp cha mẹ hiểu rõ sự phát triển của con từ khi sơ sinh đến khi trưởng thành.
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cẩm nang nuôi con từ 0 - 1 tuổi
+      </span>
+      <span>
+        : Tập trung vào các kỹ năng chăm sóc bé sơ sinh, cho bú, ăn dặm, giấc ngủ khoa học, chăm sóc sức khỏe và nhận diện dấu hiệu bệnh lý.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cẩm nang nuôi dạy bé từ 1 - 3 tuổi
+      </span>
+      <span>
+        : Hướng dẫn phương pháp giáo dục sớm, kích thích trí tuệ, phát triển kỹ năng giao tiếp và xử lý các hành vi bướng bỉnh, khủng hoảng tuổi lên ba.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nuôi dạy con giai đoạn tiểu học
+      </span>
+      <span>
+        : Tập trung vào xây dựng tính tự lập, kỷ luật, thói quen học tập và khả năng quản lý cảm xúc.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dạy con tuổi teen
+      </span>
+      <span>
+        : Giúp cha mẹ hiểu và đồng hành cùng con vượt qua khủng hoảng tuổi dậy thì, định hướng giá trị sống và kỹ năng tự bảo vệ bản thân.
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    2. Sách về thai giáo và chuẩn bị làm cha mẹ
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không chỉ tập trung vào giai đoạn sau sinh, danh mục 
+  </span>
+  <span>
+    Cẩm nang làm cha mẹ
+  </span>
+  <span>
+     của Fahasa còn có những cuốn sách dành cho cha mẹ tương lai, giúp họ chuẩn bị tâm lý, kiến thức và kỹ năng cần thiết ngay từ khi con còn trong bụng mẹ.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Một số tựa sách nổi bật:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Thai giáo – Dạy con từ trong bụng mẹ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cẩm nang mang thai và sinh nở an toàn
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Chuẩn bị làm mẹ – Những điều cần biết trong 9 tháng 10 ngày
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách này không chỉ cung cấp kiến thức khoa học về sự phát triển của thai nhi mà còn hướng dẫn các bài tập thai giáo, chế độ dinh dưỡng, chăm sóc sức khỏe bà bầu, giúp mẹ và bé cùng phát triển toàn diện.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Sách về tâm lý trẻ em và giao tiếp cha mẹ – con cái
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Một trong những thách thức lớn nhất của cha mẹ hiện đại chính là hiểu được thế giới nội tâm của con cái. Trẻ em ngày nay sống trong môi trường đầy áp lực, dễ rơi vào trạng thái stress, mất cân bằng cảm xúc nếu không có sự đồng hành, thấu hiểu từ cha mẹ. Fahasa mang đến nhiều đầu sách chuyên sâu về tâm lý trẻ em, kỹ năng giao tiếp tích cực và giải quyết xung đột trong gia đình.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Một số sách tiêu biểu:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hiểu về trái tim con trẻ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Lắng nghe để thấu hiểu – Giao tiếp tích cực với con
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Kỷ luật tích cực – Nuôi dạy con không đòn roi
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách này không chỉ hướng dẫn cha mẹ nắm bắt tâm lý con cái mà còn gợi ý các phương pháp giải quyết mâu thuẫn hiệu quả, giúp xây dựng mối quan hệ gắn kết và tin cậy giữa cha mẹ và con.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    4. Sách giáo dục giới tính và kỹ năng sống cho trẻ
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh việc dạy con về kiến thức học đường, cha mẹ hiện đại cũng rất quan tâm đến giáo dục giới tính và kỹ năng sống. Fahasa cập nhật rất nhiều đầu sách về chủ đề này để giúp cha mẹ trang bị cho con nền tảng kiến thức và kỹ năng cần thiết để tự tin bước vào đời.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Một số đầu sách nổi bật:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giáo dục giới tính – Cùng con lớn khôn an toàn
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dạy con kỹ năng tự bảo vệ bản thân
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dạy con kỹ năng quản lý tài chính từ nhỏ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách này không chỉ giúp cha mẹ mở ra những cuộc trò chuyện thẳng thắn, cởi mở với con mà còn giúp trẻ hình thành thái độ sống tích cực, biết tự chăm sóc và bảo vệ bản thân.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Vì sao phụ huynh nên chọn sách Cẩm nang làm cha mẹ tại Fahasa?
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Được tuyển chọn kỹ lưỡng từ các nhà xuất bản uy tín
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tất cả các đầu sách trong danh mục đều được Fahasa chọn lọc từ các nhà xuất bản lớn, nội dung đảm bảo tính khoa học, thực tiễn, phù hợp với văn hóa và xã hội Việt Nam, giúp cha mẹ dễ dàng áp dụng vào thực tế.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Phong phú về tác giả và phong cách
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục cẩm nang làm cha mẹ tại Fahasa quy tụ nhiều tác giả nổi tiếng trong và ngoài nước. Mỗi tác giả mang đến góc nhìn độc đáo, kết hợp giữa kiến thức khoa học hiện đại và kinh nghiệm thực tiễn, giúp cha mẹ tiếp cận đa dạng phương pháp nuôi dạy con.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Dễ dàng tìm kiếm và mua sắm
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Với giao diện website thân thiện, cha mẹ có thể dễ dàng tìm kiếm sách theo chủ đề, tác giả, nhà xuất bản. Fahasa cũng thường xuyên có các chương trình giảm giá, freeship, tặng voucher nhằm khuyến khích phụ huynh đầu tư vào tri thức làm cha mẹ.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lời kết 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục Cẩm nang làm cha mẹ tại Fahasa không chỉ là nơi cung cấp kiến thức mà còn là người bạn đồng hành tin cậy giúp các bậc phụ huynh vững vàng hơn trên hành trình nuôi dạy con. Dù con bạn đang ở độ tuổi nào, bạn cũng đều tìm thấy những cuốn sách hữu ích, truyền cảm hứng và gợi mở nhiều cách thức nuôi dạy con hiện đại, khoa học tại Fahasa.com.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (289, now(), now(), 'Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Phát triển kỹ năng - trí tuệ cho trẻ 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Việc nuôi dạy con cái trong xã hội hiện đại không chỉ dừng lại ở chăm sóc sức khỏe thể chất, mà còn bao gồm cả việc nuôi dưỡng và phát triển toàn diện kỹ năng lẫn trí tuệ cho trẻ từ sớm. Những năm đầu đời của trẻ, đặc biệt từ 0 đến 6 tuổi, là giai đoạn vàng để kích thích tư duy, rèn luyện kỹ năng sống và bồi đắp những giá trị nền tảng giúp trẻ tự tin, linh hoạt và sáng tạo khi bước vào môi trường học tập và cuộc sống sau này. Chính vì vậy, nhu cầu tìm kiếm tài liệu, sách chuyên sâu về phát triển kỹ năng và trí tuệ cho trẻ ngày càng trở thành mối quan tâm hàng đầu của các bậc phụ huynh.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Hiểu rõ tầm quan trọng đó, Fahasa đã xây dựng riêng một danh mục sách mang tên Phát triển kỹ năng - trí tuệ cho trẻ, quy tụ hàng trăm đầu sách đa dạng về nội dung, phong phú về hình thức, hướng đến việc đồng hành cùng cha mẹ trong hành trình nuôi dạy con thông minh, bản lĩnh và sáng tạo. Đây là một trong những danh mục được phụ huynh Việt Nam đặc biệt yêu thích và tìm kiếm trên hệ thống Fahasa online lẫn chuỗi nhà sách truyền thống của Fahasa.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Nội dung phong phú – Bao quát đa dạng lĩnh vực phát triển kỹ năng và trí tuệ
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Sách phát triển tư duy logic và khả năng giải quyết vấn đề
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Rèn luyện tư duy logic là bước đệm quan trọng để trẻ phát triển khả năng suy nghĩ có hệ thống, biết phân tích vấn đề và tìm kiếm giải pháp hiệu quả. Danh mục tại Fahasa cung cấp nhiều đầu sách hấp dẫn, từ các bộ sách bài tập tư duy logic theo độ tuổi đến những cuốn sách kỹ năng giúp trẻ hình thành lối tư duy phản biện từ nhỏ.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Những cuốn sách này không chỉ mang tính giáo dục mà còn lồng ghép yếu tố giải trí, trò chơi, thử thách thú vị, giúp trẻ tiếp cận việc học hỏi một cách tự nhiên và đầy hứng thú.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Sách phát triển kỹ năng giao tiếp và ứng xử xã hội
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh trí tuệ, kỹ năng giao tiếp cũng đóng vai trò quan trọng, giúp trẻ tự tin bày tỏ suy nghĩ, xây dựng mối quan hệ tích cực với bạn bè, thầy cô và những người xung quanh. Fahasa mang đến nhiều tựa sách hướng dẫn kỹ năng giao tiếp, ứng xử theo từng độ tuổi, giúp trẻ biết cách lắng nghe, chia sẻ cảm xúc, thậm chí rèn luyện kỹ năng thuyết trình, tranh biện cơ bản.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Sách phát triển trí thông minh cảm xúc (EQ)
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Trí thông minh cảm xúc (EQ) đang trở thành xu hướng giáo dục hiện đại, khi ngày càng nhiều nghiên cứu khẳng định EQ có tác động trực tiếp đến sự thành công và hạnh phúc sau này của trẻ. Danh mục sách tại Fahasa cập nhật nhiều đầu sách về chủ đề này, hướng dẫn cha mẹ giúp trẻ nhận diện cảm xúc bản thân, đồng thời biết cách đồng cảm với cảm xúc của người khác.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    4. Sách giáo dục kỹ năng sống thực tế
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Kỹ năng sống thực tế chính là hành trang quan trọng để trẻ tự lập, tự tin thích nghi với môi trường xung quanh.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Những đầu sách này không chỉ là tài liệu tham khảo hữu ích cho phụ huynh mà còn giúp trẻ tiếp cận kỹ năng sống thông qua những câu chuyện minh họa sinh động, dễ hiểu.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Đa dạng hình thức sách – Phù hợp mọi độ tuổi
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Sách tranh minh họa sinh động
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Dành cho trẻ nhỏ từ 0 - 6 tuổi, những cuốn sách trong danh mục này thường được trình bày dưới dạng truyện tranh, hình ảnh minh họa bắt mắt kết hợp cùng ngôn từ đơn giản, giúp trẻ tiếp cận kiến thức và kỹ năng một cách tự nhiên nhất.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Sách bài tập thực hành theo chủ đề
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Dành cho trẻ từ 6 tuổi trở lên, đây là những cuốn sách kết hợp giữa lý thuyết và bài tập thực hành, giúp trẻ vận dụng ngay kiến thức vừa học được vào thực tế. Những bộ sách bài tập phát triển tư duy logic, giải đố IQ, hoặc sách thực hành kỹ năng giao tiếp đều được cha mẹ đặc biệt ưa chuộng.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Sách song ngữ phát triển kỹ năng
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Nhiều phụ huynh hiện nay có xu hướng cho trẻ làm quen với tiếng Anh từ sớm thông qua các đầu sách song ngữ. Fahasa cũng cập nhật nhiều sách kỹ năng song ngữ, giúp trẻ vừa rèn luyện kỹ năng mềm vừa làm giàu vốn từ vựng ngoại ngữ.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Vì sao phụ huynh nên chọn sách phát triển kỹ năng - trí tuệ cho trẻ tại Fahasa?
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Nguồn sách phong phú từ các NXB uy tín
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục này quy tụ hàng trăm đầu sách đến từ các nhà xuất bản hàng đầu như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        NXB Trẻ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        NXB Kim Đồng
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        NXB Phụ nữ Việt Nam
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        NXB Giáo dục Việt Nam
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Nội dung được biên soạn khoa học, phù hợp với tâm lý và nhận thức của trẻ em Việt Nam, đồng thời cập nhật các phương pháp giáo dục tiên tiến nhất từ thế giới.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Đáp ứng mọi nhu cầu của cha mẹ và giáo viên
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục không chỉ phục vụ phụ huynh mà còn là tài liệu tham khảo hữu ích cho giáo viên mầm non, giáo viên tiểu học, giúp họ xây dựng giáo án giảng dạy kỹ năng mềm và phát triển trí tuệ toàn diện cho học sinh.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Dễ dàng tìm kiếm và đặt mua
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Với hệ thống website hiện đại, cha mẹ dễ dàng tìm kiếm sách theo chủ đề, độ tuổi hoặc nhà xuất bản yêu thích. Đặt hàng online tại Fahasa.com cũng vô cùng tiện lợi với nhiều ưu đãi hấp dẫn, từ giảm giá đến miễn phí vận chuyển.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lời kết 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục Phát triển kỹ năng - trí tuệ cho trẻ tại Fahasa chính là người bạn đồng hành đáng tin cậy của mọi gia đình Việt Nam. Đây không chỉ là kho tàng tri thức phong phú, mà còn là nguồn cảm hứng để cha mẹ và con cái cùng nhau học hỏi, khám phá và trưởng thành. Hãy khám phá ngay và trang bị cho con những kỹ năng và tư duy vượt trội để vững vàng trước mọi thử thách của tương lai.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (290, now(), now(), 'Phương Pháp Giáo Dục Trẻ Các Nước', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Phương pháp Giáo dục trẻ các 
+  </span>
+  <span>
+    nước
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Trong bối cảnh toàn cầu hóa và hội nhập quốc tế ngày càng sâu rộng, việc tiếp cận và học hỏi những phương pháp giáo dục trẻ từ các quốc gia tiên tiến trên thế giới đã trở thành nhu cầu cấp thiết của rất nhiều bậc phụ huynh Việt Nam. Không chỉ dừng lại ở việc nuôi dạy con theo kinh nghiệm truyền thống hay những bí quyết gia đình, cha mẹ hiện đại ngày càng quan tâm đến những triết lý giáo dục mới mẻ, những góc nhìn tiên tiến từ các nền giáo dục phát triển như Nhật Bản, Phần Lan, Mỹ, Đức, Hàn Quốc hay Singapore. Chính vì vậy, Fahasa - một trong những hệ thống bán sách hàng đầu Việt Nam - đã xây dựng một danh mục sách chuyên biệt mang tên "Phương pháp giáo dục trẻ các nước", tập hợp những đầu sách chọn lọc, cập nhật những tư tưởng giáo dục hiện đại, khoa học và phù hợp với xu hướng thời đại.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Danh mục này hiện được Fahasa phân phối trực tuyến tại website chính thức, giúp phụ huynh dễ dàng tra cứu, lựa chọn và sở hữu những cuốn sách bổ ích về giáo dục trẻ em theo phong cách đa quốc gia. Với kho tàng sách phong phú, từ những ấn phẩm nổi tiếng quốc tế đến những đầu sách được dịch thuật công phu sang tiếng Việt, Fahasa đang tạo ra một không gian tham khảo học thuật đáng tin cậy, đồng thời mở ra cánh cửa để các bậc phụ huynh Việt tiếp cận những tinh hoa giáo dục nhân văn, tiên tiến từ khắp nơi trên thế giới.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Sự đa dạng trong danh mục sách phương pháp giáo dục trẻ các nước tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Phương pháp giáo dục Nhật Bản – Nuôi dưỡng tính kỷ luật và tinh thần tự lập
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Nhật Bản nổi tiếng với nền giáo dục chú trọng kỷ luật, tự lập và đề cao tinh thần tập thể ngay từ khi trẻ còn rất nhỏ. Tại danh mục 
+  </span>
+  <span>
+    sách phương pháp giáo dục trẻ các nước
+  </span>
+  <span>
+     của Fahasa, không khó để bắt gặp những đầu sách tiêu biểu như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Nuôi Con Kiểu Nhật"
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Cha Mẹ Nhật Dạy Con Tự Lập"
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Phương Pháp Giáo Dục Sớm Shichida"
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Các đầu sách này tập trung phân tích cách người Nhật xây dựng nền tảng đạo đức, kỹ năng sống và khả năng thích ứng với xã hội cho trẻ thông qua những thói quen nhỏ nhặt hàng ngày. Điểm đặc biệt trong sách về phương pháp Nhật Bản là sự kết hợp giữa tính truyền thống Á Đông với khoa học giáo dục hiện đại, tạo nên những bài học mang tính thực tiễn cao.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Giáo dục Phần Lan – Nền giáo dục hạnh phúc nhất thế giới
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Phần Lan nổi tiếng với hệ thống giáo dục được đánh giá cao nhất thế giới. Tại Fahasa, những cuốn sách về giáo dục Phần Lan được nhiều phụ huynh săn đón, tiêu biểu có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Bí Quyết Dạy Con Kiểu Phần Lan"
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Hành Trình Giáo Dục Hạnh Phúc"
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Phương pháp giáo dục Phần Lan nhấn mạnh đến việc tạo ra môi trường học tập hạnh phúc, nơi trẻ được học thông qua trải nghiệm thực tế, được phát triển toàn diện từ trí tuệ, kỹ năng xã hội đến cảm xúc cá nhân. Những cuốn sách này giúp cha mẹ Việt hiểu rằng giáo dục không nhất thiết phải là áp lực thành tích, mà hoàn toàn có thể là một hành trình nuôi dưỡng sự tò mò và đam mê tự nhiên của trẻ.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Giáo dục Mỹ – Khuyến khích tư duy sáng tạo và tinh thần phản biện
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Mỹ là quốc gia nổi bật với những phương pháp giáo dục kích thích tư duy sáng tạo và phản biện độc lập. Các cuốn sách về giáo dục Mỹ trên Fahasa thường tập trung vào việc giúp trẻ phát triển kỹ năng giải quyết vấn đề, tư duy logic và sự tự tin trong giao tiếp. Những đầu sách tiêu biểu có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Nuôi Dạy Con Kiểu Mỹ"
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        "Dạy Trẻ Tư Duy Phản Biện"
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Các cuốn sách này hướng dẫn cha mẹ cách tạo ra môi trường mở, nơi trẻ được tự do bày tỏ quan điểm, dám thắc mắc và tranh luận để tự tìm ra câu trả lời thay vì học thụ động.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lợi ích khi tiếp cận nhiều phương pháp giáo dục đa quốc gia
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    So sánh và chọn lọc những gì phù hợp nhất
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không có phương pháp giáo dục nào hoàn hảo tuyệt đối. Mỗi quốc gia với nền văn hóa, điều kiện xã hội và đặc điểm dân tộc khác nhau sẽ có những ưu điểm riêng trong giáo dục trẻ. Khi tiếp cận những đầu sách từ nhiều nước tại Fahasa, phụ huynh Việt có cơ hội so sánh, đánh giá khách quan để chọn lọc ra những gì phù hợp nhất với hoàn cảnh gia đình mình.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Tư duy mở và linh hoạt trong cách dạy con
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tiếp cận đa dạng phương pháp giúp cha mẹ tránh được tư duy giáo dục cứng nhắc, áp đặt. Thay vào đó, họ học cách linh hoạt trong từng hoàn cảnh cụ thể, tùy theo tính cách, sở thích và khả năng của từng đứa trẻ mà áp dụng phương pháp phù hợp.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Mở rộng vốn kiến thức giáo dục toàn cầu
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Việc đọc những cuốn sách về giáo dục trẻ các nước cũng giúp phụ huynh Việt mở mang tầm nhìn, nhận ra rằng mỗi nền giáo dục có những triết lý sâu xa và bài học quý giá riêng. Học hỏi những tinh hoa này không chỉ giúp nâng cao chất lượng nuôi dạy con tại gia đình mà còn góp phần thay đổi tư duy giáo dục cộng đồng theo hướng văn minh, tiến bộ hơn.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Fahasa – Nguồn cung cấp sách giáo dục trẻ đa quốc gia phong phú và tin cậy
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Với vị thế là một trong những đơn vị phân phối sách lớn nhất Việt Nam, Fahasa không ngừng mở rộng và cập nhật danh mục sách phương pháp giáo dục trẻ các nước, mang đến cho độc giả Việt Nam những lựa chọn phong phú, cập nhật liên tục các xu hướng giáo dục toàn cầu mới nhất. Các đầu sách tại Fahasa không chỉ đa dạng về nội dung mà còn đảm bảo về chất lượng dịch thuật, biên tập, giúp độc giả dễ dàng tiếp cận những kiến thức chuyên sâu theo cách gần gũi, dễ hiểu.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Ngoài ra, Fahasa thường xuyên có các chương trình khuyến mãi, giảm giá cho danh mục sách nuôi dạy con, đặc biệt là các dòng sách phương pháp giáo dục đa quốc gia. Điều này giúp các bậc cha mẹ dễ dàng tiếp cận kho tàng tri thức quý giá với mức giá phải chăng.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lời kết 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục sách phương pháp giáo dục trẻ các nước tại Fahasa không chỉ đơn thuần là tập hợp các đầu sách hay, mà còn là cánh cửa tri thức mở ra thế giới giáo dục đa dạng, tiến bộ. Từ những phương pháp giáo dục kiểu Nhật kỷ luật, kiểu Mỹ sáng tạo đến kiểu Phần Lan hạnh phúc, tất cả đều đang chờ đón cha mẹ Việt khám phá và chọn lọc. Bằng cách tiếp cận đa dạng góc nhìn, phụ huynh không chỉ nâng cao kiến thức nuôi dạy con mà còn góp phần xây dựng thế hệ trẻ Việt Nam tự tin, sáng tạo và hội nhập toàn cầu.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (291, now(), now(), 'Dinh Dưỡng - Sức Khỏe Cho Trẻ', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Dinh dưỡng - Sức khỏe cho trẻ
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Dinh dưỡng và sức khỏe luôn là hai yếu tố cốt lõi quyết định đến sự phát triển toàn diện của trẻ em, đặc biệt trong những năm đầu đời. Một chế độ dinh dưỡng khoa học không chỉ giúp trẻ phát triển thể chất tối ưu mà còn hỗ trợ trí não, tăng cường hệ miễn dịch, giảm thiểu nguy cơ mắc bệnh. Bên cạnh đó, việc chăm sóc sức khỏe đúng cách giúp trẻ hình thành thói quen sống lành mạnh, đảm bảo nền tảng thể chất vững chắc cho tương lai. Chính vì tầm quan trọng này, nhiều phụ huynh hiện nay rất quan tâm tới việc trang bị kiến thức bài bản về dinh dưỡng và sức khỏe trẻ em thông qua những nguồn tài liệu uy tín, trong đó, sách là một lựa chọn hàng đầu.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Thấu hiểu nhu cầu cấp thiết đó, Fahasa - nhà sách trực tuyến lớn và uy tín hàng đầu Việt Nam - đã xây dựng một danh mục sách chuyên biệt mang tên 
+  </span>
+  <span>
+    Dinh dưỡng - Sức khỏe cho trẻ
+  </span>
+  <span>
+    , quy tụ hàng trăm đầu sách giá trị, cung cấp kiến thức khoa học, thực tiễn và cập nhật nhất về chế độ ăn uống, chăm sóc sức khỏe, phòng tránh bệnh tật, cũng như hướng dẫn xây dựng lối sống lành mạnh cho trẻ ngay từ nhỏ.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Tổng quan về danh mục sách Dinh dưỡng - Sức khỏe cho trẻ tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Số lượng đầu sách phong phú, chủ đề đa dạng
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tại danh mục này, Fahasa cung cấp hàng trăm đầu sách được chọn lọc kỹ lưỡng, đáp ứng nhiều nhu cầu khác nhau của phụ huynh. Những chủ đề nổi bật bao gồm:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dinh dưỡng theo từng độ tuổi (sơ sinh, 1-3 tuổi, 3-6 tuổi, tuổi dậy thì…)
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Chế độ ăn bổ sung vi chất, tăng cường sức đề kháng cho trẻ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Phương pháp ăn dặm khoa học (ăn dặm kiểu Nhật, ăn dặm bé tự chỉ huy - BLW)
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dinh dưỡng hỗ trợ phát triển trí tuệ, chiều cao
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Chăm sóc sức khỏe theo mùa, phòng bệnh theo thời tiết
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Phòng và xử lý các bệnh thường gặp ở trẻ em
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tập luyện, vận động giúp trẻ khỏe mạnh toàn diện
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    2. Sách từ các tác giả uy tín, chuyên gia đầu ngành
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Điểm đặc biệt của danh mục này tại Fahasa chính là nguồn sách chất lượng, được biên soạn bởi các bác sĩ nhi khoa, chuyên gia dinh dưỡng, chuyên gia giáo dục sớm có uy tín trong và ngoài nước. Một số tác giả nổi bật có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        BS Đào Thị Yến Thủy
+      </span>
+      <span>
+         – chuyên gia dinh dưỡng hàng đầu tại Việt Nam.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        ThS BS Lê Thị Hải
+      </span>
+      <span>
+         – Viện Dinh dưỡng Quốc gia.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        BS Nguyễn Trí Đoàn
+      </span>
+      <span>
+         – bác sĩ nhi khoa nổi tiếng với cách tư vấn khoa học, thực tiễn.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Annabel Karmel
+      </span>
+      <span>
+         – chuyên gia dinh dưỡng trẻ em nổi tiếng thế giới.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tsukuda Yumi
+      </span>
+      <span>
+         – chuyên gia ăn dặm kiểu Nhật.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách đến từ các chuyên gia này đều được đánh giá cao về tính thực tiễn, dễ áp dụng tại gia đình Việt.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Định dạng sách phong phú, trình bày khoa học
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh các đầu sách giấy truyền thống, Fahasa còn cập nhật nhiều ấn phẩm ebook để thuận tiện cho các bậc phụ huynh bận rộn. Các cuốn sách đều được trình bày theo lối dễ hiểu, trực quan, có nhiều hình minh họa sinh động, bảng biểu chi tiết, giúp việc tiếp cận thông tin dễ dàng và tiết kiệm thời gian hơn.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Một số đầu sách nổi bật trong danh mục
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Ăn Dặm Không Nước Mắt
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Cuốn sách hướng dẫn chi tiết về phương pháp ăn dặm bé tự chỉ huy (BLW), giúp trẻ phát triển khả năng tự lập trong ăn uống, rèn luyện kỹ năng nhai, nuốt và cảm nhận hương vị tự nhiên của thực phẩm. Sách không chỉ cung cấp thực đơn mẫu mà còn hướng dẫn cách xử lý tình huống bé biếng ăn, nôn trớ hay dị ứng thực phẩm.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Dinh Dưỡng Vàng Cho Trẻ Từ 0 - 6 Tuổi
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Đây là cuốn cẩm nang toàn diện về dinh dưỡng dành cho trẻ từ sơ sinh đến khi bước vào tiểu học, bao gồm chế độ ăn theo từng giai đoạn phát triển, hướng dẫn bổ sung vi chất, vitamin cần thiết, đồng thời tư vấn cách phòng tránh suy dinh dưỡng, béo phì, thiếu vi chất.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Chăm Sóc Sức Khỏe Cho Trẻ Theo Mùa
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Cuốn sách đặc biệt hữu ích với các bậc cha mẹ đang nuôi con nhỏ tại Việt Nam, nơi thời tiết thay đổi liên tục và trẻ em dễ mắc các bệnh theo mùa như cảm cúm, sốt siêu vi, tiêu chảy, viêm phổi. Sách cung cấp kiến thức khoa học về phòng bệnh, dinh dưỡng hỗ trợ miễn dịch và cách xử lý khi trẻ ốm.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lợi ích khi tham khảo sách dinh dưỡng - sức khỏe cho trẻ tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Trang bị kiến thức khoa học, bài bản
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Thay vì chỉ nghe theo kinh nghiệm dân gian hoặc thông tin chưa kiểm chứng trên mạng xã hội, các bậc phụ huynh có thể tiếp cận nguồn kiến thức khoa học, được biên soạn bài bản từ các chuyên gia uy tín.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Cập nhật xu hướng dinh dưỡng, chăm sóc sức khỏe mới
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Thế giới dinh dưỡng và y học liên tục thay đổi, cập nhật. Đọc sách mới giúp phụ huynh nắm bắt những khuyến nghị mới nhất từ Tổ chức Y tế Thế giới (WHO), các hiệp hội dinh dưỡng uy tín để áp dụng phù hợp cho con.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Giúp trẻ hình thành thói quen sống lành mạnh
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không chỉ cung cấp kiến thức về ăn uống khoa học, các cuốn sách trong danh mục này còn hướng dẫn cha mẹ cách xây dựng lối sống lành mạnh cho trẻ, từ việc rèn luyện thể dục thể thao, ngủ nghỉ đúng giờ, giữ vệ sinh cá nhân cho đến kiểm soát các yếu tố tâm lý, tinh thần.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Fahasa – Địa chỉ tin cậy cho các bậc phụ huynh
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Với danh mục sách dinh dưỡng - sức khỏe cho trẻ được đầu tư phong phú và chất lượng, Fahasa đang trở thành điểm đến tin cậy cho mọi gia đình Việt. Không chỉ đảm bảo sách chính hãng, Fahasa còn thường xuyên triển khai các chương trình ưu đãi hấp dẫn, giúp các bậc phụ huynh dễ dàng sở hữu những cuốn sách giá trị với chi phí tiết kiệm nhất.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Ngoài ra, dịch vụ giao hàng nhanh chóng, tiện lợi trên toàn quốc của Fahasa cũng giúp các bậc cha mẹ dù ở thành phố lớn hay vùng xa đều có thể tiếp cận kho tri thức này một cách dễ dàng.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Lời kết 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Với mong muốn đồng hành cùng các bậc phụ huynh trên hành trình nuôi dưỡng và chăm sóc sức khỏe toàn diện cho trẻ, Fahasa không ngừng cập nhật và mang đến những cuốn sách hay, hữu ích và khoa học nhất. Hãy cùng Fahasa trang bị kiến thức vững vàng để con yêu khôn lớn khỏe mạnh mỗi ngày!
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (292, now(), now(), 'Giáo Dục Trẻ Tuổi Teen', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Giáo dục trẻ tuổi teen
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Tuổi teen – hay còn gọi là tuổi vị thành niên, là một trong những giai đoạn đặc biệt quan trọng trong quá trình phát triển của trẻ. Đây là thời kỳ chuyển giao từ trẻ con sang người lớn, nơi các em vừa có nhu cầu khẳng định cái tôi, vừa phải đối mặt với rất nhiều thay đổi về tâm sinh lý, các mối quan hệ xã hội và cả áp lực học tập. Việc giáo dục trẻ tuổi teen không hề đơn giản, bởi các em không còn nhỏ để răm rắp nghe theo mọi chỉ dẫn, nhưng cũng chưa đủ trưởng thành để tự ra quyết định sáng suốt trong mọi tình huống. Chính vì vậy, cha mẹ, thầy cô và những người làm công tác giáo dục cần có sự thấu hiểu, đồng hành và trang bị cho mình những kiến thức, kỹ năng cần thiết để giúp trẻ vượt qua giai đoạn này một cách tích cực nhất.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Hiểu được nhu cầu bức thiết đó, Fahasa – nhà sách trực tuyến hàng đầu Việt Nam – đã xây dựng một danh mục sách chuyên biệt mang tên Giáo dục trẻ tuổi teen, quy tụ hàng trăm đầu sách hay, chuyên sâu và thực tiễn nhất. Những cuốn sách này không chỉ giúp phụ huynh, giáo viên có thêm công cụ để đồng hành cùng con, mà còn là cẩm nang hữu ích để chính các bạn teen tự đọc, tự nhận thức và điều chỉnh bản thân.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Tổng quan về danh mục sách Giáo dục trẻ tuổi teen tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Số lượng đầu sách phong phú, chủ đề đa dạng
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục sách 
+  </span>
+  <span>
+    Giáo dục trẻ tuổi teen
+  </span>
+  <span>
+     trên Fahasa hiện quy tụ hơn 200 đầu sách với rất nhiều chủ đề bao quát các khía cạnh quan trọng trong quá trình giáo dục trẻ vị thành niên, bao gồm:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giáo dục giới tính và sức khỏe sinh sản tuổi teen
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Rèn luyện kỹ năng sống, kỹ năng xã hội cho tuổi teen
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Phát triển tư duy, quản lý cảm xúc và giải quyết mâu thuẫn
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hướng nghiệp và phát triển bản thân cho thanh thiếu niên
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giáo dục giá trị sống, đạo đức, ý thức trách nhiệm xã hội
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hướng dẫn cha mẹ giao tiếp và đồng hành cùng con tuổi teen
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách tâm lý học lứa tuổi vị thành niên
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Sự đa dạng về nội dung giúp danh mục này đáp ứng được nhu cầu của nhiều đối tượng: từ phụ huynh, giáo viên, chuyên gia tâm lý, đến chính các bạn trẻ tuổi teen muốn tự khám phá và hoàn thiện bản thân.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Nguồn sách từ các tác giả và chuyên gia uy tín
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục sách giáo dục trẻ tuổi teen tại Fahasa hội tụ rất nhiều cuốn sách từ các tác giả, chuyên gia tâm lý, giáo dục hàng đầu trong và ngoài nước. Một số cái tên tiêu biểu có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        ThS. Nguyễn Thị Thu – chuyên gia tâm lý giáo dục tuổi vị thành niên tại Việt Nam
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        TS. Nguyễn Thị Bích Hồng – chuyên gia tham vấn tâm lý học đường
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dr. Lisa Damour – tác giả nhiều đầu sách best-seller về tâm lý vị thành niên
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nguyễn Thị Oanh – tác giả các cuốn sách kỹ năng sống nổi tiếng tại Việt Nam
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sean Covey – tác giả cuốn sách đình đám "7 thói quen của bạn trẻ thành đạt"
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách từ các tác giả này không chỉ cung cấp kiến thức, lý thuyết nền tảng mà còn lồng ghép nhiều tình huống thực tế, câu chuyện điển hình giúp người đọc dễ dàng liên hệ và áp dụng vào đời sống.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Định dạng sách phong phú, trình bày khoa học
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh các đầu sách giấy truyền thống, Fahasa còn mang đến nhiều lựa chọn ebook, audiobook, giúp phụ huynh và các bạn trẻ dễ dàng tiếp cận mọi lúc, mọi nơi. Hình thức trình bày khoa học, nhiều minh họa sinh động, ngôn ngữ gần gũi, dễ hiểu giúp sách giáo dục tuổi teen trở nên hấp dẫn, không khô khan, cứng nhắc.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Một số đầu sách nổi bật trong danh mục
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. 7 Thói Quen Của Bạn Trẻ Thành Đạt – Sean Covey
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Cuốn sách được mệnh danh là cẩm nang kỹ năng sống kinh điển dành cho tuổi teen. Với ngôn ngữ trẻ trung, dễ hiểu, cuốn sách giúp các bạn trẻ nhận diện thói quen tốt, xây dựng lối sống tích cực, biết đặt mục tiêu và lên kế hoạch thực hiện ước mơ.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Bí Quyết Nói Chuyện Với Con Tuổi Teen – Adele Faber &amp; Elaine Mazlish
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Dành cho các bậc phụ huynh đang loay hoay tìm cách giao tiếp hiệu quả với con tuổi dậy thì. Cuốn sách đưa ra những hướng dẫn thực tế, giúp cha mẹ tránh những xung đột không đáng có và xây dựng mối quan hệ gắn kết với con.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Tôi Tài Giỏi, Bạn Cũng Thế! – Adam Khoo
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không chỉ đơn thuần là sách phát triển bản thân, cuốn sách này còn truyền cảm hứng mạnh mẽ, giúp các bạn trẻ thay đổi tư duy, tự tin khám phá tiềm năng và theo đuổi những mục tiêu lớn trong cuộc sống.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Vai trò quan trọng của sách giáo dục trẻ tuổi teen
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Cầu nối giữa cha mẹ và con cái
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tuổi teen nổi tiếng là giai đoạn khó khăn trong giao tiếp giữa cha mẹ và con cái. Những cuốn sách trong danh mục này giúp phụ huynh hiểu hơn về tâm lý của con, từ đó có cách trò chuyện, chia sẻ và định hướng phù hợp.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Giúp teen trang bị kỹ năng sống và phát triển bản thân
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Không chỉ học kiến thức từ trường lớp, các bạn trẻ ngày nay còn cần nhiều kỹ năng mềm: giao tiếp, quản lý cảm xúc, tư duy phản biện, làm việc nhóm… Những kỹ năng này được giới thiệu và hướng dẫn chi tiết trong các cuốn sách giáo dục tuổi teen.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Hỗ trợ giáo viên, chuyên gia tham vấn học đường
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh phụ huynh, giáo viên và chuyên gia tâm lý học đường cũng là những người cần hiểu rõ tâm lý, nhu cầu của học sinh tuổi teen để hỗ trợ các em tốt nhất. Sách giáo dục tuổi teen tại Fahasa là nguồn tài liệu tham khảo hữu ích cho các đối tượng này.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Fahasa – Địa chỉ tin cậy để mua sách giáo dục trẻ tuổi teen
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Với danh mục sách phong phú, cập nhật liên tục và đảm bảo chính hãng, Fahasa không chỉ là nơi mua sắm đáng tin cậy của phụ huynh, giáo viên mà còn là địa chỉ yêu thích của các bạn trẻ yêu thích khám phá bản thân qua từng trang sách.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Fahasa thường xuyên có chương trình khuyến mãi hấp dẫn, giao hàng nhanh chóng trên toàn quốc, mang đến trải nghiệm mua sắm tiện lợi, tiết kiệm cho mọi khách hàng. Phụ huynh, thầy cô và các bạn trẻ hãy ghé ngay Fahasa để khám phá kho tàng sách giáo dục trẻ tuổi teen phong phú, đa dạng và hữu ích nhất!
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Kết luận
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục Sách giáo dục trẻ tuổi teen tại Fahasa không chỉ đơn thuần là những cuốn sách hướng dẫn nuôi dạy con mà còn là cánh cửa mở ra thế giới tâm lý tuổi teen đầy màu sắc, thú vị. Đây thực sự là kho tàng tri thức quý giá, giúp cha mẹ, giáo viên đồng hành cùng con trẻ một cách khoa học và hiệu quả nhất.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (293, now(), now(), 'Dành Cho Mẹ Bầu', 287, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Dành cho mẹ bầu
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục sách dành cho mẹ bầu trên Fahasa không đơn thuần gói gọn trong vài đầu sách tham khảo đơn giản, mà mở rộng ra thành một "thư viện nhỏ" với hàng trăm tựa sách phong phú, bao phủ toàn bộ các khía cạnh liên quan đến thai kỳ và làm mẹ. Tại đây, mẹ bầu có thể dễ dàng tìm thấy:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách hướng dẫn chăm sóc sức khỏe thai kỳ toàn diện
+      </span>
+      <span>
+        , từ chế độ ăn uống, sinh hoạt, theo dõi sức khỏe cho đến các bài tập vận động nhẹ nhàng phù hợp cho từng giai đoạn thai kỳ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách hướng dẫn chuẩn bị tâm lý làm mẹ
+      </span>
+      <span>
+         – giúp mẹ vượt qua những cảm xúc tiêu cực như stress, lo âu, mất ngủ khi mang thai.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách giáo dục thai nhi sớm (Thai giáo)
+      </span>
+      <span>
+         – hướng dẫn cách tương tác, trò chuyện và kích thích trí não bé phát triển ngay từ trong bụng mẹ.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách kỹ năng sinh nở, hướng dẫn chi tiết các giai đoạn chuyển dạ, sinh con và phục hồi sau sinh
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách chia sẻ kinh nghiệm làm mẹ thực tế
+      </span>
+      <span>
+         từ những người nổi tiếng, bác sĩ sản khoa, chuyên gia tâm lý hoặc các hot mom đình đám.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách về dinh dưỡng cho bà bầu và thai nhi
+      </span>
+      <span>
+         – những công thức món ăn ngon, dễ làm, tốt cho mẹ và bé.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách chăm sóc sức khỏe tinh thần cho mẹ bầu
+      </span>
+      <span>
+        , hướng dẫn thiền, yoga bầu, các phương pháp thư giãn để giảm căng thẳng trong thai kỳ.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Sự đa dạng này giúp danh mục 
+  </span>
+  <span>
+    Dành cho mẹ bầu
+  </span>
+  <span>
+     tại Fahasa trở thành người bạn đồng hành tin cậy, cung cấp tri thức và kinh nghiệm quý báu cho mọi bà mẹ, từ những người lần đầu mang thai đến những mẹ đã có kinh nghiệm sinh con nhưng muốn cập nhật kiến thức mới.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Quy tụ sách từ nhiều tác giả nổi tiếng trong và ngoài nước
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Một trong những điểm sáng của danh mục này là sự góp mặt của hàng loạt đầu sách chất lượng từ các tác giả, chuyên gia đầu ngành trong lĩnh vực thai sản, dinh dưỡng và tâm lý học. Có thể kể đến:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Bác sĩ Nguyễn Phương Hồng
+      </span>
+      <span>
+         – chuyên gia sản khoa với nhiều năm kinh nghiệm.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Bác sĩ Sears
+      </span>
+      <span>
+         – tác giả bộ sách 
+      </span>
+      <span>
+        Chăm sóc bé yêu toàn diện
+      </span>
+      <span>
+        , nổi tiếng toàn cầu.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Hot mom Minh Trang
+      </span>
+      <span>
+         – tác giả các đầu sách nuôi dạy con được nhiều bà mẹ Việt yêu thích.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Ts. Trần Bạch Cung
+      </span>
+      <span>
+         – chuyên gia dinh dưỡng hàng đầu tại Việt Nam.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Shichida Makoto
+      </span>
+      <span>
+         – cha đẻ phương pháp thai giáo nổi tiếng Nhật Bản.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Ina May Gaskin
+      </span>
+      <span>
+         – huyền thoại đỡ đẻ tự nhiên tại Mỹ, tác giả cuốn sách kinh điển về sinh nở.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những đầu sách từ các tác giả uy tín giúp mẹ bầu hoàn toàn yên tâm về độ chính xác của thông tin, đồng thời dễ dàng chọn lọc kiến thức phù hợp với bản thân.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Bố cục khoa học, ngôn ngữ dễ hiểu, phù hợp với mẹ bầu hiện đại
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Sách dành cho mẹ bầu tại Fahasa có ưu điểm nổi bật là trình bày khoa học, dễ tra cứu theo từng giai đoạn thai kỳ hoặc từng vấn đề cụ thể. Phần lớn các sách đều sử dụng ngôn ngữ gần gũi, dễ đọc, kết hợp hình ảnh minh họa sinh động, biểu đồ trực quan giúp mẹ bầu dễ dàng nắm bắt thông tin, ngay cả khi cơ thể mệt mỏi do thai nghén.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Một số đầu sách tiêu biểu trong danh mục sách dành cho mẹ bầu tại Fahasa
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    1. Cẩm Nang Mang Thai Toàn Tập – Dr. Miriam Stoppard
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Đây là cuốn sách "gối đầu giường" của hàng triệu mẹ bầu trên thế giới. Nội dung bao quát toàn bộ thai kỳ từ khi chuẩn bị mang thai, theo dõi sức khỏe từng giai đoạn, các triệu chứng cần lưu ý cho đến khi sinh con và chăm sóc bé sơ sinh.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    2. Thai Giáo – Dạy Con Từ Trong Bụng Mẹ – Shichida Makoto
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Cuốn sách trình bày toàn bộ phương pháp thai giáo nổi tiếng của Nhật Bản, giúp mẹ bầu nuôi dưỡng trí tuệ và cảm xúc của bé ngay từ khi còn trong bụng mẹ.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    3. Bí Quyết Vượt Qua Trầm Cảm Khi Mang Thai Và Sau Sinh
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Sách cung cấp kiến thức khoa học về sức khỏe tinh thần của mẹ bầu, cách nhận diện và xử lý các dấu hiệu trầm cảm thai kỳ, giúp mẹ luôn giữ được trạng thái tâm lý tích cực.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Fahasa – Địa chỉ mua sách dành cho mẹ bầu tin cậy, tiện lợi
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Mua sách dành cho mẹ bầu tại Fahasa không chỉ đảm bảo nguồn gốc chính hãng, chất lượng sách tốt mà còn đi kèm nhiều tiện ích như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Danh mục cập nhật liên tục
+      </span>
+      <span>
+        , bắt kịp những đầu sách mới, xu hướng nuôi dạy con hiện đại.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhiều chương trình khuyến mãi hấp dẫn
+      </span>
+      <span>
+        , giúp mẹ bầu tiết kiệm chi phí.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Dịch vụ giao hàng nhanh
+      </span>
+      <span>
+        , tiện lợi trên toàn quốc.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tư vấn tận tình
+      </span>
+      <span>
+        , giúp mẹ dễ dàng tìm được đầu sách phù hợp nhất.
+      </span>
+    </p>
+  </li>
+</ul>
+<h2 dir="ltr">
+  <span>
+    Lời kết 
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục sách Dành cho mẹ bầu tại Fahasa chính là kho tàng tri thức quý giá đồng hành cùng mẹ trong suốt thai kỳ. Từ những kiến thức khoa học về dinh dưỡng, sức khỏe, đến những chia sẻ cảm xúc chân thực, mọi vấn đề mẹ cần đều có trong những trang sách tại Fahasa. Đây không chỉ là những cuốn sách đơn thuần, mà còn là người bạn đồng hành thân thiết, giúp mẹ bầu tự tin tận hưởng hành trình làm mẹ đầy yêu thương và hạnh phúc.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (294, now(), now(), 'Chính Trị - Pháp Lý - Triết Học', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Chính Trị - Pháp Lý - Triết Học
   </span>
@@ -29151,7 +30319,7 @@ values (288, now(), now(), 'Chính Trị - Pháp Lý - Triết Học', null, '<h
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (289, now(), now(), 'Triết Học- Lý Luận Chính Trị', 288, '<h2 dir="ltr">
+values (295, now(), now(), 'Triết Học- Lý Luận Chính Trị', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Triết học - Lý luận chính trị
   </span>
@@ -29431,7 +30599,7 @@ values (289, now(), now(), 'Triết Học- Lý Luận Chính Trị', 288, '<h2 d
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (290, now(), now(), 'Luật - Văn Bản Dưới Luật', 288, '<h2 dir="ltr">
+values (296, now(), now(), 'Luật - Văn Bản Dưới Luật', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Luật - Văn bản dưới luật
   </span>
@@ -29719,7 +30887,7 @@ values (290, now(), now(), 'Luật - Văn Bản Dưới Luật', 288, '<h2 dir="
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (291, now(), now(), 'Nhân Vật và Sự kiện', 288, '<h2 dir="ltr">
+values (297, now(), now(), 'Nhân Vật và Sự kiện', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nhân vật và Sự kiện 
   </span>
@@ -30070,7 +31238,7 @@ values (291, now(), now(), 'Nhân Vật và Sự kiện', 288, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (292, now(), now(), 'Đội - Đoàn - Đảng', 288, '<h2 dir="ltr">
+values (298, now(), now(), 'Đội - Đoàn - Đảng', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Đội - Đoàn - Đảng
   </span>
@@ -30522,7 +31690,7 @@ values (292, now(), now(), 'Đội - Đoàn - Đảng', 288, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (293, now(), now(), 'Văn Kiện', 288, '<h2 dir="ltr">
+values (299, now(), now(), 'Văn Kiện', 294, '<h2 dir="ltr">
   <span>
     Thông tin danh mục Văn Kiện
   </span>
@@ -31294,1680 +32462,7 @@ values (293, now(), now(), 'Văn Kiện', 288, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (294, now(), now(), 'Nuôi Dạy Con', null, '<h1 dir="ltr">
-  <span>
-    Thông tin danh mục Sách Nuôi Dạy Con
-  </span>
-</h1>
-<p dir="ltr">
-  <span>
-    Nuôi dạy con là một hành trình đầy thử thách nhưng cũng tràn đầy niềm vui và ý nghĩa. Việc trang bị kiến thức về giáo dục, tâm lý, dinh dưỡng và sức khỏe cho trẻ là điều vô cùng quan trọng đối với các bậc cha mẹ. Hiểu được nhu cầu này, Fahasa mang đến danh mục sách nuôi dạy con phong phú và đa dạng, giúp phụ huynh có thể tìm thấy những thông tin hữu ích để đồng hành cùng con trên chặng đường phát triển.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Danh mục sách nuôi dạy con tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    Sách cẩm nang làm cha mẹ
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Làm cha mẹ là một trải nghiệm tuyệt vời nhưng cũng đầy thách thức. Những cuốn sách thuộc danh mục này sẽ giúp cha mẹ có cái nhìn toàn diện về cách nuôi dạy con từ những năm tháng đầu đời cho đến khi trưởng thành. Các chủ đề phổ biến bao gồm phương pháp giáo dục, cách xử lý tình huống khó khăn, xây dựng mối quan hệ giữa cha mẹ và con cái, cũng như những lời khuyên thực tế từ các chuyên gia.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách phát triển kỹ năng - trí tuệ cho trẻ
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Mỗi đứa trẻ đều có tiềm năng vô hạn, và nhiệm vụ của cha mẹ là giúp con phát huy tối đa khả năng của mình. Fahasa cung cấp nhiều sách về phát triển kỹ năng sống, tư duy sáng tạo, trí tuệ cảm xúc và khả năng giao tiếp cho trẻ. Những cuốn sách này không chỉ cung cấp lý thuyết mà còn đưa ra các bài tập thực hành giúp trẻ học hỏi một cách hiệu quả.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách phương pháp giáo dục trẻ các nước
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Mỗi quốc gia có những phương pháp giáo dục riêng biệt, mang lại những giá trị và lợi ích khác nhau cho trẻ. Tại Fahasa, bạn có thể tìm thấy những cuốn sách về phương pháp giáo dục nổi tiếng như Montessori, Glenn Doman, Shichida hay phương pháp giáo dục của người Do Thái, Phần Lan và Nhật Bản. Những cuốn sách này sẽ giúp cha mẹ tham khảo và áp dụng những cách dạy con phù hợp với gia đình mình.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách dinh dưỡng - sức khỏe cho trẻ
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Dinh dưỡng và sức khỏe đóng vai trò quan trọng trong sự phát triển toàn diện của trẻ. Fahasa mang đến nhiều đầu sách về chế độ ăn uống khoa học, thực đơn lành mạnh, chăm sóc sức khỏe, phòng tránh bệnh tật và những lưu ý quan trọng trong từng giai đoạn phát triển của trẻ. Những cuốn sách này sẽ là người bạn đồng hành đáng tin cậy của các bậc phụ huynh trong việc đảm bảo con mình luôn khỏe mạnh và phát triển tốt nhất.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách giáo dục trẻ tuổi teen
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tuổi teen là giai đoạn trẻ bắt đầu tự lập và phát triển bản sắc cá nhân. Đây cũng là thời điểm các bậc cha mẹ cần có sự thấu hiểu và đồng hành đúng cách. Fahasa mang đến nhiều cuốn sách giúp cha mẹ hiểu rõ tâm lý tuổi teen, hỗ trợ con trong học tập, định hướng nghề nghiệp, phát triển nhân cách và xây dựng mối quan hệ gia đình tốt đẹp.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách dành cho mẹ bầu
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Hành trình làm mẹ bắt đầu từ khi mang thai, và việc chuẩn bị kiến thức từ sớm là vô cùng quan trọng. Fahasa cung cấp nhiều sách hướng dẫn dành cho mẹ bầu, bao gồm chăm sóc thai kỳ, chế độ dinh dưỡng, bài tập thể dục phù hợp, sinh con tự nhiên, cũng như cách chuẩn bị tâm lý để chào đón thiên thần nhỏ. Những cuốn sách này sẽ giúp các mẹ có một thai kỳ khỏe mạnh và suôn sẻ.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Vì sao nên mua sách nuôi dạy con tại Fahasa?
-  </span>
-</h2>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <strong>
-        Kho sách đa dạng
-      </strong>
-      <span>
-        <strong>
-          :
-        </strong>
-         Fahasa mang đến hàng trăm đầu sách với nội dung phong phú, phù hợp với mọi giai đoạn phát triển của trẻ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <strong>
-        Chất lượng đảm bảo
-      </strong>
-      <span>
-        <strong>
-          :
-        </strong>
-         Các sách đều được xuất bản bởi những nhà xuất bản uy tín, đảm bảo độ chính xác và giá trị thông tin cao.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <strong>
-        Tiện lợi mua sắm
-      </strong>
-      <span>
-        <strong>
-          :
-        </strong>
-         Khách hàng có thể dễ dàng tìm kiếm, đặt hàng trực tuyến và nhận sách ngay tại nhà.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <strong>
-        Giá cả hợp lý
-      </strong>
-      <span>
-        <strong>
-          :
-        </strong>
-         Fahasa luôn có mức giá cạnh tranh cùng nhiều chương trình khuyến mãi hấp dẫn.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Nuôi dạy con không chỉ là trách nhiệm mà còn là niềm vui và hạnh phúc của mỗi bậc cha mẹ. Việc trang bị kiến thức đúng đắn sẽ giúp phụ huynh đồng hành cùng con một cách hiệu quả, giúp trẻ phát triển toàn diện cả về trí tuệ lẫn nhân cách. Với danh mục sách nuôi dạy con phong phú tại Fahasa, bạn sẽ dễ dàng tìm thấy những cuốn sách phù hợp nhất để hỗ trợ hành trình làm cha mẹ của mình. Hãy khám phá ngay hôm nay để trang bị cho mình những kiến thức bổ ích và cùng con trưởng thành một cách tốt nhất!
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (295, now(), now(), 'Cẩm Nang Làm Cha Mẹ', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục Cẩm nang làm cha mẹ
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Làm cha mẹ là hành trình tuyệt vời nhưng cũng đầy thử thách, nơi mỗi ngày trôi qua đều mang đến những niềm vui, bất ngờ xen lẫn những băn khoăn, lo lắng. Từ lúc con cất tiếng khóc chào đời đến những bước đi đầu tiên, từ giai đoạn khủng hoảng tuổi lên ba đến tuổi dậy thì đầy biến động – tất cả đều đòi hỏi cha mẹ không ngừng học hỏi để đồng hành và thấu hiểu con cái. Chính vì vậy, những cuốn cẩm nang làm cha mẹ trở thành người bạn đồng hành không thể thiếu trên hành trình nuôi dạy con trưởng thành.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Nhằm đáp ứng nhu cầu tìm kiếm tài liệu hữu ích và chất lượng cho các bậc phụ huynh Việt Nam, Fahasa đã xây dựng riêng một danh mục sách mang tên Cẩm nang làm cha mẹ. Đây là nơi tập hợp hàng trăm đầu sách phong phú, đa dạng chủ đề, được tuyển chọn từ các tác giả uy tín, chuyên gia tâm lý, giáo dục, bác sĩ nhi khoa hàng đầu trong và ngoài nước.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Đa dạng chủ đề – Bao quát mọi khía cạnh nuôi dạy con
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Sách hướng dẫn nuôi dạy con theo từng độ tuổi
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Mỗi giai đoạn phát triển của trẻ đều có những đặc điểm tâm sinh lý, hành vi riêng biệt. Vì vậy, Fahasa đặc biệt chú trọng cung cấp những cuốn sách hướng dẫn nuôi dạy con theo từng độ tuổi cụ thể, giúp cha mẹ hiểu rõ sự phát triển của con từ khi sơ sinh đến khi trưởng thành.
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cẩm nang nuôi con từ 0 - 1 tuổi
-      </span>
-      <span>
-        : Tập trung vào các kỹ năng chăm sóc bé sơ sinh, cho bú, ăn dặm, giấc ngủ khoa học, chăm sóc sức khỏe và nhận diện dấu hiệu bệnh lý.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cẩm nang nuôi dạy bé từ 1 - 3 tuổi
-      </span>
-      <span>
-        : Hướng dẫn phương pháp giáo dục sớm, kích thích trí tuệ, phát triển kỹ năng giao tiếp và xử lý các hành vi bướng bỉnh, khủng hoảng tuổi lên ba.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nuôi dạy con giai đoạn tiểu học
-      </span>
-      <span>
-        : Tập trung vào xây dựng tính tự lập, kỷ luật, thói quen học tập và khả năng quản lý cảm xúc.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dạy con tuổi teen
-      </span>
-      <span>
-        : Giúp cha mẹ hiểu và đồng hành cùng con vượt qua khủng hoảng tuổi dậy thì, định hướng giá trị sống và kỹ năng tự bảo vệ bản thân.
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    2. Sách về thai giáo và chuẩn bị làm cha mẹ
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không chỉ tập trung vào giai đoạn sau sinh, danh mục 
-  </span>
-  <span>
-    Cẩm nang làm cha mẹ
-  </span>
-  <span>
-     của Fahasa còn có những cuốn sách dành cho cha mẹ tương lai, giúp họ chuẩn bị tâm lý, kiến thức và kỹ năng cần thiết ngay từ khi con còn trong bụng mẹ.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Một số tựa sách nổi bật:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Thai giáo – Dạy con từ trong bụng mẹ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cẩm nang mang thai và sinh nở an toàn
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chuẩn bị làm mẹ – Những điều cần biết trong 9 tháng 10 ngày
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách này không chỉ cung cấp kiến thức khoa học về sự phát triển của thai nhi mà còn hướng dẫn các bài tập thai giáo, chế độ dinh dưỡng, chăm sóc sức khỏe bà bầu, giúp mẹ và bé cùng phát triển toàn diện.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Sách về tâm lý trẻ em và giao tiếp cha mẹ – con cái
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Một trong những thách thức lớn nhất của cha mẹ hiện đại chính là hiểu được thế giới nội tâm của con cái. Trẻ em ngày nay sống trong môi trường đầy áp lực, dễ rơi vào trạng thái stress, mất cân bằng cảm xúc nếu không có sự đồng hành, thấu hiểu từ cha mẹ. Fahasa mang đến nhiều đầu sách chuyên sâu về tâm lý trẻ em, kỹ năng giao tiếp tích cực và giải quyết xung đột trong gia đình.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Một số sách tiêu biểu:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hiểu về trái tim con trẻ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Lắng nghe để thấu hiểu – Giao tiếp tích cực với con
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Kỷ luật tích cực – Nuôi dạy con không đòn roi
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách này không chỉ hướng dẫn cha mẹ nắm bắt tâm lý con cái mà còn gợi ý các phương pháp giải quyết mâu thuẫn hiệu quả, giúp xây dựng mối quan hệ gắn kết và tin cậy giữa cha mẹ và con.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    4. Sách giáo dục giới tính và kỹ năng sống cho trẻ
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh việc dạy con về kiến thức học đường, cha mẹ hiện đại cũng rất quan tâm đến giáo dục giới tính và kỹ năng sống. Fahasa cập nhật rất nhiều đầu sách về chủ đề này để giúp cha mẹ trang bị cho con nền tảng kiến thức và kỹ năng cần thiết để tự tin bước vào đời.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Một số đầu sách nổi bật:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo dục giới tính – Cùng con lớn khôn an toàn
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dạy con kỹ năng tự bảo vệ bản thân
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dạy con kỹ năng quản lý tài chính từ nhỏ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách này không chỉ giúp cha mẹ mở ra những cuộc trò chuyện thẳng thắn, cởi mở với con mà còn giúp trẻ hình thành thái độ sống tích cực, biết tự chăm sóc và bảo vệ bản thân.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Vì sao phụ huynh nên chọn sách Cẩm nang làm cha mẹ tại Fahasa?
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Được tuyển chọn kỹ lưỡng từ các nhà xuất bản uy tín
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tất cả các đầu sách trong danh mục đều được Fahasa chọn lọc từ các nhà xuất bản lớn, nội dung đảm bảo tính khoa học, thực tiễn, phù hợp với văn hóa và xã hội Việt Nam, giúp cha mẹ dễ dàng áp dụng vào thực tế.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Phong phú về tác giả và phong cách
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục cẩm nang làm cha mẹ tại Fahasa quy tụ nhiều tác giả nổi tiếng trong và ngoài nước. Mỗi tác giả mang đến góc nhìn độc đáo, kết hợp giữa kiến thức khoa học hiện đại và kinh nghiệm thực tiễn, giúp cha mẹ tiếp cận đa dạng phương pháp nuôi dạy con.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Dễ dàng tìm kiếm và mua sắm
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Với giao diện website thân thiện, cha mẹ có thể dễ dàng tìm kiếm sách theo chủ đề, tác giả, nhà xuất bản. Fahasa cũng thường xuyên có các chương trình giảm giá, freeship, tặng voucher nhằm khuyến khích phụ huynh đầu tư vào tri thức làm cha mẹ.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục Cẩm nang làm cha mẹ tại Fahasa không chỉ là nơi cung cấp kiến thức mà còn là người bạn đồng hành tin cậy giúp các bậc phụ huynh vững vàng hơn trên hành trình nuôi dạy con. Dù con bạn đang ở độ tuổi nào, bạn cũng đều tìm thấy những cuốn sách hữu ích, truyền cảm hứng và gợi mở nhiều cách thức nuôi dạy con hiện đại, khoa học tại Fahasa.com.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (296, now(), now(), 'Phát Triển Kỹ Năng - Trí Tuệ Cho Trẻ', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Phát triển kỹ năng - trí tuệ cho trẻ 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Việc nuôi dạy con cái trong xã hội hiện đại không chỉ dừng lại ở chăm sóc sức khỏe thể chất, mà còn bao gồm cả việc nuôi dưỡng và phát triển toàn diện kỹ năng lẫn trí tuệ cho trẻ từ sớm. Những năm đầu đời của trẻ, đặc biệt từ 0 đến 6 tuổi, là giai đoạn vàng để kích thích tư duy, rèn luyện kỹ năng sống và bồi đắp những giá trị nền tảng giúp trẻ tự tin, linh hoạt và sáng tạo khi bước vào môi trường học tập và cuộc sống sau này. Chính vì vậy, nhu cầu tìm kiếm tài liệu, sách chuyên sâu về phát triển kỹ năng và trí tuệ cho trẻ ngày càng trở thành mối quan tâm hàng đầu của các bậc phụ huynh.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Hiểu rõ tầm quan trọng đó, Fahasa đã xây dựng riêng một danh mục sách mang tên Phát triển kỹ năng - trí tuệ cho trẻ, quy tụ hàng trăm đầu sách đa dạng về nội dung, phong phú về hình thức, hướng đến việc đồng hành cùng cha mẹ trong hành trình nuôi dạy con thông minh, bản lĩnh và sáng tạo. Đây là một trong những danh mục được phụ huynh Việt Nam đặc biệt yêu thích và tìm kiếm trên hệ thống Fahasa online lẫn chuỗi nhà sách truyền thống của Fahasa.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Nội dung phong phú – Bao quát đa dạng lĩnh vực phát triển kỹ năng và trí tuệ
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Sách phát triển tư duy logic và khả năng giải quyết vấn đề
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Rèn luyện tư duy logic là bước đệm quan trọng để trẻ phát triển khả năng suy nghĩ có hệ thống, biết phân tích vấn đề và tìm kiếm giải pháp hiệu quả. Danh mục tại Fahasa cung cấp nhiều đầu sách hấp dẫn, từ các bộ sách bài tập tư duy logic theo độ tuổi đến những cuốn sách kỹ năng giúp trẻ hình thành lối tư duy phản biện từ nhỏ.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Những cuốn sách này không chỉ mang tính giáo dục mà còn lồng ghép yếu tố giải trí, trò chơi, thử thách thú vị, giúp trẻ tiếp cận việc học hỏi một cách tự nhiên và đầy hứng thú.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Sách phát triển kỹ năng giao tiếp và ứng xử xã hội
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh trí tuệ, kỹ năng giao tiếp cũng đóng vai trò quan trọng, giúp trẻ tự tin bày tỏ suy nghĩ, xây dựng mối quan hệ tích cực với bạn bè, thầy cô và những người xung quanh. Fahasa mang đến nhiều tựa sách hướng dẫn kỹ năng giao tiếp, ứng xử theo từng độ tuổi, giúp trẻ biết cách lắng nghe, chia sẻ cảm xúc, thậm chí rèn luyện kỹ năng thuyết trình, tranh biện cơ bản.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Sách phát triển trí thông minh cảm xúc (EQ)
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Trí thông minh cảm xúc (EQ) đang trở thành xu hướng giáo dục hiện đại, khi ngày càng nhiều nghiên cứu khẳng định EQ có tác động trực tiếp đến sự thành công và hạnh phúc sau này của trẻ. Danh mục sách tại Fahasa cập nhật nhiều đầu sách về chủ đề này, hướng dẫn cha mẹ giúp trẻ nhận diện cảm xúc bản thân, đồng thời biết cách đồng cảm với cảm xúc của người khác.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    4. Sách giáo dục kỹ năng sống thực tế
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Kỹ năng sống thực tế chính là hành trang quan trọng để trẻ tự lập, tự tin thích nghi với môi trường xung quanh.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Những đầu sách này không chỉ là tài liệu tham khảo hữu ích cho phụ huynh mà còn giúp trẻ tiếp cận kỹ năng sống thông qua những câu chuyện minh họa sinh động, dễ hiểu.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Đa dạng hình thức sách – Phù hợp mọi độ tuổi
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Sách tranh minh họa sinh động
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Dành cho trẻ nhỏ từ 0 - 6 tuổi, những cuốn sách trong danh mục này thường được trình bày dưới dạng truyện tranh, hình ảnh minh họa bắt mắt kết hợp cùng ngôn từ đơn giản, giúp trẻ tiếp cận kiến thức và kỹ năng một cách tự nhiên nhất.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Sách bài tập thực hành theo chủ đề
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Dành cho trẻ từ 6 tuổi trở lên, đây là những cuốn sách kết hợp giữa lý thuyết và bài tập thực hành, giúp trẻ vận dụng ngay kiến thức vừa học được vào thực tế. Những bộ sách bài tập phát triển tư duy logic, giải đố IQ, hoặc sách thực hành kỹ năng giao tiếp đều được cha mẹ đặc biệt ưa chuộng.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Sách song ngữ phát triển kỹ năng
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Nhiều phụ huynh hiện nay có xu hướng cho trẻ làm quen với tiếng Anh từ sớm thông qua các đầu sách song ngữ. Fahasa cũng cập nhật nhiều sách kỹ năng song ngữ, giúp trẻ vừa rèn luyện kỹ năng mềm vừa làm giàu vốn từ vựng ngoại ngữ.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Vì sao phụ huynh nên chọn sách phát triển kỹ năng - trí tuệ cho trẻ tại Fahasa?
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Nguồn sách phong phú từ các NXB uy tín
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục này quy tụ hàng trăm đầu sách đến từ các nhà xuất bản hàng đầu như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        NXB Trẻ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        NXB Kim Đồng
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        NXB Phụ nữ Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        NXB Giáo dục Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Nội dung được biên soạn khoa học, phù hợp với tâm lý và nhận thức của trẻ em Việt Nam, đồng thời cập nhật các phương pháp giáo dục tiên tiến nhất từ thế giới.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Đáp ứng mọi nhu cầu của cha mẹ và giáo viên
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục không chỉ phục vụ phụ huynh mà còn là tài liệu tham khảo hữu ích cho giáo viên mầm non, giáo viên tiểu học, giúp họ xây dựng giáo án giảng dạy kỹ năng mềm và phát triển trí tuệ toàn diện cho học sinh.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Dễ dàng tìm kiếm và đặt mua
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Với hệ thống website hiện đại, cha mẹ dễ dàng tìm kiếm sách theo chủ đề, độ tuổi hoặc nhà xuất bản yêu thích. Đặt hàng online tại Fahasa.com cũng vô cùng tiện lợi với nhiều ưu đãi hấp dẫn, từ giảm giá đến miễn phí vận chuyển.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục Phát triển kỹ năng - trí tuệ cho trẻ tại Fahasa chính là người bạn đồng hành đáng tin cậy của mọi gia đình Việt Nam. Đây không chỉ là kho tàng tri thức phong phú, mà còn là nguồn cảm hứng để cha mẹ và con cái cùng nhau học hỏi, khám phá và trưởng thành. Hãy khám phá ngay và trang bị cho con những kỹ năng và tư duy vượt trội để vững vàng trước mọi thử thách của tương lai.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (297, now(), now(), 'Phương Pháp Giáo Dục Trẻ Các Nước', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Phương pháp Giáo dục trẻ các 
-  </span>
-  <span>
-    nước
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Trong bối cảnh toàn cầu hóa và hội nhập quốc tế ngày càng sâu rộng, việc tiếp cận và học hỏi những phương pháp giáo dục trẻ từ các quốc gia tiên tiến trên thế giới đã trở thành nhu cầu cấp thiết của rất nhiều bậc phụ huynh Việt Nam. Không chỉ dừng lại ở việc nuôi dạy con theo kinh nghiệm truyền thống hay những bí quyết gia đình, cha mẹ hiện đại ngày càng quan tâm đến những triết lý giáo dục mới mẻ, những góc nhìn tiên tiến từ các nền giáo dục phát triển như Nhật Bản, Phần Lan, Mỹ, Đức, Hàn Quốc hay Singapore. Chính vì vậy, Fahasa - một trong những hệ thống bán sách hàng đầu Việt Nam - đã xây dựng một danh mục sách chuyên biệt mang tên "Phương pháp giáo dục trẻ các nước", tập hợp những đầu sách chọn lọc, cập nhật những tư tưởng giáo dục hiện đại, khoa học và phù hợp với xu hướng thời đại.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Danh mục này hiện được Fahasa phân phối trực tuyến tại website chính thức, giúp phụ huynh dễ dàng tra cứu, lựa chọn và sở hữu những cuốn sách bổ ích về giáo dục trẻ em theo phong cách đa quốc gia. Với kho tàng sách phong phú, từ những ấn phẩm nổi tiếng quốc tế đến những đầu sách được dịch thuật công phu sang tiếng Việt, Fahasa đang tạo ra một không gian tham khảo học thuật đáng tin cậy, đồng thời mở ra cánh cửa để các bậc phụ huynh Việt tiếp cận những tinh hoa giáo dục nhân văn, tiên tiến từ khắp nơi trên thế giới.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Sự đa dạng trong danh mục sách phương pháp giáo dục trẻ các nước tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Phương pháp giáo dục Nhật Bản – Nuôi dưỡng tính kỷ luật và tinh thần tự lập
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Nhật Bản nổi tiếng với nền giáo dục chú trọng kỷ luật, tự lập và đề cao tinh thần tập thể ngay từ khi trẻ còn rất nhỏ. Tại danh mục 
-  </span>
-  <span>
-    sách phương pháp giáo dục trẻ các nước
-  </span>
-  <span>
-     của Fahasa, không khó để bắt gặp những đầu sách tiêu biểu như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Nuôi Con Kiểu Nhật"
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Cha Mẹ Nhật Dạy Con Tự Lập"
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Phương Pháp Giáo Dục Sớm Shichida"
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Các đầu sách này tập trung phân tích cách người Nhật xây dựng nền tảng đạo đức, kỹ năng sống và khả năng thích ứng với xã hội cho trẻ thông qua những thói quen nhỏ nhặt hàng ngày. Điểm đặc biệt trong sách về phương pháp Nhật Bản là sự kết hợp giữa tính truyền thống Á Đông với khoa học giáo dục hiện đại, tạo nên những bài học mang tính thực tiễn cao.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Giáo dục Phần Lan – Nền giáo dục hạnh phúc nhất thế giới
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Phần Lan nổi tiếng với hệ thống giáo dục được đánh giá cao nhất thế giới. Tại Fahasa, những cuốn sách về giáo dục Phần Lan được nhiều phụ huynh săn đón, tiêu biểu có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Bí Quyết Dạy Con Kiểu Phần Lan"
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Hành Trình Giáo Dục Hạnh Phúc"
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Phương pháp giáo dục Phần Lan nhấn mạnh đến việc tạo ra môi trường học tập hạnh phúc, nơi trẻ được học thông qua trải nghiệm thực tế, được phát triển toàn diện từ trí tuệ, kỹ năng xã hội đến cảm xúc cá nhân. Những cuốn sách này giúp cha mẹ Việt hiểu rằng giáo dục không nhất thiết phải là áp lực thành tích, mà hoàn toàn có thể là một hành trình nuôi dưỡng sự tò mò và đam mê tự nhiên của trẻ.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Giáo dục Mỹ – Khuyến khích tư duy sáng tạo và tinh thần phản biện
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Mỹ là quốc gia nổi bật với những phương pháp giáo dục kích thích tư duy sáng tạo và phản biện độc lập. Các cuốn sách về giáo dục Mỹ trên Fahasa thường tập trung vào việc giúp trẻ phát triển kỹ năng giải quyết vấn đề, tư duy logic và sự tự tin trong giao tiếp. Những đầu sách tiêu biểu có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Nuôi Dạy Con Kiểu Mỹ"
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        "Dạy Trẻ Tư Duy Phản Biện"
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Các cuốn sách này hướng dẫn cha mẹ cách tạo ra môi trường mở, nơi trẻ được tự do bày tỏ quan điểm, dám thắc mắc và tranh luận để tự tìm ra câu trả lời thay vì học thụ động.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lợi ích khi tiếp cận nhiều phương pháp giáo dục đa quốc gia
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    So sánh và chọn lọc những gì phù hợp nhất
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không có phương pháp giáo dục nào hoàn hảo tuyệt đối. Mỗi quốc gia với nền văn hóa, điều kiện xã hội và đặc điểm dân tộc khác nhau sẽ có những ưu điểm riêng trong giáo dục trẻ. Khi tiếp cận những đầu sách từ nhiều nước tại Fahasa, phụ huynh Việt có cơ hội so sánh, đánh giá khách quan để chọn lọc ra những gì phù hợp nhất với hoàn cảnh gia đình mình.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Tư duy mở và linh hoạt trong cách dạy con
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tiếp cận đa dạng phương pháp giúp cha mẹ tránh được tư duy giáo dục cứng nhắc, áp đặt. Thay vào đó, họ học cách linh hoạt trong từng hoàn cảnh cụ thể, tùy theo tính cách, sở thích và khả năng của từng đứa trẻ mà áp dụng phương pháp phù hợp.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Mở rộng vốn kiến thức giáo dục toàn cầu
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Việc đọc những cuốn sách về giáo dục trẻ các nước cũng giúp phụ huynh Việt mở mang tầm nhìn, nhận ra rằng mỗi nền giáo dục có những triết lý sâu xa và bài học quý giá riêng. Học hỏi những tinh hoa này không chỉ giúp nâng cao chất lượng nuôi dạy con tại gia đình mà còn góp phần thay đổi tư duy giáo dục cộng đồng theo hướng văn minh, tiến bộ hơn.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Fahasa – Nguồn cung cấp sách giáo dục trẻ đa quốc gia phong phú và tin cậy
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Với vị thế là một trong những đơn vị phân phối sách lớn nhất Việt Nam, Fahasa không ngừng mở rộng và cập nhật danh mục sách phương pháp giáo dục trẻ các nước, mang đến cho độc giả Việt Nam những lựa chọn phong phú, cập nhật liên tục các xu hướng giáo dục toàn cầu mới nhất. Các đầu sách tại Fahasa không chỉ đa dạng về nội dung mà còn đảm bảo về chất lượng dịch thuật, biên tập, giúp độc giả dễ dàng tiếp cận những kiến thức chuyên sâu theo cách gần gũi, dễ hiểu.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Ngoài ra, Fahasa thường xuyên có các chương trình khuyến mãi, giảm giá cho danh mục sách nuôi dạy con, đặc biệt là các dòng sách phương pháp giáo dục đa quốc gia. Điều này giúp các bậc cha mẹ dễ dàng tiếp cận kho tàng tri thức quý giá với mức giá phải chăng.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách phương pháp giáo dục trẻ các nước tại Fahasa không chỉ đơn thuần là tập hợp các đầu sách hay, mà còn là cánh cửa tri thức mở ra thế giới giáo dục đa dạng, tiến bộ. Từ những phương pháp giáo dục kiểu Nhật kỷ luật, kiểu Mỹ sáng tạo đến kiểu Phần Lan hạnh phúc, tất cả đều đang chờ đón cha mẹ Việt khám phá và chọn lọc. Bằng cách tiếp cận đa dạng góc nhìn, phụ huynh không chỉ nâng cao kiến thức nuôi dạy con mà còn góp phần xây dựng thế hệ trẻ Việt Nam tự tin, sáng tạo và hội nhập toàn cầu.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (298, now(), now(), 'Dinh Dưỡng - Sức Khỏe Cho Trẻ', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Dinh dưỡng - Sức khỏe cho trẻ
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Dinh dưỡng và sức khỏe luôn là hai yếu tố cốt lõi quyết định đến sự phát triển toàn diện của trẻ em, đặc biệt trong những năm đầu đời. Một chế độ dinh dưỡng khoa học không chỉ giúp trẻ phát triển thể chất tối ưu mà còn hỗ trợ trí não, tăng cường hệ miễn dịch, giảm thiểu nguy cơ mắc bệnh. Bên cạnh đó, việc chăm sóc sức khỏe đúng cách giúp trẻ hình thành thói quen sống lành mạnh, đảm bảo nền tảng thể chất vững chắc cho tương lai. Chính vì tầm quan trọng này, nhiều phụ huynh hiện nay rất quan tâm tới việc trang bị kiến thức bài bản về dinh dưỡng và sức khỏe trẻ em thông qua những nguồn tài liệu uy tín, trong đó, sách là một lựa chọn hàng đầu.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Thấu hiểu nhu cầu cấp thiết đó, Fahasa - nhà sách trực tuyến lớn và uy tín hàng đầu Việt Nam - đã xây dựng một danh mục sách chuyên biệt mang tên 
-  </span>
-  <span>
-    Dinh dưỡng - Sức khỏe cho trẻ
-  </span>
-  <span>
-    , quy tụ hàng trăm đầu sách giá trị, cung cấp kiến thức khoa học, thực tiễn và cập nhật nhất về chế độ ăn uống, chăm sóc sức khỏe, phòng tránh bệnh tật, cũng như hướng dẫn xây dựng lối sống lành mạnh cho trẻ ngay từ nhỏ.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Tổng quan về danh mục sách Dinh dưỡng - Sức khỏe cho trẻ tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Số lượng đầu sách phong phú, chủ đề đa dạng
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tại danh mục này, Fahasa cung cấp hàng trăm đầu sách được chọn lọc kỹ lưỡng, đáp ứng nhiều nhu cầu khác nhau của phụ huynh. Những chủ đề nổi bật bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dinh dưỡng theo từng độ tuổi (sơ sinh, 1-3 tuổi, 3-6 tuổi, tuổi dậy thì…)
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chế độ ăn bổ sung vi chất, tăng cường sức đề kháng cho trẻ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Phương pháp ăn dặm khoa học (ăn dặm kiểu Nhật, ăn dặm bé tự chỉ huy - BLW)
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dinh dưỡng hỗ trợ phát triển trí tuệ, chiều cao
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chăm sóc sức khỏe theo mùa, phòng bệnh theo thời tiết
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Phòng và xử lý các bệnh thường gặp ở trẻ em
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tập luyện, vận động giúp trẻ khỏe mạnh toàn diện
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    2. Sách từ các tác giả uy tín, chuyên gia đầu ngành
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Điểm đặc biệt của danh mục này tại Fahasa chính là nguồn sách chất lượng, được biên soạn bởi các bác sĩ nhi khoa, chuyên gia dinh dưỡng, chuyên gia giáo dục sớm có uy tín trong và ngoài nước. Một số tác giả nổi bật có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        BS Đào Thị Yến Thủy
-      </span>
-      <span>
-         – chuyên gia dinh dưỡng hàng đầu tại Việt Nam.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        ThS BS Lê Thị Hải
-      </span>
-      <span>
-         – Viện Dinh dưỡng Quốc gia.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        BS Nguyễn Trí Đoàn
-      </span>
-      <span>
-         – bác sĩ nhi khoa nổi tiếng với cách tư vấn khoa học, thực tiễn.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Annabel Karmel
-      </span>
-      <span>
-         – chuyên gia dinh dưỡng trẻ em nổi tiếng thế giới.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tsukuda Yumi
-      </span>
-      <span>
-         – chuyên gia ăn dặm kiểu Nhật.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách đến từ các chuyên gia này đều được đánh giá cao về tính thực tiễn, dễ áp dụng tại gia đình Việt.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Định dạng sách phong phú, trình bày khoa học
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh các đầu sách giấy truyền thống, Fahasa còn cập nhật nhiều ấn phẩm ebook để thuận tiện cho các bậc phụ huynh bận rộn. Các cuốn sách đều được trình bày theo lối dễ hiểu, trực quan, có nhiều hình minh họa sinh động, bảng biểu chi tiết, giúp việc tiếp cận thông tin dễ dàng và tiết kiệm thời gian hơn.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Một số đầu sách nổi bật trong danh mục
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Ăn Dặm Không Nước Mắt
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Cuốn sách hướng dẫn chi tiết về phương pháp ăn dặm bé tự chỉ huy (BLW), giúp trẻ phát triển khả năng tự lập trong ăn uống, rèn luyện kỹ năng nhai, nuốt và cảm nhận hương vị tự nhiên của thực phẩm. Sách không chỉ cung cấp thực đơn mẫu mà còn hướng dẫn cách xử lý tình huống bé biếng ăn, nôn trớ hay dị ứng thực phẩm.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Dinh Dưỡng Vàng Cho Trẻ Từ 0 - 6 Tuổi
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Đây là cuốn cẩm nang toàn diện về dinh dưỡng dành cho trẻ từ sơ sinh đến khi bước vào tiểu học, bao gồm chế độ ăn theo từng giai đoạn phát triển, hướng dẫn bổ sung vi chất, vitamin cần thiết, đồng thời tư vấn cách phòng tránh suy dinh dưỡng, béo phì, thiếu vi chất.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Chăm Sóc Sức Khỏe Cho Trẻ Theo Mùa
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Cuốn sách đặc biệt hữu ích với các bậc cha mẹ đang nuôi con nhỏ tại Việt Nam, nơi thời tiết thay đổi liên tục và trẻ em dễ mắc các bệnh theo mùa như cảm cúm, sốt siêu vi, tiêu chảy, viêm phổi. Sách cung cấp kiến thức khoa học về phòng bệnh, dinh dưỡng hỗ trợ miễn dịch và cách xử lý khi trẻ ốm.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lợi ích khi tham khảo sách dinh dưỡng - sức khỏe cho trẻ tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Trang bị kiến thức khoa học, bài bản
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Thay vì chỉ nghe theo kinh nghiệm dân gian hoặc thông tin chưa kiểm chứng trên mạng xã hội, các bậc phụ huynh có thể tiếp cận nguồn kiến thức khoa học, được biên soạn bài bản từ các chuyên gia uy tín.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Cập nhật xu hướng dinh dưỡng, chăm sóc sức khỏe mới
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Thế giới dinh dưỡng và y học liên tục thay đổi, cập nhật. Đọc sách mới giúp phụ huynh nắm bắt những khuyến nghị mới nhất từ Tổ chức Y tế Thế giới (WHO), các hiệp hội dinh dưỡng uy tín để áp dụng phù hợp cho con.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Giúp trẻ hình thành thói quen sống lành mạnh
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không chỉ cung cấp kiến thức về ăn uống khoa học, các cuốn sách trong danh mục này còn hướng dẫn cha mẹ cách xây dựng lối sống lành mạnh cho trẻ, từ việc rèn luyện thể dục thể thao, ngủ nghỉ đúng giờ, giữ vệ sinh cá nhân cho đến kiểm soát các yếu tố tâm lý, tinh thần.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Fahasa – Địa chỉ tin cậy cho các bậc phụ huynh
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Với danh mục sách dinh dưỡng - sức khỏe cho trẻ được đầu tư phong phú và chất lượng, Fahasa đang trở thành điểm đến tin cậy cho mọi gia đình Việt. Không chỉ đảm bảo sách chính hãng, Fahasa còn thường xuyên triển khai các chương trình ưu đãi hấp dẫn, giúp các bậc phụ huynh dễ dàng sở hữu những cuốn sách giá trị với chi phí tiết kiệm nhất.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Ngoài ra, dịch vụ giao hàng nhanh chóng, tiện lợi trên toàn quốc của Fahasa cũng giúp các bậc cha mẹ dù ở thành phố lớn hay vùng xa đều có thể tiếp cận kho tri thức này một cách dễ dàng.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Với mong muốn đồng hành cùng các bậc phụ huynh trên hành trình nuôi dưỡng và chăm sóc sức khỏe toàn diện cho trẻ, Fahasa không ngừng cập nhật và mang đến những cuốn sách hay, hữu ích và khoa học nhất. Hãy cùng Fahasa trang bị kiến thức vững vàng để con yêu khôn lớn khỏe mạnh mỗi ngày!
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (299, now(), now(), 'Giáo Dục Trẻ Tuổi Teen', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Giáo dục trẻ tuổi teen
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Tuổi teen – hay còn gọi là tuổi vị thành niên, là một trong những giai đoạn đặc biệt quan trọng trong quá trình phát triển của trẻ. Đây là thời kỳ chuyển giao từ trẻ con sang người lớn, nơi các em vừa có nhu cầu khẳng định cái tôi, vừa phải đối mặt với rất nhiều thay đổi về tâm sinh lý, các mối quan hệ xã hội và cả áp lực học tập. Việc giáo dục trẻ tuổi teen không hề đơn giản, bởi các em không còn nhỏ để răm rắp nghe theo mọi chỉ dẫn, nhưng cũng chưa đủ trưởng thành để tự ra quyết định sáng suốt trong mọi tình huống. Chính vì vậy, cha mẹ, thầy cô và những người làm công tác giáo dục cần có sự thấu hiểu, đồng hành và trang bị cho mình những kiến thức, kỹ năng cần thiết để giúp trẻ vượt qua giai đoạn này một cách tích cực nhất.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Hiểu được nhu cầu bức thiết đó, Fahasa – nhà sách trực tuyến hàng đầu Việt Nam – đã xây dựng một danh mục sách chuyên biệt mang tên Giáo dục trẻ tuổi teen, quy tụ hàng trăm đầu sách hay, chuyên sâu và thực tiễn nhất. Những cuốn sách này không chỉ giúp phụ huynh, giáo viên có thêm công cụ để đồng hành cùng con, mà còn là cẩm nang hữu ích để chính các bạn teen tự đọc, tự nhận thức và điều chỉnh bản thân.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Tổng quan về danh mục sách Giáo dục trẻ tuổi teen tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Số lượng đầu sách phong phú, chủ đề đa dạng
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục sách 
-  </span>
-  <span>
-    Giáo dục trẻ tuổi teen
-  </span>
-  <span>
-     trên Fahasa hiện quy tụ hơn 200 đầu sách với rất nhiều chủ đề bao quát các khía cạnh quan trọng trong quá trình giáo dục trẻ vị thành niên, bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo dục giới tính và sức khỏe sinh sản tuổi teen
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Rèn luyện kỹ năng sống, kỹ năng xã hội cho tuổi teen
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Phát triển tư duy, quản lý cảm xúc và giải quyết mâu thuẫn
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hướng nghiệp và phát triển bản thân cho thanh thiếu niên
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giáo dục giá trị sống, đạo đức, ý thức trách nhiệm xã hội
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hướng dẫn cha mẹ giao tiếp và đồng hành cùng con tuổi teen
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách tâm lý học lứa tuổi vị thành niên
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Sự đa dạng về nội dung giúp danh mục này đáp ứng được nhu cầu của nhiều đối tượng: từ phụ huynh, giáo viên, chuyên gia tâm lý, đến chính các bạn trẻ tuổi teen muốn tự khám phá và hoàn thiện bản thân.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Nguồn sách từ các tác giả và chuyên gia uy tín
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục sách giáo dục trẻ tuổi teen tại Fahasa hội tụ rất nhiều cuốn sách từ các tác giả, chuyên gia tâm lý, giáo dục hàng đầu trong và ngoài nước. Một số cái tên tiêu biểu có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        ThS. Nguyễn Thị Thu – chuyên gia tâm lý giáo dục tuổi vị thành niên tại Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        TS. Nguyễn Thị Bích Hồng – chuyên gia tham vấn tâm lý học đường
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dr. Lisa Damour – tác giả nhiều đầu sách best-seller về tâm lý vị thành niên
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nguyễn Thị Oanh – tác giả các cuốn sách kỹ năng sống nổi tiếng tại Việt Nam
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sean Covey – tác giả cuốn sách đình đám "7 thói quen của bạn trẻ thành đạt"
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách từ các tác giả này không chỉ cung cấp kiến thức, lý thuyết nền tảng mà còn lồng ghép nhiều tình huống thực tế, câu chuyện điển hình giúp người đọc dễ dàng liên hệ và áp dụng vào đời sống.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Định dạng sách phong phú, trình bày khoa học
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh các đầu sách giấy truyền thống, Fahasa còn mang đến nhiều lựa chọn ebook, audiobook, giúp phụ huynh và các bạn trẻ dễ dàng tiếp cận mọi lúc, mọi nơi. Hình thức trình bày khoa học, nhiều minh họa sinh động, ngôn ngữ gần gũi, dễ hiểu giúp sách giáo dục tuổi teen trở nên hấp dẫn, không khô khan, cứng nhắc.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Một số đầu sách nổi bật trong danh mục
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. 7 Thói Quen Của Bạn Trẻ Thành Đạt – Sean Covey
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Cuốn sách được mệnh danh là cẩm nang kỹ năng sống kinh điển dành cho tuổi teen. Với ngôn ngữ trẻ trung, dễ hiểu, cuốn sách giúp các bạn trẻ nhận diện thói quen tốt, xây dựng lối sống tích cực, biết đặt mục tiêu và lên kế hoạch thực hiện ước mơ.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Bí Quyết Nói Chuyện Với Con Tuổi Teen – Adele Faber &amp; Elaine Mazlish
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Dành cho các bậc phụ huynh đang loay hoay tìm cách giao tiếp hiệu quả với con tuổi dậy thì. Cuốn sách đưa ra những hướng dẫn thực tế, giúp cha mẹ tránh những xung đột không đáng có và xây dựng mối quan hệ gắn kết với con.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Tôi Tài Giỏi, Bạn Cũng Thế! – Adam Khoo
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không chỉ đơn thuần là sách phát triển bản thân, cuốn sách này còn truyền cảm hứng mạnh mẽ, giúp các bạn trẻ thay đổi tư duy, tự tin khám phá tiềm năng và theo đuổi những mục tiêu lớn trong cuộc sống.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Vai trò quan trọng của sách giáo dục trẻ tuổi teen
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Cầu nối giữa cha mẹ và con cái
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tuổi teen nổi tiếng là giai đoạn khó khăn trong giao tiếp giữa cha mẹ và con cái. Những cuốn sách trong danh mục này giúp phụ huynh hiểu hơn về tâm lý của con, từ đó có cách trò chuyện, chia sẻ và định hướng phù hợp.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Giúp teen trang bị kỹ năng sống và phát triển bản thân
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Không chỉ học kiến thức từ trường lớp, các bạn trẻ ngày nay còn cần nhiều kỹ năng mềm: giao tiếp, quản lý cảm xúc, tư duy phản biện, làm việc nhóm… Những kỹ năng này được giới thiệu và hướng dẫn chi tiết trong các cuốn sách giáo dục tuổi teen.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Hỗ trợ giáo viên, chuyên gia tham vấn học đường
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh phụ huynh, giáo viên và chuyên gia tâm lý học đường cũng là những người cần hiểu rõ tâm lý, nhu cầu của học sinh tuổi teen để hỗ trợ các em tốt nhất. Sách giáo dục tuổi teen tại Fahasa là nguồn tài liệu tham khảo hữu ích cho các đối tượng này.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Fahasa – Địa chỉ tin cậy để mua sách giáo dục trẻ tuổi teen
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Với danh mục sách phong phú, cập nhật liên tục và đảm bảo chính hãng, Fahasa không chỉ là nơi mua sắm đáng tin cậy của phụ huynh, giáo viên mà còn là địa chỉ yêu thích của các bạn trẻ yêu thích khám phá bản thân qua từng trang sách.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Fahasa thường xuyên có chương trình khuyến mãi hấp dẫn, giao hàng nhanh chóng trên toàn quốc, mang đến trải nghiệm mua sắm tiện lợi, tiết kiệm cho mọi khách hàng. Phụ huynh, thầy cô và các bạn trẻ hãy ghé ngay Fahasa để khám phá kho tàng sách giáo dục trẻ tuổi teen phong phú, đa dạng và hữu ích nhất!
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Kết luận
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục Sách giáo dục trẻ tuổi teen tại Fahasa không chỉ đơn thuần là những cuốn sách hướng dẫn nuôi dạy con mà còn là cánh cửa mở ra thế giới tâm lý tuổi teen đầy màu sắc, thú vị. Đây thực sự là kho tàng tri thức quý giá, giúp cha mẹ, giáo viên đồng hành cùng con trẻ một cách khoa học và hiệu quả nhất.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (300, now(), now(), 'Dành Cho Mẹ Bầu', 294, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Dành cho mẹ bầu
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách dành cho mẹ bầu trên Fahasa không đơn thuần gói gọn trong vài đầu sách tham khảo đơn giản, mà mở rộng ra thành một "thư viện nhỏ" với hàng trăm tựa sách phong phú, bao phủ toàn bộ các khía cạnh liên quan đến thai kỳ và làm mẹ. Tại đây, mẹ bầu có thể dễ dàng tìm thấy:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách hướng dẫn chăm sóc sức khỏe thai kỳ toàn diện
-      </span>
-      <span>
-        , từ chế độ ăn uống, sinh hoạt, theo dõi sức khỏe cho đến các bài tập vận động nhẹ nhàng phù hợp cho từng giai đoạn thai kỳ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách hướng dẫn chuẩn bị tâm lý làm mẹ
-      </span>
-      <span>
-         – giúp mẹ vượt qua những cảm xúc tiêu cực như stress, lo âu, mất ngủ khi mang thai.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách giáo dục thai nhi sớm (Thai giáo)
-      </span>
-      <span>
-         – hướng dẫn cách tương tác, trò chuyện và kích thích trí não bé phát triển ngay từ trong bụng mẹ.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách kỹ năng sinh nở, hướng dẫn chi tiết các giai đoạn chuyển dạ, sinh con và phục hồi sau sinh
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách chia sẻ kinh nghiệm làm mẹ thực tế
-      </span>
-      <span>
-         từ những người nổi tiếng, bác sĩ sản khoa, chuyên gia tâm lý hoặc các hot mom đình đám.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách về dinh dưỡng cho bà bầu và thai nhi
-      </span>
-      <span>
-         – những công thức món ăn ngon, dễ làm, tốt cho mẹ và bé.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách chăm sóc sức khỏe tinh thần cho mẹ bầu
-      </span>
-      <span>
-        , hướng dẫn thiền, yoga bầu, các phương pháp thư giãn để giảm căng thẳng trong thai kỳ.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Sự đa dạng này giúp danh mục 
-  </span>
-  <span>
-    Dành cho mẹ bầu
-  </span>
-  <span>
-     tại Fahasa trở thành người bạn đồng hành tin cậy, cung cấp tri thức và kinh nghiệm quý báu cho mọi bà mẹ, từ những người lần đầu mang thai đến những mẹ đã có kinh nghiệm sinh con nhưng muốn cập nhật kiến thức mới.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Quy tụ sách từ nhiều tác giả nổi tiếng trong và ngoài nước
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Một trong những điểm sáng của danh mục này là sự góp mặt của hàng loạt đầu sách chất lượng từ các tác giả, chuyên gia đầu ngành trong lĩnh vực thai sản, dinh dưỡng và tâm lý học. Có thể kể đến:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Bác sĩ Nguyễn Phương Hồng
-      </span>
-      <span>
-         – chuyên gia sản khoa với nhiều năm kinh nghiệm.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Bác sĩ Sears
-      </span>
-      <span>
-         – tác giả bộ sách 
-      </span>
-      <span>
-        Chăm sóc bé yêu toàn diện
-      </span>
-      <span>
-        , nổi tiếng toàn cầu.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Hot mom Minh Trang
-      </span>
-      <span>
-         – tác giả các đầu sách nuôi dạy con được nhiều bà mẹ Việt yêu thích.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Ts. Trần Bạch Cung
-      </span>
-      <span>
-         – chuyên gia dinh dưỡng hàng đầu tại Việt Nam.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Shichida Makoto
-      </span>
-      <span>
-         – cha đẻ phương pháp thai giáo nổi tiếng Nhật Bản.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Ina May Gaskin
-      </span>
-      <span>
-         – huyền thoại đỡ đẻ tự nhiên tại Mỹ, tác giả cuốn sách kinh điển về sinh nở.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những đầu sách từ các tác giả uy tín giúp mẹ bầu hoàn toàn yên tâm về độ chính xác của thông tin, đồng thời dễ dàng chọn lọc kiến thức phù hợp với bản thân.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Bố cục khoa học, ngôn ngữ dễ hiểu, phù hợp với mẹ bầu hiện đại
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Sách dành cho mẹ bầu tại Fahasa có ưu điểm nổi bật là trình bày khoa học, dễ tra cứu theo từng giai đoạn thai kỳ hoặc từng vấn đề cụ thể. Phần lớn các sách đều sử dụng ngôn ngữ gần gũi, dễ đọc, kết hợp hình ảnh minh họa sinh động, biểu đồ trực quan giúp mẹ bầu dễ dàng nắm bắt thông tin, ngay cả khi cơ thể mệt mỏi do thai nghén.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Một số đầu sách tiêu biểu trong danh mục sách dành cho mẹ bầu tại Fahasa
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    1. Cẩm Nang Mang Thai Toàn Tập – Dr. Miriam Stoppard
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Đây là cuốn sách "gối đầu giường" của hàng triệu mẹ bầu trên thế giới. Nội dung bao quát toàn bộ thai kỳ từ khi chuẩn bị mang thai, theo dõi sức khỏe từng giai đoạn, các triệu chứng cần lưu ý cho đến khi sinh con và chăm sóc bé sơ sinh.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    2. Thai Giáo – Dạy Con Từ Trong Bụng Mẹ – Shichida Makoto
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Cuốn sách trình bày toàn bộ phương pháp thai giáo nổi tiếng của Nhật Bản, giúp mẹ bầu nuôi dưỡng trí tuệ và cảm xúc của bé ngay từ khi còn trong bụng mẹ.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    3. Bí Quyết Vượt Qua Trầm Cảm Khi Mang Thai Và Sau Sinh
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Sách cung cấp kiến thức khoa học về sức khỏe tinh thần của mẹ bầu, cách nhận diện và xử lý các dấu hiệu trầm cảm thai kỳ, giúp mẹ luôn giữ được trạng thái tâm lý tích cực.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Fahasa – Địa chỉ mua sách dành cho mẹ bầu tin cậy, tiện lợi
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Mua sách dành cho mẹ bầu tại Fahasa không chỉ đảm bảo nguồn gốc chính hãng, chất lượng sách tốt mà còn đi kèm nhiều tiện ích như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Danh mục cập nhật liên tục
-      </span>
-      <span>
-        , bắt kịp những đầu sách mới, xu hướng nuôi dạy con hiện đại.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhiều chương trình khuyến mãi hấp dẫn
-      </span>
-      <span>
-        , giúp mẹ bầu tiết kiệm chi phí.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Dịch vụ giao hàng nhanh
-      </span>
-      <span>
-        , tiện lợi trên toàn quốc.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tư vấn tận tình
-      </span>
-      <span>
-        , giúp mẹ dễ dàng tìm được đầu sách phù hợp nhất.
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Lời kết 
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách Dành cho mẹ bầu tại Fahasa chính là kho tàng tri thức quý giá đồng hành cùng mẹ trong suốt thai kỳ. Từ những kiến thức khoa học về dinh dưỡng, sức khỏe, đến những chia sẻ cảm xúc chân thực, mọi vấn đề mẹ cần đều có trong những trang sách tại Fahasa. Đây không chỉ là những cuốn sách đơn thuần, mà còn là người bạn đồng hành thân thiết, giúp mẹ bầu tự tin tận hưởng hành trình làm mẹ đầy yêu thương và hạnh phúc.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (301, now(), now(), 'Tiểu Sử Hồi Ký', null, '<h2>
+values (300, now(), now(), 'Tiểu Sử Hồi Ký', 1, '<h2>
   <span style="font-size: x-large;">
     Thông tin danh mục Sách Tiểu Sử Hồi Ký
   </span>
@@ -33149,7 +32644,7 @@ values (301, now(), now(), 'Tiểu Sử Hồi Ký', null, '<h2>
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (302, now(), now(), 'Câu Chuyện Cuộc Đời', 301, '<h2 dir="ltr">
+values (301, now(), now(), 'Câu Chuyện Cuộc Đời', 300, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Câu chuyện cuộc đời
   </span>
@@ -33637,7 +33132,7 @@ values (302, now(), now(), 'Câu Chuyện Cuộc Đời', 301, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (303, now(), now(), 'Lịch Sử', 301, '<h2 dir="ltr">
+values (302, now(), now(), 'Lịch Sử', 300, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Lịch sử
   </span>
@@ -34047,7 +33542,7 @@ values (303, now(), now(), 'Lịch Sử', 301, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (304, now(), now(), 'Nghệ Thuật - Giải Trí', 301, '<h2 dir="ltr">
+values (303, now(), now(), 'Nghệ Thuật - Giải Trí', 300, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách Nghệ thuật - Giải trí
   </span>
@@ -34424,502 +33919,7 @@ values (304, now(), now(), 'Nghệ Thuật - Giải Trí', 301, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (305, now(), now(), 'Chính Trị', 301, '<h2 dir="ltr">
-  <span>
-    Thông tin danh mục sách Chính trị
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Trong hệ thống phân loại sách đa dạng của Fahasa, 
-  </span>
-  <span>
-    danh mục sách chính trị
-  </span>
-  <span>
-     giữ một vai trò quan trọng, phản ánh đúng bản chất của một xã hội đang phát triển, nơi tri thức chính trị ngày càng được coi trọng. Đây không chỉ là kho tàng thông tin phục vụ cho nghiên cứu học thuật, giảng dạy hay công tác quản lý nhà nước, mà còn là kênh tham khảo hữu ích cho bất kỳ ai muốn hiểu sâu sắc về tình hình chính trị, xã hội, đối nội, đối ngoại của Việt Nam và thế giới.
-  </span>
-</p>
-<p dir="ltr">
-  <span>
-    Tại Fahasa, danh mục sách chính trị được đầu tư phát triển phong phú, đa chiều, từ những cuốn sách nghiên cứu chuyên sâu về tư tưởng chính trị, lý luận chính trị, đến những tựa sách cập nhật các chính sách mới, xu hướng vận động của các tổ chức chính trị trong nước và quốc tế. Đây là kho tài liệu quý giá giúp người đọc mở rộng tầm nhìn, trang bị thêm nền tảng kiến thức vững chắc để nhìn nhận đúng đắn các sự kiện, vấn đề thời sự nóng hổi.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Nội dung phong phú, bao quát nhiều khía cạnh chính trị
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    Sách về hệ thống chính trị Việt Nam
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Một trong những nhóm sách chiếm tỷ trọng lớn tại danh mục này chính là các đầu sách liên quan tới 
-  </span>
-  <span>
-    hệ thống chính trị Việt Nam
-  </span>
-  <span>
-    , bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Quá trình hình thành và phát triển của hệ thống chính trị Việt Nam từ sau Cách mạng Tháng Tám.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cơ cấu tổ chức, chức năng, nhiệm vụ của Đảng Cộng sản Việt Nam, Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam và các tổ chức chính trị - xã hội.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các sách phân tích vai trò lãnh đạo của Đảng trong công cuộc xây dựng và phát triển đất nước qua từng giai đoạn lịch sử.
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    Sách về tư tưởng chính trị, triết học chính trị
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Nhóm sách này cung cấp cho độc giả những 
-  </span>
-  <span>
-    lý thuyết nền tảng
-  </span>
-  <span>
-     về chính trị học, giúp người đọc hiểu rõ các hệ tư tưởng từ cổ chí kim, từ Đông sang Tây. Một số nội dung nổi bật bao gồm:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tư tưởng chính trị của 
-      </span>
-      <span>
-        Karl Marx, Friedrich Engels, Lenin, Hồ Chí Minh
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các trường phái tư tưởng chính trị lớn trên thế giới như 
-      </span>
-      <span>
-        chủ nghĩa tự do, chủ nghĩa xã hội, chủ nghĩa dân tộc, chủ nghĩa bảo thủ
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Các cuốn sách phân tích 
-      </span>
-      <span>
-        mối quan hệ giữa chính trị và kinh tế, chính trị và văn hóa, chính trị và xã hội
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h3 dir="ltr">
-  <span>
-    Sách về chính sách công và quản lý nhà nước
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Fahasa cũng phân phối nhiều đầu sách chuyên sâu về:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Xây dựng và thực thi chính sách công
-      </span>
-      <span>
-         tại Việt Nam và các quốc gia trên thế giới.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cơ chế quản lý nhà nước hiện đại
-      </span>
-      <span>
-         trong bối cảnh hội nhập quốc tế.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Những vấn đề về 
-      </span>
-      <span>
-        cải cách hành chính, xây dựng nhà nước pháp quyền, phát triển xã hội dân sự
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những đầu sách này phù hợp với 
-  </span>
-  <span>
-    sinh viên, giảng viên ngành chính trị học, hành chính công, luật, xã hội học
-  </span>
-  <span>
-    , cũng như những người làm công tác quản lý, lãnh đạo ở các cấp.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Sách về tình hình chính trị quốc tế
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Bên cạnh mảng chính trị trong nước, Fahasa cũng rất chú trọng cập nhật các đầu sách về:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tình hình chính trị quốc tế, quan hệ giữa các cường quốc, các xung đột khu vực
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Vai trò của các tổ chức quốc tế
-      </span>
-      <span>
-         như Liên Hợp Quốc, ASEAN, WTO trong việc duy trì hòa bình, hợp tác và phát triển.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Chính sách đối ngoại của Việt Nam
-      </span>
-      <span>
-        , các hiệp định thương mại tự do, quá trình hội nhập quốc tế.
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Những cuốn sách này không chỉ giúp người đọc cập nhật thông tin thời sự mà còn cung cấp các góc nhìn đa chiều, giúp phân tích và đánh giá các vấn đề quốc tế một cách khách quan.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Vì sao nên mua sách chính trị tại Fahasa?
-  </span>
-</h2>
-<h3 dir="ltr">
-  <span>
-    Nguồn sách chính thống, chất lượng đảm bảo
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Tất cả sách chính trị tại Fahasa đều được nhập trực tiếp từ 
-  </span>
-  <span>
-    những nhà xuất bản uy tín
-  </span>
-  <span>
-     như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhà xuất bản Chính trị Quốc gia Sự thật
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhà xuất bản Khoa học Xã hội
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhà xuất bản Đại học Quốc gia
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Nhà xuất bản Thế giới
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Điều này đảm bảo 
-  </span>
-  <span>
-    tính chính thống, chuẩn xác
-  </span>
-  <span>
-     của nội dung sách, phù hợp cho 
-  </span>
-  <span>
-    nghiên cứu chuyên sâu, trích dẫn học thuật
-  </span>
-  <span>
-     hoặc tham khảo trong công tác giảng dạy, tuyên truyền.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Đa dạng đầu sách từ lý luận tới thực tiễn
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Danh mục sách chính trị tại Fahasa không chỉ bó hẹp ở các cuốn sách lý luận khô khan, hàn lâm, mà còn mở rộng ra nhiều thể loại gần gũi, dễ đọc như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Tư liệu chính trị dưới dạng hỏi - đáp
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách chính trị phổ thông, giải thích các khái niệm phức tạp theo cách dễ hiểu
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sách tiểu sử chính trị
-      </span>
-      <span>
-        , ghi lại hành trình, tư tưởng và dấu ấn của các 
-      </span>
-      <span>
-        nhà lãnh đạo nổi bật
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Điều này giúp mọi đối tượng độc giả, từ học sinh, sinh viên, người lao động đến cán bộ công chức, viên chức đều có thể dễ dàng tiếp cận.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Giá cả hợp lý, nhiều ưu đãi
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Fahasa liên tục triển khai 
-  </span>
-  <span>
-    các chương trình giảm giá, ưu đãi theo mùa
-  </span>
-  <span>
-    , đặc biệt trong các dịp lễ lớn như:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Kỷ niệm Ngày Quốc khánh 2/9
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Ngày thành lập Đảng 3/2
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Ngày Thống nhất đất nước 30/4
-      </span>
-    </p>
-  </li>
-</ul>
-<p dir="ltr">
-  <span>
-    Việc mua sách chính trị tại Fahasa không chỉ tiết kiệm chi phí mà còn giúp độc giả sở hữu những ấn phẩm chất lượng cao với mức giá tốt.
-  </span>
-</p>
-<h3 dir="ltr">
-  <span>
-    Dịch vụ giao nhận nhanh, chăm sóc khách hàng tận tình
-  </span>
-</h3>
-<p dir="ltr">
-  <span>
-    Với hệ thống 
-  </span>
-  <span>
-    cửa hàng trải rộng toàn quốc
-  </span>
-  <span>
-     và 
-  </span>
-  <span>
-    kho vận hiện đại
-  </span>
-  <span>
-    , Fahasa cam kết 
-  </span>
-  <span>
-    giao hàng nhanh
-  </span>
-  <span>
-     từ 1-3 ngày tại hầu hết các tỉnh thành. Ngoài ra, đội ngũ 
-  </span>
-  <span>
-    chăm sóc khách hàng chuyên nghiệp
-  </span>
-  <span>
-     luôn sẵn sàng hỗ trợ, giải đáp mọi thắc mắc về sản phẩm, dịch vụ.
-  </span>
-</p>
-<h2 dir="ltr">
-  <span>
-    Đối tượng độc giả phù hợp
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách chính trị tại Fahasa phục vụ nhiều nhóm đối tượng:
-  </span>
-</p>
-<ul>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Sinh viên, học viên cao học, nghiên cứu sinh
-      </span>
-      <span>
-         các ngành Chính trị học, Quan hệ quốc tế, Hành chính công, Xã hội học.
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Giảng viên, cán bộ nghiên cứu tại các viện nghiên cứu chính trị, trường đại học, học viện
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Cán bộ, công chức, viên chức làm việc trong các cơ quan Đảng, Nhà nước, Mặt trận Tổ quốc và các tổ chức chính trị - xã hội
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-  <li dir="ltr">
-    <p dir="ltr">
-      <span>
-        Những người quan tâm đến tình hình chính trị, kinh tế, xã hội của Việt Nam và thế giới
-      </span>
-      <span>
-        .
-      </span>
-    </p>
-  </li>
-</ul>
-<h2 dir="ltr">
-  <span>
-    Lời kết
-  </span>
-</h2>
-<p dir="ltr">
-  <span>
-    Danh mục sách chính trị tại Fahasa không chỉ là nguồn tư liệu phong phú, uy tín dành cho học thuật, nghiên cứu, mà còn là kênh tri thức thiết thực giúp độc giả trang bị tư duy chính trị sắc bén, cái nhìn đa chiều về bối cảnh xã hội hiện nay. Với 
-  </span>
-  <span>
-    kho sách phong phú, chất lượng đảm bảo, dịch vụ tận tâm và nhiều ưu đãi hấp dẫn
-  </span>
-  <span>
-    , Fahasa là địa chỉ tin cậy cho những ai đang tìm kiếm các đầu sách chính trị chất lượng cao.
-  </span>
-</p>
-');
-
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (306, now(), now(), 'Kinh Tế', 301, '<h2 dir="ltr">
+values (304, now(), now(), 'Kinh Tế', 300, '<h2 dir="ltr">
   <span>
     Thông tin danh mục sách kinh tế tại Fahasa
   </span>
@@ -35441,7 +34441,502 @@ values (306, now(), now(), 'Kinh Tế', 301, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (307, now(), now(), 'Thể Thao', 301, '<h2 dir="ltr">
+values (305, now(), now(), 'Chính Trị', 300, '<h2 dir="ltr">
+  <span>
+    Thông tin danh mục sách Chính trị
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Trong hệ thống phân loại sách đa dạng của Fahasa, 
+  </span>
+  <span>
+    danh mục sách chính trị
+  </span>
+  <span>
+     giữ một vai trò quan trọng, phản ánh đúng bản chất của một xã hội đang phát triển, nơi tri thức chính trị ngày càng được coi trọng. Đây không chỉ là kho tàng thông tin phục vụ cho nghiên cứu học thuật, giảng dạy hay công tác quản lý nhà nước, mà còn là kênh tham khảo hữu ích cho bất kỳ ai muốn hiểu sâu sắc về tình hình chính trị, xã hội, đối nội, đối ngoại của Việt Nam và thế giới.
+  </span>
+</p>
+<p dir="ltr">
+  <span>
+    Tại Fahasa, danh mục sách chính trị được đầu tư phát triển phong phú, đa chiều, từ những cuốn sách nghiên cứu chuyên sâu về tư tưởng chính trị, lý luận chính trị, đến những tựa sách cập nhật các chính sách mới, xu hướng vận động của các tổ chức chính trị trong nước và quốc tế. Đây là kho tài liệu quý giá giúp người đọc mở rộng tầm nhìn, trang bị thêm nền tảng kiến thức vững chắc để nhìn nhận đúng đắn các sự kiện, vấn đề thời sự nóng hổi.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Nội dung phong phú, bao quát nhiều khía cạnh chính trị
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    Sách về hệ thống chính trị Việt Nam
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Một trong những nhóm sách chiếm tỷ trọng lớn tại danh mục này chính là các đầu sách liên quan tới 
+  </span>
+  <span>
+    hệ thống chính trị Việt Nam
+  </span>
+  <span>
+    , bao gồm:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Quá trình hình thành và phát triển của hệ thống chính trị Việt Nam từ sau Cách mạng Tháng Tám.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cơ cấu tổ chức, chức năng, nhiệm vụ của Đảng Cộng sản Việt Nam, Nhà nước Cộng hòa xã hội chủ nghĩa Việt Nam và các tổ chức chính trị - xã hội.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Các sách phân tích vai trò lãnh đạo của Đảng trong công cuộc xây dựng và phát triển đất nước qua từng giai đoạn lịch sử.
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    Sách về tư tưởng chính trị, triết học chính trị
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Nhóm sách này cung cấp cho độc giả những 
+  </span>
+  <span>
+    lý thuyết nền tảng
+  </span>
+  <span>
+     về chính trị học, giúp người đọc hiểu rõ các hệ tư tưởng từ cổ chí kim, từ Đông sang Tây. Một số nội dung nổi bật bao gồm:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tư tưởng chính trị của 
+      </span>
+      <span>
+        Karl Marx, Friedrich Engels, Lenin, Hồ Chí Minh
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Các trường phái tư tưởng chính trị lớn trên thế giới như 
+      </span>
+      <span>
+        chủ nghĩa tự do, chủ nghĩa xã hội, chủ nghĩa dân tộc, chủ nghĩa bảo thủ
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Các cuốn sách phân tích 
+      </span>
+      <span>
+        mối quan hệ giữa chính trị và kinh tế, chính trị và văn hóa, chính trị và xã hội
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<h3 dir="ltr">
+  <span>
+    Sách về chính sách công và quản lý nhà nước
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Fahasa cũng phân phối nhiều đầu sách chuyên sâu về:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Xây dựng và thực thi chính sách công
+      </span>
+      <span>
+         tại Việt Nam và các quốc gia trên thế giới.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cơ chế quản lý nhà nước hiện đại
+      </span>
+      <span>
+         trong bối cảnh hội nhập quốc tế.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Những vấn đề về 
+      </span>
+      <span>
+        cải cách hành chính, xây dựng nhà nước pháp quyền, phát triển xã hội dân sự
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những đầu sách này phù hợp với 
+  </span>
+  <span>
+    sinh viên, giảng viên ngành chính trị học, hành chính công, luật, xã hội học
+  </span>
+  <span>
+    , cũng như những người làm công tác quản lý, lãnh đạo ở các cấp.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Sách về tình hình chính trị quốc tế
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Bên cạnh mảng chính trị trong nước, Fahasa cũng rất chú trọng cập nhật các đầu sách về:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tình hình chính trị quốc tế, quan hệ giữa các cường quốc, các xung đột khu vực
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Vai trò của các tổ chức quốc tế
+      </span>
+      <span>
+         như Liên Hợp Quốc, ASEAN, WTO trong việc duy trì hòa bình, hợp tác và phát triển.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Chính sách đối ngoại của Việt Nam
+      </span>
+      <span>
+        , các hiệp định thương mại tự do, quá trình hội nhập quốc tế.
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Những cuốn sách này không chỉ giúp người đọc cập nhật thông tin thời sự mà còn cung cấp các góc nhìn đa chiều, giúp phân tích và đánh giá các vấn đề quốc tế một cách khách quan.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Vì sao nên mua sách chính trị tại Fahasa?
+  </span>
+</h2>
+<h3 dir="ltr">
+  <span>
+    Nguồn sách chính thống, chất lượng đảm bảo
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Tất cả sách chính trị tại Fahasa đều được nhập trực tiếp từ 
+  </span>
+  <span>
+    những nhà xuất bản uy tín
+  </span>
+  <span>
+     như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhà xuất bản Chính trị Quốc gia Sự thật
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhà xuất bản Khoa học Xã hội
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhà xuất bản Đại học Quốc gia
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Nhà xuất bản Thế giới
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Điều này đảm bảo 
+  </span>
+  <span>
+    tính chính thống, chuẩn xác
+  </span>
+  <span>
+     của nội dung sách, phù hợp cho 
+  </span>
+  <span>
+    nghiên cứu chuyên sâu, trích dẫn học thuật
+  </span>
+  <span>
+     hoặc tham khảo trong công tác giảng dạy, tuyên truyền.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Đa dạng đầu sách từ lý luận tới thực tiễn
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Danh mục sách chính trị tại Fahasa không chỉ bó hẹp ở các cuốn sách lý luận khô khan, hàn lâm, mà còn mở rộng ra nhiều thể loại gần gũi, dễ đọc như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Tư liệu chính trị dưới dạng hỏi - đáp
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách chính trị phổ thông, giải thích các khái niệm phức tạp theo cách dễ hiểu
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sách tiểu sử chính trị
+      </span>
+      <span>
+        , ghi lại hành trình, tư tưởng và dấu ấn của các 
+      </span>
+      <span>
+        nhà lãnh đạo nổi bật
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Điều này giúp mọi đối tượng độc giả, từ học sinh, sinh viên, người lao động đến cán bộ công chức, viên chức đều có thể dễ dàng tiếp cận.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Giá cả hợp lý, nhiều ưu đãi
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Fahasa liên tục triển khai 
+  </span>
+  <span>
+    các chương trình giảm giá, ưu đãi theo mùa
+  </span>
+  <span>
+    , đặc biệt trong các dịp lễ lớn như:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Kỷ niệm Ngày Quốc khánh 2/9
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Ngày thành lập Đảng 3/2
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Ngày Thống nhất đất nước 30/4
+      </span>
+    </p>
+  </li>
+</ul>
+<p dir="ltr">
+  <span>
+    Việc mua sách chính trị tại Fahasa không chỉ tiết kiệm chi phí mà còn giúp độc giả sở hữu những ấn phẩm chất lượng cao với mức giá tốt.
+  </span>
+</p>
+<h3 dir="ltr">
+  <span>
+    Dịch vụ giao nhận nhanh, chăm sóc khách hàng tận tình
+  </span>
+</h3>
+<p dir="ltr">
+  <span>
+    Với hệ thống 
+  </span>
+  <span>
+    cửa hàng trải rộng toàn quốc
+  </span>
+  <span>
+     và 
+  </span>
+  <span>
+    kho vận hiện đại
+  </span>
+  <span>
+    , Fahasa cam kết 
+  </span>
+  <span>
+    giao hàng nhanh
+  </span>
+  <span>
+     từ 1-3 ngày tại hầu hết các tỉnh thành. Ngoài ra, đội ngũ 
+  </span>
+  <span>
+    chăm sóc khách hàng chuyên nghiệp
+  </span>
+  <span>
+     luôn sẵn sàng hỗ trợ, giải đáp mọi thắc mắc về sản phẩm, dịch vụ.
+  </span>
+</p>
+<h2 dir="ltr">
+  <span>
+    Đối tượng độc giả phù hợp
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục sách chính trị tại Fahasa phục vụ nhiều nhóm đối tượng:
+  </span>
+</p>
+<ul>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Sinh viên, học viên cao học, nghiên cứu sinh
+      </span>
+      <span>
+         các ngành Chính trị học, Quan hệ quốc tế, Hành chính công, Xã hội học.
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Giảng viên, cán bộ nghiên cứu tại các viện nghiên cứu chính trị, trường đại học, học viện
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Cán bộ, công chức, viên chức làm việc trong các cơ quan Đảng, Nhà nước, Mặt trận Tổ quốc và các tổ chức chính trị - xã hội
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+  <li dir="ltr">
+    <p dir="ltr">
+      <span>
+        Những người quan tâm đến tình hình chính trị, kinh tế, xã hội của Việt Nam và thế giới
+      </span>
+      <span>
+        .
+      </span>
+    </p>
+  </li>
+</ul>
+<h2 dir="ltr">
+  <span>
+    Lời kết
+  </span>
+</h2>
+<p dir="ltr">
+  <span>
+    Danh mục sách chính trị tại Fahasa không chỉ là nguồn tư liệu phong phú, uy tín dành cho học thuật, nghiên cứu, mà còn là kênh tri thức thiết thực giúp độc giả trang bị tư duy chính trị sắc bén, cái nhìn đa chiều về bối cảnh xã hội hiện nay. Với 
+  </span>
+  <span>
+    kho sách phong phú, chất lượng đảm bảo, dịch vụ tận tâm và nhiều ưu đãi hấp dẫn
+  </span>
+  <span>
+    , Fahasa là địa chỉ tin cậy cho những ai đang tìm kiếm các đầu sách chính trị chất lượng cao.
+  </span>
+</p>
+');
+
+insert into categories (id, created_at, updated_at, name, parent_id, description)
+values (306, now(), now(), 'Thể Thao', 300, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Thể Thao
   </strong>
@@ -35778,7 +35273,7 @@ values (307, now(), now(), 'Thể Thao', 301, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (308, now(), now(), 'Đam mỹ', null, '<h2 dir="ltr">
+values (307, now(), now(), 'Đam mỹ', 1, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Đam Mỹ
   </strong>
@@ -36002,7 +35497,7 @@ values (308, now(), now(), 'Đam mỹ', null, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (309, now(), now(), 'Văn Hóa - Nghệ Thuật - Du Lịch', null, '<h1 dir="ltr">
+values (308, now(), now(), 'Văn Hóa - Nghệ Thuật - Du Lịch', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Văn Hóa - Nghệ Thuật - Du Lịch
   </span>
@@ -36294,7 +35789,7 @@ values (309, now(), now(), 'Văn Hóa - Nghệ Thuật - Du Lịch', null, '<h1 
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (310, now(), now(), 'Nữ Công Gia Chánh', null, '<h1 dir="ltr">
+values (309, now(), now(), 'Nữ Công Gia Chánh', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Nữ Công Gia Chánh
   </span>
@@ -36482,22 +35977,22 @@ values (310, now(), now(), 'Nữ Công Gia Chánh', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (311, now(), now(), 'Nấu Ăn', 310, null);
+values (310, now(), now(), 'Nấu Ăn', 309, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (312, now(), now(), 'Khéo Tay', 310, null);
+values (311, now(), now(), 'Khéo Tay', 309, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (313, now(), now(), 'Làm Đẹp', 310, null);
+values (312, now(), now(), 'Món Ăn Bài Thuốc', 309, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (314, now(), now(), 'Món Ăn Bài Thuốc', 310, null);
+values (313, now(), now(), 'Làm Đẹp', 309, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (315, now(), now(), 'Mẹo vặt - Cẩm nang', 310, null);
+values (314, now(), now(), 'Mẹo vặt - Cẩm nang', 309, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (316, now(), now(), 'Phong Thủy - Kinh Dịch', null, '<h1 dir="ltr">
+values (315, now(), now(), 'Phong Thủy - Kinh Dịch', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Phong Thủy - Kinh Dịch
   </span>
@@ -36713,7 +36208,7 @@ values (316, now(), now(), 'Phong Thủy - Kinh Dịch', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (317, now(), now(), 'Từ điển', null, '<h1 dir="ltr">
+values (316, now(), now(), 'Từ điển', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Từ Điển
   </span>
@@ -37242,7 +36737,7 @@ values (317, now(), now(), 'Từ điển', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (318, now(), now(), 'Từ điển tiếng Anh', 317, '<h2 dir="ltr">
+values (317, now(), now(), 'Từ điển tiếng Anh', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Anh
   </strong>
@@ -37505,7 +37000,7 @@ values (318, now(), now(), 'Từ điển tiếng Anh', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (319, now(), now(), 'Từ điển tiếng Việt', 317, '<h2 dir="ltr">
+values (318, now(), now(), 'Từ điển tiếng Việt', 316, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Tiếng Việt
@@ -37861,7 +37356,7 @@ values (319, now(), now(), 'Từ điển tiếng Việt', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (320, now(), now(), 'Từ điển tiếng Nhật', 317, '<h2 dir="ltr">
+values (319, now(), now(), 'Từ điển tiếng Nhật', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Nhật 
   </strong>
@@ -38108,7 +37603,7 @@ values (320, now(), now(), 'Từ điển tiếng Nhật', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (321, now(), now(), 'Từ điển tiếng Hàn', 317, '<h2 dir="ltr">
+values (320, now(), now(), 'Từ điển tiếng Hàn', 316, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Tiếng Hàn
@@ -38352,7 +37847,7 @@ values (321, now(), now(), 'Từ điển tiếng Hàn', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (322, now(), now(), 'Từ điển Hán - Việt', 317, '<h2 dir="ltr">
+values (321, now(), now(), 'Từ điển Hán - Việt', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Hán - Việt 
   </strong>
@@ -38634,7 +38129,7 @@ values (322, now(), now(), 'Từ điển Hán - Việt', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (323, now(), now(), 'Từ điển chuyên ngành', 317, '<h2 dir="ltr">
+values (322, now(), now(), 'Từ điển chuyên ngành', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Chuyên Ngành 
   </strong>
@@ -38911,7 +38406,7 @@ values (323, now(), now(), 'Từ điển chuyên ngành', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (324, now(), now(), 'Từ Điển Khác', 317, '<h2 dir="ltr">
+values (323, now(), now(), 'Từ Điển Khác', 316, '<h2 dir="ltr">
   <span>
     <strong>
       Thông tin danh mục Từ Điển Khác
@@ -39301,7 +38796,7 @@ values (324, now(), now(), 'Từ Điển Khác', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (325, now(), now(), 'Từ điển tiếng Pháp', 317, '<h2 dir="ltr">
+values (324, now(), now(), 'Từ điển tiếng Pháp', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Pháp 
   </strong>
@@ -39559,7 +39054,7 @@ values (325, now(), now(), 'Từ điển tiếng Pháp', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (326, now(), now(), 'Từ điển tiếng Đức', 317, '<h2 dir="ltr">
+values (325, now(), now(), 'Từ điển tiếng Đức', 316, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục Từ Điển Tiếng Đức 
   </strong>
@@ -39872,7 +39367,7 @@ values (326, now(), now(), 'Từ điển tiếng Đức', 317, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (327, now(), now(), 'Âm Nhạc - Mỹ Thuật - Thời Trang', null, '<h1 dir="ltr">
+values (326, now(), now(), 'Âm Nhạc - Mỹ Thuật - Thời Trang', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Âm Nhạc – Mỹ Thuật – Thời Trang
   </span>
@@ -40327,7 +39822,7 @@ values (327, now(), now(), 'Âm Nhạc - Mỹ Thuật - Thời Trang', null, '<h
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (328, now(), now(), 'Âm Nhạc', 327, '<h2 dir="ltr">
+values (327, now(), now(), 'Âm Nhạc', 326, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Âm Nhạc
   </strong>
@@ -40574,7 +40069,7 @@ values (328, now(), now(), 'Âm Nhạc', 327, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (329, now(), now(), 'Mỹ Thuật', 327, '<h2 dir="ltr">
+values (328, now(), now(), 'Mỹ Thuật', 326, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Mỹ Thuật 
   </strong>
@@ -40874,7 +40369,7 @@ values (329, now(), now(), 'Mỹ Thuật', 327, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (330, now(), now(), 'Thời Trang', 327, '<h2 dir="ltr">
+values (329, now(), now(), 'Thời Trang', 326, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Thời Trang
   </strong>
@@ -41121,7 +40616,7 @@ values (330, now(), now(), 'Thời Trang', 327, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (331, now(), now(), 'Thể Dục Thể thao - Giải Trí', null, '<h1 dir="ltr">
+values (330, now(), now(), 'Thể Dục Thể thao - Giải Trí', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Thể Dục Thể Thao – Giải Trí 
   </span>
@@ -41562,7 +41057,7 @@ values (331, now(), now(), 'Thể Dục Thể thao - Giải Trí', null, '<h1 di
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (332, now(), now(), 'Báo - Tạp Chí', null, '<h1 dir="ltr">
+values (331, now(), now(), 'Báo - Tạp Chí', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Báo - Tạp Chí
   </span>
@@ -41834,7 +41329,7 @@ values (332, now(), now(), 'Báo - Tạp Chí', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (333, now(), now(), 'Giáo trình', null, '<h1 dir="ltr">
+values (332, now(), now(), 'Giáo trình', 1, '<h1 dir="ltr">
   <span>
     Thông 
   </span>
@@ -42138,7 +41633,7 @@ values (333, now(), now(), 'Giáo trình', null, '<h1 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (334, now(), now(), 'Giáo trình ĐH, CĐ, THCN', 333, '<h2 dir="ltr">
+values (333, now(), now(), 'Giáo trình ĐH, CĐ, THCN', 332, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách giáo trình ĐH, CĐ, THCN
   </strong>
@@ -42534,10 +42029,10 @@ values (334, now(), now(), 'Giáo trình ĐH, CĐ, THCN', 333, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (335, now(), now(), 'Thể loại khác', 333, null);
+values (334, now(), now(), 'Thể loại khác', 332, null);
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (336, now(), now(), 'Dạy nghề', 333, '<h2 dir="ltr">
+values (335, now(), now(), 'Dạy nghề', 332, '<h2 dir="ltr">
   <strong>
     Thông tin danh mục sách Dạy Nghề 
   </strong>
@@ -42756,7 +42251,7 @@ values (336, now(), now(), 'Dạy nghề', 333, '<h2 dir="ltr">
 ');
 
 insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (337, now(), now(), 'Làm Vườn - Thú Nuôi', null, '<h1 dir="ltr">
+values (336, now(), now(), 'Làm Vườn - Thú Nuôi', 1, '<h1 dir="ltr">
   <span>
     Thông tin danh mục Sách Làm Vườn - Thú Nuôi
   </span>
@@ -43032,888 +42527,884 @@ values (337, now(), now(), 'Làm Vườn - Thú Nuôi', null, '<h1 dir="ltr">
 </p>
 ');
 
-insert into categories (id, created_at, updated_at, name, parent_id, description)
-values (338, now(), now(), 'Mystery Box', null, null);
-
+insert into authors (id, created_at, updated_at, name)
+values (1, now(), now(), 'Sơn Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1, now(), now(), 'B R O Group');
+values (2, now(), now(), 'Jun Phạm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2, now(), now(), 'Tạ Huy Long');
+values (3, now(), now(), 'Phùng Quán');
 
 insert into authors (id, created_at, updated_at, name)
-values (3, now(), now(), 'Dương Trung Quốc');
+values (4, now(), now(), 'Yunan');
 
 insert into authors (id, created_at, updated_at, name)
-values (4, now(), now(), 'Hiếu Minh');
-
-insert into authors (id, created_at, updated_at, name)
-values (5, now(), now(), 'Huyền Trang');
+values (5, now(), now(), 'Tô Hoài');
 
 insert into authors (id, created_at, updated_at, name)
 values (6, now(), now(), 'Nhiều Tác Giả');
 
 insert into authors (id, created_at, updated_at, name)
-values (7, now(), now(), 'Antoine De Saint Exupéry');
+values (7, now(), now(), 'Nguyễn Tân');
 
 insert into authors (id, created_at, updated_at, name)
-values (8, now(), now(), 'Jakob Martin Strid');
+values (8, now(), now(), 'Đoàn Giỏi');
 
 insert into authors (id, created_at, updated_at, name)
-values (9, now(), now(), 'Lam Phương');
+values (9, now(), now(), 'Nguyễn Đình Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (10, now(), now(), 'Nguyên Trang');
+values (10, now(), now(), 'Thùy Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (11, now(), now(), 'Tố Ny');
+values (11, now(), now(), 'Luis Sepúlveda');
 
 insert into authors (id, created_at, updated_at, name)
-values (12, now(), now(), 'Xuân Quỳnh');
+values (12, now(), now(), 'Tạ Huy Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (13, now(), now(), 'Ransom Riggs');
+values (13, now(), now(), 'Hà Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (14, now(), now(), 'Rudyard Kipling');
+values (14, now(), now(), 'Antoine de Saint-Exupéry');
 
 insert into authors (id, created_at, updated_at, name)
-values (15, now(), now(), 'Khánh Vân');
+values (15, now(), now(), 'Andea Hirata');
 
 insert into authors (id, created_at, updated_at, name)
-values (16, now(), now(), 'Cá');
+values (16, now(), now(), 'Luis Prats');
 
 insert into authors (id, created_at, updated_at, name)
-values (17, now(), now(), 'Kim Nhi Lê');
+values (17, now(), now(), 'Zuzanna Celej');
 
 insert into authors (id, created_at, updated_at, name)
-values (18, now(), now(), 'Emily Hughes');
+values (18, now(), now(), 'Jeff Kinney');
 
 insert into authors (id, created_at, updated_at, name)
-values (19, now(), now(), 'Daniel Howarth');
+values (19, now(), now(), 'B R O Group');
 
 insert into authors (id, created_at, updated_at, name)
-values (20, now(), now(), 'Sơn Tùng');
+values (20, now(), now(), 'Dương Trung Quốc');
 
 insert into authors (id, created_at, updated_at, name)
-values (21, now(), now(), 'Jun Phạm');
+values (21, now(), now(), 'Hiếu Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (22, now(), now(), 'Phùng Quán');
+values (22, now(), now(), 'Huyền Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (23, now(), now(), 'Yunan');
+values (23, now(), now(), 'Antoine De Saint Exupéry');
 
 insert into authors (id, created_at, updated_at, name)
-values (24, now(), now(), 'Tô Hoài');
+values (24, now(), now(), 'Jakob Martin Strid');
 
 insert into authors (id, created_at, updated_at, name)
-values (25, now(), now(), 'Nguyễn Tân');
+values (25, now(), now(), 'Nguyên Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (26, now(), now(), 'Đoàn Giỏi');
+values (26, now(), now(), 'Tố Ny');
 
 insert into authors (id, created_at, updated_at, name)
-values (27, now(), now(), 'Nguyễn Đình Thi');
+values (27, now(), now(), 'Ransom Riggs');
 
 insert into authors (id, created_at, updated_at, name)
-values (28, now(), now(), 'Thùy Dung');
+values (28, now(), now(), 'Lam Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (29, now(), now(), 'Luis Sepúlveda');
+values (29, now(), now(), 'Xuân Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (30, now(), now(), 'Hà Minh');
+values (30, now(), now(), 'Russell Punter');
 
 insert into authors (id, created_at, updated_at, name)
-values (31, now(), now(), 'Antoine de Saint-Exupéry');
+values (31, now(), now(), 'Xavier Bonet');
 
 insert into authors (id, created_at, updated_at, name)
-values (32, now(), now(), 'Andea Hirata');
+values (32, now(), now(), 'Đào Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (33, now(), now(), 'Luis Prats');
+values (33, now(), now(), 'Đào hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (34, now(), now(), 'Zuzanna Celej');
+values (34, now(), now(), 'Quang Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (35, now(), now(), 'Trần Đức Tiến');
+values (35, now(), now(), 'Hoài Thu');
 
 insert into authors (id, created_at, updated_at, name)
-values (36, now(), now(), 'Jeff Kinney');
+values (36, now(), now(), 'Mijika');
 
 insert into authors (id, created_at, updated_at, name)
-values (37, now(), now(), 'Fumiko Takeshita');
+values (37, now(), now(), 'Liuzi');
 
 insert into authors (id, created_at, updated_at, name)
-values (38, now(), now(), 'Mamoru Suzuki');
+values (38, now(), now(), 'Rudyard Kipling');
 
 insert into authors (id, created_at, updated_at, name)
 values (39, now(), now(), 'Naokata Mase');
 
 insert into authors (id, created_at, updated_at, name)
-values (40, now(), now(), 'Hiroki Hattori');
+values (40, now(), now(), 'Fumiko Takeshita');
 
 insert into authors (id, created_at, updated_at, name)
-values (41, now(), now(), 'Takako Hirono');
+values (41, now(), now(), 'Mamoru Suzuki');
 
 insert into authors (id, created_at, updated_at, name)
-values (42, now(), now(), 'Toshio Nishimura');
+values (42, now(), now(), 'Hiroki Hattori');
 
 insert into authors (id, created_at, updated_at, name)
-values (43, now(), now(), 'Gomi Taro');
+values (43, now(), now(), 'Toshio Nishimura');
 
 insert into authors (id, created_at, updated_at, name)
-values (44, now(), now(), 'Sachi Kokaze');
+values (44, now(), now(), 'Gomi Taro');
 
 insert into authors (id, created_at, updated_at, name)
-values (45, now(), now(), 'Akane Nishihira');
+values (45, now(), now(), 'Yoko Sasaki');
 
 insert into authors (id, created_at, updated_at, name)
-values (46, now(), now(), 'Yoko Sasaki');
+values (46, now(), now(), 'Sachi Kokaze');
 
 insert into authors (id, created_at, updated_at, name)
-values (47, now(), now(), 'Kawa');
+values (47, now(), now(), 'Akane Nishihira');
 
 insert into authors (id, created_at, updated_at, name)
-values (48, now(), now(), 'Mai Anh Đỗ');
+values (48, now(), now(), 'Kawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (49, now(), now(), 'Mariko Shinju');
+values (49, now(), now(), 'Mai Anh Đỗ');
 
 insert into authors (id, created_at, updated_at, name)
-values (50, now(), now(), 'Liu Bing Jun');
+values (50, now(), now(), 'Mariko Shinju');
 
 insert into authors (id, created_at, updated_at, name)
-values (51, now(), now(), 'Mitsuo Shirakawa');
+values (51, now(), now(), 'Takako Hirono');
 
 insert into authors (id, created_at, updated_at, name)
-values (52, now(), now(), 'Hideko Nagano');
+values (52, now(), now(), 'Yu Qing');
 
 insert into authors (id, created_at, updated_at, name)
-values (53, now(), now(), 'Stephanie Moss');
+values (53, now(), now(), 'Peter H Reynolds');
 
 insert into authors (id, created_at, updated_at, name)
-values (54, now(), now(), 'Audrey Bouquet');
+values (54, now(), now(), 'Michiko Egashira');
 
 insert into authors (id, created_at, updated_at, name)
-values (55, now(), now(), 'Fabien Öckto Lambert');
+values (55, now(), now(), 'Stephanie Moss');
 
 insert into authors (id, created_at, updated_at, name)
-values (56, now(), now(), 'Thẩm Viên');
+values (56, now(), now(), 'Audrey Bouquet');
 
 insert into authors (id, created_at, updated_at, name)
-values (57, now(), now(), 'Khương Tĩnh Á');
+values (57, now(), now(), 'Fabien Öckto Lambert');
 
 insert into authors (id, created_at, updated_at, name)
-values (58, now(), now(), 'Hồ Tâm');
+values (58, now(), now(), 'Thẩm Viên');
 
 insert into authors (id, created_at, updated_at, name)
-values (59, now(), now(), 'Hà Yên');
+values (59, now(), now(), 'Khương Tĩnh Á');
 
 insert into authors (id, created_at, updated_at, name)
-values (60, now(), now(), 'Linda Locke');
+values (60, now(), now(), 'Hồ Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (61, now(), now(), 'Tiểu Mạch Đông Thái');
+values (61, now(), now(), 'Giản Giản Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (62, now(), now(), 'Phó Trại Nam');
+values (62, now(), now(), 'Cơ Cơ');
 
 insert into authors (id, created_at, updated_at, name)
-values (63, now(), now(), 'Thư Trùng');
+values (63, now(), now(), 'Hà Yên');
 
 insert into authors (id, created_at, updated_at, name)
-values (64, now(), now(), '1980Edu');
+values (64, now(), now(), 'Tiểu Mạch Đông Thái');
 
 insert into authors (id, created_at, updated_at, name)
-values (65, now(), now(), 'Phí Mai');
+values (65, now(), now(), 'Phó Trại Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (66, now(), now(), 'Marie Tibi');
+values (66, now(), now(), 'Thư Trùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (67, now(), now(), 'Minh Trang');
+values (67, now(), now(), 'Linda Locke');
 
 insert into authors (id, created_at, updated_at, name)
-values (68, now(), now(), 'Thu Nấm');
+values (68, now(), now(), '1980Edu');
 
 insert into authors (id, created_at, updated_at, name)
-values (69, now(), now(), 'Hazel Maskell');
+values (69, now(), now(), 'Phí Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (70, now(), now(), 'Dolphin Media');
+values (70, now(), now(), 'Jayneen Sanders');
 
 insert into authors (id, created_at, updated_at, name)
-values (71, now(), now(), 'Ngọc Linh');
+values (71, now(), now(), 'Marie Tibi');
 
 insert into authors (id, created_at, updated_at, name)
-values (72, now(), now(), 'Jenny Wren');
+values (72, now(), now(), 'Đỗ Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (73, now(), now(), 'Minna Lacey');
+values (73, now(), now(), 'Dan Allbaugh');
 
 insert into authors (id, created_at, updated_at, name)
-values (74, now(), now(), 'Chorkung');
+values (74, now(), now(), 'Anil Yap');
 
 insert into authors (id, created_at, updated_at, name)
-values (75, now(), now(), 'Hoàng Tú');
+values (75, now(), now(), 'Khánh Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (76, now(), now(), 'Rosie Greening');
+values (76, now(), now(), 'Phạm Lê Thu Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (77, now(), now(), 'Stuart Lynch');
+values (77, now(), now(), 'Tiểu Tranh');
 
 insert into authors (id, created_at, updated_at, name)
-values (78, now(), now(), 'Little Raibow');
+values (78, now(), now(), 'Blue Rabbit');
 
 insert into authors (id, created_at, updated_at, name)
-values (79, now(), now(), 'Sam Smith');
+values (79, now(), now(), 'Wen Zhou Chuang Cai');
 
 insert into authors (id, created_at, updated_at, name)
-values (80, now(), now(), 'Nathalie Choux');
+values (80, now(), now(), 'Ke Ji You');
 
 insert into authors (id, created_at, updated_at, name)
-values (81, now(), now(), 'Khánh Huyền');
+values (81, now(), now(), 'Xian Gong Si');
 
 insert into authors (id, created_at, updated_at, name)
-values (82, now(), now(), 'Takashi Muto');
+values (82, now(), now(), 'Cecilia Minden');
 
 insert into authors (id, created_at, updated_at, name)
-values (83, now(), now(), 'Hannah Watson');
+values (83, now(), now(), 'Dolphin Media');
 
 insert into authors (id, created_at, updated_at, name)
-values (84, now(), now(), 'Joaquin Camp');
+values (84, now(), now(), 'Linda Crotta Brennan');
 
 insert into authors (id, created_at, updated_at, name)
-values (85, now(), now(), 'Quỳnh Hương');
+values (85, now(), now(), 'Katie Marsico');
 
 insert into authors (id, created_at, updated_at, name)
-values (86, now(), now(), 'Nick Ackland');
+values (86, now(), now(), 'Katherine Flannery');
 
 insert into authors (id, created_at, updated_at, name)
-values (87, now(), now(), 'Marta Sorte');
+values (87, now(), now(), 'Tạ Văn Sang');
 
 insert into authors (id, created_at, updated_at, name)
-values (88, now(), now(), 'Little Red Flower');
+values (88, now(), now(), 'TianYing');
 
 insert into authors (id, created_at, updated_at, name)
-values (89, now(), now(), 'Beiing Little Red Flower Studio');
+values (89, now(), now(), 'Tam Tam');
 
 insert into authors (id, created_at, updated_at, name)
-values (90, now(), now(), 'Cecilia Minden');
+values (90, now(), now(), 'Lưu Tự Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (91, now(), now(), 'Linda Crotta Brennan');
+values (91, now(), now(), 'Trung tâm Sáng tạo Thiếu nhi Mộc Đầu Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (92, now(), now(), 'Katherine Flannery');
+values (92, now(), now(), 'Phạm Văn Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (93, now(), now(), 'Tạ Văn Sang');
+values (93, now(), now(), 'Nguyễn Như Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (94, now(), now(), 'Mijika');
+values (94, now(), now(), 'Nguyễn Hoàng Tấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (95, now(), now(), 'TianYing');
+values (95, now(), now(), 'Rod Campbell');
 
 insert into authors (id, created_at, updated_at, name)
-values (96, now(), now(), 'Tam Tam');
+values (96, now(), now(), 'Lý Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (97, now(), now(), 'Lưu Tự Long');
+values (97, now(), now(), 'Vương Hiểu Nhã');
 
 insert into authors (id, created_at, updated_at, name)
-values (98, now(), now(), 'Sabina Colloredo');
+values (98, now(), now(), 'Chung Úc');
 
 insert into authors (id, created_at, updated_at, name)
-values (99, now(), now(), 'Serena Mabilia');
+values (99, now(), now(), 'Sabina Colloredo');
 
 insert into authors (id, created_at, updated_at, name)
-values (100, now(), now(), 'Phạm Văn Hòa');
+values (100, now(), now(), 'Serena Mabilia');
 
 insert into authors (id, created_at, updated_at, name)
-values (101, now(), now(), 'Nguyễn Như Mai');
+values (101, now(), now(), 'Buke Buke');
 
 insert into authors (id, created_at, updated_at, name)
-values (102, now(), now(), 'Nguyễn Hoàng Tấn');
+values (102, now(), now(), 'Xing Tao');
 
 insert into authors (id, created_at, updated_at, name)
-values (103, now(), now(), 'Rod Campbell');
+values (103, now(), now(), 'Thanh Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (104, now(), now(), 'Chung Úc');
+values (104, now(), now(), 'Nguyễn Bích Nhã');
 
 insert into authors (id, created_at, updated_at, name)
-values (105, now(), now(), 'Trung tâm Sáng tạo Thiếu nhi Mộc Đầu Nhân');
+values (105, now(), now(), 'Einstein Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (106, now(), now(), 'Lý Huy');
+values (106, now(), now(), 'TS Gareth Moore');
 
 insert into authors (id, created_at, updated_at, name)
-values (107, now(), now(), 'Vương Hiểu Nhã');
+values (107, now(), now(), 'Pascal Prévot');
 
 insert into authors (id, created_at, updated_at, name)
-values (108, now(), now(), 'Hoàng Hoành');
+values (108, now(), now(), 'Art Grootfontein');
 
 insert into authors (id, created_at, updated_at, name)
-values (109, now(), now(), 'Kẹo Bông');
+values (109, now(), now(), 'Vương Lệ Na');
 
 insert into authors (id, created_at, updated_at, name)
-values (110, now(), now(), 'Xing Tao');
+values (110, now(), now(), 'Phạm Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (111, now(), now(), 'Thanh Anh');
+values (111, now(), now(), 'Trương Hưởng');
 
 insert into authors (id, created_at, updated_at, name)
-values (112, now(), now(), 'Nguyễn Bích Nhã');
+values (112, now(), now(), 'Cung Huân');
 
 insert into authors (id, created_at, updated_at, name)
-values (113, now(), now(), 'Einstein Books');
+values (113, now(), now(), 'Võ Thị Mai Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (114, now(), now(), 'TS Gareth Moore');
+values (114, now(), now(), 'Hồ Quốc Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (115, now(), now(), 'Pascal Prévot');
+values (115, now(), now(), 'Anna Weltmann');
 
 insert into authors (id, created_at, updated_at, name)
-values (116, now(), now(), 'Art Grootfontein');
+values (116, now(), now(), 'Paul Boston');
 
 insert into authors (id, created_at, updated_at, name)
-values (117, now(), now(), 'Minh Lâm');
+values (117, now(), now(), 'Buke-Buke');
 
 insert into authors (id, created_at, updated_at, name)
-values (118, now(), now(), 'Vương Văn');
+values (118, now(), now(), 'Alex');
 
 insert into authors (id, created_at, updated_at, name)
-values (119, now(), now(), 'Hàn Minh');
+values (119, now(), now(), 'Fujiko F Fujio');
 
 insert into authors (id, created_at, updated_at, name)
-values (120, now(), now(), 'Nhậm Mộng');
+values (120, now(), now(), 'Pavla Hanáčková');
 
 insert into authors (id, created_at, updated_at, name)
-values (121, now(), now(), 'Vương Lệ Na');
+values (121, now(), now(), 'Hana Mokrošová');
 
 insert into authors (id, created_at, updated_at, name)
-values (122, now(), now(), 'Phạm Tuấn');
+values (122, now(), now(), 'Helena Haraštová');
 
 insert into authors (id, created_at, updated_at, name)
-values (123, now(), now(), 'Võ Thị Mai Chi');
+values (123, now(), now(), 'Elena Pokaleva');
 
 insert into authors (id, created_at, updated_at, name)
-values (124, now(), now(), 'Hồ Quốc Cường');
+values (124, now(), now(), 'Nhếu Tác Giả');
 
 insert into authors (id, created_at, updated_at, name)
-values (125, now(), now(), 'Anna Weltmann');
+values (125, now(), now(), 'Chris Ferrie');
 
 insert into authors (id, created_at, updated_at, name)
-values (126, now(), now(), 'Paul Boston');
+values (126, now(), now(), 'Phùng Duy Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (127, now(), now(), 'Louie Stowell và Rosie Dickins');
+values (127, now(), now(), 'Thu Ngân');
 
 insert into authors (id, created_at, updated_at, name)
-values (128, now(), now(), 'Fujiko F Fujio');
+values (128, now(), now(), 'Madeline Puckette');
 
 insert into authors (id, created_at, updated_at, name)
-values (129, now(), now(), 'Pavla Hanáčková');
+values (129, now(), now(), 'Federica Fragapane');
 
 insert into authors (id, created_at, updated_at, name)
-values (130, now(), now(), 'Hana Mokrošová');
+values (130, now(), now(), 'Chen Xinfu');
 
 insert into authors (id, created_at, updated_at, name)
-values (131, now(), now(), 'Helena Haraštová');
+values (131, now(), now(), 'Jia Haoyang');
 
 insert into authors (id, created_at, updated_at, name)
-values (132, now(), now(), 'Elena Pokaleva');
+values (132, now(), now(), 'Zhang Chen');
 
 insert into authors (id, created_at, updated_at, name)
-values (133, now(), now(), 'Alex');
+values (133, now(), now(), 'Jiang Weibo');
 
 insert into authors (id, created_at, updated_at, name)
-values (134, now(), now(), 'Buke-Buke');
+values (134, now(), now(), 'Yu Peng');
 
 insert into authors (id, created_at, updated_at, name)
-values (135, now(), now(), 'Guo Rurong');
+values (135, now(), now(), 'Gao Qi');
 
 insert into authors (id, created_at, updated_at, name)
-values (136, now(), now(), 'Bo Wocheng');
+values (136, now(), now(), 'Xu Dan');
 
 insert into authors (id, created_at, updated_at, name)
-values (137, now(), now(), 'Chris Ferrie');
+values (137, now(), now(), 'Kazuhiro Abe');
 
 insert into authors (id, created_at, updated_at, name)
-values (138, now(), now(), 'Li Zaili');
+values (138, now(), now(), 'Guo Rurong');
 
 insert into authors (id, created_at, updated_at, name)
-values (139, now(), now(), 'Kentaro Araki');
+values (139, now(), now(), 'Bo Wocheng');
 
 insert into authors (id, created_at, updated_at, name)
-values (140, now(), now(), 'Madeline Puckette');
+values (140, now(), now(), 'Rosie Dickins');
 
 insert into authors (id, created_at, updated_at, name)
-values (141, now(), now(), 'Federica Fragapane');
+values (141, now(), now(), 'Louie Stowell');
 
 insert into authors (id, created_at, updated_at, name)
-values (142, now(), now(), 'Clive Gifford');
+values (142, now(), now(), 'Jonathan Melmoth');
 
 insert into authors (id, created_at, updated_at, name)
-values (143, now(), now(), 'Marc-Etienne Peintre');
+values (143, now(), now(), 'Shaw Nielsen');
 
 insert into authors (id, created_at, updated_at, name)
-values (144, now(), now(), 'Nhếu Tác Giả');
+values (144, now(), now(), 'Clint Emerson');
 
 insert into authors (id, created_at, updated_at, name)
-values (145, now(), now(), 'Sam Baer');
+values (145, now(), now(), 'Sai Lei');
 
 insert into authors (id, created_at, updated_at, name)
-values (146, now(), now(), 'Rachel Firth');
+values (146, now(), now(), 'Chloe Chang');
 
 insert into authors (id, created_at, updated_at, name)
-values (147, now(), now(), 'Rose Hall');
+values (147, now(), now(), 'Tôn Nguyên Vĩ');
 
 insert into authors (id, created_at, updated_at, name)
-values (148, now(), now(), 'Alice James');
+values (148, now(), now(), 'Simon Holland');
 
 insert into authors (id, created_at, updated_at, name)
-values (149, now(), now(), 'Jerome Martin');
+values (149, now(), now(), 'Rachel Firth');
 
 insert into authors (id, created_at, updated_at, name)
-values (150, now(), now(), 'Clint Emerson');
+values (150, now(), now(), 'Ngọc Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (151, now(), now(), 'Sai Lei');
+values (151, now(), now(), 'DK');
 
 insert into authors (id, created_at, updated_at, name)
-values (152, now(), now(), 'Tôn Nguyên Vĩ');
+values (152, now(), now(), 'Molly Oldfield');
 
 insert into authors (id, created_at, updated_at, name)
-values (153, now(), now(), 'Chloe Chang');
+values (153, now(), now(), 'Neung In Publishing Company');
 
 insert into authors (id, created_at, updated_at, name)
-values (154, now(), now(), 'Simon Holland');
+values (154, now(), now(), 'Lê Lam');
 
 insert into authors (id, created_at, updated_at, name)
-values (155, now(), now(), 'Lisa Magloff');
+values (155, now(), now(), 'Oh Youngseok');
 
 insert into authors (id, created_at, updated_at, name)
-values (156, now(), now(), 'DK');
+values (156, now(), now(), 'Lee Jongwon');
 
 insert into authors (id, created_at, updated_at, name)
-values (157, now(), now(), 'Jonathan Sheikh Miller');
+values (157, now(), now(), 'Lee Dongkyu');
 
 insert into authors (id, created_at, updated_at, name)
-values (158, now(), now(), 'Jim Pipe');
+values (158, now(), now(), 'Oh Chunnyun');
 
 insert into authors (id, created_at, updated_at, name)
-values (159, now(), now(), 'Neung In Publishing Company');
+values (159, now(), now(), 'Choi Eunyoung');
 
 insert into authors (id, created_at, updated_at, name)
-values (160, now(), now(), 'Lê Lam');
+values (160, now(), now(), 'Doni Family');
 
 insert into authors (id, created_at, updated_at, name)
-values (161, now(), now(), 'Lee Dongkyu');
+values (161, now(), now(), 'Toon-Jangee');
 
 insert into authors (id, created_at, updated_at, name)
-values (162, now(), now(), 'Oh Chunnyun');
+values (162, now(), now(), 'Oh Gi-Su');
 
 insert into authors (id, created_at, updated_at, name)
-values (163, now(), now(), 'Choi Eunyoung');
+values (163, now(), now(), 'J. Swift');
 
 insert into authors (id, created_at, updated_at, name)
-values (164, now(), now(), 'Doni Family');
+values (164, now(), now(), 'Lee Soojung');
 
 insert into authors (id, created_at, updated_at, name)
-values (165, now(), now(), 'Toon-Jangee');
+values (165, now(), now(), 'ChungBe Studios');
 
 insert into authors (id, created_at, updated_at, name)
-values (166, now(), now(), 'Oh Gi-Su');
+values (166, now(), now(), 'Ahn');
 
 insert into authors (id, created_at, updated_at, name)
-values (167, now(), now(), 'Oh Youngseok');
+values (167, now(), now(), 'Hyungmo');
 
 insert into authors (id, created_at, updated_at, name)
-values (168, now(), now(), 'Lee Jongwon');
+values (168, now(), now(), 'Kim Wonsik');
 
 insert into authors (id, created_at, updated_at, name)
-values (169, now(), now(), 'ChungBe Studios');
+values (169, now(), now(), 'Team kids');
 
 insert into authors (id, created_at, updated_at, name)
-values (170, now(), now(), 'Kim Wonsik');
+values (170, now(), now(), 'Han');
 
 insert into authors (id, created_at, updated_at, name)
-values (171, now(), now(), 'Team kids');
+values (171, now(), now(), 'Nana');
 
 insert into authors (id, created_at, updated_at, name)
-values (172, now(), now(), 'Han');
+values (172, now(), now(), 'Ahn Hyungmo');
 
 insert into authors (id, created_at, updated_at, name)
-values (173, now(), now(), 'Nana');
+values (173, now(), now(), 'Park Sanguk');
 
 insert into authors (id, created_at, updated_at, name)
-values (174, now(), now(), 'Ahn Hyungmo');
+values (174, now(), now(), 'Cho Myeongwon');
 
 insert into authors (id, created_at, updated_at, name)
-values (175, now(), now(), 'Park Sanguk');
+values (175, now(), now(), 'Han Nana');
 
 insert into authors (id, created_at, updated_at, name)
-values (176, now(), now(), 'Cho Myeongwon');
+values (176, now(), now(), 'Toonjaengi');
 
 insert into authors (id, created_at, updated_at, name)
-values (177, now(), now(), 'Han Nana');
+values (177, now(), now(), 'Park Yeonah');
 
 insert into authors (id, created_at, updated_at, name)
-values (178, now(), now(), 'Toonjaengi');
+values (178, now(), now(), 'Phạm Ngọc Điệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (179, now(), now(), 'Park Yeonah');
+values (179, now(), now(), 'Trần Ngọc Bảo Hân');
 
 insert into authors (id, created_at, updated_at, name)
-values (180, now(), now(), 'Yoon Sangsuk');
+values (180, now(), now(), 'Thiện Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (181, now(), now(), 'Oh');
+values (181, now(), now(), 'Minh Nguyệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (182, now(), now(), 'Youngseok');
+values (182, now(), now(), 'Chính An');
 
 insert into authors (id, created_at, updated_at, name)
-values (183, now(), now(), 'J. Swift');
+values (183, now(), now(), 'B.R.O Group');
 
 insert into authors (id, created_at, updated_at, name)
-values (184, now(), now(), 'Phạm Ngọc Điệp');
+values (184, now(), now(), 'Phan Thị');
 
 insert into authors (id, created_at, updated_at, name)
-values (185, now(), now(), 'Trần Ngọc Bảo Hân');
+values (185, now(), now(), 'Nhiều tác giả');
 
 insert into authors (id, created_at, updated_at, name)
-values (186, now(), now(), 'Thiện Lộc');
+values (186, now(), now(), 'Nhóm Giáo Viên ĐHSP');
 
 insert into authors (id, created_at, updated_at, name)
-values (187, now(), now(), 'Minh Nguyệt');
+values (187, now(), now(), 'Trung Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (188, now(), now(), 'Chính An');
+values (188, now(), now(), 'Louis Ben');
 
 insert into authors (id, created_at, updated_at, name)
-values (189, now(), now(), 'Phan Thị');
+values (189, now(), now(), 'Quang Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (190, now(), now(), 'B.R.O Group');
+values (190, now(), now(), 'Thành Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (191, now(), now(), 'Nhóm Giáo Viên ĐHSP');
+values (191, now(), now(), 'Phan Minh Đao');
 
 insert into authors (id, created_at, updated_at, name)
-values (192, now(), now(), 'Nhiều tác giả');
+values (192, now(), now(), 'Lê Bích Thuỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (193, now(), now(), 'Louis Ben');
+values (193, now(), now(), 'Đăng Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (194, now(), now(), 'Cung Huân');
+values (194, now(), now(), 'Hải Phạm');
 
 insert into authors (id, created_at, updated_at, name)
-values (195, now(), now(), 'Trung Kiên');
+values (195, now(), now(), 'Phan Minh Đạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (196, now(), now(), 'Phan Minh Đạo');
+values (196, now(), now(), 'JP Moon');
 
 insert into authors (id, created_at, updated_at, name)
-values (197, now(), now(), 'Phan Minh Đao');
+values (197, now(), now(), 'Minh Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (198, now(), now(), 'Lê Bích Thuỷ');
+values (198, now(), now(), 'The Kiwi');
 
 insert into authors (id, created_at, updated_at, name)
-values (199, now(), now(), 'Đăng Ngọc');
+values (199, now(), now(), 'Bắc Hà kids');
 
 insert into authors (id, created_at, updated_at, name)
-values (200, now(), now(), 'Hải Phạm');
+values (200, now(), now(), 'Phạm Huy Thông');
 
 insert into authors (id, created_at, updated_at, name)
-values (201, now(), now(), 'Nobumi');
+values (201, now(), now(), 'Việt Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (202, now(), now(), 'Song Nghi');
+values (202, now(), now(), 'Đại Mai Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (203, now(), now(), 'Đàm Tiểu Lâm');
+values (203, now(), now(), 'Huyền Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (204, now(), now(), 'Chính Bình');
+values (204, now(), now(), 'Nguyễn Thị Thanh Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (205, now(), now(), 'Đại Mai Books');
+values (205, now(), now(), 'Nguyễn Vũ Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (206, now(), now(), 'Huyền Linh');
+values (206, now(), now(), 'Einstein');
 
 insert into authors (id, created_at, updated_at, name)
-values (207, now(), now(), 'Nguyễn Vũ Quang');
+values (207, now(), now(), 'ETS');
 
 insert into authors (id, created_at, updated_at, name)
-values (208, now(), now(), 'BacHakid');
+values (208, now(), now(), 'Bảo Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (209, now(), now(), 'The Candy');
+values (209, now(), now(), 'Nguyễn Thị Thu Huế');
 
 insert into authors (id, created_at, updated_at, name)
-values (210, now(), now(), 'Einstein');
+values (210, now(), now(), 'Như Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (211, now(), now(), 'ETS');
+values (211, now(), now(), 'Quỳnh Rùa');
 
 insert into authors (id, created_at, updated_at, name)
-values (212, now(), now(), 'Quỳnh Rùa');
+values (212, now(), now(), 'Igloo Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (213, now(), now(), 'Igloo Books');
+values (213, now(), now(), 'Jackie Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (214, now(), now(), 'PINKFONG');
+values (214, now(), now(), 'Chính Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (215, now(), now(), 'Jackie Nguyễn');
+values (215, now(), now(), 'Phạm Văn Công');
 
 insert into authors (id, created_at, updated_at, name)
-values (216, now(), now(), 'Phạm Văn Công');
+values (216, now(), now(), 'Chính An Và Nhóm Giáo Viên ĐHSP');
 
 insert into authors (id, created_at, updated_at, name)
-values (217, now(), now(), 'Chính An Và Nhóm Giáo Viên ĐHSP');
+values (217, now(), now(), 'Nguyễn Bảo Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (218, now(), now(), 'Nguyễn Bảo Minh');
+values (218, now(), now(), 'Lê Yến Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (219, now(), now(), 'Lê Yến Ngọc');
+values (219, now(), now(), 'Hoàng Hải Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (220, now(), now(), 'Hoàng Hải Vân');
+values (220, now(), now(), 'Trang Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (221, now(), now(), 'Trang Anh');
+values (221, now(), now(), 'Ngọc Diệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (222, now(), now(), 'Ngọc Diệp');
+values (222, now(), now(), 'Nguyễn Đức Tấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (223, now(), now(), 'Nguyễn Đức Tấn');
+values (223, now(), now(), 'Huỳnh Thị Kim Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (224, now(), now(), 'Hoàng Văn');
+values (224, now(), now(), 'Đậu Thị Huế');
 
 insert into authors (id, created_at, updated_at, name)
-values (225, now(), now(), 'Hoàng Nguyên');
+values (225, now(), now(), 'Lê Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (226, now(), now(), 'Huỳnh Thị Kim Trang');
+values (226, now(), now(), 'Nguyễn Tương Tri');
 
 insert into authors (id, created_at, updated_at, name)
-values (227, now(), now(), 'Đậu Thị Huế');
+values (227, now(), now(), 'Nguyễn Văn Khang');
 
 insert into authors (id, created_at, updated_at, name)
-values (228, now(), now(), 'Lê Nga');
+values (228, now(), now(), 'Nguyễn Phúc Xuân Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (229, now(), now(), 'Nguyễn Tương Tri');
+values (229, now(), now(), 'Trần Thị Kim Cương');
 
 insert into authors (id, created_at, updated_at, name)
-values (230, now(), now(), 'Nguyễn Văn Khang');
+values (230, now(), now(), 'Võ Thị Minh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (231, now(), now(), 'Nguyễn Phúc Xuân Quỳnh');
+values (231, now(), now(), 'Nguyễn Đức Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (232, now(), now(), 'Trần Thị Kim Cương');
+values (232, now(), now(), 'Nguyễn Kính Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (233, now(), now(), 'Võ Thị Minh Trang');
+values (233, now(), now(), 'Tạ Thị Hồ Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (234, now(), now(), 'Phạm Thị Kim Chi');
+values (234, now(), now(), 'Trần Thị kim Cương');
 
 insert into authors (id, created_at, updated_at, name)
-values (235, now(), now(), 'Trần Thị kim Cương');
+values (235, now(), now(), 'Tạ Hoàng Đông');
 
 insert into authors (id, created_at, updated_at, name)
-values (236, now(), now(), 'Tạ Hoàng Đông');
+values (236, now(), now(), 'Phạm Thị Kim Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (237, now(), now(), 'Tạ Thị Hồ Dung');
+values (237, now(), now(), 'Nguyễn Minh Thiên Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (238, now(), now(), 'Nguyễn Minh Thiên Hoàng');
+values (238, now(), now(), 'Đỗ Minh Hoàng Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (239, now(), now(), 'Đỗ Minh Hoàng Đức');
+values (239, now(), now(), 'Lê Tấn Hồng Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (240, now(), now(), 'Lê Tấn Hồng Hải');
+values (240, now(), now(), 'Chu Ánh Văn');
 
 insert into authors (id, created_at, updated_at, name)
-values (241, now(), now(), 'Chu Ánh Văn');
+values (241, now(), now(), 'Lưu Phương Thanh Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (242, now(), now(), 'Khúc Thành Chính');
+values (242, now(), now(), 'Huỳnh Tú Kinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (243, now(), now(), 'Trần Quang Vinh');
+values (243, now(), now(), 'Lê Vĩnh Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (244, now(), now(), 'Đinh Thị Xuân Dung');
+values (244, now(), now(), 'Lê Thị Ngọc Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (245, now(), now(), 'Đinh Thị Kim Lan');
+values (245, now(), now(), 'Khúc Thành Chính');
 
 insert into authors (id, created_at, updated_at, name)
-values (246, now(), now(), 'TS Phạm Văn Công');
+values (246, now(), now(), 'Trần Quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (247, now(), now(), 'Trịnh Thu Trang');
+values (247, now(), now(), 'Đinh Thị Xuân Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (248, now(), now(), 'Nguyễn Thanh Trà');
+values (248, now(), now(), 'Đinh Thị Kim Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (249, now(), now(), 'Tạ Hồ Thị Dung');
+values (249, now(), now(), 'TS Phạm Văn Công');
 
 insert into authors (id, created_at, updated_at, name)
-values (250, now(), now(), 'Nguyễn Thu Phương');
+values (250, now(), now(), 'Trịnh Thu Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (251, now(), now(), 'Nguyễn Hồng Nhung');
+values (251, now(), now(), 'Nguyễn Thanh Trà');
 
 insert into authors (id, created_at, updated_at, name)
-values (252, now(), now(), 'Thùy Dương');
+values (252, now(), now(), 'Tạ Hồ Thị Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (253, now(), now(), 'Trịnh Cam Ly');
+values (253, now(), now(), 'Nguyễn Thu Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (254, now(), now(), 'Trần Thị Quỳnh Nga');
+values (254, now(), now(), 'Nguyễn Hồng Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (255, now(), now(), 'Trần Lê Thảo Linh');
+values (255, now(), now(), 'Thùy Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (256, now(), now(), 'Lê Thị Nguyên');
+values (256, now(), now(), 'Trịnh Cam Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (257, now(), now(), 'Trần Đức Niềm');
+values (257, now(), now(), 'Trần Thị Quỳnh Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (258, now(), now(), 'Vương Thị Vân');
+values (258, now(), now(), 'Trần Lê Thảo Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (259, now(), now(), 'Dương Thị Thảo');
+values (259, now(), now(), 'Lê Thị Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (260, now(), now(), 'Hữu Toàn');
+values (260, now(), now(), 'Trần Đức Niềm');
 
 insert into authors (id, created_at, updated_at, name)
-values (261, now(), now(), 'Trí Đức');
+values (261, now(), now(), 'Hoàng Thị Kim Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (262, now(), now(), 'Nguyễn Văn');
+values (262, now(), now(), 'Lê Bá Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (263, now(), now(), 'Phan Thị Quyên');
+values (263, now(), now(), 'Lý Khánh Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (264, now(), now(), 'Bùi Thị Lý Hạnh');
+values (264, now(), now(), 'Phương Đình');
 
 insert into authors (id, created_at, updated_at, name)
-values (265, now(), now(), 'Phạm Thị Quỳnh Như');
+values (265, now(), now(), 'Bình Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (266, now(), now(), 'Dung Vũ');
+values (266, now(), now(), 'Nguyễn Ngọc Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (267, now(), now(), 'Hà Thùy Linh');
+values (267, now(), now(), 'Nguyễn Thanh Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (268, now(), now(), 'Phạm Hồng Vương');
+values (268, now(), now(), 'Ngô Thị Thu Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (269, now(), now(), 'Hải Lê');
+values (269, now(), now(), 'Dương Thị Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (270, now(), now(), 'Võ Thị Hồng Loan');
+values (270, now(), now(), 'Tạ Hoàng Đồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (271, now(), now(), 'Bùi Quang Khải');
+values (271, now(), now(), 'Trần Thị Hường');
 
 insert into authors (id, created_at, updated_at, name)
-values (272, now(), now(), 'Nguyễn Trung Kiên');
+values (272, now(), now(), 'Đỗ Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (273, now(), now(), 'Lưu Văn Dầu');
+values (273, now(), now(), 'Lê Văn Thiện');
 
 insert into authors (id, created_at, updated_at, name)
-values (274, now(), now(), 'Nguyễn Thành Huân');
+values (274, now(), now(), 'Trần Hiền Lương');
 
 insert into authors (id, created_at, updated_at, name)
-values (275, now(), now(), 'Nguyễn Văn Tâm');
+values (275, now(), now(), 'Phạm Chị Chính');
 
 insert into authors (id, created_at, updated_at, name)
-values (276, now(), now(), 'Nguyễn Nam Nguyên');
+values (276, now(), now(), 'Xuân Thị Nguyệt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (277, now(), now(), 'Lighthouse Writers');
+values (277, now(), now(), 'Đào Tiến Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (278, now(), now(), 'Nguyễn Đức Chí');
+values (278, now(), now(), 'Lê Vũ Việt Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (279, now(), now(), 'Lê Vũ Việt Anh');
+values (279, now(), now(), 'Lương Thị Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (280, now(), now(), 'Bùi Văn Vinh');
+values (280, now(), now(), 'Tô Hoài Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (281, now(), now(), 'Đỗ Thị Lan Anh');
+values (281, now(), now(), 'Trần Huỳnh Thống');
 
 insert into authors (id, created_at, updated_at, name)
-values (282, now(), now(), 'Nguyễn Phước Bảo Khôi');
+values (282, now(), now(), 'Nguyễn Thị Bích');
 
 insert into authors (id, created_at, updated_at, name)
-values (283, now(), now(), 'Lê Thị Hồng Minh');
+values (283, now(), now(), 'Nguyễn Hoàng Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (284, now(), now(), 'Trần Nữ Huyền Thanh Thủy');
+values (284, now(), now(), 'Đặng Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (285, now(), now(), 'Nguyễn Thị Thanh Vân');
+values (285, now(), now(), 'ThS Huỳnh Bảo Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (286, now(), now(), 'Nguyễn Xuân Nam');
+values (286, now(), now(), 'Mai Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (287, now(), now(), 'Mai Lan Hương');
+values (287, now(), now(), 'Nguyễn Xuân Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (288, now(), now(), 'Hà Thanh Uyên');
+values (288, now(), now(), 'Đại Lợi');
 
 insert into authors (id, created_at, updated_at, name)
-values (289, now(), now(), 'Đại Lợi');
+values (289, now(), now(), 'Hằng Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (290, now(), now(), 'Hằng Nguyễn');
+values (290, now(), now(), 'Hải Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (291, now(), now(), 'Hải Anh');
+values (291, now(), now(), 'Hoàng Thị Hà Thu');
 
 insert into authors (id, created_at, updated_at, name)
-values (292, now(), now(), 'Hoàng Thị Hà Thu');
+values (292, now(), now(), 'Dương Thị Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (293, now(), now(), 'Dương Thị Hương');
+values (293, now(), now(), 'Bùi Văn Vinh');
 
 insert into authors (id, created_at, updated_at, name)
 values (294, now(), now(), 'Thái Vân Anh');
@@ -43925,769 +43416,769 @@ insert into authors (id, created_at, updated_at, name)
 values (296, now(), now(), 'Bùi Thị Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (297, now(), now(), 'Hoàng Thị Kim Trang');
+values (297, now(), now(), 'Hữu Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (298, now(), now(), 'Nguyễn Ngọc Lan');
+values (298, now(), now(), 'Trí Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (299, now(), now(), 'Nguyễn Thanh Thúy');
+values (299, now(), now(), 'Nguyễn Văn');
 
 insert into authors (id, created_at, updated_at, name)
-values (300, now(), now(), 'Ngô Thị Thu Huyền');
+values (300, now(), now(), 'Phan Thị Quyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (301, now(), now(), 'Dương Thị Hà');
+values (301, now(), now(), 'Bùi Thị Lý Hạnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (302, now(), now(), 'Nguyễn Đức Ninh');
+values (302, now(), now(), 'Phạm Thị Quỳnh Như');
 
 insert into authors (id, created_at, updated_at, name)
-values (303, now(), now(), 'Nguyễn Kính Đức');
+values (303, now(), now(), 'Phạm Hồng Vương');
 
 insert into authors (id, created_at, updated_at, name)
-values (304, now(), now(), 'Tạ Hoàng Đồng');
+values (304, now(), now(), 'Hải Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (305, now(), now(), 'Trần Hiền Lương');
+values (305, now(), now(), 'Võ Thị Hồng Loan');
 
 insert into authors (id, created_at, updated_at, name)
-values (306, now(), now(), 'Phạm Chị Chính');
+values (306, now(), now(), 'Bùi Quang Khải');
 
 insert into authors (id, created_at, updated_at, name)
-values (307, now(), now(), 'Xuân Thị Nguyệt Hà');
+values (307, now(), now(), 'Lưu Văn Dầu');
 
 insert into authors (id, created_at, updated_at, name)
-values (308, now(), now(), 'Đào Tiến Thi');
+values (308, now(), now(), 'Nguyễn Trung Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (309, now(), now(), 'Lương Thị Hiền');
+values (309, now(), now(), 'Nguyễn Thành Huân');
 
 insert into authors (id, created_at, updated_at, name)
-values (310, now(), now(), 'Tô Hoài Phong');
+values (310, now(), now(), 'Nguyễn Văn Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (311, now(), now(), 'Trần Huỳnh Thống');
+values (311, now(), now(), 'Nguyễn Nam Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (312, now(), now(), 'Nguyễn Thị Bích');
+values (312, now(), now(), 'Lighthouse Writers');
 
 insert into authors (id, created_at, updated_at, name)
-values (313, now(), now(), 'Nguyễn Hoàng Ly');
+values (313, now(), now(), 'Đỗ Thị Lan Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (314, now(), now(), 'Đặng Tú');
+values (314, now(), now(), 'Nguyễn Phước Bảo Khôi');
 
 insert into authors (id, created_at, updated_at, name)
-values (315, now(), now(), 'ThS Huỳnh Bảo Châu');
+values (315, now(), now(), 'Lê Thị Hồng Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (316, now(), now(), 'Trần Thị Hường');
+values (316, now(), now(), 'Trần Nữ Huyền Thanh Thủy');
 
 insert into authors (id, created_at, updated_at, name)
-values (317, now(), now(), 'Đỗ Văn Tuấn');
+values (317, now(), now(), 'Nguyễn Thị Thanh Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (318, now(), now(), 'Lê Văn Thiện');
+values (318, now(), now(), 'Mai Lan Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (319, now(), now(), 'Runkids');
+values (319, now(), now(), 'Hà Thanh Uyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (320, now(), now(), 'Nguyễn Hoàng Thanh Ly');
+values (320, now(), now(), 'Nguyễn Thị Thanh Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (321, now(), now(), 'Nguyễn Văn Hai');
+values (321, now(), now(), 'ThS Nguyễn Phước Lợi');
 
 insert into authors (id, created_at, updated_at, name)
-values (322, now(), now(), 'ThS Lê Thị Nguyên');
+values (322, now(), now(), 'Phạm Vân Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (323, now(), now(), 'Phạm Hoàng Khánh Linh');
+values (323, now(), now(), 'Thái Nhật Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (324, now(), now(), 'Nguyễn Đoàn Thảo Trang');
+values (324, now(), now(), 'Bùi Anh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (325, now(), now(), 'Nguyễn Thị Thuý');
+values (325, now(), now(), 'Nguyễn Đức Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (326, now(), now(), 'Vũ Thị Trang Nhung');
+values (326, now(), now(), 'Nguyễn Đoàn Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (327, now(), now(), 'Vũ Dung');
+values (327, now(), now(), 'Khánh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (328, now(), now(), 'Hà Linh');
+values (328, now(), now(), 'Trần Thị Tuyết Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (329, now(), now(), 'Cao Hằng');
+values (329, now(), now(), 'Nguyễn Nam Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (330, now(), now(), 'Thái Quang Vinh');
+values (330, now(), now(), 'Lê Hồng Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (331, now(), now(), 'Cao Ích Bằng');
+values (331, now(), now(), 'Đỗ Hoàng Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (332, now(), now(), 'ThS Dương Khánh Toàn');
+values (332, now(), now(), 'Lê Hoàng Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (333, now(), now(), 'ThS Lê Nguyễn I Pha');
+values (333, now(), now(), 'Đoàn Minh Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (334, now(), now(), 'Nguyễn Linh');
+values (334, now(), now(), 'Đào Thị');
 
 insert into authors (id, created_at, updated_at, name)
-values (335, now(), now(), 'Lê Duyên');
+values (335, now(), now(), 'Phạm Minh Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (336, now(), now(), 'Nguyễn Thị Thủy Anh');
+values (336, now(), now(), 'Nguyễn Thị Thanh Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (337, now(), now(), 'Vũ Thị Huyền');
+values (337, now(), now(), 'Thanh Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (338, now(), now(), 'Nguyễn Tú Trinh');
+values (338, now(), now(), 'Nhóm Tác Giả');
 
 insert into authors (id, created_at, updated_at, name)
-values (339, now(), now(), 'Đỗ Thị Huế');
+values (339, now(), now(), 'Lê Thị Mỹ Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (340, now(), now(), 'Trần Đăng Suyền');
+values (340, now(), now(), 'Nguyễn Lê Ly Na');
 
 insert into authors (id, created_at, updated_at, name)
-values (341, now(), now(), 'Trần Nho Thìn');
+values (341, now(), now(), 'Nguyễn Thị Hương Trầm');
 
 insert into authors (id, created_at, updated_at, name)
-values (342, now(), now(), 'Ngô Văn Tuần');
+values (342, now(), now(), 'ThS Đào Thị Hoàng Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (343, now(), now(), 'Đoàn Mạnh Linh');
+values (343, now(), now(), 'Cao Cự Giác');
 
 insert into authors (id, created_at, updated_at, name)
-values (344, now(), now(), 'Liễu Phạm');
+values (344, now(), now(), 'Phan Huy Bảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (345, now(), now(), 'Đức Tài');
+values (345, now(), now(), 'Nguyễn Thị Thanh Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (346, now(), now(), 'Dương Thị Hồng Điệp');
+values (346, now(), now(), 'Võ Kim Phụng');
 
 insert into authors (id, created_at, updated_at, name)
-values (347, now(), now(), 'Nguyễn Mỹ Linh');
+values (347, now(), now(), 'Dương Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (348, now(), now(), 'Nguyễn Hiền');
+values (348, now(), now(), 'Phạm Hoàng Khánh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (349, now(), now(), 'Phạm Hương');
+values (349, now(), now(), 'Nguyễn Đoàn Thảo Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (350, now(), now(), 'Hương Lê');
+values (350, now(), now(), 'Nguyễn Thị Thuý');
 
 insert into authors (id, created_at, updated_at, name)
-values (351, now(), now(), 'Trình Quang Vinh');
+values (351, now(), now(), 'Vũ Thị Trang Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (352, now(), now(), 'Hoàng Vân Bá');
+values (352, now(), now(), 'Dung Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (353, now(), now(), 'Lê Minh Tâm');
+values (353, now(), now(), 'Hà Thùy Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (354, now(), now(), 'Trình quang Vinh');
+values (354, now(), now(), 'Cao Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (355, now(), now(), 'NGƯT Lê Minh Tâm');
+values (355, now(), now(), 'Nguyễn Thị Thủy Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (356, now(), now(), 'ThS Nguyễn Nam Nguyên');
+values (356, now(), now(), 'Vũ Thị Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (357, now(), now(), 'Lưu Hoằng Trí');
+values (357, now(), now(), 'Nguyễn Tú Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (358, now(), now(), 'Hoàng Văn Bá');
+values (358, now(), now(), 'Đỗ Thị Huế');
 
 insert into authors (id, created_at, updated_at, name)
-values (359, now(), now(), 'Vũ Thanh Hoa');
+values (359, now(), now(), 'Thái Quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (360, now(), now(), 'Phạm văn Luận');
+values (360, now(), now(), 'Trần Đăng Suyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (361, now(), now(), 'PREP');
+values (361, now(), now(), 'Trần Nho Thìn');
 
 insert into authors (id, created_at, updated_at, name)
-values (362, now(), now(), 'Trần Thanh Hương');
+values (362, now(), now(), 'Ngô Văn Tuần');
 
 insert into authors (id, created_at, updated_at, name)
-values (363, now(), now(), 'Hoàng Thị Hồng Nhung');
+values (363, now(), now(), 'Đoàn Mạnh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (364, now(), now(), 'Nguyễn Trung Nguyên');
+values (364, now(), now(), 'Cao Ích Bằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (365, now(), now(), 'Diễn Lê');
+values (365, now(), now(), 'ThS Dương Khánh Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (366, now(), now(), 'Vương Bích Ngọc');
+values (366, now(), now(), 'ThS Lê Nguyễn I Pha');
 
 insert into authors (id, created_at, updated_at, name)
-values (367, now(), now(), 'ThS Lê Vy');
+values (367, now(), now(), 'Liễu Phạm');
 
 insert into authors (id, created_at, updated_at, name)
-values (368, now(), now(), 'ThS Tạ Thanh Hiền');
+values (368, now(), now(), 'Đức Tài');
 
 insert into authors (id, created_at, updated_at, name)
-values (369, now(), now(), 'ThS Nguyễn Thị Thu Hà');
+values (369, now(), now(), 'Dương Thị Hồng Điệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (370, now(), now(), 'Hoàng Việt Hưng');
+values (370, now(), now(), 'Nguyễn Mỹ Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (371, now(), now(), 'Nguyễn Văn Hòa');
+values (371, now(), now(), 'Nguyễn Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (372, now(), now(), 'Lê Văn Tuấn');
+values (372, now(), now(), 'Phạm Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (373, now(), now(), 'Nguyễn Thế Duy');
+values (373, now(), now(), 'Hương Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (374, now(), now(), 'Bùi Đức Thịnh');
+values (374, now(), now(), 'NGƯT Lê Minh Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (375, now(), now(), 'Hà Quang Hưng');
+values (375, now(), now(), 'ThS Nguyễn Nam Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (376, now(), now(), 'Vũ Văn Thiện');
+values (376, now(), now(), 'Lưu Hoằng Trí');
 
 insert into authors (id, created_at, updated_at, name)
-values (377, now(), now(), 'Lương Văn Huy');
+values (377, now(), now(), 'Trình Quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (378, now(), now(), 'Nguyễn Quang Hợp');
+values (378, now(), now(), 'Hoàng Văn Bá');
 
 insert into authors (id, created_at, updated_at, name)
-values (379, now(), now(), 'Đoàn Quỳnh');
+values (379, now(), now(), 'Vũ Thanh Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (380, now(), now(), 'Doãn Minh Cường');
+values (380, now(), now(), 'Phạm văn Luận');
 
 insert into authors (id, created_at, updated_at, name)
-values (381, now(), now(), 'Nguyễn Khắc Minh');
+values (381, now(), now(), 'PREP');
 
 insert into authors (id, created_at, updated_at, name)
-values (382, now(), now(), 'Phạm Khắc Ban');
+values (382, now(), now(), 'Trần Thanh Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (383, now(), now(), 'Phạm Đức Tài');
+values (383, now(), now(), 'Hoàng Thị Hồng Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (384, now(), now(), 'Lê Hoành Phò');
+values (384, now(), now(), 'Hoàng Thị Phương Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (385, now(), now(), 'Trần Nam Dũng');
+values (385, now(), now(), 'Nguyễn Huyền Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (386, now(), now(), 'TS Lại Tiến Minh');
+values (386, now(), now(), 'Đàm Thu Hoài');
 
 insert into authors (id, created_at, updated_at, name)
-values (387, now(), now(), 'ThS Vũ Thanh Hòa');
+values (387, now(), now(), 'Nguyễn Trung Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (388, now(), now(), 'ThS Tạ Thị Thanh Hiền');
+values (388, now(), now(), 'Diễn Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (389, now(), now(), 'ThS Nguyễn Việt Hà');
+values (389, now(), now(), 'Vương Bích Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (390, now(), now(), 'ThS Nguyễn Văn Nho');
+values (390, now(), now(), 'ThS Lê Vy');
 
 insert into authors (id, created_at, updated_at, name)
-values (391, now(), now(), 'Trần Minh Quới');
+values (391, now(), now(), 'ThS Tạ Thanh Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (392, now(), now(), 'Nguyễn Văn Quý');
+values (392, now(), now(), 'ThS Nguyễn Thị Thu Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (393, now(), now(), 'NGƯT Trần Minh Quới');
+values (393, now(), now(), 'Hoàng Việt Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (394, now(), now(), 'Nguyễn Văn Quí');
+values (394, now(), now(), 'Lê Minh Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (395, now(), now(), 'Nguyễn Anh Dũng');
+values (395, now(), now(), 'Trình quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (396, now(), now(), 'Trần Đức Huệ');
+values (396, now(), now(), 'Hoàng Vân Bá');
 
 insert into authors (id, created_at, updated_at, name)
-values (397, now(), now(), 'Nguyễn Việt Dũng');
+values (397, now(), now(), 'Nguyễn Văn Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (398, now(), now(), 'Minh Huệ');
+values (398, now(), now(), 'Vũ Khắc Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (399, now(), now(), 'ThS Đào Thị Hoàng Ly');
+values (399, now(), now(), 'Nguyễn Minh Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (400, now(), now(), 'Phạm Hùng Vương');
+values (400, now(), now(), 'Thiều Thị Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (401, now(), now(), 'Trần Công Minh');
+values (401, now(), now(), 'Lê Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (402, now(), now(), 'Lê Quỳnh Trang');
+values (402, now(), now(), 'Nguyễn Thế Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (403, now(), now(), 'Phạm Kim Oanh');
+values (403, now(), now(), 'Bùi Đức Thịnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (404, now(), now(), 'ThS. Lê Tấn Diện');
+values (404, now(), now(), 'Hà Quang Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (405, now(), now(), 'Trần Trọng Tuyền');
+values (405, now(), now(), 'Vũ Văn Thiện');
 
 insert into authors (id, created_at, updated_at, name)
-values (406, now(), now(), 'Lê Huỳnh Trang');
+values (406, now(), now(), 'Lương Văn Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (407, now(), now(), 'Nguyễn Quỳnh Trang');
+values (407, now(), now(), 'Nguyễn Quang Hợp');
 
 insert into authors (id, created_at, updated_at, name)
-values (408, now(), now(), 'Trần Văn Thanh');
+values (408, now(), now(), 'ThS Nguyễn Văn Nho');
 
 insert into authors (id, created_at, updated_at, name)
-values (409, now(), now(), 'Trịnh Quang Cảnh');
+values (409, now(), now(), 'Trần Minh Quới');
 
 insert into authors (id, created_at, updated_at, name)
-values (410, now(), now(), 'Nguyễn Văn Thương');
+values (410, now(), now(), 'Nguyễn Văn Quý');
 
 insert into authors (id, created_at, updated_at, name)
-values (411, now(), now(), 'Nguyễn Đức Hiệp');
+values (411, now(), now(), 'NGƯT Trần Minh Quới');
 
 insert into authors (id, created_at, updated_at, name)
-values (412, now(), now(), 'Trần Hoàng Nghiêm');
+values (412, now(), now(), 'Nguyễn Văn Quí');
 
 insert into authors (id, created_at, updated_at, name)
-values (413, now(), now(), 'Lê Cao Phan');
+values (413, now(), now(), 'Nguyễn Anh Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (414, now(), now(), 'Nguyễn Trọng Sửu');
+values (414, now(), now(), 'Trần Đức Huệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (415, now(), now(), 'Trung Tâm Nghiên Cứu Ứng Dụng Giáo Dục');
+values (415, now(), now(), 'Nguyễn Việt Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (416, now(), now(), 'Lại Đắc Hợp');
+values (416, now(), now(), 'Minh Huệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (417, now(), now(), 'Trần Quang Hiệu');
+values (417, now(), now(), 'Đoàn Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (418, now(), now(), 'Phạm Đức Việt');
+values (418, now(), now(), 'Doãn Minh Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (419, now(), now(), 'Lại Văn Bắc');
+values (419, now(), now(), 'Nguyễn Khắc Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (420, now(), now(), 'Bùi Việt Hoàng');
+values (420, now(), now(), 'Phạm Khắc Ban');
 
 insert into authors (id, created_at, updated_at, name)
-values (421, now(), now(), 'Hoàng Sư Điểu');
+values (421, now(), now(), 'Phạm Đức Tài');
 
 insert into authors (id, created_at, updated_at, name)
-values (422, now(), now(), 'Trần Thanh Giang');
+values (422, now(), now(), 'Lê Hoành Phò');
 
 insert into authors (id, created_at, updated_at, name)
-values (423, now(), now(), 'Trần Văn Oai');
+values (423, now(), now(), 'Trần Nam Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (424, now(), now(), 'TS Trần Văn Lượng');
+values (424, now(), now(), 'TS Lại Tiến Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (425, now(), now(), 'Trần Văn Lượng');
+values (425, now(), now(), 'ThS Vũ Thanh Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (426, now(), now(), 'Nguyễn Hùng Mãnh');
+values (426, now(), now(), 'ThS Tạ Thị Thanh Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (427, now(), now(), 'Đoàn Long Hải');
+values (427, now(), now(), 'ThS Nguyễn Việt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (428, now(), now(), 'ThS Lê Đình Nguyên');
+values (428, now(), now(), 'Nguyễn Đức Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (429, now(), now(), 'Nguyễn Văn Sang');
+values (429, now(), now(), 'Trần Hoàng Nghiêm');
 
 insert into authors (id, created_at, updated_at, name)
-values (430, now(), now(), 'ThS Nguyễn Phú Đồng');
+values (430, now(), now(), 'Lê Cao Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (431, now(), now(), 'ThS Võ Văn Thế');
+values (431, now(), now(), 'Nguyễn Trọng Sửu');
 
 insert into authors (id, created_at, updated_at, name)
-values (432, now(), now(), 'Trịnh Minh Hiệp');
+values (432, now(), now(), 'Trung Tâm Nghiên Cứu Ứng Dụng Giáo Dục');
 
 insert into authors (id, created_at, updated_at, name)
-values (433, now(), now(), 'Philip Steele');
+values (433, now(), now(), 'Hoàng Sư Điểu');
 
 insert into authors (id, created_at, updated_at, name)
-values (434, now(), now(), 'ThS Nguyễn Đình Đông');
+values (434, now(), now(), 'Trần Thanh Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (435, now(), now(), 'Hà Văn Minh');
+values (435, now(), now(), 'Trần Văn Oai');
 
 insert into authors (id, created_at, updated_at, name)
-values (436, now(), now(), 'Đào Trinh Nhất');
+values (436, now(), now(), 'TS Trần Văn Lượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (437, now(), now(), 'Nguyễn Thị Trang');
+values (437, now(), now(), 'Trần Văn Lượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (438, now(), now(), 'Đặng Văn Duy');
+values (438, now(), now(), 'Nguyễn Hùng Mãnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (439, now(), now(), 'Trần Thị Thanh Xuyên');
+values (439, now(), now(), 'Đoàn Long Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (440, now(), now(), 'TS Nguyễn Thị Thu Thuỷ');
+values (440, now(), now(), 'ThS Lê Đình Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (441, now(), now(), 'Nguyễn Thị Phương Thanh');
+values (441, now(), now(), 'Nguyễn Văn Sang');
 
 insert into authors (id, created_at, updated_at, name)
-values (442, now(), now(), 'Trần Nam Trung');
+values (442, now(), now(), 'ThS Nguyễn Phú Đồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (443, now(), now(), 'PGS TS Nguyễn Mạnh Hưởng');
+values (443, now(), now(), 'ThS Võ Văn Thế');
 
 insert into authors (id, created_at, updated_at, name)
-values (444, now(), now(), 'Đoàn Công Tương');
+values (444, now(), now(), 'Trịnh Minh Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (445, now(), now(), 'Tăng Văn Dom');
+values (445, now(), now(), 'PGS TS Nguyễn Văn Khánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (446, now(), now(), 'Đoàn Mỹ Hằng');
+values (446, now(), now(), 'Chu Văn Biên');
 
 insert into authors (id, created_at, updated_at, name)
-values (447, now(), now(), 'Phan Khắc Nghệ');
+values (447, now(), now(), 'Phạm Thùy Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (448, now(), now(), 'Thịnh Văn Nam');
+values (448, now(), now(), 'Cao Tiến Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (449, now(), now(), 'Lữ Thị Đào');
+values (449, now(), now(), 'Trần Quang Hiệu');
 
 insert into authors (id, created_at, updated_at, name)
-values (450, now(), now(), 'Phạm Thị Tâm');
+values (450, now(), now(), 'Phạm Đức Việt');
 
 insert into authors (id, created_at, updated_at, name)
-values (451, now(), now(), 'Lê Trung Dũng');
+values (451, now(), now(), 'Lại Văn Bắc');
 
 insert into authors (id, created_at, updated_at, name)
-values (452, now(), now(), 'Nguyễn Trần Sa Giang');
+values (452, now(), now(), 'Bùi Việt Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (453, now(), now(), 'Tống Xuân Tám');
+values (453, now(), now(), 'Phạm Hùng Vương');
 
 insert into authors (id, created_at, updated_at, name)
-values (454, now(), now(), 'Lữ Văn Tập');
+values (454, now(), now(), 'Trần Công Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (455, now(), now(), 'TS Phan Khắc Nghệ');
+values (455, now(), now(), 'Lê Quỳnh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (456, now(), now(), 'Nguyễn Thị Thu Uyên');
+values (456, now(), now(), 'Phạm Kim Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (457, now(), now(), 'Nguyễn Thị Hà');
+values (457, now(), now(), 'Trần Văn Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (458, now(), now(), 'Phạm Hồng Diệp');
+values (458, now(), now(), 'Trịnh Quang Cảnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (459, now(), now(), 'Đặng Thị Hoàng Hà');
+values (459, now(), now(), 'Nguyễn Văn Thương');
 
 insert into authors (id, created_at, updated_at, name)
-values (460, now(), now(), 'Nguyễn Thu Trang');
+values (460, now(), now(), 'ThS. Lê Tấn Diện');
 
 insert into authors (id, created_at, updated_at, name)
-values (461, now(), now(), 'Nguyễn Thị Huy');
+values (461, now(), now(), 'Trần Trọng Tuyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (462, now(), now(), 'Phương Dung');
+values (462, now(), now(), 'Phạm Thị Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (463, now(), now(), 'Nguyễn Thanh Mai');
+values (463, now(), now(), 'Lê Trung Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (464, now(), now(), 'Trần Viết Khanh');
+values (464, now(), now(), 'Nguyễn Trần Sa Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (465, now(), now(), 'Đinh Thị Hương');
+values (465, now(), now(), 'Tống Xuân Tám');
 
 insert into authors (id, created_at, updated_at, name)
-values (466, now(), now(), 'Nguyễn Thị Thanh Tâm');
+values (466, now(), now(), 'Lữ Văn Tập');
 
 insert into authors (id, created_at, updated_at, name)
-values (467, now(), now(), 'Thái Nhật Phượng');
+values (467, now(), now(), 'TS Phan Khắc Nghệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (468, now(), now(), 'Bùi Anh Trang');
+values (468, now(), now(), 'Thịnh Văn Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (469, now(), now(), 'ThS Nguyễn Phước Lợi');
+values (469, now(), now(), 'Lữ Thị Đào');
 
 insert into authors (id, created_at, updated_at, name)
-values (470, now(), now(), 'Phạm Vân Anh');
+values (470, now(), now(), 'Nguyễn Thị Thu Uyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (471, now(), now(), 'Nguyễn Đức Hòa');
+values (471, now(), now(), 'Phan Khắc Nghệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (472, now(), now(), 'Nguyễn Đoàn Vũ');
+values (472, now(), now(), 'Nguyễn Thị Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (473, now(), now(), 'Khánh Hà');
+values (473, now(), now(), 'Phạm Hồng Diệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (474, now(), now(), 'Trần Thị Tuyết Trinh');
+values (474, now(), now(), 'Đặng Thị Hoàng Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (475, now(), now(), 'Nguyễn Nam Anh');
+values (475, now(), now(), 'Nguyễn Thu Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (476, now(), now(), 'Lê Hồng Đức');
+values (476, now(), now(), 'Nguyễn Thị Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (477, now(), now(), 'Đỗ Hoàng Hà');
+values (477, now(), now(), 'Đoàn Công Tương');
 
 insert into authors (id, created_at, updated_at, name)
-values (478, now(), now(), 'Lê Hoàng Nam');
+values (478, now(), now(), 'Tăng Văn Dom');
 
 insert into authors (id, created_at, updated_at, name)
-values (479, now(), now(), 'Đoàn Minh Châu');
+values (479, now(), now(), 'Đoàn Mỹ Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (480, now(), now(), 'Đào Thị');
+values (480, now(), now(), 'Philip Steele');
 
 insert into authors (id, created_at, updated_at, name)
-values (481, now(), now(), 'Mai Quỳnh');
+values (481, now(), now(), 'ThS Nguyễn Đình Đông');
 
 insert into authors (id, created_at, updated_at, name)
-values (482, now(), now(), 'Thanh Lan');
+values (482, now(), now(), 'Hà Văn Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (483, now(), now(), 'Phạm Minh Châu');
+values (483, now(), now(), 'Nguyễn Thị Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (484, now(), now(), 'Nguyễn Thị Thanh Phúc');
+values (484, now(), now(), 'Đặng Văn Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (485, now(), now(), 'Lê Thị Mỹ Trinh');
+values (485, now(), now(), 'Trần Thị Thanh Xuyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (486, now(), now(), 'Nguyễn Lê Ly Na');
+values (486, now(), now(), 'Nguyễn Thanh Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (487, now(), now(), 'Nguyễn Thị Hương Trầm');
+values (487, now(), now(), 'Trần Viết Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (488, now(), now(), 'Cao Cự Giác');
+values (488, now(), now(), 'Đinh Thị Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (489, now(), now(), 'Phan Huy Bảo');
+values (489, now(), now(), 'Trương Thị Minh Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (490, now(), now(), 'Nguyễn Thị Thanh Mai');
+values (490, now(), now(), 'Trần Trung Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (491, now(), now(), 'Võ Kim Phụng');
+values (491, now(), now(), 'Nguyễn Tiến Công');
 
 insert into authors (id, created_at, updated_at, name)
-values (492, now(), now(), 'Trần Trung Ninh');
+values (492, now(), now(), 'Phạm Đức Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (493, now(), now(), 'Nguyễn Tiến Công');
+values (493, now(), now(), 'Trần Thị Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (494, now(), now(), 'Phạm Đức Bình');
+values (494, now(), now(), 'Huỳnh Văn Út');
 
 insert into authors (id, created_at, updated_at, name)
-values (495, now(), now(), 'Trần Thị Yến');
+values (495, now(), now(), 'Trần Văn Đô');
 
 insert into authors (id, created_at, updated_at, name)
-values (496, now(), now(), 'Huỳnh Văn Út');
+values (496, now(), now(), 'Đào Thị Ngọc Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (497, now(), now(), 'Trần Văn Đô');
+values (497, now(), now(), 'Đào Ngọc Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (498, now(), now(), 'Đào Thị Ngọc Hà');
+values (498, now(), now(), 'Phan Văn Phú');
 
 insert into authors (id, created_at, updated_at, name)
-values (499, now(), now(), 'Đào Ngọc Hùng');
+values (499, now(), now(), 'Nguyễn Ngọc Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (500, now(), now(), 'Phan Văn Phú');
+values (500, now(), now(), 'Nguyễn Thanh Loan');
 
 insert into authors (id, created_at, updated_at, name)
-values (501, now(), now(), 'Nguyễn Ngọc Ánh');
+values (501, now(), now(), 'PGSTS NGƯT Cao Cự Giác');
 
 insert into authors (id, created_at, updated_at, name)
-values (502, now(), now(), 'Nguyễn Thanh Loan');
+values (502, now(), now(), 'Phan Huy Bão');
 
 insert into authors (id, created_at, updated_at, name)
-values (503, now(), now(), 'Đỗ Quang Thanh');
+values (503, now(), now(), 'Nguyễn Văn Cần');
 
 insert into authors (id, created_at, updated_at, name)
-values (504, now(), now(), 'Bùi Anh Trung');
+values (504, now(), now(), 'Lê Tuấn Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (505, now(), now(), 'PGSTS NGƯT Cao Cự Giác');
+values (505, now(), now(), 'Lê Minh Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (506, now(), now(), 'Phan Huy Bão');
+values (506, now(), now(), 'Nguyễn Trí Phước');
 
 insert into authors (id, created_at, updated_at, name)
-values (507, now(), now(), 'Nguyễn Văn Cần');
+values (507, now(), now(), 'Nguyễn Bình Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (508, now(), now(), 'Lê Tuấn Anh');
+values (508, now(), now(), 'Thái Nhật Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (509, now(), now(), 'Lê Minh Quân');
+values (509, now(), now(), 'Lê Thị Hồng Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (510, now(), now(), 'Nguyễn Trí Phước');
+values (510, now(), now(), 'Nguyễn Thanh Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (511, now(), now(), 'Nguyễn Bình Dương');
+values (511, now(), now(), 'NGND Vũ Hữu Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (512, now(), now(), 'Thái Nhật Phương');
+values (512, now(), now(), 'Phan Văn Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (513, now(), now(), 'Nhóm Tác Giả');
+values (513, now(), now(), 'Phan Thái Khang');
 
 insert into authors (id, created_at, updated_at, name)
-values (514, now(), now(), 'Lê Thị Hồng Phúc');
+values (514, now(), now(), 'Đặng Thanh Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (515, now(), now(), 'Nguyễn Thanh Hương');
+values (515, now(), now(), 'Hoàng Văn Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (516, now(), now(), 'NGND Vũ Hữu Bình');
+values (516, now(), now(), 'Hoàng Thị Xuân Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (517, now(), now(), 'Phan Văn Đức');
+values (517, now(), now(), 'Chu Quang Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (518, now(), now(), 'Phan Thái Khang');
+values (518, now(), now(), 'Vũ Hải Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (519, now(), now(), 'Đặng Thanh Sơn');
+values (519, now(), now(), 'Hoàng Thị Hồng Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (520, now(), now(), 'Hoàng Văn Vân');
+values (520, now(), now(), 'Kiều Thị Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (521, now(), now(), 'Hoàng Thị Xuân Hoa');
+values (521, now(), now(), 'Nguyễn Thị Kim Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (522, now(), now(), 'Chu Quang Bình');
+values (522, now(), now(), 'Lê Huỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (523, now(), now(), 'Vũ Hải Hà');
+values (523, now(), now(), 'Nguyễn Quý Thao');
 
 insert into authors (id, created_at, updated_at, name)
-values (524, now(), now(), 'Hoàng Thị Hồng Hải');
+values (524, now(), now(), 'Trường Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (525, now(), now(), 'Kiều Thị Thu Hương');
+values (525, now(), now(), 'Mai Văn Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (526, now(), now(), 'Nguyễn Thị Kim Phượng');
+values (526, now(), now(), 'Nguyễn Thế Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (527, now(), now(), 'Trường Sơn');
+values (527, now(), now(), 'Lê Thị Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (528, now(), now(), 'Phạm Văn Luận');
+values (528, now(), now(), 'Trần Văn Thế');
 
 insert into authors (id, created_at, updated_at, name)
-values (529, now(), now(), 'Mai Văn Hưng');
+values (529, now(), now(), 'Nguyễn Thị Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (530, now(), now(), 'Nguyễn Thế Hưng');
+values (530, now(), now(), 'Đỗ Quang Hợp');
 
 insert into authors (id, created_at, updated_at, name)
-values (531, now(), now(), 'Lê Thị Phượng');
+values (531, now(), now(), 'Hồ Lộc Thuận');
 
 insert into authors (id, created_at, updated_at, name)
-values (532, now(), now(), 'Trần Văn Thế');
+values (532, now(), now(), 'Phạm Văn Luận');
 
 insert into authors (id, created_at, updated_at, name)
-values (533, now(), now(), 'Nguyễn Thị Hải');
+values (533, now(), now(), 'Thái Văn Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (534, now(), now(), 'Đỗ Quang Hợp');
+values (534, now(), now(), 'Nguyễn Thị Như Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (535, now(), now(), 'Hồ Lộc Thuận');
+values (535, now(), now(), 'Nguyễn Thị Khuyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (536, now(), now(), 'Lưu Hoàng Trí');
+values (536, now(), now(), 'Trần Hà Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (537, now(), now(), 'Minh Tú');
+values (537, now(), now(), 'Lê Ngọc Diên');
 
 insert into authors (id, created_at, updated_at, name)
-values (538, now(), now(), 'ThS Đỗ Đường Hiếu');
+values (538, now(), now(), 'Trần Thị Hồng Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (539, now(), now(), 'Nguyễn Hữu Bích');
+values (539, now(), now(), 'Đào Thúy Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (540, now(), now(), 'Trần Văn Thuật');
+values (540, now(), now(), 'Phạm Văn Trí');
 
 insert into authors (id, created_at, updated_at, name)
-values (541, now(), now(), 'Nguyễn Thị Mai Hoa');
+values (541, now(), now(), 'Vũ Đức Hiếu');
 
 insert into authors (id, created_at, updated_at, name)
-values (542, now(), now(), 'Ngô Thị Bích Ngọc');
+values (542, now(), now(), 'Võ Qu');
 
 insert into authors (id, created_at, updated_at, name)
-values (543, now(), now(), 'Nguyễn Đức Vũ');
+values (543, now(), now(), 'Nguyễn Phạm Ngọc Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (544, now(), now(), 'Lê Thị Thu Hiền');
+values (544, now(), now(), 'Ban Tổ Chức Kì Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (545, now(), now(), 'Nguyễn Thị Khuyên');
+values (545, now(), now(), 'Nguyễn Phước Lợi');
 
 insert into authors (id, created_at, updated_at, name)
-values (546, now(), now(), 'Trần Hà Giang');
+values (546, now(), now(), 'Tiêu Thị Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (547, now(), now(), 'Lê Ngọc Diên');
+values (547, now(), now(), 'Đoàn Thị Như Ý');
 
 insert into authors (id, created_at, updated_at, name)
-values (548, now(), now(), 'Thái văn Quân');
+values (548, now(), now(), 'Nguyễn Văn Biên');
 
 insert into authors (id, created_at, updated_at, name)
-values (549, now(), now(), 'Bùi Văn Đặng');
+values (549, now(), now(), 'Nguyễn Thị Lâm Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (550, now(), now(), 'Hoàng Quốc Hoàn');
+values (550, now(), now(), 'Tưởng Duy Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (551, now(), now(), 'Phạm Anh Tú');
+values (551, now(), now(), 'Nguyễn Thị Tố Khuyên');
 
 insert into authors (id, created_at, updated_at, name)
 values (552, now(), now(), 'PGS TS Huỳnh Văn Sơn');
@@ -44696,898 +44187,898 @@ insert into authors (id, created_at, updated_at, name)
 values (553, now(), now(), 'Huỳnh Quốc Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (554, now(), now(), 'Đỗ Đường Hiếu');
+values (554, now(), now(), 'Phạm Ngọc Thắm');
 
 insert into authors (id, created_at, updated_at, name)
-values (555, now(), now(), 'Nguyễn Phú Khánh');
+values (555, now(), now(), 'Minh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (556, now(), now(), 'Huỳnh Đức Khánh');
+values (556, now(), now(), 'Phạm Anh Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (557, now(), now(), 'Phan Ngọc Toàn');
+values (557, now(), now(), 'Đỗ Đường Hiếu');
 
 insert into authors (id, created_at, updated_at, name)
-values (558, now(), now(), 'Phạm Ngọc Thắm');
+values (558, now(), now(), 'Nguyễn Đăng Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (559, now(), now(), 'NSƯT ThS Lê Hoành Phò');
+values (559, now(), now(), 'Nguyễn Đức Chí');
 
 insert into authors (id, created_at, updated_at, name)
-values (560, now(), now(), 'Nguyễn Trọng Khanh');
+values (560, now(), now(), 'Thạch ngọc Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (561, now(), now(), 'Hoàng Đình Long');
+values (561, now(), now(), 'Đặng Đức Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (562, now(), now(), 'Nhữ Thị Việt Hoa');
+values (562, now(), now(), 'Thảo Bảo Mi');
 
 insert into authors (id, created_at, updated_at, name)
-values (563, now(), now(), 'Nguyễn Thị Mai Lan');
+values (563, now(), now(), 'Bộ Giáo Dục Và Đào Tạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (564, now(), now(), 'Lê Anh Tuấn');
+values (564, now(), now(), 'Lê Hoàng Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (565, now(), now(), 'Tạ Hoàng Mai Anh');
+values (565, now(), now(), 'Quản Lê Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (566, now(), now(), 'Nguyễn Thị Quỳnh Mai');
+values (566, now(), now(), 'Võ Đại Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (567, now(), now(), 'Nguyễn Văn Quyền');
+values (567, now(), now(), 'Nguyễn Thị Ngọc Quyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (568, now(), now(), 'Uyển Uyển');
+values (568, now(), now(), 'Trần Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (569, now(), now(), 'Nguyễn Hương Ly');
+values (569, now(), now(), 'Trần Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (570, now(), now(), 'Nguyễn Dục Quang');
+values (570, now(), now(), 'Cẩm Thị Chang Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (571, now(), now(), 'Phạm Quang Tiệp');
+values (571, now(), now(), 'Nguyễn Thị Diệu Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (572, now(), now(), 'Nguyễn Thị Thu Hằng');
+values (572, now(), now(), 'Nguyễn Thúy Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (573, now(), now(), 'Ngô Quang Quế');
+values (573, now(), now(), 'GSTS Lê Phương Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (574, now(), now(), 'Phạm Quang Tiệp Nguyễn Thị Thu Hằng');
+values (574, now(), now(), 'ThS Lê Thị Mai An');
 
 insert into authors (id, created_at, updated_at, name)
-values (575, now(), now(), 'Nguyễn Thị Đông');
+values (575, now(), now(), 'ThS Nguyễn Thị Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (576, now(), now(), 'Phạm Đình Bình');
+values (576, now(), now(), 'Nguyễn Thị Ngọc Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (577, now(), now(), 'Nguyễn Thị Huyện');
+values (577, now(), now(), 'Trần Cao Bội Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (578, now(), now(), 'Nguyễn Hải Kiên');
+values (578, now(), now(), 'Trương Văn Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (579, now(), now(), 'Bộ Giáo Dục Và Đào Tạo');
+values (579, now(), now(), 'Lê Anh Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (580, now(), now(), 'Lê Hoàng Dũng');
+values (580, now(), now(), 'Tạ Hoàng Mai Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (581, now(), now(), 'Quản Lê Duy');
+values (581, now(), now(), 'Nguyễn Thị Quỳnh Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (582, now(), now(), 'Trần Ngọc');
+values (582, now(), now(), 'Nguyễn Văn Quyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (583, now(), now(), 'Trần Tùng');
+values (583, now(), now(), 'Uyển Uyển');
 
 insert into authors (id, created_at, updated_at, name)
-values (584, now(), now(), 'Cẩm Thị Chang Duyên');
+values (584, now(), now(), 'Nguyễn Hương Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (585, now(), now(), 'Nguyễn Thị Diệu Hà');
+values (585, now(), now(), 'Nguyễn Trọng Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (586, now(), now(), 'Nguyễn Thúy Lan');
+values (586, now(), now(), 'Hoàng Đình Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (587, now(), now(), 'GSTS Lê Phương Nga');
+values (587, now(), now(), 'Nhữ Thị Việt Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (588, now(), now(), 'ThS Lê Thị Mai An');
+values (588, now(), now(), 'Nguyễn Thị Mai Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (589, now(), now(), 'ThS Nguyễn Thị Dung');
+values (589, now(), now(), 'Nguyễn Dục Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (590, now(), now(), 'Võ Đại Phúc');
+values (590, now(), now(), 'Phạm Quang Tiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (591, now(), now(), 'Nguyễn Thị Ngọc Mai');
+values (591, now(), now(), 'Nguyễn Thị Thu Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (592, now(), now(), 'Trần Cao Bội Ngọc');
+values (592, now(), now(), 'Ngô Quang Quế');
 
 insert into authors (id, created_at, updated_at, name)
-values (593, now(), now(), 'Trương Văn Ánh');
+values (593, now(), now(), 'Nguyễn Thị Đông');
 
 insert into authors (id, created_at, updated_at, name)
-values (594, now(), now(), 'Nguyễn Thị Ngọc Quyên');
+values (594, now(), now(), 'Phạm Đình Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (595, now(), now(), 'Nguyễn Thị Toan');
+values (595, now(), now(), 'Nguyễn Thị Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (596, now(), now(), 'Nguyễn Thị Hoàng Anh');
+values (596, now(), now(), 'Nguyễn Hải Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (597, now(), now(), 'Nguyễn Ngọc Dung');
+values (597, now(), now(), 'Nguyễn Thị Toan');
 
 insert into authors (id, created_at, updated_at, name)
-values (598, now(), now(), 'Đỗ Thành Trung');
+values (598, now(), now(), 'Nguyễn Thị Hoàng Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (599, now(), now(), 'Nguyễn Nguyệt Hồng');
+values (599, now(), now(), 'Nguyễn Ngọc Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (600, now(), now(), 'Nguyễn Quốc Tuấn');
+values (600, now(), now(), 'ThS Thái Vân Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (601, now(), now(), 'ThS Thái Vân Anh');
+values (601, now(), now(), 'Đỗ Thành Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (602, now(), now(), 'Vương Thu Hương');
+values (602, now(), now(), 'Nguyễn Nguyệt Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (603, now(), now(), 'Vương Hà My');
+values (603, now(), now(), 'Vương Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (604, now(), now(), 'Nguyễn Hoài Như');
+values (604, now(), now(), 'Vương Hà My');
 
 insert into authors (id, created_at, updated_at, name)
-values (605, now(), now(), 'Trịnh Hữu Lộc');
+values (605, now(), now(), 'Nguyễn Hoài Như');
 
 insert into authors (id, created_at, updated_at, name)
-values (606, now(), now(), 'Nguyễn Văn Hùng');
+values (606, now(), now(), 'Trịnh Hữu Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (607, now(), now(), 'Phạm Thị Lệ Hằng');
+values (607, now(), now(), 'Nguyễn Văn Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (608, now(), now(), 'Phạm Phương Hoa');
+values (608, now(), now(), 'Phạm Thị Lệ Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (609, now(), now(), 'Tống Đức Cường');
+values (609, now(), now(), 'Phạm Phương Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (610, now(), now(), 'Trần Thành Huế');
+values (610, now(), now(), 'Tống Đức Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (611, now(), now(), 'Dương Bá Vũ');
+values (611, now(), now(), 'Trần Thành Huế');
 
 insert into authors (id, created_at, updated_at, name)
-values (612, now(), now(), 'Vũ Quốc Trung');
+values (612, now(), now(), 'Dương Bá Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (613, now(), now(), 'Hồ Sĩ Đàm');
+values (613, now(), now(), 'Vũ Quốc Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (614, now(), now(), 'Đỗ Phan Thuận');
+values (614, now(), now(), 'Nguyễn Văn Khánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (615, now(), now(), 'Đỗ Đức Đông');
+values (615, now(), now(), 'Trương Anh Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (616, now(), now(), 'Nguyễn Khánh Phương');
+values (616, now(), now(), 'Nguyễn Anh Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (617, now(), now(), 'Đinh Quang Ngọc');
+values (617, now(), now(), 'Hồ Sĩ Đàm');
 
 insert into authors (id, created_at, updated_at, name)
-values (618, now(), now(), 'Đinh Thị Mai Anh');
+values (618, now(), now(), 'Đỗ Phan Thuận');
 
 insert into authors (id, created_at, updated_at, name)
-values (619, now(), now(), 'Mai Thị Bích Ngọc');
+values (619, now(), now(), 'Đỗ Đức Đông');
 
 insert into authors (id, created_at, updated_at, name)
-values (620, now(), now(), 'Mạc Xuân Tùng');
+values (620, now(), now(), 'Nguyễn Khánh Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (621, now(), now(), 'Nguyễn Thế Công');
+values (621, now(), now(), 'Đinh Quang Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (622, now(), now(), 'Nguyễn Phạm Thục Anh');
+values (622, now(), now(), 'Đinh Thị Mai Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (623, now(), now(), 'Nguyễn Thanh Sơn');
+values (623, now(), now(), 'Mai Thị Bích Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (624, now(), now(), 'Trương Văn Minh');
+values (624, now(), now(), 'Mạc Xuân Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (625, now(), now(), 'Trần Đức Dũng');
+values (625, now(), now(), 'Trương Văn Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (626, now(), now(), 'Nguyễn Văn Thành');
+values (626, now(), now(), 'Trần Đức Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (627, now(), now(), 'Nguyễn Hoàng Hậu');
+values (627, now(), now(), 'Nguyễn Văn Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (628, now(), now(), 'Nguyễn Mai Kiên');
+values (628, now(), now(), 'Nguyễn Hoàng Hậu');
 
 insert into authors (id, created_at, updated_at, name)
-values (629, now(), now(), 'Trần Vũ Lâm');
+values (629, now(), now(), 'Nguyễn Mai Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (630, now(), now(), 'Lã Nhâm Thìn');
+values (630, now(), now(), 'Trần Vũ Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (631, now(), now(), 'Đỗ Ngọc Thống');
+values (631, now(), now(), 'Lã Nhâm Thìn');
 
 insert into authors (id, created_at, updated_at, name)
-values (632, now(), now(), 'Trần Văn Toàn');
+values (632, now(), now(), 'Đỗ Ngọc Thống');
 
 insert into authors (id, created_at, updated_at, name)
-values (633, now(), now(), 'Bùi Minh Đức');
+values (633, now(), now(), 'Trần Văn Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (634, now(), now(), 'Vũ Đình Bảy');
+values (634, now(), now(), 'Bùi Minh Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (635, now(), now(), 'Nguyễn Thị Thanh Hồng');
+values (635, now(), now(), 'Vũ Đình Bảy');
 
 insert into authors (id, created_at, updated_at, name)
-values (636, now(), now(), 'Bùi Thanh Xuân');
+values (636, now(), now(), 'Nguyễn Thị Thanh Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (637, now(), now(), 'Vũ Mỹ Lan');
+values (637, now(), now(), 'Bùi Thanh Xuân');
 
 insert into authors (id, created_at, updated_at, name)
-values (638, now(), now(), 'Huỳnh Đông Hải');
+values (638, now(), now(), 'Vũ Mỹ Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (639, now(), now(), 'Nguyễn Thủy Liên');
+values (639, now(), now(), 'Huỳnh Đông Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (640, now(), now(), 'Huỳnh Ngọc Thùy Trang');
+values (640, now(), now(), 'Nguyễn Thủy Liên');
 
 insert into authors (id, created_at, updated_at, name)
-values (641, now(), now(), 'Trần Thụy Thúy Trinh');
+values (641, now(), now(), 'Huỳnh Ngọc Thùy Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (642, now(), now(), 'Nguyễn Dương Hoài Thương');
+values (642, now(), now(), 'Trần Thụy Thúy Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (643, now(), now(), 'Lê Huỳnh Phương Dung');
+values (643, now(), now(), 'Trần Thị Minh Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (644, now(), now(), 'Trần Thị Minh Phượng');
+values (644, now(), now(), 'Trịnh Quốc Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (645, now(), now(), 'Trịnh Quốc Anh');
+values (645, now(), now(), 'Nguyễn Dương Hoài Thương');
 
 insert into authors (id, created_at, updated_at, name)
-values (646, now(), now(), 'Phạm Thế Long');
+values (646, now(), now(), 'Lê Huỳnh Phương Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (647, now(), now(), 'Bùi Việt Hà');
+values (647, now(), now(), 'Nguyễn Minh Thuyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (648, now(), now(), 'Đào Kiến Quốc');
+values (648, now(), now(), 'Trấn Mạnh Hưởng');
 
 insert into authors (id, created_at, updated_at, name)
-values (649, now(), now(), 'Nguyễn Nam Hải');
+values (649, now(), now(), 'Đặng Kim Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (650, now(), now(), 'Dương Quỳnh Nga');
+values (650, now(), now(), 'Nguyễn Thị Tố Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (651, now(), now(), 'Trương Vô Hữu Thiên');
+values (651, now(), now(), 'Hoàng Hoà Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (652, now(), now(), 'Lê Kim Thư');
+values (652, now(), now(), 'Nguyên Khánh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (653, now(), now(), 'Đăng Bích Việt');
+values (653, now(), now(), 'Trấn Bích Thuỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (654, now(), now(), 'Nguyễn Duy Quyết');
+values (654, now(), now(), 'Nguyên Minh Thuyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (655, now(), now(), 'Hồ Đắc Sơn');
+values (655, now(), now(), 'Hoà Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (656, now(), now(), 'Nguyễn Hữu Bính');
+values (656, now(), now(), 'Tràn Bích Thuỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (657, now(), now(), 'Mai Thị Ngoãn');
+values (657, now(), now(), 'Trần Văn Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (658, now(), now(), 'Trần Văn Vinh');
+values (658, now(), now(), 'Ngô Vũ Thu Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (659, now(), now(), 'Nguyễn Minh Đoan');
+values (659, now(), now(), 'Nguyễn Thị Việt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (660, now(), now(), 'Trần Thị Mai Phương (đồng Chủ biên)...');
+values (660, now(), now(), 'Vũ Thị Mai Hường');
 
 insert into authors (id, created_at, updated_at, name)
-values (661, now(), now(), 'Đinh Gia Lê');
+values (661, now(), now(), 'Trần Mạnh Hưởng');
 
 insert into authors (id, created_at, updated_at, name)
-values (662, now(), now(), 'Hoàng Minh Phúc');
+values (662, now(), now(), 'Nguyễn Thu Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (663, now(), now(), 'Đào Thị Hà');
+values (663, now(), now(), 'Trần Thị Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (664, now(), now(), 'Nguyễn Thị May');
+values (664, now(), now(), 'TS Đoàn Dũng Sĩ');
 
 insert into authors (id, created_at, updated_at, name)
-values (665, now(), now(), 'Phạm Duy Anh');
+values (665, now(), now(), 'TS Phạm Minh Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (666, now(), now(), 'Trịnh Sinh');
+values (666, now(), now(), 'TS Phan Thanh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (667, now(), now(), 'Trần Trọng Tri');
+values (667, now(), now(), 'ThS Nguyễn Hồng Liên');
 
 insert into authors (id, created_at, updated_at, name)
-values (668, now(), now(), 'Trần Thị Thu Hà');
+values (668, now(), now(), 'Mai Thị Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (669, now(), now(), 'Phạm Hoàng Trung');
+values (669, now(), now(), 'TS Nguyễn Thị Tường Vi');
 
 insert into authors (id, created_at, updated_at, name)
-values (670, now(), now(), 'Nguyễn Quang Tùng');
+values (670, now(), now(), 'TS Phạm Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (671, now(), now(), 'Nguyễn Hữu Phần');
+values (671, now(), now(), 'ThS Nguyễn Thị Hồng Hạnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (672, now(), now(), 'Nguyễn Văn Khánh');
+values (672, now(), now(), 'TS Nguyễn Thị Vân Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (673, now(), now(), 'Phạm Thùy Giang');
+values (673, now(), now(), 'ThS Nguyễn Hà My');
 
 insert into authors (id, created_at, updated_at, name)
-values (674, now(), now(), 'Nguyễn Anh Vinh');
+values (674, now(), now(), 'TS Nguyễn Hồng Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (675, now(), now(), 'Trần Văn Sáng');
+values (675, now(), now(), 'ThS Nguyễn Huyền Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (676, now(), now(), 'Đỗ Thanh Bình');
+values (676, now(), now(), 'Hà Đặng Cao Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (677, now(), now(), 'Nguyễn Văn Ninh');
+values (677, now(), now(), 'Nguyễn Hải Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (678, now(), now(), 'Lê Hiến Chương');
+values (678, now(), now(), 'Hoàng Thị Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (679, now(), now(), 'Vũ Vạn Xuân');
+values (679, now(), now(), 'Đỗ Đức Thái');
 
 insert into authors (id, created_at, updated_at, name)
-values (680, now(), now(), 'Trần Nguyễn Thụy Thoại Lan');
+values (680, now(), now(), 'Phạm Văn Tuyến');
 
 insert into authors (id, created_at, updated_at, name)
-values (681, now(), now(), 'Trần Cao Ngọc Bội');
+values (681, now(), now(), 'Nguyễn Thị My');
 
 insert into authors (id, created_at, updated_at, name)
-values (682, now(), now(), 'Helen Halliwell');
+values (682, now(), now(), 'Trần Kim Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (683, now(), now(), 'Hà Đặng Cao Tùng');
+values (683, now(), now(), 'Trần Nguyễn Thụy Thoại Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (684, now(), now(), 'Nguyễn Hải Châu');
+values (684, now(), now(), 'Lê Thị Đài Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (685, now(), now(), 'Hoàng Thị Mai');
+values (685, now(), now(), 'Lâm Như Bảo Trân');
 
 insert into authors (id, created_at, updated_at, name)
-values (686, now(), now(), 'Nguyễn Tất Thắng');
+values (686, now(), now(), 'Lê Đức Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (687, now(), now(), 'Vũ Thanh Hải');
+values (687, now(), now(), 'Nguyễn Thị Thanh Xuân');
 
 insert into authors (id, created_at, updated_at, name)
-values (688, now(), now(), 'Vũ Thị Thu Hiền Phạm Thị Bích Phương');
+values (688, now(), now(), 'Nguyễn Tấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (689, now(), now(), 'Trần Thị Lan Hương');
+values (689, now(), now(), 'Virginia Evans');
 
 insert into authors (id, created_at, updated_at, name)
-values (690, now(), now(), 'Nguyễn Thị Hoàng Lan');
+values (690, now(), now(), 'Jenny Dooley');
 
 insert into authors (id, created_at, updated_at, name)
-values (691, now(), now(), 'Nguyễn Thị Thanh Thủy');
+values (691, now(), now(), 'Phạm Thế Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (692, now(), now(), 'Đỗ Đức Thái');
+values (692, now(), now(), 'Bùi Việt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (693, now(), now(), 'Phạm Văn Tuyến');
+values (693, now(), now(), 'Đào Kiến Quốc');
 
 insert into authors (id, created_at, updated_at, name)
-values (694, now(), now(), 'Nguyễn Thị My');
+values (694, now(), now(), 'Nguyễn Nam Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (695, now(), now(), 'Trần Kim Duyên');
+values (695, now(), now(), 'Dương Quỳnh Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (696, now(), now(), 'Lê Thị Đài Trang');
+values (696, now(), now(), 'Trương Vô Hữu Thiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (697, now(), now(), 'Lâm Như Bảo Trân');
+values (697, now(), now(), 'Lê Kim Thư');
 
 insert into authors (id, created_at, updated_at, name)
-values (698, now(), now(), 'Lê Đức Long');
+values (698, now(), now(), 'Đăng Bích Việt');
 
 insert into authors (id, created_at, updated_at, name)
-values (699, now(), now(), 'Nguyễn Thị Thanh Xuân');
+values (699, now(), now(), 'Nguyễn Duy Quyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (700, now(), now(), 'Nguyễn Tấn');
+values (700, now(), now(), 'Hồ Đắc Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (701, now(), now(), 'Nguyễn Minh Thuyết');
+values (701, now(), now(), 'Nguyễn Hữu Bính');
 
 insert into authors (id, created_at, updated_at, name)
-values (702, now(), now(), 'Trấn Mạnh Hưởng');
+values (702, now(), now(), 'Mai Thị Ngoãn');
 
 insert into authors (id, created_at, updated_at, name)
-values (703, now(), now(), 'Đặng Kim Nga');
+values (703, now(), now(), 'Trần Văn Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (704, now(), now(), 'Nguyễn Thị Tố Ninh');
+values (704, now(), now(), 'Nguyễn Minh Đoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (705, now(), now(), 'Hoàng Hoà Bình');
+values (705, now(), now(), 'Trần Thị Mai Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (706, now(), now(), 'Nguyên Khánh Hà');
+values (706, now(), now(), 'Đinh Gia Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (707, now(), now(), 'Trấn Bích Thuỷ');
+values (707, now(), now(), 'Hoàng Minh Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (708, now(), now(), 'Nguyên Minh Thuyết');
+values (708, now(), now(), 'Đào Thị Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (709, now(), now(), 'Hoà Bình');
+values (709, now(), now(), 'Nguyễn Thị May');
 
 insert into authors (id, created_at, updated_at, name)
-values (710, now(), now(), 'Tràn Bích Thuỷ');
+values (710, now(), now(), 'Trần Văn Sáng');
 
 insert into authors (id, created_at, updated_at, name)
-values (711, now(), now(), 'Trần Văn Thắng');
+values (711, now(), now(), 'Đỗ Thanh Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (712, now(), now(), 'Ngô Vũ Thu Hằng');
+values (712, now(), now(), 'Nguyễn Văn Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (713, now(), now(), 'Nguyễn Thị Việt Hà');
+values (713, now(), now(), 'Lê Hiến Chương');
 
 insert into authors (id, created_at, updated_at, name)
-values (714, now(), now(), 'Vũ Thị Mai Hường');
+values (714, now(), now(), 'Trần Thị Lan Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (715, now(), now(), 'Trần Mạnh Hưởng');
+values (715, now(), now(), 'Cao Thúy Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (716, now(), now(), 'Nguyễn Thu Hiền');
+values (716, now(), now(), 'Vũ Vạn Xuân');
 
 insert into authors (id, created_at, updated_at, name)
-values (717, now(), now(), 'Trần Thị Phương');
+values (717, now(), now(), 'Trần Cao Ngọc Bội');
 
 insert into authors (id, created_at, updated_at, name)
-values (718, now(), now(), 'TS Đoàn Dũng Sĩ');
+values (718, now(), now(), 'Helen Halliwell');
 
 insert into authors (id, created_at, updated_at, name)
-values (719, now(), now(), 'TS Phạm Minh Phong');
+values (719, now(), now(), 'Bùi Văn Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (720, now(), now(), 'TS Phan Thanh Hà');
+values (720, now(), now(), 'Lê Thị Mỹ Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (721, now(), now(), 'ThS Nguyễn Hồng Liên');
+values (721, now(), now(), 'Lê Thị Xinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (722, now(), now(), 'Mai Thị Phương');
+values (722, now(), now(), 'Nguyễn Văn Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (723, now(), now(), 'TS Nguyễn Thị Tường Vi');
+values (723, now(), now(), 'Phạm Thị Kim Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (724, now(), now(), 'TS Phạm Quỳnh');
+values (724, now(), now(), 'Nguyễn Thị Thu Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (725, now(), now(), 'ThS Nguyễn Thị Hồng Hạnh');
+values (725, now(), now(), 'Võ Thanh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (726, now(), now(), 'TS Nguyễn Thị Vân Hương');
+values (726, now(), now(), 'Ngô Văn Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (727, now(), now(), 'ThS Nguyễn Hà My');
+values (727, now(), now(), 'Chu Văn Vượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (728, now(), now(), 'TS Nguyễn Hồng Thúy');
+values (728, now(), now(), 'Trương Thị Thùy Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (729, now(), now(), 'ThS Nguyễn Huyền Trang');
+values (729, now(), now(), 'Ngô văn Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (730, now(), now(), 'Bùi Văn Hồng');
+values (730, now(), now(), 'Phạm Gia Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (731, now(), now(), 'Lê Thị Mỹ Nga');
+values (731, now(), now(), 'Trương Triều Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (732, now(), now(), 'Lê Thị Xinh');
+values (732, now(), now(), 'Đoàn Thị Mỹ Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (733, now(), now(), 'Nguyễn Văn Tùng');
+values (733, now(), now(), 'Lê Thông');
 
 insert into authors (id, created_at, updated_at, name)
-values (734, now(), now(), 'Phạm Thị Kim Oanh');
+values (734, now(), now(), 'Nguyễn Quyết Chiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (735, now(), now(), 'Nguyễn Thị Thu Trang');
+values (735, now(), now(), 'Nguyễn Trọng Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (736, now(), now(), 'Võ Thanh Hà');
+values (736, now(), now(), 'Lê Tấn Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (737, now(), now(), 'Ngô Văn Thanh');
+values (737, now(), now(), 'Cấn Thị Chang Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (738, now(), now(), 'Chu Văn Vượng');
+values (738, now(), now(), 'Trịnh Hồng Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (739, now(), now(), 'Trương Thị Thùy Linh');
+values (739, now(), now(), 'Bùi Mạnh Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (740, now(), now(), 'Ngô văn Thanh');
+values (740, now(), now(), 'Nguyễn Thị Ly Kha');
 
 insert into authors (id, created_at, updated_at, name)
-values (741, now(), now(), 'Nguyễn Thị Huyền');
+values (741, now(), now(), 'Nguyễn Lương Hải Như');
 
 insert into authors (id, created_at, updated_at, name)
-values (742, now(), now(), 'Lê Tấn Cường');
+values (742, now(), now(), 'Vũ Minh Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (743, now(), now(), 'Phạm Gia Anh');
+values (743, now(), now(), 'Nguyễn Xuân Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (744, now(), now(), 'Trương Triều Dương');
+values (744, now(), now(), 'Nguyễn Văn Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (745, now(), now(), 'Đoàn Thị Mỹ Hương');
+values (745, now(), now(), 'Nguyễn Thị Hương Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (746, now(), now(), 'Lê Thông');
+values (746, now(), now(), 'GS TS Lê Phương Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (747, now(), now(), 'Nguyễn Quyết Chiến');
+values (747, now(), now(), 'TS Thạch Thị Lan Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (748, now(), now(), 'Nguyễn Trọng Đức');
+values (748, now(), now(), 'Lê Hữu Tỉnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (749, now(), now(), 'Trần Quang Tuấn');
+values (749, now(), now(), 'Lưu Thu Thuỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (750, now(), now(), 'Martyn Hobbs');
+values (750, now(), now(), 'Ngô Vũ Thu Hàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (751, now(), now(), 'Julia Starr Keddle');
+values (751, now(), now(), 'Trấn Thị Tố Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (752, now(), now(), 'Cấn Thị Chang Duyên');
+values (752, now(), now(), 'Đỗ Thanh Hiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (753, now(), now(), 'Trịnh Hồng Linh');
+values (753, now(), now(), 'Hoàng Thị Minh Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (754, now(), now(), 'Trần Thị Lan Anh');
+values (754, now(), now(), 'Phạm Văn Lập');
 
 insert into authors (id, created_at, updated_at, name)
-values (755, now(), now(), 'Nguyễn Thị Hương Giang');
+values (755, now(), now(), 'Bùi Thị Việt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (756, now(), now(), 'GS TS Lê Phương Nga');
+values (756, now(), now(), 'Nguyễn Thị Quyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (757, now(), now(), 'TS Thạch Thị Lan Anh');
+values (757, now(), now(), 'Ngọc Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (758, now(), now(), 'Trần Diên Hiển');
+values (758, now(), now(), 'Ngọc Tuyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (759, now(), now(), 'Lô Thúy Hương');
+values (759, now(), now(), 'Nhóm Giáo Viên ĐH Sư Phạm');
 
 insert into authors (id, created_at, updated_at, name)
-values (760, now(), now(), 'Bùi Mạnh Hùng');
+values (760, now(), now(), 'Thiên Ân');
 
 insert into authors (id, created_at, updated_at, name)
-values (761, now(), now(), 'Nguyễn Thị Ly Kha');
+values (761, now(), now(), 'Chính An & Nhóm GV ĐHSP');
 
 insert into authors (id, created_at, updated_at, name)
-values (762, now(), now(), 'Nguyễn Lương Hải Như');
+values (762, now(), now(), 'Trần Thị Hải Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (763, now(), now(), 'Vũ Minh Tâm');
+values (763, now(), now(), 'PGS TS Chu Cẩm Thơ');
 
 insert into authors (id, created_at, updated_at, name)
-values (764, now(), now(), 'Nguyễn Xuân Tùng');
+values (764, now(), now(), 'Vân Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (765, now(), now(), 'Lê Hữu Tỉnh');
+values (765, now(), now(), 'Tạp Chí Pi');
 
 insert into authors (id, created_at, updated_at, name)
-values (766, now(), now(), 'Hoàng Thị Minh Hương');
+values (766, now(), now(), 'Paul Nation');
 
 insert into authors (id, created_at, updated_at, name)
-values (767, now(), now(), 'Lưu Thu Thuỷ');
+values (767, now(), now(), 'Cù Minh Nhật');
 
 insert into authors (id, created_at, updated_at, name)
-values (768, now(), now(), 'Ngô Vũ Thu Hàng');
+values (768, now(), now(), 'Jonathan Marks Hilary Thompson');
 
 insert into authors (id, created_at, updated_at, name)
-values (769, now(), now(), 'Trấn Thị Tố Oanh');
+values (769, now(), now(), 'Karen Kearns');
 
 insert into authors (id, created_at, updated_at, name)
-values (770, now(), now(), 'Đỗ Thanh Hiên');
+values (770, now(), now(), 'Võ Thị Minh Nguyệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (771, now(), now(), 'Nguyễn Văn Quân');
+values (771, now(), now(), 'Trương Công Luận');
 
 insert into authors (id, created_at, updated_at, name)
-values (772, now(), now(), 'Phạm Văn Lập');
+values (772, now(), now(), 'Nguyễn Cửu Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (773, now(), now(), 'Bùi Thị Việt Hà');
+values (773, now(), now(), 'Nguyễn Thị Minh Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (774, now(), now(), 'Nguyễn Thị Quyên');
+values (774, now(), now(), 'Phan Đồ');
 
 insert into authors (id, created_at, updated_at, name)
-values (775, now(), now(), 'Ngọc Anh');
+values (775, now(), now(), 'Phan Đồng Châu Thủy');
 
 insert into authors (id, created_at, updated_at, name)
-values (776, now(), now(), 'Ngọc Tuyết');
+values (776, now(), now(), 'nhân trí');
 
 insert into authors (id, created_at, updated_at, name)
-values (777, now(), now(), 'Nhóm Giáo Viên ĐH Sư Phạm');
+values (777, now(), now(), 'TS Nguyễn Duy Đạt chủ biên');
 
 insert into authors (id, created_at, updated_at, name)
-values (778, now(), now(), 'Thiên Ân');
+values (778, now(), now(), 'TS Lê Ngọc Danh');
 
 insert into authors (id, created_at, updated_at, name)
-values (779, now(), now(), 'Chính An & Nhóm GV ĐHSP');
+values (779, now(), now(), 'TS Nguyễn Văn Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (780, now(), now(), 'Vân Hương');
+values (780, now(), now(), 'ThS Nguyễn Thị Mỹ Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (781, now(), now(), 'PGS TS Chu Cẩm Thơ');
+values (781, now(), now(), 'ThS Ngô Ngọc Tồn');
 
 insert into authors (id, created_at, updated_at, name)
-values (782, now(), now(), 'Trần Thị Hải Yến');
+values (782, now(), now(), 'Chu Lai');
 
 insert into authors (id, created_at, updated_at, name)
-values (783, now(), now(), 'Trương Công Luận');
+values (783, now(), now(), 'Tuế Kiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (784, now(), now(), 'Nguyễn Cửu Phúc');
+values (784, now(), now(), 'Paulo Coelho');
 
 insert into authors (id, created_at, updated_at, name)
-values (785, now(), now(), 'Phan Đồng Châu Thủy');
+values (785, now(), now(), 'Đặng Thùy Trâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (786, now(), now(), 'Nguyễn Thị Minh Nhân');
+values (786, now(), now(), 'Fredrik Backman');
 
 insert into authors (id, created_at, updated_at, name)
-values (787, now(), now(), 'Tạp Chí Pi');
+values (787, now(), now(), 'José Mauro de Vasconcelos');
 
 insert into authors (id, created_at, updated_at, name)
-values (788, now(), now(), 'Paul Nation');
+values (788, now(), now(), 'Yoshichi Shimada');
 
 insert into authors (id, created_at, updated_at, name)
-values (789, now(), now(), 'Cù Minh Nhật');
+values (789, now(), now(), 'Quất Tử Bất Toan');
 
 insert into authors (id, created_at, updated_at, name)
-values (790, now(), now(), 'Jonathan Marks Hilary Thompson');
+values (790, now(), now(), 'Madeline Miller');
 
 insert into authors (id, created_at, updated_at, name)
-values (791, now(), now(), 'Karen Kearns');
+values (791, now(), now(), 'Ocean Vuong');
 
 insert into authors (id, created_at, updated_at, name)
-values (792, now(), now(), 'Phan Đồ');
+values (792, now(), now(), 'Jules Verne');
 
 insert into authors (id, created_at, updated_at, name)
-values (793, now(), now(), 'nhân trí');
+values (793, now(), now(), 'Mộc Trầm');
 
 insert into authors (id, created_at, updated_at, name)
-values (794, now(), now(), 'TS Lê Ngọc Danh');
+values (794, now(), now(), 'Bảo Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (795, now(), now(), 'TS Nguyễn Văn Thành');
+values (795, now(), now(), 'Nguyễn Ngọc Thuần');
 
 insert into authors (id, created_at, updated_at, name)
-values (796, now(), now(), 'ThS Nguyễn Thị Mỹ Linh');
+values (796, now(), now(), 'Gosho Aoyama');
 
 insert into authors (id, created_at, updated_at, name)
-values (797, now(), now(), 'ThS Ngô Ngọc Tồn');
+values (797, now(), now(), 'Takahiro Okura');
 
 insert into authors (id, created_at, updated_at, name)
-values (798, now(), now(), 'Chu Lai');
+values (798, now(), now(), 'Shima Mizuki');
 
 insert into authors (id, created_at, updated_at, name)
-values (799, now(), now(), 'Tuế Kiến');
+values (799, now(), now(), 'Edith Nesbit');
 
 insert into authors (id, created_at, updated_at, name)
-values (800, now(), now(), 'Paulo Coelho');
+values (800, now(), now(), 'Kuroyanagi Tetsuko');
 
 insert into authors (id, created_at, updated_at, name)
-values (801, now(), now(), 'Đặng Thùy Trâm');
+values (801, now(), now(), 'Takeharu Sakurai');
 
 insert into authors (id, created_at, updated_at, name)
-values (802, now(), now(), 'Fredrik Backman');
+values (802, now(), now(), 'Higashino Keigo');
 
 insert into authors (id, created_at, updated_at, name)
-values (803, now(), now(), 'José Mauro de Vasconcelos');
+values (803, now(), now(), 'Thù Vỉ');
 
 insert into authors (id, created_at, updated_at, name)
-values (804, now(), now(), 'Yoshichi Shimada');
+values (804, now(), now(), 'R J Palacio');
 
 insert into authors (id, created_at, updated_at, name)
-values (805, now(), now(), 'Quất Tử Bất Toan');
+values (805, now(), now(), 'Nguyễn Nhật Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (806, now(), now(), 'Madeline Miller');
+values (806, now(), now(), 'Phạm Lữ Ân');
 
 insert into authors (id, created_at, updated_at, name)
-values (807, now(), now(), 'Ocean Vuong');
+values (807, now(), now(), 'Lam');
 
 insert into authors (id, created_at, updated_at, name)
-values (808, now(), now(), 'Jules Verne');
+values (808, now(), now(), 'Thòong Dành Kể Chuyện');
 
 insert into authors (id, created_at, updated_at, name)
-values (809, now(), now(), 'Bảo Ninh');
+values (809, now(), now(), 'Châu Sa Đáy Mắt');
 
 insert into authors (id, created_at, updated_at, name)
-values (810, now(), now(), 'Mộc Trầm');
+values (810, now(), now(), 'Lily Trương');
 
 insert into authors (id, created_at, updated_at, name)
-values (811, now(), now(), 'Nguyễn Ngọc Thuần');
+values (811, now(), now(), 'Hồng Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (812, now(), now(), 'Edith Nesbit');
+values (812, now(), now(), 'Mỹ Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (813, now(), now(), 'Gosho Aoyama');
+values (813, now(), now(), 'Lê Minh Khuê');
 
 insert into authors (id, created_at, updated_at, name)
-values (814, now(), now(), 'Takahiro Okura');
+values (814, now(), now(), 'Hạ Mer');
 
 insert into authors (id, created_at, updated_at, name)
-values (815, now(), now(), 'Shima Mizuki');
+values (815, now(), now(), 'Kim Lân');
 
 insert into authors (id, created_at, updated_at, name)
-values (816, now(), now(), 'Kuroyanagi Tetsuko');
+values (816, now(), now(), 'Nguyễn Ngọc Tư');
 
 insert into authors (id, created_at, updated_at, name)
-values (817, now(), now(), 'Takeharu Sakurai');
+values (817, now(), now(), 'Nguyễn Bảo Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (818, now(), now(), 'Higashino Keigo');
+values (818, now(), now(), 'Nguyên Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (819, now(), now(), 'R J Palacio');
+values (819, now(), now(), 'Choi Kwanghuyn');
 
 insert into authors (id, created_at, updated_at, name)
-values (820, now(), now(), 'Nguyễn Nhật Ánh');
+values (820, now(), now(), 'Mao Mao Trùng Tiểu Thư');
 
 insert into authors (id, created_at, updated_at, name)
-values (821, now(), now(), 'Phạm Lữ Ân');
+values (821, now(), now(), 'Đào Hoàng Diệu');
 
 insert into authors (id, created_at, updated_at, name)
-values (822, now(), now(), 'Lam');
+values (822, now(), now(), 'Lê Thiết Cương');
 
 insert into authors (id, created_at, updated_at, name)
-values (823, now(), now(), 'Thòong Dành Kể Chuyện');
+values (823, now(), now(), 'BS Wynn Huỳnh Trần');
 
 insert into authors (id, created_at, updated_at, name)
-values (824, now(), now(), 'Lily Trương');
+values (824, now(), now(), 'Miêu Công Tử');
 
 insert into authors (id, created_at, updated_at, name)
-values (825, now(), now(), 'Châu Sa Đáy Mắt');
+values (825, now(), now(), 'Kim Hồng Phước');
 
 insert into authors (id, created_at, updated_at, name)
-values (826, now(), now(), 'Hồng Nhung');
+values (826, now(), now(), 'Doãn Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (827, now(), now(), 'Mỹ Hưng');
+values (827, now(), now(), 'Đoàn Quý Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (828, now(), now(), 'Nguyên Anh');
+values (828, now(), now(), 'Nguyệt Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (829, now(), now(), 'Choi Kwanghuyn');
+values (829, now(), now(), 'Huệ Như Hạm Đạm');
 
 insert into authors (id, created_at, updated_at, name)
-values (830, now(), now(), 'Hạ Mer');
+values (830, now(), now(), 'Vũ Bằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (831, now(), now(), 'Kim Lân');
+values (831, now(), now(), 'Nhóm Tác Giả Truyện Nhà Ong');
 
 insert into authors (id, created_at, updated_at, name)
-values (832, now(), now(), 'Lê Minh Khuê');
+values (832, now(), now(), 'Mochi Ở Đây');
 
 insert into authors (id, created_at, updated_at, name)
-values (833, now(), now(), 'Nguyễn Bảo Trung');
+values (833, now(), now(), 'Amy Trương');
 
 insert into authors (id, created_at, updated_at, name)
-values (834, now(), now(), 'Nguyễn Ngọc Tư');
+values (834, now(), now(), 'Tất Khiếu Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (835, now(), now(), 'Mao Mao Trùng Tiểu Thư');
+values (835, now(), now(), 'Thạch Lam');
 
 insert into authors (id, created_at, updated_at, name)
-values (836, now(), now(), 'Miêu Công Tử');
+values (836, now(), now(), 'Trần Thị Thu Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (837, now(), now(), 'BS Wynn Huỳnh Trần');
+values (837, now(), now(), 'Làn');
 
 insert into authors (id, created_at, updated_at, name)
-values (838, now(), now(), 'Lê Thiết Cương');
+values (838, now(), now(), 'Nam Cao');
 
 insert into authors (id, created_at, updated_at, name)
-values (839, now(), now(), 'Làn');
+values (839, now(), now(), 'Nguyễn Quang Thiều');
 
 insert into authors (id, created_at, updated_at, name)
-values (840, now(), now(), 'Touko Shino');
+values (840, now(), now(), 'Phạm Duy Phước');
 
 insert into authors (id, created_at, updated_at, name)
-values (841, now(), now(), 'Hyuganatsu');
+values (841, now(), now(), 'Tim Marshall');
 
 insert into authors (id, created_at, updated_at, name)
-values (842, now(), now(), 'Carlo Zen');
+values (842, now(), now(), 'Sơn Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (843, now(), now(), 'Shinobu Shimotsuki');
+values (843, now(), now(), 'Touko Shino');
 
 insert into authors (id, created_at, updated_at, name)
-values (844, now(), now(), 'Asato Asato');
+values (844, now(), now(), 'Hyuganatsu');
 
 insert into authors (id, created_at, updated_at, name)
-values (845, now(), now(), 'Shirabii');
+values (845, now(), now(), 'Carlo Zen');
 
 insert into authors (id, created_at, updated_at, name)
-values (846, now(), now(), 'I-IV');
+values (846, now(), now(), 'Shinobu Shimotsuki');
 
 insert into authors (id, created_at, updated_at, name)
-values (847, now(), now(), 'Mutsuki Watanabe');
+values (847, now(), now(), 'Asato Asato');
 
 insert into authors (id, created_at, updated_at, name)
-values (848, now(), now(), 'Takahisa Taira');
+values (848, now(), now(), 'Shirabii');
 
 insert into authors (id, created_at, updated_at, name)
-values (849, now(), now(), 'Saekisan');
+values (849, now(), now(), 'I-IV');
 
 insert into authors (id, created_at, updated_at, name)
-values (850, now(), now(), 'Hanekoto');
+values (850, now(), now(), 'Mutsuki Watanabe');
 
 insert into authors (id, created_at, updated_at, name)
-values (851, now(), now(), 'Shinkai Makoto');
+values (851, now(), now(), 'Takahisa Taira');
 
 insert into authors (id, created_at, updated_at, name)
 values (852, now(), now(), 'Natsu Hyuuga');
@@ -45602,376 +45093,376 @@ insert into authors (id, created_at, updated_at, name)
 values (855, now(), now(), 'Azuri Hyuga');
 
 insert into authors (id, created_at, updated_at, name)
-values (856, now(), now(), 'Mishima Yomu');
+values (856, now(), now(), 'Saekisan');
 
 insert into authors (id, created_at, updated_at, name)
-values (857, now(), now(), 'Sunsunsun');
+values (857, now(), now(), 'Hanekoto');
 
 insert into authors (id, created_at, updated_at, name)
-values (858, now(), now(), 'Momoco');
+values (858, now(), now(), 'Mishima Yomu');
 
 insert into authors (id, created_at, updated_at, name)
-values (859, now(), now(), 'Mizuki Nomura');
+values (859, now(), now(), 'Shinkai Makoto');
 
 insert into authors (id, created_at, updated_at, name)
-values (860, now(), now(), 'Miho Takeoka');
+values (860, now(), now(), 'Koyoharu Gotouge');
 
 insert into authors (id, created_at, updated_at, name)
-values (861, now(), now(), 'Dopamine');
+values (861, now(), now(), 'Aya Yajima');
 
 insert into authors (id, created_at, updated_at, name)
-values (862, now(), now(), 'Agatha Christie');
+values (862, now(), now(), 'Iwahata Hiro');
 
 insert into authors (id, created_at, updated_at, name)
-values (863, now(), now(), 'Đường');
+values (863, now(), now(), 'Gun_Zi');
 
 insert into authors (id, created_at, updated_at, name)
-values (864, now(), now(), 'Thomas Harris');
+values (864, now(), now(), 'Sunsunsun');
 
 insert into authors (id, created_at, updated_at, name)
-values (865, now(), now(), 'Bình Sơn Quân');
+values (865, now(), now(), 'Momoco');
 
 insert into authors (id, created_at, updated_at, name)
-values (866, now(), now(), 'Sir Arthur Conan Doyle');
+values (866, now(), now(), 'Dopamine');
 
 insert into authors (id, created_at, updated_at, name)
-values (867, now(), now(), 'Lưu Bát Bách');
+values (867, now(), now(), 'Agatha Christie');
 
 insert into authors (id, created_at, updated_at, name)
-values (868, now(), now(), 'Uketsu');
+values (868, now(), now(), 'Đường');
 
 insert into authors (id, created_at, updated_at, name)
-values (869, now(), now(), 'Arthur Conan Doyle');
+values (869, now(), now(), 'Thomas Harris');
 
 insert into authors (id, created_at, updated_at, name)
-values (870, now(), now(), 'Cương Tuyết Ấn');
+values (870, now(), now(), 'Bình Sơn Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (871, now(), now(), 'G.T. Karber');
+values (871, now(), now(), 'Arthur Conan Doyle');
 
 insert into authors (id, created_at, updated_at, name)
-values (872, now(), now(), 'Gulliams Musso');
+values (872, now(), now(), 'Sir Arthur Conan Doyle');
 
 insert into authors (id, created_at, updated_at, name)
-values (873, now(), now(), 'Shichiri Nakayama');
+values (873, now(), now(), 'Lưu Bát Bách');
 
 insert into authors (id, created_at, updated_at, name)
-values (874, now(), now(), 'Masahiro Imamura');
+values (874, now(), now(), 'Uketsu');
 
 insert into authors (id, created_at, updated_at, name)
-values (875, now(), now(), 'Franz Kafka');
+values (875, now(), now(), 'Cương Tuyết Ấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (876, now(), now(), 'Freida McFadden');
+values (876, now(), now(), 'G.T. Karber');
 
 insert into authors (id, created_at, updated_at, name)
-values (877, now(), now(), 'Duy Văn');
+values (877, now(), now(), 'Gulliams Musso');
 
 insert into authors (id, created_at, updated_at, name)
-values (878, now(), now(), 'Hector Malot');
+values (878, now(), now(), 'Shichiri Nakayama');
 
 insert into authors (id, created_at, updated_at, name)
-values (879, now(), now(), 'Nikolai AOstrovsky');
+values (879, now(), now(), 'Masahiro Imamura');
 
 insert into authors (id, created_at, updated_at, name)
-values (880, now(), now(), 'Jeffrey Archer');
+values (880, now(), now(), 'Franz Kafka');
 
 insert into authors (id, created_at, updated_at, name)
-values (881, now(), now(), 'Nikolai A Ostrovsky');
+values (881, now(), now(), 'Guillaume Musso');
 
 insert into authors (id, created_at, updated_at, name)
-values (882, now(), now(), 'Trần Việt Quân');
+values (882, now(), now(), 'Hector Malot');
 
 insert into authors (id, created_at, updated_at, name)
-values (883, now(), now(), 'Charlotte Bronte');
+values (883, now(), now(), 'Nikolai AOstrovsky');
 
 insert into authors (id, created_at, updated_at, name)
-values (884, now(), now(), 'Gabriel Garcia Márquez');
+values (884, now(), now(), 'Jeffrey Archer');
 
 insert into authors (id, created_at, updated_at, name)
-values (885, now(), now(), 'Hoàng Thạch Công');
+values (885, now(), now(), 'Nikolai A Ostrovsky');
 
 insert into authors (id, created_at, updated_at, name)
-values (886, now(), now(), 'Edmondo De Amicis');
+values (886, now(), now(), 'Trần Việt Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (887, now(), now(), 'Alecxandr Grin');
+values (887, now(), now(), 'Charlotte Bronte');
 
 insert into authors (id, created_at, updated_at, name)
-values (888, now(), now(), 'Harper Lee');
+values (888, now(), now(), 'Alecxandr Grin');
 
 insert into authors (id, created_at, updated_at, name)
-values (889, now(), now(), 'Ayn Rand');
+values (889, now(), now(), 'Harper Lee');
 
 insert into authors (id, created_at, updated_at, name)
-values (890, now(), now(), 'Victor Huygo');
+values (890, now(), now(), 'Huỳnh Lý dịch');
 
 insert into authors (id, created_at, updated_at, name)
-values (891, now(), now(), 'Jane Austen');
+values (891, now(), now(), 'Gabriel Garcia Márquez');
 
 insert into authors (id, created_at, updated_at, name)
-values (892, now(), now(), 'Henryk Sienkiewicz');
+values (892, now(), now(), 'Hoàng Thạch Công');
 
 insert into authors (id, created_at, updated_at, name)
-values (893, now(), now(), 'Tào Tuyết Cần');
+values (893, now(), now(), 'Edmondo De Amicis');
 
 insert into authors (id, created_at, updated_at, name)
-values (894, now(), now(), 'Maxim Gorky');
+values (894, now(), now(), 'Henryk Sienkiewicz');
 
 insert into authors (id, created_at, updated_at, name)
-values (895, now(), now(), 'Thảo Trang');
+values (895, now(), now(), 'Jane Austen');
 
 insert into authors (id, created_at, updated_at, name)
-values (896, now(), now(), 'J.K.Rowling');
+values (896, now(), now(), 'Tào Tuyết Cần');
 
 insert into authors (id, created_at, updated_at, name)
-values (897, now(), now(), 'Lý Lan');
+values (897, now(), now(), 'Maxim Gorky');
 
 insert into authors (id, created_at, updated_at, name)
-values (898, now(), now(), 'Doo Vandenis');
+values (898, now(), now(), 'Ayn Rand');
 
 insert into authors (id, created_at, updated_at, name)
-values (899, now(), now(), 'J K Rowling');
+values (899, now(), now(), 'Thảo Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (900, now(), now(), 'J.K. Rowling');
+values (900, now(), now(), 'J.K.Rowling');
 
 insert into authors (id, created_at, updated_at, name)
-values (901, now(), now(), 'Emma Hạ My');
+values (901, now(), now(), 'Lý Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (902, now(), now(), 'Lưu Từ Hân');
+values (902, now(), now(), 'Doo Vandenis');
 
 insert into authors (id, created_at, updated_at, name)
-values (903, now(), now(), 'Tây Tử Tự');
+values (903, now(), now(), 'J K Rowling');
 
 insert into authors (id, created_at, updated_at, name)
-values (904, now(), now(), 'Lão Cổ');
+values (904, now(), now(), 'J.K. Rowling');
 
 insert into authors (id, created_at, updated_at, name)
-values (905, now(), now(), 'Dan Brown');
+values (905, now(), now(), 'Emma Hạ My');
 
 insert into authors (id, created_at, updated_at, name)
-values (906, now(), now(), 'Edgar Allan Poe');
+values (906, now(), now(), 'Tây Tử Tự');
 
 insert into authors (id, created_at, updated_at, name)
-values (907, now(), now(), 'John Tiffany');
+values (907, now(), now(), 'Lão Cổ');
 
 insert into authors (id, created_at, updated_at, name)
-values (908, now(), now(), 'Jack Thorne');
+values (908, now(), now(), 'Dan Brown');
 
 insert into authors (id, created_at, updated_at, name)
-values (909, now(), now(), 'Stephanie Meyer');
+values (909, now(), now(), 'Edgar Allan Poe');
 
 insert into authors (id, created_at, updated_at, name)
-values (910, now(), now(), 'Hồ Chí Minh');
+values (910, now(), now(), 'Lưu Từ Hân');
 
 insert into authors (id, created_at, updated_at, name)
-values (911, now(), now(), 'Vũ Ngọc Phan');
+values (911, now(), now(), 'Stephanie Meyer');
 
 insert into authors (id, created_at, updated_at, name)
-values (912, now(), now(), 'William Blake');
+values (912, now(), now(), 'Kahlil Gibran');
 
 insert into authors (id, created_at, updated_at, name)
-values (913, now(), now(), 'Hồ Xuân Hương');
+values (913, now(), now(), 'Jim Kay minh họa');
 
 insert into authors (id, created_at, updated_at, name)
-values (914, now(), now(), 'Hàn Mặc Tử');
+values (914, now(), now(), 'Hồ Chí Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (915, now(), now(), 'Trần Đăng Khoa');
+values (915, now(), now(), 'Vũ Ngọc Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (916, now(), now(), 'Xuân Diệu');
+values (916, now(), now(), 'Hồ Xuân Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (917, now(), now(), 'Mã Giang Lân');
+values (917, now(), now(), 'William Blake');
 
 insert into authors (id, created_at, updated_at, name)
-values (918, now(), now(), 'Tố Hữu');
+values (918, now(), now(), 'Trần Đăng Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (919, now(), now(), 'Đức Thành');
+values (919, now(), now(), 'Hàn Mặc Tử');
 
 insert into authors (id, created_at, updated_at, name)
-values (920, now(), now(), 'Phan Đạo');
+values (920, now(), now(), 'Mã Giang Lân');
 
 insert into authors (id, created_at, updated_at, name)
-values (921, now(), now(), 'Nguyễn Bính');
+values (921, now(), now(), 'Tố Hữu');
 
 insert into authors (id, created_at, updated_at, name)
-values (922, now(), now(), 'Coleman Barks');
+values (922, now(), now(), 'Nguyễn Bính');
 
 insert into authors (id, created_at, updated_at, name)
-values (923, now(), now(), 'Phan Khải');
+values (923, now(), now(), 'Đức Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (924, now(), now(), 'Đinh Hùng');
+values (924, now(), now(), 'Phan Đạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (925, now(), now(), 'Nguyễn Văn Thạc');
+values (925, now(), now(), 'Xuân Diệu');
 
 insert into authors (id, created_at, updated_at, name)
-values (926, now(), now(), 'Đặng Vương Hưng');
+values (926, now(), now(), 'Đồng Ánh Liễu');
 
 insert into authors (id, created_at, updated_at, name)
-values (927, now(), now(), 'PGS TS Trần Ngọc Mai');
+values (927, now(), now(), 'Trần Tế Xương');
 
 insert into authors (id, created_at, updated_at, name)
-values (928, now(), now(), 'Đặng Kim Trâm');
+values (928, now(), now(), 'Nguyễn Du');
 
 insert into authors (id, created_at, updated_at, name)
-values (929, now(), now(), 'Trần Văn Thọ');
+values (929, now(), now(), 'Thanh Nhật Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (930, now(), now(), 'Văn Thành Lê');
+values (930, now(), now(), 'Thương Thái Vi');
 
 insert into authors (id, created_at, updated_at, name)
-values (931, now(), now(), 'Nguyễn Ngọc Tiến');
+values (931, now(), now(), 'Lâu Vũ Tình');
 
 insert into authors (id, created_at, updated_at, name)
-values (932, now(), now(), 'Hoài Thanh');
+values (932, now(), now(), 'Cố Tây Tước');
 
 insert into authors (id, created_at, updated_at, name)
-values (933, now(), now(), 'Hoài Chân');
+values (933, now(), now(), 'Nghê Đa Hỉ');
 
 insert into authors (id, created_at, updated_at, name)
-values (934, now(), now(), 'Hoàng Tuệ');
+values (934, now(), now(), 'Xuân Phong Lựu Hỏa');
 
 insert into authors (id, created_at, updated_at, name)
-values (935, now(), now(), 'Borries Gallasch');
+values (935, now(), now(), 'Bạch Lạc Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (936, now(), now(), 'Võ Quốc Việt');
+values (936, now(), now(), 'Diệp Lạc Vô Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (937, now(), now(), 'Quang Dũng');
+values (937, now(), now(), 'Đinh Mặc');
 
 insert into authors (id, created_at, updated_at, name)
-values (938, now(), now(), 'Nguyễn Văn Hầu');
+values (938, now(), now(), 'Thư Nghi');
 
 insert into authors (id, created_at, updated_at, name)
-values (939, now(), now(), 'Maurice Durand');
+values (939, now(), now(), 'Đồ Dạng Tiên Sâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (940, now(), now(), 'Châu Tính');
+values (940, now(), now(), 'Twentine');
 
 insert into authors (id, created_at, updated_at, name)
-values (941, now(), now(), 'Thu Giang Nguyễn Duy Cần');
+values (941, now(), now(), 'Mạn Tây');
 
 insert into authors (id, created_at, updated_at, name)
-values (942, now(), now(), 'Trần Tư Hòa');
+values (942, now(), now(), 'Túy Hậu Ngư Ca');
 
 insert into authors (id, created_at, updated_at, name)
-values (943, now(), now(), 'Đoàn Tuấn');
+values (943, now(), now(), 'Nguyễn Văn Thạc');
 
 insert into authors (id, created_at, updated_at, name)
-values (944, now(), now(), 'Nguyễn Tường Bách');
+values (944, now(), now(), 'Đặng Vương Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (945, now(), now(), 'Nguyễn Vĩnh Nguyên');
+values (945, now(), now(), 'PGS TS Trần Ngọc Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (946, now(), now(), 'Vương Hồng Sển');
+values (946, now(), now(), 'Đặng Kim Trâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (947, now(), now(), 'Lan Khai');
+values (947, now(), now(), 'Trần Văn Thọ');
 
 insert into authors (id, created_at, updated_at, name)
-values (948, now(), now(), 'Thương Thái Vi');
+values (948, now(), now(), 'Hoài Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (949, now(), now(), 'Cố Tây Tước');
+values (949, now(), now(), 'Hoài Chân');
 
 insert into authors (id, created_at, updated_at, name)
-values (950, now(), now(), 'Nghê Đa Hỉ');
+values (950, now(), now(), 'Văn Thành Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (951, now(), now(), 'Xuân Phong Lựu Hỏa');
+values (951, now(), now(), 'Nguyễn Ngọc Tiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (952, now(), now(), 'Lâu Vũ Tình');
+values (952, now(), now(), 'Borries Gallasch');
 
 insert into authors (id, created_at, updated_at, name)
-values (953, now(), now(), 'Đinh Mặc');
+values (953, now(), now(), 'Trình Quang Phú');
 
 insert into authors (id, created_at, updated_at, name)
-values (954, now(), now(), 'Thư Nghi');
+values (954, now(), now(), 'Hoàng Tuệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (955, now(), now(), 'Đồ Dạng Tiên Sâm');
+values (955, now(), now(), 'Nguyễn Văn Hầu');
 
 insert into authors (id, created_at, updated_at, name)
-values (956, now(), now(), 'Bạch Lạc Mai');
+values (956, now(), now(), 'Nguyễn Huy Thiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (957, now(), now(), 'Diệp Lạc Vô Tâm');
+values (957, now(), now(), 'Lan Khai');
 
 insert into authors (id, created_at, updated_at, name)
-values (958, now(), now(), 'Twentine');
+values (958, now(), now(), 'Vũ Khoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (959, now(), now(), 'Mạn Tây');
+values (959, now(), now(), 'Bàng Bá Lân');
 
 insert into authors (id, created_at, updated_at, name)
-values (960, now(), now(), 'Bạch Đường Tống Tử Tinh');
+values (960, now(), now(), 'Hoàng Đăng Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (961, now(), now(), 'Bất Kiến Đương Niên');
+values (961, now(), now(), 'H!koro Studio');
 
 insert into authors (id, created_at, updated_at, name)
-values (962, now(), now(), 'Lưu Liễm Tử');
+values (962, now(), now(), 'Little Rainbow');
 
 insert into authors (id, created_at, updated_at, name)
-values (963, now(), now(), 'Dư Thu Vũ');
+values (963, now(), now(), 'Kulzsc');
 
 insert into authors (id, created_at, updated_at, name)
-values (964, now(), now(), 'H!koro Studio');
+values (964, now(), now(), 'Lê Đức Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (965, now(), now(), 'Little Rainbow');
+values (965, now(), now(), 'Mai Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (966, now(), now(), 'Kulzsc');
+values (966, now(), now(), 'Hà Trang (Tahtag)');
 
 insert into authors (id, created_at, updated_at, name)
-values (967, now(), now(), 'Lê Đức Hùng');
+values (967, now(), now(), 'Chaiyapat Tongkambunjong');
 
 insert into authors (id, created_at, updated_at, name)
-values (968, now(), now(), 'Mai Chi');
+values (968, now(), now(), 'Ban Biên Tập Bloom Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (969, now(), now(), 'Chaiyapat Tongkambunjong');
+values (969, now(), now(), 'Múc');
 
 insert into authors (id, created_at, updated_at, name)
-values (970, now(), now(), 'Ban Biên Tập Bloom Books');
+values (970, now(), now(), '@LANT');
 
 insert into authors (id, created_at, updated_at, name)
-values (971, now(), now(), 'Hà Trang (Tahtag)');
+values (971, now(), now(), 'Tree');
 
 insert into authors (id, created_at, updated_at, name)
-values (972, now(), now(), '1980Books');
+values (972, now(), now(), 'Hanh Nhan');
 
 insert into authors (id, created_at, updated_at, name)
-values (973, now(), now(), 'BeChan');
+values (973, now(), now(), 'Little Angel');
 
 insert into authors (id, created_at, updated_at, name)
-values (974, now(), now(), 'Múc');
+values (974, now(), now(), 't.hờ');
 
 insert into authors (id, created_at, updated_at, name)
-values (975, now(), now(), '2h Uống Trà Sữa');
+values (975, now(), now(), 'Khôi Uyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (976, now(), now(), 'Nhi Vũ');
+values (976, now(), now(), '1980Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (977, now(), now(), 'Duy Nam');
+values (977, now(), now(), 'BeChan');
 
 insert into authors (id, created_at, updated_at, name)
-values (978, now(), now(), 'Be Chan');
+values (978, now(), now(), 'Đinh Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (979, now(), now(), 'Đinh Hằng');
+values (979, now(), now(), 'Khải Đơn');
 
 insert into authors (id, created_at, updated_at, name)
 values (980, now(), now(), 'Lê Rin');
@@ -45980,4996 +45471,4843 @@ insert into authors (id, created_at, updated_at, name)
 values (981, now(), now(), 'Trần Đặng Đăng Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (982, now(), now(), 'Khải Đơn');
+values (982, now(), now(), 'Lê Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (983, now(), now(), 'Lê Quang');
+values (983, now(), now(), 'Vũ Hải Trường');
 
 insert into authors (id, created_at, updated_at, name)
-values (984, now(), now(), 'Vũ Hải Trường');
+values (984, now(), now(), 'Trần Đình Chất');
 
 insert into authors (id, created_at, updated_at, name)
-values (985, now(), now(), 'Hoài Sa');
+values (985, now(), now(), 'Uyên Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (986, now(), now(), 'Active Skills');
+values (986, now(), now(), 'Cao Bảo Vy');
 
 insert into authors (id, created_at, updated_at, name)
-values (987, now(), now(), 'Nguyễn Phan Khiêm');
+values (987, now(), now(), 'DiLi');
 
 insert into authors (id, created_at, updated_at, name)
-values (988, now(), now(), 'Phương Vũ Fleur');
+values (988, now(), now(), 'Nguyễn Thanh Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (989, now(), now(), 'Huyền Chip');
+values (989, now(), now(), 'Lê Lan Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (990, now(), now(), 'Thibault Clemenceau');
+values (990, now(), now(), 'Dương Thành Truyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (991, now(), now(), 'Amanda Huynh');
+values (991, now(), now(), 'Jessica Bruder');
 
 insert into authors (id, created_at, updated_at, name)
-values (992, now(), now(), 'Phạm Quỳnh');
+values (992, now(), now(), 'Mai Đức Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (993, now(), now(), 'Nguyễn Tập');
+values (993, now(), now(), 'Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (994, now(), now(), 'Phan Quang');
+values (994, now(), now(), 'Hồ Anh Thái');
 
 insert into authors (id, created_at, updated_at, name)
-values (995, now(), now(), 'Nguyễn Đình Lộc');
+values (995, now(), now(), 'Hồ Nhật Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (996, now(), now(), 'Trần Tuấn');
+values (996, now(), now(), 'Phan Việt');
 
 insert into authors (id, created_at, updated_at, name)
-values (997, now(), now(), 'Dan Hambleton');
+values (997, now(), now(), 'Trần Thùy Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (998, now(), now(), 'Nguyễn Thảo Nhi');
+values (998, now(), now(), 'Na Hồ');
 
 insert into authors (id, created_at, updated_at, name)
-values (999, now(), now(), 'Lam Linh');
+values (999, now(), now(), 'Viện Sử học');
 
 insert into authors (id, created_at, updated_at, name)
-values (1000, now(), now(), 'Trương Anh Ngọc');
+values (1000, now(), now(), 'Ngô Tất Tố');
 
 insert into authors (id, created_at, updated_at, name)
-values (1001, now(), now(), 'Nam Cao');
+values (1001, now(), now(), 'Vũ Trọng Phụng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1002, now(), now(), 'Nguyễn Du');
+values (1002, now(), now(), 'Lỗ Tấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1003, now(), now(), 'Viện Sử học');
+values (1003, now(), now(), 'Nguyễn Minh Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1004, now(), now(), 'Vũ Trọng Phụng');
+values (1004, now(), now(), 'Nguyên Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1005, now(), now(), 'Ngô Tất Tố');
+values (1005, now(), now(), 'R B Bernstein');
 
 insert into authors (id, created_at, updated_at, name)
-values (1006, now(), now(), 'Nguyễn Huy Thiệp');
+values (1006, now(), now(), 'Nguyễn Công Hoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1007, now(), now(), 'Nguyễn Minh Châu');
+values (1007, now(), now(), 'Trần Chiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (1008, now(), now(), 'Thạch Lam');
+values (1008, now(), now(), 'Jean-Claude Grumberg');
 
 insert into authors (id, created_at, updated_at, name)
-values (1009, now(), now(), 'Lỗ Tấn');
+values (1009, now(), now(), 'Đỗ Hoàng Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1010, now(), now(), 'Nguyên Hồng');
+values (1010, now(), now(), 'Bảo Tàng Hồ Chí Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1011, now(), now(), 'R B Bernstein');
+values (1011, now(), now(), 'Phạm Công Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1012, now(), now(), 'Nguyễn Công Hoan');
+values (1012, now(), now(), 'Trương Chí Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1013, now(), now(), 'Sir Georce D''aguilar');
+values (1013, now(), now(), 'Song Young Kwan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1014, now(), now(), 'Lê Y Linh');
+values (1014, now(), now(), 'Ryu Jeonghun');
 
 insert into authors (id, created_at, updated_at, name)
-values (1015, now(), now(), 'Nguyễn Cừ');
+values (1015, now(), now(), 'Tam Thái');
 
 insert into authors (id, created_at, updated_at, name)
-values (1016, now(), now(), 'Mạnh Linh');
+values (1016, now(), now(), 'Nguyễn Á');
 
 insert into authors (id, created_at, updated_at, name)
-values (1017, now(), now(), 'Lê Bích');
+values (1017, now(), now(), 'Hélène Delforge');
 
 insert into authors (id, created_at, updated_at, name)
-values (1018, now(), now(), 'Lê Minh Quốc');
+values (1018, now(), now(), 'Quentin Gréban');
 
 insert into authors (id, created_at, updated_at, name)
-values (1019, now(), now(), 'Nguyễn Trọng Báu');
+values (1019, now(), now(), 'Manuel Bauer');
 
 insert into authors (id, created_at, updated_at, name)
-values (1020, now(), now(), 'Song Hà');
+values (1020, now(), now(), 'Thupten Jinpa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1021, now(), now(), 'Minh Phong');
+values (1021, now(), now(), 'Bạch Nam Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (1022, now(), now(), 'Trần Trường Minh');
+values (1022, now(), now(), 'Nguyễn Trường Sinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1023, now(), now(), 'Hoa Sơn');
+values (1023, now(), now(), 'Lương Siêu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1024, now(), now(), 'Jerome K. Jerome');
+values (1024, now(), now(), 'Sam Trạch');
 
 insert into authors (id, created_at, updated_at, name)
-values (1025, now(), now(), 'Hải Yến');
+values (1025, now(), now(), 'ヴァン・タイン・レ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1026, now(), now(), 'Hendrik Groen');
+values (1026, now(), now(), 'Tưởng Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1027, now(), now(), 'Trần Lỗi');
+values (1027, now(), now(), 'Văn Thị Mượn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1028, now(), now(), 'Jenny Pearson');
+values (1028, now(), now(), 'April Chu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1029, now(), now(), 'David O''Connell');
+values (1029, now(), now(), 'Kelly Pousettle');
 
 insert into authors (id, created_at, updated_at, name)
-values (1030, now(), now(), 'Trần Lỗi Và Cộng sự');
+values (1030, now(), now(), 'Pierre Pratt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1031, now(), now(), 'Trần Lỗi Và Cộng Sự');
+values (1031, now(), now(), 'Kang Cherwon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1032, now(), now(), 'Đỗ Hoàng Linh');
+values (1032, now(), now(), 'Tống Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1033, now(), now(), 'Bảo Tàng Hồ Chí Minh');
+values (1033, now(), now(), 'Nguyễn Cừ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1034, now(), now(), 'Phạm Công Tâm');
+values (1034, now(), now(), 'Mạnh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1035, now(), now(), 'Tam Thái');
+values (1035, now(), now(), 'Lê Bích');
 
 insert into authors (id, created_at, updated_at, name)
-values (1036, now(), now(), 'Nguyễn Á');
+values (1036, now(), now(), 'Vương Hồng Sển');
 
 insert into authors (id, created_at, updated_at, name)
-values (1037, now(), now(), 'Hélène Delforge');
+values (1037, now(), now(), 'David Foenkinos');
 
 insert into authors (id, created_at, updated_at, name)
-values (1038, now(), now(), 'Quentin Gréban');
+values (1038, now(), now(), 'Lê Minh Quốc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1039, now(), now(), 'Manuel Bauer');
+values (1039, now(), now(), 'Nguyễn Trọng Báu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1040, now(), now(), 'Thupten Jinpa');
+values (1040, now(), now(), 'Song Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1041, now(), now(), 'Bạch Nam Hải');
+values (1041, now(), now(), 'Minh Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1042, now(), now(), 'Nguyễn Thị Thanh Lưu');
+values (1042, now(), now(), 'Trần Trường Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1043, now(), now(), 'Lương Siêu');
+values (1043, now(), now(), 'Hoa Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1044, now(), now(), 'Sam Trạch');
+values (1044, now(), now(), 'Hải Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (1045, now(), now(), 'ヴァン・タイン・レ');
+values (1045, now(), now(), 'Hendrik Groen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1046, now(), now(), 'Tưởng Lâm');
+values (1046, now(), now(), 'Trần Lỗi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1047, now(), now(), 'Văn Thị Mượn');
+values (1047, now(), now(), 'Jenny Pearson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1048, now(), now(), 'April Chu');
+values (1048, now(), now(), 'David O''Connell');
 
 insert into authors (id, created_at, updated_at, name)
-values (1049, now(), now(), 'Kelly Pousettle');
+values (1049, now(), now(), 'Trần Lỗi Và Cộng sự');
 
 insert into authors (id, created_at, updated_at, name)
-values (1050, now(), now(), 'Pierre Pratt');
+values (1050, now(), now(), 'Agatha Christie Limited');
 
 insert into authors (id, created_at, updated_at, name)
-values (1051, now(), now(), 'Kang Cherwon');
+values (1051, now(), now(), 'Trình Doãn Thăng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1052, now(), now(), 'Ryu Jeonghun');
+values (1052, now(), now(), 'Hồng Hà Nữ Sĩ Đoàn Thị Điểm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1053, now(), now(), 'Tống Lâm');
+values (1053, now(), now(), 'Ngụy Phong Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1054, now(), now(), 'Miimura Yoko');
+values (1054, now(), now(), 'Huỳnh Ngọc Trảng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1055, now(), now(), 'Trịnh Lữ');
+values (1055, now(), now(), 'Betty Friedan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1056, now(), now(), 'Phạm Long');
+values (1056, now(), now(), 'Cao Văn Quyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1057, now(), now(), 'Trương Chí Hòa');
+values (1057, now(), now(), 'Jenny Lawson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1058, now(), now(), 'Song Young Kwan');
+values (1058, now(), now(), 'Hồng Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1059, now(), now(), 'Agatha Christie Limited');
+values (1059, now(), now(), 'Don Miguel Ruiz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1060, now(), now(), 'Trình Doãn Thăng');
+values (1060, now(), now(), 'Nam Chi Bùi Thanh Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1061, now(), now(), 'Hồng Hà Nữ Sĩ Đoàn Thị Điểm');
+values (1061, now(), now(), 'Ôn Như Lương Văn Can');
 
 insert into authors (id, created_at, updated_at, name)
-values (1062, now(), now(), 'Ngụy Phong Hoa');
+values (1062, now(), now(), 'Lê Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1063, now(), now(), 'Betty Friedan');
+values (1063, now(), now(), 'Jake Register');
 
 insert into authors (id, created_at, updated_at, name)
-values (1064, now(), now(), 'Nguyễn Trí Dũng');
+values (1064, now(), now(), 'Deer Tarot');
 
 insert into authors (id, created_at, updated_at, name)
-values (1065, now(), now(), 'Cao Văn Quyền');
+values (1065, now(), now(), 'Gia Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1066, now(), now(), 'Jenny Lawson');
+values (1066, now(), now(), 'Gia Cát');
 
 insert into authors (id, created_at, updated_at, name)
-values (1067, now(), now(), 'Hồng Thanh');
+values (1067, now(), now(), 'Tiên Sắc Xám');
 
 insert into authors (id, created_at, updated_at, name)
-values (1068, now(), now(), 'Don Miguel Ruiz');
+values (1068, now(), now(), 'Duy Trinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1069, now(), now(), 'Nam Chi Bùi Thanh Kiên');
+values (1069, now(), now(), 'Bảo Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1070, now(), now(), 'Ôn Như Lương Văn Can');
+values (1070, now(), now(), 'Jonathan Auxier');
 
 insert into authors (id, created_at, updated_at, name)
-values (1071, now(), now(), 'Huỳnh Ngọc Trảng');
+values (1071, now(), now(), 'Benjamin Alire Sáenz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1072, now(), now(), 'Lê Hùng');
+values (1072, now(), now(), 'Đoàn Phương Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1073, now(), now(), 'Gia Linh');
+values (1073, now(), now(), 'Nguyễn Thị Châu Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1074, now(), now(), 'Gia Cát');
+values (1074, now(), now(), 'Nguyễn Thu Thuỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1075, now(), now(), 'Tiên Sắc Xám');
+values (1075, now(), now(), 'Nguyễn Đình Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (1076, now(), now(), 'Duy Trinh');
+values (1076, now(), now(), 'Kang Ah');
 
 insert into authors (id, created_at, updated_at, name)
-values (1077, now(), now(), 'Bảo Quân');
+values (1077, now(), now(), 'Đạo Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1078, now(), now(), 'Jake Register');
+values (1078, now(), now(), 'Quỳnh Lưu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1079, now(), now(), 'Deer Tarot');
+values (1079, now(), now(), 'Chu Ân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1080, now(), now(), 'Từ Kế Tường');
+values (1080, now(), now(), 'Lê Trọng Nghĩa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1081, now(), now(), 'Jonathan Auxier');
+values (1081, now(), now(), 'Nguyễn Phước Minh Mẫn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1082, now(), now(), 'Benjamin Alire Sáenz');
+values (1082, now(), now(), 'Baird T Spalding');
 
 insert into authors (id, created_at, updated_at, name)
-values (1083, now(), now(), 'Đoàn Phương Huyền');
+values (1083, now(), now(), 'Tớ Là Mây');
 
 insert into authors (id, created_at, updated_at, name)
-values (1084, now(), now(), 'Nguyễn Thị Châu Giang');
+values (1084, now(), now(), 'Khaled Hosseini');
 
 insert into authors (id, created_at, updated_at, name)
-values (1085, now(), now(), 'Nguyễn Thu Thuỷ');
+values (1085, now(), now(), 'Gege Akutami');
 
 insert into authors (id, created_at, updated_at, name)
-values (1086, now(), now(), 'Nguyễn Đình Tú');
+values (1086, now(), now(), 'Yuji Horii');
 
 insert into authors (id, created_at, updated_at, name)
-values (1087, now(), now(), 'Kang Ah');
+values (1087, now(), now(), 'Riku Sanjo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1088, now(), now(), 'Nguyễn Phước Minh Mẫn');
+values (1088, now(), now(), 'Koji Inada');
 
 insert into authors (id, created_at, updated_at, name)
-values (1089, now(), now(), 'Đạo Quang');
+values (1089, now(), now(), 'Norihiro Yagi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1090, now(), now(), 'Quỳnh Lưu');
+values (1090, now(), now(), 'Muneyuki Kaneshiro');
 
 insert into authors (id, created_at, updated_at, name)
-values (1091, now(), now(), 'Chu Ân');
+values (1091, now(), now(), 'Yusuke Nomura');
 
 insert into authors (id, created_at, updated_at, name)
-values (1092, now(), now(), 'Lê Trọng Nghĩa');
+values (1092, now(), now(), 'Kazuhiro Fujita');
 
 insert into authors (id, created_at, updated_at, name)
-values (1093, now(), now(), 'Baird T Spalding');
+values (1093, now(), now(), 'Tezuka Osamu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1094, now(), now(), 'Tớ Là Mây');
+values (1094, now(), now(), 'One');
 
 insert into authors (id, created_at, updated_at, name)
-values (1095, now(), now(), 'Amy Trương');
+values (1095, now(), now(), 'Yusuke Murata');
 
 insert into authors (id, created_at, updated_at, name)
-values (1096, now(), now(), 'Khaled Hosseini');
+values (1096, now(), now(), 'Chieko Hosokawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1097, now(), now(), 'Gege Akutami');
+values (1097, now(), now(), 'Fūmin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1098, now(), now(), 'Yuji Horii');
+values (1098, now(), now(), 'Aida Iro');
 
 insert into authors (id, created_at, updated_at, name)
-values (1099, now(), now(), 'Riku Sanjo');
+values (1099, now(), now(), 'Saka Mikami');
 
 insert into authors (id, created_at, updated_at, name)
-values (1100, now(), now(), 'Koji Inada');
+values (1100, now(), now(), 'Kyoko Hikawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1101, now(), now(), 'Norihiro Yagi');
+values (1101, now(), now(), 'Katarina');
 
 insert into authors (id, created_at, updated_at, name)
-values (1102, now(), now(), 'Muneyuki Kaneshiro');
+values (1102, now(), now(), 'Ryosuke Fuji');
 
 insert into authors (id, created_at, updated_at, name)
-values (1103, now(), now(), 'Yusuke Nomura');
+values (1103, now(), now(), 'Reiko Shimizu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1104, now(), now(), 'Kazuhiro Fujita');
+values (1104, now(), now(), 'Yasunori Okada');
 
 insert into authors (id, created_at, updated_at, name)
-values (1105, now(), now(), 'Tezuka Osamu');
+values (1105, now(), now(), 'Takahiro ARAI');
 
 insert into authors (id, created_at, updated_at, name)
-values (1106, now(), now(), 'One');
+values (1106, now(), now(), 'Yoshito Usui');
 
 insert into authors (id, created_at, updated_at, name)
-values (1107, now(), now(), 'Yusuke Murata');
+values (1107, now(), now(), 'Takata Mirei');
 
 insert into authors (id, created_at, updated_at, name)
-values (1108, now(), now(), 'Chieko Hosokawa');
+values (1108, now(), now(), 'UY Studio');
 
 insert into authors (id, created_at, updated_at, name)
-values (1109, now(), now(), 'Fūmin');
+values (1109, now(), now(), 'Mirei Takata');
 
 insert into authors (id, created_at, updated_at, name)
-values (1110, now(), now(), 'Saka Mikami');
+values (1110, now(), now(), 'Eiichiro Oda');
 
 insert into authors (id, created_at, updated_at, name)
-values (1111, now(), now(), 'Kyoko Hikawa');
+values (1111, now(), now(), 'Akira Toriyama');
 
 insert into authors (id, created_at, updated_at, name)
-values (1112, now(), now(), 'Katarina');
+values (1112, now(), now(), 'Toyotarou');
 
 insert into authors (id, created_at, updated_at, name)
-values (1113, now(), now(), 'Ryosuke Fuji');
+values (1113, now(), now(), 'Masashi Kishimoto');
 
 insert into authors (id, created_at, updated_at, name)
-values (1114, now(), now(), 'Reiko Shimizu');
+values (1114, now(), now(), 'ONO Eriko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1115, now(), now(), 'Rumiko Takahashi');
+values (1115, now(), now(), 'Hidenori Kusaka');
 
 insert into authors (id, created_at, updated_at, name)
-values (1116, now(), now(), 'Yasunori Okada');
+values (1116, now(), now(), 'Satoshi Yamamoto');
 
 insert into authors (id, created_at, updated_at, name)
-values (1117, now(), now(), 'Takahiro ARAI');
+values (1117, now(), now(), 'Kosaku Anakubo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1118, now(), now(), 'Yoshito Usui');
+values (1118, now(), now(), 'Seimaru Amagi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1119, now(), now(), 'Takata Mirei');
+values (1119, now(), now(), 'Fumiya Sato');
 
 insert into authors (id, created_at, updated_at, name)
-values (1120, now(), now(), 'UY Studio');
+values (1120, now(), now(), 'Youzaburou Kanari');
 
 insert into authors (id, created_at, updated_at, name)
-values (1121, now(), now(), 'Mirei Takata');
+values (1121, now(), now(), 'Lê Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1122, now(), now(), 'Eiichiro Oda');
+values (1122, now(), now(), 'Dubu (Redice Studio)');
 
 insert into authors (id, created_at, updated_at, name)
-values (1123, now(), now(), 'Akira Toriyama');
+values (1123, now(), now(), 'Chugong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1124, now(), now(), 'Toyotarou');
+values (1124, now(), now(), 'H-Goon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1125, now(), now(), 'Masashi Kishimoto');
+values (1125, now(), now(), 'Hands2');
 
 insert into authors (id, created_at, updated_at, name)
-values (1126, now(), now(), 'ONO Eriko');
+values (1126, now(), now(), 'Gao Yan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1127, now(), now(), 'Hidenori Kusaka');
+values (1127, now(), now(), 'Thân Thân Khuẩn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1128, now(), now(), 'Satoshi Yamamoto');
+values (1128, now(), now(), 'Nhất Uyển Chúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1129, now(), now(), 'Kosaku Anakubo');
+values (1129, now(), now(), 'Bố Lãng Ni');
 
 insert into authors (id, created_at, updated_at, name)
-values (1130, now(), now(), 'Satoshi Tajiri');
+values (1130, now(), now(), 'Khuyển Nhất');
 
 insert into authors (id, created_at, updated_at, name)
-values (1131, now(), now(), 'Atsuhiro Tomioka');
+values (1131, now(), now(), 'Gene');
 
 insert into authors (id, created_at, updated_at, name)
-values (1132, now(), now(), 'Teruaki Mizuno');
+values (1132, now(), now(), 'Mặc Phi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1133, now(), now(), 'Tetsuo Yajima');
+values (1133, now(), now(), 'A Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1134, now(), now(), 'Seimaru Amagi');
+values (1134, now(), now(), 'Thỏ Ngốc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1135, now(), now(), 'Fumiya Sato');
+values (1135, now(), now(), 'Tiếu Giang Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1136, now(), now(), 'Youzaburou Kanari');
+values (1136, now(), now(), 'Lộ Nhất Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1137, now(), now(), 'Lê Linh');
+values (1137, now(), now(), 'Tiểu Giang Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1138, now(), now(), 'Dubu (Redice Studio)');
+values (1138, now(), now(), 'Everett Christopher Shea');
 
 insert into authors (id, created_at, updated_at, name)
-values (1139, now(), now(), 'Chugong');
+values (1139, now(), now(), 'Cát Băng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1140, now(), now(), 'H-Goon');
+values (1140, now(), now(), 'Truyền Kỳ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1141, now(), now(), 'Hands2');
+values (1141, now(), now(), 'Tâm Truyền Kỳ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1142, now(), now(), 'Gao Yan');
+values (1142, now(), now(), 'Robert Kirkman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1143, now(), now(), 'Thân Thân Khuẩn');
+values (1143, now(), now(), 'René Goscinny');
 
 insert into authors (id, created_at, updated_at, name)
-values (1144, now(), now(), 'Nhất Uyển Chúc');
+values (1144, now(), now(), 'Albert Uderzo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1145, now(), now(), 'Bố Lãng Ni');
+values (1145, now(), now(), 'Hae Min');
 
 insert into authors (id, created_at, updated_at, name)
-values (1146, now(), now(), 'Khuyển Nhất');
+values (1146, now(), now(), 'Chase Hill');
 
 insert into authors (id, created_at, updated_at, name)
-values (1147, now(), now(), 'Mặc Phi');
+values (1147, now(), now(), 'Scott Sharp');
 
 insert into authors (id, created_at, updated_at, name)
-values (1148, now(), now(), 'A Nam');
+values (1148, now(), now(), 'M. Scott Peck');
 
 insert into authors (id, created_at, updated_at, name)
-values (1149, now(), now(), 'Thỏ Ngốc');
+values (1149, now(), now(), 'Lý Thượng Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (1150, now(), now(), 'Gene');
+values (1150, now(), now(), 'Thanh Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1151, now(), now(), 'Hạ Đạt');
+values (1151, now(), now(), 'James Clear');
 
 insert into authors (id, created_at, updated_at, name)
-values (1152, now(), now(), 'Nhị Hỉ');
+values (1152, now(), now(), 'Marshall B. Rosenberg');
 
 insert into authors (id, created_at, updated_at, name)
-values (1153, now(), now(), 'Nại Tư');
+values (1153, now(), now(), 'Ph.D');
 
 insert into authors (id, created_at, updated_at, name)
-values (1154, now(), now(), 'Kình Nguyên Studio');
+values (1154, now(), now(), 'Thibaut Meurisse');
 
 insert into authors (id, created_at, updated_at, name)
-values (1155, now(), now(), 'Tiểu Giang Nam');
+values (1155, now(), now(), 'Trác Nhã');
 
 insert into authors (id, created_at, updated_at, name)
-values (1156, now(), now(), 'Tiếu Giang Nam');
+values (1156, now(), now(), 'TS M. Scott Peck');
 
 insert into authors (id, created_at, updated_at, name)
-values (1157, now(), now(), 'Everett Christopher Shea');
+values (1157, now(), now(), 'Joseph Murphyc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1158, now(), now(), 'Cát Băng');
+values (1158, now(), now(), 'Viktor E Frankl');
 
 insert into authors (id, created_at, updated_at, name)
-values (1159, now(), now(), 'Truyền Kỳ');
+values (1159, now(), now(), 'Âm Hồng Tín');
 
 insert into authors (id, created_at, updated_at, name)
-values (1160, now(), now(), 'Tâm Truyền Kỳ');
+values (1160, now(), now(), 'Lý Vĩ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1161, now(), now(), 'Robert Kirkman');
+values (1161, now(), now(), 'Giản Tư Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1162, now(), now(), 'René Goscinny');
+values (1162, now(), now(), 'Mihaly Csikszentmihalyi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1163, now(), now(), 'Albert Uderzo');
+values (1163, now(), now(), 'Minh Niệm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1164, now(), now(), 'Hae Min');
+values (1164, now(), now(), 'Rhowa Byrne');
 
 insert into authors (id, created_at, updated_at, name)
-values (1165, now(), now(), 'Chase Hill');
+values (1165, now(), now(), 'Hạ Thiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1166, now(), now(), 'Scott Sharp');
+values (1166, now(), now(), 'Robert Greene');
 
 insert into authors (id, created_at, updated_at, name)
-values (1167, now(), now(), 'M. Scott Peck');
+values (1167, now(), now(), 'Tiến Sỹ Marilee Adams');
 
 insert into authors (id, created_at, updated_at, name)
-values (1168, now(), now(), 'Lý Thượng Long');
+values (1168, now(), now(), 'Kevin Simler');
 
 insert into authors (id, created_at, updated_at, name)
-values (1169, now(), now(), 'Thanh Hương');
+values (1169, now(), now(), 'Robin Hason');
 
 insert into authors (id, created_at, updated_at, name)
-values (1170, now(), now(), 'James Clear');
+values (1170, now(), now(), 'Carl Gustav Jung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1171, now(), now(), 'Marshall B. Rosenberg');
+values (1171, now(), now(), 'Morgan Housel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1172, now(), now(), 'Ph.D');
+values (1172, now(), now(), 'Happy An');
 
 insert into authors (id, created_at, updated_at, name)
-values (1173, now(), now(), 'Thibaut Meurisse');
+values (1173, now(), now(), 'Takashi Okada');
 
 insert into authors (id, created_at, updated_at, name)
-values (1174, now(), now(), 'Trác Nhã');
+values (1174, now(), now(), 'Từ Thính Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1175, now(), now(), 'TS M. Scott Peck');
+values (1175, now(), now(), 'Bloom');
 
 insert into authors (id, created_at, updated_at, name)
-values (1176, now(), now(), 'Joseph Murphyc');
+values (1176, now(), now(), 'David R Hawkins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1177, now(), now(), 'Âm Hồng Tín');
+values (1177, now(), now(), 'Jo Hemmings');
 
 insert into authors (id, created_at, updated_at, name)
-values (1178, now(), now(), 'Lý Vĩ');
+values (1178, now(), now(), 'Mauro F. Guillén');
 
 insert into authors (id, created_at, updated_at, name)
-values (1179, now(), now(), 'Viktor E Frankl');
+values (1179, now(), now(), 'Alfred Adler');
 
 insert into authors (id, created_at, updated_at, name)
-values (1180, now(), now(), 'Giản Tư Trung');
+values (1180, now(), now(), 'Shane Parrish');
 
 insert into authors (id, created_at, updated_at, name)
-values (1181, now(), now(), 'Mihaly Csikszentmihalyi');
+values (1181, now(), now(), 'Rhiannon Beaubien');
 
 insert into authors (id, created_at, updated_at, name)
-values (1182, now(), now(), 'Minh Niệm');
+values (1182, now(), now(), 'Wladislaw Jachtchenko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1183, now(), now(), 'Rhowa Byrne');
+values (1183, now(), now(), 'Kishimi Ichiro');
 
 insert into authors (id, created_at, updated_at, name)
-values (1184, now(), now(), 'Hạ Thiên');
+values (1184, now(), now(), 'Koga Fumitake');
 
 insert into authors (id, created_at, updated_at, name)
-values (1185, now(), now(), 'Robert Greene');
+values (1185, now(), now(), 'Carol S Dweck');
 
 insert into authors (id, created_at, updated_at, name)
-values (1186, now(), now(), 'Tiến Sỹ Marilee Adams');
+values (1186, now(), now(), 'Lê Thị Minh Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1187, now(), now(), 'Kevin Simler');
+values (1187, now(), now(), 'Cao Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1188, now(), now(), 'Robin Hason');
+values (1188, now(), now(), 'Michael Sandel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1189, now(), now(), 'Carl Gustav Jung');
+values (1189, now(), now(), 'Dale Carnegie');
 
 insert into authors (id, created_at, updated_at, name)
-values (1190, now(), now(), 'Morgan Housel');
+values (1190, now(), now(), 'Tiêu Vệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1191, now(), now(), 'Happy An');
+values (1191, now(), now(), 'Lê Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1192, now(), now(), 'Từ Thính Phong');
+values (1192, now(), now(), 'Thương Lãng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1193, now(), now(), 'Bloom');
+values (1193, now(), now(), 'Moon Ju-Jeong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1194, now(), now(), 'Inamori Kazuo');
+values (1194, now(), now(), 'Yoon Eui-Seok');
 
 insert into authors (id, created_at, updated_at, name)
-values (1195, now(), now(), 'David R Hawkins');
+values (1195, now(), now(), 'Xie Qi Jun');
 
 insert into authors (id, created_at, updated_at, name)
-values (1196, now(), now(), 'Mauro F. Guillén');
+values (1196, now(), now(), 'Yinyin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1197, now(), now(), 'Jo Hemmings');
+values (1197, now(), now(), 'Trương Cần');
 
 insert into authors (id, created_at, updated_at, name)
-values (1198, now(), now(), 'Wladislaw Jachtchenko');
+values (1198, now(), now(), 'Violeta Basic');
 
 insert into authors (id, created_at, updated_at, name)
-values (1199, now(), now(), 'Kishimi Ichiro');
+values (1199, now(), now(), 'Đào Xuân Ni');
 
 insert into authors (id, created_at, updated_at, name)
-values (1200, now(), now(), 'Koga Fumitake');
+values (1200, now(), now(), 'Lê quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1201, now(), now(), 'Alfred Adler');
+values (1201, now(), now(), 'Hiểu Linh Đinh Đang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1202, now(), now(), 'Shane Parrish');
+values (1202, now(), now(), 'Đào Nhiên Nhiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1203, now(), now(), 'Rhiannon Beaubien');
+values (1203, now(), now(), 'Ngô Quỳnh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1204, now(), now(), 'Carol S Dweck');
+values (1204, now(), now(), 'Chu Nam Chiếu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1205, now(), now(), 'Lê Thị Minh Tâm');
+values (1205, now(), now(), 'Tôn Vân Hiểu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1206, now(), now(), 'Cao Minh');
+values (1206, now(), now(), 'Phan Đăng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1207, now(), now(), 'Dale Carnegie');
+values (1207, now(), now(), 'Jack Canfield');
 
 insert into authors (id, created_at, updated_at, name)
-values (1208, now(), now(), 'Michael Sandel');
+values (1208, now(), now(), 'Mark Victor Hansen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1209, now(), now(), 'Trần Lâm');
+values (1209, now(), now(), 'First News');
 
 insert into authors (id, created_at, updated_at, name)
-values (1210, now(), now(), 'Tiêu Vệ');
+values (1210, now(), now(), 'Amy Newmark');
 
 insert into authors (id, created_at, updated_at, name)
-values (1211, now(), now(), 'Lê Tâm');
+values (1211, now(), now(), 'Kimberly Kirberger');
 
 insert into authors (id, created_at, updated_at, name)
-values (1212, now(), now(), 'Thương Lãng');
+values (1212, now(), now(), 'Lưu Tố Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (1213, now(), now(), 'Moon Ju-Jeong');
+values (1213, now(), now(), 'BS Đỗ Hồng Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1214, now(), now(), 'Yoon Eui-Seok');
+values (1214, now(), now(), 'Khangser Rinpoche');
 
 insert into authors (id, created_at, updated_at, name)
-values (1215, now(), now(), 'Violeta Basic');
+values (1215, now(), now(), 'Inner Space');
 
 insert into authors (id, created_at, updated_at, name)
-values (1216, now(), now(), 'Trương Cần');
+values (1216, now(), now(), 'Covent Garden');
 
 insert into authors (id, created_at, updated_at, name)
-values (1217, now(), now(), 'Đào Xuân Ni');
+values (1217, now(), now(), 'Nguyễn Thị Vy Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1218, now(), now(), 'Hiểu Linh Đinh Đang');
+values (1218, now(), now(), 'Tuệ Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1219, now(), now(), 'Lê quang');
+values (1219, now(), now(), 'Đỗ Hồng Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1220, now(), now(), 'Xie Qi Jun');
+values (1220, now(), now(), 'Liu Yong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1221, now(), now(), 'Yinyin');
+values (1221, now(), now(), 'Richard Paul');
 
 insert into authors (id, created_at, updated_at, name)
-values (1222, now(), now(), 'Ngô Quỳnh Trang');
+values (1222, now(), now(), 'Linda Elder');
 
 insert into authors (id, created_at, updated_at, name)
-values (1223, now(), now(), 'Cait Brennan');
+values (1223, now(), now(), 'Trung Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1224, now(), now(), 'Carrie Leff');
+values (1224, now(), now(), 'Mộng Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1225, now(), now(), 'Lisa Klein');
+values (1225, now(), now(), 'Đặng Xuân Điều');
 
 insert into authors (id, created_at, updated_at, name)
-values (1226, now(), now(), 'ATY');
+values (1226, now(), now(), 'Trần Thị Hằng Mơ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1227, now(), now(), 'Jack Canfield');
+values (1227, now(), now(), 'Phan Thị Minh Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1228, now(), now(), 'Mark Victor Hansen');
+values (1228, now(), now(), 'Malcom Mann');
 
 insert into authors (id, created_at, updated_at, name)
-values (1229, now(), now(), 'First News');
+values (1229, now(), now(), 'Steve Taylore-Knowles');
 
 insert into authors (id, created_at, updated_at, name)
-values (1230, now(), now(), 'Amy Newmark');
+values (1230, now(), now(), 'Minh Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1231, now(), now(), 'Jack canfield');
+values (1231, now(), now(), 'Thiên Phú');
 
 insert into authors (id, created_at, updated_at, name)
-values (1232, now(), now(), 'Lưu Tố Bình');
+values (1232, now(), now(), 'Malcolm Mann');
 
 insert into authors (id, created_at, updated_at, name)
-values (1233, now(), now(), 'BS Đỗ Hồng Ngọc');
+values (1233, now(), now(), 'Andrew Betsis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1234, now(), now(), 'Inner Space');
+values (1234, now(), now(), 'Lawrence Mamas');
 
 insert into authors (id, created_at, updated_at, name)
-values (1235, now(), now(), 'Covent Garden');
+values (1235, now(), now(), 'Thomas Booth');
 
 insert into authors (id, created_at, updated_at, name)
-values (1236, now(), now(), 'Nguyễn Thị Vy Khanh');
+values (1236, now(), now(), 'Language Publishing Editorial');
 
 insert into authors (id, created_at, updated_at, name)
-values (1237, now(), now(), 'Tuệ Minh');
+values (1237, now(), now(), 'Nguyễn Quốc Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1238, now(), now(), 'Đỗ Hồng Ngọc');
+values (1238, now(), now(), 'Collins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1239, now(), now(), 'Liu Yong');
+values (1239, now(), now(), 'Potjanee Muangsilapasart');
 
 insert into authors (id, created_at, updated_at, name)
-values (1240, now(), now(), 'Richard Paul');
+values (1240, now(), now(), 'Lê Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1241, now(), now(), 'Linda Elder');
+values (1241, now(), now(), 'Kaplan Test Prep');
 
 insert into authors (id, created_at, updated_at, name)
-values (1242, now(), now(), 'Khangser Rinpoche');
+values (1242, now(), now(), 'Ban Biên tập MIS');
 
 insert into authors (id, created_at, updated_at, name)
-values (1243, now(), now(), 'Hồ Văn Trung');
+values (1243, now(), now(), 'Đại Mai Kids');
 
 insert into authors (id, created_at, updated_at, name)
-values (1244, now(), now(), 'Spencer Johnson');
+values (1244, now(), now(), 'Runkids');
 
 insert into authors (id, created_at, updated_at, name)
-values (1245, now(), now(), 'M.D');
+values (1245, now(), now(), 'MIS Editorial Team');
 
 insert into authors (id, created_at, updated_at, name)
-values (1246, now(), now(), 'Trần Đại Vi');
+values (1246, now(), now(), 'Hoàng Văn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1247, now(), now(), 'Bethany Hamilton');
+values (1247, now(), now(), 'Hoàng Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1248, now(), now(), 'Phan Thị Minh Châu');
+values (1248, now(), now(), 'Oxford University Press');
 
 insert into authors (id, created_at, updated_at, name)
-values (1249, now(), now(), 'Malcom Mann');
+values (1249, now(), now(), 'Tim Ward');
 
 insert into authors (id, created_at, updated_at, name)
-values (1250, now(), now(), 'Steve Taylore-Knowles');
+values (1250, now(), now(), 'Minh Khuê');
 
 insert into authors (id, created_at, updated_at, name)
-values (1251, now(), now(), 'Thiên Phú');
+values (1251, now(), now(), 'Nguyễn Cảnh Luân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1252, now(), now(), 'Malcolm Mann');
+values (1252, now(), now(), 'Cambridge');
 
 insert into authors (id, created_at, updated_at, name)
-values (1253, now(), now(), 'Andrew Betsis');
+values (1253, now(), now(), 'Dr Lin Lougheed');
 
 insert into authors (id, created_at, updated_at, name)
-values (1254, now(), now(), 'Lawrence Mamas');
+values (1254, now(), now(), 'Fiona Aish');
 
 insert into authors (id, created_at, updated_at, name)
-values (1255, now(), now(), 'Thomas Booth');
+values (1255, now(), now(), 'Jo Tomlinson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1256, now(), now(), 'Potjanee Muangsilapasart');
+values (1256, now(), now(), 'Els Van Geyte');
 
 insert into authors (id, created_at, updated_at, name)
-values (1257, now(), now(), 'Lê Oanh');
+values (1257, now(), now(), 'Li Ya Bin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1258, now(), now(), 'Kaplan Test Prep');
+values (1258, now(), now(), 'Zhang Juan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1259, now(), now(), 'Nguyễn Thị Thu Huế');
+values (1259, now(), now(), 'Bùi Hồng Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1260, now(), now(), 'Language Publishing Editorial');
+values (1260, now(), now(), 'Hackers');
 
 insert into authors (id, created_at, updated_at, name)
-values (1261, now(), now(), 'Ban Biên tập MIS');
+values (1261, now(), now(), 'Anneli Williams');
 
 insert into authors (id, created_at, updated_at, name)
-values (1262, now(), now(), 'Đại Mai Kids');
+values (1262, now(), now(), 'Jane Short');
 
 insert into authors (id, created_at, updated_at, name)
-values (1263, now(), now(), 'Dương Hương');
+values (1263, now(), now(), 'Lê Thu Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1264, now(), now(), 'Oxford University Press');
+values (1264, now(), now(), 'New Channel International Education Group');
 
 insert into authors (id, created_at, updated_at, name)
-values (1265, now(), now(), 'Tim Ward');
+values (1265, now(), now(), 'Kirk Kenny');
 
 insert into authors (id, created_at, updated_at, name)
-values (1266, now(), now(), 'MIS Editorial Team');
+values (1266, now(), now(), 'Hoàng Võ Bích Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1267, now(), now(), 'Sam Hutchinson');
+values (1267, now(), now(), 'Elizabeth Marsden');
 
 insert into authors (id, created_at, updated_at, name)
-values (1268, now(), now(), 'Emilie Martin');
+values (1268, now(), now(), 'Sarah Chapman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1269, now(), now(), 'Kim Hankinson');
+values (1269, now(), now(), 'Lê Đình Lực');
 
 insert into authors (id, created_at, updated_at, name)
-values (1270, now(), now(), 'Nguyễn Cảnh Luân');
+values (1270, now(), now(), 'Hà Đặng Như Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1271, now(), now(), 'Cambridge');
+values (1271, now(), now(), 'Mike''s');
 
 insert into authors (id, created_at, updated_at, name)
-values (1272, now(), now(), 'Dr Lin Lougheed');
+values (1272, now(), now(), 'Mary Albright');
 
 insert into authors (id, created_at, updated_at, name)
-values (1273, now(), now(), 'Collins');
+values (1273, now(), now(), 'Garrett Byrne');
 
 insert into authors (id, created_at, updated_at, name)
-values (1274, now(), now(), 'Fiona Aish');
+values (1274, now(), now(), 'Mary Chadwick');
 
 insert into authors (id, created_at, updated_at, name)
-values (1275, now(), now(), 'Jo Tomlinson');
+values (1275, now(), now(), 'Sam Robinson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1276, now(), now(), 'Els Van Geyte');
+values (1276, now(), now(), 'David Cho');
 
 insert into authors (id, created_at, updated_at, name)
-values (1277, now(), now(), 'Li Ya Bin');
+values (1277, now(), now(), 'Anne Taylor');
 
 insert into authors (id, created_at, updated_at, name)
-values (1278, now(), now(), 'Zhang Juan');
+values (1278, now(), now(), 'YBM Toeic R&D');
 
 insert into authors (id, created_at, updated_at, name)
-values (1279, now(), now(), 'Bùi Hồng Linh');
+values (1279, now(), now(), 'Sophie Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1280, now(), now(), 'Hackers');
+values (1280, now(), now(), 'Peggy Anderson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1281, now(), now(), 'Anneli Williams');
+values (1281, now(), now(), 'Mary Katherine Chadwick');
 
 insert into authors (id, created_at, updated_at, name)
-values (1282, now(), now(), 'Jane Short');
+values (1282, now(), now(), 'Nancie Mckinnon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1283, now(), now(), 'Lê Thu Hà');
+values (1283, now(), now(), 'Garrett');
 
 insert into authors (id, created_at, updated_at, name)
-values (1284, now(), now(), 'New Channel International Education Group');
+values (1284, now(), now(), 'Kim Soyeong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1285, now(), now(), 'Kirk Kenny');
+values (1285, now(), now(), 'Park Won');
 
 insert into authors (id, created_at, updated_at, name)
-values (1286, now(), now(), 'Hoàng Võ Bích Phương');
+values (1286, now(), now(), 'Lee Yun U');
 
 insert into authors (id, created_at, updated_at, name)
-values (1287, now(), now(), 'Elizabeth Marsden');
+values (1287, now(), now(), 'Lori');
 
 insert into authors (id, created_at, updated_at, name)
-values (1288, now(), now(), 'Sarah Chapman');
+values (1288, now(), now(), 'Compass');
 
 insert into authors (id, created_at, updated_at, name)
-values (1289, now(), now(), 'Lê Đình Lực');
+values (1289, now(), now(), 'Park Hye Young');
 
 insert into authors (id, created_at, updated_at, name)
-values (1290, now(), now(), 'Hà Đặng Như Quỳnh');
+values (1290, now(), now(), 'Jeon Ji Won');
 
 insert into authors (id, created_at, updated_at, name)
-values (1291, now(), now(), 'Mike''s');
+values (1291, now(), now(), 'Tuyết Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1292, now(), now(), 'Nguyễn Thị Xuân Quỳnh');
+values (1292, now(), now(), 'Minh Thư');
 
 insert into authors (id, created_at, updated_at, name)
-values (1293, now(), now(), 'Bino Chém Tiếng Anh');
+values (1293, now(), now(), 'Tommy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1294, now(), now(), 'Rachel Harding');
+values (1294, now(), now(), 'Yukihiro Tsukada');
 
 insert into authors (id, created_at, updated_at, name)
-values (1295, now(), now(), 'Patra Patphureerat');
+values (1295, now(), now(), 'Tổng Hợp TPHCM');
 
 insert into authors (id, created_at, updated_at, name)
-values (1296, now(), now(), 'Josephine Lin');
+values (1296, now(), now(), 'Nguyễn Thị Xuân Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1297, now(), now(), 'Phan Đại Dương');
+values (1297, now(), now(), 'Bino Chém Tiếng Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1298, now(), now(), 'Pitsamorn Apichattapong');
+values (1298, now(), now(), 'Patra Patphureerat');
 
 insert into authors (id, created_at, updated_at, name)
-values (1299, now(), now(), 'Trần Trinh Tường');
+values (1299, now(), now(), 'Josephine Lin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1300, now(), now(), 'The Wanderers');
+values (1300, now(), now(), 'Trần Trinh Tường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1301, now(), now(), 'Raymond Tsai');
+values (1301, now(), now(), 'Phan Đại Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1302, now(), now(), 'Nguyễn Thành Yến');
+values (1302, now(), now(), 'The Wanderers');
 
 insert into authors (id, created_at, updated_at, name)
-values (1303, now(), now(), 'Huy Khang');
+values (1303, now(), now(), 'Raymond Tsai');
 
 insert into authors (id, created_at, updated_at, name)
-values (1304, now(), now(), 'Đức Tín');
+values (1304, now(), now(), 'Paul Hines');
 
 insert into authors (id, created_at, updated_at, name)
-values (1305, now(), now(), 'Quỳnh Vũ');
+values (1305, now(), now(), 'Brian Foden');
 
 insert into authors (id, created_at, updated_at, name)
-values (1306, now(), now(), 'Kim Tea Yoon');
+values (1306, now(), now(), 'Matthew Hill');
 
 insert into authors (id, created_at, updated_at, name)
-values (1307, now(), now(), 'Nguyễn Trung Tánh');
+values (1307, now(), now(), 'Huy Khang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1308, now(), now(), 'Mary Albright');
+values (1308, now(), now(), 'Nguyễn Thành Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (1309, now(), now(), 'Garrett Byrne');
+values (1309, now(), now(), 'Đức Tín');
 
 insert into authors (id, created_at, updated_at, name)
-values (1310, now(), now(), 'Mary Chadwick');
+values (1310, now(), now(), 'Quỳnh Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1311, now(), now(), 'Sam Robinson');
+values (1311, now(), now(), 'Nguyễn Trung Tánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1312, now(), now(), 'Sophie Phan');
+values (1312, now(), now(), 'Kim Tea Yoon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1313, now(), now(), 'Peggy Anderson');
+values (1313, now(), now(), 'Hoàng Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1314, now(), now(), 'Mary Katherine Chadwick');
+values (1314, now(), now(), 'The Windy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1315, now(), now(), 'Nancie Mckinnon');
+values (1315, now(), now(), 'Kevin Kang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1316, now(), now(), 'Anne Taylor');
+values (1316, now(), now(), 'Hanna Byun');
 
 insert into authors (id, created_at, updated_at, name)
-values (1317, now(), now(), 'Garrett');
+values (1317, now(), now(), 'Will Capel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1318, now(), now(), 'Kim Soyeong');
+values (1318, now(), now(), 'Jamie Flockhart');
 
 insert into authors (id, created_at, updated_at, name)
-values (1319, now(), now(), 'Park Won');
+values (1319, now(), now(), 'Sue Robbins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1320, now(), now(), 'Lee Yun U');
+values (1320, now(), now(), 'Tuấn Kiệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1321, now(), now(), 'Lori');
+values (1321, now(), now(), 'Justin Grosslight');
 
 insert into authors (id, created_at, updated_at, name)
-values (1322, now(), now(), 'Compass');
+values (1322, now(), now(), 'Ruth Gairns');
 
 insert into authors (id, created_at, updated_at, name)
-values (1323, now(), now(), 'David Cho');
+values (1323, now(), now(), 'Stuart Redman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1324, now(), now(), 'YBM Toeic R&D');
+values (1324, now(), now(), 'Phương Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1325, now(), now(), 'YBM TOEIC R&D');
+values (1325, now(), now(), 'Lê Văn Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1326, now(), now(), 'Myeong Hee Seong');
+values (1326, now(), now(), 'Elke Huppertz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1327, now(), now(), 'Yoon Hee Shin');
+values (1327, now(), now(), 'Richie Hahn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1328, now(), now(), 'Lyle A Lewin');
+values (1328, now(), now(), 'Adam Worcester');
 
 insert into authors (id, created_at, updated_at, name)
-values (1329, now(), now(), 'John Boswell');
+values (1329, now(), now(), 'Lark Bowerman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1330, now(), now(), 'Henry Amen IV');
+values (1330, now(), now(), 'Eric Williamson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1331, now(), now(), 'Kim Hyeonju');
+values (1331, now(), now(), 'New Oriental Education');
 
 insert into authors (id, created_at, updated_at, name)
-values (1332, now(), now(), 'Lee Boyeong');
+values (1332, now(), now(), 'Technology Group');
 
 insert into authors (id, created_at, updated_at, name)
-values (1333, now(), now(), 'The Windy');
+values (1333, now(), now(), 'Duy Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1334, now(), now(), 'Will Capel');
+values (1334, now(), now(), 'Đức Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (1335, now(), now(), 'Jamie Flockhart');
+values (1335, now(), now(), 'E2K');
 
 insert into authors (id, created_at, updated_at, name)
-values (1336, now(), now(), 'Sue Robbins');
+values (1336, now(), now(), 'Jasmine C. Swaney');
 
 insert into authors (id, created_at, updated_at, name)
-values (1337, now(), now(), 'Kevin Kang');
+values (1337, now(), now(), 'Monika No. Kushwaha');
 
 insert into authors (id, created_at, updated_at, name)
-values (1338, now(), now(), 'Hanna Byun');
+values (1338, now(), now(), 'Christine F. Houck');
 
 insert into authors (id, created_at, updated_at, name)
-values (1339, now(), now(), 'Tuấn Kiệt');
+values (1339, now(), now(), 'Malcome Mann');
 
 insert into authors (id, created_at, updated_at, name)
-values (1340, now(), now(), 'Justin Grosslight');
+values (1340, now(), now(), 'Trần Thủy Tiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1341, now(), now(), 'Hoàng Thanh');
+values (1341, now(), now(), 'Lê Huy Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1342, now(), now(), 'Ruth Gairns');
+values (1342, now(), now(), 'Trương Hoàng Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1343, now(), now(), 'Stuart Redman');
+values (1343, now(), now(), 'La Trường Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1344, now(), now(), 'Lê Văn Hùng');
+values (1344, now(), now(), 'Huỳnh Thành Công');
 
 insert into authors (id, created_at, updated_at, name)
-values (1345, now(), now(), 'Nhân Văn');
+values (1345, now(), now(), 'Nguyễn Đại');
 
 insert into authors (id, created_at, updated_at, name)
-values (1346, now(), now(), 'Richie Hahn');
+values (1346, now(), now(), 'Lưu Ngọc Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1347, now(), now(), 'Đức Long');
+values (1347, now(), now(), 'Vũ Thị Lê Vy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1348, now(), now(), 'E2K');
+values (1348, now(), now(), 'Trần Thị Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1349, now(), now(), 'Jasmine C. Swaney');
+values (1349, now(), now(), 'Thiên Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1350, now(), now(), 'Monika No. Kushwaha');
+values (1350, now(), now(), 'Hoàng Ngân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1351, now(), now(), 'Christine F. Houck');
+values (1351, now(), now(), 'Linh Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1352, now(), now(), 'Darakwon TOEFL Junior Research Team');
+values (1352, now(), now(), 'Đỗ Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1353, now(), now(), 'Khiza Ueda');
+values (1353, now(), now(), 'Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1354, now(), now(), 'Chiaki Taoda');
+values (1354, now(), now(), 'Đức Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1355, now(), now(), 'Tobike Ueda');
+values (1355, now(), now(), 'Bảo Hân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1356, now(), now(), 'Michael A Putlack');
+values (1356, now(), now(), 'Huyền Windy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1357, now(), now(), 'Stephen Poirier');
+values (1357, now(), now(), 'EVRT Studios');
 
 insert into authors (id, created_at, updated_at, name)
-values (1358, now(), now(), 'YBM Sisa');
+values (1358, now(), now(), 'Kiều Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1359, now(), now(), 'LinguaForum');
+values (1359, now(), now(), 'Milokids');
 
 insert into authors (id, created_at, updated_at, name)
-values (1360, now(), now(), 'Eduplanet');
+values (1360, now(), now(), 'Anh Nhiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1361, now(), now(), 'Lê Huy Lâm');
+values (1361, now(), now(), 'Ths Tuyết Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1362, now(), now(), 'Blue Spring');
+values (1362, now(), now(), 'Louis Lemieux');
 
 insert into authors (id, created_at, updated_at, name)
-values (1363, now(), now(), 'Bruce Stirling');
+values (1363, now(), now(), 'Laura');
 
 insert into authors (id, created_at, updated_at, name)
-values (1364, now(), now(), 'Malcome Mann');
+values (1364, now(), now(), 'Ian Badger');
 
 insert into authors (id, created_at, updated_at, name)
-values (1365, now(), now(), 'Trần Thủy Tiên');
+values (1365, now(), now(), 'Khương Lệ Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (1366, now(), now(), 'Vũ Thị Lê Vy');
+values (1366, now(), now(), 'Vương Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1367, now(), now(), 'Trần Thị Thu Hương');
+values (1367, now(), now(), 'Vương Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1368, now(), now(), 'Trương Hoàng Duy');
+values (1368, now(), now(), 'Lưu Lệ Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (1369, now(), now(), 'La Trường Duy');
+values (1369, now(), now(), 'Khương Lệ bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (1370, now(), now(), 'Huỳnh Thành Công');
+values (1370, now(), now(), 'Vu Diểu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1371, now(), now(), 'Nguyễn Đại');
+values (1371, now(), now(), 'Lý Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1372, now(), now(), 'Lưu Ngọc Nam');
+values (1372, now(), now(), 'Tô Anh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1373, now(), now(), 'Thiên Phúc');
+values (1373, now(), now(), 'Kim Phi Phi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1374, now(), now(), 'Hoàng Ngân');
+values (1374, now(), now(), 'Vương Lôi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1375, now(), now(), 'Linh Chi');
+values (1375, now(), now(), 'Lỗ Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1376, now(), now(), 'Đỗ Nhung');
+values (1376, now(), now(), 'Lưu Sướng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1377, now(), now(), 'Virginia Evans');
+values (1377, now(), now(), 'Đổng Chính');
 
 insert into authors (id, created_at, updated_at, name)
-values (1378, now(), now(), 'Jenny Dooley');
+values (1378, now(), now(), 'Trương Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1379, now(), now(), 'Thu Hương');
+values (1379, now(), now(), 'Thái Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1380, now(), now(), 'Đức Nam');
+values (1380, now(), now(), 'Mã Tiễn Phi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1381, now(), now(), 'Bảo Hân');
+values (1381, now(), now(), 'Hoàng Hồng Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1382, now(), now(), 'EVRT Studios');
+values (1382, now(), now(), 'Sasaki Hitoko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1383, now(), now(), 'Kiều Giang');
+values (1383, now(), now(), 'Matsumoto Noriko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1384, now(), now(), 'Milokids (Biên soạn)');
+values (1384, now(), now(), 'Japan Foundation');
 
 insert into authors (id, created_at, updated_at, name)
-values (1385, now(), now(), 'Huyền Windy');
+values (1385, now(), now(), 'Miki Jun');
 
 insert into authors (id, created_at, updated_at, name)
-values (1386, now(), now(), 'Anh Nhiên');
+values (1386, now(), now(), 'Ooi Kensuke');
 
 insert into authors (id, created_at, updated_at, name)
-values (1387, now(), now(), 'Ths Tuyết Anh');
+values (1387, now(), now(), 'Trường Nhật ngữ Quốc tế KCP');
 
 insert into authors (id, created_at, updated_at, name)
-values (1388, now(), now(), 'Louis Lemieux');
+values (1388, now(), now(), 'Tri Thức Việt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1389, now(), now(), 'Laura');
+values (1389, now(), now(), 'SASAKI HITOKO & MATSUMOTO NORIKO');
 
 insert into authors (id, created_at, updated_at, name)
-values (1390, now(), now(), 'Ian Badger');
+values (1390, now(), now(), 'Arc Academy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1391, now(), now(), 'Khương Lệ Bình');
+values (1391, now(), now(), 'Jim Glesson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1392, now(), now(), 'Vương Phương');
+values (1392, now(), now(), 'The Japan Foundation');
 
 insert into authors (id, created_at, updated_at, name)
-values (1393, now(), now(), 'Vương Phong');
+values (1393, now(), now(), 'Makino Akiko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1394, now(), now(), 'Lưu Lệ Bình');
+values (1394, now(), now(), 'Sawada Sachiko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1395, now(), now(), 'Khương Lệ bình');
+values (1395, now(), now(), 'Shigekawa Akemi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1396, now(), now(), 'Vu Diểu');
+values (1396, now(), now(), 'Tanaka Yone');
 
 insert into authors (id, created_at, updated_at, name)
-values (1397, now(), now(), 'Lý Lâm');
+values (1397, now(), now(), 'Mizuno Mariko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1398, now(), now(), 'Tô Anh Hà');
+values (1398, now(), now(), 'Ban Biên Tập ASK');
 
 insert into authors (id, created_at, updated_at, name)
-values (1399, now(), now(), 'Kim Phi Phi');
+values (1399, now(), now(), 'Nakamura Noriko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1400, now(), now(), 'Vương Lôi');
+values (1400, now(), now(), 'Tashiro Hitomi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1401, now(), now(), 'Lỗ Giang');
+values (1401, now(), now(), 'Hajikano Are');
 
 insert into authors (id, created_at, updated_at, name)
-values (1402, now(), now(), 'Lưu Sướng');
+values (1402, now(), now(), 'Ooki Rie');
 
 insert into authors (id, created_at, updated_at, name)
-values (1403, now(), now(), 'Đổng Chính');
+values (1403, now(), now(), 'The Changmi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1404, now(), now(), 'Trương Quân');
+values (1404, now(), now(), 'Trung Tâm Hàn Ngữ Seoul');
 
 insert into authors (id, created_at, updated_at, name)
-values (1405, now(), now(), 'Thái Nam');
+values (1405, now(), now(), 'Ahn Seol Hee');
 
 insert into authors (id, created_at, updated_at, name)
-values (1406, now(), now(), 'Mã Tiễn Phi');
+values (1406, now(), now(), 'Min Jin Young');
 
 insert into authors (id, created_at, updated_at, name)
-values (1407, now(), now(), 'Hoàng Hồng Nhung');
+values (1407, now(), now(), 'Kim Min Sung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1408, now(), now(), 'Sasaki Hitoko');
+values (1408, now(), now(), 'Ahn Jean Myung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1409, now(), now(), 'Matsumoto Noriko');
+values (1409, now(), now(), 'Lee Kyung Ah');
 
 insert into authors (id, created_at, updated_at, name)
-values (1410, now(), now(), 'Arc Academy');
+values (1410, now(), now(), 'Han Hoo Young');
 
 insert into authors (id, created_at, updated_at, name)
-values (1411, now(), now(), 'Miki Jun');
+values (1411, now(), now(), 'Cho Hang Rok');
 
 insert into authors (id, created_at, updated_at, name)
-values (1412, now(), now(), 'Ooi Kensuke');
+values (1412, now(), now(), 'Lee Mi Hye');
 
 insert into authors (id, created_at, updated_at, name)
-values (1413, now(), now(), 'Trường Nhật ngữ Quốc tế KCP');
+values (1413, now(), now(), 'Lê Đăng Hoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1414, now(), now(), 'Japan Foundation');
+values (1414, now(), now(), 'Lê Thị Thu Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1415, now(), now(), 'Tri Thức Việt');
+values (1415, now(), now(), 'Đỗ Ngọc Luyến');
 
 insert into authors (id, created_at, updated_at, name)
-values (1416, now(), now(), 'SASAKI HITOKO & MATSUMOTO NORIKO');
+values (1416, now(), now(), 'Lương Nguyễn Thanh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1417, now(), now(), 'Honda Yukari');
+values (1417, now(), now(), 'Ahn Yongjun');
 
 insert into authors (id, created_at, updated_at, name)
-values (1418, now(), now(), 'Maebo Kanako');
+values (1418, now(), now(), 'Trường Hàn Ngữ Việt Hàn Kanata');
 
 insert into authors (id, created_at, updated_at, name)
-values (1419, now(), now(), 'Sugawara Yuko');
+values (1419, now(), now(), 'Lê Huy Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1420, now(), now(), 'Seki Yuko');
+values (1420, now(), now(), 'Lê Hữu Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1421, now(), now(), 'Thanh Xuân');
+values (1421, now(), now(), 'Kim Kwang Sik');
 
 insert into authors (id, created_at, updated_at, name)
-values (1422, now(), now(), 'Xuân Thu');
+values (1422, now(), now(), 'ThS Đỗ Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1423, now(), now(), 'Hoàng Anh');
+values (1423, now(), now(), 'MA Nguyễn Hoàng Thảo Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (1424, now(), now(), 'Nakamura Noriko');
+values (1424, now(), now(), 'Tập Thể Giáo Viên 123vietnamese');
 
 insert into authors (id, created_at, updated_at, name)
-values (1425, now(), now(), 'Tashiro Hitomi');
+values (1425, now(), now(), 'Chu Thị Hương Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1426, now(), now(), 'Hajikano Are');
+values (1426, now(), now(), 'Tập thể Giáo Viên 123VIETNAMESE');
 
 insert into authors (id, created_at, updated_at, name)
-values (1427, now(), now(), 'Ooki Rie');
+values (1427, now(), now(), 'Tập Thể Giáo viên 123Vietnamese');
 
 insert into authors (id, created_at, updated_at, name)
-values (1428, now(), now(), 'Aoki Yuko');
+values (1428, now(), now(), 'Tô Cẩm Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1429, now(), now(), 'Tanaka Hiroyuki');
+values (1429, now(), now(), 'Nguyễn Thế Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1430, now(), now(), 'Jim Glesson');
+values (1430, now(), now(), 'Phạm Thị Hương Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1431, now(), now(), 'The Sakura');
+values (1431, now(), now(), 'Trần Hương Thục');
 
 insert into authors (id, created_at, updated_at, name)
-values (1432, now(), now(), 'The Changmi');
+values (1432, now(), now(), 'Lê Thị Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (1433, now(), now(), 'Trung Tâm Hàn Ngữ Seoul');
+values (1433, now(), now(), 'Hữu Đạt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1434, now(), now(), 'Ahn Seol Hee');
+values (1434, now(), now(), 'Lê Thị Nhường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1435, now(), now(), 'Min Jin Young');
+values (1435, now(), now(), 'Dana Healy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1436, now(), now(), 'Kim Min Sung');
+values (1436, now(), now(), 'Thế Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1437, now(), now(), 'Ahn Jean Myung');
+values (1437, now(), now(), 'Phan Văn Giưỡng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1438, now(), now(), 'Lee Kyung Ah');
+values (1438, now(), now(), 'Vương Thị Hoa Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1439, now(), now(), 'Han Hoo Young');
+values (1439, now(), now(), 'Đoàn Thiện Thuật');
 
 insert into authors (id, created_at, updated_at, name)
-values (1440, now(), now(), 'Cho Hang Rok');
+values (1440, now(), now(), 'Tập Thể Giáo Viên 123Vietnamese');
 
 insert into authors (id, created_at, updated_at, name)
-values (1441, now(), now(), 'Lee Mi Hye');
+values (1441, now(), now(), 'Tuấn Kiệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1442, now(), now(), 'Lê Đăng Hoan');
+values (1442, now(), now(), 'TS Nguyễn Thị Kim Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1443, now(), now(), 'Lê Thị Thu Giang');
+values (1443, now(), now(), 'Trịnh Thế Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1444, now(), now(), 'Đỗ Ngọc Luyến');
+values (1444, now(), now(), 'Quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1445, now(), now(), 'Lương Nguyễn Thanh Trang');
+values (1445, now(), now(), 'Na Rin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1446, now(), now(), 'Ahn Yongjun');
+values (1446, now(), now(), 'Bảo Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1447, now(), now(), 'Trường Hàn Ngữ Việt Hàn Kanata');
+values (1447, now(), now(), 'Trần Minh Nhật');
 
 insert into authors (id, created_at, updated_at, name)
-values (1448, now(), now(), 'Lê Huy Khoa');
+values (1448, now(), now(), 'TS. Nguyễn Thị Thùy Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1449, now(), now(), 'Lê Hữu Nhân');
+values (1449, now(), now(), 'ThS Trần Bích Trăm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1450, now(), now(), 'Kim Kwang Sik');
+values (1450, now(), now(), 'Mai Khánh Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1451, now(), now(), 'ThS Đỗ Thanh');
+values (1451, now(), now(), 'Phó Đức Hồng Tâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1452, now(), now(), 'ThS Lê Huy Khoa');
+values (1452, now(), now(), 'Nguyễn Thị Lệ Quyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1453, now(), now(), 'Cho Hang-rok');
+values (1453, now(), now(), 'Nhâm Thị Vân Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1454, now(), now(), 'Lee Sook');
+values (1454, now(), now(), 'Nguyễn Bích Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1455, now(), now(), 'Chu Thị Hương Quỳnh');
+values (1455, now(), now(), 'Đỗ Thị Hồng Nhung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1456, now(), now(), 'Tập thể Giáo Viên 123VIETNAMESE');
+values (1456, now(), now(), 'ThS. Trần Bích Trăm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1457, now(), now(), 'Lê Thị Hiệp');
+values (1457, now(), now(), 'Nguyễn Hoàng Vĩnh Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1458, now(), now(), 'Tập Thể Giáo viên 123Vietnamese');
+values (1458, now(), now(), 'Nguyễn Lưu Bảo Đoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1459, now(), now(), 'Tô Cẩm Duy');
+values (1459, now(), now(), 'PONS');
 
 insert into authors (id, created_at, updated_at, name)
-values (1460, now(), now(), 'Phan Văn Giưỡng');
+values (1460, now(), now(), 'Dương Đình Bá');
 
 insert into authors (id, created_at, updated_at, name)
-values (1461, now(), now(), 'Vương Thị Hoa Hồng');
+values (1461, now(), now(), 'Thạc sĩ Nguyễn Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1462, now(), now(), 'Đoàn Thiện Thuật');
+values (1462, now(), now(), 'Trương Văn Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1463, now(), now(), 'Hữu Đạt');
+values (1463, now(), now(), 'Lê Minh Cẩn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1464, now(), now(), 'Lê Thị Nhường');
+values (1464, now(), now(), 'Đình Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1465, now(), now(), 'Nguyễn Thế Dương');
+values (1465, now(), now(), 'ThS Nguyễn Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1466, now(), now(), 'Phạm Thị Hương Quỳnh');
+values (1466, now(), now(), 'Phan Kim Khánh Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1467, now(), now(), 'Trần Hương Thục');
+values (1467, now(), now(), 'Nguyễn Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1468, now(), now(), 'Dana Healy');
+values (1468, now(), now(), 'Laurent Hermeline');
 
 insert into authors (id, created_at, updated_at, name)
-values (1469, now(), now(), 'Thế Anh');
+values (1469, now(), now(), 'Ánh Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (1470, now(), now(), 'Tập Thể Giáo Viên 123Vietnamese');
+values (1470, now(), now(), 'Nguyễn Thức Thành Tín');
 
 insert into authors (id, created_at, updated_at, name)
-values (1471, now(), now(), 'TS Nguyễn Thị Kim Dung');
+values (1471, now(), now(), 'Vũ Triết Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1472, now(), now(), 'Tuấn Kiệt');
+values (1472, now(), now(), 'Viên Thế Khánh Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1473, now(), now(), 'Nguyễn Thị Lệ Quyên');
+values (1473, now(), now(), 'Phạm Song Hoàng Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1474, now(), now(), 'Nhâm Thị Vân Anh');
+values (1474, now(), now(), 'Thierry Gallier');
 
 insert into authors (id, created_at, updated_at, name)
-values (1475, now(), now(), 'Nguyễn Bích Ngọc');
+values (1475, now(), now(), 'E1Velyne Siréjols');
 
 insert into authors (id, created_at, updated_at, name)
-values (1476, now(), now(), 'Đỗ Thị Hồng Nhung');
+values (1476, now(), now(), 'Dominique Renaud');
 
 insert into authors (id, created_at, updated_at, name)
-values (1477, now(), now(), 'Bùi Hiền');
+values (1477, now(), now(), 'Odile Grand');
 
 insert into authors (id, created_at, updated_at, name)
-values (1478, now(), now(), 'Trịnh Thế Thắng');
+values (1478, now(), now(), 'Clément');
 
 insert into authors (id, created_at, updated_at, name)
-values (1479, now(), now(), 'Quang Vinh');
+values (1479, now(), now(), 'Odile Grand Clément');
 
 insert into authors (id, created_at, updated_at, name)
-values (1480, now(), now(), 'Na Rin');
+values (1480, now(), now(), 'Nguyễn Đức Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (1481, now(), now(), 'Bảo Trang');
+values (1481, now(), now(), 'Lê Ngọc Báu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1482, now(), now(), 'Trần Minh Nhật');
+values (1482, now(), now(), 'Đặng Ngọc Như Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1483, now(), now(), 'TS. Nguyễn Thị Thùy Châu');
+values (1483, now(), now(), 'Phạm Thúy Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1484, now(), now(), 'ThS Trần Bích Trăm');
+values (1484, now(), now(), 'StarKid');
 
 insert into authors (id, created_at, updated_at, name)
-values (1485, now(), now(), 'Mai Khánh Huyền');
+values (1485, now(), now(), 'George S Clason');
 
 insert into authors (id, created_at, updated_at, name)
-values (1486, now(), now(), 'Phó Đức Hồng Tâm');
+values (1486, now(), now(), 'Chung Ju Yung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1487, now(), now(), 'Nguyễn Hoàng Vĩnh Lộc');
+values (1487, now(), now(), 'Hirata Haruka');
 
 insert into authors (id, created_at, updated_at, name)
-values (1488, now(), now(), 'Nguyễn Lưu Bảo Đoan');
+values (1488, now(), now(), 'John Perkins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1489, now(), now(), 'PONS');
+values (1489, now(), now(), 'Jim Collins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1490, now(), now(), 'Dương Đình Bá');
+values (1490, now(), now(), 'Dan Nicholson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1491, now(), now(), 'Thạc sĩ Nguyễn Văn Tuấn');
+values (1491, now(), now(), 'Napoleon Hill');
 
 insert into authors (id, created_at, updated_at, name)
-values (1492, now(), now(), 'Trương Văn Hùng');
+values (1492, now(), now(), 'Howard Schultz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1493, now(), now(), 'Lê Minh Cẩn');
+values (1493, now(), now(), 'Dori Jones Yang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1494, now(), now(), 'Elke Huppertz');
+values (1494, now(), now(), 'Avinash K. Dixit');
 
 insert into authors (id, created_at, updated_at, name)
-values (1495, now(), now(), 'Đình Hùng');
+values (1495, now(), now(), 'Barry J. Nalebuff');
 
 insert into authors (id, created_at, updated_at, name)
-values (1496, now(), now(), 'Nguyễn Văn Tuấn Nguyễn Văn Tuấn (hiệu đính)');
+values (1496, now(), now(), 'Phil Knight');
 
 insert into authors (id, created_at, updated_at, name)
-values (1497, now(), now(), 'ThS Nguyễn Văn Tuấn');
+values (1497, now(), now(), 'Robert Maurer');
 
 insert into authors (id, created_at, updated_at, name)
-values (1498, now(), now(), 'Phan Kim Khánh Duy');
+values (1498, now(), now(), 'Peter Lynch');
 
 insert into authors (id, created_at, updated_at, name)
-values (1499, now(), now(), 'Ánh Nga');
+values (1499, now(), now(), 'John Rothchild');
 
 insert into authors (id, created_at, updated_at, name)
-values (1500, now(), now(), 'Nguyễn Thức Thành Tín - Vũ Triết Minh');
+values (1500, now(), now(), 'Greg Dinkin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1501, now(), now(), 'Nguyễn Thức Thành Tín');
+values (1501, now(), now(), 'Patrick Bet-David');
 
 insert into authors (id, created_at, updated_at, name)
-values (1502, now(), now(), 'Viên Thế Khánh Toàn');
+values (1502, now(), now(), 'JL Collins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1503, now(), now(), 'Vũ Triết Minh');
+values (1503, now(), now(), 'Malcolm Gladwel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1504, now(), now(), 'Phạm Song Hoàng Phúc');
+values (1504, now(), now(), 'Robert G Hagstrom');
 
 insert into authors (id, created_at, updated_at, name)
-values (1505, now(), now(), 'Laurent Hermeline');
+values (1505, now(), now(), 'Mustafa Suleyman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1506, now(), now(), 'Thierry Gallier');
+values (1506, now(), now(), 'Dung Lợi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1507, now(), now(), 'E1Velyne Siréjols');
+values (1507, now(), now(), 'Adam Grant');
 
 insert into authors (id, created_at, updated_at, name)
-values (1508, now(), now(), 'Dominique Renaud');
+values (1508, now(), now(), 'George Samuel Clason');
 
 insert into authors (id, created_at, updated_at, name)
-values (1509, now(), now(), 'Odile Grand');
+values (1509, now(), now(), 'Rich DeVos');
 
 insert into authors (id, created_at, updated_at, name)
-values (1510, now(), now(), 'Clément');
+values (1510, now(), now(), 'Nikkei Design');
 
 insert into authors (id, created_at, updated_at, name)
-values (1511, now(), now(), 'Odile Grand Clément');
+values (1511, now(), now(), 'Hoàng Nam Tiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (1512, now(), now(), 'Nguyễn Đức Thành');
+values (1512, now(), now(), 'T Harv Eker');
 
 insert into authors (id, created_at, updated_at, name)
-values (1513, now(), now(), 'Lê Ngọc Báu');
+values (1513, now(), now(), 'Jason Barron');
 
 insert into authors (id, created_at, updated_at, name)
-values (1514, now(), now(), 'Đặng Ngọc Như Quỳnh');
+values (1514, now(), now(), 'MBA');
 
 insert into authors (id, created_at, updated_at, name)
-values (1515, now(), now(), 'StarKid');
+values (1515, now(), now(), 'Chu Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1516, now(), now(), 'Chung Ju Yung');
+values (1516, now(), now(), 'Robin Sharma');
 
 insert into authors (id, created_at, updated_at, name)
-values (1517, now(), now(), 'Hirata Haruka');
+values (1517, now(), now(), 'Michael Watkins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1518, now(), now(), 'George S Clason');
+values (1518, now(), now(), 'John Doerr');
 
 insert into authors (id, created_at, updated_at, name)
-values (1519, now(), now(), 'John Perkins');
+values (1519, now(), now(), 'Donald J Trump');
 
 insert into authors (id, created_at, updated_at, name)
-values (1520, now(), now(), 'Jim Collins');
+values (1520, now(), now(), 'Tony Schartz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1521, now(), now(), 'Napoleon Hill');
+values (1521, now(), now(), 'Geshe Michael Roach');
 
 insert into authors (id, created_at, updated_at, name)
-values (1522, now(), now(), 'Howard Schultz');
+values (1522, now(), now(), 'Lama Christie McNally');
 
 insert into authors (id, created_at, updated_at, name)
-values (1523, now(), now(), 'Dori Jones Yang');
+values (1523, now(), now(), 'Michael Gordon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1524, now(), now(), 'Dan Nicholson');
+values (1524, now(), now(), 'Chris McChesney');
 
 insert into authors (id, created_at, updated_at, name)
-values (1525, now(), now(), 'Phil Knight');
+values (1525, now(), now(), 'Sean Covey');
 
 insert into authors (id, created_at, updated_at, name)
-values (1526, now(), now(), 'JL Collins');
+values (1526, now(), now(), 'Jim Huling');
 
 insert into authors (id, created_at, updated_at, name)
-values (1527, now(), now(), 'Robert Maurer');
+values (1527, now(), now(), 'Phan Văn Trường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1528, now(), now(), 'Peter Lynch');
+values (1528, now(), now(), 'Jacob Morgan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1529, now(), now(), 'John Rothchild');
+values (1529, now(), now(), 'W Chan Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (1530, now(), now(), 'Malcolm Gladwel');
+values (1530, now(), now(), 'Ken Blanchard');
 
 insert into authors (id, created_at, updated_at, name)
-values (1531, now(), now(), 'Greg Dinkin');
+values (1531, now(), now(), 'Ph D Spencer Johnson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1532, now(), now(), 'Patrick Bet-David');
+values (1532, now(), now(), 'M D');
 
 insert into authors (id, created_at, updated_at, name)
-values (1533, now(), now(), 'Avinash K. Dixit');
+values (1533, now(), now(), 'David Clark');
 
 insert into authors (id, created_at, updated_at, name)
-values (1534, now(), now(), 'Barry J. Nalebuff');
+values (1534, now(), now(), 'Mary Buffett');
 
 insert into authors (id, created_at, updated_at, name)
-values (1535, now(), now(), 'Dung Lợi');
+values (1535, now(), now(), 'Bill George');
 
 insert into authors (id, created_at, updated_at, name)
-values (1536, now(), now(), 'Mustafa Suleyman');
+values (1536, now(), now(), 'Bernard Marr');
 
 insert into authors (id, created_at, updated_at, name)
-values (1537, now(), now(), 'Adam Grant');
+values (1537, now(), now(), 'Rasmus Hougaard');
 
 insert into authors (id, created_at, updated_at, name)
-values (1538, now(), now(), 'George Samuel Clason');
+values (1538, now(), now(), 'Jacqueline Carter');
 
 insert into authors (id, created_at, updated_at, name)
-values (1539, now(), now(), 'Rich DeVos');
+values (1539, now(), now(), 'Edgar H Schein');
 
 insert into authors (id, created_at, updated_at, name)
-values (1540, now(), now(), 'Robert G Hagstrom');
+values (1540, now(), now(), 'Peter Schein');
 
 insert into authors (id, created_at, updated_at, name)
-values (1541, now(), now(), 'Hoàng Anh Minh');
+values (1541, now(), now(), 'Grant Cardone');
 
 insert into authors (id, created_at, updated_at, name)
-values (1542, now(), now(), 'Thomas C Corley');
+values (1542, now(), now(), 'Paul R. Murphy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1543, now(), now(), 'Hoàng Nam Tiến');
+values (1543, now(), now(), 'Jr.');
 
 insert into authors (id, created_at, updated_at, name)
-values (1544, now(), now(), 'T Harv Eker');
+values (1544, now(), now(), 'A. Michael Knemeyer');
 
 insert into authors (id, created_at, updated_at, name)
-values (1545, now(), now(), 'Jason Barron');
+values (1545, now(), now(), 'Og Mandino');
 
 insert into authors (id, created_at, updated_at, name)
-values (1546, now(), now(), 'MBA');
+values (1546, now(), now(), 'Al Ries');
 
 insert into authors (id, created_at, updated_at, name)
-values (1547, now(), now(), 'Chu Vân');
+values (1547, now(), now(), 'Jack Trout');
 
 insert into authors (id, created_at, updated_at, name)
-values (1548, now(), now(), 'Robin Sharma');
+values (1548, now(), now(), 'Philip Kotler');
 
 insert into authors (id, created_at, updated_at, name)
-values (1549, now(), now(), 'Donald J Trump');
+values (1549, now(), now(), 'Hermawan Kartajaya');
 
 insert into authors (id, created_at, updated_at, name)
-values (1550, now(), now(), 'Tony Schartz');
+values (1550, now(), now(), 'Iwan Setiawan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1551, now(), now(), 'Michael Watkins');
+values (1551, now(), now(), 'Russell Brunson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1552, now(), now(), 'John Doerr');
+values (1552, now(), now(), 'Jack Tourt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1553, now(), now(), 'Geshe Michael Roach');
+values (1553, now(), now(), 'Khôi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1554, now(), now(), 'Lama Christie McNally');
+values (1554, now(), now(), 'Vương Kiến Tứ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1555, now(), now(), 'Michael Gordon');
+values (1555, now(), now(), 'Phil Barden');
 
 insert into authors (id, created_at, updated_at, name)
-values (1556, now(), now(), 'Chris McChesney');
+values (1556, now(), now(), 'Huỳnh Vĩnh Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1557, now(), now(), 'Sean Covey');
+values (1557, now(), now(), 'Seth Godin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1558, now(), now(), 'Jim Huling');
+values (1558, now(), now(), 'Victor O Schwab');
 
 insert into authors (id, created_at, updated_at, name)
-values (1559, now(), now(), 'Jacob Morgan');
+values (1559, now(), now(), 'Trịnh Minh Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1560, now(), now(), 'W Chan Kim');
+values (1560, now(), now(), 'Neil Rackham');
 
 insert into authors (id, created_at, updated_at, name)
-values (1561, now(), now(), 'Ken Blanchard');
+values (1561, now(), now(), 'Ron Kaufman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1562, now(), now(), 'Ph D Spencer Johnson');
+values (1562, now(), now(), 'Brian Tracy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1563, now(), now(), 'M D');
+values (1563, now(), now(), 'Joseph Sugarman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1564, now(), now(), 'Phan Văn Trường');
+values (1564, now(), now(), 'Linh Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1565, now(), now(), 'Bernard Marr');
+values (1565, now(), now(), 'Andy Sernovitz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1566, now(), now(), 'Edgar H Schein');
+values (1566, now(), now(), 'Ecoblader');
 
 insert into authors (id, created_at, updated_at, name)
-values (1567, now(), now(), 'Peter Schein');
+values (1567, now(), now(), 'Nguyễn Tiến Quốc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1568, now(), now(), 'Bill George');
+values (1568, now(), now(), 'Luân Đức Đại');
 
 insert into authors (id, created_at, updated_at, name)
-values (1569, now(), now(), 'Julie Zhuo');
+values (1569, now(), now(), 'Robert T Kiyosaki');
 
 insert into authors (id, created_at, updated_at, name)
-values (1570, now(), now(), 'Rasmus Hougaard');
+values (1570, now(), now(), 'Peter Thiel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1571, now(), now(), 'Jacqueline Carter');
+values (1571, now(), now(), 'Blake Masters');
 
 insert into authors (id, created_at, updated_at, name)
-values (1572, now(), now(), 'Grant Cardone');
+values (1572, now(), now(), 'Sharon L Lechter');
 
 insert into authors (id, created_at, updated_at, name)
-values (1573, now(), now(), 'Paul R. Murphy');
+values (1573, now(), now(), 'Burton G Malkiel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1574, now(), now(), 'Jr.');
+values (1574, now(), now(), 'Duncan Bannatyne');
 
 insert into authors (id, created_at, updated_at, name)
-values (1575, now(), now(), 'A. Michael Knemeyer');
+values (1575, now(), now(), 'Eric Ries');
 
 insert into authors (id, created_at, updated_at, name)
-values (1576, now(), now(), 'Og Mandino');
+values (1576, now(), now(), 'Sean Wise');
 
 insert into authors (id, created_at, updated_at, name)
-values (1577, now(), now(), 'Al Ries');
+values (1577, now(), now(), 'Brad Feld');
 
 insert into authors (id, created_at, updated_at, name)
-values (1578, now(), now(), 'Jack Trout');
+values (1578, now(), now(), 'Michelle Hung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1579, now(), now(), 'Philip Kotler');
+values (1579, now(), now(), 'Lê Chí Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1580, now(), now(), 'Hermawan Kartajaya');
+values (1580, now(), now(), 'Patrick J McGinnis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1581, now(), now(), 'Iwan Setiawan');
+values (1581, now(), now(), 'Bill Aulet');
 
 insert into authors (id, created_at, updated_at, name)
-values (1582, now(), now(), 'Russell Brunson');
+values (1582, now(), now(), 'Ash Ali');
 
 insert into authors (id, created_at, updated_at, name)
-values (1583, now(), now(), 'Jack Tourt');
+values (1583, now(), now(), 'Hasan Kubba');
 
 insert into authors (id, created_at, updated_at, name)
-values (1584, now(), now(), 'Khôi');
+values (1584, now(), now(), 'Angela Huyue Zhang 张湖月');
 
 insert into authors (id, created_at, updated_at, name)
-values (1585, now(), now(), 'Vương Kiến Tứ');
+values (1585, now(), now(), 'John Fleming');
 
 insert into authors (id, created_at, updated_at, name)
-values (1586, now(), now(), 'Linh Phan');
+values (1586, now(), now(), 'Kim Kiyosaki');
 
 insert into authors (id, created_at, updated_at, name)
-values (1587, now(), now(), 'Phil Barden');
+values (1587, now(), now(), 'Peter D Schiff');
 
 insert into authors (id, created_at, updated_at, name)
-values (1588, now(), now(), 'Huỳnh Vĩnh Sơn');
+values (1588, now(), now(), 'Andrew J Schiff');
 
 insert into authors (id, created_at, updated_at, name)
-values (1589, now(), now(), 'Seth Godin');
+values (1589, now(), now(), 'Daron Acemoglu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1590, now(), now(), 'Trịnh Minh Thảo');
+values (1590, now(), now(), 'James A. Robinson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1591, now(), now(), 'Victor O Schwab');
+values (1591, now(), now(), 'Charles Wheelan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1592, now(), now(), 'Neil Rackham');
+values (1592, now(), now(), 'Song Hong Bing');
 
 insert into authors (id, created_at, updated_at, name)
-values (1593, now(), now(), 'Ron Kaufman');
+values (1593, now(), now(), 'Chris Miller');
 
 insert into authors (id, created_at, updated_at, name)
-values (1594, now(), now(), 'Brian Tracy');
+values (1594, now(), now(), 'Abhijit V. Banerjee');
 
 insert into authors (id, created_at, updated_at, name)
-values (1595, now(), now(), 'Joseph Sugarman');
+values (1595, now(), now(), 'Esther Duflo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1596, now(), now(), 'Zig Ziglar');
+values (1596, now(), now(), 'James Rickards');
 
 insert into authors (id, created_at, updated_at, name)
-values (1597, now(), now(), 'Không Thủ');
+values (1597, now(), now(), 'Nassim Nicholas Taleb');
 
 insert into authors (id, created_at, updated_at, name)
-values (1598, now(), now(), 'Andy Sernovitz');
+values (1598, now(), now(), 'David E Sanger');
 
 insert into authors (id, created_at, updated_at, name)
-values (1599, now(), now(), 'Nguyễn Tiến Quốc');
+values (1599, now(), now(), 'Ha Joon Chang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1600, now(), now(), 'Luân Đức Đại');
+values (1600, now(), now(), 'Mark Thornton');
 
 insert into authors (id, created_at, updated_at, name)
-values (1601, now(), now(), 'Robert T Kiyosaki');
+values (1601, now(), now(), 'Linda Yueh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1602, now(), now(), 'Sharon L Lechter');
+values (1602, now(), now(), 'Ajay Agrawal');
 
 insert into authors (id, created_at, updated_at, name)
-values (1603, now(), now(), 'Peter Thiel');
+values (1603, now(), now(), 'Joshua Gans');
 
 insert into authors (id, created_at, updated_at, name)
-values (1604, now(), now(), 'Blake Masters');
+values (1604, now(), now(), 'Avi Goldfarb');
 
 insert into authors (id, created_at, updated_at, name)
-values (1605, now(), now(), 'Burton G Malkiel');
+values (1605, now(), now(), 'Melanie Swan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1606, now(), now(), 'Duncan Bannatyne');
+values (1606, now(), now(), 'Thomas Armstrong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1607, now(), now(), 'Eric Ries');
+values (1607, now(), now(), 'Paul Krugman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1608, now(), now(), 'Lê Chí Linh');
+values (1608, now(), now(), 'Robin Wells');
 
 insert into authors (id, created_at, updated_at, name)
-values (1609, now(), now(), 'Michelle Hung');
+values (1609, now(), now(), 'David L. Rogers');
 
 insert into authors (id, created_at, updated_at, name)
-values (1610, now(), now(), 'Patrick J McGinnis');
+values (1610, now(), now(), 'Wiebke Antonia Rabe');
 
 insert into authors (id, created_at, updated_at, name)
-values (1611, now(), now(), 'Bill Aulet');
+values (1611, now(), now(), 'Mike Michalowicz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1612, now(), now(), 'Ash Ali');
+values (1612, now(), now(), 'Yuen Yuen Ang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1613, now(), now(), 'Hasan Kubba');
+values (1613, now(), now(), 'Philip A. Fisher');
 
 insert into authors (id, created_at, updated_at, name)
-values (1614, now(), now(), 'Angela Huyue Zhang 张湖月');
+values (1614, now(), now(), 'Cris Doloc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1615, now(), now(), 'John Fleming');
+values (1615, now(), now(), 'Jonathan Spall');
 
 insert into authors (id, created_at, updated_at, name)
-values (1616, now(), now(), 'Kim Kiyosaki');
+values (1616, now(), now(), 'Lưu Đường Hâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1617, now(), now(), 'Peter D Schiff');
+values (1617, now(), now(), 'Cú Thông Thái');
 
 insert into authors (id, created_at, updated_at, name)
-values (1618, now(), now(), 'Andrew J Schiff');
+values (1618, now(), now(), 'Yuichiro Ichikawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1619, now(), now(), 'Daron Acemoglu');
+values (1619, now(), now(), 'William J O’Neil');
 
 insert into authors (id, created_at, updated_at, name)
-values (1620, now(), now(), 'James A. Robinson');
+values (1620, now(), now(), 'Hiroki Takeuchi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1621, now(), now(), 'Chris Miller');
+values (1621, now(), now(), 'Nguyễn Chí Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1622, now(), now(), 'Charles Wheelan');
+values (1622, now(), now(), 'Châu Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1623, now(), now(), 'Song Hong Bing');
+values (1623, now(), now(), 'Lê Quốc Kiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1624, now(), now(), 'Abhijit V. Banerjee');
+values (1624, now(), now(), 'Anthony Robbins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1625, now(), now(), 'Esther Duflo');
+values (1625, now(), now(), 'Tony Robbins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1626, now(), now(), 'James Rickards');
+values (1626, now(), now(), 'Christopher Zook');
 
 insert into authors (id, created_at, updated_at, name)
-values (1627, now(), now(), 'Nassim Nicholas Taleb');
+values (1627, now(), now(), 'Thảo Tạ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1628, now(), now(), 'Hamada Kazuyuki');
+values (1628, now(), now(), 'Howard Marks');
 
 insert into authors (id, created_at, updated_at, name)
-values (1629, now(), now(), 'Ben S. Bernanke');
+values (1629, now(), now(), 'George Charles Selden');
 
 insert into authors (id, created_at, updated_at, name)
-values (1630, now(), now(), 'Ha Joon Chang');
+values (1630, now(), now(), 'Charles B Carlson CFA');
 
 insert into authors (id, created_at, updated_at, name)
-values (1631, now(), now(), 'Mark Thornton');
+values (1631, now(), now(), 'PGS TS Đoàn Dương Hải chủ biên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1632, now(), now(), 'David E Sanger');
+values (1632, now(), now(), 'Andrew Craig');
 
 insert into authors (id, created_at, updated_at, name)
-values (1633, now(), now(), 'John Maynard Keynes');
+values (1633, now(), now(), 'Billy Epperhart');
 
 insert into authors (id, created_at, updated_at, name)
-values (1634, now(), now(), 'Melanie Swan');
+values (1634, now(), now(), 'Jason Zweig');
 
 insert into authors (id, created_at, updated_at, name)
-values (1635, now(), now(), 'Ajay Agrawal');
+values (1635, now(), now(), 'Jack D Schwager');
 
 insert into authors (id, created_at, updated_at, name)
-values (1636, now(), now(), 'Joshua Gans');
+values (1636, now(), now(), 'Lâm Minh Chánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1637, now(), now(), 'Avi Goldfarb');
+values (1637, now(), now(), 'David Anderson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1638, now(), now(), 'Linda Yueh');
+values (1638, now(), now(), 'Dennis Sweney');
 
 insert into authors (id, created_at, updated_at, name)
-values (1639, now(), now(), 'Paul Krugman');
+values (1639, now(), now(), 'Thomas Williams');
 
 insert into authors (id, created_at, updated_at, name)
-values (1640, now(), now(), 'Robin Wells');
+values (1640, now(), now(), 'John J Murphy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1641, now(), now(), 'Thomas Armstrong');
+values (1641, now(), now(), 'Dan Strutzel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1642, now(), now(), 'David L. Rogers');
+values (1642, now(), now(), 'The Woke Salaryman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1643, now(), now(), 'Philip A. Fisher');
+values (1643, now(), now(), 'Ana Weber');
 
 insert into authors (id, created_at, updated_at, name)
-values (1644, now(), now(), 'Cris Doloc');
+values (1644, now(), now(), 'PGS TS Nguyễn Phú Giang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1645, now(), now(), 'Jonathan Spall');
+values (1645, now(), now(), 'Dawn Fotopulos');
 
 insert into authors (id, created_at, updated_at, name)
-values (1646, now(), now(), 'Lưu Đường Hâm');
+values (1646, now(), now(), 'PGS TS Nguyễn Ngọc Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1647, now(), now(), 'Yuichiro Ichikawa');
+values (1647, now(), now(), 'Ray & Jessica Higdon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1648, now(), now(), 'William J O’Neil');
+values (1648, now(), now(), 'Marc Beckman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1649, now(), now(), 'Hiroki Takeuchi');
+values (1649, now(), now(), 'Lisa Johnson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1650, now(), now(), 'Nguyễn Chí Thanh');
+values (1650, now(), now(), 'Sandeep Deobhakta');
 
 insert into authors (id, created_at, updated_at, name)
-values (1651, now(), now(), 'Cú Thông Thái');
+values (1651, now(), now(), 'Ngô Hoàng Liên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1652, now(), now(), 'Châu Phong');
+values (1652, now(), now(), 'Toby Mathis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1653, now(), now(), 'Lê Quốc Kiên');
+values (1653, now(), now(), 'Don Tapscott');
 
 insert into authors (id, created_at, updated_at, name)
-values (1654, now(), now(), 'Anthony Robbins');
+values (1654, now(), now(), 'Alex Tapscott');
 
 insert into authors (id, created_at, updated_at, name)
-values (1655, now(), now(), 'Tony Robbins');
+values (1655, now(), now(), 'Brian Kelly');
 
 insert into authors (id, created_at, updated_at, name)
-values (1656, now(), now(), 'Christopher Zook');
+values (1656, now(), now(), 'Phạm Nghị Nhiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1657, now(), now(), 'Thảo Tạ');
+values (1657, now(), now(), 'Nguyễn Văn Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1658, now(), now(), 'Howard Marks');
+values (1658, now(), now(), 'Si Hussain');
 
 insert into authors (id, created_at, updated_at, name)
-values (1659, now(), now(), 'George Charles Selden');
+values (1659, now(), now(), 'Stuart Warner');
 
 insert into authors (id, created_at, updated_at, name)
-values (1660, now(), now(), 'Charles B Carlson CFA');
+values (1660, now(), now(), 'Frederic S Mishkin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1661, now(), now(), 'PGS TS Đoàn Dương Hải chủ biên');
+values (1661, now(), now(), 'L. Randall Wray');
 
 insert into authors (id, created_at, updated_at, name)
-values (1662, now(), now(), 'Mark Gates');
+values (1662, now(), now(), 'Heske van Doornen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1663, now(), now(), 'Andrew Craig');
+values (1663, now(), now(), 'Michelle R. Weise');
 
 insert into authors (id, created_at, updated_at, name)
-values (1664, now(), now(), 'Billy Epperhart');
+values (1664, now(), now(), 'Thiệu Vĩ Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1665, now(), now(), 'Jason Zweig');
+values (1665, now(), now(), 'Nakashima Tetsuo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1666, now(), now(), 'Lâm Minh Chánh');
+values (1666, now(), now(), 'Inamori Kazuo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1667, now(), now(), 'David Clark');
+values (1667, now(), now(), 'Kaoru Terashita');
 
 insert into authors (id, created_at, updated_at, name)
-values (1668, now(), now(), 'Mary Buffett');
+values (1668, now(), now(), 'Thái Hà Tuyển Dụng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1669, now(), now(), 'David Anderson');
+values (1669, now(), now(), 'John Masud Parvez');
 
 insert into authors (id, created_at, updated_at, name)
-values (1670, now(), now(), 'Dennis Sweney');
+values (1670, now(), now(), 'Nguyễn Thị Huyền Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1671, now(), now(), 'Thomas Williams');
+values (1671, now(), now(), 'Đặng Huỳnh Mai Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1672, now(), now(), 'Dan Strutzel');
+values (1672, now(), now(), 'Wendy Burbridge');
 
 insert into authors (id, created_at, updated_at, name)
-values (1673, now(), now(), 'Ana Weber');
+values (1673, now(), now(), 'Iliyana Stareva');
 
 insert into authors (id, created_at, updated_at, name)
-values (1674, now(), now(), 'Dawn Fotopulos');
+values (1674, now(), now(), 'Phó Thủ Vĩnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1675, now(), now(), 'The Woke Salaryman');
+values (1675, now(), now(), 'Robert');
 
 insert into authors (id, created_at, updated_at, name)
-values (1676, now(), now(), 'PGS TS Nguyễn Phú Giang');
+values (1676, now(), now(), 'Barbara Mitchell');
 
 insert into authors (id, created_at, updated_at, name)
-values (1677, now(), now(), 'Phạm Nghị Nhiên');
+values (1677, now(), now(), 'Cornelia Gamlem');
 
 insert into authors (id, created_at, updated_at, name)
-values (1678, now(), now(), 'Si Hussain');
+values (1678, now(), now(), 'Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1679, now(), now(), 'Stuart Warner');
+values (1679, now(), now(), 'Nguyễn Ngọc Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1680, now(), now(), 'Nguyễn Văn Ngọc');
+values (1680, now(), now(), 'VNHR');
 
 insert into authors (id, created_at, updated_at, name)
-values (1681, now(), now(), 'Ray & Jessica Higdon');
+values (1681, now(), now(), 'Hồng Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1682, now(), now(), 'PGS TS Nguyễn Ngọc Quang');
+values (1682, now(), now(), 'Kathryn Bishop');
 
 insert into authors (id, created_at, updated_at, name)
-values (1683, now(), now(), 'Marc Beckman');
+values (1683, now(), now(), 'Roxanne Calder');
 
 insert into authors (id, created_at, updated_at, name)
-values (1684, now(), now(), 'Lisa Johnson');
+values (1684, now(), now(), 'Trương Đan Như');
 
 insert into authors (id, created_at, updated_at, name)
-values (1685, now(), now(), 'Sandeep Deobhakta');
+values (1685, now(), now(), 'Darrell Mullis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1686, now(), now(), 'Toby Mathis');
+values (1686, now(), now(), 'Judith Orloff');
 
 insert into authors (id, created_at, updated_at, name)
-values (1687, now(), now(), 'Ngô Hoàng Liên');
+values (1687, now(), now(), 'Nguyễn Viết Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1688, now(), now(), 'Don Tapscott - Alex Tapscott');
+values (1688, now(), now(), 'PGS TS Phạm Đức Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1689, now(), now(), 'Brian Kelly');
+values (1689, now(), now(), 'PGS TS Trần Mạnh Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1690, now(), now(), 'Valerijus Ovsyanikas');
+values (1690, now(), now(), 'PGS TS Đinh Thế Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1691, now(), now(), 'Alnoor Bhimani');
+values (1691, now(), now(), 'Lương Đức Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1692, now(), now(), 'Ross Baird');
+values (1692, now(), now(), 'Hà Thị Thúy Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1693, now(), now(), 'Michelle R. Weise');
+values (1693, now(), now(), 'Vũ Thị Kim Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1694, now(), now(), 'Thiệu Vĩ Hoa');
+values (1694, now(), now(), 'Trần Mạnh Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1695, now(), now(), 'Kaoru Terashita');
+values (1695, now(), now(), 'Tăng Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (1696, now(), now(), 'Nakashima Tetsuo');
+values (1696, now(), now(), 'Abbooks');
 
 insert into authors (id, created_at, updated_at, name)
-values (1697, now(), now(), 'Trương Đan Như');
+values (1697, now(), now(), 'Quý Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1698, now(), now(), 'Thái Hà Tuyển Dụng');
+values (1698, now(), now(), 'Kim Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1699, now(), now(), 'Nguyễn Thị Huyền Trang');
+values (1699, now(), now(), 'TS Vũ Thị Kim Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1700, now(), now(), 'Đặng Huỳnh Mai Anh');
+values (1700, now(), now(), 'Kiều Mai Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1701, now(), now(), 'Wendy Burbridge');
+values (1701, now(), now(), 'Dũng Phan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1702, now(), now(), 'Iliyana Stareva');
+values (1702, now(), now(), 'Đông A');
 
 insert into authors (id, created_at, updated_at, name)
-values (1703, now(), now(), 'Phó Thủ Vĩnh');
+values (1703, now(), now(), 'Nguyễn Văn Tàu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1704, now(), now(), 'Robert');
+values (1704, now(), now(), 'TS Huỳnh Bá Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1705, now(), now(), 'Barbara Mitchell');
+values (1705, now(), now(), 'Diệp Xương Vĩ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1706, now(), now(), 'Cornelia Gamlem');
+values (1706, now(), now(), 'Minh Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1707, now(), now(), 'Nguyên');
+values (1707, now(), now(), 'Yuval Noah Harari');
 
 insert into authors (id, created_at, updated_at, name)
-values (1708, now(), now(), 'Nguyễn Ngọc Sơn');
+values (1708, now(), now(), 'Cao Huy Giu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1709, now(), now(), 'VNHR');
+values (1709, now(), now(), 'Lê Bá Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1710, now(), now(), 'Hồng Duyên');
+values (1710, now(), now(), 'Quỳnh Cư');
 
 insert into authors (id, created_at, updated_at, name)
-values (1711, now(), now(), 'Kathryn Bishop');
+values (1711, now(), now(), 'Đỗ Đức Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1712, now(), now(), 'Roxanne Calder');
+values (1712, now(), now(), 'Peter Frankopan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1713, now(), now(), 'Darrell Mullis');
+values (1713, now(), now(), 'Tấn Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (1714, now(), now(), 'Judith Orloff');
+values (1714, now(), now(), 'Hà Văn Tấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1715, now(), now(), 'Quốc Đại');
+values (1715, now(), now(), 'Paul Doumer');
 
 insert into authors (id, created_at, updated_at, name)
-values (1716, now(), now(), 'Thu Phương');
+values (1716, now(), now(), 'Viện Nghiên Cứu Phát Triển Phương Đông');
 
 insert into authors (id, created_at, updated_at, name)
-values (1717, now(), now(), 'Quang Minh');
+values (1717, now(), now(), 'Bộ Nội Vụ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1718, now(), now(), 'Quý Lâm');
+values (1718, now(), now(), 'Cục Văn Thư Và Lưu Trữ Nhà Nước');
 
 insert into authors (id, created_at, updated_at, name)
-values (1719, now(), now(), 'Kim Phượng');
+values (1719, now(), now(), 'Trung Tâm Lưu Trữ Quốc Gia II');
 
 insert into authors (id, created_at, updated_at, name)
-values (1720, now(), now(), 'Trần Xuân Nam');
+values (1720, now(), now(), 'Abraham Rothberg');
 
 insert into authors (id, created_at, updated_at, name)
-values (1721, now(), now(), 'TS Vũ Thị Kim Anh');
+values (1721, now(), now(), 'Nguyễn Thái Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (1722, now(), now(), 'PGS TS Phạm Đức Cường');
+values (1722, now(), now(), 'Đông Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1723, now(), now(), 'Nguyễn Viết Hùng');
+values (1723, now(), now(), 'Kaovjets Ngujens');
 
 insert into authors (id, created_at, updated_at, name)
-values (1724, now(), now(), 'PGS TS Trần Mạnh Dũng');
+values (1724, now(), now(), 'Kenneth Pomeranz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1725, now(), now(), 'PGS TS Đinh Thế Hùng');
+values (1725, now(), now(), 'Steven Topik');
 
 insert into authors (id, created_at, updated_at, name)
-values (1726, now(), now(), 'Lương Đức Cường');
+values (1726, now(), now(), 'Phạm Thị Kiều Ly');
 
 insert into authors (id, created_at, updated_at, name)
-values (1727, now(), now(), 'Tăng Bình');
+values (1727, now(), now(), 'Thích Pháp Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1728, now(), now(), 'TS Phạm Ngọc Toàn');
+values (1728, now(), now(), 'Sa Môn Thích Pháp Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1729, now(), now(), 'Abbooks');
+values (1729, now(), now(), 'Bible Society Vietnam (Thánh Kinh Hội Việt Nam)');
 
 insert into authors (id, created_at, updated_at, name)
-values (1730, now(), now(), 'Bích Phương');
+values (1730, now(), now(), 'Nguyên Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1731, now(), now(), 'Vũ Thu Phương');
+values (1731, now(), now(), 'Thích Nhất Hạnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1732, now(), now(), 'Kiều Mai Sơn');
+values (1732, now(), now(), 'Liễu Phàm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1733, now(), now(), 'Dũng Phan');
+values (1733, now(), now(), 'Tuệ Giác');
 
 insert into authors (id, created_at, updated_at, name)
-values (1734, now(), now(), 'Đông A');
+values (1734, now(), now(), 'Lão Tử');
 
 insert into authors (id, created_at, updated_at, name)
-values (1735, now(), now(), 'Nguyễn Văn Tàu');
+values (1735, now(), now(), 'Thu Giang Nguyễn Duy Cần');
 
 insert into authors (id, created_at, updated_at, name)
-values (1736, now(), now(), 'TS Huỳnh Bá Lộc');
+values (1736, now(), now(), 'Minh Tánh Nguyễn Duy Nhiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1737, now(), now(), 'Diệp Xương Vĩ');
+values (1737, now(), now(), 'Từ Quang Á');
 
 insert into authors (id, created_at, updated_at, name)
-values (1738, now(), now(), 'Minh Hòa');
+values (1738, now(), now(), 'TS Michael Newton');
 
 insert into authors (id, created_at, updated_at, name)
-values (1739, now(), now(), 'Yuval Noah Harari');
+values (1739, now(), now(), 'Viên Liễu Phàm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1740, now(), now(), 'Cao Huy Giu');
+values (1740, now(), now(), 'Gil Fronsdal');
 
 insert into authors (id, created_at, updated_at, name)
-values (1741, now(), now(), 'Lê Bá Dương');
+values (1741, now(), now(), 'Tuệ Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (1742, now(), now(), 'Quỳnh Cư');
+values (1742, now(), now(), 'Jochen Voigt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1743, now(), now(), 'Đỗ Đức Hùng');
+values (1743, now(), now(), 'Chez Picthall');
 
 insert into authors (id, created_at, updated_at, name)
-values (1744, now(), now(), 'Tấn Tú');
+values (1744, now(), now(), 'Christiane Gunzi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1745, now(), now(), 'Peter Frankopan');
+values (1745, now(), now(), 'Pierre Gourou');
 
 insert into authors (id, created_at, updated_at, name)
-values (1746, now(), now(), 'Paul Doumer');
+values (1746, now(), now(), 'Lưu Quân Hội');
 
 insert into authors (id, created_at, updated_at, name)
-values (1747, now(), now(), 'Viện Nghiên Cứu Phát Triển Phương Đông');
+values (1747, now(), now(), 'Vương Giai');
 
 insert into authors (id, created_at, updated_at, name)
-values (1748, now(), now(), 'Abraham Rothberg');
+values (1748, now(), now(), 'Nguyễn Đình Tư');
 
 insert into authors (id, created_at, updated_at, name)
-values (1749, now(), now(), 'Bộ Nội Vụ');
+values (1749, now(), now(), 'Đặng Quang Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1750, now(), now(), 'Cục Văn Thư Và Lưu Trữ Nhà Nước');
+values (1750, now(), now(), 'Nguyễn Hiến Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (1751, now(), now(), 'Trung Tâm Lưu Trữ Quốc Gia II');
+values (1751, now(), now(), 'Brian Eyler');
 
 insert into authors (id, created_at, updated_at, name)
-values (1752, now(), now(), 'Nguyễn Thái Long');
+values (1752, now(), now(), 'Nicholas Crane');
 
 insert into authors (id, created_at, updated_at, name)
-values (1753, now(), now(), 'Đông Nguyễn');
+values (1753, now(), now(), 'Nguyễn Doãn Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1754, now(), now(), 'Kaovjets Ngujens');
+values (1754, now(), now(), 'Léopold Michel Cadière');
 
 insert into authors (id, created_at, updated_at, name)
-values (1755, now(), now(), 'Kenneth Pomeranz');
+values (1755, now(), now(), 'Robert D.Kaplan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1756, now(), now(), 'Steven Topik');
+values (1756, now(), now(), 'GS Lê Bá Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1757, now(), now(), 'Hà Văn Tấn');
+values (1757, now(), now(), 'James Borton');
 
 insert into authors (id, created_at, updated_at, name)
-values (1758, now(), now(), 'Thích Pháp Hòa');
+values (1758, now(), now(), 'Nguyễn Quang Lập');
 
 insert into authors (id, created_at, updated_at, name)
-values (1759, now(), now(), 'Sa Môn Thích Pháp Hòa');
+values (1759, now(), now(), 'Nguyễn Mỹ Trà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1760, now(), now(), 'Bible Society Vietnam (Thánh Kinh Hội Việt Nam)');
+values (1760, now(), now(), 'Đỗ Ngọc Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1761, now(), now(), 'Nguyên Phong');
+values (1761, now(), now(), 'Nguyễn Hoàng Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1762, now(), now(), 'Thích Nhất Hạnh');
+values (1762, now(), now(), 'Tim Mả Shall');
 
 insert into authors (id, created_at, updated_at, name)
-values (1763, now(), now(), 'Liễu Phàm');
+values (1763, now(), now(), 'Ngô Đức Vượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1764, now(), now(), 'Tuệ Giác');
+values (1764, now(), now(), 'Anna Lembke');
 
 insert into authors (id, created_at, updated_at, name)
-values (1765, now(), now(), 'Lão Tử');
+values (1765, now(), now(), 'Arnold G Nelson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1766, now(), now(), 'Từ Quang Á');
+values (1766, now(), now(), 'Jouko Kokkonen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1767, now(), now(), 'Viên Liễu Phàm');
+values (1767, now(), now(), 'Vương Đào');
 
 insert into authors (id, created_at, updated_at, name)
-values (1768, now(), now(), 'Gil Fronsdal');
+values (1768, now(), now(), 'Jessie Inchauspé');
 
 insert into authors (id, created_at, updated_at, name)
-values (1769, now(), now(), 'Minh Tánh Nguyễn Duy Nhiên');
+values (1769, now(), now(), 'Võ Xuân Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1770, now(), now(), 'TS Michael Newton');
+values (1770, now(), now(), 'Matthew Walker');
 
 insert into authors (id, created_at, updated_at, name)
-values (1771, now(), now(), 'Đức Đạt-Lai Lạt-Ma XIV');
+values (1771, now(), now(), 'T Collin Campbell');
 
 insert into authors (id, created_at, updated_at, name)
-values (1772, now(), now(), 'Tim Marshall');
+values (1772, now(), now(), 'PhD');
 
 insert into authors (id, created_at, updated_at, name)
-values (1773, now(), now(), 'Jochen Voigt');
+values (1773, now(), now(), 'Thomas M Cambpell II');
 
 insert into authors (id, created_at, updated_at, name)
-values (1774, now(), now(), 'Sơn Nam');
+values (1774, now(), now(), 'MD');
 
 insert into authors (id, created_at, updated_at, name)
-values (1775, now(), now(), 'Lưu Quân Hội');
+values (1775, now(), now(), 'Katsusuke Serizawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1776, now(), now(), 'Vương Giai');
+values (1776, now(), now(), 'TS David A. Sinclair');
 
 insert into authors (id, created_at, updated_at, name)
-values (1777, now(), now(), 'Nguyễn Đình Tư');
+values (1777, now(), now(), 'Matthew D. Laplante');
 
 insert into authors (id, created_at, updated_at, name)
-values (1778, now(), now(), 'Đặng Quang Quỳnh');
+values (1778, now(), now(), 'BS Ngô Đức Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1779, now(), now(), 'Nguyễn Hiến Lê');
+values (1779, now(), now(), 'Bùi Quốc Châu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1780, now(), now(), 'Brian Eyler');
+values (1780, now(), now(), 'Chip Huyen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1781, now(), now(), 'Nicholas Crane');
+values (1781, now(), now(), 'Pooja Lakshmin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1782, now(), now(), 'Nguyễn Doãn Minh');
+values (1782, now(), now(), 'Thái Hồng Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1783, now(), now(), 'Léopold Michel Cadière');
+values (1783, now(), now(), 'Trương Thìn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1784, now(), now(), 'Robert D.Kaplan');
+values (1784, now(), now(), 'Đỗ Đức Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1785, now(), now(), 'GS Lê Bá Thảo');
+values (1785, now(), now(), 'Dư Hạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1786, now(), now(), 'Vũ Phi Hoàng');
+values (1786, now(), now(), 'Nhậm Chi Đường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1787, now(), now(), 'James Borton');
+values (1787, now(), now(), 'Andreas Moritz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1788, now(), now(), 'Nguyễn Quang Lập');
+values (1788, now(), now(), 'Anthony William');
 
 insert into authors (id, created_at, updated_at, name)
-values (1789, now(), now(), 'Nguyễn Mỹ Trà');
+values (1789, now(), now(), 'Charlotte Gerson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1790, now(), now(), 'Đỗ Ngọc Sơn');
+values (1790, now(), now(), 'Morton Walker');
 
 insert into authors (id, created_at, updated_at, name)
-values (1791, now(), now(), 'Nguyễn Hoàng Anh');
+values (1791, now(), now(), 'Trương Thụ Sinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1792, now(), now(), 'Pierre Gourou');
+values (1792, now(), now(), 'Vương Chi Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1793, now(), now(), 'Ngô Đức Vượng');
+values (1793, now(), now(), 'Fulo Tarot');
 
 insert into authors (id, created_at, updated_at, name)
-values (1794, now(), now(), 'Anna Lembke');
+values (1794, now(), now(), 'Ann Swanson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1795, now(), now(), 'Arnold G Nelson');
+values (1795, now(), now(), 'Ngô Sa Thạch');
 
 insert into authors (id, created_at, updated_at, name)
-values (1796, now(), now(), 'Jouko Kokkonen');
+values (1796, now(), now(), 'Lisa Feldman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1797, now(), now(), 'Vương Đào');
+values (1797, now(), now(), 'Arthur Edward Waite');
 
 insert into authors (id, created_at, updated_at, name)
-values (1798, now(), now(), 'Jessie Inchauspé');
+values (1798, now(), now(), 'Pamela Colman Smith');
 
 insert into authors (id, created_at, updated_at, name)
-values (1799, now(), now(), 'Võ Xuân Sơn');
+values (1799, now(), now(), 'Modern Magic Press');
 
 insert into authors (id, created_at, updated_at, name)
-values (1800, now(), now(), 'Matthew Walker');
+values (1800, now(), now(), 'Deepak Chopra');
 
 insert into authors (id, created_at, updated_at, name)
-values (1801, now(), now(), 'T Collin Campbell');
+values (1801, now(), now(), 'Menas Kafatos');
 
 insert into authors (id, created_at, updated_at, name)
-values (1802, now(), now(), 'PhD');
+values (1802, now(), now(), 'Lani Kingston');
 
 insert into authors (id, created_at, updated_at, name)
-values (1803, now(), now(), 'Thomas M Cambpell II');
+values (1803, now(), now(), 'Ian Stevenson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1804, now(), now(), 'MD');
+values (1804, now(), now(), 'Alba Ballesta González');
 
 insert into authors (id, created_at, updated_at, name)
-values (1805, now(), now(), 'Katsusuke Serizawa');
+values (1805, now(), now(), 'Heather Roan Robbins');
 
 insert into authors (id, created_at, updated_at, name)
-values (1806, now(), now(), 'TS David A. Sinclair');
+values (1806, now(), now(), 'Heather Darwall-Smith');
 
 insert into authors (id, created_at, updated_at, name)
-values (1807, now(), now(), 'Matthew D. Laplante');
+values (1807, now(), now(), 'Aria Gmitter');
 
 insert into authors (id, created_at, updated_at, name)
-values (1808, now(), now(), 'BS Ngô Đức Hùng');
+values (1808, now(), now(), 'Minerva Siegel');
 
 insert into authors (id, created_at, updated_at, name)
-values (1809, now(), now(), 'Chip Huyen');
+values (1809, now(), now(), 'Abigail Larson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1810, now(), now(), 'Pooja Lakshmin');
+values (1810, now(), now(), 'Jonathan Haidt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1811, now(), now(), 'Anthony William');
+values (1811, now(), now(), 'Charles Darwin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1812, now(), now(), 'Andreas Moritz');
+values (1812, now(), now(), 'Joy Woodward');
 
 insert into authors (id, created_at, updated_at, name)
-values (1813, now(), now(), 'Thomas M Campbell');
+values (1813, now(), now(), 'Rebecca Boyle');
 
 insert into authors (id, created_at, updated_at, name)
-values (1814, now(), now(), 'Đỗ Đức Ngọc');
+values (1814, now(), now(), 'William McGuire Bryson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1815, now(), now(), 'Dư Hạo');
+values (1815, now(), now(), 'Stuart Farrimond');
 
 insert into authors (id, created_at, updated_at, name)
-values (1816, now(), now(), 'Nhậm Chi Đường');
+values (1816, now(), now(), 'IIG Viet Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1817, now(), now(), 'Bùi Quốc Châu');
+values (1817, now(), now(), 'Dịch Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1818, now(), now(), 'Charlotte Gerson');
+values (1818, now(), now(), 'Phan Trách Bân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1819, now(), now(), 'Morton Walker');
+values (1819, now(), now(), 'Lý Thế Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1820, now(), now(), 'Trương Thụ Sinh');
+values (1820, now(), now(), 'IIG Việt Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (1821, now(), now(), 'Vương Chi Lan');
+values (1821, now(), now(), 'Ethan Mollick');
 
 insert into authors (id, created_at, updated_at, name)
-values (1822, now(), now(), 'Đông Đồng');
+values (1822, now(), now(), 'TS. Lương Anh Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1823, now(), now(), 'Seung Nam Lee');
+values (1823, now(), now(), 'Tạ Văn Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1824, now(), now(), 'Fulo Tarot');
+values (1824, now(), now(), 'Chen Qiufan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1825, now(), now(), 'Ann Swanson');
+values (1825, now(), now(), 'Kai-Fu Lee');
 
 insert into authors (id, created_at, updated_at, name)
-values (1826, now(), now(), 'Ngô Sa Thạch');
+values (1826, now(), now(), 'Neil Dagger');
 
 insert into authors (id, created_at, updated_at, name)
-values (1827, now(), now(), 'Modern Magic Press');
+values (1827, now(), now(), 'Parmy Olson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1828, now(), now(), 'Nam Tiên Sinh');
+values (1828, now(), now(), 'Weilan Wenhua');
 
 insert into authors (id, created_at, updated_at, name)
-values (1829, now(), now(), 'Lisa Feldman');
+values (1829, now(), now(), 'Nguyễn Văn Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1830, now(), now(), 'Arthur Edward Waite');
+values (1830, now(), now(), 'GS. Phạm Văn Ất');
 
 insert into authors (id, created_at, updated_at, name)
-values (1831, now(), now(), 'Pamela Colman Smith');
+values (1831, now(), now(), 'ThS. Đỗ Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1832, now(), now(), 'Lani Kingston');
+values (1832, now(), now(), 'ThS. Nguyễn Hiếu Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1833, now(), now(), 'Nguyễn Văn Tuấn');
+values (1833, now(), now(), 'Lê Trường Thông');
 
 insert into authors (id, created_at, updated_at, name)
-values (1834, now(), now(), 'Deepak Chopra');
+values (1834, now(), now(), 'Vương Cát Vỹ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1835, now(), now(), 'Menas Kafatos');
+values (1835, now(), now(), 'Phạm Văn Ất');
 
 insert into authors (id, created_at, updated_at, name)
-values (1836, now(), now(), 'Jonathan Haidt');
+values (1836, now(), now(), 'Luciano Floridi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1837, now(), now(), 'Charles Darwin');
+values (1837, now(), now(), 'GS Phạm Văn Ất');
 
 insert into authors (id, created_at, updated_at, name)
-values (1838, now(), now(), 'Joy Woodward');
+values (1838, now(), now(), 'ThS Đỗ Văn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1839, now(), now(), 'Rebecca Boyle');
+values (1839, now(), now(), 'ThS Nguyễn Hiếu Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1840, now(), now(), 'William McGuire Bryson');
+values (1840, now(), now(), 'Nguyễn Quang Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1841, now(), now(), 'Stuart Farrimond');
+values (1841, now(), now(), 'Nguyễn Thị Minh Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1842, now(), now(), 'Ian Stevenson');
+values (1842, now(), now(), 'Liu Wen Yong');
 
 insert into authors (id, created_at, updated_at, name)
-values (1843, now(), now(), 'Alba Ballesta González');
+values (1843, now(), now(), 'Rose Luckin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1844, now(), now(), 'Heather Darwall-Smith');
+values (1844, now(), now(), 'Karine George');
 
 insert into authors (id, created_at, updated_at, name)
-values (1845, now(), now(), 'Heather Roan Robbins');
+values (1845, now(), now(), 'Mutlu Cukurova');
 
 insert into authors (id, created_at, updated_at, name)
-values (1846, now(), now(), 'IIG Viet Nam');
+values (1846, now(), now(), 'Salman Khan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1847, now(), now(), 'Dịch Dương');
+values (1847, now(), now(), 'Timothy D. Walker Pasi Sahlberg');
 
 insert into authors (id, created_at, updated_at, name)
-values (1848, now(), now(), 'Phan Trách Bân');
+values (1848, now(), now(), 'Nhà giáo TS Nguyễn Văn Hòa và cộng sự');
 
 insert into authors (id, created_at, updated_at, name)
-values (1849, now(), now(), 'Lý Thế Minh');
+values (1849, now(), now(), 'Phương Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (1850, now(), now(), 'IIG Việt Nam');
+values (1850, now(), now(), 'Trương Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1851, now(), now(), 'Ethan Mollick');
+values (1851, now(), now(), 'John Holt');
 
 insert into authors (id, created_at, updated_at, name)
-values (1852, now(), now(), 'Weilan Wenhua');
+values (1852, now(), now(), 'Terry Chew');
 
 insert into authors (id, created_at, updated_at, name)
-values (1853, now(), now(), 'Nguyễn Văn Trung');
+values (1853, now(), now(), 'Hoàng Đạo Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1854, now(), now(), 'Chen Qiufan');
+values (1854, now(), now(), 'TS Nguyễn Chí Hiếu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1855, now(), now(), 'Kai-Fu Lee');
+values (1855, now(), now(), 'Giáp Văn Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1856, now(), now(), 'Neil Dagger');
+values (1856, now(), now(), 'Nguyên Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1857, now(), now(), 'Parmy Olson');
+values (1857, now(), now(), 'J. Krishnamurti');
 
 insert into authors (id, created_at, updated_at, name)
-values (1858, now(), now(), 'GS. Phạm Văn Ất');
+values (1858, now(), now(), 'Phan Chánh Dưỡng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1859, now(), now(), 'ThS. Đỗ Văn Tuấn');
+values (1859, now(), now(), 'TS. Trương Thị Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1860, now(), now(), 'ThS. Nguyễn Hiếu Cường');
+values (1860, now(), now(), 'Trần Trọng Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (1861, now(), now(), 'Lê Trường Thông');
+values (1861, now(), now(), 'Đặng Đình Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1862, now(), now(), 'Vương Cát Vỹ');
+values (1862, now(), now(), 'Đỗ Thận');
 
 insert into authors (id, created_at, updated_at, name)
-values (1863, now(), now(), 'Phạm Văn Ất');
+values (1863, now(), now(), 'Barbara Oakley');
 
 insert into authors (id, created_at, updated_at, name)
-values (1864, now(), now(), 'GS Phạm Văn Ất');
+values (1864, now(), now(), 'Beth Rogowsky');
 
 insert into authors (id, created_at, updated_at, name)
-values (1865, now(), now(), 'ThS Đỗ Văn Tuấn');
+values (1865, now(), now(), 'Terrence J Sejnowski');
 
 insert into authors (id, created_at, updated_at, name)
-values (1866, now(), now(), 'ThS Nguyễn Hiếu Cường');
+values (1866, now(), now(), 'John Dewey');
 
 insert into authors (id, created_at, updated_at, name)
-values (1867, now(), now(), 'Nguyễn Quang Vinh');
+values (1867, now(), now(), 'Nhà giáo TS Nguyễn Văn Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (1868, now(), now(), 'Dr. Gleb Tsipursky');
+values (1868, now(), now(), 'Nguyễn Minh Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (1869, now(), now(), 'Nguyễn Thị Minh Phượng');
+values (1869, now(), now(), 'Gitanjali Rao');
 
 insert into authors (id, created_at, updated_at, name)
-values (1870, now(), now(), 'Liu Wen Yong');
+values (1870, now(), now(), 'Minh Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1871, now(), now(), 'Rose Luckin');
+values (1871, now(), now(), 'Thanh Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1872, now(), now(), 'Karine George');
+values (1872, now(), now(), 'Thanh HUyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1873, now(), now(), 'Mutlu Cukurova');
+values (1873, now(), now(), 'KS Thái Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1874, now(), now(), 'Nhà giáo TS Nguyễn Văn Hòa và cộng sự');
+values (1874, now(), now(), 'Đặng Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (1875, now(), now(), 'Timothy D. Walker Pasi Sahlberg');
+values (1875, now(), now(), 'Donna Ellis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1876, now(), now(), 'John Holt');
+values (1876, now(), now(), 'Vũ Hồng Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1877, now(), now(), 'Phương Quân');
+values (1877, now(), now(), 'Nguyễn Thị Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1878, now(), now(), 'Trương Hoa');
+values (1878, now(), now(), 'Việt Chương');
 
 insert into authors (id, created_at, updated_at, name)
-values (1879, now(), now(), 'Terry Chew');
+values (1879, now(), now(), 'Phúc Quyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (1880, now(), now(), 'Hoàng Đạo Thúy');
+values (1880, now(), now(), 'Thái Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (1881, now(), now(), 'TS Nguyễn Chí Hiếu');
+values (1881, now(), now(), 'Alex Frith');
 
 insert into authors (id, created_at, updated_at, name)
-values (1882, now(), now(), 'Giáp Văn Dương');
+values (1882, now(), now(), 'Alice James');
 
 insert into authors (id, created_at, updated_at, name)
-values (1883, now(), now(), 'Nguyên Thanh');
+values (1883, now(), now(), 'Jerome Martin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1884, now(), now(), 'J. Krishnamurti');
+values (1884, now(), now(), 'Neil deGrasse Tyson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1885, now(), now(), 'Salman Khan');
+values (1885, now(), now(), 'Donald Goldsmith');
 
 insert into authors (id, created_at, updated_at, name)
-values (1886, now(), now(), 'Tiến sĩ Jill Berry - Hoàng Đức Long dịch');
+values (1886, now(), now(), 'Ian Ridpath');
 
 insert into authors (id, created_at, updated_at, name)
-values (1887, now(), now(), 'Nhà giáo TS Nguyễn Văn Hòa');
+values (1887, now(), now(), 'Stephen Hawking');
 
 insert into authors (id, created_at, updated_at, name)
-values (1888, now(), now(), 'Gitanjali Rao');
+values (1888, now(), now(), 'Carl Sagan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1889, now(), now(), 'Nguyễn Minh Hải');
+values (1889, now(), now(), 'Martin Rees');
 
 insert into authors (id, created_at, updated_at, name)
-values (1890, now(), now(), 'Trần Trọng Kim');
+values (1890, now(), now(), 'TS Lisa Kaltenegger');
 
 insert into authors (id, created_at, updated_at, name)
-values (1891, now(), now(), 'Đặng Đình Phúc');
+values (1891, now(), now(), 'Sean Carroll');
 
 insert into authors (id, created_at, updated_at, name)
-values (1892, now(), now(), 'Đỗ Thận');
+values (1892, now(), now(), 'Stuart Clark');
 
 insert into authors (id, created_at, updated_at, name)
-values (1893, now(), now(), 'John Milton Gregory');
+values (1893, now(), now(), 'Simon Blackburn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1894, now(), now(), 'Denry Machin');
+values (1894, now(), now(), 'James Lovelock');
 
 insert into authors (id, created_at, updated_at, name)
-values (1895, now(), now(), 'Matt Miller');
+values (1895, now(), now(), 'Leonard Mlodinow');
 
 insert into authors (id, created_at, updated_at, name)
-values (1896, now(), now(), 'Minh Huyền');
+values (1896, now(), now(), 'Stephen Petranek');
 
 insert into authors (id, created_at, updated_at, name)
-values (1897, now(), now(), 'Thanh Huyền');
+values (1897, now(), now(), 'Trịnh Xuân Thuận');
 
 insert into authors (id, created_at, updated_at, name)
-values (1898, now(), now(), 'Thanh HUyền');
+values (1898, now(), now(), 'Jorge Cham');
 
 insert into authors (id, created_at, updated_at, name)
-values (1899, now(), now(), 'KS Thái Hà');
+values (1899, now(), now(), 'Daniel Whiteson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1900, now(), now(), 'Đặng Mai');
+values (1900, now(), now(), 'Michael Talbot');
 
 insert into authors (id, created_at, updated_at, name)
-values (1901, now(), now(), 'Donna Ellis');
+values (1901, now(), now(), 'Đặng Vũ Tuấn Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1902, now(), now(), 'Vũ Hồng Anh');
+values (1902, now(), now(), 'Masaru Emoto');
 
 insert into authors (id, created_at, updated_at, name)
-values (1903, now(), now(), 'Thái Hà');
+values (1903, now(), now(), 'Lawrence M Krauss');
 
 insert into authors (id, created_at, updated_at, name)
-values (1904, now(), now(), 'Việt Chương');
+values (1904, now(), now(), 'Tim Peake');
 
 insert into authors (id, created_at, updated_at, name)
-values (1905, now(), now(), 'Văn Minh');
+values (1905, now(), now(), 'Bernard Haisch');
 
 insert into authors (id, created_at, updated_at, name)
-values (1906, now(), now(), 'Phúc Quyên');
+values (1906, now(), now(), 'Marsha Sims');
 
 insert into authors (id, created_at, updated_at, name)
-values (1907, now(), now(), 'Alex Frith');
+values (1907, now(), now(), 'Chani Nicholas');
 
 insert into authors (id, created_at, updated_at, name)
-values (1908, now(), now(), 'Neil deGrasse Tyson');
+values (1908, now(), now(), 'Luo Changwen');
 
 insert into authors (id, created_at, updated_at, name)
-values (1909, now(), now(), 'Donald Goldsmith');
+values (1909, now(), now(), 'Zhang Xiaoying');
 
 insert into authors (id, created_at, updated_at, name)
-values (1910, now(), now(), 'Ian Ridpath');
+values (1910, now(), now(), 'Yakov Perelman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1911, now(), now(), 'Stephen Hawking');
+values (1911, now(), now(), 'Richard Fitzpatrick');
 
 insert into authors (id, created_at, updated_at, name)
-values (1912, now(), now(), 'Carl Sagan');
+values (1912, now(), now(), 'Daniel Tammet');
 
 insert into authors (id, created_at, updated_at, name)
-values (1913, now(), now(), 'Martin Rees');
+values (1913, now(), now(), 'Steven Strogatz');
 
 insert into authors (id, created_at, updated_at, name)
-values (1914, now(), now(), 'TS Lisa Kaltenegger');
+values (1914, now(), now(), 'Charles Seife');
 
 insert into authors (id, created_at, updated_at, name)
-values (1915, now(), now(), 'Sean Carroll');
+values (1915, now(), now(), 'Vu Huu Binh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1916, now(), now(), 'Stuart Clark');
+values (1916, now(), now(), 'Trịnh Xuân Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1917, now(), now(), 'Simon Blackburn');
+values (1917, now(), now(), 'Waldemar Pompe');
 
 insert into authors (id, created_at, updated_at, name)
-values (1918, now(), now(), 'James Lovelock');
+values (1918, now(), now(), 'Tony Crilly');
 
 insert into authors (id, created_at, updated_at, name)
-values (1919, now(), now(), 'Leonard Mlodinow');
+values (1919, now(), now(), 'Simon Singh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1920, now(), now(), 'Lucy Hawking');
+values (1920, now(), now(), 'Đỗ Minh Triết');
 
 insert into authors (id, created_at, updated_at, name)
-values (1921, now(), now(), 'J.P.Mcevoy');
+values (1921, now(), now(), 'Edward Zaccaro');
 
 insert into authors (id, created_at, updated_at, name)
-values (1922, now(), now(), 'Oscar Zarate');
+values (1922, now(), now(), 'ThS Nguyễn Thị Hiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1923, now(), now(), 'Michiokaku');
+values (1923, now(), now(), 'Edward T White');
 
 insert into authors (id, created_at, updated_at, name)
-values (1924, now(), now(), 'Trịnh Xuân Thuận');
+values (1924, now(), now(), 'Francis D.K. Ching');
 
 insert into authors (id, created_at, updated_at, name)
-values (1925, now(), now(), 'Stefanie Caponi');
+values (1925, now(), now(), 'Antony Radford');
 
 insert into authors (id, created_at, updated_at, name)
-values (1926, now(), now(), 'Stephen Petranek');
+values (1926, now(), now(), 'Amit Srivastava');
 
 insert into authors (id, created_at, updated_at, name)
-values (1927, now(), now(), 'Jorge Cham');
+values (1927, now(), now(), 'Selen Morkoc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1928, now(), now(), 'Daniel Whiteson');
+values (1928, now(), now(), 'Paul Laseau');
 
 insert into authors (id, created_at, updated_at, name)
-values (1929, now(), now(), 'Luo Changwen');
+values (1929, now(), now(), 'Trần Hữu Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (1930, now(), now(), 'Zhang Xiaoying');
+values (1930, now(), now(), 'Ngô Viết Nam Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (1931, now(), now(), 'Yakov Perelman');
+values (1931, now(), now(), 'Họa Sĩ Uyên Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1932, now(), now(), 'Richard Fitzpatrick');
+values (1932, now(), now(), 'Trần Quốc Bảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1933, now(), now(), 'Daniel Tammet');
+values (1933, now(), now(), 'Nguyễn Thành Trung');
 
 insert into authors (id, created_at, updated_at, name)
-values (1934, now(), now(), 'Steven Strogatz');
+values (1934, now(), now(), 'Karen Lewis');
 
 insert into authors (id, created_at, updated_at, name)
-values (1935, now(), now(), 'Vu Huu Binh');
+values (1935, now(), now(), 'Dr Paolo Consigli');
 
 insert into authors (id, created_at, updated_at, name)
-values (1936, now(), now(), 'Waldemar Pompe');
+values (1936, now(), now(), 'Gerard Total');
 
 insert into authors (id, created_at, updated_at, name)
-values (1937, now(), now(), 'Tony Crilly');
+values (1937, now(), now(), 'Trần Văn Chánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1938, now(), now(), 'Simon Singh');
+values (1938, now(), now(), 'Isabel Thomas');
 
 insert into authors (id, created_at, updated_at, name)
-values (1939, now(), now(), 'Đỗ Minh Triết');
+values (1939, now(), now(), 'Alex Paterson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1940, now(), now(), 'Edward Zaccaro');
+values (1940, now(), now(), 'Charles Eisenstein');
 
 insert into authors (id, created_at, updated_at, name)
-values (1941, now(), now(), 'ThS Nguyễn Thị Hiền');
+values (1941, now(), now(), 'Kim De Wolff');
 
 insert into authors (id, created_at, updated_at, name)
-values (1942, now(), now(), 'Jordan Ellenberg');
+values (1942, now(), now(), 'Rina C. Faletti');
 
 insert into authors (id, created_at, updated_at, name)
-values (1943, now(), now(), 'Phạm Vũ Thanh');
+values (1943, now(), now(), 'Ignacio López-Calvo');
 
 insert into authors (id, created_at, updated_at, name)
-values (1944, now(), now(), 'Charles Seife');
+values (1944, now(), now(), 'Lê Hữu Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1945, now(), now(), 'Edward T White');
+values (1945, now(), now(), 'Jeffrey Rissman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1946, now(), now(), 'Francis D.K. Ching');
+values (1946, now(), now(), 'Guillaume Pitron');
 
 insert into authors (id, created_at, updated_at, name)
-values (1947, now(), now(), 'Paul Laseau');
+values (1947, now(), now(), 'Trí Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (1948, now(), now(), 'Antony Radford');
+values (1948, now(), now(), 'Đức Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1949, now(), now(), 'Amit Srivastava');
+values (1949, now(), now(), 'Hùng Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (1950, now(), now(), 'Selen Morkoc');
+values (1950, now(), now(), 'Russel Brunson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1951, now(), now(), 'Nguyễn Thành Trung');
+values (1951, now(), now(), 'Trương Đức Lượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1952, now(), now(), 'Karen Lewis');
+values (1952, now(), now(), 'Đạm Phương Nữ Sử');
 
 insert into authors (id, created_at, updated_at, name)
-values (1953, now(), now(), 'Trần Hữu Quang');
+values (1953, now(), now(), 'Urako Kanamori');
 
 insert into authors (id, created_at, updated_at, name)
-values (1954, now(), now(), 'Ngô Viết Nam Sơn');
+values (1954, now(), now(), 'Hachun Lyonnet');
 
 insert into authors (id, created_at, updated_at, name)
-values (1955, now(), now(), 'Trần Quốc Bảo');
+values (1955, now(), now(), 'Hương Đỗ');
 
 insert into authors (id, created_at, updated_at, name)
-values (1956, now(), now(), 'Dr Paolo Consigli');
+values (1956, now(), now(), 'Hoàng Anh Tú');
 
 insert into authors (id, created_at, updated_at, name)
-values (1957, now(), now(), 'Gerard Total');
+values (1957, now(), now(), 'Tiến sĩ Shefali Tsabary');
 
 insert into authors (id, created_at, updated_at, name)
-values (1958, now(), now(), 'Trần Văn Chánh');
+values (1958, now(), now(), 'Doãn Kiếm Lợi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1959, now(), now(), 'Isabel Thomas');
+values (1959, now(), now(), 'Masami Sasaki');
 
 insert into authors (id, created_at, updated_at, name)
-values (1960, now(), now(), 'Alex Paterson');
+values (1960, now(), now(), 'Wakamatsu Aki');
 
 insert into authors (id, created_at, updated_at, name)
-values (1961, now(), now(), 'Charles Eisenstein');
+values (1961, now(), now(), 'TS Vũ Bích Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (1962, now(), now(), 'Kim De Wolff');
+values (1962, now(), now(), 'Sara Imas');
 
 insert into authors (id, created_at, updated_at, name)
-values (1963, now(), now(), 'Rina C. Faletti');
+values (1963, now(), now(), 'Triệu Linh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (1964, now(), now(), 'Ignacio López-Calvo');
+values (1964, now(), now(), 'Russell A. Barkley');
 
 insert into authors (id, created_at, updated_at, name)
-values (1965, now(), now(), 'Lê Hữu Thi');
+values (1965, now(), now(), 'Tracy Hogg');
 
 insert into authors (id, created_at, updated_at, name)
-values (1966, now(), now(), 'Jeffrey Rissman');
+values (1966, now(), now(), 'Melinda Blau');
 
 insert into authors (id, created_at, updated_at, name)
-values (1967, now(), now(), 'Guillaume Pitron');
+values (1967, now(), now(), 'Alicia Vu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1968, now(), now(), 'Trí Cường');
+values (1968, now(), now(), 'Lindsay C.Gibson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1969, now(), now(), 'Đức Huy');
+values (1969, now(), now(), 'Adrian Kulp');
 
 insert into authors (id, created_at, updated_at, name)
-values (1970, now(), now(), 'Hùng Lê');
+values (1970, now(), now(), 'Trương Nguyện Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (1971, now(), now(), 'Nguyễn Trung Dân');
+values (1971, now(), now(), 'Nobuyoshi Hirai');
 
 insert into authors (id, created_at, updated_at, name)
-values (1972, now(), now(), 'Michio Kaku');
+values (1972, now(), now(), 'Tanith Carey');
 
 insert into authors (id, created_at, updated_at, name)
-values (1973, now(), now(), 'Phạm Quang Huy');
+values (1973, now(), now(), 'Angharad Rudkin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1974, now(), now(), 'Lê Hoàng Minh');
+values (1974, now(), now(), 'Chikara Oyano');
 
 insert into authors (id, created_at, updated_at, name)
-values (1975, now(), now(), 'Lê Nguyễn Hồng Phong');
+values (1975, now(), now(), 'Tiến sĩ Dan Kindlon');
 
 insert into authors (id, created_at, updated_at, name)
-values (1976, now(), now(), 'Russel Brunson');
+values (1976, now(), now(), 'Tiến sĩ Michael Thompson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1977, now(), now(), 'Trương Đức Lượng');
+values (1977, now(), now(), 'Naoko Narita');
 
 insert into authors (id, created_at, updated_at, name)
-values (1978, now(), now(), 'Bộ Giáo Dục và Đào Tạo');
+values (1978, now(), now(), 'Nana Hatano');
 
 insert into authors (id, created_at, updated_at, name)
-values (1979, now(), now(), 'Patanjali');
+values (1979, now(), now(), 'Sam Smith');
 
 insert into authors (id, created_at, updated_at, name)
-values (1980, now(), now(), 'Athur Schopenhauer');
+values (1980, now(), now(), 'Kirsteen Robson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1981, now(), now(), 'Milton Friedman');
+values (1981, now(), now(), 'Aikawa Atsushi');
 
 insert into authors (id, created_at, updated_at, name)
-values (1982, now(), now(), 'Hồ Văn Phi');
+values (1982, now(), now(), 'Igari Emiko');
 
 insert into authors (id, created_at, updated_at, name)
-values (1983, now(), now(), 'Niccolò Machiavelli');
+values (1983, now(), now(), 'Gilles Diederichs');
 
 insert into authors (id, created_at, updated_at, name)
-values (1984, now(), now(), 'Aristotle');
+values (1984, now(), now(), 'John Medina');
 
 insert into authors (id, created_at, updated_at, name)
-values (1985, now(), now(), 'Osho');
+values (1985, now(), now(), 'Barry Neil Kaufman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1986, now(), now(), 'Krishnamurti');
+values (1986, now(), now(), 'Raun Kaufman');
 
 insert into authors (id, created_at, updated_at, name)
-values (1987, now(), now(), 'Mai Văn Bộ');
+values (1987, now(), now(), 'Amy Morin');
 
 insert into authors (id, created_at, updated_at, name)
-values (1988, now(), now(), 'Byung Chul Han');
+values (1988, now(), now(), 'Ellen Notbohm');
 
 insert into authors (id, created_at, updated_at, name)
-values (1989, now(), now(), 'Lưu Ngôn');
+values (1989, now(), now(), 'TS Nguyễn Thị Thu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1990, now(), now(), 'Lý Giác Minh');
+values (1990, now(), now(), 'Bông hoa đỏ Bangson');
 
 insert into authors (id, created_at, updated_at, name)
-values (1991, now(), now(), 'Lâm Thấm');
+values (1991, now(), now(), 'Little Shadow');
 
 insert into authors (id, created_at, updated_at, name)
-values (1992, now(), now(), 'Shelly Kagan');
+values (1992, now(), now(), 'Kat C Wilde');
 
 insert into authors (id, created_at, updated_at, name)
-values (1993, now(), now(), 'Quốc Hội');
+values (1993, now(), now(), 'Susan Perrow');
 
 insert into authors (id, created_at, updated_at, name)
-values (1994, now(), now(), 'Luật sư Nguyễn Hữu Phước');
+values (1994, now(), now(), 'Nishimura Noriyasu');
 
 insert into authors (id, created_at, updated_at, name)
-values (1995, now(), now(), 'LS Nguyễn Hữu Phước');
+values (1995, now(), now(), 'Vũ Thị Thu Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (1996, now(), now(), 'Nguyễn Ngọc Bích');
+values (1996, now(), now(), 'Nguyễn Thị Thu Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (1997, now(), now(), 'Trần Duy Lượng');
+values (1997, now(), now(), 'Tô Thị Hoàng Lan');
 
 insert into authors (id, created_at, updated_at, name)
-values (1998, now(), now(), 'Trần Việt Dũng');
+values (1998, now(), now(), 'Phạm Thị Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (1999, now(), now(), 'Ngô Quốc Chiến');
+values (1999, now(), now(), 'Sophie De Mullenheim và cộng sự');
 
 insert into authors (id, created_at, updated_at, name)
-values (2000, now(), now(), 'Lê Trường Xuân');
+values (2000, now(), now(), 'Shiomi Toshiyuki');
 
 insert into authors (id, created_at, updated_at, name)
-values (2001, now(), now(), 'Trần Đức Tuấn');
+values (2001, now(), now(), 'Phú Gia Ích');
 
 insert into authors (id, created_at, updated_at, name)
-values (2002, now(), now(), 'Trần Dân Tiên');
+values (2002, now(), now(), 'Christina Sungaie Choi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2003, now(), now(), 'Chủ tịch Hồ Chí Minh');
+values (2003, now(), now(), 'Peck Cho');
 
 insert into authors (id, created_at, updated_at, name)
-values (2004, now(), now(), 'X.Y.Z');
+values (2004, now(), now(), 'Craig Kessler');
 
 insert into authors (id, created_at, updated_at, name)
-values (2005, now(), now(), 'Lê Duẩn');
+values (2005, now(), now(), 'TS Phạm Toàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2006, now(), now(), 'John Toland');
+values (2006, now(), now(), 'BS Lâm Hiếu Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2007, now(), now(), 'Dương Thành Truyền');
+values (2007, now(), now(), 'Shino Maki');
 
 insert into authors (id, created_at, updated_at, name)
-values (2008, now(), now(), 'Trần Thái Bình');
+values (2008, now(), now(), 'Nakanawa Fumiko');
 
 insert into authors (id, created_at, updated_at, name)
-values (2009, now(), now(), 'TS Nguyễn Văn Khoan');
+values (2009, now(), now(), 'Masaaki Yatagai');
 
 insert into authors (id, created_at, updated_at, name)
-values (2010, now(), now(), 'Hà Minh Hồng');
+values (2010, now(), now(), 'Huy Tiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2011, now(), now(), 'Nguyễn Thanh Tuyền');
+values (2011, now(), now(), 'Céline Alvarez');
 
 insert into authors (id, created_at, updated_at, name)
-values (2012, now(), now(), 'Ngô Thị Thu Hoài');
+values (2012, now(), now(), 'TS Ross W. Greene');
 
 insert into authors (id, created_at, updated_at, name)
-values (2013, now(), now(), 'Đinh Xuân Dũng');
+values (2013, now(), now(), 'Yến Tử');
 
 insert into authors (id, created_at, updated_at, name)
-values (2014, now(), now(), 'Nguyễn Như Ý');
+values (2014, now(), now(), 'Louise Boyd Cadwell');
 
 insert into authors (id, created_at, updated_at, name)
-values (2015, now(), now(), 'PGS TS Ngô Minh Oanh');
+values (2015, now(), now(), 'Quỳnh Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2016, now(), now(), 'TS Ngô Thị Minh Hằng');
+values (2016, now(), now(), 'Arimoto Hidefumi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2017, now(), now(), 'Võ Dương Thúy Ngà');
+values (2017, now(), now(), 'Koshimizu Kaori');
 
 insert into authors (id, created_at, updated_at, name)
-values (2018, now(), now(), 'Ian Bremmer');
+values (2018, now(), now(), 'Masanobu Takahama');
 
 insert into authors (id, created_at, updated_at, name)
-values (2019, now(), now(), 'Ban Tuyên Giáo Trung Ương');
+values (2019, now(), now(), 'Akehashi Daiji');
 
 insert into authors (id, created_at, updated_at, name)
-values (2020, now(), now(), 'Nguyễn Chương');
+values (2020, now(), now(), 'Kannari Miki');
 
 insert into authors (id, created_at, updated_at, name)
-values (2021, now(), now(), 'Will Durant');
+values (2021, now(), now(), 'Rebecca Rolland');
 
 insert into authors (id, created_at, updated_at, name)
-values (2022, now(), now(), 'Vũ Kỳ');
+values (2022, now(), now(), 'Trần Hân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2023, now(), now(), 'Peter Healther');
+values (2023, now(), now(), 'Thanh Nhã');
 
 insert into authors (id, created_at, updated_at, name)
-values (2024, now(), now(), 'John Rapley');
+values (2024, now(), now(), 'Yukihiro Murase');
 
 insert into authors (id, created_at, updated_at, name)
-values (2025, now(), now(), 'TS Vũ Dương Thúy Ngà');
+values (2025, now(), now(), 'Mami Fukuchi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2026, now(), now(), 'Trần Đình Việt');
+values (2026, now(), now(), 'Ève Herrmann');
 
 insert into authors (id, created_at, updated_at, name)
-values (2027, now(), now(), 'Hoài Lộc');
+values (2027, now(), now(), 'Đỗ Thị Minh Nguyệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (2028, now(), now(), 'Bùi Việt Thanh');
+values (2028, now(), now(), 'Daniel J Siegel');
 
 insert into authors (id, created_at, updated_at, name)
-values (2029, now(), now(), 'Rosie Hore');
+values (2029, now(), now(), 'Tina Payne Bryson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2030, now(), now(), 'Louie Stowell');
+values (2030, now(), now(), 'Jane Nelsen');
 
 insert into authors (id, created_at, updated_at, name)
-values (2031, now(), now(), 'Khánh Linh');
+values (2031, now(), now(), 'Cheryl Erwin');
 
 insert into authors (id, created_at, updated_at, name)
-values (2032, now(), now(), 'Chu Trọng Huyến');
+values (2032, now(), now(), 'Roslyn Duffy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2033, now(), now(), 'Trần Đình Vân');
+values (2033, now(), now(), 'Trần Thị Huế');
 
 insert into authors (id, created_at, updated_at, name)
-values (2034, now(), now(), 'Văn Tùng');
+values (2034, now(), now(), 'Marie Hélène Place');
 
 insert into authors (id, created_at, updated_at, name)
-values (2035, now(), now(), 'Xuân Sách');
+values (2035, now(), now(), 'BS Trần Thị Huyên Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2036, now(), now(), 'Phạm Thắng');
+values (2036, now(), now(), 'Nguyễn Trí Đoàn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2037, now(), now(), 'Phạm Văn Nhân');
+values (2037, now(), now(), 'Uyên Bùi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2038, now(), now(), 'Bác sĩ Điinh Thiện Khanh');
+values (2038, now(), now(), 'BS Lê Ngọc Anh Thy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2039, now(), now(), 'Đỗ Ca Sơn');
+values (2039, now(), now(), 'Tsutsumi Chiharu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2040, now(), now(), 'Karl Marx');
+values (2040, now(), now(), 'DS Trương Minh Đạt');
 
 insert into authors (id, created_at, updated_at, name)
-values (2041, now(), now(), 'Friedrich Engels');
+values (2041, now(), now(), 'BS Lê Thị Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (2042, now(), now(), 'Vũ Tình');
+values (2042, now(), now(), 'Hetty van de Rijt');
 
 insert into authors (id, created_at, updated_at, name)
-values (2043, now(), now(), 'Vương Trọng');
+values (2043, now(), now(), 'Frans Plooij');
 
 insert into authors (id, created_at, updated_at, name)
-values (2044, now(), now(), 'Cloud Pillow Studio');
+values (2044, now(), now(), 'Xaviera Plas-Plooij');
 
 insert into authors (id, created_at, updated_at, name)
-values (2045, now(), now(), 'Lê Minh Hải');
+values (2045, now(), now(), 'Mẹ Ong Bông');
 
 insert into authors (id, created_at, updated_at, name)
-values (2046, now(), now(), 'Ban Tuyên Giáo Trung Ương Đảng');
+values (2046, now(), now(), 'Bubu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2047, now(), now(), 'PGS TS Nguyễn Viết Thông');
+values (2047, now(), now(), 'Vương Trung Hiếu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2048, now(), now(), 'Đạm Phương Nữ Sử');
+values (2048, now(), now(), 'Lưu Trường Vỹ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2049, now(), now(), 'Doãn Kiếm Lợi');
+values (2049, now(), now(), 'Hachun Lyonnet (Hà Chũn)');
 
 insert into authors (id, created_at, updated_at, name)
-values (2050, now(), now(), 'Urako Kanamori');
+values (2050, now(), now(), 'BS Nguyễn Hồng Thu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2051, now(), now(), 'Masami Sasaki');
+values (2051, now(), now(), 'Trần Thị Huyên Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2052, now(), now(), 'Wakamatsu Aki');
+values (2052, now(), now(), 'Kubota Kisou');
 
 insert into authors (id, created_at, updated_at, name)
-values (2053, now(), now(), 'Hoàng Anh Tú');
+values (2053, now(), now(), 'Kubota Kayoko');
 
 insert into authors (id, created_at, updated_at, name)
-values (2054, now(), now(), 'Hachun Lyonnet');
+values (2054, now(), now(), 'Dr Miriam Stoppard');
 
 insert into authors (id, created_at, updated_at, name)
-values (2055, now(), now(), 'Hương Đỗ');
+values (2055, now(), now(), 'BS Michel Cymes');
 
 insert into authors (id, created_at, updated_at, name)
-values (2056, now(), now(), 'Tiến sĩ Shefali Tsabary');
+values (2056, now(), now(), 'Laure Monloubou');
 
 insert into authors (id, created_at, updated_at, name)
-values (2057, now(), now(), 'Russell A. Barkley');
+values (2057, now(), now(), 'BS Sĩ Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2058, now(), now(), 'Tracy Hogg');
+values (2058, now(), now(), 'Fir Forest');
 
 insert into authors (id, created_at, updated_at, name)
-values (2059, now(), now(), 'Melinda Blau');
+values (2059, now(), now(), 'BS. Nguyễn Thị Thu Hậu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2060, now(), now(), 'Alicia Vu');
+values (2060, now(), now(), 'Isabelle Gambet');
 
 insert into authors (id, created_at, updated_at, name)
-values (2061, now(), now(), 'Sara Imas');
+values (2061, now(), now(), 'Mẹ Tee');
 
 insert into authors (id, created_at, updated_at, name)
-values (2062, now(), now(), 'Triệu Linh Linh');
+values (2062, now(), now(), 'Scott Todnem');
 
 insert into authors (id, created_at, updated_at, name)
-values (2063, now(), now(), 'Naoko Narita');
+values (2063, now(), now(), 'Vanessa Osage');
 
 insert into authors (id, created_at, updated_at, name)
-values (2064, now(), now(), 'Erika Takeuchi');
+values (2064, now(), now(), 'Heather Anderson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2065, now(), now(), 'Vương Phi');
+values (2065, now(), now(), 'Fay Angelo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2066, now(), now(), 'Trương An Kỳ');
+values (2066, now(), now(), 'Rose Stewart');
 
 insert into authors (id, created_at, updated_at, name)
-values (2067, now(), now(), 'Hu Nuan Nuan');
+values (2067, now(), now(), 'Lynn Lott');
 
 insert into authors (id, created_at, updated_at, name)
-values (2068, now(), now(), 'Lindsay C.Gibson');
+values (2068, now(), now(), 'Julie Davey');
 
 insert into authors (id, created_at, updated_at, name)
-values (2069, now(), now(), 'Trương Nguyện Thành');
+values (2069, now(), now(), 'Marawa Ibrahim');
 
 insert into authors (id, created_at, updated_at, name)
-values (2070, now(), now(), 'Adrian Kulp');
+values (2070, now(), now(), 'Sinem Erkas');
 
 insert into authors (id, created_at, updated_at, name)
-values (2071, now(), now(), 'Nobuyoshi Hirai');
+values (2071, now(), now(), 'Thiên vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2072, now(), now(), 'Tanith Carey');
+values (2072, now(), now(), 'Jeff Taylor');
 
 insert into authors (id, created_at, updated_at, name)
-values (2073, now(), now(), 'Angharad Rudkin');
+values (2073, now(), now(), 'Monika Parkinson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2074, now(), now(), 'Nana Hatano');
+values (2074, now(), now(), 'Shirley Reynolds');
 
 insert into authors (id, created_at, updated_at, name)
-values (2075, now(), now(), 'Kirsteen Robson');
+values (2075, now(), now(), 'Trần Quân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2076, now(), now(), 'Aikawa Atsushi');
+values (2076, now(), now(), 'Từ Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2077, now(), now(), 'Igari Emiko');
+values (2077, now(), now(), 'Madeline Levine');
 
 insert into authors (id, created_at, updated_at, name)
-values (2078, now(), now(), 'Gilles Diederichs');
+values (2078, now(), now(), 'Dorothy Law Nolte');
 
 insert into authors (id, created_at, updated_at, name)
-values (2079, now(), now(), 'John Medina');
+values (2079, now(), now(), 'Rachel Harris');
 
 insert into authors (id, created_at, updated_at, name)
-values (2080, now(), now(), 'Vũ Thị Thu Hằng');
+values (2080, now(), now(), 'Terue Yamagata');
 
 insert into authors (id, created_at, updated_at, name)
-values (2081, now(), now(), 'Nguyễn Thị Thu Huyền');
+values (2081, now(), now(), 'Trạch Quế Vinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2082, now(), now(), 'Tô Thị Hoàng Lan');
+values (2082, now(), now(), 'Masato Takeuchi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2083, now(), now(), 'Phạm Thị Thúy');
+values (2083, now(), now(), 'Park Hannah');
 
 insert into authors (id, created_at, updated_at, name)
-values (2084, now(), now(), 'Trịnh Vĩnh Sinh');
+values (2084, now(), now(), 'Darin');
 
 insert into authors (id, created_at, updated_at, name)
-values (2085, now(), now(), 'Sư Đan');
+values (2085, now(), now(), 'Đỗ Hồng Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2086, now(), now(), 'Hà Tĩnh');
+values (2086, now(), now(), 'Lily Nichols');
 
 insert into authors (id, created_at, updated_at, name)
-values (2087, now(), now(), 'Lisa Bullard');
+values (2087, now(), now(), 'Ths Đỗ Thanh Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2088, now(), now(), 'Christine M Schneider');
+values (2088, now(), now(), 'Trần Diệu Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2089, now(), now(), 'Barry Neil Kaufman');
+values (2089, now(), now(), 'TS Phạm Thị Thuý');
 
 insert into authors (id, created_at, updated_at, name)
-values (2090, now(), now(), 'Raun Kaufman');
+values (2090, now(), now(), 'Lý Thuyết Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2091, now(), now(), 'Ellen Notbohm');
+values (2091, now(), now(), 'Thu Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2092, now(), now(), 'Amy Morin');
+values (2092, now(), now(), 'Song Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2093, now(), now(), 'TS Nguyễn Thị Thu');
+values (2093, now(), now(), 'Trương Tinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2094, now(), now(), 'Kat C Wilde');
+values (2094, now(), now(), 'Để Tuệ Mẫn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2095, now(), now(), 'Little Shadow');
+values (2095, now(), now(), 'Vương Kỳ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2096, now(), now(), 'Bông hoa đỏ Bangson');
+values (2096, now(), now(), 'Bs Trần Thị Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2097, now(), now(), 'Susan Perrow');
+values (2097, now(), now(), 'Ngọc Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2098, now(), now(), 'Sophie De Mullenheim và cộng sự');
+values (2098, now(), now(), 'Hạnh Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2099, now(), now(), 'Nishimura Noriyasu');
+values (2099, now(), now(), 'Phạm Ngọc Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2100, now(), now(), 'Shino Maki');
+values (2100, now(), now(), 'Heidi Murkoff');
 
 insert into authors (id, created_at, updated_at, name)
-values (2101, now(), now(), 'Nakanawa Fumiko');
+values (2101, now(), now(), 'Châu Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (2102, now(), now(), 'Masaaki Yatagai');
+values (2102, now(), now(), 'Hán Trúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2103, now(), now(), 'Huy Tiến');
+values (2103, now(), now(), 'Amanda Rodriguez');
 
 insert into authors (id, created_at, updated_at, name)
-values (2104, now(), now(), 'Arimoto Hidefumi');
+values (2104, now(), now(), 'Bộ Giáo Dục và Đào Tạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2105, now(), now(), 'Koshimizu Kaori');
+values (2105, now(), now(), 'Patanjali');
 
 insert into authors (id, created_at, updated_at, name)
-values (2106, now(), now(), 'Céline Alvarez');
+values (2106, now(), now(), 'Athur Schopenhauer');
 
 insert into authors (id, created_at, updated_at, name)
-values (2107, now(), now(), 'TS Ross W. Greene');
+values (2107, now(), now(), 'Milton Friedman');
 
 insert into authors (id, created_at, updated_at, name)
-values (2108, now(), now(), 'Yến Tử');
+values (2108, now(), now(), 'Hồ Văn Phi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2109, now(), now(), 'Louise Boyd Cadwell');
+values (2109, now(), now(), 'Niccolò Machiavelli');
 
 insert into authors (id, created_at, updated_at, name)
-values (2110, now(), now(), 'Anne');
+values (2110, now(), now(), 'Aristotle');
 
 insert into authors (id, created_at, updated_at, name)
-values (2111, now(), now(), 'Claire Kleindienst');
+values (2111, now(), now(), 'Byung Chul Han');
 
 insert into authors (id, created_at, updated_at, name)
-values (2112, now(), now(), 'Lynda Corazza');
+values (2112, now(), now(), 'Osho');
 
 insert into authors (id, created_at, updated_at, name)
-values (2113, now(), now(), 'Masanobu Takahama');
+values (2113, now(), now(), 'Shelly Kagan');
 
 insert into authors (id, created_at, updated_at, name)
-values (2114, now(), now(), 'Cai Ning');
+values (2114, now(), now(), 'Krishnamurti');
 
 insert into authors (id, created_at, updated_at, name)
-values (2115, now(), now(), 'Michaeleen Doucleff');
+values (2115, now(), now(), 'Lưu Ngôn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2116, now(), now(), 'Phàn Tổ An');
+values (2116, now(), now(), 'Lý Giác Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2117, now(), now(), 'Akehashi Daiji');
+values (2117, now(), now(), 'Lâm Thấm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2118, now(), now(), 'Kannari Miki');
+values (2118, now(), now(), 'Mai Văn Bộ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2119, now(), now(), 'Trần Hân');
+values (2119, now(), now(), 'Quách Dương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2120, now(), now(), 'Thanh Nhã');
+values (2120, now(), now(), 'Cao Thiểm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2121, now(), now(), 'Yukihiro Murase');
+values (2121, now(), now(), 'Nguyễn Ngọc Điệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2122, now(), now(), 'Mami Fukuchi');
+values (2122, now(), now(), 'ThS NCS Tạ Đình Tuyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (2123, now(), now(), 'Rebecca Rolland');
+values (2123, now(), now(), 'ThS NCS Nguyễn Văn Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2124, now(), now(), 'Ève Herrmann');
+values (2124, now(), now(), 'Tài Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (2125, now(), now(), 'Đỗ Thị Minh Nguyệt');
+values (2125, now(), now(), 'Quốc Hội');
 
 insert into authors (id, created_at, updated_at, name)
-values (2126, now(), now(), 'BS Trần Thị Huyên Thảo');
+values (2126, now(), now(), 'Nguyễn Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2127, now(), now(), 'Nguyễn Trí Đoàn');
+values (2127, now(), now(), 'Trần Đức Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2128, now(), now(), 'Uyên Bùi');
+values (2128, now(), now(), 'Chủ tịch Hồ Chí Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2129, now(), now(), 'BS Lê Ngọc Anh Thy');
+values (2129, now(), now(), 'Trần Dân Tiên');
 
 insert into authors (id, created_at, updated_at, name)
-values (2130, now(), now(), 'Tsutsumi Chiharu');
+values (2130, now(), now(), 'Lê Duẩn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2131, now(), now(), 'DS Trương Minh Đạt');
+values (2131, now(), now(), 'John Toland');
 
 insert into authors (id, created_at, updated_at, name)
-values (2132, now(), now(), 'Vương Trung Hiếu');
+values (2132, now(), now(), 'X.Y.Z');
 
 insert into authors (id, created_at, updated_at, name)
-values (2133, now(), now(), 'BS Lê Thị Hải');
+values (2133, now(), now(), 'Trần Thái Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (2134, now(), now(), 'Hetty van de Rijt');
+values (2134, now(), now(), 'Võ Dương Thúy Ngà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2135, now(), now(), 'Frans Plooij');
+values (2135, now(), now(), 'Ian Bremmer');
 
 insert into authors (id, created_at, updated_at, name)
-values (2136, now(), now(), 'Xaviera Plas-Plooij');
+values (2136, now(), now(), 'Nguyễn Chương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2137, now(), now(), 'Mẹ Ong Bông');
+values (2137, now(), now(), 'Will Durant');
 
 insert into authors (id, created_at, updated_at, name)
-values (2138, now(), now(), 'Bubu Hương');
+values (2138, now(), now(), 'Vũ Kỳ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2139, now(), now(), 'Lưu Trường Vỹ');
+values (2139, now(), now(), 'Hà Minh Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2140, now(), now(), 'Hachun Lyonnet (Hà Chũn)');
+values (2140, now(), now(), 'Nguyễn Thanh Tuyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2141, now(), now(), 'BS Nguyễn Hồng Thu');
+values (2141, now(), now(), 'Ngô Thị Thu Hoài');
 
 insert into authors (id, created_at, updated_at, name)
-values (2142, now(), now(), 'Trần Thị Huyên Thảo');
+values (2142, now(), now(), 'TS Nguyễn Văn Khoan');
 
 insert into authors (id, created_at, updated_at, name)
-values (2143, now(), now(), 'Kubota Kisou');
+values (2143, now(), now(), 'Đinh Xuân Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2144, now(), now(), 'Kubota Kayoko');
+values (2144, now(), now(), 'Nguyễn Như Ý');
 
 insert into authors (id, created_at, updated_at, name)
-values (2145, now(), now(), 'Gill Rapley');
+values (2145, now(), now(), 'PGS TS Ngô Minh Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2146, now(), now(), 'Tracey Murkett');
+values (2146, now(), now(), 'TS Ngô Thị Minh Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2147, now(), now(), 'Hứa Chính Phương');
+values (2147, now(), now(), 'Ban Tuyên Giáo Trung Ương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2148, now(), now(), 'Vegan Q');
+values (2148, now(), now(), 'Khánh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2149, now(), now(), 'Quỳnh ăn chay');
+values (2149, now(), now(), 'Trần Văn Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2150, now(), now(), 'Stepanka Sekaninova');
+values (2150, now(), now(), 'Vũ Tình');
 
 insert into authors (id, created_at, updated_at, name)
-values (2151, now(), now(), 'Marta matus');
+values (2151, now(), now(), 'Nguyễn Thị Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2152, now(), now(), 'Dr Martin Ward Platt');
+values (2152, now(), now(), 'Nguyễn Thị Thanh Ngân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2153, now(), now(), 'Delphine');
+values (2153, now(), now(), 'Hoài Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2154, now(), now(), 'Gustavo Mazali');
+values (2154, now(), now(), 'Bùi Việt Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2155, now(), now(), 'Carol Cooper');
+values (2155, now(), now(), 'Rosie Hore');
 
 insert into authors (id, created_at, updated_at, name)
-values (2156, now(), now(), 'Steve P Shelov');
+values (2156, now(), now(), 'Chu Trọng Huyến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2157, now(), now(), 'Shelly Vaziri Flais');
+values (2157, now(), now(), 'Đỗ Ca Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2158, now(), now(), 'Meenal Lele');
+values (2158, now(), now(), 'Karl Marx');
 
 insert into authors (id, created_at, updated_at, name)
-values (2159, now(), now(), 'Scott Todnem');
+values (2159, now(), now(), 'Friedrich Engels');
 
 insert into authors (id, created_at, updated_at, name)
-values (2160, now(), now(), 'Vanessa Osage');
+values (2160, now(), now(), 'Vương Trọng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2161, now(), now(), 'Heather Anderson');
+values (2161, now(), now(), 'Cloud Pillow Studio');
 
 insert into authors (id, created_at, updated_at, name)
-values (2162, now(), now(), 'Fay Angelo');
+values (2162, now(), now(), 'Trần Đình Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2163, now(), now(), 'Rose Stewart');
+values (2163, now(), now(), 'Văn Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2164, now(), now(), 'Jane Nelsen');
+values (2164, now(), now(), 'Xuân Sách');
 
 insert into authors (id, created_at, updated_at, name)
-values (2165, now(), now(), 'Lynn Lott');
+values (2165, now(), now(), 'Phạm Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2166, now(), now(), 'Marawa Ibrahim');
+values (2166, now(), now(), 'Phạm Văn Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2167, now(), now(), 'Sinem Erkas');
+values (2167, now(), now(), 'Bác sĩ Điinh Thiện Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2168, now(), now(), 'Thiên vũ');
+values (2168, now(), now(), 'Hội Đồng Đội Trung Ương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2169, now(), now(), 'Isabelle Filliozat');
+values (2169, now(), now(), 'PGS TS Nguyễn Viết Thông');
 
 insert into authors (id, created_at, updated_at, name)
-values (2170, now(), now(), 'Anouk Dubois');
+values (2170, now(), now(), 'Nguyễn Thị Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (2171, now(), now(), 'Jeff Taylor');
+values (2171, now(), now(), 'Ban Biên Tập Waka');
 
 insert into authors (id, created_at, updated_at, name)
-values (2172, now(), now(), 'Julie Davey');
+values (2172, now(), now(), 'Larry Berman');
 
 insert into authors (id, created_at, updated_at, name)
-values (2173, now(), now(), 'Madeline Levine');
+values (2173, now(), now(), 'Nguyễn Chí Vịnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2174, now(), now(), 'Dorothy Law Nolte');
+values (2174, now(), now(), 'Lê Xuân Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2175, now(), now(), 'Rachel Harris');
+values (2175, now(), now(), 'Xuân Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2176, now(), now(), 'Terue Yamagata');
+values (2176, now(), now(), 'Paolo Bracaglia Morante');
 
 insert into authors (id, created_at, updated_at, name)
-values (2177, now(), now(), 'Cynthia Clumeck Muchnick');
+values (2177, now(), now(), 'Camillo Pisani');
 
 insert into authors (id, created_at, updated_at, name)
-values (2178, now(), now(), 'Jenn Bowie Curtis');
+values (2178, now(), now(), 'Pino Dangelico');
 
 insert into authors (id, created_at, updated_at, name)
-values (2179, now(), now(), 'Thanh Giang');
+values (2179, now(), now(), 'Paul Kalanithi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2180, now(), now(), 'Trạch Quế Vinh');
+values (2180, now(), now(), 'Đức Giáo Hoàng Phanxicô');
 
 insert into authors (id, created_at, updated_at, name)
-values (2181, now(), now(), 'Masato Takeuchi');
+values (2181, now(), now(), 'Maye Musk');
 
 insert into authors (id, created_at, updated_at, name)
-values (2182, now(), now(), 'Park Hannah');
+values (2182, now(), now(), 'BS Huỳnh Wynh Trần');
 
 insert into authors (id, created_at, updated_at, name)
-values (2183, now(), now(), 'Darin');
+values (2183, now(), now(), 'Intimaycy Coach LyLy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2184, now(), now(), 'Đỗ Hồng Ngọc');
+values (2184, now(), now(), 'Alice Schroeder');
 
 insert into authors (id, created_at, updated_at, name)
-values (2185, now(), now(), 'Lily Nichols');
+values (2185, now(), now(), 'Paramahansan Yogananda');
 
 insert into authors (id, created_at, updated_at, name)
-values (2186, now(), now(), 'Lý Thuyết Minh');
+values (2186, now(), now(), 'Khu Di Tích Chủ Tịch Hồ Chí Minh Tại Phủ Chủ Tịch');
 
 insert into authors (id, created_at, updated_at, name)
-values (2187, now(), now(), 'Thu Hằng');
+values (2187, now(), now(), 'Đặng Văn Việt');
 
 insert into authors (id, created_at, updated_at, name)
-values (2188, now(), now(), 'Ths Đỗ Thanh Huyền');
+values (2188, now(), now(), 'Rasmus Hoài Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (2189, now(), now(), 'Trần Diệu Hằng');
+values (2189, now(), now(), 'Denise Affonco');
 
 insert into authors (id, created_at, updated_at, name)
-values (2190, now(), now(), 'TS Phạm Thị Thuý');
+values (2190, now(), now(), 'Thiếu Tướng Hoàng Đan');
 
 insert into authors (id, created_at, updated_at, name)
-values (2191, now(), now(), 'Hán Trúc');
+values (2191, now(), now(), 'Đại Tướng Võ Nguyên Giáp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2192, now(), now(), 'Amanda Rodriguez');
+values (2192, now(), now(), 'Phạm Chí Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2193, now(), now(), 'Song Linh');
+values (2193, now(), now(), 'Robert S. McNamara');
 
 insert into authors (id, created_at, updated_at, name)
-values (2194, now(), now(), 'Trương Tinh');
+values (2194, now(), now(), 'Brian VanDemark');
 
 insert into authors (id, created_at, updated_at, name)
-values (2195, now(), now(), 'Để Tuệ Mẫn');
+values (2195, now(), now(), 'Jon Balchin');
 
 insert into authors (id, created_at, updated_at, name)
-values (2196, now(), now(), 'Vương Kỳ');
+values (2196, now(), now(), 'Hà Minh Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (2197, now(), now(), 'Bs Trần Thị Hoa');
+values (2197, now(), now(), 'Nguyễn Công Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2198, now(), now(), 'Ngọc Chi');
+values (2198, now(), now(), 'Phạm Hữu Thậm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2199, now(), now(), 'Hạnh Trang');
+values (2199, now(), now(), 'Trần Bạch Đằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2200, now(), now(), 'Phạm Ngọc Thắng');
+values (2200, now(), now(), 'Lê Văn Năm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2201, now(), now(), 'Heidi Murkoff');
+values (2201, now(), now(), 'Nguyễn Huy Khôi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2202, now(), now(), 'Châu Nguyên');
+values (2202, now(), now(), 'Nguyễn Thùy Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2203, now(), now(), 'Nguyễn Thị Bình');
+values (2203, now(), now(), 'Nông Thị Trưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2204, now(), now(), 'Ban Biên Tập Waka');
+values (2204, now(), now(), 'Phùng Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (2205, now(), now(), 'Larry Berman');
+values (2205, now(), now(), 'Hoàng Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (2206, now(), now(), 'Nguyễn Chí Vịnh');
+values (2206, now(), now(), 'Craig Mcnamara');
 
 insert into authors (id, created_at, updated_at, name)
-values (2207, now(), now(), 'Lê Xuân Khoa');
+values (2207, now(), now(), 'Antony Wild');
 
 insert into authors (id, created_at, updated_at, name)
-values (2208, now(), now(), 'Xuân Chi');
+values (2208, now(), now(), 'Richard Rhodes');
 
 insert into authors (id, created_at, updated_at, name)
-values (2209, now(), now(), 'Paolo Bracaglia Morante');
+values (2209, now(), now(), 'Ralph Pezzullo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2210, now(), now(), 'Camillo Pisani');
+values (2210, now(), now(), 'Trần Lê Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2211, now(), now(), 'Pino Dangelico');
+values (2211, now(), now(), 'Oliver Stone');
 
 insert into authors (id, created_at, updated_at, name)
-values (2212, now(), now(), 'Paul Kalanithi');
+values (2212, now(), now(), 'Thanh Thủy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2213, now(), now(), 'Đức Giáo Hoàng Phanxicô');
+values (2213, now(), now(), 'Xuân Phượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2214, now(), now(), 'Haruki Murakami');
+values (2214, now(), now(), 'Đặng Ngọc Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (2215, now(), now(), 'Maye Musk');
+values (2215, now(), now(), 'Haruki Murakami');
 
 insert into authors (id, created_at, updated_at, name)
-values (2216, now(), now(), 'Paramahansan Yogananda');
+values (2216, now(), now(), 'Như Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2217, now(), now(), 'Intimaycy Coach LyLy');
+values (2217, now(), now(), 'Michelle Zauner');
 
 insert into authors (id, created_at, updated_at, name)
-values (2218, now(), now(), 'Alice Schroeder');
+values (2218, now(), now(), 'Tự Ngôn Lữ Quán');
 
 insert into authors (id, created_at, updated_at, name)
-values (2219, now(), now(), 'Khu Di Tích Chủ Tịch Hồ Chí Minh Tại Phủ Chủ Tịch');
+values (2219, now(), now(), 'Fabrice Peltier');
 
 insert into authors (id, created_at, updated_at, name)
-values (2220, now(), now(), 'Đặng Văn Việt');
+values (2220, now(), now(), 'Nguyễn Đình Lộc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2221, now(), now(), 'BS Huỳnh Wynh Trần');
+values (2221, now(), now(), 'Micheal Jackson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2222, now(), now(), 'Kito Aya');
+values (2222, now(), now(), 'Miss Universe Vietnam 2024');
 
 insert into authors (id, created_at, updated_at, name)
-values (2223, now(), now(), 'Thiếu Tướng Hoàng Đan');
+values (2223, now(), now(), 'Nguyễn Thanh Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2224, now(), now(), 'Đại Tướng Võ Nguyên Giáp');
+values (2224, now(), now(), 'Quốc Bảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2225, now(), now(), 'Phạm Chí Nhân');
+values (2225, now(), now(), 'Hua Hsu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2226, now(), now(), 'Jon Balchin');
+values (2226, now(), now(), 'Malcolm Croft');
 
 insert into authors (id, created_at, updated_at, name)
-values (2227, now(), now(), 'Robert S. McNamara');
+values (2227, now(), now(), 'Nick Mason');
 
 insert into authors (id, created_at, updated_at, name)
-values (2228, now(), now(), 'Brian VanDemark');
+values (2228, now(), now(), 'Hùng Cửu Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (2229, now(), now(), 'Ralph Pezzullo');
+values (2229, now(), now(), 'Park Hee A');
 
 insert into authors (id, created_at, updated_at, name)
-values (2230, now(), now(), 'Nguyễn Công Huy');
+values (2230, now(), now(), 'Edwin Lefèvre');
 
 insert into authors (id, created_at, updated_at, name)
-values (2231, now(), now(), 'Phạm Hữu Thậm');
+values (2231, now(), now(), 'Robert L. Heilbroner');
 
 insert into authors (id, created_at, updated_at, name)
-values (2232, now(), now(), 'Trần Bạch Đằng');
+values (2232, now(), now(), 'Peter Temin');
 
 insert into authors (id, created_at, updated_at, name)
-values (2233, now(), now(), 'Lê Văn Năm');
+values (2233, now(), now(), 'David Vines');
 
 insert into authors (id, created_at, updated_at, name)
-values (2234, now(), now(), 'Nguyễn Huy Khôi');
+values (2234, now(), now(), 'Bryan Burrough');
 
 insert into authors (id, created_at, updated_at, name)
-values (2235, now(), now(), 'Nguyễn Thùy Linh');
+values (2235, now(), now(), 'John Helyar');
 
 insert into authors (id, created_at, updated_at, name)
-values (2236, now(), now(), 'Nông Thị Trưng');
+values (2236, now(), now(), 'James Wallace');
 
 insert into authors (id, created_at, updated_at, name)
-values (2237, now(), now(), 'Phùng Lê');
+values (2237, now(), now(), 'Jim Erickson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2238, now(), now(), 'Hoàng Hải');
+values (2238, now(), now(), 'TS Đỗ Thị Mỹ Hiền. TS Phạm Gặp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2239, now(), now(), 'Craig Mcnamara');
+values (2239, now(), now(), 'PGS TS Nguyễn Trọng Văn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2240, now(), now(), 'Antony Wild');
+values (2240, now(), now(), 'Lê Hoàng Diệp Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2241, now(), now(), 'Richard Rhodes');
+values (2241, now(), now(), 'Trần Quốc Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2242, now(), now(), 'Robert Kurson');
+values (2242, now(), now(), 'Nguyễn Xuân Xanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2243, now(), now(), 'Phạm Thanh Tâm');
+values (2243, now(), now(), 'Võ Thị Xuân Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2244, now(), now(), 'Thế Kỷ');
+values (2244, now(), now(), 'Thương Mỗ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2245, now(), now(), 'Jack Weatherford');
+values (2245, now(), now(), 'Lê Duyên Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (2246, now(), now(), 'Cát Thảo Nguyễn');
+values (2246, now(), now(), 'Anthony B. Chan');
 
 insert into authors (id, created_at, updated_at, name)
-values (2247, now(), now(), 'Khánh Nguyên');
+values (2247, now(), now(), 'Clyde Prestowitz');
 
 insert into authors (id, created_at, updated_at, name)
-values (2248, now(), now(), 'ADC');
+values (2248, now(), now(), 'Bandy X Lee');
 
 insert into authors (id, created_at, updated_at, name)
-values (2249, now(), now(), 'Hoàng Hữu Phê');
+values (2249, now(), now(), 'Charles P Kindleberger');
 
 insert into authors (id, created_at, updated_at, name)
-values (2250, now(), now(), 'Armand Mattelart');
+values (2250, now(), now(), 'Robert Z Aliber');
 
 insert into authors (id, created_at, updated_at, name)
-values (2251, now(), now(), 'Michèle Mattelart');
+values (2251, now(), now(), 'Ian D Gow');
 
 insert into authors (id, created_at, updated_at, name)
-values (2252, now(), now(), 'Thanh Thủy');
+values (2252, now(), now(), 'Stuart Kells');
 
 insert into authors (id, created_at, updated_at, name)
-values (2253, now(), now(), 'Xuân Phượng');
+values (2253, now(), now(), 'Hamish McKenzie');
 
 insert into authors (id, created_at, updated_at, name)
-values (2254, now(), now(), 'Michelle Zauner');
+values (2254, now(), now(), 'Steven Levy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2255, now(), now(), 'Đặng Ngọc Long');
+values (2255, now(), now(), 'Jonathan Kaufman');
 
 insert into authors (id, created_at, updated_at, name)
-values (2256, now(), now(), 'Như Hoa');
+values (2256, now(), now(), 'David S Landes');
 
 insert into authors (id, created_at, updated_at, name)
-values (2257, now(), now(), 'Angelo Crippa');
+values (2257, now(), now(), 'Donald J. Trump');
 
 insert into authors (id, created_at, updated_at, name)
-values (2258, now(), now(), 'Benjamin Barbier');
+values (2258, now(), now(), 'Meredith Mclver');
 
 insert into authors (id, created_at, updated_at, name)
-values (2259, now(), now(), 'Mélanie Boissonneau');
+values (2259, now(), now(), 'Jordan Belfort');
 
 insert into authors (id, created_at, updated_at, name)
-values (2260, now(), now(), 'Quentin Ma');
+values (2260, now(), now(), 'Hubert Seipel');
 
 insert into authors (id, created_at, updated_at, name)
-values (2261, now(), now(), 'Trịnh Công Sơn');
+values (2261, now(), now(), 'William A Degregorio');
 
 insert into authors (id, created_at, updated_at, name)
-values (2262, now(), now(), 'Elizabeth Winder');
+values (2262, now(), now(), 'Jenny Vương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2263, now(), now(), 'Donald S Passman');
+values (2263, now(), now(), 'Emmanuel Macron');
 
 insert into authors (id, created_at, updated_at, name)
-values (2264, now(), now(), 'Helen Brown');
+values (2264, now(), now(), 'Benjamin Franklin');
 
 insert into authors (id, created_at, updated_at, name)
-values (2265, now(), now(), 'Cindy Eagan');
+values (2265, now(), now(), 'Lý Quang Diệu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2266, now(), now(), 'Trevor Noah');
+values (2266, now(), now(), 'Diogenes Laertius');
 
 insert into authors (id, created_at, updated_at, name)
-values (2267, now(), now(), 'Kelly Notaras');
+values (2267, now(), now(), 'Francis Fukuyama');
 
 insert into authors (id, created_at, updated_at, name)
-values (2268, now(), now(), 'Elvis Phương');
+values (2268, now(), now(), 'Bradley Hope');
 
 insert into authors (id, created_at, updated_at, name)
-values (2269, now(), now(), 'BTS');
+values (2269, now(), now(), 'Justin Scheck');
 
 insert into authors (id, created_at, updated_at, name)
-values (2270, now(), now(), 'Myeongseok Kang');
+values (2270, now(), now(), 'Christophe Loviny');
 
 insert into authors (id, created_at, updated_at, name)
-values (2271, now(), now(), 'Phan Công Thiết');
+values (2271, now(), now(), 'Trần Hòang Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2272, now(), now(), 'Britney Spears');
+values (2272, now(), now(), 'Lê Quýnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2273, now(), now(), 'Jennette McCurdy');
+values (2273, now(), now(), 'Mitchell Stephens');
 
 insert into authors (id, created_at, updated_at, name)
-values (2274, now(), now(), 'Tự Ngôn Lữ Quán');
+values (2274, now(), now(), 'Svetlana Alexievich');
 
 insert into authors (id, created_at, updated_at, name)
-values (2275, now(), now(), 'Fabrice Peltier');
+values (2275, now(), now(), 'Ron Chernow');
 
 insert into authors (id, created_at, updated_at, name)
-values (2276, now(), now(), 'Hubert Seipel');
+values (2276, now(), now(), 'Robert Kurson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2277, now(), now(), 'William A Degregorio');
+values (2277, now(), now(), 'Donald McRae');
 
 insert into authors (id, created_at, updated_at, name)
-values (2278, now(), now(), 'Lý Quang Diệu');
+values (2278, now(), now(), 'Nishi Katsuzo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2279, now(), now(), 'Diogenes Laertius');
+values (2279, now(), now(), 'Peter Jenson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2280, now(), now(), 'Jenny Vương');
+values (2280, now(), now(), 'Sid Love');
 
 insert into authors (id, created_at, updated_at, name)
-values (2281, now(), now(), 'Emmanuel Macron');
+values (2281, now(), now(), 'Alex Ferguson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2282, now(), now(), 'Benjamin Franklin');
+values (2282, now(), now(), 'Đinh Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2283, now(), now(), 'Ron Chernow');
+values (2283, now(), now(), 'Đặng Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2284, now(), now(), 'Joseph Cummins');
+values (2284, now(), now(), 'Harry Harris');
 
 insert into authors (id, created_at, updated_at, name)
-values (2285, now(), now(), 'Benjamin Carter Hett');
+values (2285, now(), now(), 'Adharanad Finn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2286, now(), now(), 'Luke Harding');
+values (2286, now(), now(), 'Simon Kuper');
 
 insert into authors (id, created_at, updated_at, name)
-values (2287, now(), now(), 'Andrew Roberts');
+values (2287, now(), now(), 'Dean Karnazes');
 
 insert into authors (id, created_at, updated_at, name)
-values (2288, now(), now(), 'Francis Fukuyama');
+values (2288, now(), now(), 'Mike Carson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2289, now(), now(), 'Bradley Hope');
+values (2289, now(), now(), 'Pandabooks');
 
 insert into authors (id, created_at, updated_at, name)
-values (2290, now(), now(), 'Justin Scheck');
+values (2290, now(), now(), 'Nhà Báo Bảo Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2291, now(), now(), 'Donald J. Trump');
+values (2291, now(), now(), 'Cường Vũ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2292, now(), now(), 'Christophe Loviny');
+values (2292, now(), now(), 'Jon Krakauer');
 
 insert into authors (id, created_at, updated_at, name)
-values (2293, now(), now(), 'Trần Hòang Vũ');
+values (2293, now(), now(), 'Mộc Qua Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2294, now(), now(), 'Edwin Lefèvre');
+values (2294, now(), now(), 'Sa Trụ Đảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2295, now(), now(), 'Robert L. Heilbroner');
+values (2295, now(), now(), 'Boyseason');
 
 insert into authors (id, created_at, updated_at, name)
-values (2296, now(), now(), 'Peter Temin');
+values (2296, now(), now(), 'Syundei');
 
 insert into authors (id, created_at, updated_at, name)
-values (2297, now(), now(), 'David Vines');
+values (2297, now(), now(), 'Kanzume Sawa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2298, now(), now(), 'Bryan Burrough');
+values (2298, now(), now(), 'Tsubaki Yuzu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2299, now(), now(), 'John Helyar');
+values (2299, now(), now(), 'Kinh Kiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2300, now(), now(), 'TS Đỗ Thị Mỹ Hiền. TS Phạm Gặp');
+values (2300, now(), now(), 'Mặc Hương Đồng Khứu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2301, now(), now(), 'PGS TS Nguyễn Trọng Văn');
+values (2301, now(), now(), 'Px');
 
 insert into authors (id, created_at, updated_at, name)
-values (2302, now(), now(), 'Lê Hoàng Diệp Thảo');
+values (2302, now(), now(), 'Bilibili');
 
 insert into authors (id, created_at, updated_at, name)
-values (2303, now(), now(), 'Trần Quốc Hùng');
+values (2303, now(), now(), 'Toworu Miyata');
 
 insert into authors (id, created_at, updated_at, name)
-values (2304, now(), now(), 'Nguyễn Xuân Xanh');
+values (2304, now(), now(), 'Natsuki Kizu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2305, now(), now(), 'Thương Mỗ');
+values (2305, now(), now(), 'Yamada');
 
 insert into authors (id, created_at, updated_at, name)
-values (2306, now(), now(), 'Lê Duyên Hải');
+values (2306, now(), now(), 'Trịnh Sâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2307, now(), now(), 'Anthony B. Chan');
+values (2307, now(), now(), 'Patrick Moulou');
 
 insert into authors (id, created_at, updated_at, name)
-values (2308, now(), now(), 'Clyde Prestowitz');
+values (2308, now(), now(), 'Art Mickaelian');
 
 insert into authors (id, created_at, updated_at, name)
-values (2309, now(), now(), 'Bandy X Lee');
+values (2309, now(), now(), 'Robert Beer');
 
 insert into authors (id, created_at, updated_at, name)
-values (2310, now(), now(), 'Charles P Kindleberger');
+values (2310, now(), now(), 'Scott McCloud');
 
 insert into authors (id, created_at, updated_at, name)
-values (2311, now(), now(), 'Robert Z Aliber');
+values (2311, now(), now(), 'Lê Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2312, now(), now(), 'Ian D Gow');
+values (2312, now(), now(), 'Nguyễn Việt Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2313, now(), now(), 'Stuart Kells');
+values (2313, now(), now(), 'Neil Featherstone');
 
 insert into authors (id, created_at, updated_at, name)
-values (2314, now(), now(), 'Hamish McKenzie');
+values (2314, now(), now(), 'Phan Cẩn Thượng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2315, now(), now(), 'Steven Levy');
+values (2315, now(), now(), 'Carol Davidson Cragoe');
 
 insert into authors (id, created_at, updated_at, name)
-values (2316, now(), now(), 'Jonathan Kaufman');
+values (2316, now(), now(), 'James Hoffmann');
 
 insert into authors (id, created_at, updated_at, name)
-values (2317, now(), now(), 'Phan Chánh Dưỡng');
+values (2317, now(), now(), 'Đinh Hồng Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (2318, now(), now(), 'David S Landes');
+values (2318, now(), now(), 'Alain De Botton');
 
 insert into authors (id, created_at, updated_at, name)
-values (2319, now(), now(), 'Meredith Mclver');
+values (2319, now(), now(), 'Paul Lewis');
 
 insert into authors (id, created_at, updated_at, name)
-values (2320, now(), now(), 'Jordan Belfort');
+values (2320, now(), now(), 'Marc Tsurumaki');
 
 insert into authors (id, created_at, updated_at, name)
-values (2321, now(), now(), 'Donald McRae');
+values (2321, now(), now(), 'David J.Lewis');
 
 insert into authors (id, created_at, updated_at, name)
-values (2322, now(), now(), 'Nishi Katsuzo');
+values (2322, now(), now(), 'Trương Chí Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2323, now(), now(), 'Peter Jenson');
+values (2323, now(), now(), 'Trần Hữu Phúc Tiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2324, now(), now(), 'Sid Love');
+values (2324, now(), now(), 'Kim Sewon');
 
 insert into authors (id, created_at, updated_at, name)
-values (2325, now(), now(), 'Alex Ferguson');
+values (2325, now(), now(), 'Tạ Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (2326, now(), now(), 'Đinh Hiệp');
+values (2326, now(), now(), 'Phan Kế Bính');
 
 insert into authors (id, created_at, updated_at, name)
-values (2327, now(), now(), 'Đặng Hoàng');
+values (2327, now(), now(), 'Tường Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2328, now(), now(), 'Harry Harris');
+values (2328, now(), now(), 'WOW');
 
 insert into authors (id, created_at, updated_at, name)
-values (2329, now(), now(), 'Adharanad Finn');
+values (2329, now(), now(), 'Đức Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2330, now(), now(), 'Simon Kuper');
+values (2330, now(), now(), 'Dzoãn Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2331, now(), now(), 'Dean Karnazes');
+values (2331, now(), now(), 'Triệu Thị Chơi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2332, now(), now(), 'Mike Carson');
+values (2332, now(), now(), 'Yanny Đặng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2333, now(), now(), 'Pandabooks');
+values (2333, now(), now(), 'Dzoãn Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2334, now(), now(), 'Nhà Báo Bảo Thắng');
+values (2334, now(), now(), 'Bi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2335, now(), now(), 'Cường Vũ');
+values (2335, now(), now(), 'Cẩm Tuyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (2336, now(), now(), 'Mộc Qua Hoàng');
+values (2336, now(), now(), 'Minh Thanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2337, now(), now(), 'Sa Trụ Đảo');
+values (2337, now(), now(), 'Thanh Nguyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (2338, now(), now(), 'Syundei');
+values (2338, now(), now(), 'Tara Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2339, now(), now(), 'Kanzume Sawa');
+values (2339, now(), now(), 'Mã Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2340, now(), now(), 'Tsubaki Yuzu');
+values (2340, now(), now(), 'Jeeca Uy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2341, now(), now(), 'Kinh Kiến');
+values (2341, now(), now(), 'Vương Húc Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (2342, now(), now(), 'Mặc Hương Đồng Khứu');
+values (2342, now(), now(), 'Quỳnh Chi bs');
 
 insert into authors (id, created_at, updated_at, name)
-values (2343, now(), now(), 'Px');
+values (2343, now(), now(), 'Nguyễn Dzoãn Cẩm Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2344, now(), now(), 'Bilibili');
+values (2344, now(), now(), 'Chi Mai');
 
 insert into authors (id, created_at, updated_at, name)
-values (2345, now(), now(), 'Toworu Miyata');
+values (2345, now(), now(), 'Dương Yến Nhi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2346, now(), now(), 'Natsuki Kizu');
+values (2346, now(), now(), 'Thiên Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (2347, now(), now(), 'Trịnh Sâm');
+values (2347, now(), now(), 'Nhiều Nguyễn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2348, now(), now(), 'Scott McCloud');
+values (2348, now(), now(), 'Ngọc Huyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2349, now(), now(), 'Robert Beer');
+values (2349, now(), now(), 'Ngọc Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2350, now(), now(), 'Patrick Moulou');
+values (2350, now(), now(), 'Tuyết Hường');
 
 insert into authors (id, created_at, updated_at, name)
-values (2351, now(), now(), 'Art Mickaelian');
+values (2351, now(), now(), 'Hoàng Thúy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2352, now(), now(), 'Lê Chi');
+values (2352, now(), now(), 'Nguyễn Thị Diệu Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2353, now(), now(), 'Nguyễn Việt Hà');
+values (2353, now(), now(), 'Cẩm Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2354, now(), now(), 'Phan Cẩn Thượng');
+values (2354, now(), now(), 'Akiyoshi Horie');
 
 insert into authors (id, created_at, updated_at, name)
-values (2355, now(), now(), 'James Hoffmann');
+values (2355, now(), now(), 'Nguyễn Thị Minh Kiều');
 
 insert into authors (id, created_at, updated_at, name)
-values (2356, now(), now(), 'Carol Davidson Cragoe');
+values (2356, now(), now(), 'BS Lê Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2357, now(), now(), 'Đinh Hồng Hải');
+values (2357, now(), now(), 'Thôi Hiểu Lệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2358, now(), now(), 'Dương Kỳ');
+values (2358, now(), now(), 'Khi Trung Dược ca gặp gỡ Thang tỷ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2359, now(), now(), 'Nguyễn Ngọc Khánh Chi');
+values (2359, now(), now(), 'Nguyễn Hữu Thụy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2360, now(), now(), 'Giorgio Vasari');
+values (2360, now(), now(), 'Lý Ngân Hoán');
 
 insert into authors (id, created_at, updated_at, name)
-values (2361, now(), now(), 'Phan Kế Bính');
+values (2361, now(), now(), 'Đinh Công Bảy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2362, now(), now(), 'Edward MacCurdy');
+values (2362, now(), now(), 'Richard Béliveau');
 
 insert into authors (id, created_at, updated_at, name)
-values (2363, now(), now(), 'Tô Hồng Vân');
+values (2363, now(), now(), 'Denis Gingras');
 
 insert into authors (id, created_at, updated_at, name)
-values (2364, now(), now(), 'Đào Duy Anh');
+values (2364, now(), now(), 'Lê Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2365, now(), now(), 'Tường Vân');
+values (2365, now(), now(), 'TS BS Nguyễn Thị Minh Kiều');
 
 insert into authors (id, created_at, updated_at, name)
-values (2366, now(), now(), 'Dzoãn Vân');
+values (2366, now(), now(), 'Hồng Yến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2367, now(), now(), 'WOW');
+values (2367, now(), now(), 'Julia Ferré');
 
 insert into authors (id, created_at, updated_at, name)
-values (2368, now(), now(), 'Đức Nguyễn');
+values (2368, now(), now(), 'Jean-Pierre Vaillant');
 
 insert into authors (id, created_at, updated_at, name)
-values (2369, now(), now(), 'Yanny Đặng');
+values (2369, now(), now(), 'Lập Thành Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2370, now(), now(), 'Triệu Thị Chơi');
+values (2370, now(), now(), 'Lương Y Vương Thừa Ân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2371, now(), now(), 'Cẩm Tuyết');
+values (2371, now(), now(), 'Carey Avalon');
 
 insert into authors (id, created_at, updated_at, name)
-values (2372, now(), now(), 'Dzoãn Vân');
+values (2372, now(), now(), 'DS Bàng Cẩm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2373, now(), now(), 'Bi');
+values (2373, now(), now(), 'TS Nguyễn Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2374, now(), now(), 'Minh Thanh');
+values (2374, now(), now(), 'Geeta S. Iyengar');
 
 insert into authors (id, created_at, updated_at, name)
-values (2375, now(), now(), 'Thanh Nguyên');
+values (2375, now(), now(), 'Lâm Trúc Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2376, now(), now(), 'Mã Lâm');
+values (2376, now(), now(), 'Vũ Thị Thuý Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (2377, now(), now(), 'Tara Nguyễn');
+values (2377, now(), now(), 'Cao Nữ Hoàng Oanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2378, now(), now(), 'Jeeca Uy');
+values (2378, now(), now(), 'Bích Nguyệt');
 
 insert into authors (id, created_at, updated_at, name)
-values (2379, now(), now(), 'Quỳnh Chi bs');
+values (2379, now(), now(), 'Thẩm Ninh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2380, now(), now(), 'Nguyễn Dzoãn Cẩm Vân');
+values (2380, now(), now(), 'Becca Anderson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2381, now(), now(), 'Chi Mai');
+values (2381, now(), now(), 'Dr Libby Weaver');
 
 insert into authors (id, created_at, updated_at, name)
-values (2382, now(), now(), 'Vương Húc Phong');
+values (2382, now(), now(), 'Phan Bảo Long');
 
 insert into authors (id, created_at, updated_at, name)
-values (2383, now(), now(), 'Đỗ Kim Trung');
+values (2383, now(), now(), 'Yukiyo Kashiwabara');
 
 insert into authors (id, created_at, updated_at, name)
-values (2384, now(), now(), 'Đình Bình');
+values (2384, now(), now(), 'Hương Bùi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2385, now(), now(), 'Đình Trung');
+values (2385, now(), now(), 'Liz Williams');
 
 insert into authors (id, created_at, updated_at, name)
-values (2386, now(), now(), 'Thiên Kim');
+values (2386, now(), now(), 'Pha Lê');
 
 insert into authors (id, created_at, updated_at, name)
-values (2387, now(), now(), 'Ngọc Hà');
+values (2387, now(), now(), 'Trần Bích Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2388, now(), now(), 'Tuyết Hường');
+values (2388, now(), now(), 'Nguyễn Hải');
 
 insert into authors (id, created_at, updated_at, name)
-values (2389, now(), now(), 'Hoàng Thúy');
+values (2389, now(), now(), 'Nguyễn Tuấn Cường');
 
 insert into authors (id, created_at, updated_at, name)
-values (2390, now(), now(), 'Nguyễn Thị Diệu Thảo');
+values (2390, now(), now(), 'Minh Thắng Books');
 
 insert into authors (id, created_at, updated_at, name)
-values (2391, now(), now(), 'Cẩm Vân');
+values (2391, now(), now(), 'Bạch Huyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (2392, now(), now(), 'Ngọc Huyền');
+values (2392, now(), now(), 'Dương Ngọc Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2393, now(), now(), 'Nhiều Nguyễn');
+values (2393, now(), now(), 'Nguyễn văn Hòa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2394, now(), now(), 'TS Nguyễn Thu Hương');
+values (2394, now(), now(), 'Thiệu Vi Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2395, now(), now(), 'Hân Vi');
+values (2395, now(), now(), 'ThS Trần Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2396, now(), now(), 'Kim Seon Jin');
+values (2396, now(), now(), 'Trần Lâm Tích');
 
 insert into authors (id, created_at, updated_at, name)
-values (2397, now(), now(), 'Sandy Skotnicki');
+values (2397, now(), now(), 'Minh Đường');
 
 insert into authors (id, created_at, updated_at, name)
-values (2398, now(), now(), 'Christopher Shulgan');
+values (2398, now(), now(), 'Cao Hồng Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2399, now(), now(), 'Emma Phạm');
+values (2399, now(), now(), 'Thích Minh Nghiêm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2400, now(), now(), 'Hair Portal Dubaljayu');
+values (2400, now(), now(), 'Nguyễn Mạnh Linh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2401, now(), now(), 'Lee Youngsun');
+values (2401, now(), now(), 'ThS Vũ Đức Huynh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2402, now(), now(), 'Boutique Mook');
+values (2402, now(), now(), 'Nguyễn Bích Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2403, now(), now(), 'Yumi Sato');
+values (2403, now(), now(), 'Master Nguyễn Thành Phương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2404, now(), now(), 'Thẩm Ninh');
+values (2404, now(), now(), 'Lưu Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2405, now(), now(), 'Becca Anderson');
+values (2405, now(), now(), 'Hoài Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (2406, now(), now(), 'Dr Libby Weaver');
+values (2406, now(), now(), 'Đại Đức Thích Minh Tông');
 
 insert into authors (id, created_at, updated_at, name)
-values (2407, now(), now(), 'Jane Alexander');
+values (2407, now(), now(), 'Quang Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2408, now(), now(), 'Phan Bảo Long');
+values (2408, now(), now(), 'Thu Tuyết');
 
 insert into authors (id, created_at, updated_at, name)
-values (2409, now(), now(), 'Yukiyo Kashiwabara');
+values (2409, now(), now(), 'Mạnh Tường');
 
 insert into authors (id, created_at, updated_at, name)
-values (2410, now(), now(), 'Hương Bùi');
+values (2410, now(), now(), 'Minh Tân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2411, now(), now(), 'Geeta S. Iyengar');
+values (2411, now(), now(), 'The Oxford Concise Dictionary');
 
 insert into authors (id, created_at, updated_at, name)
-values (2412, now(), now(), 'Lâm Trúc Linh');
+values (2412, now(), now(), 'Modern Dictionary');
 
 insert into authors (id, created_at, updated_at, name)
-values (2413, now(), now(), 'Vũ Thị Thuý Bình');
+values (2413, now(), now(), 'Trần Mạnh Tường');
 
 insert into authors (id, created_at, updated_at, name)
-values (2414, now(), now(), 'Cao Nữ Hoàng Oanh');
+values (2414, now(), now(), 'Võ Thanh PHong');
 
 insert into authors (id, created_at, updated_at, name)
-values (2415, now(), now(), 'Bích Nguyệt');
+values (2415, now(), now(), 'Nhật Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2416, now(), now(), 'Akiyoshi Horie');
+values (2416, now(), now(), 'Hồng Vân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2417, now(), now(), 'Nguyễn Thị Minh Kiều');
+values (2417, now(), now(), 'The Oxford Modern English Dictionary');
 
 insert into authors (id, created_at, updated_at, name)
-values (2418, now(), now(), 'BS Lê Minh');
+values (2418, now(), now(), 'Victoria Bull');
 
 insert into authors (id, created_at, updated_at, name)
-values (2419, now(), now(), 'Thôi Hiểu Lệ');
+values (2419, now(), now(), 'Ngọc Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2420, now(), now(), 'Khi Trung Dược ca gặp gỡ Thang tỷ');
+values (2420, now(), now(), 'Việt Fame');
 
 insert into authors (id, created_at, updated_at, name)
-values (2421, now(), now(), 'DS Bàng Cẩm');
+values (2421, now(), now(), 'Đào Đăng Phong');
 
 insert into authors (id, created_at, updated_at, name)
-values (2422, now(), now(), 'Nguyễn Hữu Thụy');
+values (2422, now(), now(), 'Ninh Hùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2423, now(), now(), 'Đinh Công Bảy');
+values (2423, now(), now(), 'Trần Văn Huân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2424, now(), now(), 'Richard Béliveau');
+values (2424, now(), now(), 'Quang Hùng - Ngọc Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2425, now(), now(), 'Denis Gingras');
+values (2425, now(), now(), 'Thái Xuân Đệ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2426, now(), now(), 'Lê Minh');
+values (2426, now(), now(), 'Lê Dân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2427, now(), now(), 'TS BS Nguyễn Thị Minh Kiều');
+values (2427, now(), now(), 'GS. Hoàng Phê');
 
 insert into authors (id, created_at, updated_at, name)
-values (2428, now(), now(), 'Hồng Yến');
+values (2428, now(), now(), 'Đăng Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2429, now(), now(), 'Julia Ferré');
+values (2429, now(), now(), 'Kỳ Duyên');
 
 insert into authors (id, created_at, updated_at, name)
-values (2430, now(), now(), 'Jean-Pierre Vaillant');
+values (2430, now(), now(), 'Kim Danh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2431, now(), now(), 'Liz Williams');
+values (2431, now(), now(), 'Bích Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2432, now(), now(), 'Trần Bích Hà');
+values (2432, now(), now(), 'Bích hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2433, now(), now(), 'Nguyễn Hải');
+values (2433, now(), now(), 'Nguyễn Tôn Nhan');
 
 insert into authors (id, created_at, updated_at, name)
-values (2434, now(), now(), 'Pha Lê');
+values (2434, now(), now(), 'Phú Văn Hẳn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2435, now(), now(), 'Nguyễn Tuấn Cường');
+values (2435, now(), now(), 'Ngôn ngữ Việt Nam');
 
 insert into authors (id, created_at, updated_at, name)
-values (2436, now(), now(), 'Minh Thắng Books');
+values (2436, now(), now(), 'Nguyễn Quang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2437, now(), now(), 'Bạch Huyết');
+values (2437, now(), now(), 'Minh Trí');
 
 insert into authors (id, created_at, updated_at, name)
-values (2438, now(), now(), 'Dương Ngọc Dũng');
+values (2438, now(), now(), 'TS Nguyễn Thị Bích Hạnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2439, now(), now(), 'Minh Đường');
+values (2439, now(), now(), 'ThS Ngô Thị Thu Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2440, now(), now(), 'Thích Minh Nghiêm');
+values (2440, now(), now(), 'Ngọc Hằng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2441, now(), now(), 'Nguyễn văn Hòa');
+values (2441, now(), now(), 'Tống Đại Hồng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2442, now(), now(), 'Nguyễn Mạnh Linh');
+values (2442, now(), now(), 'Ngọc Lương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2443, now(), now(), 'Thiệu Vi Hoa');
+values (2443, now(), now(), 'Hoàng Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2444, now(), now(), 'Cao Hồng Minh');
+values (2444, now(), now(), 'Kamiya');
 
 insert into authors (id, created_at, updated_at, name)
-values (2445, now(), now(), 'ThS Trần Quang');
+values (2445, now(), now(), 'Taeko');
 
 insert into authors (id, created_at, updated_at, name)
-values (2446, now(), now(), 'Trần Lâm Tích');
+values (2446, now(), now(), 'Hoàng Khang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2447, now(), now(), 'Võ Văn Ba');
+values (2447, now(), now(), 'Hoàng Anh Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2448, now(), now(), 'Lý Cư Minh');
+values (2448, now(), now(), 'Lê Thanh Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (2449, now(), now(), 'Cao Từ Linh');
+values (2449, now(), now(), 'Takeuchi Yonosuke');
 
 insert into authors (id, created_at, updated_at, name)
-values (2450, now(), now(), 'ThS Vũ Đức Huynh');
+values (2450, now(), now(), 'Yamaguchi Kenichi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2451, now(), now(), 'Master Nguyễn Thành Phương');
+values (2451, now(), now(), 'Imai Akio');
 
 insert into authors (id, created_at, updated_at, name)
-values (2452, now(), now(), 'Dương Quân Tùng');
+values (2452, now(), now(), 'Mijeong Mimi Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (2453, now(), now(), 'Nguyễn Bích Hằng');
+values (2453, now(), now(), 'Angela Lee-Smith');
 
 insert into authors (id, created_at, updated_at, name)
-values (2454, now(), now(), 'Quang Hùng');
+values (2454, now(), now(), 'Kim');
 
 insert into authors (id, created_at, updated_at, name)
-values (2455, now(), now(), 'Thu Tuyết');
+values (2455, now(), now(), 'Young Kyu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2456, now(), now(), 'The Oxford Concise Dictionary');
+values (2456, now(), now(), 'Lê Hữu Nhân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2457, now(), now(), 'Modern Dictionary');
+values (2457, now(), now(), 'Hoài Anh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2458, now(), now(), 'Trần Mạnh Tường');
+values (2458, now(), now(), 'Mỹ Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2459, now(), now(), 'Mạnh Tường');
+values (2459, now(), now(), 'Nguyễn Thùy Dung');
 
 insert into authors (id, created_at, updated_at, name)
-values (2460, now(), now(), 'Minh Tân');
+values (2460, now(), now(), 'Vĩnh Quyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2461, now(), now(), 'Võ Thanh PHong');
+values (2461, now(), now(), 'Như Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2462, now(), now(), 'Nhật Thảo');
+values (2462, now(), now(), 'BS Hoàng Xuân Chỉnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2463, now(), now(), 'Hồng Vân');
+values (2463, now(), now(), 'Lâm Hòa Chiếm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2464, now(), now(), 'The Oxford Modern English Dictionary');
+values (2464, now(), now(), 'Xuân Huy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2465, now(), now(), 'Victoria Bull');
+values (2465, now(), now(), 'Thiều Chửu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2466, now(), now(), 'Ngọc Ánh');
+values (2466, now(), now(), 'Vũ Văn Kính');
 
 insert into authors (id, created_at, updated_at, name)
-values (2467, now(), now(), 'Việt Fame');
+values (2467, now(), now(), 'Khổng Đức');
 
 insert into authors (id, created_at, updated_at, name)
-values (2468, now(), now(), 'Đào Đăng Phong');
+values (2468, now(), now(), 'Andrew Edgar');
 
 insert into authors (id, created_at, updated_at, name)
-values (2469, now(), now(), 'Ninh Hùng');
+values (2469, now(), now(), 'Hân Mẫn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2470, now(), now(), 'Trần Văn Huân');
+values (2470, now(), now(), 'Thông Thiền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2471, now(), now(), 'BS Phạm Ngọc Trí');
+values (2471, now(), now(), 'Cung Kim Tiến');
 
 insert into authors (id, created_at, updated_at, name)
-values (2472, now(), now(), 'Vĩnh Quyền');
+values (2472, now(), now(), 'ThS Lê Huy Khoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2473, now(), now(), 'Như Quỳnh');
+values (2473, now(), now(), 'ThS Võ Thụy Nhật Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2474, now(), now(), 'Đăng Khoa');
+values (2474, now(), now(), 'GS BS Trần Văn Kỳ');
 
 insert into authors (id, created_at, updated_at, name)
-values (2475, now(), now(), 'Thuỳ Uyên');
+values (2475, now(), now(), 'Maxwell Colonna');
 
 insert into authors (id, created_at, updated_at, name)
-values (2476, now(), now(), 'Lê Đình Bì');
+values (2476, now(), now(), 'Dashwood');
 
 insert into authors (id, created_at, updated_at, name)
-values (2477, now(), now(), 'Thành Yến');
+values (2477, now(), now(), 'Pham Minh Kha');
 
 insert into authors (id, created_at, updated_at, name)
-values (2478, now(), now(), 'GS. Hoàng Phê');
+values (2478, now(), now(), 'Lê Huy Phúc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2479, now(), now(), 'Bích Hằng');
+values (2479, now(), now(), 'Lee Youngsub');
 
 insert into authors (id, created_at, updated_at, name)
-values (2480, now(), now(), 'Bích hằng');
+values (2480, now(), now(), 'Supervised by Kenji Tomita');
 
 insert into authors (id, created_at, updated_at, name)
-values (2481, now(), now(), 'Phạm Lê Liên');
+values (2481, now(), now(), 'Edited by Sanseido Co');
 
 insert into authors (id, created_at, updated_at, name)
-values (2482, now(), now(), 'Nguyễn Tôn Nhan');
+values (2482, now(), now(), 'Ltd');
 
 insert into authors (id, created_at, updated_at, name)
-values (2483, now(), now(), 'Phú Văn Hẳn');
+values (2483, now(), now(), 'Hữu Ngọc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2484, now(), now(), 'Ngôn ngữ Việt Nam');
+values (2484, now(), now(), 'BS Trần Kim Lân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2485, now(), now(), 'Nguyễn Quang');
+values (2485, now(), now(), 'XiQua');
 
 insert into authors (id, created_at, updated_at, name)
-values (2486, now(), now(), 'Minh Trí');
+values (2486, now(), now(), 'Nhóm Biên Soạn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2487, now(), now(), 'TS Nguyễn Thị Bích Hạnh');
+values (2487, now(), now(), 'Larousse');
 
 insert into authors (id, created_at, updated_at, name)
-values (2488, now(), now(), 'ThS Ngô Thị Thu Hương');
+values (2488, now(), now(), 'NHư Quỳnh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2489, now(), now(), 'Thái Xuân Đệ');
+values (2489, now(), now(), 'Minh Nhật');
 
 insert into authors (id, created_at, updated_at, name)
-values (2490, now(), now(), 'Ngọc Hằng');
+values (2490, now(), now(), 'TS Phạm Phương Hoa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2491, now(), now(), 'Kỳ Duyên');
+values (2491, now(), now(), 'Trương Ngọc Bích');
 
 insert into authors (id, created_at, updated_at, name)
-values (2492, now(), now(), 'Tống Đại Hồng');
+values (2492, now(), now(), 'Ernest Van de Velde');
 
 insert into authors (id, created_at, updated_at, name)
-values (2493, now(), now(), 'Ngọc Lương');
+values (2493, now(), now(), 'Ernest Van De Velde');
 
 insert into authors (id, created_at, updated_at, name)
-values (2494, now(), now(), 'Hoàng Quỳnh');
+values (2494, now(), now(), 'Lê Dũng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2495, now(), now(), 'Kamiya');
+values (2495, now(), now(), 'ThS Đặng Thái Sơn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2496, now(), now(), 'Taeko');
+values (2496, now(), now(), 'ThS Cù Minh Nhật');
 
 insert into authors (id, created_at, updated_at, name)
-values (2497, now(), now(), 'Hoàng Khang');
+values (2497, now(), now(), 'Hoàng Hạc');
 
 insert into authors (id, created_at, updated_at, name)
-values (2498, now(), now(), 'Hoàng Anh Thi');
+values (2498, now(), now(), 'Bùi Phan Thảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2499, now(), now(), 'Lê Thanh Kim');
+values (2499, now(), now(), 'Thanh Hiệp');
 
 insert into authors (id, created_at, updated_at, name)
-values (2500, now(), now(), 'Mijeong Mimi Kim');
+values (2500, now(), now(), 'Song Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2501, now(), now(), 'Angela Lee-Smith');
+values (2501, now(), now(), 'Nguyễn Huy Thắng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2502, now(), now(), 'Kim');
+values (2502, now(), now(), 'Trần Chính Nghĩa');
 
 insert into authors (id, created_at, updated_at, name)
-values (2503, now(), now(), 'Young Kyu');
+values (2503, now(), now(), 'Kamo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2504, now(), now(), 'Lê Hữu Nhân');
+values (2504, now(), now(), 'Willemien Brand');
 
 insert into authors (id, created_at, updated_at, name)
-values (2505, now(), now(), 'Hoài Anh');
+values (2505, now(), now(), 'Maxime Péroz');
 
 insert into authors (id, created_at, updated_at, name)
-values (2506, now(), now(), 'Mỹ Duy');
+values (2506, now(), now(), 'Walter T. Foster');
 
 insert into authors (id, created_at, updated_at, name)
-values (2507, now(), now(), 'Nguyễn Thùy Dung');
+values (2507, now(), now(), 'Diane Cardaci');
 
 insert into authors (id, created_at, updated_at, name)
-values (2508, now(), now(), 'BS Hoàng Xuân Chỉnh');
+values (2508, now(), now(), 'Takashi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2509, now(), now(), 'Lâm Hòa Chiếm');
+values (2509, now(), now(), 'Từ Hảo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2510, now(), now(), 'Xuân Huy');
+values (2510, now(), now(), 'Tạ Tiên Lâm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2511, now(), now(), 'Thiều Chửu');
+values (2511, now(), now(), 'Mark Và Mary Willenbrink');
 
 insert into authors (id, created_at, updated_at, name)
-values (2512, now(), now(), 'Vũ Văn Kính');
+values (2512, now(), now(), 'Jean Arestein');
 
 insert into authors (id, created_at, updated_at, name)
-values (2513, now(), now(), 'Khổng Đức');
+values (2513, now(), now(), 'Melissa Washburn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2514, now(), now(), 'GS BS Trần Văn Kỳ');
+values (2514, now(), now(), 'Jeannie Lee');
 
 insert into authors (id, created_at, updated_at, name)
-values (2515, now(), now(), 'Andrew Edgar');
+values (2515, now(), now(), 'Mark Willenbrink');
 
 insert into authors (id, created_at, updated_at, name)
-values (2516, now(), now(), 'Hân Mẫn - Thông Thiền');
+values (2516, now(), now(), 'Mary Willenbrink');
 
 insert into authors (id, created_at, updated_at, name)
-values (2517, now(), now(), 'Cung Kim Tuyến');
+values (2517, now(), now(), 'Huỳnh Thanh Bình');
 
 insert into authors (id, created_at, updated_at, name)
-values (2518, now(), now(), 'Cung Kim Tiến');
+values (2518, now(), now(), 'Hồ Công Khanh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2519, now(), now(), 'ThS Võ Thụy Nhật Minh');
+values (2519, now(), now(), 'Lê Trang');
 
 insert into authors (id, created_at, updated_at, name)
-values (2520, now(), now(), 'Luật Gia Trương Ngọc Liêu');
+values (2520, now(), now(), 'Lulu Mayo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2521, now(), now(), 'Maxwell Colonna-Dashwood');
+values (2521, now(), now(), 'Diêu Tùng Tùng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2522, now(), now(), 'Pham Minh Kha');
+values (2522, now(), now(), 'Leo Dinh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2523, now(), now(), 'Hữu Ngọc');
+values (2523, now(), now(), 'Katawu Kaji');
 
 insert into authors (id, created_at, updated_at, name)
-values (2524, now(), now(), 'BS Trần Kim Lân');
+values (2524, now(), now(), 'Sofi Thanhauser');
 
 insert into authors (id, created_at, updated_at, name)
-values (2525, now(), now(), 'XiQua');
+values (2525, now(), now(), 'Lê Thanh Nga');
 
 insert into authors (id, created_at, updated_at, name)
-values (2526, now(), now(), 'Lê Huy Phúc');
+values (2526, now(), now(), 'Trần Khánh An');
 
 insert into authors (id, created_at, updated_at, name)
-values (2527, now(), now(), 'Lee Youngsub');
+values (2527, now(), now(), 'Đỗ Quang Tuấn Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2528, now(), now(), 'Larousse');
+values (2528, now(), now(), 'Mai Luân');
 
 insert into authors (id, created_at, updated_at, name)
-values (2529, now(), now(), 'NHư Quỳnh');
+values (2529, now(), now(), 'Bồ Đề Đạt Ma');
 
 insert into authors (id, created_at, updated_at, name)
-values (2530, now(), now(), 'Minh Nhật');
+values (2530, now(), now(), 'Swami Sitaramananda');
 
 insert into authors (id, created_at, updated_at, name)
-values (2531, now(), now(), 'TS Phạm Phương Hoa');
+values (2531, now(), now(), 'Ross Edgley');
 
 insert into authors (id, created_at, updated_at, name)
-values (2532, now(), now(), 'Trương Ngọc Bích');
+values (2532, now(), now(), 'Elizabeth Dalby');
 
 insert into authors (id, created_at, updated_at, name)
-values (2533, now(), now(), 'Ernest Van de Velde');
+values (2533, now(), now(), 'TS Chris Napier');
 
 insert into authors (id, created_at, updated_at, name)
-values (2534, now(), now(), 'Ernest Van De Velde');
+values (2534, now(), now(), 'B K S IYENGAR');
 
 insert into authors (id, created_at, updated_at, name)
-values (2535, now(), now(), 'Lê Dũng');
+values (2535, now(), now(), 'TS Phạm Văn Xẹn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2536, now(), now(), 'ThS Đặng Thái Sơn');
+values (2536, now(), now(), 'TS Nguyễn Thế Truyền');
 
 insert into authors (id, created_at, updated_at, name)
-values (2537, now(), now(), 'ThS Cù Minh Nhật');
+values (2537, now(), now(), 'TS Nguyễn Sĩ Hà');
 
 insert into authors (id, created_at, updated_at, name)
-values (2538, now(), now(), 'Hoàng Hạc');
+values (2538, now(), now(), 'Raja Yoga');
 
 insert into authors (id, created_at, updated_at, name)
-values (2539, now(), now(), 'Bùi Phan Thảo');
+values (2539, now(), now(), 'Chân Đạo Hành');
 
 insert into authors (id, created_at, updated_at, name)
-values (2540, now(), now(), 'Thanh Hiệp');
+values (2540, now(), now(), 'Chân Tuệ Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2541, now(), now(), 'Nguyễn Thanh Tùng');
+values (2541, now(), now(), 'Trần Mẫn Tuấn');
 
 insert into authors (id, created_at, updated_at, name)
-values (2542, now(), now(), 'Song Minh');
+values (2542, now(), now(), 'Lương Trọng Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2543, now(), now(), 'Nguyễn Huy Thắng');
+values (2543, now(), now(), 'Elle');
 
 insert into authors (id, created_at, updated_at, name)
-values (2544, now(), now(), 'Trần Chính Nghĩa');
+values (2544, now(), now(), 'Nhựt Hoàng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2545, now(), now(), 'Kamo');
+values (2545, now(), now(), 'Kee Agency');
 
 insert into authors (id, created_at, updated_at, name)
-values (2546, now(), now(), 'Willemien Brand');
+values (2546, now(), now(), 'N Gregory Mankiw');
 
 insert into authors (id, created_at, updated_at, name)
-values (2547, now(), now(), 'Mark Và Mary Willenbrink');
+values (2547, now(), now(), 'N. Gregory Mankiw');
 
 insert into authors (id, created_at, updated_at, name)
-values (2548, now(), now(), 'Maxime Péroz');
+values (2548, now(), now(), 'Bộ giáo dục và đào tạo');
 
 insert into authors (id, created_at, updated_at, name)
-values (2549, now(), now(), 'Walter T. Foster');
+values (2549, now(), now(), 'Abigail Baird');
 
 insert into authors (id, created_at, updated_at, name)
-values (2550, now(), now(), 'Diane Cardaci');
+values (2550, now(), now(), 'Nguyễn Hữu Nhuận');
 
 insert into authors (id, created_at, updated_at, name)
-values (2551, now(), now(), 'Takashi');
+values (2551, now(), now(), 'Nguyễn Thị Bích Châm');
 
 insert into authors (id, created_at, updated_at, name)
-values (2552, now(), now(), 'Từ Hảo');
+values (2552, now(), now(), 'Lê Việt Hưng');
 
 insert into authors (id, created_at, updated_at, name)
-values (2553, now(), now(), 'Tạ Tiên Lâm');
+values (2553, now(), now(), 'Lê Thị Bích Chi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2554, now(), now(), 'Vương Hoằng Lực');
+values (2554, now(), now(), 'TS Nguyễn Thọ Ánh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2555, now(), now(), 'Huỳnh Phạm Hương Trang');
+values (2555, now(), now(), 'LS Phạm Thanh Hữu');
 
 insert into authors (id, created_at, updated_at, name)
-values (2556, now(), now(), 'Jean Arestein');
+values (2556, now(), now(), 'GS TS Hà Nam Khánh Giao');
 
 insert into authors (id, created_at, updated_at, name)
-values (2557, now(), now(), 'Melissa Washburn');
+values (2557, now(), now(), 'ThS BS Nguyễn Thái Duy');
 
 insert into authors (id, created_at, updated_at, name)
-values (2558, now(), now(), 'Jeannie Lee');
+values (2558, now(), now(), 'Đinh Tiên Minh');
 
 insert into authors (id, created_at, updated_at, name)
-values (2559, now(), now(), 'Hồ Công Khanh');
+values (2559, now(), now(), 'TS Tôn Sinh Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (2560, now(), now(), 'Mark Willenbrink');
+values (2560, now(), now(), 'Martin Fridson');
 
 insert into authors (id, created_at, updated_at, name)
-values (2561, now(), now(), 'Mary Willenbrink');
+values (2561, now(), now(), 'Fernando Alvarez');
 
 insert into authors (id, created_at, updated_at, name)
-values (2562, now(), now(), 'Huỳnh Thanh Bình');
+values (2562, now(), now(), 'PGS TS Bùi Trung Thành');
 
 insert into authors (id, created_at, updated_at, name)
-values (2563, now(), now(), 'Lulu Mayo');
+values (2563, now(), now(), 'Karen Tui Boyes');
 
 insert into authors (id, created_at, updated_at, name)
-values (2564, now(), now(), 'Leo Dinh');
+values (2564, now(), now(), 'GS TS Đặng Lương Mô');
 
 insert into authors (id, created_at, updated_at, name)
-values (2565, now(), now(), 'Lê Trang');
+values (2565, now(), now(), 'Andrew Northedge');
 
 insert into authors (id, created_at, updated_at, name)
-values (2566, now(), now(), 'Katawu Kaji');
+values (2566, now(), now(), 'Lâm Thị Mỹ Hương');
 
 insert into authors (id, created_at, updated_at, name)
-values (2567, now(), now(), 'Diêu Tùng Tùng');
+values (2567, now(), now(), 'Nguyễn Việt Thi');
 
 insert into authors (id, created_at, updated_at, name)
-values (2568, now(), now(), 'Olga Utkina');
-
-insert into authors (id, created_at, updated_at, name)
-values (2569, now(), now(), 'Anastasia Druzhininskaya');
-
-insert into authors (id, created_at, updated_at, name)
-values (2570, now(), now(), 'Maria Truschenkova');
-
-insert into authors (id, created_at, updated_at, name)
-values (2571, now(), now(), 'Natal');
-
-insert into authors (id, created_at, updated_at, name)
-values (2572, now(), now(), 'Sofi Thanhauser');
-
-insert into authors (id, created_at, updated_at, name)
-values (2573, now(), now(), 'Lê Thanh Nga');
-
-insert into authors (id, created_at, updated_at, name)
-values (2574, now(), now(), 'Trần Khánh An');
-
-insert into authors (id, created_at, updated_at, name)
-values (2575, now(), now(), 'Đỗ Quang Tuấn Hoàng');
-
-insert into authors (id, created_at, updated_at, name)
-values (2576, now(), now(), 'Mai Luân');
-
-insert into authors (id, created_at, updated_at, name)
-values (2577, now(), now(), 'Bồ Đề Đạt Ma');
-
-insert into authors (id, created_at, updated_at, name)
-values (2578, now(), now(), 'Ross Edgley');
-
-insert into authors (id, created_at, updated_at, name)
-values (2579, now(), now(), 'Elizabeth Dalby');
-
-insert into authors (id, created_at, updated_at, name)
-values (2580, now(), now(), 'Swami Sitaramananda');
-
-insert into authors (id, created_at, updated_at, name)
-values (2581, now(), now(), 'TS Chris Napier');
-
-insert into authors (id, created_at, updated_at, name)
-values (2582, now(), now(), 'B K S IYENGAR');
-
-insert into authors (id, created_at, updated_at, name)
-values (2583, now(), now(), 'Lương Trọng Minh');
-
-insert into authors (id, created_at, updated_at, name)
-values (2584, now(), now(), 'Trần Văn Phúc');
-
-insert into authors (id, created_at, updated_at, name)
-values (2585, now(), now(), 'Hiệp Hội Pickleball Hoa Kỳ');
-
-insert into authors (id, created_at, updated_at, name)
-values (2586, now(), now(), 'Swami Vishnu Devananda');
-
-insert into authors (id, created_at, updated_at, name)
-values (2587, now(), now(), 'Joe De Sena');
-
-insert into authors (id, created_at, updated_at, name)
-values (2588, now(), now(), 'John Durant');
-
-insert into authors (id, created_at, updated_at, name)
-values (2589, now(), now(), 'Vũ Anh Tuấn');
-
-insert into authors (id, created_at, updated_at, name)
-values (2590, now(), now(), 'Jason Koop');
-
-insert into authors (id, created_at, updated_at, name)
-values (2591, now(), now(), 'Jim Rutberg');
-
-insert into authors (id, created_at, updated_at, name)
-values (2592, now(), now(), 'Elle');
-
-insert into authors (id, created_at, updated_at, name)
-values (2593, now(), now(), 'Nhựt Hoàng');
-
-insert into authors (id, created_at, updated_at, name)
-values (2594, now(), now(), 'N Gregory Mankiw');
-
-insert into authors (id, created_at, updated_at, name)
-values (2595, now(), now(), 'N. Gregory Mankiw');
-
-insert into authors (id, created_at, updated_at, name)
-values (2596, now(), now(), 'Bộ giáo dục và đào tạo');
-
-insert into authors (id, created_at, updated_at, name)
-values (2597, now(), now(), 'Abigail Baird');
-
-insert into authors (id, created_at, updated_at, name)
-values (2598, now(), now(), 'Nguyễn Hữu Nhuận');
-
-insert into authors (id, created_at, updated_at, name)
-values (2599, now(), now(), 'Nguyễn Thị Bích Châm');
-
-insert into authors (id, created_at, updated_at, name)
-values (2600, now(), now(), 'Lê Việt Hưng');
-
-insert into authors (id, created_at, updated_at, name)
-values (2601, now(), now(), 'Lê Thị Bích Chi');
-
-insert into authors (id, created_at, updated_at, name)
-values (2602, now(), now(), 'TS Nguyễn Thọ Ánh');
-
-insert into authors (id, created_at, updated_at, name)
-values (2603, now(), now(), 'LS Phạm Thanh Hữu');
-
-insert into authors (id, created_at, updated_at, name)
-values (2604, now(), now(), 'TS Mai K Đa');
-
-insert into authors (id, created_at, updated_at, name)
-values (2605, now(), now(), 'TS Dương Quốc Quân');
-
-insert into authors (id, created_at, updated_at, name)
-values (2606, now(), now(), 'TS Lê Thị Tuyết');
-
-insert into authors (id, created_at, updated_at, name)
-values (2607, now(), now(), 'GS TS Hà Nam Khánh Giao');
-
-insert into authors (id, created_at, updated_at, name)
-values (2608, now(), now(), 'John Dewey');
-
-insert into authors (id, created_at, updated_at, name)
-values (2609, now(), now(), 'ThS BS Nguyễn Thái Duy');
-
-insert into authors (id, created_at, updated_at, name)
-values (2610, now(), now(), 'Đinh Tiên Minh');
-
-insert into authors (id, created_at, updated_at, name)
-values (2611, now(), now(), 'TS Tôn Sinh Thành');
-
-insert into authors (id, created_at, updated_at, name)
-values (2612, now(), now(), 'Karen Tui Boyes');
-
-insert into authors (id, created_at, updated_at, name)
-values (2613, now(), now(), 'GS TS Đặng Lương Mô');
-
-insert into authors (id, created_at, updated_at, name)
-values (2614, now(), now(), 'Andrew Northedge');
-
-insert into authors (id, created_at, updated_at, name)
-values (2615, now(), now(), 'Bùi Trung Thành');
-
-insert into authors (id, created_at, updated_at, name)
-values (2616, now(), now(), 'Phan Thị Kim Chi');
-
-insert into authors (id, created_at, updated_at, name)
-values (2617, now(), now(), 'Lâm Thị Mỹ Hương');
-
-insert into authors (id, created_at, updated_at, name)
-values (2618, now(), now(), 'Nguyễn Việt Thi');
-
-insert into authors (id, created_at, updated_at, name)
-values (2619, now(), now(), 'KS Nguyễn Việt Thái');
+values (2568, now(), now(), 'KS Nguyễn Việt Thái');
 
 insert into publishers (id, created_at, updated_at, name)
-values (1, now(), now(), 'Báo Sinh Viên Việt Nam - Hoa Học Trò');
+values (1, now(), now(), 'Kim Đồng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (2, now(), now(), 'Kim Đồng');
+values (2, now(), now(), 'NXB Kim Đồng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (3, now(), now(), 'Trẻ');
+values (3, now(), now(), 'Phụ Nữ Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
-values (4, now(), now(), 'Văn Học');
+values (4, now(), now(), 'Hội Nhà Văn');
 
 insert into publishers (id, created_at, updated_at, name)
-values (5, now(), now(), 'NXB Kim Đồng');
+values (5, now(), now(), 'Văn Học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (6, now(), now(), 'Báo Sinh Viên VN - Hoa Học Trò');
+values (6, now(), now(), 'NXB Văn Học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (7, now(), now(), 'Thanh Niên');
+values (7, now(), now(), 'Báo Sinh Viên Việt Nam - Hoa Học Trò');
 
 insert into publishers (id, created_at, updated_at, name)
-values (8, now(), now(), 'Dân Trí');
+values (8, now(), now(), 'Trẻ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (9, now(), now(), 'Phụ Nữ Việt Nam');
+values (9, now(), now(), 'NXB Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (10, now(), now(), 'Hội Nhà Văn');
+values (10, now(), now(), 'Báo Sinh Viên VN - Hoa Học Trò');
 
 insert into publishers (id, created_at, updated_at, name)
-values (11, now(), now(), 'NXB Văn Học');
+values (11, now(), now(), 'NXB Lao Động');
 
 insert into publishers (id, created_at, updated_at, name)
-values (12, now(), now(), 'NXB Lao Động');
+values (12, now(), now(), 'Lao Động');
 
 insert into publishers (id, created_at, updated_at, name)
-values (13, now(), now(), 'Lao Động');
+values (13, now(), now(), 'Hồng Đức');
 
 insert into publishers (id, created_at, updated_at, name)
-values (14, now(), now(), 'Hồng Đức');
+values (14, now(), now(), 'Thế Giới');
 
 insert into publishers (id, created_at, updated_at, name)
-values (15, now(), now(), 'Thế Giới');
+values (15, now(), now(), 'NXB Mỹ Thuật');
 
 insert into publishers (id, created_at, updated_at, name)
-values (16, now(), now(), 'NXB Phụ Nữ Việt Nam');
+values (16, now(), now(), 'Thanh Niên');
 
 insert into publishers (id, created_at, updated_at, name)
-values (17, now(), now(), 'NXB Mỹ Thuật');
+values (17, now(), now(), 'NXB Thanh Niên');
 
 insert into publishers (id, created_at, updated_at, name)
-values (18, now(), now(), 'NXB Thanh Niên');
+values (18, now(), now(), 'NXB Trẻ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (19, now(), now(), 'NXB Trẻ');
+values (19, now(), now(), 'Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (20, now(), now(), 'Hà Nội');
+values (20, now(), now(), 'Dân Trí');
 
 insert into publishers (id, created_at, updated_at, name)
-values (21, now(), now(), 'NXB Hà Nội');
+values (21, now(), now(), 'NXB Dân Trí');
 
 insert into publishers (id, created_at, updated_at, name)
 values (22, now(), now(), 'Mỹ Thuật');
 
 insert into publishers (id, created_at, updated_at, name)
-values (23, now(), now(), 'NXB Dân Trí');
+values (23, now(), now(), 'Đồng Nai');
 
 insert into publishers (id, created_at, updated_at, name)
-values (24, now(), now(), 'Đồng Nai');
+values (24, now(), now(), 'NXB Phụ Nữ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (25, now(), now(), 'NXB Hồng Đức');
+values (25, now(), now(), 'NXB Thế Giới');
 
 insert into publishers (id, created_at, updated_at, name)
-values (26, now(), now(), 'NXB Thế Giới');
+values (26, now(), now(), 'NXB Phụ Nữ Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
 values (27, now(), now(), 'NXB Đồng Nai');
@@ -50984,73 +50322,73 @@ insert into publishers (id, created_at, updated_at, name)
 values (30, now(), now(), 'Đại Học Quốc Gia TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (31, now(), now(), 'Phụ Nữ Việt Nam');
+values (31, now(), now(), 'Thanh Hóa');
 
 insert into publishers (id, created_at, updated_at, name)
-values (32, now(), now(), 'Thanh Hóa');
+values (32, now(), now(), 'Giáo Dục Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
-values (33, now(), now(), 'The Pinkfong Company');
+values (33, now(), now(), 'Đại Học Quốc Gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (34, now(), now(), 'Giáo Dục Việt Nam');
+values (34, now(), now(), 'NXB Giáo Dục Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
-values (35, now(), now(), 'Đại Học Quốc Gia Hà Nội');
+values (35, now(), now(), 'Đại Học Huế');
 
 insert into publishers (id, created_at, updated_at, name)
-values (36, now(), now(), 'NXB Giáo Dục Việt Nam');
+values (36, now(), now(), 'NXB Đại Học Quốc Gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (37, now(), now(), 'Đại Học Huế');
+values (37, now(), now(), 'Hải Phòng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (38, now(), now(), 'Đại Học Sư Phạm');
+values (38, now(), now(), 'NBX Đại Học Quốc Gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (39, now(), now(), 'NXB Đại Học Quốc Gia Hà Nội');
+values (39, now(), now(), 'Đại Học Sư Phạm TP.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (40, now(), now(), 'Đại Học Sư Phạm TP.HCM');
+values (40, now(), now(), 'NXB Đại học Sư phạm');
 
 insert into publishers (id, created_at, updated_at, name)
-values (41, now(), now(), 'Đà Nẵng');
+values (41, now(), now(), 'NXB Đại học Quốc gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (42, now(), now(), 'NXB Đại học Sư phạm');
+values (42, now(), now(), 'Đà Nẵng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (43, now(), now(), 'NXB Đại học Quốc gia Hà Nội');
+values (43, now(), now(), 'NXB Đà Nẵng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (44, now(), now(), 'NBX Đại Học Quốc Gia Hà Nội');
+values (44, now(), now(), 'NXB Đại Học Sư Phạm');
 
 insert into publishers (id, created_at, updated_at, name)
-values (45, now(), now(), 'Hải Phòng');
+values (45, now(), now(), 'NXB Đại Học Sư Phạm TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (46, now(), now(), 'NXB Đại Học Sư Phạm TPHCM');
+values (46, now(), now(), 'NXB Hải Phòng');
 
 insert into publishers (id, created_at, updated_at, name)
 values (47, now(), now(), 'Thông Tin Và Truyền Thông');
 
 insert into publishers (id, created_at, updated_at, name)
-values (48, now(), now(), 'NXB Đại Học Sư Phạm');
+values (48, now(), now(), 'NXB Hồng Đức');
 
 insert into publishers (id, created_at, updated_at, name)
-values (49, now(), now(), 'NXB Hải Phòng');
+values (49, now(), now(), 'Tri Thức');
 
 insert into publishers (id, created_at, updated_at, name)
-values (50, now(), now(), 'Tri Thức');
+values (50, now(), now(), 'Đại Học Thái Nguyên');
 
 insert into publishers (id, created_at, updated_at, name)
 values (51, now(), now(), 'NXB Đại Học Sư Phạm Tp.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (52, now(), now(), 'Đại Học Quốc Gia');
+values (52, now(), now(), 'NXB Đại Học Sư Phạm TP Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (53, now(), now(), 'Đại Học Thái Nguyên');
+values (53, now(), now(), 'Đại Học Quốc Gia');
 
 insert into publishers (id, created_at, updated_at, name)
 values (54, now(), now(), 'NXB Tổng hợp TP.HCM');
@@ -51062,349 +50400,367 @@ insert into publishers (id, created_at, updated_at, name)
 values (56, now(), now(), 'NXB Tổng Hợp TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (57, now(), now(), 'NXB Đại Học Sư Phạm TP Hồ Chí Minh');
+values (57, now(), now(), 'Đại Học Sư Phạm');
 
 insert into publishers (id, created_at, updated_at, name)
-values (58, now(), now(), 'NXB Đà Nẵng');
+values (58, now(), now(), 'Đại Học Sư Phạm Thành Phố Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (59, now(), now(), 'Thông Tấn');
+values (59, now(), now(), 'Đại Học Quốc Gia Thành Phố Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (60, now(), now(), 'Đại Học Sư Phạm Thành Phố Hồ Chí Minh');
+values (60, now(), now(), 'Đại Học Sư Phạm TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (61, now(), now(), 'Đại Học Sư Phạm TP Hồ Chí Minh');
+values (61, now(), now(), 'Đại Học Quốc Gia TP.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (62, now(), now(), 'Đại Học Sư Phạm TPHCM');
+values (62, now(), now(), 'Đại Học Sư Phạm TP Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (63, now(), now(), 'Đại Học Quốc Gia TP.HCM');
+values (63, now(), now(), 'Đại Học Sư Phạm');
 
 insert into publishers (id, created_at, updated_at, name)
 values (64, now(), now(), 'Đại Học Quốc Gia TP. Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (65, now(), now(), 'Đại Học Sư Phạm TP.Hồ Chí Minh');
+values (65, now(), now(), 'Đại Học Quốc Gia TP.Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (66, now(), now(), 'Đại Học Quốc Gia TP.Hồ Chí Minh');
+values (66, now(), now(), 'Đại Học Sư Phạm TP.Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
 values (67, now(), now(), 'Đại Học Sư Phạm Tp.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (68, now(), now(), 'Sư Phạm TPHCM');
+values (68, now(), now(), 'Nhà Xuất Bản Đại Học Huế');
 
 insert into publishers (id, created_at, updated_at, name)
-values (69, now(), now(), 'Đại Học Sư PhạmĐại Học Sư Phạm Tp.HCM');
+values (69, now(), now(), 'Vietnam News Agency Publishing House');
 
 insert into publishers (id, created_at, updated_at, name)
-values (70, now(), now(), 'Nhà Xuất Bản Đại Học Huế');
+values (70, now(), now(), 'Sư Phạm TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (71, now(), now(), 'Đại Học Quốc Gia Thành Phố Hồ Chí Minh');
+values (71, now(), now(), 'Đại Học Quốc Gia TP Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (72, now(), now(), 'Richmond, Đại Học Huế');
+values (72, now(), now(), 'NXB Đại Học Sư Phạm TP HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (73, now(), now(), 'Đại Học Quốc Gia TP Hồ Chí Minh');
+values (73, now(), now(), 'Âm Nhạc');
 
 insert into publishers (id, created_at, updated_at, name)
-values (74, now(), now(), 'NXB Đại Học Sư Phạm TP HCM');
+values (74, now(), now(), 'Đại Học Quốc Gia TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (75, now(), now(), 'Âm Nhạc');
+values (75, now(), now(), 'Tổng Hợp TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (76, now(), now(), 'Đại Học Quốc Gia TPHCM');
+values (76, now(), now(), 'Tài Chính');
 
 insert into publishers (id, created_at, updated_at, name)
-values (77, now(), now(), 'Tài Chính');
+values (77, now(), now(), 'Quân Đội Nhân Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (78, now(), now(), 'Quân Đội Nhân Dân');
+values (78, now(), now(), 'NXB Hội Nhà Văn');
 
 insert into publishers (id, created_at, updated_at, name)
-values (79, now(), now(), 'NXB Hội Nhà Văn');
+values (79, now(), now(), 'Chính Trị Quốc Gia Sự Thật');
 
 insert into publishers (id, created_at, updated_at, name)
-values (80, now(), now(), 'Chính Trị Quốc Gia Sự Thật');
+values (80, now(), now(), 'Thế Giới, Văn Học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (81, now(), now(), 'Thế Giới, Văn Học');
+values (81, now(), now(), 'Phụ nữ Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
-values (82, now(), now(), 'Công Thương');
+values (82, now(), now(), 'Thế Giới, Dân Trí');
 
 insert into publishers (id, created_at, updated_at, name)
-values (83, now(), now(), 'Tổng Hợp Thành Phố Hồ Chí Minh');
+values (83, now(), now(), 'NXN Hội Nhà Văn');
 
 insert into publishers (id, created_at, updated_at, name)
-values (84, now(), now(), 'Tổng Hợp TPHCM');
+values (84, now(), now(), 'Công Thương');
 
 insert into publishers (id, created_at, updated_at, name)
-values (85, now(), now(), 'NXB Văn Hóa - Văn Nghệ');
+values (85, now(), now(), 'Phụ Nữ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (86, now(), now(), 'NXB Phụ Nữ');
+values (86, now(), now(), 'NXB Thanh niên');
 
 insert into publishers (id, created_at, updated_at, name)
-values (87, now(), now(), 'Phụ Nữ');
+values (87, now(), now(), 'NXB Văn Hóa - Văn Nghệ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (88, now(), now(), 'Phụ Nữ Việt Nam, Thanh Niên');
+values (88, now(), now(), 'NXB Tổng Hợp');
 
 insert into publishers (id, created_at, updated_at, name)
-values (89, now(), now(), 'NXb Trẻ');
+values (89, now(), now(), 'NXB Khoa Học Xã Hội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (90, now(), now(), 'NXB Khoa Học Xã Hội');
+values (90, now(), now(), 'Tổng Hợp Thành Phố Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (91, now(), now(), 'Văn học');
+values (91, now(), now(), 'Thông Tấn');
 
 insert into publishers (id, created_at, updated_at, name)
-values (92, now(), now(), 'NXB Tôn Giáo');
+values (92, now(), now(), 'Văn học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (93, now(), now(), 'NXB Văn Hóa Sài Gòn');
+values (93, now(), now(), 'NXB Tôn Giáo');
 
 insert into publishers (id, created_at, updated_at, name)
-values (94, now(), now(), 'Thời Đại');
+values (94, now(), now(), 'NXB Văn Hóa Sài Gòn');
 
 insert into publishers (id, created_at, updated_at, name)
 values (95, now(), now(), 'NXB Thời Đại');
 
 insert into publishers (id, created_at, updated_at, name)
-values (96, now(), now(), 'NXB Văn Hoá Sài Gòn');
+values (96, now(), now(), 'Thời Đại');
 
 insert into publishers (id, created_at, updated_at, name)
-values (97, now(), now(), 'Tổng Hợp Thành Phổ Hồ Chí Minh');
+values (97, now(), now(), 'NXB Văn Hoá Sài Gòn');
 
 insert into publishers (id, created_at, updated_at, name)
-values (98, now(), now(), 'Tổng Hợp TP Hồ Chí Minh');
+values (98, now(), now(), 'Tổng Hợp Thành Phổ Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (99, now(), now(), 'Thuận Hóa');
+values (99, now(), now(), 'Tổng Hợp TP Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (100, now(), now(), 'NXB Văn Hóa Thông Tin');
+values (100, now(), now(), 'NXB Đại học sư phạm');
 
 insert into publishers (id, created_at, updated_at, name)
-values (101, now(), now(), 'NXB Đại học sư phạm');
+values (101, now(), now(), 'Cambridge University');
 
 insert into publishers (id, created_at, updated_at, name)
-values (102, now(), now(), 'Cambridge University');
+values (102, now(), now(), 'NXB Compass Publishing');
 
 insert into publishers (id, created_at, updated_at, name)
-values (103, now(), now(), 'NXB Compass Publishing');
+values (103, now(), now(), 'NXB First New');
 
 insert into publishers (id, created_at, updated_at, name)
-values (104, now(), now(), 'NXB First New');
+values (104, now(), now(), 'NXB Tổng hợp Thành Phố Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (105, now(), now(), 'NXB Tổng Hợp TP.HCM');
+values (105, now(), now(), 'Đại học Quốc Gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (106, now(), now(), 'Tổng Hợp Tphcm');
+values (106, now(), now(), 'NXB Đại Học Quốc Gia TPHCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (107, now(), now(), 'Vietnam News Agency Publishing House');
+values (107, now(), now(), 'NXB Đại Học Quốc Gia HN');
 
 insert into publishers (id, created_at, updated_at, name)
-values (108, now(), now(), 'NXB Tổng hợp Thành Phố Hồ Chí Minh');
+values (108, now(), now(), 'NXB Đại học Quốc Gia Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (109, now(), now(), 'Đại học Quốc Gia Hà Nội');
+values (109, now(), now(), 'Kinh Tế Thành Phố Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (110, now(), now(), 'NXB Đại Học Quốc Gia TPHCM');
+values (110, now(), now(), 'NXB Công Thương');
 
 insert into publishers (id, created_at, updated_at, name)
-values (111, now(), now(), 'NXB Đại Học Quốc Gia HN');
+values (111, now(), now(), 'Kinh tế Thành Phố Hồ Chí Mình');
 
 insert into publishers (id, created_at, updated_at, name)
-values (112, now(), now(), 'NXB Đại học Quốc Gia Hà Nội');
+values (112, now(), now(), 'Nhà Xuất Bản Thế Giới');
 
 insert into publishers (id, created_at, updated_at, name)
-values (113, now(), now(), 'Kinh Tế Thành Phố Hồ Chí Minh');
+values (113, now(), now(), 'NXB Thế giới');
 
 insert into publishers (id, created_at, updated_at, name)
-values (114, now(), now(), 'NXB Công Thương');
+values (114, now(), now(), 'NXB Đại Học Kinh Tế Quốc Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (115, now(), now(), 'Nhà Xuất Bản Thế Giới');
+values (115, now(), now(), 'NXB Lao Động Xã Hội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (116, now(), now(), 'NXB Thế giới');
+values (116, now(), now(), 'Đại Học Kinh tế Quốc Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (117, now(), now(), 'NXB Đại Học Kinh Tế Quốc Dân');
+values (117, now(), now(), 'NXB Lao Động - Xã Hội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (118, now(), now(), 'NXB Lao Động Xã Hội');
+values (118, now(), now(), 'NXB Tài Chính');
 
 insert into publishers (id, created_at, updated_at, name)
-values (119, now(), now(), 'Đại Học Kinh tế Quốc Dân');
+values (119, now(), now(), 'NXB Đại học Kinh Tế Quốc Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (120, now(), now(), 'NXB ĐH Kinh Tế Quốc Dân');
+values (120, now(), now(), 'Kinh tế TP.Hồ Chí Minh');
 
 insert into publishers (id, created_at, updated_at, name)
-values (121, now(), now(), 'NXB Đại học Kinh Tế Quốc Dân');
+values (121, now(), now(), 'NXB Văn hóa Văn nghệ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (122, now(), now(), 'Kinh tế TP.Hồ Chí Minh');
+values (122, now(), now(), 'NXB ĐH Kinh Tế Quốc Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (123, now(), now(), 'NXB Văn hóa Văn nghệ');
+values (123, now(), now(), 'NXB Tổng Hợp TP.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (124, now(), now(), 'NXB Tài Chính');
+values (124, now(), now(), 'Đại Học Sư phạm');
 
 insert into publishers (id, created_at, updated_at, name)
-values (125, now(), now(), 'Đại Học Sư phạm');
+values (125, now(), now(), 'Tôn Giáo');
 
 insert into publishers (id, created_at, updated_at, name)
-values (126, now(), now(), 'Tôn Giáo');
+values (126, now(), now(), 'Khoa Học Xã Hội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (127, now(), now(), 'Khoa Học Xã Hội');
+values (127, now(), now(), 'Tổng Hợp TP.HCM');
 
 insert into publishers (id, created_at, updated_at, name)
-values (128, now(), now(), 'Tổng Hợp TP.HCM');
+values (128, now(), now(), 'Thế GIới');
 
 insert into publishers (id, created_at, updated_at, name)
-values (129, now(), now(), 'NXB Thông Tin và Truyền Thông');
+values (129, now(), now(), 'Thông Tin Truyền Thông');
 
 insert into publishers (id, created_at, updated_at, name)
-values (130, now(), now(), 'Thế GIới');
+values (130, now(), now(), 'Bách Khoa Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (131, now(), now(), 'Thông Tin Truyền Thông');
+values (131, now(), now(), 'NXB Tri Thức');
 
 insert into publishers (id, created_at, updated_at, name)
-values (132, now(), now(), 'Bách Khoa Hà Nội');
+values (132, now(), now(), 'NXB Xây Dựng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (133, now(), now(), 'NXB Tri Thức');
+values (133, now(), now(), 'NXB Bách Khoa Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (134, now(), now(), 'NXB Xây Dựng');
+values (134, now(), now(), 'Hồng Bàng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (135, now(), now(), 'NXB Bách Khoa Hà Nội');
+values (135, now(), now(), 'Thế Giới, Trẻ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (136, now(), now(), 'Thông Tin và Truyền Thông');
+values (136, now(), now(), 'NXB Văn Hoá Thông Tin');
 
 insert into publishers (id, created_at, updated_at, name)
-values (137, now(), now(), 'NXB Chính Trị Quốc Gia Sự Thật');
+values (137, now(), now(), 'NXB Y học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (138, now(), now(), 'NXB Thông Tin & Truyền Thông');
+values (138, now(), now(), 'NXB Y Học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (139, now(), now(), 'Hồng Bàng');
+values (139, now(), now(), 'NXB Thuận Hóa');
 
 insert into publishers (id, created_at, updated_at, name)
-values (140, now(), now(), 'Thế Giới, Trẻ');
+values (140, now(), now(), 'NXB Công An Nhân Dân');
 
 insert into publishers (id, created_at, updated_at, name)
-values (141, now(), now(), 'NXB Văn Hoá Thông Tin');
+values (141, now(), now(), 'NXB Thông Tin & Truyền Thông');
 
 insert into publishers (id, created_at, updated_at, name)
-values (142, now(), now(), 'NXB Thuận Hóa');
+values (142, now(), now(), 'CTQGST');
 
 insert into publishers (id, created_at, updated_at, name)
-values (143, now(), now(), 'CTQGST');
+values (143, now(), now(), 'Kim Đổng');
 
 insert into publishers (id, created_at, updated_at, name)
-values (144, now(), now(), 'Kim Đổng');
+values (144, now(), now(), 'NXB Văn hóa - Văn nghệ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (145, now(), now(), 'Nhà Xuất Bản Hà Nội');
+values (145, now(), now(), 'Văn hóa Văn nghệ');
 
 insert into publishers (id, created_at, updated_at, name)
-values (146, now(), now(), 'Thể Thao và Du Lịch');
+values (146, now(), now(), 'NXB Chính Trị Quốc Gia Sự Thật');
 
 insert into publishers (id, created_at, updated_at, name)
-values (147, now(), now(), 'Nhà Xuất Bản Mỹ Thuật');
+values (147, now(), now(), 'Nhà Xuất Bản Hà Nội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (148, now(), now(), 'Văn Hóa Thông Tin');
+values (148, now(), now(), 'Thể Thao và Du Lịch');
 
 insert into publishers (id, created_at, updated_at, name)
-values (149, now(), now(), 'Y Học');
+values (149, now(), now(), 'Phụ Nữ Việt Nam');
 
 insert into publishers (id, created_at, updated_at, name)
-values (150, now(), now(), 'Nxb Đại học quốc gia Hà Nội');
+values (150, now(), now(), 'Nhà Xuất Bản Mỹ Thuật');
 
 insert into publishers (id, created_at, updated_at, name)
-values (151, now(), now(), 'Từ Điển Bách Khoa');
+values (151, now(), now(), 'NXB Văn Hóa Thông Tin');
 
 insert into publishers (id, created_at, updated_at, name)
-values (152, now(), now(), 'NXB Khoa học xã hội');
+values (152, now(), now(), 'Văn Hóa Thông Tin');
 
 insert into publishers (id, created_at, updated_at, name)
-values (153, now(), now(), 'Dân trí');
+values (153, now(), now(), 'Y Học');
 
 insert into publishers (id, created_at, updated_at, name)
-values (154, now(), now(), 'Hội Dân Trí');
+values (154, now(), now(), 'NXB Từ Điển Bách Khoa');
 
 insert into publishers (id, created_at, updated_at, name)
-values (155, now(), now(), 'Thể Thao Và Du Lịch');
+values (155, now(), now(), 'Từ Điển Bách Khoa');
 
 insert into publishers (id, created_at, updated_at, name)
-values (156, now(), now(), 'NXB Thể Thao và Du Lịch');
+values (156, now(), now(), 'NXB Khoa học xã hội');
 
 insert into publishers (id, created_at, updated_at, name)
-values (157, now(), now(), 'Báo Tiền Phong');
+values (157, now(), now(), 'Thông Tin và Truyền Thông');
 
 insert into publishers (id, created_at, updated_at, name)
-values (158, now(), now(), 'Tài Nguyên Môi Trường Và Bản Đồ Việt Nam');
+values (158, now(), now(), 'Dân Trí');
 
 insert into publishers (id, created_at, updated_at, name)
-values (159, now(), now(), 'Đại Học Vinh');
+values (159, now(), now(), 'Dân trí');
 
 insert into publishers (id, created_at, updated_at, name)
-values (160, now(), now(), 'Kinh tế Thành Phố Hồ Chí Minh');
+values (160, now(), now(), 'Hội Dân Trí');
 
 insert into publishers (id, created_at, updated_at, name)
-values (161, now(), now(), 'Đại Học Công Nghiệp TP.HCM');
+values (161, now(), now(), 'Thanh Hóa');
+
+insert into publishers (id, created_at, updated_at, name)
+values (162, now(), now(), 'Thể Thao Và Du Lịch');
+
+insert into publishers (id, created_at, updated_at, name)
+values (163, now(), now(), 'Báo Tiền Phong');
+
+insert into publishers (id, created_at, updated_at, name)
+values (164, now(), now(), 'Tài Nguyên Môi Trường Và Bản Đồ Việt Nam');
+
+insert into publishers (id, created_at, updated_at, name)
+values (165, now(), now(), 'Đại Học Vinh');
+
+insert into publishers (id, created_at, updated_at, name)
+values (166, now(), now(), 'Kinh tế Thành Phố Hồ Chí Minh');
+
+insert into publishers (id, created_at, updated_at, name)
+values (167, now(), now(), 'Đại Học Công Nghiệp Thành Phố Hồ Chí Minh');
 
 insert into specifications (id, created_at, updated_at, name)
 values (1, now(), now(), 'Mã hàng');
 
 insert into specifications (id, created_at, updated_at, name)
-values (2, now(), now(), 'Tên Nhà Cung Cấp');
+values (2, now(), now(), 'Độ Tuổi');
 
 insert into specifications (id, created_at, updated_at, name)
-values (3, now(), now(), 'Ngôn Ngữ');
+values (3, now(), now(), 'Tên Nhà Cung Cấp');
 
 insert into specifications (id, created_at, updated_at, name)
-values (4, now(), now(), 'Người Dịch');
+values (4, now(), now(), 'Ngôn Ngữ');
 
 insert into specifications (id, created_at, updated_at, name)
-values (5, now(), now(), 'Độ Tuổi');
+values (5, now(), now(), 'Đếm ngược thời gian');
 
 insert into specifications (id, created_at, updated_at, name)
-values (6, now(), now(), 'Nhà Cung Cấp');
+values (6, now(), now(), 'Người Dịch');
 
 insert into specifications (id, created_at, updated_at, name)
-values (7, now(), now(), 'Đếm ngược thời gian');
+values (7, now(), now(), 'Nhà Cung Cấp');
 
 insert into specifications (id, created_at, updated_at, name)
-values (8, now(), now(), 'Cấp Độ/ Lớp');
+values (8, now(), now(), 'Dự Kiến Có Hàng');
 
 insert into specifications (id, created_at, updated_at, name)
-values (9, now(), now(), 'Cấp Học');
+values (9, now(), now(), 'Cấp Độ/ Lớp');
 
 insert into specifications (id, created_at, updated_at, name)
-values (10, now(), now(), 'Dự Kiến Có Hàng');
+values (10, now(), now(), 'Cấp Học');
 
 insert into specifications (id, created_at, updated_at, name)
 values (11, now(), now(), 'Vùng - Miền');
