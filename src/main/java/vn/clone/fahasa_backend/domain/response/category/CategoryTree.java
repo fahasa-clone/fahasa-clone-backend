@@ -14,5 +14,6 @@ import lombok.Setter;
 public class CategoryTree {
     private Integer id;
     private String name;
+    private String categoryIcon;
     private List<CategoryTree> children;
 }

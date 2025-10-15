@@ -40,7 +40,7 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categories = categoryRepository.findAll();
         List<CategoryTree> rootList = categories.stream()
                                                 .filter(c -> c.getParent() == null)
-                                                .map(c -> new CategoryTree(c.getId(), c.getName(), null))
+                                                .map(c -> new CategoryTree(c.getId(), c.getName(), c.getCategoryIcon(), null))
                                                 .toList();
         rootList.forEach(root -> root.setChildren(getChildren(categories, root.getId())));
         return rootList;
@@ -50,7 +50,7 @@ public class CategoryServiceImpl implements CategoryService {
         List<CategoryTree> children = categories.stream()
                                                 .filter(c -> c.getParent() != null && c.getParent()
                                                                                        .getId() == parent_id)
-                                                .map(c -> new CategoryTree(c.getId(), c.getName(), null))
+                                                .map(c -> new CategoryTree(c.getId(), c.getName(), c.getCategoryIcon(), null))
                                                 .toList();
 
         if (children.isEmpty()) {

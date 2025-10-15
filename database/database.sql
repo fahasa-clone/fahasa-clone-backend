@@ -22,7 +22,8 @@ CREATE TABLE "categories"
     "updated_at" timestamptz,
     "name"       varchar(256),
     "parent_id"  int,
-	"description" text
+	"description" text,
+    "category_icon" varchar(256)
 );
 
 CREATE TABLE "publishers"

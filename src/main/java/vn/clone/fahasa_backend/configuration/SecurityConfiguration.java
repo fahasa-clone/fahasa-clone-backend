@@ -98,7 +98,9 @@ public class SecurityConfiguration {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint) throws Exception {
-        String[] whiteList = {"/auth/login", "/auth/register", "/auth/refresh"};
+        String[] whiteList = {
+                "/auth/login", "/auth/register", "/auth/refresh", "/auth/activate", "/auth/logout"
+        };
 
         http.csrf(AbstractHttpConfigurer::disable)
             .authorizeHttpRequests(authz -> authz.dispatcherTypeMatchers(DispatcherType.ERROR)

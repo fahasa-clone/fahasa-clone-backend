@@ -18,8 +18,8 @@ public class Category extends AbstractEntity {
     @Column(name = "name")
     @NotBlank(message = "name field is required")
     private String name;
-
     private String description;
+    private String categoryIcon;
 
     @ManyToOne
     @JoinColumn(name = "parent_id")
