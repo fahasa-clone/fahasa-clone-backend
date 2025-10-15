@@ -55,10 +55,8 @@ public class CategoryServiceImpl implements CategoryService {
 
         if (children.isEmpty()) {
             return null;
-        } else {
-            children.forEach(child -> child.setChildren(getChildren(categories, child.getId())));
         }
-
+        children.forEach(child -> child.setChildren(getChildren(categories, child.getId())));
         return children;
     }
 
