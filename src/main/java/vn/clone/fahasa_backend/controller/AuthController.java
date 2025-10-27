@@ -1,12 +1,10 @@
 package vn.clone.fahasa_backend.controller;
 
-import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
@@ -14,8 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
 import org.springframework.web.bind.annotation.*;
@@ -30,21 +26,13 @@ import vn.clone.fahasa_backend.util.SecurityUtils;
 
 @RestController
 @RequestMapping("/auth")
+@AllArgsConstructor
 public class AuthController {
     private final AccountService accountService;
     private final EmailService emailService;
     private final SecurityUtils securityUtils;
     private final AuthenticationManagerBuilder authenticationManagerBuilder;
     private final JwtDecoder jwtDecoder;
-
-
-    AuthController(AccountService accountService, EmailService emailService, SecurityUtils securityUtils, AuthenticationManagerBuilder authenticationManagerBuilder, JwtDecoder jwtDecoder) {
-        this.accountService = accountService;
-        this.emailService = emailService;
-        this.securityUtils = securityUtils;
-        this.authenticationManagerBuilder = authenticationManagerBuilder;
-        this.jwtDecoder = jwtDecoder;
-    }
 
     @PostMapping("/register")
     public ResponseEntity<String> register(@RequestBody @Valid RegisterDTO user) {
@@ -55,7 +43,8 @@ public class AuthController {
                 newUser.getLastName(),
                 newUser.getActivationKey()
         ));
-        return ResponseEntity.status(HttpStatus.CREATED).body("Registered account successfully");
+        return ResponseEntity.status(HttpStatus.CREATED)
+                             .body("Registered account successfully");
     }
 
     @GetMapping("/activate")

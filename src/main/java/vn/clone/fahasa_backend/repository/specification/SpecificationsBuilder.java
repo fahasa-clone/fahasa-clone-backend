@@ -14,8 +14,8 @@ public class SpecificationsBuilder {
 
         // Regex variables
         String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<notOperator>not)?(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>not in|\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
-        Pattern r = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
-        Matcher m = r.matcher(input);
+        Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(input);
 
         // Sub-expression handler variables
         Deque<Character> stack = new ArrayDeque<>();
@@ -24,21 +24,21 @@ public class SpecificationsBuilder {
         boolean isSubNegation = false;
         boolean isInSubExpression = false;
 
-        while (m.find()) {
-            System.out.println(m.group(0));
-            System.out.println(m.group("content"));
+        while (matcher.find()) {
+            System.out.println(matcher.group(0));
+            System.out.println(matcher.group("content"));
 
-            String match = m.group(0);
-            String content = m.group("content");
-            String openParentheses = m.group("openParentheses");
-            String closedParentheses = m.group("closedParentheses");
-            String logicalOperator = m.group("logicalOperator");
-            String name = m.group("name");
-            String operator = m.group("operator");
-            String value = m.group("value");
+            String match = matcher.group(0);
+            String content = matcher.group("content");
+            String openParentheses = matcher.group("openParentheses");
+            String closedParentheses = matcher.group("closedParentheses");
+            String logicalOperator = matcher.group("logicalOperator");
+            String name = matcher.group("name");
+            String operator = matcher.group("operator");
+            String value = matcher.group("value");
 
             boolean isDisjunction = false;
-            boolean isNegation = m.group("notOperator") != null;
+            boolean isNegation = matcher.group("notOperator") != null;
 
             if (logicalOperator != null) {
                 isDisjunction = logicalOperator.equals("or");

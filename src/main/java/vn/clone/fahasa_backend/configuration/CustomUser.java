@@ -1,15 +1,13 @@
 package vn.clone.fahasa_backend.configuration;
 
 import java.util.Collection;
-import java.util.List;
 
-
-import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.User;
 
 import vn.clone.fahasa_backend.domain.DTO.UserDTO;
 
-public class CustomUser extends org.springframework.security.core.userdetails.User {
+public class CustomUser extends User {
     private UserDTO userDto;
 
     public CustomUser(String username, String password, Collection<? extends GrantedAuthority> authorities, UserDTO userDto) {
