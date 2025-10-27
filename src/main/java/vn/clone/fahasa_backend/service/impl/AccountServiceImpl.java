@@ -2,6 +2,7 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.Optional;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -13,14 +14,10 @@ import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.util.RandomUtil;
 
 @Service
+@AllArgsConstructor
 public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
     private final PasswordEncoder passwordEncoder;
-
-    public AccountServiceImpl(AccountRepository accountRepository, PasswordEncoder passwordEncoder) {
-        this.accountRepository = accountRepository;
-        this.passwordEncoder = passwordEncoder;
-    }
 
     @Override
     public Account registerAccount(RegisterDTO user) {

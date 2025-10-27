@@ -3,6 +3,7 @@ package vn.clone.fahasa_backend.configuration;
 import java.util.Collections;
 import java.util.Optional;
 
+import lombok.AllArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -14,13 +15,10 @@ import vn.clone.fahasa_backend.domain.DTO.UserDTO;
 import vn.clone.fahasa_backend.error.InvalidAccountException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 
-@Component("userDetailsService")
+@Component
+@AllArgsConstructor
 public class UserDetailServiceCustom implements UserDetailsService {
     private final AccountRepository accountRepository;
-
-    public UserDetailServiceCustom(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

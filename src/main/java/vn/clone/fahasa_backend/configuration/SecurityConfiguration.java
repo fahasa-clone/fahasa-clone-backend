@@ -97,7 +97,8 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint) throws Exception {
+    public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint)
+            throws Exception {
         String[] whiteList = {
                 "/auth/login", "/auth/register", "/auth/refresh", "/auth/activate", "/auth/logout"
         };
