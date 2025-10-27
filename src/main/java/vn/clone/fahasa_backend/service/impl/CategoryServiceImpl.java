@@ -20,6 +20,20 @@ public class CategoryServiceImpl implements CategoryService {
         this.categoryRepository = categoryRepository;
     }
 
+    // @Bean
+    // public CommandLineRunner init() {
+    //     return args -> {
+    //         List<Category> categoryList = categoryRepository.findAll();
+    //         System.out.println("=============================== START =======================================");
+    //         categoryList.forEach(category -> {
+    //             category.setName(VietnameseConverter.normalizeName(category.getName()));
+    //             category.setSlug(VietnameseConverter.convertNameToSlug(category.getName()));
+    //         });
+    //         categoryRepository.saveAll(categoryList);
+    //         System.out.println("================================ END ======================================");
+    //     };
+    // }
+
     public Category createCategory(Category category) {
         if (categoryRepository.existsByName(category.getName())) {
             throw new BadRequestException("Category name already exists");
@@ -40,7 +54,12 @@ public class CategoryServiceImpl implements CategoryService {
         List<Category> categories = categoryRepository.findAll();
         List<CategoryTree> rootList = categories.stream()
                                                 .filter(c -> c.getParent() == null)
-                                                .map(c -> new CategoryTree(c.getId(), c.getName(), c.getCategoryIcon(), null))
+                                                .map(c -> CategoryTree.builder()
+                                                                      .id(c.getId())
+                                                                      .name(c.getName())
+                                                                      .categoryIcon(c.getCategoryIcon())
+                                                                      .slug(c.getSlug())
+                                                                      .build())
                                                 .toList();
         rootList.forEach(root -> root.setChildren(getChildren(categories, root.getId())));
         return rootList;
@@ -50,7 +69,12 @@ public class CategoryServiceImpl implements CategoryService {
         List<CategoryTree> children = categories.stream()
                                                 .filter(c -> c.getParent() != null && c.getParent()
                                                                                        .getId() == parent_id)
-                                                .map(c -> new CategoryTree(c.getId(), c.getName(), c.getCategoryIcon(), null))
+                                                .map(c -> CategoryTree.builder()
+                                                                      .id(c.getId())
+                                                                      .name(c.getName())
+                                                                      .categoryIcon(c.getCategoryIcon())
+                                                                      .slug(c.getSlug())
+                                                                      .build())
                                                 .toList();
 
         if (children.isEmpty()) {
