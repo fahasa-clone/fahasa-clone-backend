@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.configuration;
+package vn.clone.fahasa_backend.config;
 
 import java.io.IOException;
 

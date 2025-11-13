@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.configuration;
+package vn.clone.fahasa_backend.config;
 
 import java.sql.*;
 
@@ -45,6 +45,9 @@ public class CustomPostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
             @Override
             protected X doExtract(ResultSet rs, int paramIndex, WrapperOptions options) throws SQLException {
                 String result = (String) rs.getObject(paramIndex);
+                if (result == null) {
+                    return null;
+                }
                 return getJavaType().wrap(result.toUpperCase(), options);
             }
 

@@ -7,7 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.JdbcType;
 
-import vn.clone.fahasa_backend.configuration.CustomPostgreSQLEnumJdbcType;
+import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
 
 @Entity

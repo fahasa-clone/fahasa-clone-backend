@@ -4,12 +4,15 @@ import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
+import vn.clone.fahasa_backend.annotation.SizedNotBlank;
+
 @Getter
 @Setter
 public class LoginDTO {
+
     @NotBlank(message = "email is required!")
     private String email;
 
-    @NotBlank(message = "password is required!")
+    @SizedNotBlank(message = "password is required!", min = 4, max = 100)
     private String password;
 }

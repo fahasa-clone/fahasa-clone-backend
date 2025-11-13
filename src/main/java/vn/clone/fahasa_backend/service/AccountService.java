@@ -6,13 +6,16 @@ import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.DTO.RegisterDTO;
 
 public interface AccountService {
-    public Account registerAccount(RegisterDTO user);
 
-    public Optional<Account> activateRegistration(String email, String key);
+    Account registerAccount(RegisterDTO user);
 
-    public void updateUserToken(String email, String token);
+    Optional<Account> activateRegistration(String email, String key);
 
-    public Account getUserInfo(String email);
+    void deleteRefreshToken(String refreshToken);
 
-    public Account getUserByRefreshToken(String refreshToken, String email);
+    Account getUserInfo(String email);
+
+    Account getUserByRefreshToken(String refreshToken);
+
+    void addRefreshToken(int account_id, String token);
 }
