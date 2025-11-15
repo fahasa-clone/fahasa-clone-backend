@@ -2,6 +2,7 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.Optional;
 
+import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -69,8 +70,9 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    @Transactional
     public void deleteRefreshToken(String refreshToken) {
-        refreshTokenRepository.deleteById(refreshToken);
+        refreshTokenRepository.deleteByToken(refreshToken);
     }
 
     @Override
@@ -84,20 +86,17 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Account getUserByRefreshToken(String refreshToken) {
-        RefreshToken refreshTokenObj = refreshTokenRepository.findByToken(refreshToken)
-                                                             .orElseThrow(() -> new BadRequestException("Invalid refresh token!"));
-        return refreshTokenObj.getAccount();
+        return refreshTokenRepository.findByToken(refreshToken)
+                                     .map(RefreshToken::getAccount)
+                                     .orElseThrow(() -> new BadRequestException("Invalid refresh token!"));
     }
 
     @Override
-    public void addRefreshToken(int account_id, String token) {
-        accountRepository.findById(account_id)
-                         .ifPresent(account -> {
-                             RefreshToken refreshToken = RefreshToken.builder()
-                                                                     .token(token)
-                                                                     .account(account)
-                                                                     .build();
-                             refreshTokenRepository.save(refreshToken);
-                         });
+    public void addRefreshToken(Account account, String token) {
+        RefreshToken refreshToken = RefreshToken.builder()
+                                                .token(token)
+                                                .account(account)
+                                                .build();
+        refreshTokenRepository.save(refreshToken);
     }
 }

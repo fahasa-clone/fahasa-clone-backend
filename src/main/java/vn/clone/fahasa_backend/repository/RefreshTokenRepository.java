@@ -11,4 +11,6 @@ import vn.clone.fahasa_backend.domain.RefreshToken;
 public interface RefreshTokenRepository extends JpaRepository<RefreshToken, String> {
 
     Optional<RefreshToken> findByToken(String refreshToken);
+
+    void deleteByToken(String refreshToken);
 }

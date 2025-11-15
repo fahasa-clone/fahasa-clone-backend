@@ -6,7 +6,9 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
@@ -14,6 +16,8 @@ import vn.clone.fahasa_backend.util.constant.Gender;
 
 @Entity
 @Table(name = "accounts")
+@SuperBuilder
+@NoArgsConstructor
 @Getter
 @Setter
 public class Account extends AbstractEntity {

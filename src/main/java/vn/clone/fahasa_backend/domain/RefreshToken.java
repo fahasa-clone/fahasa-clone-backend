@@ -5,18 +5,21 @@ import lombok.*;
 
 @Entity
 @Table(name = "refresh_tokens")
-@NoArgsConstructor
-@AllArgsConstructor
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class RefreshToken {
 
     @Id
-    @Column(name = "refresh_token")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "refresh_token", unique = true, nullable = false)
     private String token;
 
     @ManyToOne
-    @JoinColumn(name = "account_id")
+    @JoinColumn(name = "account_id", nullable = false)
     private Account account;
 }

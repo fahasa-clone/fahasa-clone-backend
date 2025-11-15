@@ -17,5 +17,5 @@ public interface AccountService {
 
     Account getUserByRefreshToken(String refreshToken);
 
-    void addRefreshToken(int account_id, String token);
+    void addRefreshToken(Account account, String token);
 }

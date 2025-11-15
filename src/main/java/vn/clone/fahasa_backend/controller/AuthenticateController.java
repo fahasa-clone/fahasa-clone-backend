@@ -58,7 +58,9 @@ public class AuthenticateController {
         String refreshToken = this.createToken(authentication, false);
 
         DomainUserDetailsService.UserWithId userWithId = (DomainUserDetailsService.UserWithId) authentication.getPrincipal();
-        accountService.addRefreshToken(userWithId.getId(), refreshToken);
+        accountService.addRefreshToken(Account.builder()
+                                              .id(userWithId.getId())
+                                              .build(), refreshToken);
 
         ResponseCookie responseCookie = createCookie(refreshToken, fahasaProperties.getSecurity()
                                                                                    .getAuthentication()
@@ -101,7 +103,7 @@ public class AuthenticateController {
         String newAccessToken = createToken(authentication, true);
         String newRefreshToken = createToken(authentication, false);
 
-        accountService.addRefreshToken(account.getId(), newRefreshToken);
+        accountService.addRefreshToken(account, newRefreshToken);
         ResponseCookie responseCookie = createCookie(newRefreshToken, fahasaProperties.getSecurity()
                                                                                       .getAuthentication()
                                                                                       .getJwt()
