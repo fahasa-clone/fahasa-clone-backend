@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.domain.DTO;
+package vn.clone.fahasa_backend.domain.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
@@ -8,11 +8,11 @@ import vn.clone.fahasa_backend.annotation.SizedNotBlank;
 
 @Getter
 @Setter
-public class LoginDTO {
+public class VerifyOtpDTO {
 
     @NotBlank(message = "email is required!")
     private String email;
 
-    @SizedNotBlank(message = "password is required!", min = 4, max = 100)
-    private String password;
+    @SizedNotBlank(message = "OTP is required!", min = 6, max = 6)
+    private String otpValue;
 }

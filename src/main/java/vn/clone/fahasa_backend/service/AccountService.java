@@ -3,7 +3,8 @@ package vn.clone.fahasa_backend.service;
 import java.util.Optional;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.DTO.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
 
 public interface AccountService {
 
@@ -18,4 +19,8 @@ public interface AccountService {
     Account getUserByRefreshToken(String refreshToken);
 
     void addRefreshToken(Account account, String token);
+
+    Account getActivatedAccount(String email);
+
+    void resetPassword(ResetPasswordDTO resetPasswordDTO);
 }

@@ -4,6 +4,7 @@ import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -34,4 +35,7 @@ public class Account extends AbstractEntity {
     private String activationKey;
     private String token;
     private boolean isOauth2;
+
+    @Transient
+    private String otpValue;
 }

@@ -23,8 +23,8 @@ import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.DTO.LoginDTO;
-import vn.clone.fahasa_backend.domain.DTO.UserInfoDTO;
+import vn.clone.fahasa_backend.domain.dto.LoginDTO;
+import vn.clone.fahasa_backend.domain.dto.UserInfoDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.security.DomainUserDetailsService;
 import vn.clone.fahasa_backend.service.AccountService;
@@ -33,7 +33,7 @@ import vn.clone.fahasa_backend.util.SecurityUtils;
 import static vn.clone.fahasa_backend.util.SecurityUtils.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 @AllArgsConstructor
 public class AuthenticateController {
 
@@ -83,7 +83,8 @@ public class AuthenticateController {
         userInfo.setLastName(account.getLastName());
         userInfo.setPhone(account.getPhone());
         userInfo.setBirthday(account.getBirthday());
-        return ResponseEntity.ok().body(userInfo);
+        return ResponseEntity.ok()
+                             .body(userInfo);
     }
 
     @GetMapping("/refresh")

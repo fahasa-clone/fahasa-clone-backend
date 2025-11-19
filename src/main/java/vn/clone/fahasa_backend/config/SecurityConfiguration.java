@@ -54,7 +54,7 @@ public class SecurityConfiguration {
     public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint)
             throws Exception {
         String[] whiteList = {
-                "/auth/login", "/accounts/register", "/auth/refresh", "/accounts/activate", "/auth/logout"
+                "/api/auth/login", "/api/accounts/register", "/api/auth/refresh", "/api/accounts/activate", "/api/auth/logout"
         };
         RequestCache nullRequestCache = new NullRequestCache();
 
@@ -63,7 +63,7 @@ public class SecurityConfiguration {
                                                  .permitAll()
                                                  .requestMatchers(whiteList)
                                                  .permitAll()
-                                                 .requestMatchers(HttpMethod.GET, "/categories/**", "/books/**")
+                                                 .requestMatchers(HttpMethod.GET, "/api/categories/**", "/api/books/**")
                                                  .permitAll()
                                                  .anyRequest()
                                                  .authenticated())

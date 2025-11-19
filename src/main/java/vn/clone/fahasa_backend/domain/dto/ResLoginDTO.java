@@ -1,7 +1,6 @@
-package vn.clone.fahasa_backend.domain.DTO;
+package vn.clone.fahasa_backend.domain.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Getter;
 import lombok.Setter;
 
 @Setter

@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.domain.DTO;
+package vn.clone.fahasa_backend.domain.dto;
 
 import java.sql.Date;
 

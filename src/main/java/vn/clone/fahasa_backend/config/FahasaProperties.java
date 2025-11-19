@@ -1,33 +1,50 @@
 package vn.clone.fahasa_backend.config;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "fahasa")
+@AllArgsConstructor
 @Getter
-@Setter
 public class FahasaProperties {
-    private Security security;
 
+    private final Security security;
+
+    private final Mail mail;
+
+    @AllArgsConstructor
     @Getter
-    @Setter
     public static class Security {
-        private final Authentication authentication = new Authentication();
+        private final Authentication authentication;
 
+        @AllArgsConstructor
         @Getter
-        @Setter
         public static class Authentication {
-            private final Jwt jwt = new Jwt();
 
+            private final Jwt jwt;
+
+            @AllArgsConstructor
             @Getter
-            @Setter
             public static class Jwt {
-                private String secret;
-                private String base64Secret;
-                private long tokenValidityInSeconds;
-                private long tokenValidityInSecondsForRefreshToken;
+
+                private final String secret;
+
+                private final String base64Secret;
+
+                private final long tokenValidityInSeconds;
+
+                private final long tokenValidityInSecondsForRefreshToken;
             }
         }
+    }
+
+    @AllArgsConstructor
+    @Getter
+    public static class Mail {
+
+        private final String from;
+
+        private final String baseUrl;
     }
 }

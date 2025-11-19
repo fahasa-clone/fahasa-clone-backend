@@ -2,14 +2,15 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.Optional;
 
-import jakarta.transaction.Transactional;
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.DTO.RegisterDTO;
 import vn.clone.fahasa_backend.domain.RefreshToken;
+import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 import vn.clone.fahasa_backend.repository.RefreshTokenRepository;
@@ -98,5 +99,22 @@ public class AccountServiceImpl implements AccountService {
                                                 .account(account)
                                                 .build();
         refreshTokenRepository.save(refreshToken);
+    }
+
+    @Override
+    public Account getActivatedAccount(String email) {
+        Account account = accountRepository.findByEmailIgnoreCase(email)
+                                           .orElseThrow(() -> new BadRequestException("Email is not existed!"));
+        if (!account.isActivated()) {
+            throw new BadRequestException("Account is not activated!");
+        }
+        return account;
+    }
+
+    @Override
+    public void resetPassword(ResetPasswordDTO resetPasswordDTO) {
+        Account account = getActivatedAccount(resetPasswordDTO.getEmail());
+        account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
+        accountRepository.save(account);
     }
 }
