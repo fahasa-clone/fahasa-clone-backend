@@ -2,7 +2,7 @@ package vn.clone.fahasa_backend.util;
 
 import java.security.SecureRandom;
 
-public class RandomUtil {
+public class RandomUtils {
     private static final SecureRandom SECURE_RANDOM = new SecureRandom();
     private static final int KEY_LENGTH = 36;
 
@@ -21,5 +21,14 @@ public class RandomUtil {
             keyBuilder.appendCodePoint(chars[randomInt]);
         }
         return keyBuilder.toString();
+    }
+
+    public static String generatePassword() {
+        String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+        StringBuilder password = new StringBuilder(12);
+        for (int i = 0; i < 12; i++) {
+            password.append(chars.charAt(SECURE_RANDOM.nextInt(chars.length())));
+        }
+        return password.toString();
     }
 }

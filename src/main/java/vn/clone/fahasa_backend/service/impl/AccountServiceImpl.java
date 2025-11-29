@@ -4,19 +4,31 @@ import java.util.Optional;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.DTO.RegisterDTO;
+import vn.clone.fahasa_backend.domain.RefreshToken;
+import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
+import vn.clone.fahasa_backend.repository.RefreshTokenRepository;
 import vn.clone.fahasa_backend.service.AccountService;
-import vn.clone.fahasa_backend.util.RandomUtil;
+import vn.clone.fahasa_backend.service.MailService;
+import vn.clone.fahasa_backend.util.RandomUtils;
 
 @Service
 @AllArgsConstructor
 public class AccountServiceImpl implements AccountService {
+
     private final AccountRepository accountRepository;
+
+    private final RefreshTokenRepository refreshTokenRepository;
+
+    private final MailService mailService;
+
     private final PasswordEncoder passwordEncoder;
 
     @Override
@@ -37,7 +49,7 @@ public class AccountServiceImpl implements AccountService {
         account.setGender(user.getGender());
         account.setBirthday(user.getBirthday());
         account.setActivated(false);
-        account.setActivationKey(RandomUtil.generateActivateKey());
+        account.setActivationKey(RandomUtils.generateActivateKey());
         account.setToken(null);
         account.setOauth2(false);
         return accountRepository.save(account);
@@ -54,24 +66,18 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     public Optional<Account> activateRegistration(String email, String key) {
-        Optional<Account> accountOptional = accountRepository.findByEmailAndActivationKey(email, key);
-        if (accountOptional.isPresent()) {
-            Account account = accountOptional.get();
-            account.setActivated(true);
-            account.setActivationKey(null);
-            return Optional.of(accountRepository.save(account));
-        }
-        return Optional.empty();
+        return accountRepository.findByEmailAndActivationKey(email, key)
+                                .map(account -> {
+                                    account.setActivated(true);
+                                    account.setActivationKey(null);
+                                    return accountRepository.save(account);
+                                });
     }
 
     @Override
-    public void updateUserToken(String email, String token) {
-        Optional<Account> accountOptional = accountRepository.findByEmailAndIsActivated(email, true);
-        if (accountOptional.isPresent()) {
-            Account account = accountOptional.get();
-            account.setToken(token);
-            accountRepository.save(account);
-        }
+    @Transactional
+    public void deleteRefreshToken(String refreshToken) {
+        refreshTokenRepository.deleteByToken(refreshToken);
     }
 
     @Override
@@ -83,13 +89,62 @@ public class AccountServiceImpl implements AccountService {
         return accountOptional.get();
     }
 
+    @Override
+    public Account getUserByRefreshToken(String refreshToken) {
+        return refreshTokenRepository.findByToken(refreshToken)
+                                     .map(RefreshToken::getAccount)
+                                     .orElseThrow(() -> new BadRequestException("Invalid refresh token!"));
+    }
 
     @Override
-    public Account getUserByRefreshToken(String refreshToken, String email) {
-        Optional<Account> accountOptional = accountRepository.findByEmailAndToken(email, refreshToken);
-        if (accountOptional.isEmpty()) {
-            throw new BadRequestException("Invalid refresh token!");
+    public void addRefreshToken(Account account, String token) {
+        RefreshToken refreshToken = RefreshToken.builder()
+                                                .token(token)
+                                                .account(account)
+                                                .build();
+        refreshTokenRepository.save(refreshToken);
+    }
+
+    @Override
+    public Account getActivatedAccount(String email) {
+        Account account = accountRepository.findByEmailIgnoreCase(email)
+                                           .orElseThrow(() -> new BadRequestException("Email is not existed!"));
+        if (!account.isActivated()) {
+            throw new BadRequestException("Account is not activated!");
         }
-        return accountOptional.get();
+        return account;
+    }
+
+    @Override
+    public void resetPassword(ResetPasswordDTO resetPasswordDTO) {
+        Account account = getActivatedAccount(resetPasswordDTO.getEmail());
+        account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
+        accountRepository.save(account);
+    }
+
+    @Override
+    public Account getOrCreateUser(String email, OAuth2User oauth2User) {
+        return accountRepository.findByEmailIgnoreCase(email)
+                                .orElseGet(() -> createAccountFromOAuth2User(oauth2User));
+    }
+
+    private Account createAccountFromOAuth2User(OAuth2User oauth2User) {
+        String email = oauth2User.getAttribute("email");
+        // String name = oauth2User.getAttribute("name");
+
+        String randomPassword = RandomUtils.generatePassword();
+
+        Account account = Account.builder()
+                                 .email(email)
+                                 // .fullName(name)
+                                 .password(passwordEncoder.encode(randomPassword))
+                                 .rawPassword(randomPassword)
+                                 .isActivated(true)
+                                 .build();
+
+        // Send password mail
+        mailService.sendPasswordMail(account);
+
+        return accountRepository.save(account);
     }
 }

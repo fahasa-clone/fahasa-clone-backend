@@ -2,17 +2,29 @@ package vn.clone.fahasa_backend.service;
 
 import java.util.Optional;
 
+import org.springframework.security.oauth2.core.user.OAuth2User;
+
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.DTO.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
+import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
 
 public interface AccountService {
-    public Account registerAccount(RegisterDTO user);
 
-    public Optional<Account> activateRegistration(String email, String key);
+    Account registerAccount(RegisterDTO user);
 
-    public void updateUserToken(String email, String token);
+    Optional<Account> activateRegistration(String email, String key);
 
-    public Account getUserInfo(String email);
+    void deleteRefreshToken(String refreshToken);
 
-    public Account getUserByRefreshToken(String refreshToken, String email);
+    Account getUserInfo(String email);
+
+    Account getUserByRefreshToken(String refreshToken);
+
+    void addRefreshToken(Account account, String token);
+
+    Account getActivatedAccount(String email);
+
+    void resetPassword(ResetPasswordDTO resetPasswordDTO);
+
+    Account getOrCreateUser(String email, OAuth2User oauth2User);
 }

@@ -13,8 +13,21 @@ spring:
     web:
       pageable:
         one-indexed-parameters: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: test
+            client-secret: test
+          github:
+            client-id: test
+            client-secret: test
+            scope:
+              - read:user
+              - user:email
 
-  # config mail
+  # Config mail
   mail:
     host: smtp.gmail.com
     port: 587
@@ -42,8 +55,14 @@ logging:
           jdbc:
             bind: trace
 
-#config jwt
-jwt:
-  base64-secret: aNIcxUXh5vyUE2/kl3rUcwiSRT9kYm0gyZefk1Xsx3iYTEcZZvjc76RIUKxCt6enG1O+fY408f7Af6q5/waEqg==
-  access-token-validity-in-seconds: 600
-  refresh-token-validity-in-second: 86400
+# Fahasa properties
+fahasa:
+  security:
+    authentication:
+      jwt:
+        # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
+        base64-secret: ZjMzMDNkMzMzMzBhNDE5NDZkN2FjNTkxMjE5M2IzMmI1ZThkMDFkNzQzNTNmZDZhYTc0Zjk4Mzg1MmViYTkyYTdmYzI3NDk3NDBhZDU2MzRjNGExYmQyZTg4OGZjMzk1Yzc0M2YwODI5MDJlMWM1Y2EyN2Q3MzY2NmJiODNlNzI=
+        token-validity-in-seconds: 1800 # 30 minutes
+        token-validity-in-seconds-for-refresh-token: 1_296_000 # 15 days
+  mail:
+    base-url: http://localhost:8080

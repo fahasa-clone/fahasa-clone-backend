@@ -4,16 +4,21 @@ import java.sql.Date;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
 
-import vn.clone.fahasa_backend.configuration.CustomPostgreSQLEnumJdbcType;
+import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.Gender;
 
 @Entity
 @Table(name = "accounts")
+@SuperBuilder
+@NoArgsConstructor
 @Getter
 @Setter
 public class Account extends AbstractEntity {
@@ -21,13 +26,22 @@ public class Account extends AbstractEntity {
     private String password;
     private String firstName;
     private String lastName;
+
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be 10 digits long and contain only numbers.")
     private String phone;
+
     @JdbcType(CustomPostgreSQLEnumJdbcType.class)
     private Gender gender;
+
     private Date birthday;
     private boolean isActivated;
     private String activationKey;
     private String token;
     private boolean isOauth2;
+
+    @Transient
+    private String otpValue;
+
+    @Transient
+    private String rawPassword;
 }

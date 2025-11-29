@@ -15,9 +15,10 @@ import vn.clone.fahasa_backend.domain.response.PageResponse;
 import vn.clone.fahasa_backend.service.BookService;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/api/books")
 @AllArgsConstructor
 public class BookController {
+    
     private final BookService bookService;
 
     @GetMapping
@@ -25,5 +26,4 @@ public class BookController {
                                                                    @RequestParam(value = "filter", defaultValue = "") String filter) {
         return ResponseEntity.ok(bookService.fetchAllBooks(pageable, filter));
     }
-
 }

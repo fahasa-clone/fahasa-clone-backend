@@ -9,13 +9,14 @@ import vn.clone.fahasa_backend.domain.Account;
 
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Integer> {
-    public boolean existsByEmail(String email);
 
-    public Optional<Account> findByEmail(String email);
+    boolean existsByEmail(String email);
 
-    public Optional<Account> findByEmailAndActivationKey(String email, String activationKey);
+    Optional<Account> findByEmail(String email);
 
-    public Optional<Account> findByEmailAndIsActivated(String email, boolean isActivated);
+    Optional<Account> findByEmailIgnoreCase(String email);
 
-    public Optional<Account> findByEmailAndToken(String email, String token);
+    Optional<Account> findByEmailAndActivationKey(String email, String activationKey);
+
+    Optional<Account> findByEmailAndIsActivated(String email, boolean isActivated);
 }
