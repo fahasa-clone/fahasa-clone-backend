@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
@@ -129,7 +130,7 @@ public class AuthenticateController {
                              .build();
     }
 
-    private String createToken(Authentication authentication, boolean isAccessToken) {
+    public String createToken(Authentication authentication, boolean isAccessToken) {
         String authorities = authentication.getAuthorities()
                                            .stream()
                                            .map(GrantedAuthority::getAuthority)
@@ -167,7 +168,7 @@ public class AuthenticateController {
                               .getTokenValue();
     }
 
-    private ResponseCookie createCookie(@Nullable String refreshToken, long maxAge) {
+    public ResponseCookie createCookie(@Nullable String refreshToken, long maxAge) {
         return ResponseCookie.from("refresh_token", refreshToken)
                              .httpOnly(true)
                              .secure(true)
@@ -179,7 +180,9 @@ public class AuthenticateController {
     /**
      * Object to return as body in JWT Authentication.
      */
-    static class JWTToken {
+    @Builder
+    public static class JWTToken {
+
         private String accessToken;
 
         JWTToken(String accessToken) {

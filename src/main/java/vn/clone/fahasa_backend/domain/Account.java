@@ -26,10 +26,13 @@ public class Account extends AbstractEntity {
     private String password;
     private String firstName;
     private String lastName;
+
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be 10 digits long and contain only numbers.")
     private String phone;
+
     @JdbcType(CustomPostgreSQLEnumJdbcType.class)
     private Gender gender;
+
     private Date birthday;
     private boolean isActivated;
     private String activationKey;
@@ -38,4 +41,7 @@ public class Account extends AbstractEntity {
 
     @Transient
     private String otpValue;
+
+    @Transient
+    private String rawPassword;
 }

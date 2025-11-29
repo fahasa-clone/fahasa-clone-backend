@@ -4,6 +4,7 @@ import java.util.Optional;
 
 import lombok.AllArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -15,7 +16,8 @@ import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 import vn.clone.fahasa_backend.repository.RefreshTokenRepository;
 import vn.clone.fahasa_backend.service.AccountService;
-import vn.clone.fahasa_backend.util.RandomUtil;
+import vn.clone.fahasa_backend.service.MailService;
+import vn.clone.fahasa_backend.util.RandomUtils;
 
 @Service
 @AllArgsConstructor
@@ -24,6 +26,8 @@ public class AccountServiceImpl implements AccountService {
     private final AccountRepository accountRepository;
 
     private final RefreshTokenRepository refreshTokenRepository;
+
+    private final MailService mailService;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -45,7 +49,7 @@ public class AccountServiceImpl implements AccountService {
         account.setGender(user.getGender());
         account.setBirthday(user.getBirthday());
         account.setActivated(false);
-        account.setActivationKey(RandomUtil.generateActivateKey());
+        account.setActivationKey(RandomUtils.generateActivateKey());
         account.setToken(null);
         account.setOauth2(false);
         return accountRepository.save(account);
@@ -116,5 +120,31 @@ public class AccountServiceImpl implements AccountService {
         Account account = getActivatedAccount(resetPasswordDTO.getEmail());
         account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
         accountRepository.save(account);
+    }
+
+    @Override
+    public Account getOrCreateUser(String email, OAuth2User oauth2User) {
+        return accountRepository.findByEmailIgnoreCase(email)
+                                .orElseGet(() -> createAccountFromOAuth2User(oauth2User));
+    }
+
+    private Account createAccountFromOAuth2User(OAuth2User oauth2User) {
+        String email = oauth2User.getAttribute("email");
+        // String name = oauth2User.getAttribute("name");
+
+        String randomPassword = RandomUtils.generatePassword();
+
+        Account account = Account.builder()
+                                 .email(email)
+                                 // .fullName(name)
+                                 .password(passwordEncoder.encode(randomPassword))
+                                 .rawPassword(randomPassword)
+                                 .isActivated(true)
+                                 .build();
+
+        // Send password mail
+        mailService.sendPasswordMail(account);
+
+        return accountRepository.save(account);
     }
 }

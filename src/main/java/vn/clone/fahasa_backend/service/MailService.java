@@ -78,4 +78,11 @@ public class MailService {
                                   "mail/passwordResetEmail",
                                   String.format("%s là mã đặt lại mật khẩu của bạn", account.getOtpValue()));
     }
+
+    @Async
+    public void sendPasswordMail(Account account) {
+        sendEmailFromTemplateSync(account,
+                                  "mail/passwordEmail",
+                                  "Mật khẩu tạo tự động của bạn");
+    }
 }

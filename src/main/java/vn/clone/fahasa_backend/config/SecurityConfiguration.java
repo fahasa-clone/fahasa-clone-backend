@@ -51,10 +51,13 @@ public class SecurityConfiguration {
     }
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http, CustomAuthenticationEntryPoint authenticationEntryPoint)
+    public SecurityFilterChain filterChain(HttpSecurity http,
+                                           CustomAuthenticationEntryPoint authenticationEntryPoint,
+                                           OAuth2JwtSuccessHandler oauth2JwtSuccessHandler)
             throws Exception {
         String[] whiteList = {
-                "/api/auth/login", "/api/accounts/register", "/api/auth/refresh", "/api/accounts/activate", "/api/auth/logout"
+                "/api/auth/login", "/api/accounts/register", "/api/auth/refresh", "/api/accounts/activate",
+                "/api/auth/logout", "/login/oauth2/code/**", "/"
         };
         RequestCache nullRequestCache = new NullRequestCache();
 
@@ -69,9 +72,12 @@ public class SecurityConfiguration {
                                                  .authenticated())
             .oauth2ResourceServer(oauth2 -> oauth2.jwt(Customizer.withDefaults())
                                                   .authenticationEntryPoint(authenticationEntryPoint))
-            .exceptionHandling(exceptions -> exceptions.accessDeniedHandler(new BearerTokenAccessDeniedHandler())) // 403
+            .exceptionHandling(exceptions -> exceptions.authenticationEntryPoint(authenticationEntryPoint)
+                                                       .accessDeniedHandler(new BearerTokenAccessDeniedHandler())) // 403
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-            .requestCache((cache) -> cache.requestCache(nullRequestCache));
+            .requestCache((cache) -> cache.requestCache(nullRequestCache))
+            .oauth2Login(oauth2 -> oauth2.successHandler(oauth2JwtSuccessHandler)
+                                         .userInfoEndpoint(config -> config.userService(new CustomOAuth2UserService())));
         return http.build();
     }
 

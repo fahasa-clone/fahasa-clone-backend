@@ -13,6 +13,19 @@ spring:
     web:
       pageable:
         one-indexed-parameters: true
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: test
+            client-secret: test
+          github:
+            client-id: test
+            client-secret: test
+            scope:
+              - read:user
+              - user:email
 
   # Config mail
   mail:

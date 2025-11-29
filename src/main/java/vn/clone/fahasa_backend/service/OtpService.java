@@ -39,7 +39,7 @@ public class OtpService {
         int number = this.random.nextInt(900_000);
 
         // 2. Add 100.000 to get a number between 100.000 and 999.999
-        number = number + 100_000;
+        number += 100_000;
 
         // 3. Convert to string
         String strNumber = String.valueOf(number);
