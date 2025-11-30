@@ -2,9 +2,9 @@ spring:
   application:
     name: "fahasa-backend"
   datasource:
-    url: "jdbc:postgresql://localhost:5432/fahasa"
-    username: "postgres"
-    password: "admin"
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASS}
   jpa:
     show-sql: false
     hibernate:
@@ -18,27 +18,30 @@ spring:
       client:
         registration:
           google:
-            client-id: test
-            client-secret: test
+            client-id: ${GOOGLE_CLIENT_ID}
+            client-secret: ${GOOGLE_CLIENT_SECRET}
           github:
-            client-id: test
-            client-secret: test
+            client-id: ${GITHUB_CLIENT_ID}
+            client-secret: ${GITHUB_CLIENT_SECRET}
             scope:
               - read:user
               - user:email
-
   # Config mail
   mail:
     host: smtp.gmail.com
     port: 587
-    username: tocanhvan079@gmail.com
-    password: aopjqfbbmbmgsxfo
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
     properties:
       mail:
         smtp:
           auth: true
           starttls:
             enable: true
+
+# Config server
+server:
+  port: ${PORT:8080}
 
 # Logging
 logging:
@@ -61,7 +64,7 @@ fahasa:
     authentication:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
-        base64-secret: ZjMzMDNkMzMzMzBhNDE5NDZkN2FjNTkxMjE5M2IzMmI1ZThkMDFkNzQzNTNmZDZhYTc0Zjk4Mzg1MmViYTkyYTdmYzI3NDk3NDBhZDU2MzRjNGExYmQyZTg4OGZjMzk1Yzc0M2YwODI5MDJlMWM1Y2EyN2Q3MzY2NmJiODNlNzI=
+        base64-secret: ${FAHASA_JWT_BASE64_SECRET}
         token-validity-in-seconds: 1800 # 30 minutes
         token-validity-in-seconds-for-refresh-token: 1_296_000 # 15 days
   mail:
