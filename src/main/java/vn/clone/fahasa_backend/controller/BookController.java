@@ -2,7 +2,7 @@ package vn.clone.fahasa_backend.controller;
 
 import java.util.List;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,9 +16,9 @@ import vn.clone.fahasa_backend.service.BookService;
 
 @RestController
 @RequestMapping("/api/books")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookController {
-    
+
     private final BookService bookService;
 
     @GetMapping

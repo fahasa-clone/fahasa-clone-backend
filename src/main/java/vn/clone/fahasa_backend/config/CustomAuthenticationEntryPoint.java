@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
+
     private final AuthenticationEntryPoint authenticationEntryPoint = new BearerTokenAuthenticationEntryPoint();
 
     private final ObjectMapper objectMapper;
@@ -30,5 +31,4 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
 
         objectMapper.writeValue(response.getWriter(), "Token không hợp lệ (hết hạn, không đúng định dạng, hoặc không truyền JWT ở header)");
     }
-
 }

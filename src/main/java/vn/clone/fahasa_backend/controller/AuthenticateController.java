@@ -49,7 +49,7 @@ public class AuthenticateController {
     private final FahasaProperties fahasaProperties;
 
     @PostMapping("/login")
-    public ResponseEntity<JWTToken> login(@RequestBody @Valid LoginDTO loginDTO) {
+    public ResponseEntity<JWTToken> login(@Valid @RequestBody LoginDTO loginDTO) {
         Authentication authenticationToken = UsernamePasswordAuthenticationToken.unauthenticated(loginDTO.getEmail(),
                                                                                                  loginDTO.getPassword());
         Authentication authentication = authenticationManagerBuilder.getObject()
