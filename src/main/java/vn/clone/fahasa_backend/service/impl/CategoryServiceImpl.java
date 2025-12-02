@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import vn.clone.fahasa_backend.domain.Category;
@@ -14,8 +14,9 @@ import vn.clone.fahasa_backend.repository.CategoryRepository;
 import vn.clone.fahasa_backend.service.CategoryService;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
+
     private final CategoryRepository categoryRepository;
 
     // @Bean

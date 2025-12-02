@@ -5,7 +5,7 @@ import javax.crypto.spec.SecretKeySpec;
 
 import com.nimbusds.jose.jwk.source.ImmutableSecret;
 import com.nimbusds.jose.util.Base64;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
@@ -18,7 +18,7 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtGra
 import vn.clone.fahasa_backend.util.SecurityUtils;
 
 @Configuration
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityJwtConfiguration {
 
     private final FahasaProperties fahasaProperties;

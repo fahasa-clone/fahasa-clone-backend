@@ -1,11 +1,11 @@
 package vn.clone.fahasa_backend.config;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "fahasa")
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Getter
 public class FahasaProperties {
 
@@ -13,18 +13,18 @@ public class FahasaProperties {
 
     private final Mail mail;
 
-    @AllArgsConstructor
+    @RequiredArgsConstructor
     @Getter
     public static class Security {
         private final Authentication authentication;
 
-        @AllArgsConstructor
+        @RequiredArgsConstructor
         @Getter
         public static class Authentication {
 
             private final Jwt jwt;
 
-            @AllArgsConstructor
+            @RequiredArgsConstructor
             @Getter
             public static class Jwt {
 
@@ -39,7 +39,7 @@ public class FahasaProperties {
         }
     }
 
-    @AllArgsConstructor
+    @RequiredArgsConstructor
     @Getter
     public static class Mail {
 

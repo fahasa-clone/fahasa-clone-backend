@@ -2,7 +2,7 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.List;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -17,8 +17,9 @@ import vn.clone.fahasa_backend.repository.specification.SpecificationsBuilder;
 import vn.clone.fahasa_backend.service.BookService;
 
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
+
     private final BookRepository bookRepository;
 
     public PageResponse<List<BookDTO>> fetchAllBooks(Pageable pageable, String filter) {

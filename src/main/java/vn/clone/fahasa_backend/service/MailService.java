@@ -5,7 +5,7 @@ import java.util.Locale;
 
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.context.MessageSource;
 import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -24,7 +24,7 @@ import vn.clone.fahasa_backend.domain.Account;
  * We use the {@link Async} annotation to send emails asynchronously.
  */
 @Service
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class MailService {
 
     private static final String ACCOUNT = "account";
