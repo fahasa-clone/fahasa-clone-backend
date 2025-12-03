@@ -12,6 +12,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Book extends AbstractEntity {
+
     @Column(name = "name")
     private String name;
 
@@ -39,13 +40,13 @@ public class Book extends AbstractEntity {
     @Column(name = "deleted_at")
     private Instant deletedAt;
 
-    // Relationship mappings
+    // =========== Relationship mappings ===========
     @OneToOne(fetch = FetchType.LAZY)
     // @MapsId
     @JoinColumn(name = "id")
     private BookDetail bookDetail;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
