@@ -65,7 +65,16 @@ fahasa:
       jwt:
         # This token must be encoded using Base64 and be at least 256 bits long (you can type `openssl rand -base64 64` on your command line to generate a 512 bits one)
         base64-secret: ${FAHASA_JWT_BASE64_SECRET}
-        token-validity-in-seconds: 1800 # 30 minutes
+        #        token-validity-in-seconds: 1800 # 30 minutes
+        token-validity-in-seconds: 1800000 # 30 minutes
         token-validity-in-seconds-for-refresh-token: 1_296_000 # 15 days
   mail:
     base-url: http://localhost:8080
+  cloudinary:
+    product-folder: "fahasa/products"
+
+# Cloudinary properties
+cloudinary:
+  cloud-name: ${CLOUDINARY_CLOUD_NAME}
+  api-key: ${CLOUDINARY_API_KEY}
+  api-secret: ${CLOUDINARY_API_SECRET}

@@ -68,7 +68,8 @@ public class VietnameseConverter {
             return "";
         }
         return convertVietnameseToAscii(name).replaceAll("\\s-\\s", "-")
-                                             .replaceAll("\\s", "-");
+                                             .replaceAll("\\s", "-")
+                                             .replaceAll("[^a-zA-Z0-9_-]", "");
     }
 
     /**

@@ -1,10 +1,12 @@
 package vn.clone.fahasa_backend.domain;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
@@ -12,9 +14,13 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 
 @Entity
 @Table(name = "book_details")
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class BookDetail extends AbstractEntity {
+
     @Column(name = "publication_year")
     private Integer publicationYear;
 
@@ -41,4 +47,10 @@ public class BookDetail extends AbstractEntity {
 
     @Column(name = "description")
     private String description;
+
+    // =========== Relationship mappings ===========
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id")
+    @JsonIgnore
+    private Book book;
 }
