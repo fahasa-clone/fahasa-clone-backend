@@ -27,7 +27,7 @@ public class BookRepositoryCustom {
     private final EntityManager entityManager;
 
     public Page<BookDTO> findAllBooksWithFirstImage(Specification<Book> specification, Pageable pageable) {
-        
+
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
 
         // Main query for data
@@ -55,6 +55,7 @@ public class BookRepositoryCustom {
         // Apply specification predicate
         if (specification != null) {
             Predicate predicate = specification.toPredicate(book, query, cb);
+            predicate = cb.and(predicate, cb.equal(book.get("deleted"), false));
             if (predicate != null) {
                 query.where(predicate);
             }

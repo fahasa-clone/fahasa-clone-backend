@@ -1,6 +1,7 @@
 package vn.clone.fahasa_backend.service.impl;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -19,6 +20,7 @@ import vn.clone.fahasa_backend.domain.BookDetail;
 import vn.clone.fahasa_backend.domain.BookImage;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
+import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 import vn.clone.fahasa_backend.repository.BookRepository;
@@ -46,6 +48,7 @@ public class BookServiceImpl implements BookService {
     private final FahasaProperties fahasaProperties;
 
     @Override
+    @Transactional(readOnly = true)
     public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
@@ -54,7 +57,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional(readOnly = true)
     public FullBookDTO getBookById(int id) {
-        Book book = bookRepository.findById(id)
+        Book book = bookRepository.findByIdAndDeletedFalse(id)
                                   .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
         return convertToFullDTO(book);
     }
@@ -100,6 +103,7 @@ public class BookServiceImpl implements BookService {
                             .deleted(false)
                             // .bookDetail(bookDetail)
                             .build();
+            // bookDetail.setBook(book);
 
             // Get Category
             Category category = categoryService.getCategoryById(request.getCategoryId());
@@ -141,28 +145,52 @@ public class BookServiceImpl implements BookService {
         }
     }
 
-    private BookDTO convertToDTO(Book book) {
-        String imagePath = null;
-        List<BookImage> images = book.getBookImages();
-        for (BookImage image : images) {
-            if (image.getImageOrder() == 1) {
-                imagePath = image.getImagePath();
-                break;
-            }
+    @Override
+    @Transactional
+    public FullBookDTO updateBook(int id, UpdateBookRequest request) {
+        Book book = bookRepository.findById(id)
+                                  .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
+
+        // Get Category
+        Category category = categoryService.getCategoryById(request.getCategoryId());
+        book.setCategory(category);
+
+        // Update Book
+        book.setName(request.getName());
+        book.setPrice(request.getPrice());
+        book.setDiscountPercentage(request.getDiscountPercentage());
+        book.setDiscountAmount(request.getDiscountAmount());
+        book.setStock(request.getStock());
+
+        // Update BookDetail
+        BookDetail bookDetail = book.getBookDetail();
+        if (bookDetail == null) {
+            bookDetail = BookDetail.builder()
+                                   .id(id)
+                                   .book(book)
+                                   .build();
+            // book.setBookDetail(bookDetail);
         }
 
-        return BookDTO.builder()
-                      .id(book.getId())
-                      .name(book.getName())
-                      .price(book.getPrice())
-                      .discountPercentage(book.getDiscountPercentage())
-                      .discountAmount(book.getDiscountAmount())
-                      .averageRating(book.getAverageRating())
-                      .ratingCount(book.getRatingCount())
-                      .stock(book.getStock())
-                      .deleted(book.isDeleted())
-                      .imagePath(imagePath)
-                      .build();
+        bookDetail.setPublicationYear(request.getPublicationYear());
+        bookDetail.setWeight(request.getWeight());
+        bookDetail.setBookHeight(request.getBookHeight());
+        bookDetail.setBookWidth(request.getBookWidth());
+        bookDetail.setBookThickness(request.getBookThickness());
+        bookDetail.setPageCount(request.getPageCount());
+        bookDetail.setLayout(BookLayout.valueOf(request.getLayout()));
+        bookDetail.setDescription(request.getDescription());
+
+        Book updatedBook = bookRepository.save(book);
+        return convertToFullDTO(updatedBook);
+    }
+
+    @Override
+    @Transactional
+    public void deleteById(int id) {
+        Book book = bookRepository.findByIdAndDeletedFalse(id)
+                                  .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
+        book.setDeleted(true);
     }
 
     private FullBookDTO convertToFullDTO(Book book) {
@@ -170,6 +198,8 @@ public class BookServiceImpl implements BookService {
         return FullBookDTO.builder()
                           .id(book.getId())
                           .name(book.getName())
+                          .categoryId(book.getCategory()
+                                          .getId())
                           .price(book.getPrice())
                           .discountPercentage(book.getDiscountPercentage())
                           .discountAmount(book.getDiscountAmount())
@@ -194,6 +224,7 @@ public class BookServiceImpl implements BookService {
                                                                                 .imagePath(image.getImagePath())
                                                                                 .imageOrder(image.getImageOrder())
                                                                                 .build())
+                                          .sorted(Comparator.comparingInt(FullBookDTO.BookImageDTO::getImageOrder))
                                           .toList())
                           .build();
     }

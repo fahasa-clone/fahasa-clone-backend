@@ -52,7 +52,7 @@ public class Book extends AbstractEntity {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+    @OneToMany(cascade = {CascadeType.PERSIST},
                mappedBy = "book")
     private List<BookImage> bookImages;
 }

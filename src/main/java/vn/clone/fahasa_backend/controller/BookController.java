@@ -14,6 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
+import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 import vn.clone.fahasa_backend.domain.response.PageResponse;
@@ -46,5 +47,19 @@ public class BookController {
         FullBookDTO newBook = bookService.createBook(request);
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(newBook);
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<FullBookDTO> updateBook(@PathVariable @Min(1) int id,
+                                                  @Valid @RequestBody UpdateBookRequest request) {
+        FullBookDTO updatedBook = bookService.updateBook(id, request);
+        return ResponseEntity.ok(updatedBook);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteById(@PathVariable @Min(1) int id) {
+        bookService.deleteById(id);
+        return ResponseEntity.ok()
+                             .build();
     }
 }
