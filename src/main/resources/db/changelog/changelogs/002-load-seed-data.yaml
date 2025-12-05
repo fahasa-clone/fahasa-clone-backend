@@ -1,0 +1,161 @@
+databaseChangeLog:
+  - changeSet:
+      id: 002-01-location-data
+      author: ddhuy2207
+      changes:
+        - loadUpdateData:
+            primaryKey: id
+            tableName: provinces
+            file: db/data/provinces.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: code, name: code, type: STRING }
+              - column: { header: name, name: name, type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: districts
+            file: db/data/districts.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: code, name: code, type: STRING }
+              - column: { header: name, name: name, type: STRING }
+              - column: { header: province_id, name: province_id, type: NUMERIC }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: wards
+            file: db/data/wards.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: code, name: code, type: STRING }
+              - column: { header: name, name: name, type: STRING }
+              - column: { header: district_id, name: district_id, type: NUMERIC }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: categories
+            file: db/data/categories.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: name, name: name, type: STRING }
+              - column: { header: parent_id, name: parent_id, type: NUMERIC }
+              - column: { header: description, name: description, type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: specifications
+            file: db/data/specifications.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: name, name: name, type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: authors
+            file: db/data/authors.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: name, name: name, type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: publishers
+            file: db/data/publishers.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: id, name: id, type: NUMERIC }
+              - column: { header: name, name: name, type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: books
+            file: db/data/books.csv
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: "id", name: "id", type: NUMERIC }
+              - column: { header: "name", name: "name", type: STRING }
+              - column: { header: "price", name: "price", type: NUMERIC }
+              - column: { header: "discount_percentage", name: "discount_percentage", type: NUMERIC }
+              - column: { header: "discount_amount", name: "discount_amount", type: NUMERIC }
+              - column: { header: "average_rating", name: "average_rating", type: NUMERIC }
+              - column: { header: "rating_count", name: "rating_count", type: NUMERIC }
+              - column: { header: "stock", name: "stock", type: NUMERIC }
+              - column: { header: "category_id", name: "category_id", type: NUMERIC }
+              - column: { header: "delete_status", name: "delete_status", type: BOOLEAN }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: book_details
+            file: db/data/book_details.csv
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: "id", name: "id", type: NUMERIC }
+              - column: { header: "publisher_id", name: "publisher_id", type: NUMERIC }
+              - column: { header: "publication_year", name: "publication_year", type: NUMERIC }
+              - column: { header: "weight", name: "weight", type: NUMERIC }
+              - column: { header: "book_height", name: "book_height", type: NUMERIC }
+              - column: { header: "book_width", name: "book_width", type: NUMERIC }
+              - column: { header: "book_thickness", name: "book_thickness", type: NUMERIC }
+              - column: { header: "page_count", name: "page_count", type: NUMERIC }
+              - column: { header: "layout", name: "layout", type: STRING }
+              - column: { header: "book_id", name: "book_id", type: NUMERIC }
+              - column: { header: "description", name: "description", type: STRING }
+
+        - loadUpdateData:
+            primaryKey: "book_id,author_id"
+            tableName: book_authors
+            file: db/data/book_authors.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: "book_id", name: "book_id", type: NUMERIC }
+              - column: { header: "author_id", name: "author_id", type: NUMERIC }
+
+        - loadUpdateData:
+            primaryKey: "book_id,specification_id"
+            tableName: books_specifications
+            file: db/data/books_specifications.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: "book_id", name: "book_id", type: NUMERIC }
+              - column: { header: "specification_id", name: "specification_id", type: NUMERIC }
+              - column: { header: "value", name: "value", type: STRING }
+
+        - loadUpdateData:
+            primaryKey: id
+            tableName: book_images
+            file: db/data/book_images.csv
+            encoding: UTF-8
+            quotchar: "\""
+            separator: ","
+            columns:
+              - column: { header: "id", name: "id", type: NUMERIC }
+              - column: { header: "book_id", name: "book_id", type: NUMERIC }
+              - column: { header: "image_path", name: "image_path", type: STRING }
+              - column: { header: "image_order", name: "image_order", type: NUMERIC }

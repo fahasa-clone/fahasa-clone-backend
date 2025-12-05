@@ -1,0 +1,697 @@
+"id","code","name","province_id"
+1,"001","Quận Ba Đình",1
+2,"002","Quận Hoàn Kiếm",1
+3,"003","Quận Tây Hồ",1
+4,"004","Quận Long Biên",1
+5,"005","Quận Cầu Giấy",1
+6,"006","Quận Đống Đa",1
+7,"007","Quận Hai Bà Trưng",1
+8,"008","Quận Hoàng Mai",1
+9,"009","Quận Thanh Xuân",1
+10,"016","Huyện Sóc Sơn",1
+11,"017","Huyện Đông Anh",1
+12,"018","Huyện Gia Lâm",1
+13,"019","Quận Nam Từ Liêm",1
+14,"020","Huyện Thanh Trì",1
+15,"021","Quận Bắc Từ Liêm",1
+16,"250","Huyện Mê Linh",1
+17,"268","Quận Hà Đông",1
+18,"269","Thị xã Sơn Tây",1
+19,"271","Huyện Ba Vì",1
+20,"272","Huyện Phúc Thọ",1
+21,"273","Huyện Đan Phượng",1
+22,"274","Huyện Hoài Đức",1
+23,"275","Huyện Quốc Oai",1
+24,"276","Huyện Thạch Thất",1
+25,"277","Huyện Chương Mỹ",1
+26,"278","Huyện Thanh Oai",1
+27,"279","Huyện Thường Tín",1
+28,"280","Huyện Phú Xuyên",1
+29,"281","Huyện Ứng Hòa",1
+30,"282","Huyện Mỹ Đức",1
+31,"024","Thành phố Hà Giang",2
+32,"026","Huyện Đồng Văn",2
+33,"027","Huyện Mèo Vạc",2
+34,"028","Huyện Yên Minh",2
+35,"029","Huyện Quản Bạ",2
+36,"030","Huyện Vị Xuyên",2
+37,"031","Huyện Bắc Mê",2
+38,"032","Huyện Hoàng Su Phì",2
+39,"033","Huyện Xín Mần",2
+40,"034","Huyện Bắc Quang",2
+41,"035","Huyện Quang Bình",2
+42,"040","Thành phố Cao Bằng",3
+43,"042","Huyện Bảo Lâm",3
+44,"043","Huyện Bảo Lạc",3
+45,"045","Huyện Hà Quảng",3
+46,"047","Huyện Trùng Khánh",3
+47,"048","Huyện Hạ Lang",3
+48,"049","Huyện Quảng Hòa",3
+49,"051","Huyện Hoà An",3
+50,"052","Huyện Nguyên Bình",3
+51,"053","Huyện Thạch An",3
+52,"058","Thành Phố Bắc Kạn",4
+53,"060","Huyện Pác Nặm",4
+54,"061","Huyện Ba Bể",4
+55,"062","Huyện Ngân Sơn",4
+56,"063","Huyện Bạch Thông",4
+57,"064","Huyện Chợ Đồn",4
+58,"065","Huyện Chợ Mới",4
+59,"066","Huyện Na Rì",4
+60,"070","Thành phố Tuyên Quang",5
+61,"071","Huyện Lâm Bình",5
+62,"072","Huyện Na Hang",5
+63,"073","Huyện Chiêm Hóa",5
+64,"074","Huyện Hàm Yên",5
+65,"075","Huyện Yên Sơn",5
+66,"076","Huyện Sơn Dương",5
+67,"080","Thành phố Lào Cai",6
+68,"082","Huyện Bát Xát",6
+69,"083","Huyện Mường Khương",6
+70,"084","Huyện Si Ma Cai",6
+71,"085","Huyện Bắc Hà",6
+72,"086","Huyện Bảo Thắng",6
+73,"087","Huyện Bảo Yên",6
+74,"088","Thị xã Sa Pa",6
+75,"089","Huyện Văn Bàn",6
+76,"094","Thành phố Điện Biên Phủ",7
+77,"095","Thị Xã Mường Lay",7
+78,"096","Huyện Mường Nhé",7
+79,"097","Huyện Mường Chà",7
+80,"098","Huyện Tủa Chùa",7
+81,"099","Huyện Tuần Giáo",7
+82,"100","Huyện Điện Biên",7
+83,"101","Huyện Điện Biên Đông",7
+84,"102","Huyện Mường Ảng",7
+85,"103","Huyện Nậm Pồ",7
+86,"105","Thành phố Lai Châu",8
+87,"106","Huyện Tam Đường",8
+88,"107","Huyện Mường Tè",8
+89,"108","Huyện Sìn Hồ",8
+90,"109","Huyện Phong Thổ",8
+91,"110","Huyện Than Uyên",8
+92,"111","Huyện Tân Uyên",8
+93,"112","Huyện Nậm Nhùn",8
+94,"116","Thành phố Sơn La",9
+95,"118","Huyện Quỳnh Nhai",9
+96,"119","Huyện Thuận Châu",9
+97,"120","Huyện Mường La",9
+98,"121","Huyện Bắc Yên",9
+99,"122","Huyện Phù Yên",9
+100,"123","Thị xã Mộc Châu",9
+101,"124","Huyện Yên Châu",9
+102,"125","Huyện Mai Sơn",9
+103,"126","Huyện Sông Mã",9
+104,"127","Huyện Sốp Cộp",9
+105,"128","Huyện Vân Hồ",9
+106,"132","Thành phố Yên Bái",10
+107,"133","Thị xã Nghĩa Lộ",10
+108,"135","Huyện Lục Yên",10
+109,"136","Huyện Văn Yên",10
+110,"137","Huyện Mù Căng Chải",10
+111,"138","Huyện Trấn Yên",10
+112,"139","Huyện Trạm Tấu",10
+113,"140","Huyện Văn Chấn",10
+114,"141","Huyện Yên Bình",10
+115,"148","Thành phố Hòa Bình",11
+116,"150","Huyện Đà Bắc",11
+117,"152","Huyện Lương Sơn",11
+118,"153","Huyện Kim Bôi",11
+119,"154","Huyện Cao Phong",11
+120,"155","Huyện Tân Lạc",11
+121,"156","Huyện Mai Châu",11
+122,"157","Huyện Lạc Sơn",11
+123,"158","Huyện Yên Thủy",11
+124,"159","Huyện Lạc Thủy",11
+125,"164","Thành phố Thái Nguyên",12
+126,"165","Thành phố Sông Công",12
+127,"167","Huyện Định Hóa",12
+128,"168","Huyện Phú Lương",12
+129,"169","Huyện Đồng Hỷ",12
+130,"170","Huyện Võ Nhai",12
+131,"171","Huyện Đại Từ",12
+132,"172","Thành phố Phổ Yên",12
+133,"173","Huyện Phú Bình",12
+134,"178","Thành phố Lạng Sơn",13
+135,"180","Huyện Tràng Định",13
+136,"181","Huyện Bình Gia",13
+137,"182","Huyện Văn Lãng",13
+138,"183","Huyện Cao Lộc",13
+139,"184","Huyện Văn Quan",13
+140,"185","Huyện Bắc Sơn",13
+141,"186","Huyện Hữu Lũng",13
+142,"187","Huyện Chi Lăng",13
+143,"188","Huyện Lộc Bình",13
+144,"189","Huyện Đình Lập",13
+145,"193","Thành phố Hạ Long",14
+146,"194","Thành phố Móng Cái",14
+147,"195","Thành phố Cẩm Phả",14
+148,"196","Thành phố Uông Bí",14
+149,"198","Huyện Bình Liêu",14
+150,"199","Huyện Tiên Yên",14
+151,"200","Huyện Đầm Hà",14
+152,"201","Huyện Hải Hà",14
+153,"202","Huyện Ba Chẽ",14
+154,"203","Huyện Vân Đồn",14
+155,"205","Thành phố Đông Triều",14
+156,"206","Thị xã Quảng Yên",14
+157,"207","Huyện Cô Tô",14
+158,"213","Thành phố Bắc Giang",15
+159,"215","Huyện Yên Thế",15
+160,"216","Huyện Tân Yên",15
+161,"217","Huyện Lạng Giang",15
+162,"218","Huyện Lục Nam",15
+163,"219","Huyện Lục Ngạn",15
+164,"220","Huyện Sơn Động",15
+165,"222","Thị Xã Việt Yên",15
+166,"223","Huyện Hiệp Hòa",15
+167,"224","Thị xã Chũ",15
+168,"227","Thành phố Việt Trì",16
+169,"228","Thị xã Phú Thọ",16
+170,"230","Huyện Đoan Hùng",16
+171,"231","Huyện Hạ Hoà",16
+172,"232","Huyện Thanh Ba",16
+173,"233","Huyện Phù Ninh",16
+174,"234","Huyện Yên Lập",16
+175,"235","Huyện Cẩm Khê",16
+176,"236","Huyện Tam Nông",16
+177,"237","Huyện Lâm Thao",16
+178,"238","Huyện Thanh Sơn",16
+179,"239","Huyện Thanh Thuỷ",16
+180,"240","Huyện Tân Sơn",16
+181,"243","Thành phố Vĩnh Yên",17
+182,"244","Thành phố Phúc Yên",17
+183,"246","Huyện Lập Thạch",17
+184,"247","Huyện Tam Dương",17
+185,"248","Huyện Tam Đảo",17
+186,"249","Huyện Bình Xuyên",17
+187,"251","Huyện Yên Lạc",17
+188,"252","Huyện Vĩnh Tường",17
+189,"253","Huyện Sông Lô",17
+190,"256","Thành phố Bắc Ninh",18
+191,"258","Huyện Yên Phong",18
+192,"259","Thị xã Quế Võ",18
+193,"260","Huyện Tiên Du",18
+194,"261","Thành phố Từ Sơn",18
+195,"262","Thị xã Thuận Thành",18
+196,"263","Huyện Gia Bình",18
+197,"264","Huyện Lương Tài",18
+198,"288","Thành phố Hải Dương",19
+199,"290","Thành phố Chí Linh",19
+200,"291","Huyện Nam Sách",19
+201,"292","Thị xã Kinh Môn",19
+202,"293","Huyện Kim Thành",19
+203,"294","Huyện Thanh Hà",19
+204,"295","Huyện Cẩm Giàng",19
+205,"296","Huyện Bình Giang",19
+206,"297","Huyện Gia Lộc",19
+207,"298","Huyện Tứ Kỳ",19
+208,"299","Huyện Ninh Giang",19
+209,"300","Huyện Thanh Miện",19
+210,"303","Quận Hồng Bàng",20
+211,"304","Quận Ngô Quyền",20
+212,"305","Quận Lê Chân",20
+213,"306","Quận Hải An",20
+214,"307","Quận Kiến An",20
+215,"308","Quận Đồ Sơn",20
+216,"309","Quận Dương Kinh",20
+217,"311","Thành phố Thuỷ Nguyên",20
+218,"312","Quận An Dương",20
+219,"313","Huyện An Lão",20
+220,"314","Huyện Kiến Thuỵ",20
+221,"315","Huyện Tiên Lãng",20
+222,"316","Huyện Vĩnh Bảo",20
+223,"317","Huyện Cát Hải",20
+224,"318","Huyện Bạch Long Vĩ",20
+225,"323","Thành phố Hưng Yên",21
+226,"325","Huyện Văn Lâm",21
+227,"326","Huyện Văn Giang",21
+228,"327","Huyện Yên Mỹ",21
+229,"328","Thị xã Mỹ Hào",21
+230,"329","Huyện Ân Thi",21
+231,"330","Huyện Khoái Châu",21
+232,"331","Huyện Kim Động",21
+233,"332","Huyện Tiên Lữ",21
+234,"333","Huyện Phù Cừ",21
+235,"336","Thành phố Thái Bình",22
+236,"338","Huyện Quỳnh Phụ",22
+237,"339","Huyện Hưng Hà",22
+238,"340","Huyện Đông Hưng",22
+239,"341","Huyện Thái Thụy",22
+240,"342","Huyện Tiền Hải",22
+241,"343","Huyện Kiến Xương",22
+242,"344","Huyện Vũ Thư",22
+243,"347","Thành phố Phủ Lý",23
+244,"349","Thị xã Duy Tiên",23
+245,"350","Thị xã Kim Bảng",23
+246,"351","Huyện Thanh Liêm",23
+247,"352","Huyện Bình Lục",23
+248,"353","Huyện Lý Nhân",23
+249,"356","Thành phố Nam Định",24
+250,"359","Huyện Vụ Bản",24
+251,"360","Huyện Ý Yên",24
+252,"361","Huyện Nghĩa Hưng",24
+253,"362","Huyện Nam Trực",24
+254,"363","Huyện Trực Ninh",24
+255,"364","Huyện Xuân Trường",24
+256,"365","Huyện Giao Thủy",24
+257,"366","Huyện Hải Hậu",24
+258,"370","Thành phố Tam Điệp",25
+259,"372","Huyện Nho Quan",25
+260,"373","Huyện Gia Viễn",25
+261,"374","Thành phố Hoa Lư",25
+262,"375","Huyện Yên Khánh",25
+263,"376","Huyện Kim Sơn",25
+264,"377","Huyện Yên Mô",25
+265,"380","Thành phố Thanh Hóa",26
+266,"381","Thị xã Bỉm Sơn",26
+267,"382","Thành phố Sầm Sơn",26
+268,"384","Huyện Mường Lát",26
+269,"385","Huyện Quan Hóa",26
+270,"386","Huyện Bá Thước",26
+271,"387","Huyện Quan Sơn",26
+272,"388","Huyện Lang Chánh",26
+273,"389","Huyện Ngọc Lặc",26
+274,"390","Huyện Cẩm Thủy",26
+275,"391","Huyện Thạch Thành",26
+276,"392","Huyện Hà Trung",26
+277,"393","Huyện Vĩnh Lộc",26
+278,"394","Huyện Yên Định",26
+279,"395","Huyện Thọ Xuân",26
+280,"396","Huyện Thường Xuân",26
+281,"397","Huyện Triệu Sơn",26
+282,"398","Huyện Thiệu Hóa",26
+283,"399","Huyện Hoằng Hóa",26
+284,"400","Huyện Hậu Lộc",26
+285,"401","Huyện Nga Sơn",26
+286,"402","Huyện Như Xuân",26
+287,"403","Huyện Như Thanh",26
+288,"404","Huyện Nông Cống",26
+289,"406","Huyện Quảng Xương",26
+290,"407","Thị xã Nghi Sơn",26
+291,"412","Thành phố Vinh",27
+292,"414","Thị xã Thái Hoà",27
+293,"415","Huyện Quế Phong",27
+294,"416","Huyện Quỳ Châu",27
+295,"417","Huyện Kỳ Sơn",27
+296,"418","Huyện Tương Dương",27
+297,"419","Huyện Nghĩa Đàn",27
+298,"420","Huyện Quỳ Hợp",27
+299,"421","Huyện Quỳnh Lưu",27
+300,"422","Huyện Con Cuông",27
+301,"423","Huyện Tân Kỳ",27
+302,"424","Huyện Anh Sơn",27
+303,"425","Huyện Diễn Châu",27
+304,"426","Huyện Yên Thành",27
+305,"427","Huyện Đô Lương",27
+306,"428","Huyện Thanh Chương",27
+307,"429","Huyện Nghi Lộc",27
+308,"430","Huyện Nam Đàn",27
+309,"431","Huyện Hưng Nguyên",27
+310,"432","Thị xã Hoàng Mai",27
+311,"436","Thành phố Hà Tĩnh",28
+312,"437","Thị xã Hồng Lĩnh",28
+313,"439","Huyện Hương Sơn",28
+314,"440","Huyện Đức Thọ",28
+315,"441","Huyện Vũ Quang",28
+316,"442","Huyện Nghi Xuân",28
+317,"443","Huyện Can Lộc",28
+318,"444","Huyện Hương Khê",28
+319,"445","Huyện Thạch Hà",28
+320,"446","Huyện Cẩm Xuyên",28
+321,"447","Huyện Kỳ Anh",28
+322,"449","Thị xã Kỳ Anh",28
+323,"450","Thành Phố Đồng Hới",29
+324,"452","Huyện Minh Hóa",29
+325,"453","Huyện Tuyên Hóa",29
+326,"454","Huyện Quảng Trạch",29
+327,"455","Huyện Bố Trạch",29
+328,"456","Huyện Quảng Ninh",29
+329,"457","Huyện Lệ Thủy",29
+330,"458","Thị xã Ba Đồn",29
+331,"461","Thành phố Đông Hà",30
+332,"462","Thị xã Quảng Trị",30
+333,"464","Huyện Vĩnh Linh",30
+334,"465","Huyện Hướng Hóa",30
+335,"466","Huyện Gio Linh",30
+336,"467","Huyện Đa Krông",30
+337,"468","Huyện Cam Lộ",30
+338,"469","Huyện Triệu Phong",30
+339,"470","Huyện Hải Lăng",30
+340,"471","Huyện Cồn Cỏ",30
+341,"474","Quận Thuận Hóa",31
+342,"475","Quận Phú Xuân",31
+343,"476","Thị xã Phong Điền",31
+344,"477","Huyện Quảng Điền",31
+345,"478","Huyện Phú Vang",31
+346,"479","Thị xã Hương Thủy",31
+347,"480","Thị xã Hương Trà",31
+348,"481","Huyện A Lưới",31
+349,"482","Huyện Phú Lộc",31
+350,"490","Quận Liên Chiểu",32
+351,"491","Quận Thanh Khê",32
+352,"492","Quận Hải Châu",32
+353,"493","Quận Sơn Trà",32
+354,"494","Quận Ngũ Hành Sơn",32
+355,"495","Quận Cẩm Lệ",32
+356,"497","Huyện Hòa Vang",32
+357,"498","Huyện Hoàng Sa",32
+358,"502","Thành phố Tam Kỳ",33
+359,"503","Thành phố Hội An",33
+360,"504","Huyện Tây Giang",33
+361,"505","Huyện Đông Giang",33
+362,"506","Huyện Đại Lộc",33
+363,"507","Thị xã Điện Bàn",33
+364,"508","Huyện Duy Xuyên",33
+365,"509","Huyện Quế Sơn",33
+366,"510","Huyện Nam Giang",33
+367,"511","Huyện Phước Sơn",33
+368,"512","Huyện Hiệp Đức",33
+369,"513","Huyện Thăng Bình",33
+370,"514","Huyện Tiên Phước",33
+371,"515","Huyện Bắc Trà My",33
+372,"516","Huyện Nam Trà My",33
+373,"517","Huyện Núi Thành",33
+374,"518","Huyện Phú Ninh",33
+375,"522","Thành phố Quảng Ngãi",34
+376,"524","Huyện Bình Sơn",34
+377,"525","Huyện Trà Bồng",34
+378,"527","Huyện Sơn Tịnh",34
+379,"528","Huyện Tư Nghĩa",34
+380,"529","Huyện Sơn Hà",34
+381,"530","Huyện Sơn Tây",34
+382,"531","Huyện Minh Long",34
+383,"532","Huyện Nghĩa Hành",34
+384,"533","Huyện Mộ Đức",34
+385,"534","Thị xã Đức Phổ",34
+386,"535","Huyện Ba Tơ",34
+387,"536","Huyện Lý Sơn",34
+388,"540","Thành phố Quy Nhơn",35
+389,"542","Huyện An Lão",35
+390,"543","Thị xã Hoài Nhơn",35
+391,"544","Huyện Hoài Ân",35
+392,"545","Huyện Phù Mỹ",35
+393,"546","Huyện Vĩnh Thạnh",35
+394,"547","Huyện Tây Sơn",35
+395,"548","Huyện Phù Cát",35
+396,"549","Thị xã An Nhơn",35
+397,"550","Huyện Tuy Phước",35
+398,"551","Huyện Vân Canh",35
+399,"555","Thành phố Tuy Hoà",36
+400,"557","Thị xã Sông Cầu",36
+401,"558","Huyện Đồng Xuân",36
+402,"559","Huyện Tuy An",36
+403,"560","Huyện Sơn Hòa",36
+404,"561","Huyện Sông Hinh",36
+405,"562","Huyện Tây Hoà",36
+406,"563","Huyện Phú Hoà",36
+407,"564","Thị xã Đông Hòa",36
+408,"568","Thành phố Nha Trang",37
+409,"569","Thành phố Cam Ranh",37
+410,"570","Huyện Cam Lâm",37
+411,"571","Huyện Vạn Ninh",37
+412,"572","Thị xã Ninh Hòa",37
+413,"573","Huyện Khánh Vĩnh",37
+414,"574","Huyện Diên Khánh",37
+415,"575","Huyện Khánh Sơn",37
+416,"576","Huyện Trường Sa",37
+417,"582","Thành phố Phan Rang-Tháp Chàm",38
+418,"584","Huyện Bác Ái",38
+419,"585","Huyện Ninh Sơn",38
+420,"586","Huyện Ninh Hải",38
+421,"587","Huyện Ninh Phước",38
+422,"588","Huyện Thuận Bắc",38
+423,"589","Huyện Thuận Nam",38
+424,"593","Thành phố Phan Thiết",39
+425,"594","Thị xã La Gi",39
+426,"595","Huyện Tuy Phong",39
+427,"596","Huyện Bắc Bình",39
+428,"597","Huyện Hàm Thuận Bắc",39
+429,"598","Huyện Hàm Thuận Nam",39
+430,"599","Huyện Tánh Linh",39
+431,"600","Huyện Đức Linh",39
+432,"601","Huyện Hàm Tân",39
+433,"602","Huyện Phú Quí",39
+434,"608","Thành phố Kon Tum",40
+435,"610","Huyện Đắk Glei",40
+436,"611","Huyện Ngọc Hồi",40
+437,"612","Huyện Đắk Tô",40
+438,"613","Huyện Kon Plông",40
+439,"614","Huyện Kon Rẫy",40
+440,"615","Huyện Đắk Hà",40
+441,"616","Huyện Sa Thầy",40
+442,"617","Huyện Tu Mơ Rông",40
+443,"618","Huyện Ia H' Drai",40
+444,"622","Thành phố Pleiku",41
+445,"623","Thị xã An Khê",41
+446,"624","Thị xã Ayun Pa",41
+447,"625","Huyện KBang",41
+448,"626","Huyện Đăk Đoa",41
+449,"627","Huyện Chư Păh",41
+450,"628","Huyện Ia Grai",41
+451,"629","Huyện Mang Yang",41
+452,"630","Huyện Kông Chro",41
+453,"631","Huyện Đức Cơ",41
+454,"632","Huyện Chư Prông",41
+455,"633","Huyện Chư Sê",41
+456,"634","Huyện Đăk Pơ",41
+457,"635","Huyện Ia Pa",41
+458,"637","Huyện Krông Pa",41
+459,"638","Huyện Phú Thiện",41
+460,"639","Huyện Chư Pưh",41
+461,"643","Thành phố Buôn Ma Thuột",42
+462,"644","Thị Xã Buôn Hồ",42
+463,"645","Huyện Ea H'leo",42
+464,"646","Huyện Ea Súp",42
+465,"647","Huyện Buôn Đôn",42
+466,"648","Huyện Cư M'gar",42
+467,"649","Huyện Krông Búk",42
+468,"650","Huyện Krông Năng",42
+469,"651","Huyện Ea Kar",42
+470,"652","Huyện M'Đrắk",42
+471,"653","Huyện Krông Bông",42
+472,"654","Huyện Krông Pắc",42
+473,"655","Huyện Krông A Na",42
+474,"656","Huyện Lắk",42
+475,"657","Huyện Cư Kuin",42
+476,"660","Thành phố Gia Nghĩa",43
+477,"661","Huyện Đăk Glong",43
+478,"662","Huyện Cư Jút",43
+479,"663","Huyện Đắk Mil",43
+480,"664","Huyện Krông Nô",43
+481,"665","Huyện Đắk Song",43
+482,"666","Huyện Đắk R'Lấp",43
+483,"667","Huyện Tuy Đức",43
+484,"672","Thành phố Đà Lạt",44
+485,"673","Thành phố Bảo Lộc",44
+486,"674","Huyện Đam Rông",44
+487,"675","Huyện Lạc Dương",44
+488,"676","Huyện Lâm Hà",44
+489,"677","Huyện Đơn Dương",44
+490,"678","Huyện Đức Trọng",44
+491,"679","Huyện Di Linh",44
+492,"680","Huyện Bảo Lâm",44
+493,"682","Huyện Đạ Huoai",44
+494,"688","Thị xã Phước Long",45
+495,"689","Thành phố Đồng Xoài",45
+496,"690","Thị xã Bình Long",45
+497,"691","Huyện Bù Gia Mập",45
+498,"692","Huyện Lộc Ninh",45
+499,"693","Huyện Bù Đốp",45
+500,"694","Huyện Hớn Quản",45
+501,"695","Huyện Đồng Phú",45
+502,"696","Huyện Bù Đăng",45
+503,"697","Thị xã Chơn Thành",45
+504,"698","Huyện Phú Riềng",45
+505,"703","Thành phố Tây Ninh",46
+506,"705","Huyện Tân Biên",46
+507,"706","Huyện Tân Châu",46
+508,"707","Huyện Dương Minh Châu",46
+509,"708","Huyện Châu Thành",46
+510,"709","Thị xã Hòa Thành",46
+511,"710","Huyện Gò Dầu",46
+512,"711","Huyện Bến Cầu",46
+513,"712","Thị xã Trảng Bàng",46
+514,"718","Thành phố Thủ Dầu Một",47
+515,"719","Huyện Bàu Bàng",47
+516,"720","Huyện Dầu Tiếng",47
+517,"721","Thành phố Bến Cát",47
+518,"722","Huyện Phú Giáo",47
+519,"723","Thành phố Tân Uyên",47
+520,"724","Thành phố Dĩ An",47
+521,"725","Thành phố Thuận An",47
+522,"726","Huyện Bắc Tân Uyên",47
+523,"731","Thành phố Biên Hòa",48
+524,"732","Thành phố Long Khánh",48
+525,"734","Huyện Tân Phú",48
+526,"735","Huyện Vĩnh Cửu",48
+527,"736","Huyện Định Quán",48
+528,"737","Huyện Trảng Bom",48
+529,"738","Huyện Thống Nhất",48
+530,"739","Huyện Cẩm Mỹ",48
+531,"740","Huyện Long Thành",48
+532,"741","Huyện Xuân Lộc",48
+533,"742","Huyện Nhơn Trạch",48
+534,"747","Thành phố Vũng Tàu",49
+535,"748","Thành phố Bà Rịa",49
+536,"750","Huyện Châu Đức",49
+537,"751","Huyện Xuyên Mộc",49
+538,"753","Huyện Long Đất",49
+539,"754","Thành phố Phú Mỹ",49
+540,"755","Huyện Côn Đảo",49
+541,"760","Quận 1",50
+542,"761","Quận 12",50
+543,"764","Quận Gò Vấp",50
+544,"765","Quận Bình Thạnh",50
+545,"766","Quận Tân Bình",50
+546,"767","Quận Tân Phú",50
+547,"768","Quận Phú Nhuận",50
+548,"769","Thành phố Thủ Đức",50
+549,"770","Quận 3",50
+550,"771","Quận 10",50
+551,"772","Quận 11",50
+552,"773","Quận 4",50
+553,"774","Quận 5",50
+554,"775","Quận 6",50
+555,"776","Quận 8",50
+556,"777","Quận Bình Tân",50
+557,"778","Quận 7",50
+558,"783","Huyện Củ Chi",50
+559,"784","Huyện Hóc Môn",50
+560,"785","Huyện Bình Chánh",50
+561,"786","Huyện Nhà Bè",50
+562,"787","Huyện Cần Giờ",50
+563,"794","Thành phố Tân An",51
+564,"795","Thị xã Kiến Tường",51
+565,"796","Huyện Tân Hưng",51
+566,"797","Huyện Vĩnh Hưng",51
+567,"798","Huyện Mộc Hóa",51
+568,"799","Huyện Tân Thạnh",51
+569,"800","Huyện Thạnh Hóa",51
+570,"801","Huyện Đức Huệ",51
+571,"802","Huyện Đức Hòa",51
+572,"803","Huyện Bến Lức",51
+573,"804","Huyện Thủ Thừa",51
+574,"805","Huyện Tân Trụ",51
+575,"806","Huyện Cần Đước",51
+576,"807","Huyện Cần Giuộc",51
+577,"808","Huyện Châu Thành",51
+578,"815","Thành phố Mỹ Tho",52
+579,"816","Thành phố Gò Công",52
+580,"817","Thị xã Cai Lậy",52
+581,"818","Huyện Tân Phước",52
+582,"819","Huyện Cái Bè",52
+583,"820","Huyện Cai Lậy",52
+584,"821","Huyện Châu Thành",52
+585,"822","Huyện Chợ Gạo",52
+586,"823","Huyện Gò Công Tây",52
+587,"824","Huyện Gò Công Đông",52
+588,"825","Huyện Tân Phú Đông",52
+589,"829","Thành phố Bến Tre",53
+590,"831","Huyện Châu Thành",53
+591,"832","Huyện Chợ Lách",53
+592,"833","Huyện Mỏ Cày Nam",53
+593,"834","Huyện Giồng Trôm",53
+594,"835","Huyện Bình Đại",53
+595,"836","Huyện Ba Tri",53
+596,"837","Huyện Thạnh Phú",53
+597,"838","Huyện Mỏ Cày Bắc",53
+598,"842","Thành phố Trà Vinh",54
+599,"844","Huyện Càng Long",54
+600,"845","Huyện Cầu Kè",54
+601,"846","Huyện Tiểu Cần",54
+602,"847","Huyện Châu Thành",54
+603,"848","Huyện Cầu Ngang",54
+604,"849","Huyện Trà Cú",54
+605,"850","Huyện Duyên Hải",54
+606,"851","Thị xã Duyên Hải",54
+607,"855","Thành phố Vĩnh Long",55
+608,"857","Huyện Long Hồ",55
+609,"858","Huyện Mang Thít",55
+610,"859","Huyện  Vũng Liêm",55
+611,"860","Huyện Tam Bình",55
+612,"861","Thị xã Bình Minh",55
+613,"862","Huyện Trà Ôn",55
+614,"863","Huyện Bình Tân",55
+615,"866","Thành phố Cao Lãnh",56
+616,"867","Thành phố Sa Đéc",56
+617,"868","Thành phố Hồng Ngự",56
+618,"869","Huyện Tân Hồng",56
+619,"870","Huyện Hồng Ngự",56
+620,"871","Huyện Tam Nông",56
+621,"872","Huyện Tháp Mười",56
+622,"873","Huyện Cao Lãnh",56
+623,"874","Huyện Thanh Bình",56
+624,"875","Huyện Lấp Vò",56
+625,"876","Huyện Lai Vung",56
+626,"877","Huyện Châu Thành",56
+627,"883","Thành phố Long Xuyên",57
+628,"884","Thành phố Châu Đốc",57
+629,"886","Huyện An Phú",57
+630,"887","Thị xã Tân Châu",57
+631,"888","Huyện Phú Tân",57
+632,"889","Huyện Châu Phú",57
+633,"890","Thị xã Tịnh Biên",57
+634,"891","Huyện Tri Tôn",57
+635,"892","Huyện Châu Thành",57
+636,"893","Huyện Chợ Mới",57
+637,"894","Huyện Thoại Sơn",57
+638,"899","Thành phố Rạch Giá",58
+639,"900","Thành phố Hà Tiên",58
+640,"902","Huyện Kiên Lương",58
+641,"903","Huyện Hòn Đất",58
+642,"904","Huyện Tân Hiệp",58
+643,"905","Huyện Châu Thành",58
+644,"906","Huyện Giồng Riềng",58
+645,"907","Huyện Gò Quao",58
+646,"908","Huyện An Biên",58
+647,"909","Huyện An Minh",58
+648,"910","Huyện Vĩnh Thuận",58
+649,"911","Thành phố Phú Quốc",58
+650,"912","Huyện Kiên Hải",58
+651,"913","Huyện U Minh Thượng",58
+652,"914","Huyện Giang Thành",58
+653,"916","Quận Ninh Kiều",59
+654,"917","Quận Ô Môn",59
+655,"918","Quận Bình Thuỷ",59
+656,"919","Quận Cái Răng",59
+657,"923","Quận Thốt Nốt",59
+658,"924","Huyện Vĩnh Thạnh",59
+659,"925","Huyện Cờ Đỏ",59
+660,"926","Huyện Phong Điền",59
+661,"927","Huyện Thới Lai",59
+662,"930","Thành phố Vị Thanh",60
+663,"931","Thành phố Ngã Bảy",60
+664,"932","Huyện Châu Thành A",60
+665,"933","Huyện Châu Thành",60
+666,"934","Huyện Phụng Hiệp",60
+667,"935","Huyện Vị Thuỷ",60
+668,"936","Huyện Long Mỹ",60
+669,"937","Thị xã Long Mỹ",60
+670,"941","Thành phố Sóc Trăng",61
+671,"942","Huyện Châu Thành",61
+672,"943","Huyện Kế Sách",61
+673,"944","Huyện Mỹ Tú",61
+674,"945","Huyện Cù Lao Dung",61
+675,"946","Huyện Long Phú",61
+676,"947","Huyện Mỹ Xuyên",61
+677,"948","Thị xã Ngã Năm",61
+678,"949","Huyện Thạnh Trị",61
+679,"950","Thị xã Vĩnh Châu",61
+680,"951","Huyện Trần Đề",61
+681,"954","Thành phố Bạc Liêu",62
+682,"956","Huyện Hồng Dân",62
+683,"957","Huyện Phước Long",62
+684,"958","Huyện Vĩnh Lợi",62
+685,"959","Thị xã Giá Rai",62
+686,"960","Huyện Đông Hải",62
+687,"961","Huyện Hoà Bình",62
+688,"964","Thành phố Cà Mau",63
+689,"966","Huyện U Minh",63
+690,"967","Huyện Thới Bình",63
+691,"968","Huyện Trần Văn Thời",63
+692,"969","Huyện Cái Nước",63
+693,"970","Huyện Đầm Dơi",63
+694,"971","Huyện Năm Căn",63
+695,"972","Huyện Phú Tân",63
+696,"973","Huyện Ngọc Hiển",63
