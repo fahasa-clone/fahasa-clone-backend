@@ -1,0 +1,265 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001-01-system-definitions
+      author: ddhuy2207
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              CREATE TYPE "book_layout" AS ENUM ('hardcover', 'paperback', 'cards', 'box_set', 'pop_up_book', 'leather_bound', 'book_with_cd', 'board_book');
+              CREATE TYPE "gender" AS ENUM ('male', 'female', 'others');
+      rollback:
+        - sql:
+            sql: DROP TYPE IF EXISTS "book_layout"; DROP TYPE IF EXISTS "gender";
+
+  - changeSet:
+      id: 001-02-locations
+      author: ddhuy2207
+      changes:
+        - createTable:
+            tableName: provinces
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: code, type: VARCHAR(10) }
+              - column: { name: name, type: VARCHAR(256) }
+
+        - createTable:
+            tableName: districts
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: code, type: VARCHAR(10) }
+              - column: { name: name, type: VARCHAR(256) }
+              - column: { name: province_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_districts_province, references: provinces(id) } }
+
+        - createTable:
+            tableName: wards
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: code, type: VARCHAR(10) }
+              - column: { name: name, type: VARCHAR(256) }
+              - column: { name: district_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_wards_district, references: districts(id) } }
+
+  - changeSet:
+      id: 001-03-accounts-and-auth
+      author: ddhuy2207
+      changes:
+        - createTable:
+            tableName: accounts
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: email, type: VARCHAR(256) }
+              - column: { name: password, type: VARCHAR(256) }
+              - column: { name: first_name, type: VARCHAR(256) }
+              - column: { name: last_name, type: VARCHAR(256) }
+              - column: { name: phone, type: VARCHAR(10) }
+              - column: { name: gender, type: gender }
+              - column: { name: birthday, type: DATE }
+              - column: { name: is_activated, type: BOOLEAN }
+              - column: { name: activation_key, type: VARCHAR(256) }
+              - column: { name: token, type: TEXT }
+              - column: { name: is_oauth2, type: BOOLEAN }
+
+        - createTable:
+            tableName: refresh_tokens
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: refresh_token, type: TEXT, constraints: { unique: true, nullable: false } }
+              - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_refresh_tokens_account, references: accounts(id) } }
+
+        - createTable:
+            tableName: otps
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: account_id, type: INT, constraints: { unique: true, nullable: false, foreignKeyName: fk_otps_account, references: accounts(id) } }
+              - column: { name: otp_hash, type: VARCHAR(255), constraints: { nullable: false } }
+              - column: { name: expiry_time, type: TIMESTAMP WITH TIME ZONE, constraints: { nullable: false } }
+              - column: { name: attempts, type: INT, defaultValueNumeric: "0", constraints: { nullable: false } }
+
+  - changeSet:
+      id: 001-04-product-catalog
+      author: ddhuy2207
+      changes:
+        - createTable:
+            tableName: categories
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: name, type: VARCHAR(256) }
+              - column: { name: slug, type: VARCHAR(256) }
+              - column: { name: parent_id, type: INT, constraints: { foreignKeyName: fk_categories_parent, references: categories(id) } }
+              - column: { name: description, type: TEXT }
+              - column: { name: category_icon, type: VARCHAR(256) }
+
+        - createTable:
+            tableName: publishers
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: name, type: VARCHAR(256) }
+
+        - createTable:
+            tableName: authors
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: name, type: VARCHAR(256) }
+
+        - createTable:
+            tableName: specifications
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: name, type: VARCHAR(256) }
+
+        - createTable:
+            tableName: books
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: name, type: TEXT }
+              - column: { name: price, type: BIGINT }
+              - column: { name: discount_percentage, type: INT }
+              - column: { name: discount_amount, type: INT }
+              - column: { name: average_rating, type: REAL }
+              - column: { name: rating_count, type: INT }
+              - column: { name: stock, type: INT }
+              - column: { name: slug, type: VARCHAR(256) }
+              - column: { name: category_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_books_category, references: categories(id) } }
+              - column: { name: delete_status, type: BOOLEAN, constraints: { nullable: false } }
+              - column: { name: deleted_at, type: TIMESTAMP WITH TIME ZONE }
+
+        - createTable:
+            tableName: book_details
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: publisher_id, type: INT, constraints: { foreignKeyName: fk_book_details_publisher, references: publishers(id) } }
+              - column: { name: publication_year, type: INT }
+              - column: { name: weight, type: INT }
+              - column: { name: book_height, type: REAL }
+              - column: { name: book_width, type: REAL }
+              - column: { name: book_thickness, type: REAL }
+              - column: { name: page_count, type: INT }
+              - column: { name: layout, type: book_layout }
+              - column: { name: description, type: TEXT }
+              - column: { name: book_id, type: INT, constraints: { foreignKeyName: fk_book_details_book, references: books(id) } }
+
+        - createTable:
+            tableName: book_authors
+            columns:
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_authors_book, references: books(id) } }
+              - column: { name: author_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_authors_author, references: authors(id) } }
+
+        - addPrimaryKey: { tableName: book_authors, columnNames: "book_id,author_id", constraintName: pk_book_authors }
+
+        - createTable:
+            tableName: book_images
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_images_book, references: books(id) } }
+              - column: { name: image_path, type: TEXT }
+              - column: { name: image_order, type: INT }
+
+        - createTable:
+            tableName: categories_specifications
+            columns:
+              - column: { name: category_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cat_spec_cat, references: categories(id) } }
+              - column: { name: specification_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cat_spec_spec, references: specifications(id) } }
+              - column: { name: is_filtered, type: BOOLEAN }
+
+        - addPrimaryKey: { tableName: categories_specifications, columnNames: "category_id,specification_id", constraintName: pk_categories_specifications }
+
+        - createTable:
+            tableName: books_specifications
+            columns:
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_spec_book, references: books(id) } }
+              - column: { name: specification_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_spec_spec, references: specifications(id) } }
+              - column: { name: value, type: VARCHAR(256) }
+
+        - addPrimaryKey: { tableName: books_specifications, columnNames: "book_id,specification_id", constraintName: pk_books_specifications }
+
+  - changeSet:
+      id: 001-05-sales-operations
+      author: ddhuy2207
+      changes:
+        - createTable:
+            tableName: shipping_addresses
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: address, type: TEXT }
+              - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_shipping_account, references: accounts(id) } }
+              - column: { name: ward_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_shipping_ward, references: wards(id) } }
+              - column: { name: is_default, type: BOOLEAN }
+              - column: { name: can_delete, type: BOOLEAN, defaultValueBoolean: true }
+
+        - createTable:
+            tableName: cart_items
+            columns:
+              - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cart_account, references: accounts(id) } }
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cart_book, references: books(id) } }
+              - column: { name: quantity, type: INT }
+              - column: { name: price, type: INT }
+              - column: { name: is_clicked, type: BOOLEAN }
+              - column: { name: state, type: SMALLINT }
+
+        - addPrimaryKey: { tableName: cart_items, columnNames: account_id, book_id, constraintName: pk_cart_items }
+
+        - createTable:
+            tableName: orders
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE }
+              - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_orders_account, references: accounts(id) } }
+              - column: { name: shipping_address_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_orders_address, references: shipping_addresses(id) } }
+              - column: { name: receiver_name, type: VARCHAR(256) }
+              - column: { name: receiver_phone, type: VARCHAR(10) }
+              - column: { name: order_time, type: TIMESTAMP WITH TIME ZONE }
+              - column: { name: total_price, type: INT }
+              - column: { name: shipping_price, type: INT }
+              - column: { name: final_price, type: INT }
+
+        - createTable:
+            tableName: order_details
+            columns:
+              - column: { name: order_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_order_details_order, references: orders(id) } }
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_order_details_book, references: books(id) } }
+              - column: { name: quantity, type: INT }
+              - column: { name: price, type: INT }
+        - addPrimaryKey: { tableName: order_details, columnNames: order_id, book_id, constraintName: pk_order_details }
+
+        - createTable:
+            tableName: order_states
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE }
+              - column: { name: order_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_order_states_order, references: orders(id) } }
+              - column: { name: state, type: INT }
+
+        - createTable:
+            tableName: reviews
+            columns:
+              - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_reviews_book, references: books(id) } }
+              - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_reviews_account, references: accounts(id) } }
+              - column: { name: comment, type: TEXT }
+              - column: { name: rating, type: INT }
+              - column: { name: like_count, type: INT }
+
+        - addPrimaryKey: { tableName: reviews, columnNames: book_id, account_id, constraintName: pk_reviews }
