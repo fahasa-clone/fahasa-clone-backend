@@ -29,8 +29,6 @@ databaseChangeLog:
             tableName: districts
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: code, type: VARCHAR(10) }
               - column: { name: name, type: VARCHAR(256) }
               - column: { name: province_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_districts_province, references: provinces(id) } }
@@ -39,8 +37,6 @@ databaseChangeLog:
             tableName: wards
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: code, type: VARCHAR(10) }
               - column: { name: name, type: VARCHAR(256) }
               - column: { name: district_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_wards_district, references: districts(id) } }
@@ -91,8 +87,6 @@ databaseChangeLog:
             tableName: categories
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: name, type: VARCHAR(256) }
               - column: { name: slug, type: VARCHAR(256) }
               - column: { name: parent_id, type: INT, constraints: { foreignKeyName: fk_categories_parent, references: categories(id) } }
@@ -103,32 +97,24 @@ databaseChangeLog:
             tableName: publishers
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: name, type: VARCHAR(256) }
 
         - createTable:
             tableName: authors
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: name, type: VARCHAR(256) }
 
         - createTable:
             tableName: specifications
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: name, type: VARCHAR(256) }
 
         - createTable:
             tableName: books
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: name, type: TEXT }
               - column: { name: price, type: BIGINT }
               - column: { name: discount_percentage, type: INT }
@@ -177,20 +163,18 @@ databaseChangeLog:
         - createTable:
             tableName: categories_specifications
             columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { nullable: false, primaryKey: true } }
               - column: { name: category_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cat_spec_cat, references: categories(id) } }
               - column: { name: specification_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_cat_spec_spec, references: specifications(id) } }
               - column: { name: is_filtered, type: BOOLEAN }
 
-        - addPrimaryKey: { tableName: categories_specifications, columnNames: "category_id,specification_id", constraintName: pk_categories_specifications }
-
         - createTable:
             tableName: books_specifications
             columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { nullable: false, primaryKey: true } }
               - column: { name: book_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_spec_book, references: books(id) } }
               - column: { name: specification_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_book_spec_spec, references: specifications(id) } }
               - column: { name: value, type: VARCHAR(256) }
-
-        - addPrimaryKey: { tableName: books_specifications, columnNames: "book_id,specification_id", constraintName: pk_books_specifications }
 
   - changeSet:
       id: 001-05-sales-operations
@@ -200,8 +184,6 @@ databaseChangeLog:
             tableName: shipping_addresses
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
-              - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: address, type: TEXT }
               - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_shipping_account, references: accounts(id) } }
               - column: { name: ward_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_shipping_ward, references: wards(id) } }
@@ -225,7 +207,7 @@ databaseChangeLog:
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
               - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE }
+              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE, defaultValueComputed: "CURRENT_TIMESTAMP" }
               - column: { name: account_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_orders_account, references: accounts(id) } }
               - column: { name: shipping_address_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_orders_address, references: shipping_addresses(id) } }
               - column: { name: receiver_name, type: VARCHAR(256) }
@@ -249,7 +231,6 @@ databaseChangeLog:
             columns:
               - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
               - column: { name: created_at, type: TIMESTAMP WITH TIME ZONE }
-              - column: { name: updated_at, type: TIMESTAMP WITH TIME ZONE }
               - column: { name: order_id, type: INT, constraints: { nullable: false, foreignKeyName: fk_order_states_order, references: orders(id) } }
               - column: { name: state, type: INT }
 
