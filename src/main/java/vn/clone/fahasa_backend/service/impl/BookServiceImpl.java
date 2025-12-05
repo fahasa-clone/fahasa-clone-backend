@@ -57,8 +57,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional(readOnly = true)
     public FullBookDTO getBookById(int id) {
-        Book book = bookRepository.findByIdAndDeletedFalse(id)
-                                  .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
+        Book book = findBookOrThrow(id);
         return convertToFullDTO(book);
     }
 
@@ -75,6 +74,7 @@ public class BookServiceImpl implements BookService {
             images.add(0, coverImage);
             imageUrls = cloudinaryService.uploadImages(images, fahasaProperties.getCloudinary()
                                                                                .getProductFolder(), bookSlug);
+
             // Create BookDetail
             BookDetail bookDetail = BookDetail.builder()
                                               .publicationYear(request.getPublicationYear())
@@ -127,9 +127,9 @@ public class BookServiceImpl implements BookService {
             log.info("Book created: {}", savedBook);
 
             // Temporary code
-            // bookDetail.setId(savedBook.getId());
-            // savedBook.setBookDetail(bookDetail);
-            // savedBook = bookRepository.save(savedBook);
+            bookDetail.setId(savedBook.getId());
+            savedBook.setBookDetail(bookDetail);
+            savedBook = bookRepository.save(savedBook);
 
             // Convert to DTO
             return convertToFullDTO(savedBook);
@@ -148,8 +148,7 @@ public class BookServiceImpl implements BookService {
     @Override
     @Transactional
     public FullBookDTO updateBook(int id, UpdateBookRequest request) {
-        Book book = bookRepository.findById(id)
-                                  .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
+        Book book = findBookOrThrow(id);
 
         // Get Category
         Category category = categoryService.getCategoryById(request.getCategoryId());
@@ -167,9 +166,8 @@ public class BookServiceImpl implements BookService {
         if (bookDetail == null) {
             bookDetail = BookDetail.builder()
                                    .id(id)
-                                   .book(book)
                                    .build();
-            // book.setBookDetail(bookDetail);
+            book.setBookDetail(bookDetail);
         }
 
         bookDetail.setPublicationYear(request.getPublicationYear());
@@ -185,12 +183,86 @@ public class BookServiceImpl implements BookService {
         return convertToFullDTO(updatedBook);
     }
 
+    // @Override
+    @Transactional
+    public FullBookDTO updateBookImages(int id, List<MultipartFile> newImages) {
+        Book book = findBookOrThrow(id);
+
+        // Xóa tất cả hình ảnh cũ khỏi Cloudinary
+        List<BookImage> oldImages = book.getBookImages();
+        for (BookImage oldImage : oldImages) {
+            try {
+                String publicId = cloudinaryService.extractPublicIdFromUrl(oldImage.getImagePath());
+                cloudinaryService.deleteImage(publicId);
+            } catch (Exception e) {
+                log.warn("Không thể xóa ảnh từ Cloudinary: {}", e.getMessage());
+            }
+        }
+
+        // Xóa tất cả hình ảnh cũ khỏi database
+        book.getBookImages()
+            .clear();
+
+        // Upload ảnh mới
+        if (newImages != null && !newImages.isEmpty()) {
+            List<String> newImageUrls = cloudinaryService.uploadImages(newImages, "fahasa/books", null);
+
+            List<BookImage> bookImages = new ArrayList<>();
+            for (int i = 0; i < newImageUrls.size(); i++) {
+                BookImage bookImage = BookImage.builder()
+                                               .imagePath(newImageUrls.get(i))
+                                               .imageOrder(i)
+                                               .book(book)
+                                               .build();
+                bookImages.add(bookImage);
+            }
+            book.setBookImages(bookImages);
+        }
+
+        Book updatedBook = bookRepository.save(book);
+        return convertToFullDTO(updatedBook);
+    }
+
+    // @Override
+    @Transactional
+    public void deleteBookImage(int bookId, Long imageId) {
+        Book book = findBookOrThrow(bookId);
+
+        BookImage bookImage = book.getBookImages()
+                                  .stream()
+                                  .filter(img -> img.getId() == imageId)
+                                  .findFirst()
+                                  .orElseThrow(() -> new RuntimeException("Hình ảnh không tồn tại"));
+
+        // Xóa từ Cloudinary
+        try {
+            String publicId = cloudinaryService.extractPublicIdFromUrl(bookImage.getImagePath());
+            cloudinaryService.deleteImage(publicId);
+        } catch (Exception e) {
+            log.warn("Không thể xóa ảnh từ Cloudinary: {}", e.getMessage());
+        }
+
+        // Xóa từ database
+        book.getBookImages().remove(bookImage);
+
+        // Cập nhật thứ tự ảnh
+        for (int i = 0; i < book.getBookImages().size(); i++) {
+            book.getBookImages().get(i).setImageOrder(i);
+        }
+
+        bookRepository.save(book);
+    }
+
     @Override
     @Transactional
     public void deleteById(int id) {
-        Book book = bookRepository.findByIdAndDeletedFalse(id)
-                                  .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
+        Book book = findBookOrThrow(id);
         book.setDeleted(true);
+    }
+
+    private Book findBookOrThrow(int id) {
+        return bookRepository.findByIdAndDeletedFalse(id)
+                             .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
     }
 
     private FullBookDTO convertToFullDTO(Book book) {
@@ -207,16 +279,16 @@ public class BookServiceImpl implements BookService {
                           .ratingCount(book.getRatingCount())
                           .stock(book.getStock())
                           .deleted(book.isDeleted())
-                          // .bookDetail(FullBookDTO.BookDetailDTO.builder()
-                          //                                      .publicationYear(bookDetail.getPublicationYear())
-                          //                                      .weight(bookDetail.getWeight())
-                          //                                      .bookHeight(bookDetail.getBookHeight())
-                          //                                      .bookWidth(bookDetail.getBookWidth())
-                          //                                      .bookThickness(bookDetail.getBookThickness())
-                          //                                      .pageCount(bookDetail.getPageCount())
-                          //                                      .layout(bookDetail.getLayout())
-                          //                                      .description(bookDetail.getDescription())
-                          //                                      .build())
+                          .bookDetail(FullBookDTO.BookDetailDTO.builder()
+                                                               .publicationYear(bookDetail.getPublicationYear())
+                                                               .weight(bookDetail.getWeight())
+                                                               .bookHeight(bookDetail.getBookHeight())
+                                                               .bookWidth(bookDetail.getBookWidth())
+                                                               .bookThickness(bookDetail.getBookThickness())
+                                                               .pageCount(bookDetail.getPageCount())
+                                                               .layout(bookDetail.getLayout())
+                                                               .description(bookDetail.getDescription())
+                                                               .build())
                           .bookImages(book.getBookImages()
                                           .stream()
                                           .map(image -> FullBookDTO.BookImageDTO.builder()

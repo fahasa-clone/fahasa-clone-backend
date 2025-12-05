@@ -1,5 +1,7 @@
 package vn.clone.fahasa_backend.domain;
 
+import java.time.Instant;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +9,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.JdbcType;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
@@ -19,7 +23,20 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @NoArgsConstructor
 @Getter
 @Setter
-public class BookDetail extends AbstractEntity {
+// public class BookDetail extends AbstractEntity {
+public class BookDetail {
+
+    @Id
+    @Column(name = "id")
+    private Integer id;
+
+    @Column(name = "created_at")
+    @CreationTimestamp
+    private Instant createdAt;
+
+    @Column(name = "updated_at")
+    @UpdateTimestamp
+    private Instant updatedAt;
 
     @Column(name = "publication_year")
     private Integer publicationYear;
