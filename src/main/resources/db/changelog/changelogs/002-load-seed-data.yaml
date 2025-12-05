@@ -41,6 +41,10 @@ databaseChangeLog:
               - column: { header: name, name: name, type: STRING }
               - column: { header: district_id, name: district_id, type: NUMERIC }
 
+  - changeSet:
+      id: 002-02-catalog-data
+      author: ddhuy2207
+      changes:
         - loadUpdateData:
             primaryKey: id
             tableName: categories
@@ -87,6 +91,10 @@ databaseChangeLog:
               - column: { header: id, name: id, type: NUMERIC }
               - column: { header: name, name: name, type: STRING }
 
+  - changeSet:
+      id: 002-03-book-data
+      author: ddhuy2207
+      changes:
         - loadUpdateData:
             primaryKey: id
             tableName: books
@@ -124,6 +132,10 @@ databaseChangeLog:
               - column: { header: "book_id", name: "book_id", type: NUMERIC }
               - column: { header: "description", name: "description", type: STRING }
 
+  - changeSet:
+      id: 002-04-book-relation-data
+      author: ddhuy2207
+      changes:
         - loadUpdateData:
             primaryKey: "book_id,author_id"
             tableName: book_authors
@@ -136,7 +148,7 @@ databaseChangeLog:
               - column: { header: "author_id", name: "author_id", type: NUMERIC }
 
         - loadUpdateData:
-            primaryKey: "book_id,specification_id"
+            primaryKey: id
             tableName: books_specifications
             file: db/data/books_specifications.csv
             encoding: UTF-8
