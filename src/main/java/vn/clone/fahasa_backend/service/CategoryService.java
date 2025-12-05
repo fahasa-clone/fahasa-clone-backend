@@ -13,4 +13,6 @@ public interface CategoryService {
     CategoryTree searchCategoryTree(List<CategoryTree> rootList, int categoryId);
 
     List<Integer> getCategoryIdList(int id);
+
+    Category getCategoryById(int id);
 }

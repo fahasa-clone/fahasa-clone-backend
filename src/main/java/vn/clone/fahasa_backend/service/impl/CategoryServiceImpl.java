@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -119,5 +120,11 @@ public class CategoryServiceImpl implements CategoryService {
             return new ArrayList<>();
         }
         return toListCategory(selectedRoot);
+    }
+
+    @Override
+    public Category getCategoryById(int id) {
+        return categoryRepository.findById(id)
+                                 .orElseThrow(() -> new EntityNotFoundException("Category not found"));
     }
 }

@@ -4,14 +4,21 @@ import java.time.Instant;
 import java.util.List;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 @Entity
 @Table(name = "books")
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class Book extends AbstractEntity {
+
     @Column(name = "name")
     private String name;
 
@@ -39,17 +46,17 @@ public class Book extends AbstractEntity {
     @Column(name = "deleted_at")
     private Instant deletedAt;
 
-    // Relationship mappings
-    @OneToOne(fetch = FetchType.LAZY)
+    // =========== Relationship mappings ===========
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE},
+              mappedBy = "book")
     // @MapsId
-    @JoinColumn(name = "id")
     private BookDetail bookDetail;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany
-    @JoinColumn(name = "book_id")
+    @OneToMany(cascade = {CascadeType.PERSIST},
+               mappedBy = "book")
     private List<BookImage> bookImages;
 }

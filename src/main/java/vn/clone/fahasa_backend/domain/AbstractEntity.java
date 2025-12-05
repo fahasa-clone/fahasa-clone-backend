@@ -16,6 +16,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @Getter
 @Setter
 public abstract class AbstractEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")

@@ -1,12 +1,22 @@
 package vn.clone.fahasa_backend.service;
 
-import java.util.List;
-
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
+import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
-import vn.clone.fahasa_backend.domain.response.PageResponse;
+import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 
 public interface BookService {
-    PageResponse<List<BookDTO>> fetchAllBooks(Pageable pageable, String filter);
+
+    Page<BookDTO> fetchAllBooks(Pageable pageable, String filter);
+
+    FullBookDTO getBookById(int id);
+
+    FullBookDTO createBook(CreateBookRequest request);
+
+    FullBookDTO updateBook(int id, UpdateBookRequest request);
+
+    void deleteById(int id);
 }

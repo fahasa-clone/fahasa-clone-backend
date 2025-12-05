@@ -13,6 +13,8 @@ public class FahasaProperties {
 
     private final Mail mail;
 
+    private final Cloudinary cloudinary;
+
     @RequiredArgsConstructor
     @Getter
     public static class Security {
@@ -46,5 +48,12 @@ public class FahasaProperties {
         private final String from;
 
         private final String baseUrl;
+    }
+
+    @RequiredArgsConstructor
+    @Getter
+    public static class Cloudinary {
+
+        private final String productFolder;
     }
 }
