@@ -14,15 +14,27 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Category extends AbstractEntity {
+public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
+
     @Column(name = "name")
     @NotBlank(message = "name field is required")
     private String name;
 
+    @Column(name = "description")
     private String description;
+
+    @Column(name = "category_icon")
     private String categoryIcon;
+
+    @Column(name = "slug")
     private String slug;
 
+    // =========== Relationship mappings ===========
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id")
     @JsonIgnore

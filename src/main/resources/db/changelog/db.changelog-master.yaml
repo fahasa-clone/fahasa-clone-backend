@@ -6,3 +6,7 @@ databaseChangeLog:
   - include:
       file: changelogs/002-load-seed-data.yaml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/003-reset-sequences.yml
+      relativeToChangelogFile: true

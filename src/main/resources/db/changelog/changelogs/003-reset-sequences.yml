@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: 003-01-reset-sequences
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              SELECT setval('authors_id_seq', (SELECT COALESCE(MAX(id), 1) FROM authors));
+              SELECT setval('book_details_id_seq', (SELECT COALESCE(MAX(id), 1) FROM book_details));
+              SELECT setval('book_images_id_seq', (SELECT COALESCE(MAX(id), 1) FROM book_images));
+              SELECT setval('books_id_seq', (SELECT COALESCE(MAX(id), 1) FROM books));
+              SELECT setval('books_specifications_id_seq', (SELECT COALESCE(MAX(id), 1) FROM books_specifications));
+              SELECT setval('categories_id_seq', (SELECT COALESCE(MAX(id), 1) FROM categories));
+              SELECT setval('districts_id_seq', (SELECT COALESCE(MAX(id), 1) FROM districts));
+              SELECT setval('provinces_id_seq', (SELECT COALESCE(MAX(id), 1) FROM provinces));
+              SELECT setval('wards_id_seq', (SELECT COALESCE(MAX(id), 1) FROM wards));
+              SELECT setval('publishers_id_seq', (SELECT COALESCE(MAX(id), 1) FROM publishers));
+              SELECT setval('specifications_id_seq', (SELECT COALESCE(MAX(id), 1) FROM specifications));

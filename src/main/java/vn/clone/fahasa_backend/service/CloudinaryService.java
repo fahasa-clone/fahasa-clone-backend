@@ -132,7 +132,7 @@ public class CloudinaryService {
      * <p>
      * Example: java-programming-0-7381256
      */
-    private String generatePublicId(String bookSlug, int imageIndex) {
+    public String generatePublicId(String bookSlug, int imageIndex) {
         long randomNumber = Math.abs(SECURE_RANDOM.nextLong());
         return String.format("%s-%d-%d", bookSlug, imageIndex, randomNumber);
     }
