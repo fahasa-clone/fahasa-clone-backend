@@ -14,6 +14,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
+import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.domain.response.FullBookDTO;
@@ -53,6 +54,13 @@ public class BookController {
     public ResponseEntity<FullBookDTO> updateBook(@PathVariable @Min(1) int id,
                                                   @Valid @RequestBody UpdateBookRequest request) {
         FullBookDTO updatedBook = bookService.updateBook(id, request);
+        return ResponseEntity.ok(updatedBook);
+    }
+
+    @PutMapping(value = "/{id}/images", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    public ResponseEntity<FullBookDTO> updateBookImages(@PathVariable @Min(1) int id,
+                                                        @Valid UpdateBookImagesRequest request) {
+        FullBookDTO updatedBook = bookService.updateBookImages(id, request);
         return ResponseEntity.ok(updatedBook);
     }
 

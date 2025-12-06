@@ -1,5 +1,6 @@
 package vn.clone.fahasa_backend.service.impl;
 
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -20,6 +21,7 @@ import vn.clone.fahasa_backend.domain.BookDetail;
 import vn.clone.fahasa_backend.domain.BookImage;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
+import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.domain.response.FullBookDTO;
@@ -51,6 +53,7 @@ public class BookServiceImpl implements BookService {
     @Transactional(readOnly = true)
     public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
+        specification = specification.and((root, query, cb) -> cb.equal(root.get("deleted"), false));
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
     }
 
@@ -86,24 +89,19 @@ public class BookServiceImpl implements BookService {
                                               .layout(BookLayout.valueOf(request.getLayout()))
                                               .description(request.getDescription())
                                               .build();
-
-            // Calculate discountAmount
-            int discountPercentage = request.getDiscountPercentage() != null ? request.getDiscountPercentage() : 0;
-            int discountAmount = (int) (request.getPrice() * discountPercentage / 100.0);
-
             // Create Book
             Book book = Book.builder()
                             .name(request.getName())
                             .price(request.getPrice())
-                            .discountPercentage(discountPercentage)
-                            .discountAmount(discountAmount)
+                            .discountPercentage(request.getDiscountPercentage())
+                            .discountAmount(request.getDiscountAmount())
                             .stock(request.getStock())
                             .averageRating(0)
                             .ratingCount(0)
                             .deleted(false)
-                            // .bookDetail(bookDetail)
+                            .bookDetail(bookDetail)
                             .build();
-            // bookDetail.setBook(book);
+            bookDetail.setBook(book);
 
             // Get Category
             Category category = categoryService.getCategoryById(request.getCategoryId());
@@ -114,7 +112,7 @@ public class BookServiceImpl implements BookService {
             for (int i = 0; i < imageUrls.size(); i++) {
                 BookImage bookImage = BookImage.builder()
                                                .imagePath(imageUrls.get(i))
-                                               .imageOrder(i)
+                                               .imageOrder(i + 1)
                                                .book(book)
                                                .build();
                 bookImages.add(bookImage);
@@ -126,21 +124,15 @@ public class BookServiceImpl implements BookService {
 
             log.info("Book created: {}", savedBook);
 
-            // Temporary code
-            bookDetail.setId(savedBook.getId());
-            savedBook.setBookDetail(bookDetail);
-            savedBook = bookRepository.save(savedBook);
-
             // Convert to DTO
             return convertToFullDTO(savedBook);
+
         } catch (Exception ex) {
+            // Rollback: Delete newly uploaded images from Cloudinary
             if (imageUrls != null) {
-                String publicId;
-                for (String imageUrl : imageUrls) {
-                    publicId = cloudinaryService.extractPublicIdFromUrl(imageUrl);
-                    cloudinaryService.deleteImage(publicId);
-                }
+                rollbackUploadedImages(imageUrls);
             }
+
             throw ex;
         }
     }
@@ -163,13 +155,6 @@ public class BookServiceImpl implements BookService {
 
         // Update BookDetail
         BookDetail bookDetail = book.getBookDetail();
-        if (bookDetail == null) {
-            bookDetail = BookDetail.builder()
-                                   .id(id)
-                                   .build();
-            book.setBookDetail(bookDetail);
-        }
-
         bookDetail.setPublicationYear(request.getPublicationYear());
         bookDetail.setWeight(request.getWeight());
         bookDetail.setBookHeight(request.getBookHeight());
@@ -183,74 +168,154 @@ public class BookServiceImpl implements BookService {
         return convertToFullDTO(updatedBook);
     }
 
-    // @Override
+    @Override
     @Transactional
-    public FullBookDTO updateBookImages(int id, List<MultipartFile> newImages) {
-        Book book = findBookOrThrow(id);
+    public FullBookDTO updateBookImages(int bookId, UpdateBookImagesRequest request) {
+        Book book = findBookOrThrow(bookId);
+        String bookSlug = VietnameseConverter.convertNameToSlug(book.getName());
 
-        // Xóa tất cả hình ảnh cũ khỏi Cloudinary
-        List<BookImage> oldImages = book.getBookImages();
-        for (BookImage oldImage : oldImages) {
-            try {
-                String publicId = cloudinaryService.extractPublicIdFromUrl(oldImage.getImagePath());
-                cloudinaryService.deleteImage(publicId);
-            } catch (Exception e) {
-                log.warn("Không thể xóa ảnh từ Cloudinary: {}", e.getMessage());
+        List<String> uploadedImageUrls = new ArrayList<>();
+        List<String> deletedPublicIds = new ArrayList<>();
+
+        try {
+            // 1. Delete images
+            if (request.getImagesToDelete() != null && !request.getImagesToDelete().isEmpty()) {
+                deleteImages(book, request.getImagesToDelete(), deletedPublicIds);
             }
-        }
 
-        // Xóa tất cả hình ảnh cũ khỏi database
-        book.getBookImages()
-            .clear();
-
-        // Upload ảnh mới
-        if (newImages != null && !newImages.isEmpty()) {
-            List<String> newImageUrls = cloudinaryService.uploadImages(newImages, "fahasa/books", null);
-
-            List<BookImage> bookImages = new ArrayList<>();
-            for (int i = 0; i < newImageUrls.size(); i++) {
-                BookImage bookImage = BookImage.builder()
-                                               .imagePath(newImageUrls.get(i))
-                                               .imageOrder(i)
-                                               .book(book)
-                                               .build();
-                bookImages.add(bookImage);
+            // 2. Upload new images
+            if (request.getImagesToUpload() != null && !request.getImagesToUpload().isEmpty()) {
+                uploadNewImages(book, request.getImagesToUpload(), bookSlug, uploadedImageUrls);
             }
-            book.setBookImages(bookImages);
-        }
 
-        Book updatedBook = bookRepository.save(book);
-        return convertToFullDTO(updatedBook);
+            // 3. Update image orders
+            if (request.getImagesToUpdateOrder() != null && !request.getImagesToUpdateOrder().isEmpty()) {
+                updateImageOrders(book, request.getImagesToUpdateOrder());
+            }
+
+            // Save changes
+            Book updatedBook = bookRepository.save(book);
+            log.info("Book images updated successfully for book ID: {}", bookId);
+
+            return convertToFullDTO(updatedBook);
+
+        } catch (Exception ex) {
+            log.error("Error updating book images for book ID: {}", bookId, ex);
+
+            // Rollback: Delete newly uploaded images from Cloudinary
+            rollbackUploadedImages(uploadedImageUrls);
+
+            // Note: We cannot roll back deleted images from Cloudinary
+            // Consider implementing a soft delete strategy for production
+
+            // throw new RuntimeException("Failed to update book images", ex);
+            throw ex;
+        }
     }
 
-    // @Override
-    @Transactional
-    public void deleteBookImage(int bookId, Long imageId) {
-        Book book = findBookOrThrow(bookId);
+    /**
+     * Delete images from Cloudinary and database
+     */
+    private void deleteImages(Book book,
+                              List<UpdateBookImagesRequest.ImageToDelete> imagesToDelete,
+                              List<String> deletedPublicIds) {
+        for (UpdateBookImagesRequest.ImageToDelete imageToDelete : imagesToDelete) {
+            // Find the image in the book's image list
+            BookImage bookImage = book.getBookImages()
+                                      .stream()
+                                      .filter(img -> img.getId() == imageToDelete.getId())
+                                      .findFirst()
+                                      .orElseThrow(() -> new EntityNotFoundException(
+                                              "Image not found with ID: " + imageToDelete.getId()));
 
-        BookImage bookImage = book.getBookImages()
-                                  .stream()
-                                  .filter(img -> img.getId() == imageId)
-                                  .findFirst()
-                                  .orElseThrow(() -> new RuntimeException("Hình ảnh không tồn tại"));
+            // Verify URL matches (security check)
+            if (!bookImage.getImagePath().equals(imageToDelete.getImageUrl())) {
+                throw new IllegalArgumentException("Image URL mismatch for ID: " + imageToDelete.getId());
+            }
 
-        // Xóa từ Cloudinary
-        try {
-            String publicId = cloudinaryService.extractPublicIdFromUrl(bookImage.getImagePath());
-            cloudinaryService.deleteImage(publicId);
-        } catch (Exception e) {
-            log.warn("Không thể xóa ảnh từ Cloudinary: {}", e.getMessage());
+            // Delete from Cloudinary
+            String publicId = cloudinaryService.extractPublicIdFromUrl(imageToDelete.getImageUrl());
+            if (publicId != null) {
+                cloudinaryService.deleteImage(publicId);
+                deletedPublicIds.add(publicId);
+            }
+
+            // Remove from the book's image list
+            book.getBookImages()
+                .remove(bookImage);
         }
+    }
 
-        // Xóa từ database
-        book.getBookImages().remove(bookImage);
+    /**
+     * Upload new images to Cloudinary and add to database
+     */
+    private void uploadNewImages(Book book,
+                                 List<UpdateBookImagesRequest.ImageToUpload> imagesToUpload,
+                                 String bookSlug,
+                                 List<String> uploadedImageUrls) {
+        String folder = fahasaProperties.getCloudinary()
+                                        .getProductFolder();
 
-        // Cập nhật thứ tự ảnh
-        for (int i = 0; i < book.getBookImages().size(); i++) {
-            book.getBookImages().get(i).setImageOrder(i);
+        for (UpdateBookImagesRequest.ImageToUpload imageToUpload : imagesToUpload) {
+            MultipartFile file = imageToUpload.getFile();
+
+            if (file == null || file.isEmpty()) {
+                continue;
+            }
+
+            // Upload to Cloudinary
+            String publicId = cloudinaryService.generatePublicId(bookSlug, imageToUpload.getImageOrder());
+            String imageUrl = cloudinaryService.uploadImage(file, folder, publicId);
+            uploadedImageUrls.add(imageUrl);
+
+            // Create a BookImage entity
+            BookImage newBookImage = BookImage.builder()
+                                              .imagePath(imageUrl)
+                                              .imageOrder(imageToUpload.getImageOrder())
+                                              .book(book)
+                                              .build();
+            book.getBookImages()
+                .add(newBookImage);
+
+            log.info("Uploaded new image for book ID: {}, order: {}",
+                     book.getId(), imageToUpload.getImageOrder());
         }
+    }
 
-        bookRepository.save(book);
+    /**
+     * Update image orders in database
+     */
+    private void updateImageOrders(Book book,
+                                   List<UpdateBookImagesRequest.ImageToUpdateOrder> imagesToUpdateOrder) {
+        for (UpdateBookImagesRequest.ImageToUpdateOrder orderUpdate : imagesToUpdateOrder) {
+            BookImage bookImage = book.getBookImages()
+                                      .stream()
+                                      .filter(img -> img.getId() == orderUpdate.getId())
+                                      .findFirst()
+                                      .orElseThrow(() -> new EntityNotFoundException(
+                                              "Image not found with ID: " + orderUpdate.getId()));
+
+            bookImage.setImageOrder(orderUpdate.getImageOrder());
+            log.info("Updated image order for ID: {} to {}",
+                     orderUpdate.getId(), orderUpdate.getImageOrder());
+        }
+    }
+
+    /**
+     * Rollback uploaded images from Cloudinary in case of error
+     */
+    private void rollbackUploadedImages(List<String> uploadedImageUrls) {
+        for (String imageUrl : uploadedImageUrls) {
+            try {
+                String publicId = cloudinaryService.extractPublicIdFromUrl(imageUrl);
+                if (publicId != null) {
+                    cloudinaryService.deleteImage(publicId);
+                    log.info("Rolled back uploaded image: {}", publicId);
+                }
+            } catch (Exception e) {
+                log.warn("Failed to rollback uploaded image: {}", e.getMessage());
+            }
+        }
     }
 
     @Override
@@ -258,6 +323,8 @@ public class BookServiceImpl implements BookService {
     public void deleteById(int id) {
         Book book = findBookOrThrow(id);
         book.setDeleted(true);
+        book.setDeletedAt(Instant.now());
+        bookRepository.save(book);
     }
 
     private Book findBookOrThrow(int id) {

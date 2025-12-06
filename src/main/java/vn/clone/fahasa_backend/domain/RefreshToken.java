@@ -19,6 +19,7 @@ public class RefreshToken {
     @Column(name = "refresh_token", unique = true, nullable = false)
     private String token;
 
+    // =========== Relationship mappings ===========
     @ManyToOne
     @JoinColumn(name = "account_id", nullable = false)
     private Account account;

@@ -55,7 +55,6 @@ public class BookRepositoryCustom {
         // Apply specification predicate
         if (specification != null) {
             Predicate predicate = specification.toPredicate(book, query, cb);
-            predicate = cb.and(predicate, cb.equal(book.get("deleted"), false));
             if (predicate != null) {
                 query.where(predicate);
             }

@@ -17,7 +17,12 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Book extends AbstractEntity {
+public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Integer id;
 
     @Column(name = "name")
     private String name;
@@ -47,8 +52,8 @@ public class Book extends AbstractEntity {
     private Instant deletedAt;
 
     // =========== Relationship mappings ===========
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE},
-              mappedBy = "book")
+    @OneToOne(mappedBy = "book",
+              cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     // @MapsId
     private BookDetail bookDetail;
 
@@ -56,7 +61,8 @@ public class Book extends AbstractEntity {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    @OneToMany(cascade = {CascadeType.PERSIST},
-               mappedBy = "book")
+    @OneToMany(mappedBy = "book",
+               cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
+               orphanRemoval = true)
     private List<BookImage> bookImages;
 }

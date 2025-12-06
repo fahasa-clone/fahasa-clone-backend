@@ -23,12 +23,7 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @NoArgsConstructor
 @Getter
 @Setter
-// public class BookDetail extends AbstractEntity {
-public class BookDetail {
-
-    @Id
-    @Column(name = "id")
-    private Integer id;
+public class BookDetail extends AbstractEntity {
 
     @Column(name = "created_at")
     @CreationTimestamp
@@ -67,7 +62,7 @@ public class BookDetail {
 
     // =========== Relationship mappings ===========
     @OneToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id")
+    @JoinColumn(name = "book_id")
     @JsonIgnore
     private Book book;
 }
