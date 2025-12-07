@@ -10,8 +10,8 @@ import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.RefreshToken;
-import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
-import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.request.RegisterDTO;
+import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 import vn.clone.fahasa_backend.repository.RefreshTokenRepository;

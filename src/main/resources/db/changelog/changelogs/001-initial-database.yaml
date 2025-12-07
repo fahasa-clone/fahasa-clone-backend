@@ -244,3 +244,46 @@ databaseChangeLog:
               - column: { name: like_count, type: INT }
 
         - addPrimaryKey: { tableName: reviews, columnNames: book_id, account_id, constraintName: pk_reviews }
+
+  - changeSet:
+      id: 001-06-update-null-names
+      author: minh-kop
+      changes:
+        - update:
+            tableName: authors
+            columns:
+              - column:
+                  name: name
+                  value: "Unknown"
+            where: "name IS NULL"
+        - update:
+            tableName: publishers
+            columns:
+              - column:
+                  name: name
+                  value: "Unknown"
+            where: "name IS NULL"
+
+  - changeSet:
+      id: 001-07-add-not-null-constraint
+      author: minh-kop
+      changes:
+        - addNotNullConstraint:
+            tableName: authors
+            columnName: name
+            columnDataType: varchar(255)
+        - addNotNullConstraint:
+            tableName: publishers
+            columnName: name
+            columnDataType: varchar(255)
+
+  - changeSet:
+      id: 001-08-add-unique-constraint
+      author: minh-kop
+      changes:
+        - addUniqueConstraint:
+            tableName: authors
+            columnNames: name
+        - addUniqueConstraint:
+            tableName: publishers
+            columnNames: name

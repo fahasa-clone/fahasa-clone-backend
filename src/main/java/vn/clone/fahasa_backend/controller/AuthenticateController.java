@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.dto.LoginDTO;
-import vn.clone.fahasa_backend.domain.dto.UserInfoDTO;
+import vn.clone.fahasa_backend.domain.request.LoginDTO;
+import vn.clone.fahasa_backend.domain.response.UserInfoDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.security.DomainUserDetailsService;
 import vn.clone.fahasa_backend.service.AccountService;
