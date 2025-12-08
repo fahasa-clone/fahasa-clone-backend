@@ -1,11 +1,15 @@
 package vn.clone.fahasa_backend.domain.request;
 
+import java.util.List;
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+
+import vn.clone.fahasa_backend.annotation.MinForList;
 
 @SuperBuilder
 @NoArgsConstructor
@@ -58,4 +62,12 @@ public class UpdateBookRequest {
     private String layout;
 
     private String description;
+
+    @NotNull(message = "Publisher ID is required")
+    @Min(value = 1, message = "Publisher ID must be at least 1")
+    private Integer publisherId;
+
+    @NotNull(message = "Author IDs are required")
+    @MinForList(value = 1, message = "Each Author ID must be at least 1")
+    List<Integer> authorIds;
 }

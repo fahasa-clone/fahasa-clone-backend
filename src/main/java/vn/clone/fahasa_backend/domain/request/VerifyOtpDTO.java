@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.domain.dto;
+package vn.clone.fahasa_backend.domain.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;

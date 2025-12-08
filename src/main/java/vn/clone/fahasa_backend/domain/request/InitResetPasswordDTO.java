@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.domain.dto;
+package vn.clone.fahasa_backend.domain.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

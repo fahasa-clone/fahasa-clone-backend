@@ -65,4 +65,8 @@ public class BookDetail extends AbstractEntity {
     @JoinColumn(name = "book_id")
     @JsonIgnore
     private Book book;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "publisher_id")
+    private Publisher publisher;
 }

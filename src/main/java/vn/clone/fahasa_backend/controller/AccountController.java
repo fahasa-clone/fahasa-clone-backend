@@ -9,10 +9,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.dto.InitResetPasswordDTO;
-import vn.clone.fahasa_backend.domain.dto.RegisterDTO;
-import vn.clone.fahasa_backend.domain.dto.ResetPasswordDTO;
-import vn.clone.fahasa_backend.domain.dto.VerifyOtpDTO;
+import vn.clone.fahasa_backend.domain.request.InitResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.request.RegisterDTO;
+import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.request.VerifyOtpDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.MailService;
