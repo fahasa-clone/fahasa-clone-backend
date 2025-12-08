@@ -287,3 +287,11 @@ databaseChangeLog:
         - addUniqueConstraint:
             tableName: publishers
             columnNames: name
+
+  - changeSet:
+      id: 001-09-rename-book-authors-table
+      author: your_name
+      changes:
+        - renameTable:
+            oldTableName: book_authors
+            newTableName: books_authors

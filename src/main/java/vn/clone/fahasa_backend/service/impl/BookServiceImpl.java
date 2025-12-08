@@ -16,10 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
-import vn.clone.fahasa_backend.domain.Book;
-import vn.clone.fahasa_backend.domain.BookDetail;
-import vn.clone.fahasa_backend.domain.BookImage;
-import vn.clone.fahasa_backend.domain.Category;
+import vn.clone.fahasa_backend.domain.*;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -28,9 +25,7 @@ import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 import vn.clone.fahasa_backend.repository.BookRepository;
 import vn.clone.fahasa_backend.repository.BookRepositoryCustom;
 import vn.clone.fahasa_backend.repository.specification.SpecificationsBuilder;
-import vn.clone.fahasa_backend.service.BookService;
-import vn.clone.fahasa_backend.service.CategoryService;
-import vn.clone.fahasa_backend.service.CloudinaryService;
+import vn.clone.fahasa_backend.service.*;
 import vn.clone.fahasa_backend.util.VietnameseConverter;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
 
@@ -46,6 +41,10 @@ public class BookServiceImpl implements BookService {
     private final CloudinaryService cloudinaryService;
 
     private final CategoryService categoryService;
+
+    private final PublisherService publisherService;
+
+    private final AuthorService authorService;
 
     private final FahasaProperties fahasaProperties;
 
@@ -107,6 +106,18 @@ public class BookServiceImpl implements BookService {
             Category category = categoryService.getCategoryById(request.getCategoryId());
             book.setCategory(category);
 
+            // Get Publisher
+            Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
+            bookDetail.setPublisher(publisher);
+
+            // Get Author list
+            List<Author> authors = new ArrayList<>();
+            for (int authorId : request.getAuthorIds()) {
+                Author author = authorService.getAuthorById(authorId);
+                authors.add(author);
+            }
+            book.setAuthors(authors);
+
             // Create BookImages from uploaded URLs
             List<BookImage> bookImages = new ArrayList<>();
             for (int i = 0; i < imageUrls.size(); i++) {
@@ -146,6 +157,21 @@ public class BookServiceImpl implements BookService {
         Category category = categoryService.getCategoryById(request.getCategoryId());
         book.setCategory(category);
 
+        // Update Author list
+        // Clear old authors (this will update the join table)
+        book.getAuthors()
+            .clear();
+
+        // Fetch new authors from database
+        List<Author> newAuthors = request.getAuthorIds()
+                                         .stream()
+                                         .map(authorService::getAuthorById)
+                                         .toList();
+
+        // Add new authors
+        book.getAuthors()
+            .addAll(newAuthors);
+
         // Update Book
         book.setName(request.getName());
         book.setPrice(request.getPrice());
@@ -163,6 +189,10 @@ public class BookServiceImpl implements BookService {
         bookDetail.setPageCount(request.getPageCount());
         bookDetail.setLayout(BookLayout.valueOf(request.getLayout()));
         bookDetail.setDescription(request.getDescription());
+
+        // Get Publisher
+        Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
+        bookDetail.setPublisher(publisher);
 
         Book updatedBook = bookRepository.save(book);
         return convertToFullDTO(updatedBook);
@@ -334,6 +364,8 @@ public class BookServiceImpl implements BookService {
 
     private FullBookDTO convertToFullDTO(Book book) {
         BookDetail bookDetail = book.getBookDetail();
+        Publisher publisher = bookDetail.getPublisher();
+
         return FullBookDTO.builder()
                           .id(book.getId())
                           .name(book.getName())
@@ -355,6 +387,11 @@ public class BookServiceImpl implements BookService {
                                                                .pageCount(bookDetail.getPageCount())
                                                                .layout(bookDetail.getLayout())
                                                                .description(bookDetail.getDescription())
+                                                               .publisher(FullBookDTO.BookDetailDTO
+                                                                                  .PublisherDTO.builder()
+                                                                                               .id(publisher.getId())
+                                                                                               .name(publisher.getName())
+                                                                                               .build())
                                                                .build())
                           .bookImages(book.getBookImages()
                                           .stream()
@@ -365,6 +402,13 @@ public class BookServiceImpl implements BookService {
                                                                                 .build())
                                           .sorted(Comparator.comparingInt(FullBookDTO.BookImageDTO::getImageOrder))
                                           .toList())
+                          .authors(book.getAuthors()
+                                       .stream()
+                                       .map(author -> FullBookDTO.AuthorDTO.builder()
+                                                                           .id(author.getId())
+                                                                           .name(author.getName())
+                                                                           .build())
+                                       .toList())
                           .build();
     }
 }

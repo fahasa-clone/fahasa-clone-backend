@@ -22,8 +22,9 @@ public class FullBookDTO {
     private boolean deleted;
 
     // Relationship mappings
-    BookDetailDTO bookDetail;
-    List<BookImageDTO> bookImages;
+    private BookDetailDTO bookDetail;
+    private List<BookImageDTO> bookImages;
+    private List<AuthorDTO> authors;
 
     // Inner classes
     @Builder
@@ -37,6 +38,16 @@ public class FullBookDTO {
         private Integer pageCount;
         private BookLayout layout;
         private String description;
+
+        // Relationship mappings
+        private PublisherDTO publisher;
+
+        @Builder
+        @Getter
+        public static class PublisherDTO {
+            private Integer id;
+            private String name;
+        }
     }
 
     @Builder
@@ -45,5 +56,12 @@ public class FullBookDTO {
         private Integer id;
         private String imagePath;
         private Integer imageOrder;
+    }
+
+    @Builder
+    @Getter
+    public static class AuthorDTO {
+        private Integer id;
+        private String name;
     }
 }
