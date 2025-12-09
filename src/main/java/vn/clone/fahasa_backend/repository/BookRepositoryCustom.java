@@ -15,8 +15,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
 
-import vn.clone.fahasa_backend.domain.Book;
-import vn.clone.fahasa_backend.domain.BookImage;
+import vn.clone.fahasa_backend.domain.*;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 
 @Repository
@@ -27,40 +26,78 @@ public class BookRepositoryCustom {
     private final EntityManager entityManager;
 
     public Page<BookDTO> findAllBooksWithFirstImage(Specification<Book> specification, Pageable pageable) {
-
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
-
-        // Main query for data
         CriteriaQuery<BookDTO> query = cb.createQuery(BookDTO.class);
         Root<Book> book = query.from(Book.class);
 
+        // Set up a base query with image join
+        setupBaseQuery(query, book, cb);
+
+        // Apply specification predicate
+        applySpecification(specification, query, book, cb);
+
+        // Apply sorting from Pageable
+        applySorting(query, book, cb, pageable);
+
+        // Execute and return paginated results
+        return executePaginatedQuery(query, specification, pageable);
+    }
+
+    public Page<BookDTO> findNewestBooksWithFirstImage(Specification<Book> specification, Pageable pageable) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<BookDTO> query = cb.createQuery(BookDTO.class);
+        Root<Book> book = query.from(Book.class);
+
+        // Set up a base query with image join
+        setupBaseQuery(query, book, cb);
+
+        // Left join with BookDetail for sorting by createdAt
+        Join<Book, BookDetail> detailJoin = book.join(Book_.bookDetail, JoinType.LEFT);
+
+        // Apply specification predicate
+        applySpecification(specification, query, book, cb);
+
+        // Apply sorting by created date
+        Order createdDateOrder = cb.desc(detailJoin.get("createdAt"));
+        query.orderBy(createdDateOrder);
+
+        // Execute and return paginated results
+        return executePaginatedQuery(query, specification, pageable);
+    }
+
+    // Helper methods
+
+    private void setupBaseQuery(CriteriaQuery<BookDTO> query, Root<Book> book, CriteriaBuilder cb) {
         // Left join with BookImage and filter for imageOrder = 1
-        Join<Book, BookImage> imageJoin = book.join("bookImages", JoinType.LEFT);
-        imageJoin.on(cb.equal(imageJoin.get("imageOrder"), 1));
+        Join<Book, BookImage> imageJoin = book.join(Book_.bookImages, JoinType.LEFT);
+        imageJoin.on(cb.equal(imageJoin.get(BookImage_.imageOrder), 1));
 
         // Select and construct BookDTO
         query.select(cb.construct(BookDTO.class,
-                                  book.get("id"),
-                                  book.get("name"),
-                                  book.get("price"),
-                                  book.get("discountPercentage"),
-                                  book.get("discountAmount"),
-                                  book.get("averageRating"),
-                                  book.get("ratingCount"),
-                                  book.get("stock"),
-                                  book.get("deleted"),
-                                  imageJoin.get("imagePath")
+                                  book.get(Book_.id),
+                                  book.get(Book_.name),
+                                  book.get(Book_.price),
+                                  book.get(Book_.discountPercentage),
+                                  book.get(Book_.discountAmount),
+                                  book.get(Book_.averageRating),
+                                  book.get(Book_.ratingCount),
+                                  book.get(Book_.stock),
+                                  book.get(Book_.deleted),
+                                  imageJoin.get(BookImage_.imagePath)
         ));
+    }
 
-        // Apply specification predicate
+    private void applySpecification(Specification<Book> specification, CriteriaQuery<?> query,
+                                    Root<Book> book, CriteriaBuilder cb) {
         if (specification != null) {
             Predicate predicate = specification.toPredicate(book, query, cb);
             if (predicate != null) {
                 query.where(predicate);
             }
         }
+    }
 
-        // Apply sorting
+    private void applySorting(CriteriaQuery<?> query, Root<Book> book, CriteriaBuilder cb, Pageable pageable) {
         if (pageable.getSort().isSorted()) {
             List<Order> orders = new ArrayList<>();
             for (Sort.Order sortOrder : pageable.getSort()) {
@@ -72,15 +109,16 @@ public class BookRepositoryCustom {
             }
             query.orderBy(orders);
         }
+    }
 
-        // Execute query with pagination
+    private Page<BookDTO> executePaginatedQuery(CriteriaQuery<BookDTO> query,
+                                                Specification<Book> specification,
+                                                Pageable pageable) {
         TypedQuery<BookDTO> typedQuery = entityManager.createQuery(query);
         typedQuery.setFirstResult((int) pageable.getOffset());
         typedQuery.setMaxResults(pageable.getPageSize());
 
         List<BookDTO> results = typedQuery.getResultList();
-
-        // Count query for total elements
         long total = countQuery(specification);
 
         return new PageImpl<>(results, pageable, total);

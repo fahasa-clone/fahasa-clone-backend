@@ -34,6 +34,9 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Slf4j
 public class BookServiceImpl implements BookService {
 
+    private final static Specification<Book> UNDELETED_SPECIFICATION =
+            (root, query, cb) -> cb.equal(root.get(Book_.deleted), false);
+
     private final BookRepository bookRepository;
 
     private final BookRepositoryCustom bookRepositoryCustom;
@@ -52,8 +55,16 @@ public class BookServiceImpl implements BookService {
     @Transactional(readOnly = true)
     public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
-        specification = specification.and((root, query, cb) -> cb.equal(root.get("deleted"), false));
+        specification = specification.and(UNDELETED_SPECIFICATION);
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Page<BookDTO> fetchNewestArrivalBooks(int page, int size) {
+        Pageable pageable = Pageable.ofSize(size)
+                                    .withPage(page - 1);
+        return bookRepositoryCustom.findNewestBooksWithFirstImage(UNDELETED_SPECIFICATION, pageable);
     }
 
     @Override

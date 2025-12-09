@@ -22,4 +22,6 @@ public interface BookService {
     void deleteById(int id);
 
     FullBookDTO updateBookImages(int bookId, UpdateBookImagesRequest request);
+
+    Page<BookDTO> fetchNewestArrivalBooks(int page, int size);
 }

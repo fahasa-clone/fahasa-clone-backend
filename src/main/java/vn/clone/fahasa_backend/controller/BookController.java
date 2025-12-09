@@ -70,4 +70,13 @@ public class BookController {
         return ResponseEntity.ok()
                              .build();
     }
+
+    @GetMapping("/newest-arrival")
+    public ResponseEntity<PageResponse<List<BookDTO>>> getNewestArrivalBooks(@RequestParam int page,
+                                                                             @RequestParam int size) {
+        Page<BookDTO> bookPage = bookService.fetchNewestArrivalBooks(page, size);
+        PageResponse<List<BookDTO>> pageResponse = new PageResponse<>(page, size,
+                                                                      bookPage.getTotalPages(), bookPage.getContent());
+        return ResponseEntity.ok(pageResponse);
+    }
 }
