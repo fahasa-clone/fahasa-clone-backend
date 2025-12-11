@@ -2,7 +2,10 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.Optional;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
@@ -10,8 +13,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.RefreshToken;
+import vn.clone.fahasa_backend.domain.request.CreateUpdateAccountDTO;
 import vn.clone.fahasa_backend.domain.request.RegisterDTO;
 import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.response.AccountDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 import vn.clone.fahasa_backend.repository.RefreshTokenRepository;
@@ -32,36 +37,64 @@ public class AccountServiceImpl implements AccountService {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public Account registerAccount(RegisterDTO user) {
-        accountRepository.findByEmail(user.getEmail())
+    public Account registerAccount(RegisterDTO accountDTO) {
+        accountRepository.findByEmail(accountDTO.getEmail())
                          .ifPresent(account -> {
                              if (!removeNonActiveAccount(account)) {
                                  throw new BadRequestException("Email already used!");
                              }
                          });
 
-        Account account = new Account();
-        account.setEmail(user.getEmail());
-        account.setPassword(passwordEncoder.encode(user.getPassword()));
-        account.setFirstName(user.getFirstName());
-        account.setLastName(user.getLastName());
-        account.setPhone(user.getPhone());
-        account.setGender(user.getGender());
-        account.setBirthday(user.getBirthday());
-        account.setActivated(false);
-        account.setActivationKey(RandomUtils.generateActivateKey());
-        account.setToken(null);
-        account.setOauth2(false);
-        return accountRepository.save(account);
+        Account.AccountBuilder builder = Account.builder()
+                                                .email(accountDTO.getEmail())
+                                                .password(passwordEncoder.encode(accountDTO.getPassword()))
+                                                .firstName(accountDTO.getFirstName())
+                                                .lastName(accountDTO.getLastName())
+                                                .phone(accountDTO.getPhone())
+                                                .gender(accountDTO.getGender())
+                                                .birthday(accountDTO.getBirthday())
+                                                .isActivated(false)
+                                                .activationKey(RandomUtils.generateActivateKey());
+        if (accountDTO instanceof CreateUpdateAccountDTO createAccountDTO) {
+            builder.isActivated(createAccountDTO.getIsActivated())
+                   .activationKey(null);
+        }
+        return accountRepository.save(builder.build());
     }
 
-    public boolean removeNonActiveAccount(Account account) {
-        if (!account.isActivated()) {
-            accountRepository.delete(account);
-            accountRepository.flush();
-            return true;
-        }
-        return false;
+    @Override
+    public AccountDTO createAccount(CreateUpdateAccountDTO requestDTO) {
+        Account account = registerAccount(requestDTO);
+        return convertToDTO(account);
+    }
+
+    @Override
+    public AccountDTO updateAccount(int id, CreateUpdateAccountDTO requestDTO) {
+        Account account = getAccountById(id);
+
+        // account.setEmail(requestDTO.getEmail());
+        // account.setPassword(passwordEncoder.encode(requestDTO.getPassword()));
+        account.setFirstName(requestDTO.getFirstName());
+        account.setLastName(requestDTO.getLastName());
+        account.setPhone(requestDTO.getPhone());
+        account.setGender(requestDTO.getGender());
+        account.setBirthday(requestDTO.getBirthday());
+        account.setActivated(requestDTO.getIsActivated());
+
+        Account savedAccount = accountRepository.save(account);
+        return convertToDTO(savedAccount);
+    }
+
+    @Override
+    public AccountDTO fetchAccountById(int id) {
+        Account account = getAccountById(id);
+        return convertToDTO(account);
+    }
+
+    @Override
+    public Page<AccountDTO> fetchAllAccounts(Pageable pageable) {
+        return accountRepository.findAll(pageable)
+                                .map(this::convertToDTO);
     }
 
     @Override
@@ -128,6 +161,20 @@ public class AccountServiceImpl implements AccountService {
                                 .orElseGet(() -> createAccountFromOAuth2User(oauth2User));
     }
 
+    private boolean removeNonActiveAccount(Account account) {
+        if (!account.isActivated()) {
+            accountRepository.delete(account);
+            accountRepository.flush();
+            return true;
+        }
+        return false;
+    }
+
+    private Account getAccountById(int id) {
+        return accountRepository.findById(id)
+                                .orElseThrow(() -> new EntityNotFoundException("Account not found with id: " + id));
+    }
+
     private Account createAccountFromOAuth2User(OAuth2User oauth2User) {
         String email = oauth2User.getAttribute("email");
         // String name = oauth2User.getAttribute("name");
@@ -146,5 +193,19 @@ public class AccountServiceImpl implements AccountService {
         mailService.sendPasswordMail(account);
 
         return accountRepository.save(account);
+    }
+
+    // =========== Helper method to convert Account to AccountDTO ===========
+    private AccountDTO convertToDTO(Account account) {
+        return AccountDTO.builder()
+                         .id(account.getId())
+                         .email(account.getEmail())
+                         .firstName(account.getFirstName())
+                         .lastName(account.getLastName())
+                         .phone(account.getPhone())
+                         .gender(account.getGender())
+                         .birthday(account.getBirthday())
+                         .isActivated(account.isActivated())
+                         .build();
     }
 }

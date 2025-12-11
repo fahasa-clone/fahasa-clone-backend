@@ -2,11 +2,15 @@ package vn.clone.fahasa_backend.service;
 
 import java.util.Optional;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import vn.clone.fahasa_backend.domain.Account;
+import vn.clone.fahasa_backend.domain.request.CreateUpdateAccountDTO;
 import vn.clone.fahasa_backend.domain.request.RegisterDTO;
 import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.response.AccountDTO;
 
 public interface AccountService {
 
@@ -27,4 +31,12 @@ public interface AccountService {
     void resetPassword(ResetPasswordDTO resetPasswordDTO);
 
     Account getOrCreateUser(String email, OAuth2User oauth2User);
+
+    AccountDTO createAccount(CreateUpdateAccountDTO requestDTO);
+
+    AccountDTO updateAccount(int id, CreateUpdateAccountDTO requestDTO);
+
+    AccountDTO fetchAccountById(int id);
+
+    Page<AccountDTO> fetchAllAccounts(Pageable pageable);
 }

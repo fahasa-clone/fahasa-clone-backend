@@ -1,6 +1,6 @@
 package vn.clone.fahasa_backend.domain.response;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 import lombok.Setter;
 
@@ -17,5 +17,5 @@ public class UserInfoDTO {
 
     private String phone;
 
-    private Date birthday;
+    private LocalDate birthday;
 }

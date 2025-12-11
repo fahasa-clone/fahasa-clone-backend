@@ -1,7 +1,8 @@
 package vn.clone.fahasa_backend.domain;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import jakarta.persistence.Transient;
@@ -22,23 +23,37 @@ import vn.clone.fahasa_backend.util.constant.Gender;
 @Getter
 @Setter
 public class Account extends AbstractEntity {
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
+
+    @Column(name = "password", nullable = false)
     private String password;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
 
     @Pattern(regexp = "^\\d{10}$", message = "Phone number must be 10 digits long and contain only numbers.")
+    @Column(name = "phone")
     private String phone;
 
     @JdbcType(CustomPostgreSQLEnumJdbcType.class)
+    @Column(name = "gender")
     private Gender gender;
 
-    private Date birthday;
-    private boolean isActivated;
-    private String activationKey;
-    private String token;
-    private boolean isOauth2;
+    @Column(name = "birthday")
+    private LocalDate birthday;
 
+    @Column(name = "is_activated", nullable = false)
+    private boolean isActivated;
+
+    @Column(name = "activation_key")
+    private String activationKey;
+
+    // =========== Transient fields ===========
     @Transient
     private String otpValue;
 

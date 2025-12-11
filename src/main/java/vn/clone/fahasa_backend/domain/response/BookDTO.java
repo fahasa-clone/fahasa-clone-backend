@@ -6,6 +6,7 @@ import lombok.Getter;
 @Builder
 @Getter
 public class BookDTO {
+    
     private Integer id;
     private String name;
     private long price;

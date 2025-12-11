@@ -1,10 +1,9 @@
 package vn.clone.fahasa_backend.domain.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
-
-import vn.clone.fahasa_backend.annotation.SizedNotBlank;
 
 @Getter
 @Setter
@@ -13,6 +12,7 @@ public class ResetPasswordDTO {
     @NotBlank(message = "email is required!")
     private String email;
 
-    @SizedNotBlank(message = "password is required!", min = 4, max = 100)
+    @NotBlank
+    @Size(min = 4, max = 100)
     private String newPassword;
 }

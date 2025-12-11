@@ -4,15 +4,16 @@ import java.util.Optional;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.request.InitResetPasswordDTO;
-import vn.clone.fahasa_backend.domain.request.RegisterDTO;
-import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
-import vn.clone.fahasa_backend.domain.request.VerifyOtpDTO;
+import vn.clone.fahasa_backend.domain.request.*;
+import vn.clone.fahasa_backend.domain.response.AccountDTO;
+import vn.clone.fahasa_backend.domain.response.PageResponse;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.MailService;
@@ -88,5 +89,35 @@ public class AccountController {
         accountService.resetPassword(resetPasswordDTO);
         return ResponseEntity.ok()
                              .build();
+    }
+
+    @PostMapping
+    public ResponseEntity<AccountDTO> createAccount(@Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
+        AccountDTO responseDTO = accountService.createAccount(accountDTO);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                             .body(responseDTO);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<AccountDTO> updateAccount(@PathVariable int id,
+                                                    @Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
+        AccountDTO responseDTO = accountService.updateAccount(id, accountDTO);
+        return ResponseEntity.ok(responseDTO);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<AccountDTO> getAccountById(@PathVariable int id) {
+        return ResponseEntity.ok(accountService.fetchAccountById(id));
+    }
+
+    @GetMapping
+    public ResponseEntity<?> getAllAccounts(Pageable pageable) {
+        Page<AccountDTO> accountDTOPage = accountService.fetchAllAccounts(pageable);
+        return ResponseEntity.ok(PageResponse.builder()
+                                             .pageNumber(pageable.getPageNumber() + 1)
+                                             .pageSize(pageable.getPageSize())
+                                             .totalPages(accountDTOPage.getTotalPages())
+                                             .items(accountDTOPage.getContent())
+                                             .build());
     }
 }
