@@ -46,7 +46,7 @@ public class SecurityJwtConfiguration {
     @Bean
     public JwtAuthenticationConverter jwtAuthenticationConverter() {
         JwtGrantedAuthoritiesConverter grantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
-        grantedAuthoritiesConverter.setAuthorityPrefix("");
+        grantedAuthoritiesConverter.setAuthorityPrefix(SecurityUtils.PREFIX);
         grantedAuthoritiesConverter.setAuthoritiesClaimName(SecurityUtils.AUTHORITIES_CLAIM);
         grantedAuthoritiesConverter.setAuthoritiesClaimDelimiter(SecurityUtils.AUTHORITIES_CLAIM_DELIMITER);
 

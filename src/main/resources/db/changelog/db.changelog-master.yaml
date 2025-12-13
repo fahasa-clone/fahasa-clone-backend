@@ -10,3 +10,7 @@ databaseChangeLog:
   - include:
       file: changelogs/003-reset-sequences.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/004-create-roles-table.yml
+      relativeToChangelogFile: true

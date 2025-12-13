@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.service.CategoryService;
@@ -22,6 +23,7 @@ public class CategoryController {
     }
 
     @PostMapping
+    @AdminOnly
     public ResponseEntity<Category> createCategory(@RequestBody @Valid Category category) {
         Category result = categoryService.createCategory(category);
         return ResponseEntity.status(HttpStatus.CREATED).body(result);

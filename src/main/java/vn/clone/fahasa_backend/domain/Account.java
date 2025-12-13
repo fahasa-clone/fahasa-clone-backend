@@ -2,10 +2,7 @@ package vn.clone.fahasa_backend.domain;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Transient;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Pattern;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -52,6 +49,11 @@ public class Account extends AbstractEntity {
 
     @Column(name = "activation_key")
     private String activationKey;
+
+    // =========== Relationship mappings ===========
+    @ManyToOne
+    @JoinColumn(name = "role_id")
+    private Role role;
 
     // =========== Transient fields ===========
     @Transient

@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.request.*;
 import vn.clone.fahasa_backend.domain.response.AccountDTO;
@@ -92,6 +93,7 @@ public class AccountController {
     }
 
     @PostMapping
+    @AdminOnly
     public ResponseEntity<AccountDTO> createAccount(@Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
         AccountDTO responseDTO = accountService.createAccount(accountDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -99,6 +101,7 @@ public class AccountController {
     }
 
     @PutMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<AccountDTO> updateAccount(@PathVariable int id,
                                                     @Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
         AccountDTO responseDTO = accountService.updateAccount(id, accountDTO);
@@ -106,11 +109,13 @@ public class AccountController {
     }
 
     @GetMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<AccountDTO> getAccountById(@PathVariable int id) {
         return ResponseEntity.ok(accountService.fetchAccountById(id));
     }
 
     @GetMapping
+    @AdminOnly
     public ResponseEntity<?> getAllAccounts(Pageable pageable) {
         Page<AccountDTO> accountDTOPage = accountService.fetchAllAccounts(pageable);
         return ResponseEntity.ok(PageResponse.builder()

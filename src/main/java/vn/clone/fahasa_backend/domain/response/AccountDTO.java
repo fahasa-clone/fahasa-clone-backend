@@ -20,5 +20,6 @@ public class AccountDTO {
     private String phone;
     private Gender gender;
     private LocalDate birthday;
+    private String roleName;
     private boolean isActivated;
 }

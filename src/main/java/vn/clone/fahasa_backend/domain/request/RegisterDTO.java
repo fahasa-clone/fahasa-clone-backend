@@ -40,4 +40,6 @@ public class RegisterDTO {
 
     // @NotBlank(message = "birthday is required!")
     private LocalDate birthday;
+
+    private int roleId;
 }

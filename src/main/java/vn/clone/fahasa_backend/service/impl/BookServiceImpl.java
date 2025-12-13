@@ -98,7 +98,9 @@ public class BookServiceImpl implements BookService {
                                               .pageCount(request.getPageCount())
                                               .layout(BookLayout.valueOf(request.getLayout()))
                                               .description(request.getDescription())
+                                              .publisher(publisherService.getPublisherById(request.getPublisherId()))
                                               .build();
+
             // Create Book
             Book book = Book.builder()
                             .name(request.getName())
@@ -110,16 +112,9 @@ public class BookServiceImpl implements BookService {
                             .ratingCount(0)
                             .deleted(false)
                             .bookDetail(bookDetail)
+                            .category(categoryService.getCategoryById(request.getCategoryId()))
                             .build();
             bookDetail.setBook(book);
-
-            // Get Category
-            Category category = categoryService.getCategoryById(request.getCategoryId());
-            book.setCategory(category);
-
-            // Get Publisher
-            Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
-            bookDetail.setPublisher(publisher);
 
             // Get Author list
             List<Author> authors = new ArrayList<>();
@@ -164,10 +159,6 @@ public class BookServiceImpl implements BookService {
     public FullBookDTO updateBook(int id, UpdateBookRequest request) {
         Book book = findBookOrThrow(id);
 
-        // Get Category
-        Category category = categoryService.getCategoryById(request.getCategoryId());
-        book.setCategory(category);
-
         // Update Author list
         // Clear old authors (this will update the join table)
         book.getAuthors()
@@ -189,6 +180,7 @@ public class BookServiceImpl implements BookService {
         book.setDiscountPercentage(request.getDiscountPercentage());
         book.setDiscountAmount(request.getDiscountAmount());
         book.setStock(request.getStock());
+        book.setCategory(categoryService.getCategoryById(request.getCategoryId()));
 
         // Update BookDetail
         BookDetail bookDetail = book.getBookDetail();
@@ -200,10 +192,7 @@ public class BookServiceImpl implements BookService {
         bookDetail.setPageCount(request.getPageCount());
         bookDetail.setLayout(BookLayout.valueOf(request.getLayout()));
         bookDetail.setDescription(request.getDescription());
-
-        // Get Publisher
-        Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
-        bookDetail.setPublisher(publisher);
+        bookDetail.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
 
         Book updatedBook = bookRepository.save(book);
         return convertToFullDTO(updatedBook);
