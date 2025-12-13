@@ -94,7 +94,7 @@ public class AccountController {
 
     @PostMapping
     @AdminOnly
-    public ResponseEntity<AccountDTO> createAccount(@Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
+    public ResponseEntity<AccountDTO> createAccount(@Valid @RequestBody CreateAccountDTO accountDTO) {
         AccountDTO responseDTO = accountService.createAccount(accountDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(responseDTO);
@@ -103,8 +103,14 @@ public class AccountController {
     @PutMapping("/{id}")
     @AdminOnly
     public ResponseEntity<AccountDTO> updateAccount(@PathVariable int id,
-                                                    @Valid @RequestBody CreateUpdateAccountDTO accountDTO) {
+                                                    @Valid @RequestBody UpdateAccountDTO accountDTO) {
         AccountDTO responseDTO = accountService.updateAccount(id, accountDTO);
+        return ResponseEntity.ok(responseDTO);
+    }
+
+    @PutMapping("update-me")
+    public ResponseEntity<AccountDTO> updateMyAccount(@Valid @RequestBody UpdateMeDTO accountDTO) {
+        AccountDTO responseDTO = accountService.updateMyAccount(accountDTO);
         return ResponseEntity.ok(responseDTO);
     }
 

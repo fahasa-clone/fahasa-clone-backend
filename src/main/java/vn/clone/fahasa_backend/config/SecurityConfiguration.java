@@ -117,7 +117,7 @@ public class SecurityConfiguration {
      */
     @Bean
     static RoleHierarchy roleHierarchy() {
-        return RoleHierarchyImpl.fromHierarchy(AuthoritiesConstants.ADMIN + " > " + AuthoritiesConstants.USER);
+        return RoleHierarchyImpl.fromHierarchy(AuthoritiesConstants.ADMIN + " > " + AuthoritiesConstants.CLIENT);
     }
 
     /**

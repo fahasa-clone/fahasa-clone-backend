@@ -9,7 +9,7 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor
 @Getter
 @Setter
-public class CreateUpdateAccountDTO extends RegisterDTO {
+public class CreateAccountDTO extends RegisterDTO {
 
-    private Boolean isActivated;
+    private int roleId;
 }

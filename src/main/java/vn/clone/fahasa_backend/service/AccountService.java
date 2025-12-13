@@ -7,9 +7,10 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
 import vn.clone.fahasa_backend.domain.Account;
-import vn.clone.fahasa_backend.domain.request.CreateUpdateAccountDTO;
+import vn.clone.fahasa_backend.domain.request.CreateAccountDTO;
 import vn.clone.fahasa_backend.domain.request.RegisterDTO;
 import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.request.UpdateMeDTO;
 import vn.clone.fahasa_backend.domain.response.AccountDTO;
 
 public interface AccountService {
@@ -32,9 +33,11 @@ public interface AccountService {
 
     Account getOrCreateUser(String email, OAuth2User oauth2User);
 
-    AccountDTO createAccount(CreateUpdateAccountDTO requestDTO);
+    AccountDTO createAccount(CreateAccountDTO requestDTO);
 
-    AccountDTO updateAccount(int id, CreateUpdateAccountDTO requestDTO);
+    AccountDTO updateAccount(int id, UpdateMeDTO requestDTO);
+
+    AccountDTO updateMyAccount(UpdateMeDTO requestDTO);
 
     AccountDTO fetchAccountById(int id);
 

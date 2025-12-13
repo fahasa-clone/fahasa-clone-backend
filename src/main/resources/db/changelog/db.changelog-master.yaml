@@ -14,3 +14,7 @@ databaseChangeLog:
   - include:
       file: changelogs/004-create-roles-table.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/005-add-constraints-to-accounts-table.yml
+      relativeToChangelogFile: true
