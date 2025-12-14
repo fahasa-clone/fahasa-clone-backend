@@ -10,6 +10,10 @@ import lombok.Setter;
 public class ResetPasswordDTO {
 
     @NotBlank
+    @Size(min = 6, max = 6)
+    private String otpValue;
+
+    @NotBlank
     @Size(min = 4, max = 100)
     private String newPassword;
 }

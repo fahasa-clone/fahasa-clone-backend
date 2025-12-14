@@ -23,6 +23,7 @@ import vn.clone.fahasa_backend.repository.RoleRepository;
 import vn.clone.fahasa_backend.security.AuthoritiesConstants;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.MailService;
+import vn.clone.fahasa_backend.service.OtpService;
 import vn.clone.fahasa_backend.util.RandomUtils;
 import vn.clone.fahasa_backend.util.SecurityUtils;
 
@@ -37,6 +38,8 @@ public class AccountServiceImpl implements AccountService {
     private final RefreshTokenRepository refreshTokenRepository;
 
     private final MailService mailService;
+
+    private final OtpService otpService;
 
     private final PasswordEncoder passwordEncoder;
 
@@ -159,16 +162,6 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     @Transactional(readOnly = true)
-    public Account getUserInfo(String email) {
-        Optional<Account> accountOptional = accountRepository.findByEmail(email);
-        if (accountOptional.isEmpty()) {
-            throw new BadRequestException("Account with email does not exist!");
-        }
-        return accountOptional.get();
-    }
-
-    @Override
-    @Transactional(readOnly = true)
     public Account getUserByRefreshToken(String refreshToken) {
         return refreshTokenRepository.findByToken(refreshToken)
                                      .map(RefreshToken::getAccount)
@@ -202,6 +195,7 @@ public class AccountServiceImpl implements AccountService {
     @Transactional
     public void resetPassword(ResetPasswordDTO resetPasswordDTO) {
         Account account = getAccountBySecurityContext();
+        otpService.isValidOtp(account.getId(), resetPasswordDTO.getOtpValue());
         account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
         accountRepository.save(account);
     }
@@ -211,6 +205,21 @@ public class AccountServiceImpl implements AccountService {
     public Account getOrCreateUser(String email, OAuth2User oauth2User) {
         return accountRepository.findByEmailIgnoreCase(email)
                                 .orElseGet(() -> createAccountFromOAuth2User(oauth2User));
+    }
+
+    @Override
+    @Transactional
+    public void deleteAccount(int id) {
+        getAccountById(id);
+        refreshTokenRepository.deleteAllByAccountId(id);
+        accountRepository.deleteById(id);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public AccountDTO getMyAccount() {
+        Account account = getAccountBySecurityContext();
+        return convertToDTO(account);
     }
 
     private void validateEmailNotInUse(String email) {

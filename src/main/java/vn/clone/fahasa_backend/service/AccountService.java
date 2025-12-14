@@ -18,8 +18,6 @@ public interface AccountService {
 
     void deleteRefreshToken(String refreshToken);
 
-    Account getUserInfo(String email);
-
     Account getUserByRefreshToken(String refreshToken);
 
     void addRefreshToken(Account account, String token);
@@ -41,4 +39,8 @@ public interface AccountService {
     Page<AccountDTO> fetchAllAccounts(Pageable pageable);
 
     void updatePassword(UpdatePasswordDTO passwordDTO);
+
+    void deleteAccount(int id);
+
+    AccountDTO getMyAccount();
 }

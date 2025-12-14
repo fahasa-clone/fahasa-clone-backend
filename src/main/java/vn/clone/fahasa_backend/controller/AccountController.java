@@ -55,7 +55,6 @@ public class AccountController {
     /**
      * {@code POST /api/accounts/reset-password/init} : Send an email with 6-digit OTP to reset the password of the user.
      *
-     * @param initResetPasswordDTO the email of the user.
      * @throws RuntimeException {@code 400 (Bad Request)} if the email is not existed or not activated.
      */
     @PostMapping(path = "/reset-password/init")
@@ -70,7 +69,7 @@ public class AccountController {
     /**
      * {@code DELETE /api/accounts/reset-password/verify} : Verify 6-digit OTP the user entered.
      *
-     * @param verifyOtpDto the email and the OTP.
+     * @param verifyOtpDto the OTP.
      * @throws RuntimeException {@code 400 (Bad Request)} if the OTP is invalid or expired
      *                          or if the user exceeds attempt limit.
      */
@@ -83,12 +82,12 @@ public class AccountController {
     }
 
     /**
-     * {@code PATCH /api/accounts/reset-password/finish} : Reset the password with new password.
+     * {@code PUT /api/accounts/reset-password/finish} : Reset the password with new password.
      *
-     * @param resetPasswordDTO the email and the new password.
+     * @param resetPasswordDTO the new password.
      * @throws RuntimeException {@code 400 (Bad Request)} if the password could not be reset.
      */
-    @PatchMapping(path = "/reset-password/finish")
+    @PutMapping(path = "/reset-password/finish")
     public ResponseEntity<Void> finishPasswordReset(@Valid @RequestBody ResetPasswordDTO resetPasswordDTO) {
         accountService.resetPassword(resetPasswordDTO);
         return ResponseEntity.ok()
@@ -140,5 +139,18 @@ public class AccountController {
                                              .totalPages(accountDTOPage.getTotalPages())
                                              .items(accountDTOPage.getContent())
                                              .build());
+    }
+
+    @DeleteMapping("/{id}")
+    @AdminOnly
+    public ResponseEntity<Void> deleteAccountById(@PathVariable @Min(1) int id) {
+        accountService.deleteAccount(id);
+        return ResponseEntity.ok()
+                             .build();
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<AccountDTO> getMyAccount() {
+        return ResponseEntity.ok(accountService.getMyAccount());
     }
 }
