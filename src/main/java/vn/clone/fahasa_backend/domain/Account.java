@@ -9,12 +9,16 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.Gender;
 
 @Entity
 @Table(name = "accounts")
+@SQLDelete(sql = "UPDATE accounts SET is_deleted = true WHERE id=?")
+@SQLRestriction("is_deleted = false")
 @SuperBuilder
 @NoArgsConstructor
 @Getter
@@ -49,6 +53,9 @@ public class Account extends AbstractEntity {
 
     @Column(name = "activation_key")
     private String activationKey;
+
+    @Column(name = "is_deleted", nullable = false)
+    private boolean deleted;
 
     // =========== Relationship mappings ===========
     @ManyToOne(fetch = FetchType.LAZY)

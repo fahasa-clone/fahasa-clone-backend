@@ -88,19 +88,6 @@ public class BookServiceImpl implements BookService {
             imageUrls = cloudinaryService.uploadImages(images, fahasaProperties.getCloudinary()
                                                                                .getProductFolder(), bookSlug);
 
-            // Create BookDetail
-            BookDetail bookDetail = BookDetail.builder()
-                                              .publicationYear(request.getPublicationYear())
-                                              .weight(request.getWeight())
-                                              .bookHeight(request.getBookHeight())
-                                              .bookWidth(request.getBookWidth())
-                                              .bookThickness(request.getBookThickness())
-                                              .pageCount(request.getPageCount())
-                                              .layout(BookLayout.valueOf(request.getLayout()))
-                                              .description(request.getDescription())
-                                              .publisher(publisherService.getPublisherById(request.getPublisherId()))
-                                              .build();
-
             // Create Book
             Book book = Book.builder()
                             .name(request.getName())
@@ -111,10 +98,17 @@ public class BookServiceImpl implements BookService {
                             .averageRating(0)
                             .ratingCount(0)
                             .deleted(false)
-                            .bookDetail(bookDetail)
                             .category(categoryService.getCategoryById(request.getCategoryId()))
+                            .publicationYear(request.getPublicationYear())
+                            .weight(request.getWeight())
+                            .bookHeight(request.getBookHeight())
+                            .bookWidth(request.getBookWidth())
+                            .bookThickness(request.getBookThickness())
+                            .pageCount(request.getPageCount())
+                            .layout(BookLayout.valueOf(request.getLayout()))
+                            .description(request.getDescription())
+                            .publisher(publisherService.getPublisherById(request.getPublisherId()))
                             .build();
-            bookDetail.setBook(book);
 
             // Get Author list
             List<Author> authors = new ArrayList<>();
@@ -183,16 +177,15 @@ public class BookServiceImpl implements BookService {
         book.setCategory(categoryService.getCategoryById(request.getCategoryId()));
 
         // Update BookDetail
-        BookDetail bookDetail = book.getBookDetail();
-        bookDetail.setPublicationYear(request.getPublicationYear());
-        bookDetail.setWeight(request.getWeight());
-        bookDetail.setBookHeight(request.getBookHeight());
-        bookDetail.setBookWidth(request.getBookWidth());
-        bookDetail.setBookThickness(request.getBookThickness());
-        bookDetail.setPageCount(request.getPageCount());
-        bookDetail.setLayout(BookLayout.valueOf(request.getLayout()));
-        bookDetail.setDescription(request.getDescription());
-        bookDetail.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
+        book.setPublicationYear(request.getPublicationYear());
+        book.setWeight(request.getWeight());
+        book.setBookHeight(request.getBookHeight());
+        book.setBookWidth(request.getBookWidth());
+        book.setBookThickness(request.getBookThickness());
+        book.setPageCount(request.getPageCount());
+        book.setLayout(BookLayout.valueOf(request.getLayout()));
+        book.setDescription(request.getDescription());
+        book.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
 
         Book updatedBook = bookRepository.save(book);
         return convertToFullDTO(updatedBook);
@@ -363,8 +356,7 @@ public class BookServiceImpl implements BookService {
     }
 
     private FullBookDTO convertToFullDTO(Book book) {
-        BookDetail bookDetail = book.getBookDetail();
-        Publisher publisher = bookDetail.getPublisher();
+        Publisher publisher = book.getPublisher();
 
         return FullBookDTO.builder()
                           .id(book.getId())
@@ -377,16 +369,15 @@ public class BookServiceImpl implements BookService {
                           .averageRating(book.getAverageRating())
                           .ratingCount(book.getRatingCount())
                           .stock(book.getStock())
-                          .deleted(book.isDeleted())
                           .bookDetail(FullBookDTO.BookDetailDTO.builder()
-                                                               .publicationYear(bookDetail.getPublicationYear())
-                                                               .weight(bookDetail.getWeight())
-                                                               .bookHeight(bookDetail.getBookHeight())
-                                                               .bookWidth(bookDetail.getBookWidth())
-                                                               .bookThickness(bookDetail.getBookThickness())
-                                                               .pageCount(bookDetail.getPageCount())
-                                                               .layout(bookDetail.getLayout())
-                                                               .description(bookDetail.getDescription())
+                                                               .publicationYear(book.getPublicationYear())
+                                                               .weight(book.getWeight())
+                                                               .bookHeight(book.getBookHeight())
+                                                               .bookWidth(book.getBookWidth())
+                                                               .bookThickness(book.getBookThickness())
+                                                               .pageCount(book.getPageCount())
+                                                               .layout(book.getLayout())
+                                                               .description(book.getDescription())
                                                                .publisher(FullBookDTO.BookDetailDTO
                                                                                   .PublisherDTO.builder()
                                                                                                .id(publisher.getId())

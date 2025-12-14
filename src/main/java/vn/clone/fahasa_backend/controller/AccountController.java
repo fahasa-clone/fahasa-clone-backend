@@ -3,11 +3,13 @@ package vn.clone.fahasa_backend.controller;
 import java.util.Optional;
 
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.Min;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.annotation.AdminOnly;
@@ -23,6 +25,7 @@ import vn.clone.fahasa_backend.service.OtpService;
 @RestController
 @RequestMapping("/api/accounts")
 @RequiredArgsConstructor
+@Validated
 public class AccountController {
 
     private final AccountService accountService;
@@ -56,8 +59,8 @@ public class AccountController {
      * @throws RuntimeException {@code 400 (Bad Request)} if the email is not existed or not activated.
      */
     @PostMapping(path = "/reset-password/init")
-    public ResponseEntity<Void> requestOtpForPasswordReset(@RequestBody InitResetPasswordDTO initResetPasswordDTO) {
-        Account account = accountService.getActivatedAccount(initResetPasswordDTO.getEmail());
+    public ResponseEntity<Void> requestOtpForPasswordReset() {
+        Account account = accountService.getAccountBySecurityContext();
         account.setOtpValue(otpService.generateOtp(account.getId()));
         mailService.sendOtpMail(account);
         return ResponseEntity.ok()
@@ -72,8 +75,8 @@ public class AccountController {
      *                          or if the user exceeds attempt limit.
      */
     @DeleteMapping(path = "/reset-password/verify")
-    public ResponseEntity<Void> verifyOtp(@RequestBody VerifyOtpDTO verifyOtpDto) {
-        Account account = accountService.getActivatedAccount(verifyOtpDto.getEmail());
+    public ResponseEntity<Void> verifyOtp(@Valid @RequestBody VerifyOtpDTO verifyOtpDto) {
+        Account account = accountService.getAccountBySecurityContext();
         otpService.verifyOtp(account.getId(), verifyOtpDto.getOtpValue());
         return ResponseEntity.ok()
                              .build();
@@ -86,7 +89,7 @@ public class AccountController {
      * @throws RuntimeException {@code 400 (Bad Request)} if the password could not be reset.
      */
     @PatchMapping(path = "/reset-password/finish")
-    public ResponseEntity<Void> finishPasswordReset(@RequestBody ResetPasswordDTO resetPasswordDTO) {
+    public ResponseEntity<Void> finishPasswordReset(@Valid @RequestBody ResetPasswordDTO resetPasswordDTO) {
         accountService.resetPassword(resetPasswordDTO);
         return ResponseEntity.ok()
                              .build();
@@ -102,21 +105,28 @@ public class AccountController {
 
     @PutMapping("/{id}")
     @AdminOnly
-    public ResponseEntity<AccountDTO> updateAccount(@PathVariable int id,
+    public ResponseEntity<AccountDTO> updateAccount(@PathVariable @Min(1) int id,
                                                     @Valid @RequestBody UpdateAccountDTO accountDTO) {
         AccountDTO responseDTO = accountService.updateAccount(id, accountDTO);
         return ResponseEntity.ok(responseDTO);
     }
 
-    @PutMapping("update-me")
+    @PutMapping("/me")
     public ResponseEntity<AccountDTO> updateMyAccount(@Valid @RequestBody UpdateMeDTO accountDTO) {
         AccountDTO responseDTO = accountService.updateMyAccount(accountDTO);
         return ResponseEntity.ok(responseDTO);
     }
 
+    @PutMapping("/password")
+    public ResponseEntity<Void> updatePassword(@Valid @RequestBody UpdatePasswordDTO passwordDTO) {
+        accountService.updatePassword(passwordDTO);
+        return ResponseEntity.ok()
+                             .build();
+    }
+
     @GetMapping("/{id}")
     @AdminOnly
-    public ResponseEntity<AccountDTO> getAccountById(@PathVariable int id) {
+    public ResponseEntity<AccountDTO> getAccountById(@PathVariable @Min(1) int id) {
         return ResponseEntity.ok(accountService.fetchAccountById(id));
     }
 

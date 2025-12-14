@@ -59,7 +59,7 @@ public class OtpService {
         return strNumber;
     }
 
-    public boolean verifyOtp(int accountId, String submittedOtp) {
+    public void verifyOtp(int accountId, String submittedOtp) {
         Otp otp = otpRepository.findByAccountId(accountId)
                                .orElseThrow(() -> new BadRequestException("Invalid account ID."));
 
@@ -74,7 +74,6 @@ public class OtpService {
         if (passwordEncoder.matches(submittedOtp, otp.getOtpHash())) {
             // SUCCESS: Delete the code
             otpRepository.deleteById(otp.getId());
-            return true;
         } else {
             // Check attempt limit
             if (otp.getAttempts() == MAX_ATTEMPTS - 1) {

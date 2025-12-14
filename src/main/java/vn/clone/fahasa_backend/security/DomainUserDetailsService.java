@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
+import vn.clone.fahasa_backend.error.UserNotActivatedException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 
 /**

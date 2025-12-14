@@ -9,9 +9,6 @@ import lombok.Setter;
 @Setter
 public class VerifyOtpDTO {
 
-    @NotBlank(message = "email is required!")
-    private String email;
-
     @NotBlank
     @Size(min = 6, max = 6)
     private String otpValue;

@@ -16,5 +16,5 @@ databaseChangeLog:
       relativeToChangelogFile: true
 
   - include:
-      file: changelogs/005-add-constraints-to-accounts-table.yml
+      file: changelogs/005-update-accounts-table.yml
       relativeToChangelogFile: true

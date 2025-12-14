@@ -15,7 +15,10 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
 
-import vn.clone.fahasa_backend.domain.*;
+import vn.clone.fahasa_backend.domain.Book;
+import vn.clone.fahasa_backend.domain.BookImage;
+import vn.clone.fahasa_backend.domain.BookImage_;
+import vn.clone.fahasa_backend.domain.Book_;
 import vn.clone.fahasa_backend.domain.response.BookDTO;
 
 @Repository
@@ -51,14 +54,11 @@ public class BookRepositoryCustom {
         // Set up a base query with image join
         setupBaseQuery(query, book, cb);
 
-        // Left join with BookDetail for sorting by createdAt
-        Join<Book, BookDetail> detailJoin = book.join(Book_.bookDetail, JoinType.LEFT);
-
         // Apply specification predicate
         applySpecification(specification, query, book, cb);
 
         // Apply sorting by created date
-        Order createdDateOrder = cb.desc(detailJoin.get("createdAt"));
+        Order createdDateOrder = cb.desc(book.get("createdAt"));
         query.orderBy(createdDateOrder);
 
         // Execute and return paginated results

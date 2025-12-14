@@ -109,11 +109,21 @@ public class AccountServiceImpl implements AccountService {
     @Override
     @Transactional
     public AccountDTO updateMyAccount(UpdateMeDTO requestDTO) {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElseThrow(() -> new BadRequestException("Current user email not found!"));
-        Account account = getActivatedAccount(email);
+        Account account = getAccountBySecurityContext();
 
         return updateAccount(account.getId(), requestDTO);
+    }
+
+    @Override
+    @Transactional
+    public void updatePassword(UpdatePasswordDTO passwordDTO) {
+        Account account = getAccountBySecurityContext();
+
+        if (!passwordEncoder.matches(passwordDTO.getCurrentPassword(), account.getPassword())) {
+            throw new BadRequestException("Current password is incorrect");
+        }
+
+        account.setPassword(passwordEncoder.encode(passwordDTO.getNewPassword()));
     }
 
     @Override
@@ -177,7 +187,9 @@ public class AccountServiceImpl implements AccountService {
 
     @Override
     @Transactional(readOnly = true)
-    public Account getActivatedAccount(String email) {
+    public Account getAccountBySecurityContext() {
+        String email = SecurityUtils.getCurrentUserLogin()
+                                    .orElseThrow(() -> new BadRequestException("Current user email not found!"));
         Account account = accountRepository.findByEmailIgnoreCase(email)
                                            .orElseThrow(() -> new BadRequestException("Email is not existed!"));
         if (!account.isActivated()) {
@@ -189,7 +201,7 @@ public class AccountServiceImpl implements AccountService {
     @Override
     @Transactional
     public void resetPassword(ResetPasswordDTO resetPasswordDTO) {
-        Account account = getActivatedAccount(resetPasswordDTO.getEmail());
+        Account account = getAccountBySecurityContext();
         account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
         accountRepository.save(account);
     }

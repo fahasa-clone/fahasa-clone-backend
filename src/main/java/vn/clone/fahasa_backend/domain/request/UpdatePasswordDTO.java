@@ -7,7 +7,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class ResetPasswordDTO {
+public class UpdatePasswordDTO {
+
+    @NotBlank
+    @Size(min = 4, max = 100)
+    private String currentPassword;
 
     @NotBlank
     @Size(min = 4, max = 100)
