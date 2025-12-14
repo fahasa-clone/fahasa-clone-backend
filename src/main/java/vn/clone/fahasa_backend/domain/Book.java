@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.SQLRestriction;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
@@ -18,6 +20,8 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Table(name = "books")
 @SecondaryTable(name = "book_details",
                 pkJoinColumns = @PrimaryKeyJoinColumn(name = "book_id"))
+@SQLDelete(sql = "UPDATE books SET delete_status = true WHERE id=?")
+@SQLRestriction("delete_status = false")
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -50,6 +54,9 @@ public class Book {
 
     @Column(name = "stock")
     private int stock;
+
+    @Column(name = "slug")
+    private String slug;
 
     @Column(name = "delete_status")
     private boolean deleted;

@@ -16,7 +16,10 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
-import vn.clone.fahasa_backend.domain.*;
+import vn.clone.fahasa_backend.domain.Author;
+import vn.clone.fahasa_backend.domain.Book;
+import vn.clone.fahasa_backend.domain.BookImage;
+import vn.clone.fahasa_backend.domain.Publisher;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -33,9 +36,6 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @RequiredArgsConstructor
 @Slf4j
 public class BookServiceImpl implements BookService {
-
-    private final static Specification<Book> UNDELETED_SPECIFICATION =
-            (root, query, cb) -> cb.equal(root.get(Book_.deleted), false);
 
     private final BookRepository bookRepository;
 
@@ -55,7 +55,6 @@ public class BookServiceImpl implements BookService {
     @Transactional(readOnly = true)
     public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
-        specification = specification.and(UNDELETED_SPECIFICATION);
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
     }
 
@@ -64,7 +63,7 @@ public class BookServiceImpl implements BookService {
     public Page<BookDTO> fetchNewestArrivalBooks(int page, int size) {
         Pageable pageable = Pageable.ofSize(size)
                                     .withPage(page - 1);
-        return bookRepositoryCustom.findNewestBooksWithFirstImage(UNDELETED_SPECIFICATION, pageable);
+        return bookRepositoryCustom.findNewestBooksWithFirstImage(null, pageable);
     }
 
     @Override
@@ -351,7 +350,7 @@ public class BookServiceImpl implements BookService {
     }
 
     private Book findBookOrThrow(int id) {
-        return bookRepository.findByIdAndDeletedFalse(id)
+        return bookRepository.findById(id)
                              .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
     }
 

@@ -82,7 +82,6 @@ public class BookRepositoryCustom {
                                   book.get(Book_.averageRating),
                                   book.get(Book_.ratingCount),
                                   book.get(Book_.stock),
-                                  book.get(Book_.deleted),
                                   imageJoin.get(BookImage_.imagePath)
         ));
     }

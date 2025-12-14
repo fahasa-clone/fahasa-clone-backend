@@ -6,7 +6,7 @@ import lombok.Getter;
 @Builder
 @Getter
 public class BookDTO {
-    
+
     private Integer id;
     private String name;
     private long price;
@@ -15,6 +15,5 @@ public class BookDTO {
     private Float averageRating;
     private Integer ratingCount;
     private Integer stock;
-    private boolean deleted;
     private String imagePath;
 }
