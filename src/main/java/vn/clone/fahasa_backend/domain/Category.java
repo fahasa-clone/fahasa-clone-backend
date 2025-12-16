@@ -2,18 +2,15 @@ package vn.clone.fahasa_backend.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Table(name = "categories")
-@Getter
-@Setter
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class Category {
 
     @Id
@@ -22,7 +19,6 @@ public class Category {
     private Integer id;
 
     @Column(name = "name")
-    @NotBlank(message = "name field is required")
     private String name;
 
     @Column(name = "description")
