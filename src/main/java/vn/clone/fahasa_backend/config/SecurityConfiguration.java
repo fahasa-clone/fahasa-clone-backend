@@ -60,7 +60,7 @@ public class SecurityConfiguration {
                                            OAuth2JwtSuccessHandler oauth2JwtSuccessHandler) throws Exception {
         String[] whiteList = {
                 "/api/auth/login", "/api/accounts/register", "/api/auth/refresh", "/api/accounts/activate",
-                "/api/auth/logout", "/login/oauth2/code/**", "/"
+                "/api/auth/logout", "/login/oauth2/code/**", "/", "/api/payment/vnpay/return", "/IPN"
         };
         RequestCache nullRequestCache = new NullRequestCache();
 

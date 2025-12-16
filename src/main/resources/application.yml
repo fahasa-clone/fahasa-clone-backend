@@ -75,6 +75,11 @@ fahasa:
     base-url: http://localhost:8080
   cloudinary:
     product-folder: "fahasa/products"
+  vnpay:
+    tmn-code: ${VNPAY_TERMINAL_CODE}
+    hash-secret: ${VNPAY_HASH_SECRET}
+    pay-url: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
+    return-url: "http://localhost:8080/api/payment/vnpay/return"
 
 # Cloudinary properties
 cloudinary:
