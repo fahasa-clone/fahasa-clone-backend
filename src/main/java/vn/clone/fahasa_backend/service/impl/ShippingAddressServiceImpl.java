@@ -18,7 +18,6 @@ import vn.clone.fahasa_backend.repository.ShippingAddressRepositoryCustom;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.LocationService;
 import vn.clone.fahasa_backend.service.ShippingAddressService;
-import vn.clone.fahasa_backend.util.SecurityUtils;
 
 @Service
 @RequiredArgsConstructor
@@ -35,10 +34,7 @@ public class ShippingAddressServiceImpl implements ShippingAddressService {
 
     @Override
     public ShippingAddressResponseDTO createShippingAddress(ShippingAddressRequestDTO request) {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElseThrow(() -> new EntityNotFoundException("User not found"));
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         Ward ward = locationService.getWardById(request.getWardId());
 
@@ -65,10 +61,7 @@ public class ShippingAddressServiceImpl implements ShippingAddressService {
 
     @Override
     public ShippingAddressResponseDTO updateShippingAddress(ShippingAddressRequestDTO request, int id) {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElseThrow(() -> new EntityNotFoundException("User not found"));
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         ShippingAddress address = shippingAddressRepository.findByIdAndAccountId(id, account.getId())
                                                            .orElseThrow(() -> new EntityNotFoundException("Address not found"));
@@ -94,10 +87,7 @@ public class ShippingAddressServiceImpl implements ShippingAddressService {
 
     @Override
     public void deleteShippingAddress(int id) {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElseThrow(() -> new EntityNotFoundException("User not found"));
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         ShippingAddress address = shippingAddressRepository.findByIdAndAccountId(id, account.getId())
                                                            .orElseThrow(() -> new EntityNotFoundException("Address not found"));
@@ -107,10 +97,7 @@ public class ShippingAddressServiceImpl implements ShippingAddressService {
 
     @Override
     public List<ShippingAddressResponseDTO> getAllShippingAddress() {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElseThrow(() -> new EntityNotFoundException("User not found"));
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         return shippingAddressRepositoryCustom.findAllAddressesByAccountId(account.getId());
     }
