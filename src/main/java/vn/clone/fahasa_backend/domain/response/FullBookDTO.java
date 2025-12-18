@@ -11,7 +11,7 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Builder
 @Getter
 public class FullBookDTO {
-    
+
     private Integer id;
     private String name;
     private int categoryId;

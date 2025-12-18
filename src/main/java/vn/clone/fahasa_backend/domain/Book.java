@@ -12,6 +12,7 @@ import lombok.experimental.SuperBuilder;
 import org.hibernate.annotations.JdbcType;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.SQLRestriction;
+import org.hibernate.annotations.SecondaryRow;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
@@ -20,6 +21,7 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Table(name = "books")
 @SecondaryTable(name = "book_details",
                 pkJoinColumns = @PrimaryKeyJoinColumn(name = "book_id"))
+@SecondaryRow(table = "book_details", optional = false)
 @SQLDelete(sql = "UPDATE books SET delete_status = true WHERE id=?")
 @SQLRestriction("delete_status = false")
 @SuperBuilder
