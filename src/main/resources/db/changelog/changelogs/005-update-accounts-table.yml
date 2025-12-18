@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-01-add-unique-constraints
+      author: minh-kop
+      changes:
+        - addUniqueConstraint:
+            tableName: accounts
+            columnNames: phone
+        - addUniqueConstraint:
+            tableName: accounts
+            columnNames: email
+
+  - changeSet:
+      id: 005-02-add-is-deleted-column
+      author: minh-kop
+      changes:
+        - addColumn:
+            tableName: accounts
+            columns:
+              - column:
+                  name: is_deleted
+                  type: BOOLEAN
+                  defaultValueBoolean: false
+                  constraints:
+                    nullable: false

@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.Author;
 import vn.clone.fahasa_backend.domain.request.AuthorRequestDTO;
 import vn.clone.fahasa_backend.domain.response.PageResponse;
@@ -23,6 +24,7 @@ public class AuthorController {
     private final AuthorService authorService;
 
     @PostMapping
+    @AdminOnly
     public ResponseEntity<Author> createAuthor(@Valid @RequestBody AuthorRequestDTO authorRequestDTO) {
         Author createdAuthor = authorService.createAuthor(authorRequestDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -42,6 +44,7 @@ public class AuthorController {
     }
 
     @PutMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<Author> updateAuthor(@PathVariable Integer id,
                                                @Valid @RequestBody AuthorRequestDTO requestDTO) {
         Author updatedAuthor = authorService.updateAuthor(id, requestDTO);
@@ -49,6 +52,7 @@ public class AuthorController {
     }
 
     @DeleteMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<Void> deleteAuthor(@PathVariable Integer id) {
         authorService.deleteAuthor(id);
         return ResponseEntity.noContent()

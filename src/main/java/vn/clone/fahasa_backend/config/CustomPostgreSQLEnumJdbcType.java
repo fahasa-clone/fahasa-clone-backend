@@ -11,6 +11,7 @@ import org.hibernate.type.descriptor.jdbc.BasicBinder;
 import org.hibernate.type.descriptor.jdbc.BasicExtractor;
 
 public class CustomPostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
+
     @Override
     public <X> ValueBinder<X> getBinder(JavaType<X> javaType) {
         return new BasicBinder<>(javaType, this) {
@@ -63,6 +64,5 @@ public class CustomPostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
                 return getJavaType().wrap(result.toUpperCase(), options);
             }
         };
-
     }
 }

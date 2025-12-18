@@ -22,6 +22,11 @@ public final class SecurityUtils {
 
     public static final String USER_ID_CLAIM = "userId";
 
+    public static final String PREFIX = "";
+
+    private SecurityUtils() {
+    }
+
     /**
      * Get the login of the current user.
      *

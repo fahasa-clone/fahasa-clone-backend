@@ -13,6 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -44,6 +45,7 @@ public class BookController {
     }
 
     @PostMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @AdminOnly
     public ResponseEntity<FullBookDTO> createBook(@Valid CreateBookRequest request) {
         FullBookDTO newBook = bookService.createBook(request);
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -51,6 +53,7 @@ public class BookController {
     }
 
     @PutMapping(value = "/{id}")
+    @AdminOnly
     public ResponseEntity<FullBookDTO> updateBook(@PathVariable @Min(1) int id,
                                                   @Valid @RequestBody UpdateBookRequest request) {
         FullBookDTO updatedBook = bookService.updateBook(id, request);
@@ -58,6 +61,7 @@ public class BookController {
     }
 
     @PutMapping(value = "/{id}/images", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @AdminOnly
     public ResponseEntity<FullBookDTO> updateBookImages(@PathVariable @Min(1) int id,
                                                         @Valid UpdateBookImagesRequest request) {
         FullBookDTO updatedBook = bookService.updateBookImages(id, request);
@@ -65,9 +69,19 @@ public class BookController {
     }
 
     @DeleteMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<Void> deleteById(@PathVariable @Min(1) int id) {
         bookService.deleteById(id);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
+    }
+
+    @GetMapping("/newest-arrival")
+    public ResponseEntity<PageResponse<List<BookDTO>>> getNewestArrivalBooks(@RequestParam int page,
+                                                                             @RequestParam int size) {
+        Page<BookDTO> bookPage = bookService.fetchNewestArrivalBooks(page, size);
+        PageResponse<List<BookDTO>> pageResponse = new PageResponse<>(page, size,
+                                                                      bookPage.getTotalPages(), bookPage.getContent());
+        return ResponseEntity.ok(pageResponse);
     }
 }

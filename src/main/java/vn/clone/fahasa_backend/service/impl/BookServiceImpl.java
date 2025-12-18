@@ -34,6 +34,8 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Slf4j
 public class BookServiceImpl implements BookService {
 
+    private final FahasaProperties fahasaProperties;
+
     private final BookRepository bookRepository;
 
     private final BookRepositoryCustom bookRepositoryCustom;
@@ -46,14 +48,21 @@ public class BookServiceImpl implements BookService {
 
     private final AuthorService authorService;
 
-    private final FahasaProperties fahasaProperties;
+    private final SpecService specService;
 
     @Override
     @Transactional(readOnly = true)
     public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
-        specification = specification.and((root, query, cb) -> cb.equal(root.get("deleted"), false));
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Page<BookDTO> fetchNewestArrivalBooks(int page, int size) {
+        Pageable pageable = Pageable.ofSize(size)
+                                    .withPage(page - 1);
+        return bookRepositoryCustom.findNewestBooksWithFirstImage(null, pageable);
     }
 
     @Override
@@ -77,17 +86,6 @@ public class BookServiceImpl implements BookService {
             imageUrls = cloudinaryService.uploadImages(images, fahasaProperties.getCloudinary()
                                                                                .getProductFolder(), bookSlug);
 
-            // Create BookDetail
-            BookDetail bookDetail = BookDetail.builder()
-                                              .publicationYear(request.getPublicationYear())
-                                              .weight(request.getWeight())
-                                              .bookHeight(request.getBookHeight())
-                                              .bookWidth(request.getBookWidth())
-                                              .bookThickness(request.getBookThickness())
-                                              .pageCount(request.getPageCount())
-                                              .layout(BookLayout.valueOf(request.getLayout()))
-                                              .description(request.getDescription())
-                                              .build();
             // Create Book
             Book book = Book.builder()
                             .name(request.getName())
@@ -98,19 +96,19 @@ public class BookServiceImpl implements BookService {
                             .averageRating(0)
                             .ratingCount(0)
                             .deleted(false)
-                            .bookDetail(bookDetail)
+                            .category(categoryService.getCategoryById(request.getCategoryId()))
+                            .publicationYear(request.getPublicationYear())
+                            .weight(request.getWeight())
+                            .bookHeight(request.getBookHeight())
+                            .bookWidth(request.getBookWidth())
+                            .bookThickness(request.getBookThickness())
+                            .pageCount(request.getPageCount())
+                            .layout(BookLayout.valueOf(request.getLayout()))
+                            .description(request.getDescription())
+                            .publisher(publisherService.getPublisherById(request.getPublisherId()))
                             .build();
-            bookDetail.setBook(book);
 
-            // Get Category
-            Category category = categoryService.getCategoryById(request.getCategoryId());
-            book.setCategory(category);
-
-            // Get Publisher
-            Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
-            bookDetail.setPublisher(publisher);
-
-            // Get Author list
+            // Create an Author list
             List<Author> authors = new ArrayList<>();
             for (int authorId : request.getAuthorIds()) {
                 Author author = authorService.getAuthorById(authorId);
@@ -129,6 +127,17 @@ public class BookServiceImpl implements BookService {
                 bookImages.add(bookImage);
             }
             book.setBookImages(bookImages);
+
+            // Create BookSpec list
+            List<BookSpec> bookSpecs = request.getBookSpecs()
+                                              .stream()
+                                              .map(bookSpecDTO -> BookSpec.builder()
+                                                                          .book(book)
+                                                                          .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
+                                                                          .value(bookSpecDTO.getValue())
+                                                                          .build())
+                                              .toList();
+            book.setBookSpecs(bookSpecs);
 
             // Save to the database
             Book savedBook = bookRepository.save(book);
@@ -153,16 +162,16 @@ public class BookServiceImpl implements BookService {
     public FullBookDTO updateBook(int id, UpdateBookRequest request) {
         Book book = findBookOrThrow(id);
 
-        // Get Category
-        Category category = categoryService.getCategoryById(request.getCategoryId());
-        book.setCategory(category);
-
         // Update Author list
         // Clear old authors (this will update the join table)
-        book.getAuthors()
-            .clear();
+        if (book.getAuthors() != null) {
+            book.getAuthors()
+                .clear();
+        } else {
+            book.setAuthors(new ArrayList<>());
+        }
 
-        // Fetch new authors from database
+        // Fetch new authors from the database
         List<Author> newAuthors = request.getAuthorIds()
                                          .stream()
                                          .map(authorService::getAuthorById)
@@ -178,23 +187,42 @@ public class BookServiceImpl implements BookService {
         book.setDiscountPercentage(request.getDiscountPercentage());
         book.setDiscountAmount(request.getDiscountAmount());
         book.setStock(request.getStock());
+        book.setCategory(categoryService.getCategoryById(request.getCategoryId()));
 
         // Update BookDetail
-        BookDetail bookDetail = book.getBookDetail();
-        bookDetail.setPublicationYear(request.getPublicationYear());
-        bookDetail.setWeight(request.getWeight());
-        bookDetail.setBookHeight(request.getBookHeight());
-        bookDetail.setBookWidth(request.getBookWidth());
-        bookDetail.setBookThickness(request.getBookThickness());
-        bookDetail.setPageCount(request.getPageCount());
-        bookDetail.setLayout(BookLayout.valueOf(request.getLayout()));
-        bookDetail.setDescription(request.getDescription());
+        book.setPublicationYear(request.getPublicationYear());
+        book.setWeight(request.getWeight());
+        book.setBookHeight(request.getBookHeight());
+        book.setBookWidth(request.getBookWidth());
+        book.setBookThickness(request.getBookThickness());
+        book.setPageCount(request.getPageCount());
+        book.setLayout(BookLayout.valueOf(request.getLayout()));
+        book.setDescription(request.getDescription());
+        book.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
 
-        // Get Publisher
-        Publisher publisher = publisherService.getPublisherById(request.getPublisherId());
-        bookDetail.setPublisher(publisher);
+        // Update BookSpec list
+        if (book.getBookSpecs() != null) {
+            book.getBookSpecs()
+                .clear();
+        } else {
+            book.setBookSpecs(new ArrayList<>());
+        }
 
+        List<BookSpec> bookSpecs = request.getBookSpecs()
+                                          .stream()
+                                          .map(bookSpecDTO -> BookSpec.builder()
+                                                                      .book(book)
+                                                                      .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
+                                                                      .value(bookSpecDTO.getValue())
+                                                                      .build())
+                                          .toList();
+
+        book.getBookSpecs()
+            .addAll(bookSpecs);
+
+        // Save to the database
         Book updatedBook = bookRepository.save(book);
+
         return convertToFullDTO(updatedBook);
     }
 
@@ -358,13 +386,12 @@ public class BookServiceImpl implements BookService {
     }
 
     private Book findBookOrThrow(int id) {
-        return bookRepository.findByIdAndDeletedFalse(id)
+        return bookRepository.findById(id)
                              .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
     }
 
     private FullBookDTO convertToFullDTO(Book book) {
-        BookDetail bookDetail = book.getBookDetail();
-        Publisher publisher = bookDetail.getPublisher();
+        Publisher publisher = book.getPublisher();
 
         return FullBookDTO.builder()
                           .id(book.getId())
@@ -377,16 +404,15 @@ public class BookServiceImpl implements BookService {
                           .averageRating(book.getAverageRating())
                           .ratingCount(book.getRatingCount())
                           .stock(book.getStock())
-                          .deleted(book.isDeleted())
                           .bookDetail(FullBookDTO.BookDetailDTO.builder()
-                                                               .publicationYear(bookDetail.getPublicationYear())
-                                                               .weight(bookDetail.getWeight())
-                                                               .bookHeight(bookDetail.getBookHeight())
-                                                               .bookWidth(bookDetail.getBookWidth())
-                                                               .bookThickness(bookDetail.getBookThickness())
-                                                               .pageCount(bookDetail.getPageCount())
-                                                               .layout(bookDetail.getLayout())
-                                                               .description(bookDetail.getDescription())
+                                                               .publicationYear(book.getPublicationYear())
+                                                               .weight(book.getWeight())
+                                                               .bookHeight(book.getBookHeight())
+                                                               .bookWidth(book.getBookWidth())
+                                                               .bookThickness(book.getBookThickness())
+                                                               .pageCount(book.getPageCount())
+                                                               .layout(book.getLayout())
+                                                               .description(book.getDescription())
                                                                .publisher(FullBookDTO.BookDetailDTO
                                                                                   .PublisherDTO.builder()
                                                                                                .id(publisher.getId())
@@ -409,6 +435,17 @@ public class BookServiceImpl implements BookService {
                                                                            .name(author.getName())
                                                                            .build())
                                        .toList())
+                          .bookSpecs(book.getBookSpecs()
+                                         .stream()
+                                         .map(bookSpec -> {
+                                             Spec spec = bookSpec.getSpec();
+                                             return FullBookDTO.BookSpecDTO.builder()
+                                                                           .specId(spec.getId())
+                                                                           .specName(spec.getName())
+                                                                           .value(bookSpec.getValue())
+                                                                           .build();
+                                         })
+                                         .toList())
                           .build();
     }
 }

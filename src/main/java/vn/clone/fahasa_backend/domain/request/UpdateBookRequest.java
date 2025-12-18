@@ -2,6 +2,7 @@ package vn.clone.fahasa_backend.domain.request;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -70,4 +71,7 @@ public class UpdateBookRequest {
     @NotNull(message = "Author IDs are required")
     @MinForList(value = 1, message = "Each Author ID must be at least 1")
     List<Integer> authorIds;
+
+    @Valid
+    List<BookSpecDTO> bookSpecs;
 }

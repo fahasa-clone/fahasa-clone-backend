@@ -2,23 +2,32 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Category;
+import vn.clone.fahasa_backend.domain.CategorySpec;
+import vn.clone.fahasa_backend.domain.Spec;
+import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
+import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
+import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
 import vn.clone.fahasa_backend.service.CategoryService;
+import vn.clone.fahasa_backend.service.SpecService;
+import vn.clone.fahasa_backend.util.VietnameseConverter;
 
 @Service
 @RequiredArgsConstructor
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
+
+    private final SpecService specService;
 
     // @Bean
     // public CommandLineRunner init() {
@@ -34,20 +43,95 @@ public class CategoryServiceImpl implements CategoryService {
     //     };
     // }
 
-    public Category createCategory(Category category) {
-        if (categoryRepository.existsByName(category.getName())) {
-            throw new BadRequestException("Category name already exists");
+    @Override
+    @Transactional
+    public CategoryDTO createCategory(CreateCategoryDTO createCategoryDTO) {
+        validateCategoryNameIsUnique(createCategoryDTO.getName());
+
+        Category category = Category.builder()
+                                    .name(createCategoryDTO.getName())
+                                    .slug(VietnameseConverter.convertNameToSlug(createCategoryDTO.getName()))
+                                    .description(createCategoryDTO.getDescription())
+                                    .categoryIcon(createCategoryDTO.getCategoryIcon())
+                                    .build();
+
+        // Set parent Category
+        if (createCategoryDTO.getParentId() != null) {
+            category.setParent(findById(createCategoryDTO.getParentId()));
         }
 
-        if (category.getParent() != null) {
-            Optional<Category> parentOptional = categoryRepository.findById(category.getParent().getId());
-            if (parentOptional.isEmpty()) {
-                throw new BadRequestException("Parent category not found");
+        // Create CategorySpec list
+        List<CategorySpec> categorySpecs = createCategoryDTO.getCategorySpecs()
+                                                            .stream()
+                                                            .map(categorySpecDTO -> CategorySpec.builder()
+                                                                                                .category(category)
+                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
+                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
+                                                                                                .build())
+                                                            .toList();
+        category.setCategorySpecs(categorySpecs);
+
+        Category savedCategory = categoryRepository.save(category);
+
+        return convertToCategoryDTO(savedCategory);
+    }
+
+    @Override
+    @Transactional
+    public CategoryDTO updateCategory(int id, UpdateCategoryDTO updateCategoryDTO) {
+        Category category = findById(id);
+
+        // Update Category name
+        if (!category.getName().equals(updateCategoryDTO.getName())) {
+            validateCategoryNameIsUnique(updateCategoryDTO.getName());
+            category.setName(updateCategoryDTO.getName());
+            category.setSlug(VietnameseConverter.convertNameToSlug(updateCategoryDTO.getName()));
+        }
+
+        category.setDescription(updateCategoryDTO.getDescription());
+        category.setCategoryIcon(updateCategoryDTO.getCategoryIcon());
+
+        // Update parent Category
+        if (updateCategoryDTO.getParentId() != null) {
+            if (updateCategoryDTO.getParentId() == id) {
+                throw new BadRequestException("Parent category cannot be itself!");
             }
-            category.setParent(parentOptional.get());
+            category.setParent(findById(updateCategoryDTO.getParentId()));
+        } else {
+            category.setParent(null);
         }
 
-        return categoryRepository.save(category);
+        // Update CategorySpec list
+        if (category.getCategorySpecs() != null) {
+            category.getCategorySpecs()
+                    .clear();
+        } else {
+            category.setCategorySpecs(new ArrayList<>());
+        }
+
+        List<CategorySpec> categorySpecs = updateCategoryDTO.getCategorySpecs()
+                                                            .stream()
+                                                            .map(categorySpecDTO -> CategorySpec.builder()
+                                                                                                .category(category)
+                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
+                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
+                                                                                                .build())
+                                                            .toList();
+
+        category.getCategorySpecs()
+                .addAll(categorySpecs);
+
+        // Save to the database
+        Category savedCategory = categoryRepository.save(category);
+
+        return convertToCategoryDTO(savedCategory);
+    }
+
+    @Override
+    @Transactional
+    public void deleteCategory(int id) {
+        Category category = findById(id);
+        categoryRepository.delete(category);
     }
 
     public List<CategoryTree> buildCategoryTrees() {
@@ -126,5 +210,47 @@ public class CategoryServiceImpl implements CategoryService {
     public Category getCategoryById(int id) {
         return categoryRepository.findById(id)
                                  .orElseThrow(() -> new EntityNotFoundException("Category not found"));
+    }
+
+    private void validateCategoryNameIsUnique(String name) {
+        if (categoryRepository.existsByName(name)) {
+            throw new BadRequestException("Category name already exists");
+        }
+    }
+
+    private Category findById(int id) {
+        return categoryRepository.findById(id)
+                                 .orElseThrow(() -> new EntityNotFoundException("Category not found with id: " + id));
+    }
+
+    private CategoryDTO convertToCategoryDTO(Category category) {
+        CategoryDTO categoryDTO = CategoryDTO.builder()
+                                             .id(category.getId())
+                                             .name(category.getName())
+                                             .slug(category.getSlug())
+                                             .description(category.getDescription())
+                                             .categoryIcon(category.getCategoryIcon())
+                                             .categorySpecs(category.getCategorySpecs().stream()
+                                                                    .map(categorySpec -> {
+                                                                        Spec spec = categorySpec.getSpec();
+                                                                        return CategoryDTO.CategorySpecDTO.builder()
+                                                                                                          .specId(spec.getId())
+                                                                                                          .specName(spec.getName())
+                                                                                                          .isFiltered(categorySpec.isFiltered())
+                                                                                                          .build();
+                                                                    })
+                                                                    .toList()
+                                             )
+                                             .build();
+
+        Category parent = category.getParent();
+        if (parent != null) {
+            categoryDTO.setParentCategory(CategoryDTO.ParentCategoryDTO.builder()
+                                                                       .id(parent.getId())
+                                                                       .name(parent.getName())
+                                                                       .build());
+        }
+
+        return categoryDTO;
     }
 }

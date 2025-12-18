@@ -1,7 +1,7 @@
 package vn.clone.fahasa_backend.security;
 
 import java.util.Collection;
-import java.util.List;
+import java.util.Collections;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
+import vn.clone.fahasa_backend.error.UserNotActivatedException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 
 /**
@@ -47,23 +48,6 @@ public class DomainUserDetailsService implements UserDetailsService {
         return UserWithId.fromAccount(account);
     }
 
-    private UserDetails createSpringSecurityUser_(Account account) {
-        if (!account.isActivated()) {
-            throw new UserNotActivatedException("User " + account.getEmail() + " was not activated");
-        }
-        // List<SimpleGrantedAuthority> grantedAuthorities = account.getAuthorities()
-        //                                                          .stream()
-        //                                                          .map(Authority::getName)
-        //                                                          .map(SimpleGrantedAuthority::new)
-        //                                                          .toList();
-        List<SimpleGrantedAuthority> grantedAuthorities = null;
-        return User.builder()
-                   .username(account.getEmail())
-                   .password(account.getPassword())
-                   .authorities(grantedAuthorities)
-                   .build();
-    }
-
     @Getter
     public static class UserWithId extends User {
 
@@ -87,12 +71,8 @@ public class DomainUserDetailsService implements UserDetailsService {
         public static UserWithId fromAccount(Account account) {
             return new UserWithId(account.getEmail(),
                                   account.getPassword(),
-                                  // account.getAuthorities()
-                                  //        .stream()
-                                  //        .map(Authority::getName)
-                                  //        .map(SimpleGrantedAuthority::new)
-                                  //        .toList(),
-                                  List.of(new SimpleGrantedAuthority("USER")),
+                                  Collections.singleton(new SimpleGrantedAuthority(account.getRole()
+                                                                                          .getName())),
                                   account.getId()
             );
         }
