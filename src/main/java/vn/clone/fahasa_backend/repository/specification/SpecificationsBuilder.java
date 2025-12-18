@@ -126,4 +126,10 @@ public class SpecificationsBuilder {
 
         return mainSpec;
     }
+
+    public static <T> Specification<T> hasAccountId(Integer accountId) {
+        return (root, query, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("account").get("id"), accountId);
+    }
+
 }

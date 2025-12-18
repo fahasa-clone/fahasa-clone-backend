@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: 005-01-drop-column
+      author: ddhuy2207
+      changes:
+        - dropColumn:
+            tableName: shipping_addresses
+            columnName: address
+
+        - dropColumn:
+            tableName: shipping_addresses
+            columnName: is_default
+
+        - dropColumn:
+            tableName: shipping_addresses
+            columnName: can_delete
+
+  - changeSet:
+      id: 005-02-add-column
+      author: ddhuy2207
+      changes:
+        - addColumn:
+            tableName: shipping_addresses
+            columns:
+              - column: { name: province_name, type: VARCHAR(256) }
+              - column: { name: district_name, type: VARCHAR(256) }
+              - column: { name: ward_name, type: VARCHAR(256) }
+              - column: { name: detail_address, type: VARCHAR(256) }
+              - column: { name: receiver_name, type: VARCHAR(256) }
+              - column: { name: receiver_phone, type: VARCHAR(256) }
+              - column: { name: is_default, type: BOOLEAN }

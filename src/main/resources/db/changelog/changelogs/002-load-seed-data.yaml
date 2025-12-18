@@ -138,8 +138,8 @@ databaseChangeLog:
       changes:
         - loadUpdateData:
             primaryKey: "book_id,author_id"
-            tableName: book_authors
-            file: db/data/book_authors.csv
+            tableName: books_authors
+            file: db/data/books_authors.csv
             encoding: UTF-8
             quotchar: "\""
             separator: ","

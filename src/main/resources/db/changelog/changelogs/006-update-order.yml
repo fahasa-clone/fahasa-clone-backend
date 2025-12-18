@@ -1,0 +1,66 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-01-drop-columns
+      author: ddhuy2207
+      changes:
+        - dropColumn:
+            tableName: orders
+            columnName: shipping_address_id
+
+        - dropColumn:
+            tableName: orders
+            columnName: order_time
+
+        - dropColumn:
+            tableName: orders
+            columnName: total_price
+
+        - dropColumn:
+            tableName: orders
+            columnName: shipping_price
+
+        - dropColumn:
+            tableName: orders
+            columnName: final_price
+
+  - changeSet:
+      id: 006-02-add-columns
+      author: ddhuy2207
+      changes:
+        - addColumn:
+            tableName: orders
+            columns:
+              - column: { name: address, type: TEXT }
+              - column: { name: sub_total, type: INT }
+              - column: { name: shipping_fee, type: INT }
+              - column: { name: grand_total, type: INT }
+              - column: { name: payment_method, type: VARCHAR(256) }
+              - column: { name: shipping_method, type: VARCHAR(256) }
+
+
+  - changeSet:
+      id: 006-03-change-primary-key
+      author: ddhuy2207
+      changes:
+        - dropPrimaryKey:
+            tableName: order_details
+            constraintName: pk_order_details
+
+        - addColumn:
+            tableName: order_details
+            columns:
+              - column: { name: id, type: INT, autoIncrement: true, constraints: { primaryKey: true, nullable: false } }
+
+        - addUniqueConstraint:
+            tableName: order_details
+            columnNames: order_id, book_id
+            constraintName: ux_order_detail_order_book
+
+  - changeSet:
+      id: 006-04-add-unique-order-state
+      author: ddhuy2207
+      changes:
+        - addUniqueConstraint:
+            tableName: order_states
+            columnNames: order_id, state
+            constraintName: ux_order_state_order_state
