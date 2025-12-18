@@ -10,3 +10,15 @@ databaseChangeLog:
   - include:
       file: changelogs/003-reset-sequences.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/004-update-provinces-and-cart-items.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/005-update-shipping-addresses.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/006-update-order.yml
+      relativeToChangelogFile: true

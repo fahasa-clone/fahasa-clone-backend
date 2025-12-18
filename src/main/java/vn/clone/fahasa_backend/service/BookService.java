@@ -3,6 +3,7 @@ package vn.clone.fahasa_backend.service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import vn.clone.fahasa_backend.domain.Book;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -22,4 +23,6 @@ public interface BookService {
     void deleteById(int id);
 
     FullBookDTO updateBookImages(int bookId, UpdateBookImagesRequest request);
+
+    Book findBookOrThrow(int id);
 }

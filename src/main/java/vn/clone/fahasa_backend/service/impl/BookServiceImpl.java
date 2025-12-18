@@ -357,7 +357,8 @@ public class BookServiceImpl implements BookService {
         bookRepository.save(book);
     }
 
-    private Book findBookOrThrow(int id) {
+    @Override
+    public Book findBookOrThrow(int id) {
         return bookRepository.findByIdAndDeletedFalse(id)
                              .orElseThrow(() -> new EntityNotFoundException("Book not found with id: " + id));
     }

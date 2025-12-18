@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-01-drop-column-provinces
+      author: ddhuy2207
+      changes:
+        - dropColumn:
+            tableName: provinces
+            columnName: created_at
+
+        - dropColumn:
+            tableName: provinces
+            columnName: updated_at
+
+  - changeSet:
+      id: 004-02-drop-column-cart-items
+      author: ddhuy2207
+      changes:
+        - dropColumn:
+            tableName: cart_items
+            columnName: price
+
+        - dropColumn:
+            tableName: cart_items
+            columnName: state
+
+  - changeSet:
+      id: 004-03-update-primary-key-cart-items
+      author: ddhuy2207
+      changes:
+        - dropPrimaryKey:
+            tableName: cart_items
+            constraintName: pk_cart_items
+
+        - addColumn:
+            tableName: cart_items
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    primaryKeyName: pk_cart_items
+
+        - addUniqueConstraint:
+            tableName: cart_items
+            columnNames: account_id, book_id
+            constraintName: ux_cart_item_account_book
