@@ -37,7 +37,6 @@ public class CustomPostgreSQLEnumJdbcType extends PostgreSQLEnumJdbcType {
                 st.setObject(name, ((Enum<?>) value).name().toLowerCase(), Types.OTHER);
             }
         };
-
     }
 
     @Override
