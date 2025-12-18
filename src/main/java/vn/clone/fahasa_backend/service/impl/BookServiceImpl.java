@@ -16,10 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
-import vn.clone.fahasa_backend.domain.Author;
-import vn.clone.fahasa_backend.domain.Book;
-import vn.clone.fahasa_backend.domain.BookImage;
-import vn.clone.fahasa_backend.domain.Publisher;
+import vn.clone.fahasa_backend.domain.*;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -37,6 +34,8 @@ import vn.clone.fahasa_backend.util.constant.BookLayout;
 @Slf4j
 public class BookServiceImpl implements BookService {
 
+    private final FahasaProperties fahasaProperties;
+
     private final BookRepository bookRepository;
 
     private final BookRepositoryCustom bookRepositoryCustom;
@@ -49,7 +48,7 @@ public class BookServiceImpl implements BookService {
 
     private final AuthorService authorService;
 
-    private final FahasaProperties fahasaProperties;
+    private final SpecService specService;
 
     @Override
     @Transactional(readOnly = true)
@@ -109,7 +108,7 @@ public class BookServiceImpl implements BookService {
                             .publisher(publisherService.getPublisherById(request.getPublisherId()))
                             .build();
 
-            // Get Author list
+            // Create an Author list
             List<Author> authors = new ArrayList<>();
             for (int authorId : request.getAuthorIds()) {
                 Author author = authorService.getAuthorById(authorId);
@@ -128,6 +127,17 @@ public class BookServiceImpl implements BookService {
                 bookImages.add(bookImage);
             }
             book.setBookImages(bookImages);
+
+            // Create BookSpec list
+            List<BookSpec> bookSpecs = request.getBookSpecs()
+                                              .stream()
+                                              .map(bookSpecDTO -> BookSpec.builder()
+                                                                          .book(book)
+                                                                          .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
+                                                                          .value(bookSpecDTO.getValue())
+                                                                          .build())
+                                              .toList();
+            book.setBookSpecs(bookSpecs);
 
             // Save to the database
             Book savedBook = bookRepository.save(book);
@@ -154,10 +164,14 @@ public class BookServiceImpl implements BookService {
 
         // Update Author list
         // Clear old authors (this will update the join table)
-        book.getAuthors()
-            .clear();
+        if (book.getAuthors() != null) {
+            book.getAuthors()
+                .clear();
+        } else {
+            book.setAuthors(new ArrayList<>());
+        }
 
-        // Fetch new authors from database
+        // Fetch new authors from the database
         List<Author> newAuthors = request.getAuthorIds()
                                          .stream()
                                          .map(authorService::getAuthorById)
@@ -186,7 +200,29 @@ public class BookServiceImpl implements BookService {
         book.setDescription(request.getDescription());
         book.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
 
+        // Update BookSpec list
+        if (book.getBookSpecs() != null) {
+            book.getBookSpecs()
+                .clear();
+        } else {
+            book.setBookSpecs(new ArrayList<>());
+        }
+
+        List<BookSpec> bookSpecs = request.getBookSpecs()
+                                          .stream()
+                                          .map(bookSpecDTO -> BookSpec.builder()
+                                                                      .book(book)
+                                                                      .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
+                                                                      .value(bookSpecDTO.getValue())
+                                                                      .build())
+                                          .toList();
+
+        book.getBookSpecs()
+            .addAll(bookSpecs);
+
+        // Save to the database
         Book updatedBook = bookRepository.save(book);
+
         return convertToFullDTO(updatedBook);
     }
 
@@ -399,6 +435,17 @@ public class BookServiceImpl implements BookService {
                                                                            .name(author.getName())
                                                                            .build())
                                        .toList())
+                          .bookSpecs(book.getBookSpecs()
+                                         .stream()
+                                         .map(bookSpec -> {
+                                             Spec spec = bookSpec.getSpec();
+                                             return FullBookDTO.BookSpecDTO.builder()
+                                                                           .specId(spec.getId())
+                                                                           .specName(spec.getName())
+                                                                           .value(bookSpec.getValue())
+                                                                           .build();
+                                         })
+                                         .toList())
                           .build();
     }
 }

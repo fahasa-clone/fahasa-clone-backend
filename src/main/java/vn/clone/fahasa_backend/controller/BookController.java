@@ -72,7 +72,7 @@ public class BookController {
     @AdminOnly
     public ResponseEntity<Void> deleteById(@PathVariable @Min(1) int id) {
         bookService.deleteById(id);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
     }
 

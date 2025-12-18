@@ -1,5 +1,7 @@
 package vn.clone.fahasa_backend.domain;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -35,4 +37,9 @@ public class Category {
     @JoinColumn(name = "parent_id")
     @JsonIgnore
     private Category parent;
+
+    @OneToMany(mappedBy = "category",
+               cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
+               orphanRemoval = true)
+    private List<CategorySpec> categorySpecs;
 }

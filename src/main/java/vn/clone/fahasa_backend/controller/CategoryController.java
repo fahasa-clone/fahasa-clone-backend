@@ -34,6 +34,18 @@ public class CategoryController {
                              .body(categoryService.createCategory(createCategoryDTO));
     }
 
+    @GetMapping
+    public ResponseEntity<List<CategoryTree>> getCategoryTree() {
+        return ResponseEntity.ok(categoryService.buildCategoryTrees());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<CategoryTree> getCategoryIdList(@PathVariable @Min(1) int id) {
+        List<CategoryTree> rootList = categoryService.buildCategoryTrees();
+        CategoryTree result = categoryService.searchCategoryTree(rootList, id);
+        return ResponseEntity.ok(result);
+    }
+
     @PatchMapping("/{id}")
     @AdminOnly
     public ResponseEntity<CategoryDTO> updateCategoryById(@PathVariable @Min(1) int id,
@@ -45,19 +57,7 @@ public class CategoryController {
     @AdminOnly
     public ResponseEntity<Void> deleteCategoryById(@PathVariable @Min(1) int id) {
         categoryService.deleteCategory(id);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
-    }
-
-    @GetMapping
-    public ResponseEntity<List<CategoryTree>> getCategoryTree() {
-        return ResponseEntity.ok(categoryService.buildCategoryTrees());
-    }
-
-    @GetMapping("/{id}")
-    public ResponseEntity<CategoryTree> getCategoryIdList(@PathVariable @Min(1) int id) {
-        List<CategoryTree> rootList = categoryService.buildCategoryTrees();
-        CategoryTree result = categoryService.searchCategoryTree(rootList, id);
-        return ResponseEntity.ok(result);
     }
 }

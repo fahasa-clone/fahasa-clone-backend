@@ -62,7 +62,7 @@ public class AccountController {
         Account account = accountService.getAccountBySecurityContext();
         account.setOtpValue(otpService.generateOtp(account.getId()));
         mailService.sendOtpMail(account);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
     }
 
@@ -77,7 +77,7 @@ public class AccountController {
     public ResponseEntity<Void> verifyOtp(@Valid @RequestBody VerifyOtpDTO verifyOtpDto) {
         Account account = accountService.getAccountBySecurityContext();
         otpService.verifyOtp(account.getId(), verifyOtpDto.getOtpValue());
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
     }
 
@@ -90,7 +90,7 @@ public class AccountController {
     @PutMapping(path = "/reset-password/finish")
     public ResponseEntity<Void> finishPasswordReset(@Valid @RequestBody ResetPasswordDTO resetPasswordDTO) {
         accountService.resetPassword(resetPasswordDTO);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
     }
 
@@ -100,6 +100,29 @@ public class AccountController {
         AccountDTO responseDTO = accountService.createAccount(accountDTO);
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(responseDTO);
+    }
+
+    @GetMapping("/{id}")
+    @AdminOnly
+    public ResponseEntity<AccountDTO> getAccountById(@PathVariable @Min(1) int id) {
+        return ResponseEntity.ok(accountService.fetchAccountById(id));
+    }
+
+    @GetMapping("/me")
+    public ResponseEntity<AccountDTO> getMyAccount() {
+        return ResponseEntity.ok(accountService.getMyAccount());
+    }
+
+    @GetMapping
+    @AdminOnly
+    public ResponseEntity<?> getAllAccounts(Pageable pageable) {
+        Page<AccountDTO> accountDTOPage = accountService.fetchAllAccounts(pageable);
+        return ResponseEntity.ok(PageResponse.builder()
+                                             .pageNumber(pageable.getPageNumber() + 1)
+                                             .pageSize(pageable.getPageSize())
+                                             .totalPages(accountDTOPage.getTotalPages())
+                                             .items(accountDTOPage.getContent())
+                                             .build());
     }
 
     @PutMapping("/{id}")
@@ -119,38 +142,15 @@ public class AccountController {
     @PutMapping("/password")
     public ResponseEntity<Void> updatePassword(@Valid @RequestBody UpdatePasswordDTO passwordDTO) {
         accountService.updatePassword(passwordDTO);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
-    }
-
-    @GetMapping("/{id}")
-    @AdminOnly
-    public ResponseEntity<AccountDTO> getAccountById(@PathVariable @Min(1) int id) {
-        return ResponseEntity.ok(accountService.fetchAccountById(id));
-    }
-
-    @GetMapping
-    @AdminOnly
-    public ResponseEntity<?> getAllAccounts(Pageable pageable) {
-        Page<AccountDTO> accountDTOPage = accountService.fetchAllAccounts(pageable);
-        return ResponseEntity.ok(PageResponse.builder()
-                                             .pageNumber(pageable.getPageNumber() + 1)
-                                             .pageSize(pageable.getPageSize())
-                                             .totalPages(accountDTOPage.getTotalPages())
-                                             .items(accountDTOPage.getContent())
-                                             .build());
     }
 
     @DeleteMapping("/{id}")
     @AdminOnly
     public ResponseEntity<Void> deleteAccountById(@PathVariable @Min(1) int id) {
         accountService.deleteAccount(id);
-        return ResponseEntity.ok()
+        return ResponseEntity.noContent()
                              .build();
-    }
-
-    @GetMapping("/me")
-    public ResponseEntity<AccountDTO> getMyAccount() {
-        return ResponseEntity.ok(accountService.getMyAccount());
     }
 }

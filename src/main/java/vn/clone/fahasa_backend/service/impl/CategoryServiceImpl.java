@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Category;
+import vn.clone.fahasa_backend.domain.CategorySpec;
+import vn.clone.fahasa_backend.domain.Spec;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
@@ -16,6 +18,7 @@ import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
 import vn.clone.fahasa_backend.service.CategoryService;
+import vn.clone.fahasa_backend.service.SpecService;
 import vn.clone.fahasa_backend.util.VietnameseConverter;
 
 @Service
@@ -23,6 +26,8 @@ import vn.clone.fahasa_backend.util.VietnameseConverter;
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
+
+    private final SpecService specService;
 
     // @Bean
     // public CommandLineRunner init() {
@@ -50,11 +55,24 @@ public class CategoryServiceImpl implements CategoryService {
                                     .categoryIcon(createCategoryDTO.getCategoryIcon())
                                     .build();
 
+        // Set parent Category
         if (createCategoryDTO.getParentId() != null) {
             category.setParent(findById(createCategoryDTO.getParentId()));
         }
 
+        // Create CategorySpec list
+        List<CategorySpec> categorySpecs = createCategoryDTO.getCategorySpecs()
+                                                            .stream()
+                                                            .map(categorySpecDTO -> CategorySpec.builder()
+                                                                                                .category(category)
+                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
+                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
+                                                                                                .build())
+                                                            .toList();
+        category.setCategorySpecs(categorySpecs);
+
         Category savedCategory = categoryRepository.save(category);
+
         return convertToCategoryDTO(savedCategory);
     }
 
@@ -63,6 +81,7 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDTO updateCategory(int id, UpdateCategoryDTO updateCategoryDTO) {
         Category category = findById(id);
 
+        // Update Category name
         if (!category.getName().equals(updateCategoryDTO.getName())) {
             validateCategoryNameIsUnique(updateCategoryDTO.getName());
             category.setName(updateCategoryDTO.getName());
@@ -72,6 +91,7 @@ public class CategoryServiceImpl implements CategoryService {
         category.setDescription(updateCategoryDTO.getDescription());
         category.setCategoryIcon(updateCategoryDTO.getCategoryIcon());
 
+        // Update parent Category
         if (updateCategoryDTO.getParentId() != null) {
             if (updateCategoryDTO.getParentId() == id) {
                 throw new BadRequestException("Parent category cannot be itself!");
@@ -81,7 +101,29 @@ public class CategoryServiceImpl implements CategoryService {
             category.setParent(null);
         }
 
+        // Update CategorySpec list
+        if (category.getCategorySpecs() != null) {
+            category.getCategorySpecs()
+                    .clear();
+        } else {
+            category.setCategorySpecs(new ArrayList<>());
+        }
+
+        List<CategorySpec> categorySpecs = updateCategoryDTO.getCategorySpecs()
+                                                            .stream()
+                                                            .map(categorySpecDTO -> CategorySpec.builder()
+                                                                                                .category(category)
+                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
+                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
+                                                                                                .build())
+                                                            .toList();
+
+        category.getCategorySpecs()
+                .addAll(categorySpecs);
+
+        // Save to the database
         Category savedCategory = categoryRepository.save(category);
+
         return convertToCategoryDTO(savedCategory);
     }
 
@@ -187,6 +229,18 @@ public class CategoryServiceImpl implements CategoryService {
                                              .name(category.getName())
                                              .slug(category.getSlug())
                                              .description(category.getDescription())
+                                             .categoryIcon(category.getCategoryIcon())
+                                             .categorySpecs(category.getCategorySpecs().stream()
+                                                                    .map(categorySpec -> {
+                                                                        Spec spec = categorySpec.getSpec();
+                                                                        return CategoryDTO.CategorySpecDTO.builder()
+                                                                                                          .specId(spec.getId())
+                                                                                                          .specName(spec.getName())
+                                                                                                          .isFiltered(categorySpec.isFiltered())
+                                                                                                          .build();
+                                                                    })
+                                                                    .toList()
+                                             )
                                              .build();
 
         Category parent = category.getParent();

@@ -21,8 +21,8 @@ public class PaymentController {
 
     @GetMapping("/api/vnpay")
     public ResponseEntity<String> getVnPayPaymentUrl(HttpServletRequest request,
-                                                     @RequestParam("orderId") int orderId,
-                                                     @RequestParam("amount") long amount) {
+                                                     @RequestParam int orderId,
+                                                     @RequestParam long amount) {
         String ip = vnPayService.getIpAddress(request);
         String paymentUrl = vnPayService.generatePaymentUrl(orderId, amount, ip);
         return ResponseEntity.ok(paymentUrl);

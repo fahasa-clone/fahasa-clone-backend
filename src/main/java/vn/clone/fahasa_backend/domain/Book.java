@@ -115,4 +115,9 @@ public class Book {
                joinColumns = @JoinColumn(name = "book_id"),
                inverseJoinColumns = @JoinColumn(name = "author_id"))
     private List<Author> authors;
+
+    @OneToMany(mappedBy = "book",
+               cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE},
+               orphanRemoval = true)
+    private List<BookSpec> bookSpecs;
 }

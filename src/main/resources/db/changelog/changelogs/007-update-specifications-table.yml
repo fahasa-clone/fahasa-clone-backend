@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: 007-01-add-constraints-for-specifications-table
+      author: minh-kop
+      changes:
+        - addUniqueConstraint:
+            tableName: specifications
+            columnNames: name
+        - addNotNullConstraint:
+            tableName: specifications
+            columnName: name
