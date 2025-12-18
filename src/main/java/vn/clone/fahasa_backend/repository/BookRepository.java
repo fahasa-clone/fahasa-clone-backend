@@ -11,7 +11,5 @@ import vn.clone.fahasa_backend.domain.Book;
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer>, JpaSpecificationExecutor<Book> {
 
-    Optional<Book> findByIdAndDeletedFalse(Integer id);
-
-    // Optional<Book> findBySlugAndDeletedFalse(String slug);
+    Optional<Book> findBySlug(String slug);
 }

@@ -290,8 +290,19 @@ databaseChangeLog:
 
   - changeSet:
       id: 001-09-rename-book-authors-table
-      author: your_name
+      author: minh-kop
       changes:
         - renameTable:
             oldTableName: book_authors
             newTableName: books_authors
+
+  - changeSet:
+      id: 001-10-drop-columns-of-accounts-table
+      author: minh-kop
+      changes:
+        - dropColumn:
+            tableName: accounts
+            columnName: token
+        - dropColumn:
+            tableName: accounts
+            columnName: is_oauth2

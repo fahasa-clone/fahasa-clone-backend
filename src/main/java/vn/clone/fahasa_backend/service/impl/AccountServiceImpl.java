@@ -2,7 +2,10 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.Optional;
 
+import jakarta.persistence.EntityNotFoundException;
 import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
@@ -10,14 +13,19 @@ import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.RefreshToken;
-import vn.clone.fahasa_backend.domain.request.RegisterDTO;
-import vn.clone.fahasa_backend.domain.request.ResetPasswordDTO;
+import vn.clone.fahasa_backend.domain.Role;
+import vn.clone.fahasa_backend.domain.request.*;
+import vn.clone.fahasa_backend.domain.response.AccountDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.AccountRepository;
 import vn.clone.fahasa_backend.repository.RefreshTokenRepository;
+import vn.clone.fahasa_backend.repository.RoleRepository;
+import vn.clone.fahasa_backend.security.AuthoritiesConstants;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.MailService;
+import vn.clone.fahasa_backend.service.OtpService;
 import vn.clone.fahasa_backend.util.RandomUtils;
+import vn.clone.fahasa_backend.util.SecurityUtils;
 
 @Service
 @AllArgsConstructor
@@ -25,46 +33,118 @@ public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
 
+    private final RoleRepository roleRepository;
+
     private final RefreshTokenRepository refreshTokenRepository;
 
     private final MailService mailService;
 
+    private final OtpService otpService;
+
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public Account registerAccount(RegisterDTO user) {
-        accountRepository.findByEmail(user.getEmail())
-                         .ifPresent(account -> {
-                             if (!removeNonActiveAccount(account)) {
-                                 throw new BadRequestException("Email already used!");
-                             }
-                         });
+    @Transactional
+    public Account registerAccount(RegisterDTO accountDTO) {
+        validateEmailNotInUse(accountDTO.getEmail());
 
-        Account account = new Account();
-        account.setEmail(user.getEmail());
-        account.setPassword(passwordEncoder.encode(user.getPassword()));
-        account.setFirstName(user.getFirstName());
-        account.setLastName(user.getLastName());
-        account.setPhone(user.getPhone());
-        account.setGender(user.getGender());
-        account.setBirthday(user.getBirthday());
-        account.setActivated(false);
-        account.setActivationKey(RandomUtils.generateActivateKey());
-        account.setToken(null);
-        account.setOauth2(false);
+        Account account = Account.builder()
+                                 .email(accountDTO.getEmail())
+                                 .password(passwordEncoder.encode(accountDTO.getPassword()))
+                                 .firstName(accountDTO.getFirstName())
+                                 .lastName(accountDTO.getLastName())
+                                 .phone(accountDTO.getPhone())
+                                 .gender(accountDTO.getGender())
+                                 .birthday(accountDTO.getBirthday())
+                                 .role(getRoleByName(AuthoritiesConstants.CLIENT))
+                                 .isActivated(false)
+                                 .activationKey(RandomUtils.generateActivateKey())
+                                 .build();
+
+        if (accountDTO instanceof CreateAccountDTO createAccountDTO) {
+            account.setActivated(true);
+            account.setActivationKey(null);
+            account.setRole(getRoleById(createAccountDTO.getRoleId()));
+        }
+
         return accountRepository.save(account);
     }
 
-    public boolean removeNonActiveAccount(Account account) {
-        if (!account.isActivated()) {
-            accountRepository.delete(account);
-            accountRepository.flush();
-            return true;
-        }
-        return false;
+    @Override
+    @Transactional
+    public AccountDTO createAccount(CreateAccountDTO requestDTO) {
+        Account account = registerAccount(requestDTO);
+        return convertToDTO(account);
     }
 
     @Override
+    @Transactional
+    public AccountDTO updateAccount(int id, UpdateMeDTO requestDTO) {
+        Account account = getAccountById(id);
+
+        if (requestDTO.getEmail() != null) {
+            validateEmailNotInUse(requestDTO.getEmail());
+            account.setEmail(requestDTO.getEmail());
+        }
+
+        if (requestDTO.getPhone() != null) {
+            validatePhoneNotInUse(requestDTO.getPhone());
+            account.setPhone(requestDTO.getPhone());
+        }
+
+        account.setFirstName(requestDTO.getFirstName());
+        account.setLastName(requestDTO.getLastName());
+        account.setGender(requestDTO.getGender());
+        account.setBirthday(requestDTO.getBirthday());
+
+        if (requestDTO instanceof UpdateAccountDTO updateAccountDTO) {
+            if (updateAccountDTO.getPassword() != null) {
+                account.setPassword(passwordEncoder.encode(updateAccountDTO.getPassword()));
+            }
+            account.setRole(getRoleById(updateAccountDTO.getRoleId()));
+            account.setActivated(updateAccountDTO.getIsActivated());
+        }
+
+        Account savedAccount = accountRepository.save(account);
+        return convertToDTO(savedAccount);
+    }
+
+    @Override
+    @Transactional
+    public AccountDTO updateMyAccount(UpdateMeDTO requestDTO) {
+        Account account = getAccountBySecurityContext();
+
+        return updateAccount(account.getId(), requestDTO);
+    }
+
+    @Override
+    @Transactional
+    public void updatePassword(UpdatePasswordDTO passwordDTO) {
+        Account account = getAccountBySecurityContext();
+
+        if (!passwordEncoder.matches(passwordDTO.getCurrentPassword(), account.getPassword())) {
+            throw new BadRequestException("Current password is incorrect");
+        }
+
+        account.setPassword(passwordEncoder.encode(passwordDTO.getNewPassword()));
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public AccountDTO fetchAccountById(int id) {
+        Account account = getAccountById(id);
+        return convertToDTO(account);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Page<AccountDTO> fetchAllAccounts(Pageable pageable) {
+        return accountRepository.findAll(pageable)
+                                .map(this::convertToDTO);
+    }
+
+    @Override
+    @Transactional
     public Optional<Account> activateRegistration(String email, String key) {
         return accountRepository.findByEmailAndActivationKey(email, key)
                                 .map(account -> {
@@ -81,15 +161,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getUserInfo(String email) {
-        Optional<Account> accountOptional = accountRepository.findByEmail(email);
-        if (accountOptional.isEmpty()) {
-            throw new BadRequestException("Account with email does not exist!");
-        }
-        return accountOptional.get();
-    }
-
-    @Override
+    @Transactional(readOnly = true)
     public Account getUserByRefreshToken(String refreshToken) {
         return refreshTokenRepository.findByToken(refreshToken)
                                      .map(RefreshToken::getAccount)
@@ -97,6 +169,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    @Transactional
     public void addRefreshToken(Account account, String token) {
         RefreshToken refreshToken = RefreshToken.builder()
                                                 .token(token)
@@ -106,7 +179,10 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    public Account getActivatedAccount(String email) {
+    @Transactional(readOnly = true)
+    public Account getAccountBySecurityContext() {
+        String email = SecurityUtils.getCurrentUserLogin()
+                                    .orElseThrow(() -> new BadRequestException("Current user email not found!"));
         Account account = accountRepository.findByEmailIgnoreCase(email)
                                            .orElseThrow(() -> new BadRequestException("Email is not existed!"));
         if (!account.isActivated()) {
@@ -116,16 +192,75 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    @Transactional
     public void resetPassword(ResetPasswordDTO resetPasswordDTO) {
-        Account account = getActivatedAccount(resetPasswordDTO.getEmail());
+        Account account = getAccountBySecurityContext();
+        otpService.isValidOtp(account.getId(), resetPasswordDTO.getOtpValue());
         account.setPassword(passwordEncoder.encode(resetPasswordDTO.getNewPassword()));
         accountRepository.save(account);
     }
 
     @Override
+    @Transactional
     public Account getOrCreateUser(String email, OAuth2User oauth2User) {
         return accountRepository.findByEmailIgnoreCase(email)
                                 .orElseGet(() -> createAccountFromOAuth2User(oauth2User));
+    }
+
+    @Override
+    @Transactional
+    public void deleteAccount(int id) {
+        getAccountById(id);
+        refreshTokenRepository.deleteAllByAccountId(id);
+        accountRepository.deleteById(id);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public AccountDTO getMyAccount() {
+        Account account = getAccountBySecurityContext();
+        return convertToDTO(account);
+    }
+
+    private void validateEmailNotInUse(String email) {
+        accountRepository.findByEmail(email)
+                         .ifPresent(account -> {
+                             if (!removeNonActiveAccount(account)) {
+                                 throw new BadRequestException("Email already used!");
+                             }
+                         });
+    }
+
+    private void validatePhoneNotInUse(String phone) {
+        accountRepository.findByPhone(phone)
+                         .ifPresent(account -> {
+                             if (!removeNonActiveAccount(account)) {
+                                 throw new BadRequestException("Phone already used!");
+                             }
+                         });
+    }
+
+    private Role getRoleById(int id) {
+        return roleRepository.findById(id)
+                             .orElseThrow(() -> new EntityNotFoundException("Role not found with id: " + id));
+    }
+
+    private Role getRoleByName(String name) {
+        return roleRepository.findByName(name)
+                             .orElseThrow(() -> new EntityNotFoundException("Role not found with name: " + name));
+    }
+
+    private boolean removeNonActiveAccount(Account account) {
+        if (account.isActivated()) {
+            return false;
+        }
+        accountRepository.delete(account);
+        return true;
+    }
+
+    private Account getAccountById(int id) {
+        return accountRepository.findById(id)
+                                .orElseThrow(() -> new EntityNotFoundException("Account not found with id: " + id));
     }
 
     private Account createAccountFromOAuth2User(OAuth2User oauth2User) {
@@ -146,5 +281,21 @@ public class AccountServiceImpl implements AccountService {
         mailService.sendPasswordMail(account);
 
         return accountRepository.save(account);
+    }
+
+    // =========== Helper method to convert Account to AccountDTO ===========
+    private AccountDTO convertToDTO(Account account) {
+        return AccountDTO.builder()
+                         .id(account.getId())
+                         .email(account.getEmail())
+                         .firstName(account.getFirstName())
+                         .lastName(account.getLastName())
+                         .phone(account.getPhone())
+                         .gender(account.getGender())
+                         .birthday(account.getBirthday())
+                         .roleName(account.getRole()
+                                          .getName())
+                         .isActivated(account.isActivated())
+                         .build();
     }
 }

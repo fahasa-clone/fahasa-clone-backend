@@ -24,5 +24,7 @@ public interface BookService {
 
     FullBookDTO updateBookImages(int bookId, UpdateBookImagesRequest request);
 
+    Page<BookDTO> fetchNewestArrivalBooks(int page, int size);
+
     Book findBookOrThrow(int id);
 }

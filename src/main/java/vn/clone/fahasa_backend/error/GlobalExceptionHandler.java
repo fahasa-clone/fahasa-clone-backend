@@ -11,7 +11,9 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
+import org.postgresql.util.PSQLException;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +28,7 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 /**
  * Global exception handler for the application.
+ * <p>
  * Centralized exception handling across the entire application using @RestControllerAdvice.
  */
 @Slf4j
@@ -193,6 +196,117 @@ public class GlobalExceptionHandler {
     }
 
     /**
+     * Handle data integrity violation exceptions.
+     * <p>
+     * Catches database exceptions for all constraint violations:
+     * - Foreign key constraints
+     * - Unique constraints
+     * - NOT NULL constraints
+     * - Check constraints
+     * - Column value out of range
+     * - Referential integrity issues
+     */
+    @ExceptionHandler(DataIntegrityViolationException.class)
+    public ResponseEntity<ProblemDetail> handleDataIntegrityViolation(DataIntegrityViolationException ex,
+                                                                      WebRequest request) {
+
+        log.warn("Data integrity violation: {}", ex.getMessage());
+
+        // Extract information from the exception
+        String detail = ex.getMessage();
+        String title = "Data Integrity Violation";
+        String type = "https://example.com/probs/data-integrity-violation";
+        HttpStatus statusCode = HttpStatus.CONFLICT;
+
+        // Traverse the entire cause chain to find PSQLException
+        Throwable cause = ex.getCause();
+        while (cause != null) {
+            if (cause instanceof PSQLException psqlEx) {
+                String psqlMessage = psqlEx.getMessage();
+
+                if (psqlMessage != null) {
+                    // Foreign key constraint violation
+                    if (psqlMessage.contains("foreign key constraint") ||
+                        psqlMessage.contains("violates foreign key constraint")) {
+                        title = "Entity Referenced";
+                        type = "https://example.com/probs/entity-referenced";
+                        detail = "Cannot perform this operation because this record is still referenced by other records in the database.";
+                        log.info("Detected foreign key constraint violation");
+                        break;
+                    }
+
+                    // Unique constraint violation
+                    if (psqlMessage.contains("unique constraint") ||
+                        psqlMessage.contains("violates unique constraint") ||
+                        psqlMessage.contains("Duplicate entry")) {
+                        title = "Duplicate Record";
+                        type = "https://example.com/probs/duplicate-entry";
+                        detail = extractUniqueConstraintMessage(psqlMessage,
+                                                                "A record with this value already exists. Please use a different value.");
+                        log.info("Detected unique constraint violation");
+                        break;
+                    }
+
+                    // NOT NULL constraint violation
+                    if (psqlMessage.contains("not-null constraint") ||
+                        psqlMessage.contains("violates not-null constraint") ||
+                        psqlMessage.contains("Column cannot be null") ||
+                        psqlMessage.contains("NULL in column")) {
+                        title = "Missing Required Field";
+                        type = "https://example.com/probs/missing-required-field";
+                        detail = extractNotNullConstraintMessage(psqlMessage,
+                                                                 "A required field is missing or null. Please provide all mandatory fields.");
+                        log.info("Detected NOT NULL constraint violation");
+                        break;
+                    }
+
+                    // Check constraint violation
+                    if (psqlMessage.contains("check constraint") ||
+                        psqlMessage.contains("violates check constraint")) {
+                        title = "Invalid Field Value";
+                        type = "https://example.com/probs/invalid-field-value";
+                        detail = extractCheckConstraintMessage(psqlMessage,
+                                                               "The provided value does not meet the required criteria.");
+                        log.info("Detected check constraint violation");
+                        break;
+                    }
+
+                    // Value out of range
+                    if (psqlMessage.contains("out of range") ||
+                        psqlMessage.contains("numeric value out of range")) {
+                        title = "Value Out of Range";
+                        type = "https://example.com/probs/value-out-of-range";
+                        detail = "The provided value is out of range for this field. Please provide a valid value.";
+                        log.info("Detected value out of range violation");
+                        break;
+                    }
+
+                    // Data type mismatch or other integrity issues
+                    if (psqlMessage.contains("data type") ||
+                        psqlMessage.contains("type mismatch")) {
+                        title = "Invalid Data Type";
+                        type = "https://example.com/probs/invalid-data-type";
+                        detail = "The provided data type is invalid for this field. Please check your input.";
+                        log.info("Detected data type mismatch violation");
+                        break;
+                    }
+                }
+            }
+
+            // Move to the next cause in the chain
+            cause = cause.getCause();
+        }
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(statusCode, detail);
+        problemDetail.setType(URI.create(type));
+        problemDetail.setTitle(title);
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return ResponseEntity.status(statusCode)
+                             .body(problemDetail);
+    }
+
+    /**
      * Handle generic exceptions.
      */
     @ExceptionHandler(Exception.class)
@@ -211,5 +325,47 @@ public class GlobalExceptionHandler {
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                              .body(problemDetail);
+    }
+
+    /**
+     * Extract meaningful message from unique constraint violation.
+     */
+    private String extractUniqueConstraintMessage(String psqlMessage, String defaultMessage) {
+        // Try to extract the constraint name or field name
+        if (psqlMessage.contains("\"")) {
+            String[] parts = psqlMessage.split("\"");
+            if (parts.length >= 2) {
+                return String.format("The value for '%s' already exists. Please use a different value.", parts[1]);
+            }
+        }
+        return defaultMessage;
+    }
+
+    /**
+     * Extract meaningful message from NOT NULL constraint violation.
+     */
+    private String extractNotNullConstraintMessage(String psqlMessage, String defaultMessage) {
+        // Try to extract the column name
+        if (psqlMessage.contains("\"")) {
+            String[] parts = psqlMessage.split("\"");
+            if (parts.length >= 2) {
+                return String.format("The field '%s' is required and cannot be empty.", parts[1]);
+            }
+        }
+        return defaultMessage;
+    }
+
+    /**
+     * Extract meaningful message from check constraint violation.
+     */
+    private String extractCheckConstraintMessage(String psqlMessage, String defaultMessage) {
+        // Try to extract the constraint name
+        if (psqlMessage.contains("\"")) {
+            String[] parts = psqlMessage.split("\"");
+            if (parts.length >= 2) {
+                return String.format("The provided value violates the constraint '%s'.", parts[1]);
+            }
+        }
+        return defaultMessage;
     }
 }

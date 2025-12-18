@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.Publisher;
 import vn.clone.fahasa_backend.domain.request.PublisherRequestDTO;
 import vn.clone.fahasa_backend.domain.response.PageResponse;
@@ -23,6 +24,7 @@ public class PublisherController {
     private final PublisherService publisherService;
 
     @PostMapping
+    @AdminOnly
     public ResponseEntity<Publisher> createPublisher(@Valid @RequestBody PublisherRequestDTO request) {
         Publisher createdPublisher = publisherService.createPublisher(request);
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -42,6 +44,7 @@ public class PublisherController {
     }
 
     @PutMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<Publisher> updatePublisher(@PathVariable Integer id,
                                                      @Valid @RequestBody PublisherRequestDTO request) {
         Publisher updatedPublisher = publisherService.updatePublisher(id, request);
@@ -49,6 +52,7 @@ public class PublisherController {
     }
 
     @DeleteMapping("/{id}")
+    @AdminOnly
     public ResponseEntity<Void> deletePublisher(@PathVariable Integer id) {
         publisherService.deletePublisher(id);
         return ResponseEntity.noContent()

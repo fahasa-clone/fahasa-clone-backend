@@ -1,0 +1,57 @@
+databaseChangeLog:
+  - changeSet:
+      id: 004-01-create-roles-table
+      author: minh-kop
+      changes:
+        - createTable:
+            tableName: roles
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+  - changeSet:
+      id: 004-02-insert-roles
+      author: minh-kop
+      changes:
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: admin
+        - insert:
+            tableName: roles
+            columns:
+              - column:
+                  name: name
+                  value: client
+
+  - changeSet:
+      id: 004-03-add-role-id-to-accounts
+      author: minh-kop
+      changes:
+        - addColumn:
+            tableName: accounts
+            columns:
+              - column:
+                  name: role_id
+                  type: INT
+                  constraints:
+                    nullable: true
+        - addForeignKeyConstraint:
+            baseTableName: accounts
+            baseColumnNames: role_id
+            referencedTableName: roles
+            referencedColumnNames: id
+            constraintName: fk_accounts_role

@@ -4,12 +4,14 @@ import java.util.List;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.Setter;
 
 import vn.clone.fahasa_backend.util.constant.BookLayout;
 
 @Builder
 @Getter
 public class FullBookDTO {
+    
     private Integer id;
     private String name;
     private int categoryId;
@@ -19,12 +21,12 @@ public class FullBookDTO {
     private Float averageRating;
     private Integer ratingCount;
     private Integer stock;
-    private boolean deleted;
 
     // Relationship mappings
     private BookDetailDTO bookDetail;
     private List<BookImageDTO> bookImages;
     private List<AuthorDTO> authors;
+    private List<BookSpecDTO> bookSpecs;
 
     // Inner classes
     @Builder
@@ -63,5 +65,17 @@ public class FullBookDTO {
     public static class AuthorDTO {
         private Integer id;
         private String name;
+    }
+
+    @Builder
+    @Getter
+    @Setter
+    public static class BookSpecDTO {
+
+        private Integer specId;
+
+        private String specName;
+
+        private String value;
     }
 }

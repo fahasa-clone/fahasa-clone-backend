@@ -10,7 +10,6 @@ import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.lang.Nullable;
@@ -25,11 +24,9 @@ import org.springframework.web.bind.annotation.*;
 import vn.clone.fahasa_backend.config.FahasaProperties;
 import vn.clone.fahasa_backend.domain.Account;
 import vn.clone.fahasa_backend.domain.request.LoginDTO;
-import vn.clone.fahasa_backend.domain.response.UserInfoDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.security.DomainUserDetailsService;
 import vn.clone.fahasa_backend.service.AccountService;
-import vn.clone.fahasa_backend.util.SecurityUtils;
 
 import static vn.clone.fahasa_backend.util.SecurityUtils.*;
 
@@ -72,22 +69,6 @@ public class AuthenticateController {
                              .body(new JWTToken(accessToken));
     }
 
-    @GetMapping("/account")
-    public ResponseEntity<UserInfoDTO> getAccountInfo() {
-        String email = SecurityUtils.getCurrentUserLogin()
-                                    .orElse("");
-        Account account = accountService.getUserInfo(email);
-        UserInfoDTO userInfo = new UserInfoDTO();
-        userInfo.setId(account.getId());
-        userInfo.setEmail(account.getEmail());
-        userInfo.setFirstName(account.getFirstName());
-        userInfo.setLastName(account.getLastName());
-        userInfo.setPhone(account.getPhone());
-        userInfo.setBirthday(account.getBirthday());
-        return ResponseEntity.ok()
-                             .body(userInfo);
-    }
-
     @GetMapping("/refresh")
     public ResponseEntity<JWTToken> refreshAccessToken(@CookieValue(value = "refresh_token") Optional<String> refreshTokenOptional) {
         if (refreshTokenOptional.isEmpty()) {
@@ -116,7 +97,7 @@ public class AuthenticateController {
     }
 
     @GetMapping("logout")
-    public ResponseEntity<Void> logout(@CookieValue(value = "refresh_token") Optional<String> refreshTokenOptional) {
+    public ResponseEntity<JWTToken> logout(@CookieValue(value = "refresh_token") Optional<String> refreshTokenOptional) {
         if (refreshTokenOptional.isEmpty()) {
             throw new BadRequestException("Refresh token required!");
         }
@@ -125,9 +106,9 @@ public class AuthenticateController {
 
         ResponseCookie deleteCookie = createCookie(null, 0);
 
-        return ResponseEntity.status(HttpStatus.CREATED)
+        return ResponseEntity.ok()
                              .header(HttpHeaders.SET_COOKIE, deleteCookie.toString())
-                             .build();
+                             .body(new JWTToken(null));
     }
 
     public String createToken(Authentication authentication, boolean isAccessToken) {

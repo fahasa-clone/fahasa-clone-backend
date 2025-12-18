@@ -10,13 +10,11 @@ import vn.clone.fahasa_backend.domain.Account;
 @Repository
 public interface AccountRepository extends JpaRepository<Account, Integer> {
 
-    boolean existsByEmail(String email);
-
     Optional<Account> findByEmail(String email);
+
+    Optional<Account> findByPhone(String phone);
 
     Optional<Account> findByEmailIgnoreCase(String email);
 
     Optional<Account> findByEmailAndActivationKey(String email, String activationKey);
-
-    Optional<Account> findByEmailAndIsActivated(String email, boolean isActivated);
 }

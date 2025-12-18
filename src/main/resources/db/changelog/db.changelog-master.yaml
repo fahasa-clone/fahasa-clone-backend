@@ -12,6 +12,18 @@ databaseChangeLog:
       relativeToChangelogFile: true
 
   - include:
+      file: changelogs/004-create-roles-table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/005-update-accounts-table.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/007-update-specifications-table.yml
+      relativeToChangelogFile: true
+
+  - include:
       file: changelogs/004-update-provinces-and-cart-items.yml
       relativeToChangelogFile: true
 

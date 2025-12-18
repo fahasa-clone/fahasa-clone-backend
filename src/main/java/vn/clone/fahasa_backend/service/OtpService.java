@@ -5,6 +5,7 @@ import java.time.Instant;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.Otp;
 import vn.clone.fahasa_backend.error.BadRequestException;
@@ -59,9 +60,8 @@ public class OtpService {
         return strNumber;
     }
 
-    public boolean verifyOtp(int accountId, String submittedOtp) {
-        Otp otp = otpRepository.findByAccountId(accountId)
-                               .orElseThrow(() -> new BadRequestException("Invalid account ID."));
+    public void verifyOtp(int accountId, String submittedOtp) {
+        Otp otp = getOtpByAccountId(accountId);
 
         // 1. Check expiry
         if (otp.getExpiryTime()
@@ -71,11 +71,7 @@ public class OtpService {
         }
 
         // 2. Check the code
-        if (passwordEncoder.matches(submittedOtp, otp.getOtpHash())) {
-            // SUCCESS: Delete the code
-            otpRepository.deleteById(otp.getId());
-            return true;
-        } else {
+        if (!passwordEncoder.matches(submittedOtp, otp.getOtpHash())) {
             // Check attempt limit
             if (otp.getAttempts() == MAX_ATTEMPTS - 1) {
                 otpRepository.deleteById(otp.getId());
@@ -87,5 +83,19 @@ public class OtpService {
             otpRepository.save(otp);
             throw new BadRequestException("Invalid OTP. " + (MAX_ATTEMPTS - otp.getAttempts()) + " attempts remaining.");
         }
+    }
+
+    @Transactional
+    public void isValidOtp(int accountId, String submittedOtp) {
+        Otp otp = getOtpByAccountId(accountId);
+        if (!passwordEncoder.matches(submittedOtp, otp.getOtpHash())) {
+            throw new BadRequestException("Invalid OTP.");
+        }
+        otpRepository.delete(otp);
+    }
+
+    private Otp getOtpByAccountId(int accountId) {
+        return otpRepository.findByAccountId(accountId)
+                            .orElseThrow(() -> new BadRequestException("No OTP found for this account."));
     }
 }

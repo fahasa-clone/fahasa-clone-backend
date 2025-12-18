@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+      id: 006-01-add-unique-constraints
+      author: minh-kop
+      changes:
+        -

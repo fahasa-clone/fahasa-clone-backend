@@ -6,13 +6,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+@Builder
 @Getter
 @Setter
-@Builder
 public class CategoryTree {
+
     private Integer id;
+
     private String name;
+
     private String categoryIcon;
+
     private String slug;
+
     private List<CategoryTree> children;
 }

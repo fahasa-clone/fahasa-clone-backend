@@ -1,32 +1,34 @@
 package vn.clone.fahasa_backend.domain.request;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.hibernate.annotations.JdbcType;
+import lombok.experimental.SuperBuilder;
 
-import vn.clone.fahasa_backend.annotation.SizedNotBlank;
-import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
 import vn.clone.fahasa_backend.util.constant.Gender;
 
+@SuperBuilder
+@NoArgsConstructor
 @Getter
 @Setter
 public class RegisterDTO {
-    @SizedNotBlank(message = "email is required!")
+
+    @NotBlank
     private String email;
 
-    @SizedNotBlank(message = "password is required!", min = 4, max = 100)
+    @NotBlank
+    @Size(min = 4, max = 100)
     private String password;
 
     // @NotBlank(message = "first name is required!")
-    @JsonProperty("first_name")
     private String firstName;
 
     // @NotBlank(message = "last name is required!")
-    @JsonProperty("last_name")
     private String lastName;
 
     // @NotBlank(message = "phone is required!")
@@ -34,9 +36,8 @@ public class RegisterDTO {
     private String phone;
 
     // @NotBlank(message = "gender is required!")
-    @JdbcType(CustomPostgreSQLEnumJdbcType.class)
     private Gender gender;
 
     // @NotBlank(message = "birthday is required!")
-    private Date birthday;
+    private LocalDate birthday;
 }

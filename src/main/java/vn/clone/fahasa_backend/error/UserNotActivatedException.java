@@ -1,4 +1,4 @@
-package vn.clone.fahasa_backend.security;
+package vn.clone.fahasa_backend.error;
 
 import org.springframework.security.core.AuthenticationException;
 
