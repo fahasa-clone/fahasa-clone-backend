@@ -20,7 +20,6 @@ import vn.clone.fahasa_backend.repository.CartItemRepositoryCustom;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.BookService;
 import vn.clone.fahasa_backend.service.CartItemService;
-import vn.clone.fahasa_backend.util.SecurityUtils;
 
 @Service
 @RequiredArgsConstructor
@@ -37,9 +36,7 @@ public class CartItemServiceImpl implements CartItemService {
 
     @Override
     public UpsertCartItemResponseDTO addToCart(UpsertCartItemRequestDTO request) {
-        String email = SecurityUtils.getCurrentUserLogin().orElseThrow();
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         Book book = bookService.findBookOrThrow(request.getBookId());
 
@@ -67,9 +64,7 @@ public class CartItemServiceImpl implements CartItemService {
 
     @Override
     public UpsertCartItemResponseDTO updateCartItem(UpsertCartItemRequestDTO request) {
-        String email = SecurityUtils.getCurrentUserLogin().orElseThrow();
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         Book book = bookService.findBookOrThrow(request.getBookId());
 
@@ -88,9 +83,7 @@ public class CartItemServiceImpl implements CartItemService {
 
     @Override
     public void deleteCartItem(int bookId) {
-        String email = SecurityUtils.getCurrentUserLogin().orElseThrow();
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         CartItem cartItem = cartItemRepository.findByAccountIdAndBookId(account.getId(), bookId)
                                               .orElseThrow(() -> new EntityNotFoundException("Cart item not found"));
@@ -100,9 +93,7 @@ public class CartItemServiceImpl implements CartItemService {
 
     @Override
     public List<CartItemDTO> getAllCartItems() {
-        String email = SecurityUtils.getCurrentUserLogin().orElseThrow();
-
-        Account account = accountService.getUserInfo(email);
+        Account account = accountService.getAccountBySecurityContext();
 
         return cartItemRepositoryCustom.findAllCartItemByAccountId(account.getId());
     }
