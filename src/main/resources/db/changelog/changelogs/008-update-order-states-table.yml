@@ -1,0 +1,68 @@
+databaseChangeLog:
+  - changeSet:
+      id: 008-01-create-order-status-enum
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              CREATE TYPE "order_status" AS ENUM (
+               'pending',
+               'awaiting_payment',
+               'confirmed',
+               'processing',
+               'shipped',
+               'delivered',
+               'cancelled',
+               'returned'
+              );
+      rollback:
+        - sql:
+            sql: DROP TYPE IF EXISTS "order_status";
+
+  - changeSet:
+      id: 008-02-alter-order-states-state-column
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              ALTER TABLE order_states
+              ALTER COLUMN state TYPE order_status
+              USING CASE state
+                WHEN 0 THEN 'pending'::order_status
+                WHEN 1 THEN 'awaiting_payment'::order_status
+                WHEN 2 THEN 'confirmed'::order_status
+                WHEN 3 THEN 'processing'::order_status
+                WHEN 4 THEN 'shipped'::order_status
+                WHEN 5 THEN 'delivered'::order_status
+                WHEN 6 THEN 'cancelled'::order_status
+                WHEN 7 THEN 'returned'::order_status
+                ELSE 'pending'::order_status
+              END;
+      rollback:
+        - sql:
+            dbms: postgresql
+            sql: |
+              ALTER TABLE order_states
+              ALTER COLUMN state TYPE INT
+              USING CASE state
+                WHEN 'pending'::order_status THEN 0
+                WHEN 'awaiting_payment'::order_status THEN 1
+                WHEN 'confirmed'::order_status THEN 2
+                WHEN 'processing'::order_status THEN 3
+                WHEN 'shipped'::order_status THEN 4
+                WHEN 'delivered'::order_status THEN 5
+                WHEN 'cancelled'::order_status THEN 6
+                WHEN 'returned'::order_status THEN 7
+                ELSE 0
+              END;
+
+  - changeSet:
+      id: 008-03-rename-order-states-state-column
+      author: minh-kop
+      changes:
+        - renameColumn:
+            tableName: order_states
+            oldColumnName: state
+            newColumnName: order_status

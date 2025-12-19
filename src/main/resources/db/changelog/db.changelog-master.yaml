@@ -34,3 +34,7 @@ databaseChangeLog:
   - include:
       file: changelogs/006-update-order.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/008-update-order-states-table.yml
+      relativeToChangelogFile: true
