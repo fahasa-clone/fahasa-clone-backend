@@ -1,9 +1,8 @@
 package vn.clone.fahasa_backend.service.impl;
 
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -17,6 +16,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import vn.clone.fahasa_backend.config.FahasaProperties;
 import vn.clone.fahasa_backend.domain.*;
+import vn.clone.fahasa_backend.domain.request.BookSpecDTO;
 import vn.clone.fahasa_backend.domain.request.CreateBookRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookImagesRequest;
 import vn.clone.fahasa_backend.domain.request.UpdateBookRequest;
@@ -79,14 +79,14 @@ public class BookServiceImpl implements BookService {
         try {
             String bookSlug = VietnameseConverter.convertNameToSlug(request.getName());
 
-            // Upload photos to Cloudinary
+            // === Upload photos to Cloudinary ===
             MultipartFile coverImage = request.getCoverImage();
             List<MultipartFile> images = request.getImages();
             images.add(0, coverImage);
             imageUrls = cloudinaryService.uploadImages(images, fahasaProperties.getCloudinary()
                                                                                .getProductFolder(), bookSlug);
 
-            // Create Book
+            // === Create Book ===
             Book book = Book.builder()
                             .name(request.getName())
                             .price(request.getPrice())
@@ -108,7 +108,7 @@ public class BookServiceImpl implements BookService {
                             .publisher(publisherService.getPublisherById(request.getPublisherId()))
                             .build();
 
-            // Create an Author list
+            // === Create an Author list ===
             List<Author> authors = new ArrayList<>();
             for (int authorId : request.getAuthorIds()) {
                 Author author = authorService.getAuthorById(authorId);
@@ -116,7 +116,7 @@ public class BookServiceImpl implements BookService {
             }
             book.setAuthors(authors);
 
-            // Create BookImages from uploaded URLs
+            // === Create BookImages from uploaded URLs ===
             List<BookImage> bookImages = new ArrayList<>();
             for (int i = 0; i < imageUrls.size(); i++) {
                 BookImage bookImage = BookImage.builder()
@@ -128,7 +128,7 @@ public class BookServiceImpl implements BookService {
             }
             book.setBookImages(bookImages);
 
-            // Create BookSpec list
+            // === Create BookSpec list ===
             List<BookSpec> bookSpecs = request.getBookSpecs()
                                               .stream()
                                               .map(bookSpecDTO -> BookSpec.builder()
@@ -139,16 +139,16 @@ public class BookServiceImpl implements BookService {
                                               .toList();
             book.setBookSpecs(bookSpecs);
 
-            // Save to the database
+            // === Save to the database ===
             Book savedBook = bookRepository.save(book);
 
             log.info("Book created: {}", savedBook);
 
-            // Convert to DTO
+            // === Convert to DTO ===
             return convertToFullDTO(savedBook);
 
         } catch (Exception ex) {
-            // Rollback: Delete newly uploaded images from Cloudinary
+            // === Rollback: Delete newly uploaded images from Cloudinary ===
             if (imageUrls != null) {
                 rollbackUploadedImages(imageUrls);
             }
@@ -162,26 +162,30 @@ public class BookServiceImpl implements BookService {
     public FullBookDTO updateBook(int id, UpdateBookRequest request) {
         Book book = findBookOrThrow(id);
 
-        // Update Author list
-        // Clear old authors (this will update the join table)
-        if (book.getAuthors() != null) {
-            book.getAuthors()
-                .clear();
-        } else {
+        // === Update Author list ===
+        if (book.getAuthors() == null) {
             book.setAuthors(new ArrayList<>());
         }
+        List<Author> authors = book.getAuthors();
 
-        // Fetch new authors from the database
-        List<Author> newAuthors = request.getAuthorIds()
-                                         .stream()
-                                         .map(authorService::getAuthorById)
-                                         .toList();
+        // Create a set of requested Author IDs for a quick lookup
+        Set<Integer> requestedAuthorIds = new HashSet<>(request.getAuthorIds());
 
-        // Add new authors
-        book.getAuthors()
-            .addAll(newAuthors);
+        // Remove authors that are not in the request
+        authors.removeIf(author -> !requestedAuthorIds.contains(author.getId()));
 
-        // Update Book
+        // Add new authors that aren't already in the book
+        Set<Integer> existingAuthorIds = authors.stream()
+                                                .map(Author::getId)
+                                                .collect(Collectors.toSet());
+
+        for (Integer authorId : request.getAuthorIds()) {
+            if (!existingAuthorIds.contains(authorId)) {
+                authors.add(authorService.getAuthorById(authorId));
+            }
+        }
+
+        // === Update Book ===
         book.setName(request.getName());
         book.setPrice(request.getPrice());
         book.setDiscountPercentage(request.getDiscountPercentage());
@@ -189,7 +193,7 @@ public class BookServiceImpl implements BookService {
         book.setStock(request.getStock());
         book.setCategory(categoryService.getCategoryById(request.getCategoryId()));
 
-        // Update BookDetail
+        // === Update BookDetail ===
         book.setPublicationYear(request.getPublicationYear());
         book.setWeight(request.getWeight());
         book.setBookHeight(request.getBookHeight());
@@ -200,29 +204,48 @@ public class BookServiceImpl implements BookService {
         book.setDescription(request.getDescription());
         book.setPublisher(publisherService.getPublisherById(request.getPublisherId()));
 
-        // Update BookSpec list
-        if (book.getBookSpecs() != null) {
-            book.getBookSpecs()
-                .clear();
-        } else {
+        // === Update BookSpec list ===
+        if (book.getBookSpecs() == null) {
             book.setBookSpecs(new ArrayList<>());
         }
+        List<BookSpec> bookSpecs = book.getBookSpecs();
 
-        List<BookSpec> bookSpecs = request.getBookSpecs()
-                                          .stream()
-                                          .map(bookSpecDTO -> BookSpec.builder()
-                                                                      .book(book)
-                                                                      .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
-                                                                      .value(bookSpecDTO.getValue())
-                                                                      .build())
-                                          .toList();
+        // Create a map of existing specs by Spec ID for O(1) lookup
+        Map<Integer, BookSpec> specMap = bookSpecs.stream()
+                                                  .collect(Collectors.toMap(
+                                                          bs -> bs.getSpec().getId(),
+                                                          bs -> bs
+                                                  ));
 
-        book.getBookSpecs()
-            .addAll(bookSpecs);
+        // Create a set of requested Spec IDs
+        Set<Integer> requestedSpecIds = request.getBookSpecs()
+                                               .stream()
+                                               .map(BookSpecDTO::getSpecId)
+                                               .collect(Collectors.toSet());
 
-        // Save to the database
+        // Remove specs not in request
+        bookSpecs.removeIf(bs -> !requestedSpecIds.contains(bs.getSpec().getId()));
+
+        // Update existing or add new
+        for (BookSpecDTO bookSpecDTO : request.getBookSpecs()) {
+            BookSpec existingSpec = specMap.get(bookSpecDTO.getSpecId());
+
+            if (existingSpec != null) {
+                existingSpec.setValue(bookSpecDTO.getValue());
+            } else {
+                BookSpec newSpec = BookSpec.builder()
+                                           .book(book)
+                                           .spec(specService.getSpecById(bookSpecDTO.getSpecId()))
+                                           .value(bookSpecDTO.getValue())
+                                           .build();
+                bookSpecs.add(newSpec);
+            }
+        }
+
+        // === Save to the database ===
         Book updatedBook = bookRepository.save(book);
 
+        // === Convert to DTO ===
         return convertToFullDTO(updatedBook);
     }
 
@@ -251,10 +274,11 @@ public class BookServiceImpl implements BookService {
                 updateImageOrders(book, request.getImagesToUpdateOrder());
             }
 
-            // Save changes
+            // === Save to the database ===
             Book updatedBook = bookRepository.save(book);
             log.info("Book images updated successfully for book ID: {}", bookId);
 
+            // === Convert to DTO
             return convertToFullDTO(updatedBook);
 
         } catch (Exception ex) {

@@ -2,6 +2,9 @@ package vn.clone.fahasa_backend.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.CategorySpec;
 import vn.clone.fahasa_backend.domain.Spec;
+import vn.clone.fahasa_backend.domain.request.CategorySpecDTO;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
@@ -71,8 +75,10 @@ public class CategoryServiceImpl implements CategoryService {
                                                             .toList();
         category.setCategorySpecs(categorySpecs);
 
+        // === Save to the database ===
         Category savedCategory = categoryRepository.save(category);
 
+        // === Convert to DTO ===
         return convertToCategoryDTO(savedCategory);
     }
 
@@ -81,7 +87,7 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryDTO updateCategory(int id, UpdateCategoryDTO updateCategoryDTO) {
         Category category = findById(id);
 
-        // Update Category name
+        // === Update Category name ===
         if (!category.getName().equals(updateCategoryDTO.getName())) {
             validateCategoryNameIsUnique(updateCategoryDTO.getName());
             category.setName(updateCategoryDTO.getName());
@@ -91,7 +97,7 @@ public class CategoryServiceImpl implements CategoryService {
         category.setDescription(updateCategoryDTO.getDescription());
         category.setCategoryIcon(updateCategoryDTO.getCategoryIcon());
 
-        // Update parent Category
+        // === Update parent Category ===
         if (updateCategoryDTO.getParentId() != null) {
             if (updateCategoryDTO.getParentId() == id) {
                 throw new BadRequestException("Parent category cannot be itself!");
@@ -101,29 +107,50 @@ public class CategoryServiceImpl implements CategoryService {
             category.setParent(null);
         }
 
-        // Update CategorySpec list
-        if (category.getCategorySpecs() != null) {
-            category.getCategorySpecs()
-                    .clear();
-        } else {
+        // === Update CategorySpec list ===
+        if (category.getCategorySpecs() == null) {
             category.setCategorySpecs(new ArrayList<>());
         }
+        List<CategorySpec> categorySpecs = category.getCategorySpecs();
 
-        List<CategorySpec> categorySpecs = updateCategoryDTO.getCategorySpecs()
-                                                            .stream()
-                                                            .map(categorySpecDTO -> CategorySpec.builder()
-                                                                                                .category(category)
-                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
-                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
-                                                                                                .build())
-                                                            .toList();
+        // Create a map of existing specs by Spec ID for O(1) lookup
+        Map<Integer, CategorySpec> specMap = categorySpecs.stream()
+                                                          .collect(Collectors.toMap(
+                                                                  cs -> cs.getSpec().getId(),
+                                                                  cs -> cs
+                                                          ));
 
-        category.getCategorySpecs()
-                .addAll(categorySpecs);
+        // Create a set of requested Spec IDs
+        Set<Integer> requestedSpecIds = updateCategoryDTO.getCategorySpecs()
+                                                         .stream()
+                                                         .map(CategorySpecDTO::getSpecId)
+                                                         .collect(Collectors.toSet());
 
-        // Save to the database
+        // Remove specs not in request
+        categorySpecs.removeIf(cs -> !requestedSpecIds.contains(cs.getSpec().getId()));
+
+        // Update existing or add new
+        for (CategorySpecDTO categorySpecDTO : updateCategoryDTO.getCategorySpecs()) {
+            CategorySpec existingSpec = specMap.get(categorySpecDTO.getSpecId());
+
+            if (existingSpec != null) {
+                // Update existing CategorySpec
+                existingSpec.setFiltered(categorySpecDTO.getIsFiltered());
+            } else {
+                // Add new CategorySpec
+                CategorySpec newSpec = CategorySpec.builder()
+                                                   .category(category)
+                                                   .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
+                                                   .isFiltered(categorySpecDTO.getIsFiltered())
+                                                   .build();
+                categorySpecs.add(newSpec);
+            }
+        }
+
+        // === Save to the database ===
         Category savedCategory = categoryRepository.save(category);
 
+        // === Convert to DTO ===
         return convertToCategoryDTO(savedCategory);
     }
 
