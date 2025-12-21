@@ -16,4 +16,6 @@ public class SpecRequestDTO {
     @NotBlank
     @Size(min = 1, max = 255)
     private String name;
+
+    private boolean isFiltered;
 }

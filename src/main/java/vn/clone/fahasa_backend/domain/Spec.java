@@ -19,4 +19,7 @@ public class Spec {
 
     @Column(name = "name", nullable = false, unique = true)
     private String name;
+
+    @Column(name = "is_filtered", nullable = false)
+    private boolean isFiltered;
 }

@@ -20,7 +20,6 @@ public interface BookRepository extends JpaRepository<Book, Integer>, JpaSpecifi
     @Query("SELECT b.id FROM Book b WHERE b.category.id IN :categoryIds")
     List<Integer> findBookIdsByCategoryIds(@Param("categoryIds") List<Integer> categoryIds);
 
-    @Query("SELECT bs FROM BookSpec bs WHERE bs.book.id IN :bookIds AND bs.spec.id IN :specIds")
-    List<BookSpec> findBookSpecsByBookIdsAndSpecIds(@Param("bookIds") List<Integer> bookIds,
-                                                    @Param("specIds") List<Integer> specIds);
+    @Query("SELECT bs FROM BookSpec bs WHERE bs.book.id IN :bookIds")
+    List<BookSpec> findBookSpecsByBookIds(@Param("bookIds") List<Integer> bookIds);
 }

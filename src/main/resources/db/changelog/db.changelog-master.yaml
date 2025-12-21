@@ -42,3 +42,7 @@ databaseChangeLog:
   - include:
       file: changelogs/009-add-public-id-to-orders.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/010-drop-categories-specifications-table.yml
+      relativeToChangelogFile: true
