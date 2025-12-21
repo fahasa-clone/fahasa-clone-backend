@@ -1,0 +1,20 @@
+
+databaseChangeLog:
+  - changeSet:
+      id: 009-01-add-public-id-to-orders
+      author: minh-kop
+      changes:
+        - addColumn:
+            tableName: orders
+            columns:
+              - column:
+                  name: public_id
+                  type: uuid
+                  defaultValueComputed: gen_random_uuid()
+                  constraints:
+                    nullable: false
+                    unique: true
+      rollback:
+        - dropColumn:
+            tableName: orders
+            columnName: public_id

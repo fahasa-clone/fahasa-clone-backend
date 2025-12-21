@@ -38,3 +38,7 @@ databaseChangeLog:
   - include:
       file: changelogs/008-update-order-states-table.yml
       relativeToChangelogFile: true
+
+#  - include:
+#      file: changelogs/009-add-public-id-to-orders.yml
+#      relativeToChangelogFile: true

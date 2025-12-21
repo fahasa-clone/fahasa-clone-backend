@@ -14,6 +14,7 @@ import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
+import vn.clone.fahasa_backend.domain.response.category.GetCategoryPageDTO;
 import vn.clone.fahasa_backend.service.CategoryService;
 
 @RestController
@@ -36,13 +37,12 @@ public class CategoryController {
 
     @GetMapping
     public ResponseEntity<List<CategoryTree>> getCategoryTree() {
-        return ResponseEntity.ok(categoryService.buildCategoryTrees());
+        return ResponseEntity.ok(categoryService.buildCategoryTree());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<CategoryTree> getCategoryIdList(@PathVariable @Min(1) int id) {
-        List<CategoryTree> rootList = categoryService.buildCategoryTrees();
-        CategoryTree result = categoryService.searchCategoryTree(rootList, id);
+    public ResponseEntity<GetCategoryPageDTO> getCategoryIdList(@PathVariable @Min(1) int id) {
+        GetCategoryPageDTO result = categoryService.getCategoryBranchById(id);
         return ResponseEntity.ok(result);
     }
 
