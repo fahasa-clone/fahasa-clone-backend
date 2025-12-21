@@ -1,8 +1,5 @@
 package vn.clone.fahasa_backend.domain.request;
 
-import java.util.List;
-
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,7 +20,4 @@ public class CreateCategoryDTO {
     private String categoryIcon;
 
     private Integer parentId;
-
-    @Valid
-    private List<CategorySpecDTO> categorySpecs;
 }

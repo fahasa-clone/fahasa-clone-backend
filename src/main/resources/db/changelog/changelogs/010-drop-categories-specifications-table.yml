@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 010-1-drop-categories-specifications-table
+      author: minh-kop
+      changes:
+        - dropTable:
+            tableName: categories_specifications
+
+  - changeSet:
+      id: 010-02-add-is-filtered-to-specifications-table
+      author: minh-kop
+      changes:
+        - addColumn:
+            tableName: specifications
+            columns:
+              - column:
+                  name: is_filtered
+                  type: boolean
+                  defaultValueBoolean: true
+                  constraints:
+                    nullable: false
+      rollback:
+        - dropColumn:
+            tableName: specifications
+            columnName: is_filtered

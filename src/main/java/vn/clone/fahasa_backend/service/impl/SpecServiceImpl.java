@@ -26,6 +26,7 @@ public class SpecServiceImpl implements SpecService {
 
         Spec newSpec = Spec.builder()
                            .name(requestDTO.getName())
+                           .isFiltered(requestDTO.isFiltered())
                            .build();
 
         return specRepository.save(newSpec);
@@ -49,13 +50,13 @@ public class SpecServiceImpl implements SpecService {
     public Spec updateSpec(Integer id, SpecRequestDTO requestDTO) {
         Spec existingSpec = getSpecById(id);
 
-        if (existingSpec.getName()
-                        .equals(requestDTO.getName())) {
-            return existingSpec;
+        if (!existingSpec.getName()
+                         .equals(requestDTO.getName())) {
+            validateSpecNameIsUnique(requestDTO.getName());
+            existingSpec.setName(requestDTO.getName());
         }
 
-        validateSpecNameIsUnique(requestDTO.getName());
-        existingSpec.setName(requestDTO.getName());
+        existingSpec.setFiltered(requestDTO.isFiltered());
 
         return specRepository.save(existingSpec);
     }

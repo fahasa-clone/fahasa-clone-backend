@@ -10,9 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import vn.clone.fahasa_backend.domain.BookSpec;
 import vn.clone.fahasa_backend.domain.Category;
-import vn.clone.fahasa_backend.domain.CategorySpec;
-import vn.clone.fahasa_backend.domain.Spec;
-import vn.clone.fahasa_backend.domain.request.CategorySpecDTO;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryBranch;
@@ -23,7 +20,6 @@ import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.BookRepository;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
 import vn.clone.fahasa_backend.service.CategoryService;
-import vn.clone.fahasa_backend.service.SpecService;
 import vn.clone.fahasa_backend.util.VietnameseConverter;
 
 @Service
@@ -33,8 +29,6 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     private final BookRepository bookRepository;
-
-    private final SpecService specService;
 
     // @Bean
     // public CommandLineRunner init() {
@@ -67,17 +61,6 @@ public class CategoryServiceImpl implements CategoryService {
             category.setParent(findById(createCategoryDTO.getParentId()));
         }
 
-        // Create CategorySpec list
-        List<CategorySpec> categorySpecs = createCategoryDTO.getCategorySpecs()
-                                                            .stream()
-                                                            .map(categorySpecDTO -> CategorySpec.builder()
-                                                                                                .category(category)
-                                                                                                .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
-                                                                                                .isFiltered(categorySpecDTO.getIsFiltered())
-                                                                                                .build())
-                                                            .toList();
-        category.setCategorySpecs(categorySpecs);
-
         // === Save to the database ===
         Category savedCategory = categoryRepository.save(category);
 
@@ -108,46 +91,6 @@ public class CategoryServiceImpl implements CategoryService {
             category.setParent(findById(updateCategoryDTO.getParentId()));
         } else {
             category.setParent(null);
-        }
-
-        // === Update CategorySpec list ===
-        if (category.getCategorySpecs() == null) {
-            category.setCategorySpecs(new ArrayList<>());
-        }
-        List<CategorySpec> categorySpecs = category.getCategorySpecs();
-
-        // Create a map of existing specs by Spec ID for O(1) lookup
-        Map<Integer, CategorySpec> specMap = categorySpecs.stream()
-                                                          .collect(Collectors.toMap(
-                                                                  cs -> cs.getSpec().getId(),
-                                                                  cs -> cs
-                                                          ));
-
-        // Create a set of requested Spec IDs
-        Set<Integer> requestedSpecIds = updateCategoryDTO.getCategorySpecs()
-                                                         .stream()
-                                                         .map(CategorySpecDTO::getSpecId)
-                                                         .collect(Collectors.toSet());
-
-        // Remove specs not in request
-        categorySpecs.removeIf(cs -> !requestedSpecIds.contains(cs.getSpec().getId()));
-
-        // Update existing or add new
-        for (CategorySpecDTO categorySpecDTO : updateCategoryDTO.getCategorySpecs()) {
-            CategorySpec existingSpec = specMap.get(categorySpecDTO.getSpecId());
-
-            if (existingSpec != null) {
-                // Update existing CategorySpec
-                existingSpec.setFiltered(categorySpecDTO.getIsFiltered());
-            } else {
-                // Add new CategorySpec
-                CategorySpec newSpec = CategorySpec.builder()
-                                                   .category(category)
-                                                   .spec(specService.getSpecById(categorySpecDTO.getSpecId()))
-                                                   .isFiltered(categorySpecDTO.getIsFiltered())
-                                                   .build();
-                categorySpecs.add(newSpec);
-            }
         }
 
         // === Save to the database ===
@@ -214,17 +157,11 @@ public class CategoryServiceImpl implements CategoryService {
         // Get the deepest category ids under this category
         List<Integer> categoryIds = listDeepestCategories(selectedBranch);
 
-        // Get all Specs referenced by these category ids
-        List<Spec> specs = categoryRepository.findSpecsByCategoryIds(categoryIds);
-        List<Integer> specIds = specs.stream()
-                                     .map(Spec::getId)
-                                     .toList();
-
         // Get all Book IDs that reference this category
         List<Integer> bookIds = bookRepository.findBookIdsByCategoryIds(categoryIds);
 
         // Get all BookSpec values for these books and specs
-        List<BookSpec> bookSpecs = bookRepository.findBookSpecsByBookIdsAndSpecIds(bookIds, specIds);
+        List<BookSpec> bookSpecs = bookRepository.findBookSpecsByBookIds(bookIds);
 
         // Group BookSpec values by Spec ID
         Map<Integer, Set<String>> specValuesMap = bookSpecs.stream()
@@ -233,14 +170,16 @@ public class CategoryServiceImpl implements CategoryService {
                                                                    Collectors.mapping(BookSpec::getValue, Collectors.toSet())
                                                            ));
 
-        // Build SpecDTO list
-        List<GetCategoryPageDTO.SpecDTO> specDTOs = specs.stream()
-                                                         .map(spec -> GetCategoryPageDTO.SpecDTO.builder()
-                                                                                                .id(spec.getId())
-                                                                                                .name(spec.getName())
-                                                                                                .values(specValuesMap.getOrDefault(spec.getId(), new HashSet<>()))
-                                                                                                .build())
-                                                         .toList();
+        // Build SpecDTO list - remove duplicates by collecting unique specs
+        List<GetCategoryPageDTO.SpecDTO> specDTOs = bookSpecs.stream()
+                                                             .map(BookSpec::getSpec)
+                                                             .distinct()
+                                                             .map(spec -> GetCategoryPageDTO.SpecDTO.builder()
+                                                                                                    .id(spec.getId())
+                                                                                                    .name(spec.getName())
+                                                                                                    .values(specValuesMap.getOrDefault(spec.getId(), new HashSet<>()))
+                                                                                                    .build())
+                                                             .toList();
 
         return GetCategoryPageDTO.builder()
                                  .id(category.getId())
@@ -285,17 +224,6 @@ public class CategoryServiceImpl implements CategoryService {
                                              .slug(category.getSlug())
                                              .description(category.getDescription())
                                              .categoryIcon(category.getCategoryIcon())
-                                             .categorySpecs(category.getCategorySpecs().stream()
-                                                                    .map(categorySpec -> {
-                                                                        Spec spec = categorySpec.getSpec();
-                                                                        return CategoryDTO.CategorySpecDTO.builder()
-                                                                                                          .specId(spec.getId())
-                                                                                                          .specName(spec.getName())
-                                                                                                          .isFiltered(categorySpec.isFiltered())
-                                                                                                          .build();
-                                                                    })
-                                                                    .toList()
-                                             )
                                              .build();
 
         Category parent = category.getParent();
