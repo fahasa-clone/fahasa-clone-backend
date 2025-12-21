@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class VietnameseConverter {
 
     /**
-     * Converts a Vietnamese string to a lowercase, ASCII-compatible "slug" string.
+     * Converts a Vietnamese string to a lowercase, ASCII-compatible "slug" string.<br/>
      * This method removes diacritical marks and handles special characters.
      *
      * @param input The Vietnamese string to be converted.

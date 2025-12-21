@@ -1,9 +1,6 @@
 package vn.clone.fahasa_backend.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -11,15 +8,19 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import vn.clone.fahasa_backend.domain.BookSpec;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.CategorySpec;
 import vn.clone.fahasa_backend.domain.Spec;
 import vn.clone.fahasa_backend.domain.request.CategorySpecDTO;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
+import vn.clone.fahasa_backend.domain.response.category.CategoryBranch;
 import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
+import vn.clone.fahasa_backend.domain.response.category.GetCategoryPageDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
+import vn.clone.fahasa_backend.repository.BookRepository;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
 import vn.clone.fahasa_backend.service.CategoryService;
 import vn.clone.fahasa_backend.service.SpecService;
@@ -30,6 +31,8 @@ import vn.clone.fahasa_backend.util.VietnameseConverter;
 public class CategoryServiceImpl implements CategoryService {
 
     private final CategoryRepository categoryRepository;
+
+    private final BookRepository bookRepository;
 
     private final SpecService specService;
 
@@ -161,7 +164,9 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.delete(category);
     }
 
-    public List<CategoryTree> buildCategoryTrees() {
+    @Override
+    @Transactional(readOnly = true)
+    public List<CategoryTree> buildCategoryTree() {
         List<Category> categories = categoryRepository.findAll();
         List<CategoryTree> rootList = categories.stream()
                                                 .filter(c -> c.getParent() == null)
@@ -176,25 +181,7 @@ public class CategoryServiceImpl implements CategoryService {
         return rootList;
     }
 
-    public List<CategoryTree> getChildren(List<Category> categories, int parent_id) {
-        List<CategoryTree> children = categories.stream()
-                                                .filter(c -> c.getParent() != null && c.getParent()
-                                                                                       .getId() == parent_id)
-                                                .map(c -> CategoryTree.builder()
-                                                                      .id(c.getId())
-                                                                      .name(c.getName())
-                                                                      .categoryIcon(c.getCategoryIcon())
-                                                                      .slug(c.getSlug())
-                                                                      .build())
-                                                .toList();
-
-        if (children.isEmpty()) {
-            return null;
-        }
-        children.forEach(child -> child.setChildren(getChildren(categories, child.getId())));
-        return children;
-    }
-
+    @Override
     public CategoryTree searchCategoryTree(List<CategoryTree> rootList, int categoryId) {
         if (rootList.isEmpty()) {
             return null;
@@ -211,21 +198,62 @@ public class CategoryServiceImpl implements CategoryService {
                 }
             }
         }
+
         return null;
     }
 
-    public List<Integer> toListCategory(CategoryTree root) {
-        List<Integer> result = new ArrayList<>();
-        result.add(root.getId());
-        if (root.getChildren() != null) {
-            root.getChildren().forEach(c -> result.addAll(toListCategory(c)));
-        }
-        return result;
+    @Override
+    @Transactional(readOnly = true)
+    public GetCategoryPageDTO getCategoryBranchById(int id) {
+        Category category = findById(id);
+
+        // Build the category branch
+        List<CategoryTree> rootList = buildCategoryTree();
+        CategoryBranch selectedBranch = buildCategoryBranch(rootList, id);
+
+        // Get the deepest category ids under this category
+        List<Integer> categoryIds = listDeepestCategories(selectedBranch);
+
+        // Get all Specs referenced by these category ids
+        List<Spec> specs = categoryRepository.findSpecsByCategoryIds(categoryIds);
+        List<Integer> specIds = specs.stream()
+                                     .map(Spec::getId)
+                                     .toList();
+
+        // Get all Book IDs that reference this category
+        List<Integer> bookIds = bookRepository.findBookIdsByCategoryIds(categoryIds);
+
+        // Get all BookSpec values for these books and specs
+        List<BookSpec> bookSpecs = bookRepository.findBookSpecsByBookIdsAndSpecIds(bookIds, specIds);
+
+        // Group BookSpec values by Spec ID
+        Map<Integer, Set<String>> specValuesMap = bookSpecs.stream()
+                                                           .collect(Collectors.groupingBy(
+                                                                   bs -> bs.getSpec().getId(),
+                                                                   Collectors.mapping(BookSpec::getValue, Collectors.toSet())
+                                                           ));
+
+        // Build SpecDTO list
+        List<GetCategoryPageDTO.SpecDTO> specDTOs = specs.stream()
+                                                         .map(spec -> GetCategoryPageDTO.SpecDTO.builder()
+                                                                                                .id(spec.getId())
+                                                                                                .name(spec.getName())
+                                                                                                .values(specValuesMap.getOrDefault(spec.getId(), new HashSet<>()))
+                                                                                                .build())
+                                                         .toList();
+
+        return GetCategoryPageDTO.builder()
+                                 .id(category.getId())
+                                 .name(category.getName())
+                                 .categoryBranch(selectedBranch)
+                                 .specs(specDTOs)
+                                 .build();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public List<Integer> getCategoryIdList(int id) {
-        List<CategoryTree> rootList = buildCategoryTrees();
+        List<CategoryTree> rootList = buildCategoryTree();
         CategoryTree selectedRoot = searchCategoryTree(rootList, id);
         if (selectedRoot == null) {
             return new ArrayList<>();
@@ -279,5 +307,121 @@ public class CategoryServiceImpl implements CategoryService {
         }
 
         return categoryDTO;
+    }
+
+    private List<CategoryTree> getChildren(List<Category> categories, int parent_id) {
+        List<CategoryTree> children = categories.stream()
+                                                .filter(c -> c.getParent() != null && c.getParent()
+                                                                                       .getId() == parent_id)
+                                                .map(c -> CategoryTree.builder()
+                                                                      .id(c.getId())
+                                                                      .name(c.getName())
+                                                                      .categoryIcon(c.getCategoryIcon())
+                                                                      .slug(c.getSlug())
+                                                                      .build())
+                                                .toList();
+
+        if (children.isEmpty()) {
+            return null;
+        }
+        children.forEach(child -> child.setChildren(getChildren(categories, child.getId())));
+        return children;
+    }
+
+    private CategoryBranch buildCategoryBranch(List<CategoryTree> rootList, int categoryId) {
+        if (rootList == null || rootList.isEmpty()) {
+            return null;
+        }
+
+        for (CategoryTree root : rootList) {
+            List<CategoryTree> children = root.getChildren();
+
+            if (root.getId() == categoryId) {
+                if (children != null && !children.isEmpty()) {
+                    List<CategoryBranch> childrenWithoutGrandchildren = children.stream()
+                                                                                .map(child -> CategoryBranch.builder()
+                                                                                                            .id(child.getId())
+                                                                                                            .name(child.getName())
+                                                                                                            .slug(child.getSlug())
+                                                                                                            .build())
+                                                                                .toList();
+                    return CategoryBranch.builder()
+                                         .id(root.getId())
+                                         .name(root.getName())
+                                         .slug(root.getSlug())
+                                         .children(childrenWithoutGrandchildren)
+                                         .build();
+                }
+                return CategoryBranch.builder()
+                                     .isTerminationPoint(true)
+                                     .build();
+            }
+
+            if (children != null && !children.isEmpty()) {
+                CategoryBranch result = buildCategoryBranch(children, categoryId);
+
+                if (result != null) {
+                    boolean isTerminationPoint = result.isTerminationPoint();
+
+                    if (isTerminationPoint) {
+                        List<CategoryBranch> childrenWithoutGrandchildren = children.stream()
+                                                                                    .map(c -> CategoryBranch.builder()
+                                                                                                            .id(c.getId())
+                                                                                                            .name(c.getName())
+                                                                                                            .slug(c.getSlug())
+                                                                                                            .isTerminationPoint(c.getId() == categoryId)
+                                                                                                            .build())
+                                                                                    .toList();
+                        return CategoryBranch.builder()
+                                             .id(root.getId())
+                                             .name(root.getName())
+                                             .slug(root.getSlug())
+                                             .isParentOfTerminationPoint(true)
+                                             .children(childrenWithoutGrandchildren)
+                                             .build();
+                    }
+
+                    return CategoryBranch.builder()
+                                         .id(root.getId())
+                                         .name(root.getName())
+                                         .slug(root.getSlug())
+                                         .children(List.of(result))
+                                         .build();
+                }
+            }
+        }
+
+        return null;
+    }
+
+    private List<Integer> toListCategory(CategoryTree root) {
+        List<Integer> result = new ArrayList<>();
+        result.add(root.getId());
+        if (root.getChildren() != null) {
+            root.getChildren()
+                .forEach(c -> result.addAll(toListCategory(c)));
+        }
+        return result;
+    }
+
+    private List<Integer> listDeepestCategories(CategoryBranch root) {
+        List<Integer> result = new ArrayList<>();
+        List<CategoryBranch> children = root.getChildren();
+
+        if (children != null) {
+            if (root.isParentOfTerminationPoint()) {
+                result.add(children.stream()
+                                   .filter(CategoryBranch::isTerminationPoint)
+                                   .findFirst()
+                                   .map(CategoryBranch::getId)
+                                   .orElse(null));
+            } else {
+                children.forEach(c -> result.addAll(listDeepestCategories(c)));
+            }
+        } else {
+            result.add(root.getId());
+        }
+
+        return result;
     }
 }
