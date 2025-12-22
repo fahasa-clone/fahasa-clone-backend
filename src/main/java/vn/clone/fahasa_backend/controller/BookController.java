@@ -32,8 +32,11 @@ public class BookController {
 
     @GetMapping
     public ResponseEntity<PageResponse<List<BookDTO>>> getAllBooks(Pageable pageable,
-                                                                   @RequestParam(value = "filter", defaultValue = "") String filter) {
-        Page<BookDTO> bookPage = bookService.fetchAllBooks(pageable, filter);
+                                                                   @RequestParam(value = "filter", required = false) String filter,
+                                                                   @RequestParam(value = "spec-id", required = false) List<Integer> specIds,
+                                                                   @RequestParam(value = "value", required = false) List<String> values
+    ) {
+        Page<BookDTO> bookPage = bookService.fetchAllBooks(pageable, filter, specIds, values);
         PageResponse<List<BookDTO>> pageResponse = new PageResponse<>(pageable.getPageNumber() + 1, pageable.getPageSize(),
                                                                       bookPage.getTotalPages(), bookPage.getContent());
         return ResponseEntity.ok(pageResponse);

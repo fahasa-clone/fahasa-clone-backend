@@ -12,6 +12,10 @@ public class SpecificationsBuilder {
     public static <T> Specification<T> createSpecification(String input) {
         Specification<T> mainSpec = Specification.unrestricted();
 
+        if (input == null || input.isBlank()) {
+            return mainSpec;
+        }
+
         // Regex variables
         String regex = "(?<conjunction>\\s+(?<logicalOperator>and|or)\\s+)?(?<content>(?<notOperator>not)?(?<openParentheses>\\(*)(?<name>\\S+)\\s+(?<operator>not in|\\S+)\\s+(?<value>.*?)(?<closedParentheses>\\)*)(?=\\s+(and|or)\\s+|$))";
         Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
