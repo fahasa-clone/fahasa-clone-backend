@@ -87,4 +87,10 @@ public class BookController {
                                                                       bookPage.getTotalPages(), bookPage.getContent());
         return ResponseEntity.ok(pageResponse);
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<BookDTO>> searchBooks(@RequestParam String query) {
+        List<BookDTO> bookPage = bookService.searchBooks(query);
+        return ResponseEntity.ok(bookPage);
+    }
 }

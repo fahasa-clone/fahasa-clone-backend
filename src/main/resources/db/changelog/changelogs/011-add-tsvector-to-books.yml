@@ -1,0 +1,110 @@
+databaseChangeLog:
+  - changeSet:
+      id: 011-01-add-search-tsvector
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              ALTER TABLE books ADD COLUMN search_tsvector tsvector;
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE INDEX IF NOT EXISTS idx_books_search_tsvector ON books USING GIN(search_tsvector);
+
+  - changeSet:
+      id: 011-02-add-vn-unaccent-function
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE OR REPLACE FUNCTION vn_unaccent(text)
+              RETURNS text AS $$
+              BEGIN
+                RETURN lower(
+                  translate(
+                    $1,
+                    '¹²³ÀÁẢẠÂẤẦẨẬẪÃÄÅÆàáảạâấầẩẫậãäåæĀāĂẮẰẲẴẶăắằẳẵặĄąÇçĆćĈĉĊċČčĎďĐđÈÉẸÊẾỀỄỆËèéẹêềếễệëĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨÌÍỈỊÎÏìíỉịîïĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłÑñŃńŅņŇňŉŊŋÒÓỎỌÔỐỒỔỖỘỐỒỔỖỘƠỚỜỞỠỢÕÖòóỏọôốồổỗộơớờỡợởõöŌōŎŏŐőŒœØøŔŕŖŗŘřßŚśŜŝŞşŠšŢţŤťŦŧÙÚỦỤƯỪỨỬỮỰÛÜùúủụûưứừửữựüŨũŪūŬŭŮůŰűŲųŴŵÝýÿỳŶŷŸŹźŻżŽžёЁ',
+                    '123AAAAAAAAAAAAAAaaaaaaaaaaaaaaAaAAAAAAaaaaaaAaCcCcCcCcCcDdDdEEEEEEEEEeeeeeeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIIIIiiiiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOOOOOOOOOOOOOOOOOOooooooooooooooooooOoOoOoEeOoRrRrRrSSsSsSsSsTtTtTtUUUUUUUUUUUUuuuuuuuuuuuuUuUuUuUuUuUuWwYyyyYyYZzZzZzeE'
+                  )
+                );
+              END
+              $$ LANGUAGE plpgsql IMMUTABLE PARALLEL SAFE STRICT;
+
+  - changeSet:
+      id: 011-03-create-unified-book-search-tsvector-function
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE OR REPLACE FUNCTION update_books_search_tsvector() 
+              RETURNS trigger AS $$
+              DECLARE updated_book_id integer := 0;
+              BEGIN
+                --- Get book ID need to update            
+                IF TG_TABLE_NAME = 'books' THEN
+                  updated_book_id := COALESCE(NEW.id, OLD.id);
+                ELSIF TG_TABLE_NAME = 'book_details' THEN
+                  updated_book_id := COALESCE(NEW.book_id, OLD.book_id);
+                END IF;
+              
+                UPDATE books
+                SET search_tsvector = (
+                  SELECT
+                    setweight(to_tsvector('simple', vn_unaccent(b.name)), 'A') ||
+                    setweight(to_tsvector('simple', vn_unaccent(COALESCE(c1.name, ''))), 'B') ||
+                    setweight(to_tsvector('simple', vn_unaccent(COALESCE(c2.name, ''))), 'C') ||
+                    setweight(to_tsvector('simple', vn_unaccent(COALESCE(bd.description, ''))), 'D')
+                  FROM books AS b
+                  LEFT JOIN categories AS c1 ON b.category_id = c1.id
+                  LEFT JOIN categories AS c2 ON c1.parent_id = c2.id
+                  LEFT JOIN book_details AS bd ON b.id = bd.book_id
+                  WHERE b.id = updated_book_id
+                )
+                WHERE id = updated_book_id;
+              
+                RETURN NULL;
+              END
+              $$ LANGUAGE plpgsql;
+
+  - changeSet:
+      id: 011-04-create-book-search-tsvector-triggers
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE TRIGGER trg_update_books_search_tsvector
+              AFTER INSERT OR UPDATE OF name, category_id
+              ON books
+              FOR EACH ROW
+              EXECUTE FUNCTION update_books_search_tsvector();
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE TRIGGER trg_update_books_search_tsvector_from_book_details
+              AFTER INSERT OR UPDATE OF description
+              ON book_details
+              FOR EACH ROW
+              EXECUTE FUNCTION update_books_search_tsvector();
+
+  - changeSet:
+      id: 011-05-update-name-manually-to-update-search-vector
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              UPDATE books
+              SET name = name;

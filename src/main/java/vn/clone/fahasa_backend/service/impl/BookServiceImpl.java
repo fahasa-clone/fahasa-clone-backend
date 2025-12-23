@@ -76,6 +76,14 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    public List<BookDTO> searchBooks(String query) {
+        if (query == null || query.trim().isEmpty()) {
+            return List.of();
+        }
+        return bookRepository.searchByNameFullText(query.trim());
+    }
+
+    @Override
     @Transactional(readOnly = true)
     public Page<BookDTO> fetchNewestArrivalBooks(int page, int size) {
         Pageable pageable = Pageable.ofSize(size)

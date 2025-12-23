@@ -46,3 +46,7 @@ databaseChangeLog:
   - include:
       file: changelogs/010-drop-categories-specifications-table.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/011-add-tsvector-to-books.yml
+      relativeToChangelogFile: true

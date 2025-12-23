@@ -29,4 +29,6 @@ public interface BookService {
     Page<BookDTO> fetchNewestArrivalBooks(int page, int size);
 
     Book findBookOrThrow(int id);
+
+    List<BookDTO> searchBooks(String query);
 }
