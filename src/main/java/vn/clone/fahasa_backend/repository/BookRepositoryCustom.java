@@ -66,11 +66,6 @@ public class BookRepositoryCustom {
     }
 
     public Page<BookDTO> searchByFullText(String searchQuery, Specification<Book> specification, Pageable pageable) {
-        if (searchQuery == null || searchQuery.trim()
-                                              .isEmpty()) {
-            return new PageImpl<>(List.of(), pageable, 0);
-        }
-
         CriteriaBuilder cb = entityManager.getCriteriaBuilder();
         CriteriaQuery<BookDTO> query = cb.createQuery(BookDTO.class);
         Root<Book> book = query.from(Book.class);
@@ -78,9 +73,9 @@ public class BookRepositoryCustom {
         // Set up a base query with image join
         setupBaseQuery(query, book, cb);
 
-        // Apply full-text search predicate
-        specification.and((root, criteriaQuery, criteriaBuilder) ->
-                                  createFullTextSearchPredicate(book, cb, searchQuery));
+        // Create a full-text search Specification
+        Specification<Book> fullTextSearchSpecification = createFullTextSearchSpecification(searchQuery);
+        specification = specification.and(fullTextSearchSpecification);
 
         // Apply specification predicate
         applySpecification(specification, query, book, cb);
@@ -172,22 +167,18 @@ public class BookRepositoryCustom {
     }
 
     /**
-     * Create full-text search predicate with vn_unaccent
+     * Create a full-text search Specification with fts_search function
      */
-    private Predicate createFullTextSearchPredicate(Root<Book> book, CriteriaBuilder cb, String searchQuery) {
-        return cb.isTrue(cb.function("@@",
-                                     Boolean.class,
-                                     book.get(Book_.searchTsvector),
-                                     cb.function("plainto_tsquery",
-                                                 Object.class,
-                                                 cb.literal("simple"),
-                                                 cb.function("vn_unaccent",
-                                                             String.class,
-                                                             cb.literal(searchQuery.trim())
-                                                 )
-                                     )
-                         )
-        );
+    private Specification<Book> createFullTextSearchSpecification(String searchQuery) {
+        return (root, query, criteriaBuilder) -> {
+            Expression<Boolean> ftsExpression = criteriaBuilder.function("fts_search",
+                                                                         Boolean.class,
+                                                                         root.get(Book_.searchTsvector),
+                                                                         criteriaBuilder.literal(searchQuery)
+            );
+
+            return criteriaBuilder.isTrue(ftsExpression);
+        };
     }
 
     /**

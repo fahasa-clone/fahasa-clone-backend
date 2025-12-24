@@ -11,7 +11,6 @@ import org.springframework.stereotype.Repository;
 
 import vn.clone.fahasa_backend.domain.Book;
 import vn.clone.fahasa_backend.domain.BookSpec;
-import vn.clone.fahasa_backend.domain.response.BookDTO;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer>, JpaSpecificationExecutor<Book> {
@@ -23,23 +22,4 @@ public interface BookRepository extends JpaRepository<Book, Integer>, JpaSpecifi
 
     @Query("SELECT bs FROM BookSpec bs WHERE bs.book.id IN :bookIds")
     List<BookSpec> findBookSpecsByBookIds(@Param("bookIds") List<Integer> bookIds);
-
-    @Query(name = "Book.searchByNameFullText", nativeQuery = true)
-    List<BookDTO> searchByNameFullText(@Param("searchQuery") String searchQuery);
-
-    @Query(value = "SELECT b.* FROM books b " +
-                   "left join book_images bi on b.id = bi.book_id " +
-                   "WHERE search_tsvector @@ plainto_tsquery('english', :searchQuery) " +
-                   "ORDER BY ts_rank(search_tsvector, plainto_tsquery('english', :searchQuery)) DESC",
-           nativeQuery = true)
-    List<BookDTO> searchByNameFullText_(@Param("searchQuery") String searchQuery);
-
-    // Alternative with ranking and limit
-    @Query(value = "SELECT * FROM books WHERE search_tsvector @@ " +
-                   "plainto_tsquery('english', :searchQuery) AND delete_status = false " +
-                   "ORDER BY ts_rank(search_tsvector, plainto_tsquery('english', :searchQuery)) DESC " +
-                   "LIMIT :limit",
-           nativeQuery = true)
-    List<Book> searchByNameFullTextWithLimit(@Param("searchQuery") String searchQuery,
-                                             @Param("limit") int limit);
 }

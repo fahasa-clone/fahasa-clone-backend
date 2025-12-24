@@ -8,6 +8,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -76,11 +77,20 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public List<BookDTO> searchBooks(String query) {
-        if (query == null || query.trim().isEmpty()) {
-            return List.of();
+    @Transactional(readOnly = true)
+    public Page<BookDTO> searchBooks(String searchQuery, Pageable pageable, String filter) {
+        if (searchQuery == null || searchQuery.trim()
+                                              .isEmpty()) {
+            return new PageImpl<>(List.of(), pageable, 0);
         }
-        return bookRepository.searchByNameFullText(query.trim());
+
+        // Trim search query
+        searchQuery = searchQuery.trim();
+
+        // Create the filter specification
+        Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
+
+        return bookRepositoryCustom.searchByFullText(searchQuery, specification, pageable);
     }
 
     @Override

@@ -15,39 +15,8 @@ import org.hibernate.annotations.SQLRestriction;
 import org.hibernate.annotations.SecondaryRow;
 
 import vn.clone.fahasa_backend.config.CustomPostgreSQLEnumJdbcType;
-import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.util.constant.BookLayout;
 
-@SqlResultSetMapping(
-        name = "BookDTOMapping",
-        classes = @ConstructorResult(
-                targetClass = BookDTO.class,
-                columns = {
-                        @ColumnResult(name = "id", type = Integer.class),
-                        @ColumnResult(name = "name", type = String.class),
-                        @ColumnResult(name = "price", type = Long.class),
-                        @ColumnResult(name = "discountPercentage", type = Integer.class),
-                        @ColumnResult(name = "discountAmount", type = Integer.class),
-                        @ColumnResult(name = "averageRating", type = Float.class),
-                        @ColumnResult(name = "ratingCount", type = Integer.class),
-                        @ColumnResult(name = "stock", type = Integer.class),
-                        @ColumnResult(name = "imagePath", type = String.class)
-                }
-        )
-)
-@NamedNativeQuery(
-        name = "Book.searchByNameFullText",
-        query = "SELECT b.id, b.name, b.price, b.discount_percentage as discountPercentage, " +
-                "b.discount_amount as discountAmount, b.average_rating as averageRating, " +
-                "b.rating_count as ratingCount, b.stock, " +
-                "COALESCE(bi.image_path, '') as imagePath " +
-                "FROM books b " +
-                "LEFT JOIN book_images bi ON b.id = bi.book_id AND bi.image_order = 1 " +
-                "WHERE b.search_tsvector @@ plainto_tsquery('simple', vn_unaccent(?1)) " +
-                "AND b.delete_status = false " +
-                "ORDER BY ts_rank(b.search_tsvector, plainto_tsquery('simple', vn_unaccent(?1))) DESC",
-        resultSetMapping = "BookDTOMapping"
-)
 @Entity
 @Table(name = "books")
 @SecondaryTable(name = "book_details",

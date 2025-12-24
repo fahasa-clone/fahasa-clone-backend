@@ -89,8 +89,12 @@ public class BookController {
     }
 
     @GetMapping("/search")
-    public ResponseEntity<List<BookDTO>> searchBooks(@RequestParam String query) {
-        List<BookDTO> bookPage = bookService.searchBooks(query);
-        return ResponseEntity.ok(bookPage);
+    public ResponseEntity<PageResponse<List<BookDTO>>> searchBooks(@RequestParam("query") String searchQuery,
+                                                                   Pageable pageable,
+                                                                   @RequestParam(value = "filter", required = false) String filter) {
+        Page<BookDTO> bookPage = bookService.searchBooks(searchQuery, pageable, filter);
+        PageResponse<List<BookDTO>> pageResponse = new PageResponse<>(pageable.getPageNumber() + 1, pageable.getPageSize(),
+                                                                      bookPage.getTotalPages(), bookPage.getContent());
+        return ResponseEntity.ok(pageResponse);
     }
 }

@@ -108,3 +108,18 @@ databaseChangeLog:
             sql: |
               UPDATE books
               SET name = name;
+
+  - changeSet:
+      id: 011-06-create-fts-search-function
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE OR REPLACE FUNCTION fts_search(search_tsvector tsvector, search_query TEXT)
+              RETURNS BOOLEAN AS $$
+              BEGIN
+                  RETURN search_tsvector @@ plainto_tsquery('simple', vn_unaccent(search_query));
+              END;
+              $$ LANGUAGE plpgsql IMMUTABLE;

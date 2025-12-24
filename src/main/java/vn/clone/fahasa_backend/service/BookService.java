@@ -30,5 +30,5 @@ public interface BookService {
 
     Book findBookOrThrow(int id);
 
-    List<BookDTO> searchBooks(String query);
+    Page<BookDTO> searchBooks(String searchQuery, Pageable pageable, String filter);
 }
