@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: 012-01-create-type
+      author: ddhuy2207
+      changes:
+        - sql:
+            dbms: postgresql
+            sql: |
+              CREATE TYPE payment_method AS ENUM ('cash', 'paypal', 'vnpay');
+              CREATE TYPE shipping_method AS ENUM ('express', 'standard');
+      rollback:
+        - sql:
+            dbms: postgresql
+            sql: |
+              DROP TYPE IF EXISTS payment_method;
+              DROP TYPE IF EXISTS shipping_method;
+
+  - changeSet:
+      id: 012-02-update-order-table
+      author: ddhuy2207
+      changes:
+        - modifyDataType:
+            tableName: orders
+            columnName: payment_method
+            newDataType: payment_method
+
+        - modifyDataType:
+            tableName: orders
+            columnName: shipping_method
+            newDataType: shipping_method
+
+  - changeSet:
+      id: 012-03-add-column-total-quantity
+      author: ddhuy2207
+      changes:
+        - addColumn:
+            tableName: orders
+            columns:
+              - column:
+                  name: total_quantity
+                  type: integer

@@ -31,4 +31,13 @@ public class RandomUtils {
         }
         return password.toString();
     }
+
+    public static String generateOrderReference() {
+        String chars = "ABCDEF0123456789";
+        StringBuilder orderReference = new StringBuilder(9);
+        for (int i = 0; i < 9; i++) {
+            orderReference.append(chars.charAt(SECURE_RANDOM.nextInt(chars.length())));
+        }
+        return orderReference.toString();
+    }
 }

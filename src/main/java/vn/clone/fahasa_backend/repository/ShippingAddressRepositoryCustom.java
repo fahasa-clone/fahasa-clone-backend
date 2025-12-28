@@ -10,7 +10,6 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
 
 import vn.clone.fahasa_backend.domain.*;
-import vn.clone.fahasa_backend.domain.response.CartItemDTO;
 import vn.clone.fahasa_backend.domain.response.ShippingAddressResponseDTO;
 import vn.clone.fahasa_backend.repository.specification.SpecificationsBuilder;
 
