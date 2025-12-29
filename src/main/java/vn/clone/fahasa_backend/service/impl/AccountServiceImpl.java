@@ -275,6 +275,7 @@ public class AccountServiceImpl implements AccountService {
                                  .password(passwordEncoder.encode(randomPassword))
                                  .rawPassword(randomPassword)
                                  .isActivated(true)
+                                 .role(getRoleByName(AuthoritiesConstants.CLIENT))
                                  .build();
 
         // Send password mail

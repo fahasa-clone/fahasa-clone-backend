@@ -122,9 +122,9 @@ public class OrderServiceImpl implements OrderService {
         while (!flag) {
             try {
                 order.setOrderReference(RandomUtils.generateOrderReference());
-                savedOrder = orderRepository.saveAndFlush(order);
+                savedOrder = orderRepository.save(order);
                 flag = true;
-            } catch (DataIntegrityViolationException e) {
+            } catch (DataIntegrityViolationException ignored) {
             }
         }
 
