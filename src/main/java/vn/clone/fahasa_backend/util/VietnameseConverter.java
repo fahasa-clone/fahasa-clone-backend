@@ -67,8 +67,8 @@ public class VietnameseConverter {
         if (name == null || name.isEmpty()) {
             return "";
         }
-        return convertVietnameseToAscii(name).replaceAll("\\s-\\s", "-")
-                                             .replaceAll("\\s", "-")
+        return convertVietnameseToAscii(name).replaceAll("\\s+-\\s+", "-")
+                                             .replaceAll("\\s+", "-")
                                              .replaceAll("[^a-zA-Z0-9_-]", "");
     }
 

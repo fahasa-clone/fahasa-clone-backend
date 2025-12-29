@@ -1,0 +1,133 @@
+databaseChangeLog:
+  - changeSet:
+      id: 012-01-create-convert-name-to-slug-function
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE OR REPLACE FUNCTION convert_name_to_slug(name TEXT)
+              RETURNS TEXT AS $$
+              DECLARE
+                slug TEXT;
+              BEGIN
+                -- Return empty string if input is null or empty
+                IF name IS NULL OR name = '' THEN
+                  RETURN '';
+                END IF;
+              
+                -- Apply vn_unaccent to convert Vietnamese to ASCII
+                slug := vn_unaccent(name);
+              
+                -- Replace " - " (space-hyphen-space) with single hyphen
+                slug := regexp_replace(slug, '\s+-\s+', '-', 'g');
+              
+                -- Replace any whitespace with single hyphen
+                slug := regexp_replace(slug, '\s+', '-', 'g');
+              
+                -- Remove any characters that are not alphanumeric, underscore, or hyphen
+                slug := regexp_replace(slug, '[^a-z0-9_-]', '', 'g');
+              
+                RETURN slug;
+              END;
+              $$ LANGUAGE plpgsql IMMUTABLE PARALLEL SAFE STRICT;
+
+  - changeSet:
+      id: 012-02-add-unique-constraints-to-books-categories-slug
+      author: minh-kop
+      changes:
+        - addUniqueConstraint:
+            tableName: books
+            columnNames: slug
+        - addUniqueConstraint:
+            tableName: categories
+            columnNames: slug
+
+  - changeSet:
+      id: 012-03-add-slug-column-to-specifications
+      author: minh-kop
+      changes:
+        - addColumn:
+            tableName: specifications
+            columns:
+              - column:
+                  name: slug
+                  type: varchar(256)
+                  constraints:
+                    unique: true
+
+  - changeSet:
+      id: 012-04-replace-books-slug-constraint-with-partial-index
+      author: minh-kop
+      changes:
+        - dropUniqueConstraint:
+            tableName: books
+            constraintName: books_slug_key
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              -- Create partial unique index for non-deleted books
+              CREATE UNIQUE INDEX idx_books_slug_unique 
+              ON books(slug) 
+              WHERE delete_status = false;
+
+  - changeSet:
+      id: 012-05-update-slug-manually
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              -- Update slugs for books, handling duplicates by appending ID
+              WITH ranked_books AS (
+                  SELECT 
+                      id,
+                      convert_name_to_slug(name) AS base_slug,
+                      ROW_NUMBER() OVER (
+                          PARTITION BY convert_name_to_slug(name) 
+                          ORDER BY id
+                      ) AS rank
+                  FROM books
+                  WHERE delete_status = false
+              )
+              UPDATE books
+              SET slug = CASE
+                  WHEN rb.rank = 1 THEN rb.base_slug
+                  ELSE rb.base_slug || '-' || books.id
+              END
+              FROM ranked_books rb
+              WHERE books.id = rb.id;
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              -- Update slugs for categories, handling duplicates by appending ID
+              WITH ranked_categories AS (
+                  SELECT 
+                      id,
+                      convert_name_to_slug(name) AS base_slug,
+                      ROW_NUMBER() OVER (
+                          PARTITION BY convert_name_to_slug(name) 
+                          ORDER BY id
+                      ) AS rank
+                  FROM categories
+              )
+              UPDATE categories
+              SET slug = CASE
+                  WHEN rb.rank = 1 THEN rb.base_slug
+                  ELSE rb.base_slug || '-' || categories.id
+              END
+              FROM ranked_categories rb
+              WHERE categories.id = rb.id;
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              UPDATE specifications
+              SET slug = convert_name_to_slug(name);

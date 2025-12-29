@@ -1,5 +1,7 @@
 package vn.clone.fahasa_backend.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -12,7 +14,7 @@ import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 
 public interface BookService {
 
-    Page<BookDTO> fetchAllBooks(Pageable pageable, String filter);
+    Page<BookDTO> fetchAllBooks(Pageable pageable, String filter, List<Integer> specIds, List<String> values);
 
     FullBookDTO getBookById(int id);
 
@@ -27,4 +29,6 @@ public interface BookService {
     Page<BookDTO> fetchNewestArrivalBooks(int page, int size);
 
     Book findBookOrThrow(int id);
+
+    Page<BookDTO> searchBooks(String searchQuery, Pageable pageable, String filter);
 }

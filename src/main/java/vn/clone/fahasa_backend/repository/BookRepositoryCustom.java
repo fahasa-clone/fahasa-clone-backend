@@ -65,8 +65,33 @@ public class BookRepositoryCustom {
         return executePaginatedQuery(query, specification, pageable);
     }
 
-    // Helper methods
+    public Page<BookDTO> searchByFullText(String searchQuery, Specification<Book> specification, Pageable pageable) {
+        CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+        CriteriaQuery<BookDTO> query = cb.createQuery(BookDTO.class);
+        Root<Book> book = query.from(Book.class);
 
+        // Set up a base query with image join
+        setupBaseQuery(query, book, cb);
+
+        // Create a full-text search Specification
+        Specification<Book> fullTextSearchSpecification = createFullTextSearchSpecification(searchQuery);
+        specification = specification.and(fullTextSearchSpecification);
+
+        // Apply specification predicate
+        applySpecification(specification, query, book, cb);
+
+        // Apply sorting
+        if (pageable.getSort().isSorted()) {
+            applySorting(query, book, cb, pageable);
+        } else {
+            applyTsRankOrdering(query, book, cb, searchQuery);
+        }
+
+        // Execute and return paginated results
+        return executePaginatedQuery(query, specification, pageable);
+    }
+
+    // Helper methods
     private void setupBaseQuery(CriteriaQuery<BookDTO> query, Root<Book> book, CriteriaBuilder cb) {
         // Left join with BookImage and filter for imageOrder = 1
         Join<Book, BookImage> imageJoin = book.join(Book_.bookImages, JoinType.LEFT);
@@ -139,5 +164,42 @@ public class BookRepositoryCustom {
 
         return entityManager.createQuery(countQuery)
                             .getSingleResult();
+    }
+
+    /**
+     * Create a full-text search Specification with fts_search function
+     */
+    private Specification<Book> createFullTextSearchSpecification(String searchQuery) {
+        return (root, query, criteriaBuilder) -> {
+            Expression<Boolean> ftsExpression = criteriaBuilder.function("fts_search",
+                                                                         Boolean.class,
+                                                                         root.get(Book_.searchTsvector),
+                                                                         criteriaBuilder.literal(searchQuery)
+            );
+
+            return criteriaBuilder.isTrue(ftsExpression);
+        };
+    }
+
+    /**
+     * Apply ts_rank ordering
+     */
+    private void applyTsRankOrdering(CriteriaQuery<?> query, Root<Book> book, CriteriaBuilder cb, String searchQuery) {
+        // Create ts_rank function call
+        Expression<Float> tsRank = cb.function("ts_rank",
+                                               Float.class,
+                                               book.get(Book_.searchTsvector),
+                                               cb.function("plainto_tsquery",
+                                                           Object.class,
+                                                           cb.literal("simple"),
+                                                           cb.function("vn_unaccent",
+                                                                       String.class,
+                                                                       cb.literal(searchQuery.trim())
+                                                           )
+                                               )
+        );
+
+        // Order by ts_rank descending
+        query.orderBy(cb.desc(tsRank));
     }
 }

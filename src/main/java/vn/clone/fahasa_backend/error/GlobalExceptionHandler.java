@@ -33,7 +33,6 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
  */
 @Slf4j
 @RestControllerAdvice
-// public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 public class GlobalExceptionHandler {
 
     /**
@@ -189,6 +188,25 @@ public class GlobalExceptionHandler {
                                                                        errorMessage);
         problemDetail.setType(URI.create("https://example.com/probs/type-mismatch"));
         problemDetail.setTitle("Type Mismatch");
+        problemDetail.setProperty("timestamp", Instant.now());
+
+        return ResponseEntity.badRequest()
+                             .body(problemDetail);
+    }
+
+    /**
+     * Handle PayPal exceptions.
+     */
+    @ExceptionHandler(PayPalException.class)
+    public ResponseEntity<ProblemDetail> handlePayPalException(PayPalException ex,
+                                                               WebRequest request) {
+
+        log.warn("PayPal error: {}", ex.getMessage());
+
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(HttpStatus.BAD_REQUEST,
+                                                                       ex.getMessage());
+        problemDetail.setType(URI.create("https://example.com/probs/paypal-error"));
+        problemDetail.setTitle("PayPal Error");
         problemDetail.setProperty("timestamp", Instant.now());
 
         return ResponseEntity.badRequest()

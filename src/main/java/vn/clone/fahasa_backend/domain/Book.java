@@ -60,6 +60,9 @@ public class Book {
     @Column(name = "slug")
     private String slug;
 
+    @Column(name = "search_tsvector")
+    private String searchTsvector;
+
     @Column(name = "delete_status")
     private boolean deleted;
 

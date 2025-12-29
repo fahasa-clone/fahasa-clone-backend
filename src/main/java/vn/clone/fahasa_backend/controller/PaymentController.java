@@ -1,15 +1,18 @@
 package vn.clone.fahasa_backend.controller;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.paypal.sdk.models.Order;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
+import vn.clone.fahasa_backend.domain.request.CreateOrderRequest;
+import vn.clone.fahasa_backend.service.payment.PayPalService;
 import vn.clone.fahasa_backend.service.payment.VnPayService;
 
 @Controller
@@ -18,6 +21,8 @@ import vn.clone.fahasa_backend.service.payment.VnPayService;
 public class PaymentController {
 
     private final VnPayService vnPayService;
+
+    private final PayPalService payPalService;
 
     @GetMapping("/api/vnpay")
     public ResponseEntity<String> getVnPayPaymentUrl(HttpServletRequest request,
@@ -97,6 +102,18 @@ public class PaymentController {
         handlerResponse.setMessage("Confirm Success");
 
         return ResponseEntity.ok(handlerResponse);
+    }
+
+    @PostMapping("/api/paypal")
+    public ResponseEntity<Order> createOrder(@RequestBody @Valid CreateOrderRequest request) {
+        Order order = payPalService.createOrder(request);
+        return ResponseEntity.ok(order);
+    }
+
+    @PostMapping("/api/paypal/{orderID}/capture")
+    public ResponseEntity<Order> captureOrder(@PathVariable String orderID) {
+        Order order = payPalService.captureOrder(orderID);
+        return ResponseEntity.ok(order);
     }
 
     @Setter

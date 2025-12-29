@@ -8,12 +8,20 @@ import lombok.Getter;
 public class BookDTO {
 
     private Integer id;
+
     private String name;
+
     private long price;
+
     private Integer discountPercentage;
+
     private Integer discountAmount;
+
     private Float averageRating;
+
     private Integer ratingCount;
+
     private Integer stock;
+
     private String imagePath;
 }

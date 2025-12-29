@@ -14,16 +14,16 @@ import org.springframework.stereotype.Service;
 @Service
 public class VnPayService {
 
-    @Value("${fahasa.vnpay.tmn-code}")
+    @Value("${vnpay.tmn-code}")
     private String vnp_TmnCode;
 
-    @Value("${fahasa.vnpay.hash-secret}")
+    @Value("${vnpay.hash-secret}")
     private String secretKey;
 
-    @Value("${fahasa.vnpay.pay-url}")
+    @Value("${vnpay.pay-url}")
     private String vnp_PayUrl;
 
-    @Value("${fahasa.vnpay.return-url}")
+    @Value("${vnpay.return-url}")
     private String vnp_ReturnUrl;
 
     public String generatePaymentUrl(int orderId, long amount, String ip) {

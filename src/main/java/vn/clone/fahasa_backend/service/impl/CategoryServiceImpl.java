@@ -117,10 +117,10 @@ public class CategoryServiceImpl implements CategoryService {
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug(c.getSlug())
+                                                                      .slug("/" + c.getSlug())
                                                                       .build())
                                                 .toList();
-        rootList.forEach(root -> root.setChildren(getChildren(categories, root.getId())));
+        rootList.forEach(root -> root.setChildren(getChildren(categories, root)));
         return rootList;
     }
 
@@ -237,22 +237,22 @@ public class CategoryServiceImpl implements CategoryService {
         return categoryDTO;
     }
 
-    private List<CategoryTree> getChildren(List<Category> categories, int parent_id) {
+    private List<CategoryTree> getChildren(List<Category> categories, CategoryTree parent) {
         List<CategoryTree> children = categories.stream()
-                                                .filter(c -> c.getParent() != null && c.getParent()
-                                                                                       .getId() == parent_id)
+                                                .filter(c -> c.getParent() != null && Objects.equals(c.getParent()
+                                                                                                      .getId(), parent.getId()))
                                                 .map(c -> CategoryTree.builder()
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug(c.getSlug())
+                                                                      .slug(parent.getSlug() + "/" + c.getSlug())
                                                                       .build())
                                                 .toList();
 
         if (children.isEmpty()) {
             return null;
         }
-        children.forEach(child -> child.setChildren(getChildren(categories, child.getId())));
+        children.forEach(child -> child.setChildren(getChildren(categories, child)));
         return children;
     }
 

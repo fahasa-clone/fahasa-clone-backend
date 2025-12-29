@@ -8,6 +8,7 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -24,6 +25,7 @@ import vn.clone.fahasa_backend.domain.response.BookDTO;
 import vn.clone.fahasa_backend.domain.response.FullBookDTO;
 import vn.clone.fahasa_backend.repository.BookRepository;
 import vn.clone.fahasa_backend.repository.BookRepositoryCustom;
+import vn.clone.fahasa_backend.repository.specification.BookSpecCombinationSpecification;
 import vn.clone.fahasa_backend.repository.specification.SpecificationsBuilder;
 import vn.clone.fahasa_backend.service.*;
 import vn.clone.fahasa_backend.util.VietnameseConverter;
@@ -52,9 +54,43 @@ public class BookServiceImpl implements BookService {
 
     @Override
     @Transactional(readOnly = true)
-    public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter) {
+    public Page<BookDTO> fetchAllBooks(Pageable pageable, String filter,
+                                       List<Integer> specIds, List<String> values) {
+        // Create the filter specification
         Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
+
+        if (specIds != null && values != null && specIds.size() == values.size()) {
+            // Create combinations
+            List<BookSpecCombinationSpecification.BookSpecCombination> combinations = new ArrayList<>();
+            for (int i = 0; i < specIds.size(); i++) {
+                combinations.add(new BookSpecCombinationSpecification.BookSpecCombination(specIds.get(i), values.get(i)));
+            }
+
+            // Create the BookSpec specification
+            Specification<Book> bookSpecCombinationSpecification = new BookSpecCombinationSpecification(combinations);
+
+            // Combine filter and BookSpec specifications
+            specification = specification.and(bookSpecCombinationSpecification);
+        }
+
         return bookRepositoryCustom.findAllBooksWithFirstImage(specification, pageable);
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Page<BookDTO> searchBooks(String searchQuery, Pageable pageable, String filter) {
+        if (searchQuery == null || searchQuery.trim()
+                                              .isEmpty()) {
+            return new PageImpl<>(List.of(), pageable, 0);
+        }
+
+        // Trim search query
+        searchQuery = searchQuery.trim();
+
+        // Create the filter specification
+        Specification<Book> specification = SpecificationsBuilder.createSpecification(filter);
+
+        return bookRepositoryCustom.searchByFullText(searchQuery, specification, pageable);
     }
 
     @Override

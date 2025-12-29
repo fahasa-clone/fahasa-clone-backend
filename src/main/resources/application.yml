@@ -75,14 +75,25 @@ fahasa:
     base-url: http://localhost:8080
   cloudinary:
     product-folder: "fahasa/products"
-  vnpay:
-    tmn-code: ${VNPAY_TERMINAL_CODE}
-    hash-secret: ${VNPAY_HASH_SECRET}
-    pay-url: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
-    return-url: "http://localhost:8080/api/payment/vnpay/return"
 
 # Cloudinary properties
 cloudinary:
   cloud-name: ${CLOUDINARY_CLOUD_NAME}
   api-key: ${CLOUDINARY_API_KEY}
   api-secret: ${CLOUDINARY_API_SECRET}
+
+# VnPay properties
+vnpay:
+  tmn-code: ${VNPAY_TERMINAL_CODE}
+  hash-secret: ${VNPAY_HASH_SECRET}
+  pay-url: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
+  return-url: "http://localhost:8080/api/payment/vnpay/return"
+
+# PayPal properties
+paypal:
+  client-id: ${PAYPAL_CLIENT_ID}
+  client-secret: ${PAYPAL_CLIENT_SECRET}
+
+# Exchange Rate API properties
+exchangerate-api:
+  key: ${EXCHANGERATE_API_KEY}
