@@ -6,22 +6,16 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import vn.clone.fahasa_backend.domain.*;
+import vn.clone.fahasa_backend.domain.Account;
+import vn.clone.fahasa_backend.domain.ShippingAddress;
 import vn.clone.fahasa_backend.domain.response.CartItemResponseDTO;
 import vn.clone.fahasa_backend.domain.response.CheckoutResponseDTO;
-import vn.clone.fahasa_backend.domain.response.CreateOrderResponseDTO;
-import vn.clone.fahasa_backend.domain.response.OrderSummaryDTO;
 import vn.clone.fahasa_backend.error.BadRequestException;
-import vn.clone.fahasa_backend.repository.OrderRepository;
-import vn.clone.fahasa_backend.repository.OrderRepositoryCustom;
 import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.CartItemService;
 import vn.clone.fahasa_backend.service.CheckoutService;
 import vn.clone.fahasa_backend.service.ShippingAddressService;
-import vn.clone.fahasa_backend.util.RandomUtils;
 import vn.clone.fahasa_backend.util.ShippingCalculateUtils;
-import vn.clone.fahasa_backend.util.constant.OrderStatus;
-import vn.clone.fahasa_backend.util.constant.PaymentMethod;
 import vn.clone.fahasa_backend.util.constant.ShippingMethod;
 
 @Service
@@ -46,6 +40,10 @@ public class CheckoutServiceImpl implements CheckoutService {
                                                              .stream()
                                                              .filter(CartItemResponseDTO::getIsClicked)
                                                              .toList();
+
+        if (cartItems.isEmpty()) {
+            throw new BadRequestException("No books clicked in cart!");
+        }
 
         cartItems.forEach(cartItem -> {
             if (cartItem.getQuantity() > cartItem.getBookStock()) {
