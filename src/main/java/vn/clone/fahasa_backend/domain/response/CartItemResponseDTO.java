@@ -5,8 +5,7 @@ import lombok.Getter;
 
 @Builder
 @Getter
-public class CartItemDTO {
-    private Integer cartItemId;
+public class CartItemResponseDTO {
     private Integer bookId;
     private String bookName;
     private Long bookPrice;
