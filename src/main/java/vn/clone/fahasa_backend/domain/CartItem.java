@@ -29,4 +29,11 @@ public class CartItem {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_id")
     private Account account;
+
+    public CartItem(Integer id, Integer quantity, Boolean isClicked, Book book) {
+        this.id = id;
+        this.quantity = quantity;
+        this.isClicked = isClicked;
+        this.book = book;
+    }
 }

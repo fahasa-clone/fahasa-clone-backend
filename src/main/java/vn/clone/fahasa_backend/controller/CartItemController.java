@@ -8,9 +8,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import vn.clone.fahasa_backend.domain.request.UpsertCartItemRequestDTO;
-import vn.clone.fahasa_backend.domain.response.CartItemDTO;
+import vn.clone.fahasa_backend.domain.Account;
+import vn.clone.fahasa_backend.domain.request.CartItemRequestDTO;
+import vn.clone.fahasa_backend.domain.response.CartItemResponseDTO;
 import vn.clone.fahasa_backend.domain.response.UpsertCartItemResponseDTO;
+import vn.clone.fahasa_backend.service.AccountService;
 import vn.clone.fahasa_backend.service.CartItemService;
 
 @RestController
@@ -19,16 +21,17 @@ import vn.clone.fahasa_backend.service.CartItemService;
 public class CartItemController {
 
     private final CartItemService cartItemService;
+    private final AccountService accountService;
 
     @PostMapping
-    public ResponseEntity<UpsertCartItemResponseDTO> addToCart(@Valid @RequestBody UpsertCartItemRequestDTO request) {
+    public ResponseEntity<UpsertCartItemResponseDTO> addToCart(@Valid @RequestBody CartItemRequestDTO request) {
         UpsertCartItemResponseDTO newCartItem = cartItemService.addToCart(request);
         return ResponseEntity.status(HttpStatus.CREATED)
                              .body(newCartItem);
     }
 
     @PutMapping
-    public ResponseEntity<UpsertCartItemResponseDTO> updateCart(@Valid @RequestBody UpsertCartItemRequestDTO request) {
+    public ResponseEntity<UpsertCartItemResponseDTO> updateCart(@Valid @RequestBody CartItemRequestDTO request) {
         UpsertCartItemResponseDTO updatedCartItem = cartItemService.updateCartItem(request);
         return ResponseEntity.ok(updatedCartItem);
     }
@@ -41,8 +44,24 @@ public class CartItemController {
     }
 
     @GetMapping
-    public ResponseEntity<List<CartItemDTO>> getAllCartItem() {
-        List<CartItemDTO> cartItems = cartItemService.getAllCartItems();
+    public ResponseEntity<List<CartItemResponseDTO>> getAllCartItem() {
+        Account account = accountService.getAccountBySecurityContext();
+
+        List<CartItemResponseDTO> cartItems = cartItemService.getAllCartItems(account);
         return ResponseEntity.ok(cartItems);
     }
+
+    // @GetMapping("/clicked")
+    // public ResponseEntity<List<CartItemResponseDTO>> getAllCartItemClicked() {
+    //     Account account = accountService.getAccountBySecurityContext();
+    //     List<CartItemResponseDTO> cartItems = cartItemService.getAllCartItemsClicked1(account);
+    //     return ResponseEntity.ok(cartItems);
+    // }
+    //
+    // @GetMapping("/test")
+    // public ResponseEntity<Object> test() {
+    //     return ResponseEntity.ok(cartItemService.getAllCartItemsClicked(accountService.getAccountBySecurityContext()));
+    // }
+
+
 }

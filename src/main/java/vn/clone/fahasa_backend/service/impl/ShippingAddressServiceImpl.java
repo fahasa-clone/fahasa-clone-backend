@@ -102,6 +102,12 @@ public class ShippingAddressServiceImpl implements ShippingAddressService {
         return shippingAddressRepositoryCustom.findAllAddressesByAccountId(account.getId());
     }
 
+    @Override
+    public ShippingAddress getShippingAddressByIdAndAccountId(int id, int accountId) {
+        return shippingAddressRepository.findByIdAndAccountId(id, accountId)
+                                        .orElseThrow(() -> new EntityNotFoundException("Shipping address not found"));
+    }
+
     private void enableDefaultAddress(Account account) {
         Optional<ShippingAddress> addressOptional = shippingAddressRepository.findByAccountIdAndIsDefaultIsTrue(account.getId());
         if (addressOptional.isPresent()) {

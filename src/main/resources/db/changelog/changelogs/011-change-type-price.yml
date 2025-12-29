@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: 11-change-type-price
+      author: ddhuy2207
+      changes:
+        - modifyDataType:
+            tableName: orders
+            columnName: sub_total
+            newDataType: BIGINT
+
+        - modifyDataType:
+            tableName: orders
+            columnName: shipping_fee
+            newDataType: BIGINT
+
+        - modifyDataType:
+            tableName: orders
+            columnName: grand_total
+            newDataType: BIGINT
+
+        - modifyDataType:
+            tableName: order_details
+            columnName: price
+            newDataType: BIGINT

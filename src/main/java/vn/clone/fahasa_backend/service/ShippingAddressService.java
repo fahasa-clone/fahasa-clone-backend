@@ -2,6 +2,7 @@ package vn.clone.fahasa_backend.service;
 
 import java.util.List;
 
+import vn.clone.fahasa_backend.domain.ShippingAddress;
 import vn.clone.fahasa_backend.domain.request.ShippingAddressRequestDTO;
 import vn.clone.fahasa_backend.domain.response.ShippingAddressResponseDTO;
 
@@ -14,4 +15,6 @@ public interface ShippingAddressService {
     void deleteShippingAddress(int id);
 
     List<ShippingAddressResponseDTO> getAllShippingAddress();
+
+    ShippingAddress getShippingAddressByIdAndAccountId(int id, int accountId);
 }

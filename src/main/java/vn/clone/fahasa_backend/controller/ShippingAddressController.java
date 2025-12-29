@@ -9,10 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import vn.clone.fahasa_backend.domain.request.ShippingAddressRequestDTO;
-import vn.clone.fahasa_backend.domain.request.UpsertCartItemRequestDTO;
-import vn.clone.fahasa_backend.domain.response.CartItemDTO;
 import vn.clone.fahasa_backend.domain.response.ShippingAddressResponseDTO;
-import vn.clone.fahasa_backend.domain.response.UpsertCartItemResponseDTO;
 import vn.clone.fahasa_backend.service.ShippingAddressService;
 
 @RestController

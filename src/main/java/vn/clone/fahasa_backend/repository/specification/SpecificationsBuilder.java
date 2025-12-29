@@ -7,6 +7,8 @@ import java.util.regex.Pattern;
 
 import org.springframework.data.jpa.domain.Specification;
 
+import vn.clone.fahasa_backend.util.constant.OrderStatus;
+
 public class SpecificationsBuilder {
 
     public static <T> Specification<T> createSpecification(String input) {
@@ -134,6 +136,16 @@ public class SpecificationsBuilder {
     public static <T> Specification<T> hasAccountId(Integer accountId) {
         return (root, query, criteriaBuilder) ->
                 criteriaBuilder.equal(root.get("account").get("id"), accountId);
+    }
+
+    public static <T> Specification<T> isClicked() {
+        return (root, query, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("isClicked"), true);
+    }
+
+    public static <T> Specification<T> isStatus(OrderStatus status) {
+        return (root, query, criteriaBuilder) ->
+                criteriaBuilder.equal(root.get("currentStatus"), status);
     }
 
 }

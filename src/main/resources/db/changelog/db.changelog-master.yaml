@@ -54,3 +54,11 @@ databaseChangeLog:
   - include:
       file: changelogs/012-add-convert-name-to-slug-function.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/011-change-type-price.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/012-update-order.yml
+      relativeToChangelogFile: true
