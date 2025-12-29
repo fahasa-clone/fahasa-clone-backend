@@ -39,6 +39,7 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public CreateOrderResponseDTO createOrder(OrderRequestDTO request) {
+
         Account account = accountService.getAccountBySecurityContext();
 
         ShippingAddress shippingAddress = shippingAddressService.getShippingAddressByIdAndAccountId(request.getShippingAddressId(), account.getId());

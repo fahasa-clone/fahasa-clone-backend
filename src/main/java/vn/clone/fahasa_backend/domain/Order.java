@@ -66,7 +66,7 @@ public class Order {
     @Column(name = "shipping_method")
     private ShippingMethod shippingMethod;
 
-    @Column(name = "public_id", columnDefinition = "uuid", insertable = false, updatable = false)
+    @Column(name = "public_id", columnDefinition = "uuid")
     @JdbcTypeCode(SqlTypes.UUID)
     private UUID publicId;
 
