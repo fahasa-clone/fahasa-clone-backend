@@ -50,3 +50,7 @@ databaseChangeLog:
   - include:
       file: changelogs/011-add-tsvector-to-books.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/012-add-convert-name-to-slug-function.yml
+      relativeToChangelogFile: true
