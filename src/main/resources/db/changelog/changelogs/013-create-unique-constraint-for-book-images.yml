@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      id: 013-01-create-unique-constraint-for-book-images
+      author: minh-kop
+      changes:
+        - addUniqueConstraint:
+            tableName: book_images
+            columnNames: book_id, image_order

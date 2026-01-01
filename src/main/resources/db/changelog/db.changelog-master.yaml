@@ -62,3 +62,11 @@ databaseChangeLog:
   - include:
       file: changelogs/012-update-order.yml
       relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/013-create-unique-constraint-for-book-images.yml
+      relativeToChangelogFile: true
+
+  - include:
+      file: changelogs/014-update-vn-unaccent-function.yml
+      relativeToChangelogFile: true

@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -29,20 +30,6 @@ public class CategoryServiceImpl implements CategoryService {
     private final CategoryRepository categoryRepository;
 
     private final BookRepository bookRepository;
-
-    // @Bean
-    // public CommandLineRunner init() {
-    //     return args -> {
-    //         List<Category> categoryList = categoryRepository.findAll();
-    //         System.out.println("=============================== START =======================================");
-    //         categoryList.forEach(category -> {
-    //             category.setName(VietnameseConverter.normalizeName(category.getName()));
-    //             category.setSlug(VietnameseConverter.convertNameToSlug(category.getName()));
-    //         });
-    //         categoryRepository.saveAll(categoryList);
-    //         System.out.println("================================ END ======================================");
-    //     };
-    // }
 
     @Override
     @Transactional
@@ -94,7 +81,15 @@ public class CategoryServiceImpl implements CategoryService {
         }
 
         // === Save to the database ===
-        Category savedCategory = categoryRepository.save(category);
+        Category savedCategory;
+        while (true) {
+            try {
+                savedCategory = categoryRepository.save(category);
+                break;
+            } catch (DataIntegrityViolationException ignored) {
+                category.setSlug(category.getSlug() + "-" + category.getId());
+            }
+        }
 
         // === Convert to DTO ===
         return convertToCategoryDTO(savedCategory);
@@ -117,7 +112,8 @@ public class CategoryServiceImpl implements CategoryService {
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug("/" + c.getSlug())
+                                                                      .slug(c.getSlug())
+                                                                      .path("/" + c.getSlug())
                                                                       .build())
                                                 .toList();
         rootList.forEach(root -> root.setChildren(getChildren(categories, root)));
@@ -245,7 +241,8 @@ public class CategoryServiceImpl implements CategoryService {
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug(parent.getSlug() + "/" + c.getSlug())
+                                                                      .slug(c.getSlug())
+                                                                      .path(parent.getPath() + "/" + c.getSlug())
                                                                       .build())
                                                 .toList();
 
@@ -270,13 +267,13 @@ public class CategoryServiceImpl implements CategoryService {
                                                                                 .map(child -> CategoryBranch.builder()
                                                                                                             .id(child.getId())
                                                                                                             .name(child.getName())
-                                                                                                            .slug(child.getSlug())
+                                                                                                            .path(child.getPath())
                                                                                                             .build())
                                                                                 .toList();
                     return CategoryBranch.builder()
                                          .id(root.getId())
                                          .name(root.getName())
-                                         .slug(root.getSlug())
+                                         .path(root.getPath())
                                          .children(childrenWithoutGrandchildren)
                                          .build();
                 }
@@ -296,14 +293,14 @@ public class CategoryServiceImpl implements CategoryService {
                                                                                     .map(c -> CategoryBranch.builder()
                                                                                                             .id(c.getId())
                                                                                                             .name(c.getName())
-                                                                                                            .slug(c.getSlug())
+                                                                                                            .path(c.getPath())
                                                                                                             .isTerminationPoint(c.getId() == categoryId)
                                                                                                             .build())
                                                                                     .toList();
                         return CategoryBranch.builder()
                                              .id(root.getId())
                                              .name(root.getName())
-                                             .slug(root.getSlug())
+                                             .path(root.getPath())
                                              .isParentOfTerminationPoint(true)
                                              .children(childrenWithoutGrandchildren)
                                              .build();
@@ -312,7 +309,7 @@ public class CategoryServiceImpl implements CategoryService {
                     return CategoryBranch.builder()
                                          .id(root.getId())
                                          .name(root.getName())
-                                         .slug(root.getSlug())
+                                         .path(root.getPath())
                                          .children(List.of(result))
                                          .build();
                 }

@@ -19,5 +19,7 @@ public class CategoryTree {
 
     private String slug;
 
+    private String path;
+
     private List<CategoryTree> children;
 }

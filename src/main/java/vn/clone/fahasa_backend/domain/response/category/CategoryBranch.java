@@ -15,10 +15,10 @@ public class CategoryBranch {
 
     private String name;
 
-    private String slug;
+    private String path;
 
     private boolean isTerminationPoint;
-    
+
     private boolean isParentOfTerminationPoint;
 
     private List<CategoryBranch> children;

@@ -1,0 +1,72 @@
+databaseChangeLog:
+  - changeSet:
+      id: 014-01-update-vn-unaccent-function
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              CREATE OR REPLACE FUNCTION vn_unaccent(text)
+              RETURNS text AS $$
+              BEGIN
+                RETURN lower(
+                  translate(
+                    $1,
+                    '¹²³ÀÁẢẠÂẤẦẨẬẪÃÄÅÆàáảạâấầẩẫậãäåæĀāĂẮẰẲẴẶăắằẳẵặĄąÇçĆćĈĉĊċČčĎďĐđÈÉẸÊẾỀỄỆËèéẹêềếễệëĒēĔĕĖėĘęĚěĜĝĞğĠġĢģĤĥĦħĨÌÍỈỊÎÏìíỉịîïĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁłÑñŃńŅņŇňŉŊŋÒÓỎỌÔỐỒỔỖỘỐỒỔỖỘƠỚỜỞỠỢÕÖòóỏọôốồổỗộơớờỡợởõöŌōŎŏŐőŒœØøŔŕŖŗŘřßŚśŜŝŞşŠšŢţŤťŦŧÙÚỦỤƯỪỨỬỮỰÛÜùúủụûưứừửữựüŨũŪūŬŭŮůŰűŲųŴŵÝýÿỳỹŶŷŸỸŹźŻżŽžёЁ',
+                    '123AAAAAAAAAAAAAAaaaaaaaaaaaaaaAaAAAAAAaaaaaaAaCcCcCcCcCcDdDdEEEEEEEEEeeeeeeeeeEeEeEeEeEeGgGgGgGgHhHhIIIIIIIiiiiiiiIiIiIiIiIiJjKkkLlLlLlLlLlNnNnNnNnnNnOOOOOOOOOOOOOOOOOOOOOOOooooooooooooooooooOoOoOoEeOoRrRrRrSSsSsSsSsTtTtTtUUUUUUUUUUUUuuuuuuuuuuuuUuUuUuUuUuUuWwYyyyyYyYYZzZzZzeE'
+                  )
+                );
+              END
+              $$ LANGUAGE plpgsql IMMUTABLE PARALLEL SAFE STRICT;
+
+  - changeSet:
+      id: 014-02-update-slug-manually
+      author: minh-kop
+      changes:
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              -- Update slugs for books, handling duplicates by appending ID
+              WITH ranked_books AS (
+                  SELECT 
+                      id,
+                      convert_name_to_slug(name) AS base_slug,
+                      ROW_NUMBER() OVER (
+                          PARTITION BY convert_name_to_slug(name) 
+                          ORDER BY id
+                      ) AS rank
+                  FROM books
+                  WHERE delete_status = false
+              )
+              UPDATE books
+              SET slug = CASE
+                  WHEN rb.rank = 1 THEN rb.base_slug
+                  ELSE rb.base_slug || '-' || books.id
+              END
+              FROM ranked_books rb
+              WHERE books.id = rb.id;
+
+        - sql:
+            dbms: postgresql
+            splitStatements: false
+            sql: |
+              -- Update slugs for categories, handling duplicates by appending ID
+              WITH ranked_categories AS (
+                  SELECT 
+                      id,
+                      convert_name_to_slug(name) AS base_slug,
+                      ROW_NUMBER() OVER (
+                          PARTITION BY convert_name_to_slug(name) 
+                          ORDER BY id
+                      ) AS rank
+                  FROM categories
+              )
+              UPDATE categories
+              SET slug = CASE
+                  WHEN rb.rank = 1 THEN rb.base_slug
+                  ELSE rb.base_slug || '-' || categories.id
+              END
+              FROM ranked_categories rb
+              WHERE categories.id = rb.id;

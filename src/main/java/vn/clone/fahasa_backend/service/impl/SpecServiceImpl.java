@@ -2,6 +2,7 @@ package vn.clone.fahasa_backend.service.impl;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -58,7 +59,17 @@ public class SpecServiceImpl implements SpecService {
 
         existingSpec.setFiltered(requestDTO.isFiltered());
 
-        return specRepository.save(existingSpec);
+        Spec updatedSpec;
+        while (true) {
+            try {
+                updatedSpec = specRepository.save(existingSpec);
+                break;
+            } catch (DataIntegrityViolationException ignored) {
+                existingSpec.setSlug(existingSpec.getSlug() + "-" + existingSpec.getId());
+            }
+        }
+
+        return updatedSpec;
     }
 
     @Override
