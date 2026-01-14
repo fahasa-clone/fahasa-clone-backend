@@ -85,7 +85,7 @@ public class SearchSpecification<T> implements Specification<T> {
             throw new IllegalArgumentException("Wrong format, format is [value1, value2,...]");
         }
         String[] values = matcher.group("content")
-                                 .split(", ");
+                                 .split("\\s*,\\s*");
         List<Object> result = new ArrayList<>();
         for (String value : values) {
             if (type.isEnum()) {

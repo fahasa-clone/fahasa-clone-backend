@@ -5,6 +5,11 @@ import java.util.stream.Collectors;
 
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -12,13 +17,13 @@ import vn.clone.fahasa_backend.domain.BookSpec;
 import vn.clone.fahasa_backend.domain.Category;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
-import vn.clone.fahasa_backend.domain.response.category.CategoryBranch;
-import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
-import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
-import vn.clone.fahasa_backend.domain.response.category.GetCategoryPageDTO;
+import vn.clone.fahasa_backend.domain.response.BookDTO;
+import vn.clone.fahasa_backend.domain.response.PageResponse;
+import vn.clone.fahasa_backend.domain.response.category.*;
 import vn.clone.fahasa_backend.error.BadRequestException;
 import vn.clone.fahasa_backend.repository.BookRepository;
 import vn.clone.fahasa_backend.repository.CategoryRepository;
+import vn.clone.fahasa_backend.service.BookService;
 import vn.clone.fahasa_backend.service.CategoryService;
 import vn.clone.fahasa_backend.util.VietnameseConverter;
 
@@ -30,19 +35,13 @@ public class CategoryServiceImpl implements CategoryService {
 
     private final BookRepository bookRepository;
 
-    // @Bean
-    // public CommandLineRunner init() {
-    //     return args -> {
-    //         List<Category> categoryList = categoryRepository.findAll();
-    //         System.out.println("=============================== START =======================================");
-    //         categoryList.forEach(category -> {
-    //             category.setName(VietnameseConverter.normalizeName(category.getName()));
-    //             category.setSlug(VietnameseConverter.convertNameToSlug(category.getName()));
-    //         });
-    //         categoryRepository.saveAll(categoryList);
-    //         System.out.println("================================ END ======================================");
-    //     };
-    // }
+    private BookService bookService;
+
+    @Autowired
+    @Lazy
+    public void setBookService(BookService bookService) {
+        this.bookService = bookService;
+    }
 
     @Override
     @Transactional
@@ -94,7 +93,15 @@ public class CategoryServiceImpl implements CategoryService {
         }
 
         // === Save to the database ===
-        Category savedCategory = categoryRepository.save(category);
+        Category savedCategory;
+        while (true) {
+            try {
+                savedCategory = categoryRepository.save(category);
+                break;
+            } catch (DataIntegrityViolationException ignored) {
+                category.setSlug(category.getSlug() + "-" + category.getId());
+            }
+        }
 
         // === Convert to DTO ===
         return convertToCategoryDTO(savedCategory);
@@ -117,7 +124,8 @@ public class CategoryServiceImpl implements CategoryService {
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug("/" + c.getSlug())
+                                                                      .slug(c.getSlug())
+                                                                      .path("/" + c.getSlug())
                                                                       .build())
                                                 .toList();
         rootList.forEach(root -> root.setChildren(getChildren(categories, root)));
@@ -189,15 +197,178 @@ public class CategoryServiceImpl implements CategoryService {
                                  .build();
     }
 
+    private CategoryTree findCategoryInCategoryTree(List<CategoryTree> rootList, String slug) {
+        return rootList.stream()
+                       .filter(c -> slug.equals(c.getSlug()))
+                       .findFirst()
+                       .orElse(null);
+    }
+
     @Override
-    @Transactional(readOnly = true)
-    public List<Integer> getCategoryIdList(int id) {
+    public CategoryPageDTO getCategoryBookPageData(String path, Pageable pageable, String filter) {
+        // Build the category tree
         List<CategoryTree> rootList = buildCategoryTree();
-        CategoryTree selectedRoot = searchCategoryTree(rootList, id);
-        if (selectedRoot == null) {
-            return new ArrayList<>();
+
+        // Handle path segments
+        String[] pathSegments = path.split("/");
+        String currentCategorySlug = pathSegments[0];
+
+        // Initialize breadcrumbs with home and all-categories
+        List<BreadcrumbDTO> categoryBreadcrumbs = new ArrayList<>();
+        categoryBreadcrumbs.add(BreadcrumbDTO.builder()
+                                             .name("Trang chủ")
+                                             .path("/")
+                                             .build());
+        categoryBreadcrumbs.add(BreadcrumbDTO.builder()
+                                             .name("Tất cả nhóm sản phẩm")
+                                             .path("/tat-ca-nhom-san-pham")
+                                             .build());
+
+        // Initialize parent categories
+        List<BreadcrumbDTO> parentCategories = null;
+
+        // Initialize current category node
+        CategoryNodeDTO currentCategoryNode;
+
+        // Initialize child categories
+        List<CategoryNodeDTO> childCategories;
+
+        if (pathSegments.length == 1 && currentCategorySlug.equals("tat-ca-nhom-san-pham")) {
+            currentCategoryNode = CategoryNodeDTO.builder()
+                                                 .name(categoryBreadcrumbs.get(1).getName())
+                                                 .path(categoryBreadcrumbs.get(1).getPath())
+                                                 .children(null)
+                                                 .build();
+            childCategories = convertTreeNodesToCategoryNodes(rootList);
+        } else {
+            String categoryIds = "";
+
+            CategoryTree currentCategoryTreeNode = findCategoryInCategoryTree(rootList, currentCategorySlug);
+            if (currentCategoryTreeNode == null) {
+                throw new BadRequestException("Category not found");
+            }
+
+            categoryBreadcrumbs.add(BreadcrumbDTO.builder()
+                                                 .id(currentCategoryTreeNode.getId())
+                                                 .name(currentCategoryTreeNode.getName())
+                                                 .path(currentCategoryTreeNode.getPath())
+                                                 .build());
+
+            // Initialize current category node
+            currentCategoryNode = CategoryNodeDTO.builder()
+                                                 .id(currentCategoryTreeNode.getId())
+                                                 .name(currentCategoryTreeNode.getName())
+                                                 .path(currentCategoryTreeNode.getPath())
+                                                 .children(null)
+                                                 .build();
+
+            parentCategories = new ArrayList<>();
+            parentCategories.add(categoryBreadcrumbs.get(1));
+
+            childCategories = convertTreeNodesToCategoryNodes(currentCategoryTreeNode.getChildren());
+
+            List<CategoryTree> currentCategoryTreeNodeChildren = currentCategoryTreeNode.getChildren();
+
+            if (pathSegments.length == 1) {
+                categoryIds = listDeepestCategories(currentCategoryTreeNode).stream()
+                                                                            .map(String::valueOf)
+                                                                            .collect(Collectors.joining(","));
+            }
+
+            // Process category path segments
+            for (int i = 1; i < pathSegments.length; i++) {
+                currentCategorySlug = pathSegments[i];
+                CategoryTree foundNode = findCategoryInCategoryTree(currentCategoryTreeNodeChildren, currentCategorySlug);
+
+                // Handle not found or invalid path
+                if (foundNode == null || (foundNode.getChildren() == null && i < pathSegments.length - 1)) {
+                    throw new BadRequestException("Category not found");
+                }
+
+                categoryBreadcrumbs.add(BreadcrumbDTO.builder()
+                                                     .id(foundNode.getId())
+                                                     .name(foundNode.getName())
+                                                     .path(foundNode.getPath())
+                                                     .build());
+
+                // Case 1: Reached a leaf category before the end
+                if (foundNode.getChildren() == null) {
+                    parentCategories = categoryBreadcrumbs.subList(1, categoryBreadcrumbs.size() - 2);
+                    currentCategoryNode.setIsParentOfActiveNode(true);
+
+                    final String slugForLambda = currentCategorySlug;
+                    childCategories = currentCategoryTreeNodeChildren.stream()
+                                                                     .map(c -> CategoryNodeDTO.builder()
+                                                                                              .id(c.getId())
+                                                                                              .name(c.getName())
+                                                                                              .path(c.getPath())
+                                                                                              .isActive(slugForLambda.equals(c.getSlug()))
+                                                                                              .build())
+                                                                     .toList();
+
+                    categoryIds = foundNode.getId()
+                                           .toString();
+                    break;
+                }
+
+                currentCategoryNode = CategoryNodeDTO.builder()
+                                                     .id(foundNode.getId())
+                                                     .name(foundNode.getName())
+                                                     .path(foundNode.getPath())
+                                                     .children(null)
+                                                     .build();
+
+                // Case 2: Reached the final category in the path
+                if (i == pathSegments.length - 1) {
+                    parentCategories = categoryBreadcrumbs.subList(1, categoryBreadcrumbs.size() - 1);
+                    currentCategoryNode.setIsActive(true);
+                    childCategories = convertTreeNodesToCategoryNodes(foundNode.getChildren());
+
+                    categoryIds = listDeepestCategories(foundNode).stream()
+                                                                  .map(String::valueOf)
+                                                                  .collect(Collectors.joining(","));
+                    break;
+                }
+
+                currentCategoryTreeNodeChildren = foundNode.getChildren();
+            }
+
+            String categoryFilter = String.format("category.id in [%s]", categoryIds);
+            if (filter != null) {
+                filter += " and " + categoryFilter;
+            } else {
+                filter = categoryFilter;
+            }
         }
-        return toListCategory(selectedRoot);
+
+        // Fetch paginated books filtered by category IDs (and additional filters if provided)
+        Page<BookDTO> bookDTOPage = bookService.fetchAllBooks(pageable, filter, null, null);
+
+        return CategoryPageDTO.builder()
+                              .categoryBreadcrumbs(categoryBreadcrumbs)
+                              .parentCategories(parentCategories)
+                              .currentCategoryNode(currentCategoryNode)
+                              .childCategories(childCategories)
+                              .pageResponse(PageResponse.<List<BookDTO>>builder()
+                                                        .pageNumber(bookDTOPage.getNumber() + 1)
+                                                        .pageSize(bookDTOPage.getSize())
+                                                        .totalPages(bookDTOPage.getTotalPages())
+                                                        .items(bookDTOPage.getContent())
+                                                        .build())
+                              .build();
+    }
+
+    private List<CategoryNodeDTO> convertTreeNodesToCategoryNodes(List<CategoryTree> treeNodes) {
+        if (treeNodes == null) {
+            return null;
+        }
+        return treeNodes.stream()
+                        .map(node -> CategoryNodeDTO.builder()
+                                                    .id(node.getId())
+                                                    .name(node.getName())
+                                                    .path(node.getPath())
+                                                    .build())
+                        .toList();
     }
 
     @Override
@@ -245,7 +416,8 @@ public class CategoryServiceImpl implements CategoryService {
                                                                       .id(c.getId())
                                                                       .name(c.getName())
                                                                       .categoryIcon(c.getCategoryIcon())
-                                                                      .slug(parent.getSlug() + "/" + c.getSlug())
+                                                                      .slug(c.getSlug())
+                                                                      .path(parent.getPath() + "/" + c.getSlug())
                                                                       .build())
                                                 .toList();
 
@@ -270,13 +442,13 @@ public class CategoryServiceImpl implements CategoryService {
                                                                                 .map(child -> CategoryBranch.builder()
                                                                                                             .id(child.getId())
                                                                                                             .name(child.getName())
-                                                                                                            .slug(child.getSlug())
+                                                                                                            .path(child.getPath())
                                                                                                             .build())
                                                                                 .toList();
                     return CategoryBranch.builder()
                                          .id(root.getId())
                                          .name(root.getName())
-                                         .slug(root.getSlug())
+                                         .path(root.getPath())
                                          .children(childrenWithoutGrandchildren)
                                          .build();
                 }
@@ -296,14 +468,14 @@ public class CategoryServiceImpl implements CategoryService {
                                                                                     .map(c -> CategoryBranch.builder()
                                                                                                             .id(c.getId())
                                                                                                             .name(c.getName())
-                                                                                                            .slug(c.getSlug())
+                                                                                                            .path(c.getPath())
                                                                                                             .isTerminationPoint(c.getId() == categoryId)
                                                                                                             .build())
                                                                                     .toList();
                         return CategoryBranch.builder()
                                              .id(root.getId())
                                              .name(root.getName())
-                                             .slug(root.getSlug())
+                                             .path(root.getPath())
                                              .isParentOfTerminationPoint(true)
                                              .children(childrenWithoutGrandchildren)
                                              .build();
@@ -312,7 +484,7 @@ public class CategoryServiceImpl implements CategoryService {
                     return CategoryBranch.builder()
                                          .id(root.getId())
                                          .name(root.getName())
-                                         .slug(root.getSlug())
+                                         .path(root.getPath())
                                          .children(List.of(result))
                                          .build();
                 }
@@ -346,6 +518,19 @@ public class CategoryServiceImpl implements CategoryService {
             } else {
                 children.forEach(c -> result.addAll(listDeepestCategories(c)));
             }
+        } else {
+            result.add(root.getId());
+        }
+
+        return result;
+    }
+
+    private List<Integer> listDeepestCategories(CategoryTree root) {
+        List<Integer> result = new ArrayList<>();
+        List<CategoryTree> children = root.getChildren();
+
+        if (children != null) {
+            children.forEach(c -> result.addAll(listDeepestCategories(c)));
         } else {
             result.add(root.getId());
         }

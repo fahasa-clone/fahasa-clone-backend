@@ -20,6 +20,9 @@ public class Spec {
     @Column(name = "name", nullable = false, unique = true)
     private String name;
 
+    @Column(name = "slug", nullable = false, unique = true)
+    private String slug;
+
     @Column(name = "is_filtered", nullable = false)
     private boolean isFiltered;
 }

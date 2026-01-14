@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -125,6 +126,7 @@ public class BookServiceImpl implements BookService {
             // === Create Book ===
             Book book = Book.builder()
                             .name(request.getName())
+                            .slug(VietnameseConverter.convertNameToSlug(request.getName()))
                             .price(request.getPrice())
                             .discountPercentage(request.getDiscountPercentage())
                             .discountAmount(request.getDiscountAmount())
@@ -223,6 +225,7 @@ public class BookServiceImpl implements BookService {
 
         // === Update Book ===
         book.setName(request.getName());
+        book.setSlug(VietnameseConverter.convertNameToSlug(request.getName()));
         book.setPrice(request.getPrice());
         book.setDiscountPercentage(request.getDiscountPercentage());
         book.setDiscountAmount(request.getDiscountAmount());
@@ -279,7 +282,15 @@ public class BookServiceImpl implements BookService {
         }
 
         // === Save to the database ===
-        Book updatedBook = bookRepository.save(book);
+        Book updatedBook;
+        while (true) {
+            try {
+                updatedBook = bookRepository.save(book);
+                break;
+            } catch (DataIntegrityViolationException ignored) {
+                book.setSlug(book.getSlug() + "-" + book.getId());
+            }
+        }
 
         // === Convert to DTO ===
         return convertToFullDTO(updatedBook);

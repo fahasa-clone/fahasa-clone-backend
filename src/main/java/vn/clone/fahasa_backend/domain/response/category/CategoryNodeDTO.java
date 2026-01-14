@@ -9,7 +9,7 @@ import lombok.Setter;
 @Builder
 @Getter
 @Setter
-public class CategoryBranch {
+public class CategoryNodeDTO {
 
     private Integer id;
 
@@ -17,9 +17,9 @@ public class CategoryBranch {
 
     private String path;
 
-    private boolean isTerminationPoint;
+    private List<CategoryNodeDTO> children;
 
-    private boolean isParentOfTerminationPoint;
+    private Boolean isActive;
 
-    private List<CategoryBranch> children;
+    private Boolean isParentOfActiveNode;
 }

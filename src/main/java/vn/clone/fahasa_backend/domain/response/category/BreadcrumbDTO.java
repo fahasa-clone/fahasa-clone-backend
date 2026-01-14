@@ -1,25 +1,15 @@
 package vn.clone.fahasa_backend.domain.response.category;
 
-import java.util.List;
-
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 @Builder
 @Getter
-@Setter
-public class CategoryTree {
+public class BreadcrumbDTO {
 
     private Integer id;
 
     private String name;
 
-    private String categoryIcon;
-
-    private String slug;
-
     private String path;
-
-    private List<CategoryTree> children;
 }
