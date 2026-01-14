@@ -4,6 +4,7 @@ import java.util.List;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Min;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
@@ -13,6 +14,7 @@ import vn.clone.fahasa_backend.annotation.AdminOnly;
 import vn.clone.fahasa_backend.domain.request.CreateCategoryDTO;
 import vn.clone.fahasa_backend.domain.request.UpdateCategoryDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryDTO;
+import vn.clone.fahasa_backend.domain.response.category.CategoryPageDTO;
 import vn.clone.fahasa_backend.domain.response.category.CategoryTree;
 import vn.clone.fahasa_backend.domain.response.category.GetCategoryPageDTO;
 import vn.clone.fahasa_backend.service.CategoryService;
@@ -40,7 +42,14 @@ public class CategoryController {
         return ResponseEntity.ok(categoryService.buildCategoryTree());
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/path")
+    public ResponseEntity<CategoryPageDTO> getCategoryBookPageData(@RequestParam String path,
+                                                                   Pageable pageable,
+                                                                   @RequestParam(value = "filter", required = false) String filter) {
+        return ResponseEntity.ok(categoryService.getCategoryBookPageData(path, pageable, filter));
+    }
+
+    @GetMapping("/{id:\\d+}")
     public ResponseEntity<GetCategoryPageDTO> getCategoryIdList(@PathVariable @Min(1) int id) {
         GetCategoryPageDTO result = categoryService.getCategoryBranchById(id);
         return ResponseEntity.ok(result);
